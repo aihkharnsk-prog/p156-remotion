@@ -51,7 +51,7 @@ Railway deploy จาก GitHub repo เป็นหลัก ขั้นตอ
 
 **Environment variables**
 - `RENDER_API_KEY` — รหัสลับที่ Make.com ต้องส่งมาใน header `x-api-key`
-- `PUBLIC_BASE_URL` — โดเมนสาธารณะของ service (เช่น https://xxx.up.railway.app)
+- `PUBLIC_BASE_URL` — (ไม่บังคับ) ถ้าไม่ตั้ง จะใช้โดเมนของ Railway (`RAILWAY_PUBLIC_DOMAIN`) อัตโนมัติ
 - `DATA_DIR` — โฟลเดอร์เก็บไฟล์ (ผูก Railway Volume ไว้ที่ `/data`)
 
 **POST /render** (header `x-api-key`)

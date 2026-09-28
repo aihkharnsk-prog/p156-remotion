@@ -9,13 +9,13 @@
     "build": "remotion render src/index.ts CardStory out/p156-story.mp4"
   },
   "dependencies": {
-    "@remotion/bundler": "4.0.190",
-    "@remotion/cli": "4.0.190",
-    "@remotion/renderer": "4.0.190",
+    "@remotion/bundler": "4.0.490",
+    "@remotion/cli": "4.0.490",
+    "@remotion/renderer": "4.0.490",
     "express": "4.19.2",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "remotion": "4.0.190"
+    "remotion": "4.0.490"
   },
   "devDependencies": {
     "@types/react": "18.3.3",

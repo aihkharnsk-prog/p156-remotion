@@ -14,7 +14,10 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PORT = Number(process.env.PORT || 3000);
 const API_KEY = process.env.RENDER_API_KEY || "";
 const DATA_DIR = process.env.DATA_DIR || "/data";
-const PUBLIC_BASE_URL = (process.env.PUBLIC_BASE_URL || "").replace(/\/$/, "");
+const PUBLIC_BASE_URL = (
+  process.env.PUBLIC_BASE_URL ||
+  (process.env.RAILWAY_PUBLIC_DOMAIN ? `https://${process.env.RAILWAY_PUBLIC_DOMAIN}` : "")
+).replace(/\/$/, "");
 const CONCURRENCY = Number(process.env.RENDER_CONCURRENCY || 2);
 const KEEP_DAYS = Number(process.env.KEEP_DAYS || 7);
 
