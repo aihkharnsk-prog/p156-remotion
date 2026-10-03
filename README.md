@@ -70,3 +70,24 @@ Railway deploy จาก GitHub repo เป็นหลัก ขั้นตอ
 
 - ค่าเริ่มต้นเป็นวิดีโอแนวนอน 1920×1080 · ส่ง `width: 1080, height: 1920` ถ้าทำ Shorts
 - `GET /status/:id` เช็คสถานะ · `GET /health` เช็คว่าเซิร์ฟเวอร์พร้อม
+
+---
+
+## DramaStory (AI short drama แนวตั้ง)
+
+`POST /render` ส่ง `"composition": "DramaStory"` (header `x-api-key` ใช้ได้ทั้ง `RENDER_API_KEY` และ `DRAMA_API_KEY`)
+```json
+{
+  "composition": "DramaStory",
+  "width": 1080, "height": 1920,
+  "webhook_url": "https://hook.us2.make.com/...",
+  "shots": [
+    { "video_url": "https://cdn.leonardo.ai/...mp4", "image_url": "https://...jpg",
+      "audio_url": "https://drive.google.com/uc?id=...&export=download",
+      "text": "ซับไตเติล", "duration": 4 }
+  ]
+}
+```
+- ความยาวช็อตยืดให้พอดีกับเสียงพากย์อัตโนมัติ (+0.4 วินาที)
+- คลิปสั้นกว่าช็อต → เล่นช้าลงให้พอดี · ไม่มีคลิป → ใช้ภาพนิ่ง + ซูม
+- `text` เป็น `-` จะไม่แสดงซับ
