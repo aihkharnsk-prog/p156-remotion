@@ -14,37 +14,37 @@
    "image_mode": "detail",
    "image_aspect": 1.25,
    "text": "P-156  未来への可能性!!",
-   "duration": 6,
+   "duration": 8,
    "focus_x": 50,
    "focus_y": 66,
    "focus_zoom": 1.4,
    "focus_to_x": 50,
    "focus_to_y": 64,
-   "focus_to_zoom": 2.4
+   "focus_to_zoom": 1.7
   },
   {
    "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
    "image_mode": "detail",
    "image_aspect": 1.25,
    "text": "ภาพพิกเซลอาร์ตของพาร์ตเนอร์ดิจิมอน 15 ตัว",
-   "duration": 7,
+   "duration": 8,
    "focus_x": 50,
    "focus_y": 24,
    "focus_zoom": 1.1,
    "focus_to_x": 50,
-   "focus_to_y": 38,
-   "focus_to_zoom": 1.5
+   "focus_to_y": 30,
+   "focus_to_zoom": 1.4
   },
   {
    "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
    "image_mode": "detail",
    "image_aspect": 1.25,
    "text": "แถวแรก: ตัวละครที่แฟนๆ จำได้ทันที",
-   "duration": 6,
+   "duration": 8,
    "focus_x": 25,
    "focus_y": 23,
    "focus_zoom": 1.5,
-   "focus_to_x": 70,
+   "focus_to_x": 31,
    "focus_to_y": 24,
    "focus_to_zoom": 1.5
   },
@@ -53,12 +53,12 @@
    "image_mode": "detail",
    "image_aspect": 1.25,
    "text": "แถวสอง และแถวสาม",
-   "duration": 6,
+   "duration": 8,
    "focus_x": 30,
    "focus_y": 31,
    "focus_zoom": 1.5,
-   "focus_to_x": 40,
-   "focus_to_y": 43,
+   "focus_to_x": 36,
+   "focus_to_y": 37,
    "focus_to_zoom": 1.5
   },
   {
@@ -66,38 +66,38 @@
    "image_mode": "detail",
    "image_aspect": 1.25,
    "text": "โลโก้ DIGIMON UP — ที่มาของการ์ดใบนี้ (รอตรวจสอบรายละเอียดแคมเปญ)",
-   "duration": 7,
+   "duration": 8,
    "focus_x": 65,
    "focus_y": 42,
    "focus_zoom": 1.6,
    "focus_to_x": 65,
    "focus_to_y": 42,
-   "focus_to_zoom": 2.6
+   "focus_to_zoom": 1.9
   },
   {
    "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
    "image_mode": "detail",
    "image_aspect": 1.25,
    "text": "ตัวเลขมุมซ้ายบน = ค่าใช้ (Cost) 2",
-   "duration": 5,
+   "duration": 8,
    "focus_x": 27,
    "focus_y": 17,
    "focus_zoom": 2.0,
    "focus_to_x": 27,
    "focus_to_y": 17,
-   "focus_to_zoom": 2.8
+   "focus_to_zoom": 2.3
   },
   {
    "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
    "image_mode": "detail",
    "image_aspect": 1.25,
    "text": "พิมพ์ว่า NOT FOR SALE — ไม่ได้วางขายทั่วไป",
-   "duration": 6,
+   "duration": 8,
    "focus_x": 79,
    "focus_y": 60,
    "focus_zoom": 2.0,
    "focus_to_x": 79,
-   "focus_to_y": 45,
+   "focus_to_y": 54,
    "focus_to_zoom": 2.0
   },
   {
@@ -105,13 +105,13 @@
    "image_mode": "detail",
    "image_aspect": 1.25,
    "text": "เลขรหัส P-156  ·  ชุดโปรโม",
-   "duration": 5,
+   "duration": 8,
    "focus_x": 73,
    "focus_y": 64,
    "focus_zoom": 2.6,
    "focus_to_x": 73,
    "focus_to_y": 64,
-   "focus_to_zoom": 3.4
+   "focus_to_zoom": 2.9
   },
   {
    "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
@@ -123,7 +123,7 @@
    "focus_y": 50,
    "focus_zoom": 1.4,
    "focus_to_x": 50,
-   "focus_to_y": 58,
+   "focus_to_y": 56,
    "focus_to_zoom": 1.6
   },
   {
@@ -131,13 +131,13 @@
    "image_mode": "detail",
    "image_aspect": 1.25,
    "text": "เอฟเฟกต์ Security ของการ์ดใบนี้",
-   "duration": 6,
+   "duration": 8,
    "focus_x": 50,
    "focus_y": 72,
    "focus_zoom": 1.5,
    "focus_to_x": 50,
    "focus_to_y": 74,
-   "focus_to_zoom": 2.0
+   "focus_to_zoom": 1.8
   },
   {
    "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",

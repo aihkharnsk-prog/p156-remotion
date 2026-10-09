@@ -178,6 +178,7 @@ async function runJob(job) {
         slides,
         width: job.request.width,
         height: job.request.height,
+        fit_audio: job.request.fit_audio,
       };
 
       // ดาวน์โหลดเสียงมาเก็บในเครื่องก่อน (Google Drive redirect ตอน render ไม่เสถียร)
@@ -373,6 +374,7 @@ app.post("/render", auth, (req, res) => {
       shots: composition === "DramaStory" ? clean : undefined,
       music_url: body.music_url || undefined,
       audio_url: body.audio_url || undefined,
+      fit_audio: body.fit_audio === undefined ? true : !(body.fit_audio === false || body.fit_audio === "false" || body.fit_audio === 0),
       webhook_url: body.webhook_url || undefined,
       width: body.width ? Number(body.width) : undefined,
       height: body.height ? Number(body.height) : undefined,

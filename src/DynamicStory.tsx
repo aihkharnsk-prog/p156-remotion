@@ -38,6 +38,7 @@ export type DynamicProps = {
   audio_url?: string;
   width?: number; // default 1920 (YouTube แนวนอน) — ส่ง 1080 + height 1920 ถ้าทำ Shorts
   height?: number; // default 1080
+  fit_audio?: boolean; // true (ค่าเริ่มต้น) = ถ้ามี audio_url จะยืด/หดความยาวสไลด์ทุกอันตามสัดส่วนให้พอดีกับความยาวเสียง
 };
 
 export const slideFrames = (s: Slide) =>
