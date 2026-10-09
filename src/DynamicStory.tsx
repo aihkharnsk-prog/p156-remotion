@@ -23,7 +23,11 @@ export type Slide = {
   video_end?: number; // เล่นถึงวินาทีที่เท่าไร (ไม่ใส่ = เล่นตามความยาวสไลด์)
   video_volume?: number; // เสียงของคลิปต้นฉบับ 0-1 (ค่าเริ่มต้น 0 = ปิดเสียง)
   video_loop?: boolean; // true = ถ้าช่วงคลิป (video_start→video_end) สั้นกว่าสไลด์ ให้เล่นวนจนจบสไลด์
-  image_mode?: "fill" | "card"; // fill = เต็มจอ (ค่าเริ่มต้น) · card = โชว์ภาพการ์ดลอย/เอียงเบาๆ บนพื้นหลังเบลอ + แสงวิ่งผ่าน
+  image_mode?: "fill" | "card" | "detail"; // fill = เต็มจอ (ค่าเริ่มต้น) · card = โชว์ภาพการ์ดลอย/เอียงเบาๆ บนพื้นหลังเบลอ + แสงวิ่งผ่าน
+  // โหมด detail: ซูม/เลื่อนกล้องไปตามจุดต่างๆ ของภาพ (หน่วย % ของภาพ, zoom 1 = ภาพกว้างเท่าจอ)
+  focus_x?: number; focus_y?: number; focus_zoom?: number;
+  focus_to_x?: number; focus_to_y?: number; focus_to_zoom?: number;
+  image_aspect?: number; // สูง/กว้างของภาพ (ค่าเริ่มต้น 1.25 = การ์ด)
   credit?: string; // เครดิตที่มุมซ้ายบน เช่น "Video: Pexels / ชื่อผู้ถ่าย"
   text?: string;
   duration: number; // seconds
@@ -93,7 +97,28 @@ const SlideView: React.FC<{ slide: Slide; index: number }> = ({
 
   return (
     <AbsoluteFill style={{ backgroundColor: "#050a12", overflow: "hidden" }}>
-      {slide.image_url && slide.image_mode === "card" ? (
+      {slide.image_url && slide.image_mode === "detail" ? (() => {
+        const asp = slide.image_aspect && slide.image_aspect > 0 ? slide.image_aspect : 1.25;
+        const t = interpolate(frame, [0, dur], [0, 1], { easing: Easing.inOut(Easing.ease), extrapolateRight: "clamp" });
+        const mix = (a: number | undefined, b: number | undefined, d: number) => {
+          const A = a ?? d;
+          const B = b ?? A;
+          return A + (B - A) * t;
+        };
+        const fx = mix(slide.focus_x, slide.focus_to_x, 50);
+        const fy = mix(slide.focus_y, slide.focus_to_y, 50);
+        const fz = Math.max(1, mix(slide.focus_zoom, slide.focus_to_zoom, 1.2));
+        const W = width * fz;
+        const H = W * asp;
+        const left = Math.min(0, Math.max(width - W, width / 2 - (fx / 100) * W));
+        const top = Math.min(0, Math.max(height - H, height / 2 - (fy / 100) * H));
+        return (
+          <Img
+            src={slide.image_url}
+            style={{ position: "absolute", left, top, width: W, height: H }}
+          />
+        );
+      })() : slide.image_url && slide.image_mode === "card" ? (
         <>
           {/* พื้นหลังเบลอจากภาพเดียวกัน ซูมช้าๆ */}
           <Img
