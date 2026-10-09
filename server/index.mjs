@@ -348,6 +348,8 @@ app.post("/render", auth, (req, res) => {
         video_start,
         video_end,
         video_volume,
+        video_loop: s.video_loop === true || s.video_loop === "true" || s.video_loop === 1 || s.video_loop === "1",
+        image_mode: s.image_mode === "card" ? "card" : "fill",
         credit: s.credit ? String(s.credit) : undefined,
         text: s.text ? String(s.text) : undefined,
         duration,
