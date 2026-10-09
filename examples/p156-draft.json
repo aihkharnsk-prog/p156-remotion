@@ -1,0 +1,12 @@
+{
+  "meta": { "title": "P-156 Future Potential - draft" },
+  "slides": [
+    { "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png", "image_mode": "card", "text": "การ์ดใบนี้ มีที่มาที่น่าสนใจกว่าที่เห็น", "duration": 6 },
+    { "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png", "image_mode": "card", "text": "P-156  未来への可能性!!  (Future Potential!!)", "duration": 6 },
+    { "video_url": "https://www.w3schools.com/html/mov_bbb.mp4", "video_start": 0, "video_end": 5, "video_loop": true, "credit": "ตัวอย่างคลิปแทนที่: ใส่ฟุตเทจถ่ายเอง (แกะซอง/หมุนการ์ด)", "text": "ฉากแกะซอง / หมุนการ์ดให้เห็นแสง (ถ่ายเอง)", "duration": 8 },
+    { "image_url": "https://picsum.photos/id/1015/1280/720", "text": "ใครเป็นคนวาดภาพนี้? (รอตรวจสอบชื่อนักวาด)", "duration": 6 },
+    { "video_url": "https://www.w3schools.com/html/mov_bbb.mp4", "video_start": 2, "video_end": 6, "video_loop": true, "credit": "ตัวอย่างคลิปแทนที่: ภาพประกอบตัวละคร/ฉากที่มีสิทธิ์ใช้", "text": "ตัวละครบนการ์ด มาจากตอนไหน ฉากไหน (รอตรวจสอบ)", "duration": 8 },
+    { "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png", "image_mode": "card", "text": "แคมเปญ Digimon UP และจำนวนที่พิมพ์ (รอตรวจสอบ)", "duration": 7 },
+    { "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png", "image_mode": "card", "text": "ติดตามตอนต่อไปได้ที่ช่องนี้", "duration": 5 }
+  ]
+}
