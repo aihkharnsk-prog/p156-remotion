@@ -73,6 +73,32 @@ async function downloadTo(url, dest, maxBytes = 0) {
   await pipeline(Readable.fromWeb(res.body), createWriteStream(dest));
 }
 
+const MAX_IMAGE_BYTES = Number(process.env.MAX_IMAGE_MB || 30) * 1024 * 1024;
+const IMAGE_EXT = {
+  "image/jpeg": ".jpg",
+  "image/png": ".png",
+  "image/webp": ".webp",
+  "image/gif": ".gif",
+  "image/avif": ".avif",
+};
+
+// โหลดภาพมาเก็บครั้งเดียว แล้วคืนชื่อไฟล์ — กันลิงก์ที่ตอบภาพต่างกันทุกครั้ง (เช่น รูปสุ่ม)
+// ไม่ให้ภาพสลับ/กระพริบระหว่างเรนเดอร์ เพราะ Chrome ขอภาพซ้ำหลายรอบ
+async function downloadImage(url, destDir, baseName) {
+  const res = await fetch(url, { redirect: "follow" });
+  if (!res.ok || !res.body) throw new Error(`download ${res.status}: ${url}`);
+  const type = (res.headers.get("content-type") || "").split(";")[0].trim().toLowerCase();
+  const ext = IMAGE_EXT[type];
+  if (!ext) throw new Error(`unsupported content-type "${type || "unknown"}"`);
+  const len = Number(res.headers.get("content-length") || 0);
+  if (len > MAX_IMAGE_BYTES) {
+    throw new Error(`image too large (${Math.round(len / 1024 / 1024)} MB)`);
+  }
+  const name = `${baseName}${ext}`;
+  await pipeline(Readable.fromWeb(res.body), createWriteStream(path.join(destDir, name)));
+  return name;
+}
+
 async function runJob(job) {
   job.status = "rendering";
   job.started_at = new Date().toISOString();
@@ -118,8 +144,8 @@ async function runJob(job) {
       await fs.mkdir(assetDir, { recursive: true });
       const local = (name) => `http://127.0.0.1:${PORT}/assets/${job.id}/${name}`;
 
-      // ดาวน์โหลดคลิปของแต่ละสไลด์มาไว้ในเครื่องก่อน (ลิงก์ภายนอกตอน render ไม่เสถียร)
-      // ถ้าโหลดไม่ได้ จะตัดคลิปทิ้งแล้วใช้ image_url แทน และแจ้งใน warnings
+      // ดาวน์โหลดคลิปและภาพของแต่ละสไลด์มาไว้ในเครื่องก่อน (ลิงก์ภายนอกตอน render ไม่เสถียร)
+      // คลิปโหลดไม่ได้ → ตัดคลิปทิ้งแล้วใช้ image_url แทน · ภาพโหลดไม่ได้ → ใช้ลิงก์เดิม · แจ้งทั้งสองกรณีใน warnings
       const slides = [];
       for (const [i, s] of job.request.slides.entries()) {
         const slide = { ...s };
@@ -132,6 +158,17 @@ async function runJob(job) {
             console.warn(`[job ${job.id}] ${msg}`);
             job.warnings.push(msg + (s.image_url ? "; used image_url instead" : "; no image_url, slide will be blank"));
             delete slide.video_url;
+          }
+        }
+        if (s.image_url) {
+          try {
+            const name = await downloadImage(s.image_url, assetDir, `si${i}`);
+            slide.image_url = local(name);
+          } catch (e) {
+            // โหลดไม่ได้ → ใช้ลิงก์เดิมเหมือนก่อนหน้า (แต่ถ้าลิงก์นั้นตอบภาพไม่คงที่ ภาพอาจกระพริบ)
+            const msg = `slide ${i}: image download failed (${e?.message || e}); using the original url`;
+            console.warn(`[job ${job.id}] ${msg}`);
+            job.warnings.push(msg);
           }
         }
         slides.push(slide);
