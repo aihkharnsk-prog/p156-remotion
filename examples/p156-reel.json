@@ -1,0 +1,106 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "caption_style": "reel",
+ "meta": {
+  "title": "P-156 reel style draft"
+ },
+ "slides": [
+  {
+   "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
+   "image_mode": "card",
+   "text": "ลองสังเกต *การ์ดใบนี้* ดูไหมครับ",
+   "duration": 2.5
+  },
+  {
+   "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
+   "image_mode": "detail",
+   "image_aspect": 1.25,
+   "text": "นี่คือ *P-156* จากเกม Digimon",
+   "duration": 2.5,
+   "focus_x": 65,
+   "focus_y": 42,
+   "focus_zoom": 2.2,
+   "focus_to_x": 65,
+   "focus_to_y": 42,
+   "focus_to_zoom": 2.6
+  },
+  {
+   "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
+   "image_mode": "detail",
+   "image_aspect": 1.25,
+   "text": "ดิจิมอน *15 ตัว* ในพิกเซลอาร์ต",
+   "duration": 3,
+   "focus_x": 50,
+   "focus_y": 24,
+   "focus_zoom": 1.8,
+   "focus_to_x": 50,
+   "focus_to_y": 30,
+   "focus_to_zoom": 2.1
+  },
+  {
+   "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
+   "image_mode": "detail",
+   "image_aspect": 1.25,
+   "text": "ด้านข้างพิมพ์ว่า *Not for sale*",
+   "duration": 2.5,
+   "focus_x": 79,
+   "focus_y": 55,
+   "focus_zoom": 2.6,
+   "focus_to_x": 79,
+   "focus_to_y": 48,
+   "focus_to_zoom": 2.8
+  },
+  {
+   "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
+   "image_mode": "detail",
+   "image_aspect": 1.25,
+   "text": "มุมซ้ายบนคือ *ค่าใช้* ของการ์ด",
+   "duration": 2.2,
+   "focus_x": 27,
+   "focus_y": 17,
+   "focus_zoom": 2.6,
+   "focus_to_x": 27,
+   "focus_to_y": 17,
+   "focus_to_zoom": 3.0
+  },
+  {
+   "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
+   "image_mode": "detail",
+   "image_aspect": 1.25,
+   "text": "ถ้ามี *เทมเมอร์* อยู่ ไม่สนเงื่อนไขสี",
+   "duration": 3,
+   "focus_x": 50,
+   "focus_y": 56,
+   "focus_zoom": 1.6,
+   "focus_to_x": 50,
+   "focus_to_y": 60,
+   "focus_to_zoom": 1.9
+  },
+  {
+   "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
+   "image_mode": "detail",
+   "image_aspect": 1.25,
+   "text": "เอฟเฟกต์ *Security* ก็น่าสนใจ",
+   "duration": 2.5,
+   "focus_x": 50,
+   "focus_y": 73,
+   "focus_zoom": 1.8,
+   "focus_to_x": 50,
+   "focus_to_y": 75,
+   "focus_to_zoom": 2.1
+  },
+  {
+   "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
+   "image_mode": "card",
+   "text": "แล้วใครคือ *ผู้วาด* ภาพนี้?",
+   "duration": 2.5
+  },
+  {
+   "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
+   "image_mode": "card",
+   "text": "ติดตาม *ตอนต่อไป*",
+   "duration": 2
+  }
+ ]
+}

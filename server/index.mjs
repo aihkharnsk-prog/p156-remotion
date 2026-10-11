@@ -179,6 +179,8 @@ async function runJob(job) {
         width: job.request.width,
         height: job.request.height,
         fit_audio: job.request.fit_audio,
+        caption_style: job.request.caption_style,
+        accent_color: job.request.accent_color,
       };
 
       // ดาวน์โหลดเสียงมาเก็บในเครื่องก่อน (Google Drive redirect ตอน render ไม่เสถียร)
@@ -374,6 +376,8 @@ app.post("/render", auth, (req, res) => {
       shots: composition === "DramaStory" ? clean : undefined,
       music_url: body.music_url || undefined,
       audio_url: body.audio_url || undefined,
+      caption_style: body.caption_style === "reel" ? "reel" : "classic",
+      accent_color: /^#[0-9a-fA-F]{6}$/.test(String(body.accent_color || "")) ? String(body.accent_color) : undefined,
       fit_audio: body.fit_audio === undefined ? true : !(body.fit_audio === false || body.fit_audio === "false" || body.fit_audio === 0),
       webhook_url: body.webhook_url || undefined,
       width: body.width ? Number(body.width) : undefined,

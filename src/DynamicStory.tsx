@@ -38,6 +38,8 @@ export type DynamicProps = {
   audio_url?: string;
   width?: number; // default 1920 (YouTube แนวนอน) — ส่ง 1080 + height 1920 ถ้าทำ Shorts
   height?: number; // default 1080
+  caption_style?: "classic" | "reel"; // reel = ซับกลางจอสีนีออน คำสำคัญใหญ่ (ใส่ *คำสำคัญ* ในข้อความ)
+  accent_color?: string; // สีซับแบบ reel (ค่าเริ่มต้น #39ff6a)
   fit_audio?: boolean; // true (ค่าเริ่มต้น) = ถ้ามี audio_url จะยืด/หดความยาวสไลด์ทุกอันตามสัดส่วนให้พอดีกับความยาวเสียง
 };
 
@@ -52,10 +54,12 @@ export const totalFrames = (slides: Slide[]) =>
 
 const FONT = "Noto Sans Thai, Noto Sans CJK JP, Noto Sans, sans-serif";
 
-const SlideView: React.FC<{ slide: Slide; index: number }> = ({
-  slide,
-  index,
-}) => {
+const SlideView: React.FC<{
+  slide: Slide;
+  index: number;
+  captionStyle?: "classic" | "reel";
+  accent?: string;
+}> = ({ slide, index, captionStyle, accent }) => {
   const frame = useCurrentFrame();
   const { width, height, fps } = useVideoConfig();
   const dur = slideFrames(slide);
@@ -261,7 +265,55 @@ const SlideView: React.FC<{ slide: Slide; index: number }> = ({
         </div>
       ) : null}
 
-      {slide.text ? (
+      {slide.text && captionStyle === "reel" ? (() => {
+        const color = accent || "#39ff6a";
+        const pop = interpolate(frame, [0, 7], [0.82, 1], {
+          easing: Easing.out(Easing.back(1.8)),
+          extrapolateRight: "clamp",
+        });
+        const popOpacity = interpolate(frame, [0, 4], [0, 1], { extrapolateRight: "clamp" });
+        const base = Math.round(Math.min(width, height) * 0.075);
+        const parts = String(slide.text).split(/(\*[^*]+\*)/g).filter(Boolean);
+        return (
+          <div
+            style={{
+              position: "absolute",
+              left: 0,
+              right: 0,
+              top: "50%",
+              padding: `0 ${Math.round(width * 0.07)}px`,
+              textAlign: "center",
+              transform: `translateY(-50%) scale(${pop})`,
+              opacity: popOpacity,
+              fontFamily: FONT,
+              fontSize: base,
+              lineHeight: 1.25,
+              fontWeight: 700,
+              color: "#c8ffd8",
+              textShadow: `0 0 18px ${color}99, 0 3px 14px rgba(0,0,0,.95)`,
+            }}
+          >
+            {parts.map((part, k) =>
+              part.startsWith("*") && part.endsWith("*") ? (
+                <span
+                  key={k}
+                  style={{
+                    display: "inline-block",
+                    fontSize: Math.round(base * 1.45),
+                    fontWeight: 900,
+                    color,
+                    textShadow: `0 0 28px ${color}, 0 0 8px ${color}aa, 0 4px 16px rgba(0,0,0,.95)`,
+                  }}
+                >
+                  {part.slice(1, -1)}
+                </span>
+              ) : (
+                <span key={k}>{part}</span>
+              )
+            )}
+          </div>
+        );
+      })() : slide.text ? (
         <div
           style={{
             position: "absolute",
@@ -278,14 +330,19 @@ const SlideView: React.FC<{ slide: Slide; index: number }> = ({
             textShadow: "0 2px 14px rgba(0,0,0,.9)",
           }}
         >
-          {slide.text}
+          {String(slide.text).replace(/\*/g, "")}
         </div>
       ) : null}
     </AbsoluteFill>
   );
 };
 
-export const DynamicStory: React.FC<DynamicProps> = ({ slides, audio_url }) => {
+export const DynamicStory: React.FC<DynamicProps> = ({
+  slides,
+  audio_url,
+  caption_style,
+  accent_color,
+}) => {
   let cursor = 0;
   return (
     <AbsoluteFill style={{ backgroundColor: "#000" }}>
@@ -295,7 +352,7 @@ export const DynamicStory: React.FC<DynamicProps> = ({ slides, audio_url }) => {
         cursor += dur;
         return (
           <Sequence key={i} from={from} durationInFrames={dur}>
-            <SlideView slide={slide} index={i} />
+            <SlideView slide={slide} index={i} captionStyle={caption_style} accent={accent_color} />
           </Sequence>
         );
       })}
