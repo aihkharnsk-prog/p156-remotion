@@ -757,6 +757,30 @@ app.post("/outro", auth, async (req, res) => {
   }
 });
 
+// สั่ง render สคริปต์ที่อยู่ใน examples/ ของ repo เลย (ไม่ต้องส่ง JSON ยาวๆ)
+// POST /render-files {files:["pmcg1-004-reel.json", ...], upload:true}
+const UPLOAD_HOOK = "https://hook.us2.make.com/kcld4bbtli9t1faceobohsk8wok5biay";
+app.post("/render-files", auth, async (req, res) => {
+  const out = [];
+  for (const f of Array.isArray(req.body?.files) ? req.body.files : []) {
+    const name = path.basename(String(f));
+    try {
+      const body = JSON.parse(await fs.readFile(path.join(__dirname, "..", "examples", name), "utf8"));
+      if (req.body.upload) body.webhook_url = UPLOAD_HOOK;
+      const r = await fetch(`http://127.0.0.1:${PORT}/render`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "x-api-key": req.get("x-api-key") },
+        body: JSON.stringify(body),
+      });
+      out.push({ file: name, status: r.status, ...(await r.json().catch(() => ({}))) });
+    } catch (e) {
+      out.push({ file: name, error: String(e?.message || e) });
+    }
+  }
+  console.log(`[render-files] ${JSON.stringify(out)}`);
+  res.json(out);
+});
+
 // ทำรูปปกอย่างเดียว (ไม่ต้อง render วิดีโอ): POST /thumb {thumb:{...}} หรือ {meta:{thumb:{...}}} -> image/jpeg
 app.post("/thumb", auth, async (req, res) => {
   try {
