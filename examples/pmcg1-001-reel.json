@@ -1,0 +1,155 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "caption_style": "reel",
+  "meta": {
+    "title": "PMCG1 #001 Fushigidane"
+  },
+  "tts": {
+    "voice_id": "bTEswxYhpv7UDkQg5VRu",
+    "model_id": "eleven_v4",
+    "stability": 0.8,
+    "speed": 1.2,
+    "prefix": "[calm, soft, natural storyteller]"
+  },
+  "slides": [
+    {
+      "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/pmcg1-001.png",
+      "image_mode": "card",
+      "text": "การ์ดใบแรกของ *เบสเซ็ตญี่ปุ่น*",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "การ์ดใบแรกของ *เบสเซ็ตญี่ปุ่น*",
+          "say": "การ์ดใบแรกของเบสเซ็ตญี่ปุ่น"
+        },
+        {
+          "text": "คือ *ฟุชิงิดาเนะ*",
+          "say": "คือ ฟุชิงิดาเนะ."
+        }
+      ]
+    },
+    {
+      "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/pmcg1-001.png",
+      "image_mode": "card",
+      "text": "ที่ฝรั่งเรียกว่า *บัลบาซอร์*",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "ที่ฝรั่งเรียกว่า *บัลบาซอร์*",
+          "say": "ที่ฝรั่งเรียกว่า บัลบาซอร์."
+        }
+      ]
+    },
+    {
+      "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/pmcg1-001.png",
+      "image_mode": "card",
+      "text": "ชุดนี้ชื่อ *เอ็กซ์แพนชันแพ็ก*",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "ชุดนี้ชื่อ *เอ็กซ์แพนชันแพ็ก*",
+          "say": "ชุดนี้ชื่อ เอ็กซ์แพนชันแพ็ก"
+        },
+        {
+          "text": "วางจำหน่ายวันที่ *20 ตุลาคม 1996*",
+          "say": "วางจำหน่ายวันที่ ยี่สิบ ตุลาคม ปี หนึ่งเก้าเก้าหก."
+        },
+        {
+          "text": "มีทั้งหมด *102 ใบ*",
+          "say": "มีทั้งหมด หนึ่งร้อยสองใบ."
+        }
+      ]
+    },
+    {
+      "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/pmcg1-001.png",
+      "image_mode": "card",
+      "text": "เลข *001* บนการ์ด",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "เลข *001* บนการ์ด",
+          "say": "เลข ศูนย์ ศูนย์ หนึ่ง บนการ์ด"
+        },
+        {
+          "text": "คือเลข *โปเกเด็กซ์* ของมัน",
+          "say": "คือเลขโปเกเด็กซ์ของมัน"
+        },
+        {
+          "text": "ซึ่งเป็นโปเกมอนตัวแรกของทะเบียน",
+          "say": "ซึ่งเป็นโปเกมอนตัวแรกของทะเบียน."
+        }
+      ]
+    },
+    {
+      "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/pmcg1-001.png",
+      "image_mode": "card",
+      "text": "เป็นการ์ดพลังหญ้า *HP 40*",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "เป็นการ์ดพลังหญ้า *HP 40*",
+          "say": "เป็นการ์ดพลังหญ้า เอชพี สี่สิบ"
+        },
+        {
+          "text": "ท่า *Leech Seed* ทำดาเมจ *20*",
+          "say": "ท่าลีชซีด ทำดาเมจยี่สิบ"
+        },
+        {
+          "text": "และรักษาตัวเองได้นิดหน่อย",
+          "say": "และรักษาตัวเองได้นิดหน่อย."
+        }
+      ]
+    },
+    {
+      "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/pmcg1-001.png",
+      "image_mode": "card",
+      "text": "ภาพนี้วาดโดย *มิตสึฮิโระ อาริตะ*",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "ภาพนี้วาดโดย *มิตสึฮิโระ อาริตะ*",
+          "say": "ภาพนี้วาดโดย มิตสึฮิโระ อาริตะ."
+        },
+        {
+          "text": "เขาเกิดปี *1970* ที่จังหวัดฟุกุโอกะ",
+          "say": "เขาเกิดปี หนึ่งเก้าเจ็ดศูนย์ ที่จังหวัดฟุกุโอกะ."
+        }
+      ]
+    },
+    {
+      "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/pmcg1-001.png",
+      "image_mode": "card",
+      "text": "เขาเข้าร่วมโปรเจกต์การ์ด *ก่อน* เกมวางขาย",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "เขาเข้าร่วมโปรเจกต์การ์ด *ก่อน* เกมวางขาย",
+          "say": "เขาเข้าร่วมโปรเจกต์การ์ด ก่อนที่เกมจะวางขาย"
+        },
+        {
+          "text": "และออกแบบ *สัญลักษณ์พลังงาน* หกชนิดแรก",
+          "say": "และออกแบบสัญลักษณ์พลังงานหกชนิดแรกด้วย."
+        }
+      ]
+    },
+    {
+      "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/pmcg1-001.png",
+      "image_mode": "card",
+      "text": "ใบต่อไป คือ *ใบที่ 2*",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "ใบต่อไป คือ *ใบที่ 2*",
+          "say": "ใบต่อไป คือใบที่สอง."
+        },
+        {
+          "text": "*ไปดูกัน*",
+          "say": "ไปดูกัน."
+        }
+      ]
+    }
+  ],
+  "caption_position": "bottom",
+  "audio_rate": 1.067
+}
