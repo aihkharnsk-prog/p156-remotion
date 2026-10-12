@@ -99,6 +99,8 @@ async function postTikTok(videoUrl, meta = {}, at) {
       video_made_with_ai: true,
       content_preview_confirmed: true,
       express_consent_given: true,
+      // เปิดเผยว่าเป็นการโปรโมตแบรนด์ของเราเอง (Your brand) ตามกฎ TikTok — ไม่ใช่โฆษณาจ้าง
+      commercialContentType: "brand_organic",
     },
     ...(when ? { scheduledFor: when, timezone: "UTC" } : { publishNow: true }),
   };
