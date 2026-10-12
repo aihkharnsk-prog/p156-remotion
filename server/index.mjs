@@ -657,6 +657,30 @@ app.post("/render", auth, (req, res) => {
   res.status(202).json({ job_id: id, status: job.status });
 });
 
+// ทำรูปปกอย่างเดียว (ไม่ต้อง render วิดีโอ): POST /thumb {thumb:{...}} หรือ {meta:{thumb:{...}}} -> image/jpeg
+app.post("/thumb", auth, async (req, res) => {
+  try {
+    const tm = req.body?.thumb || req.body?.meta?.thumb;
+    if (!tm || typeof tm !== "object") return res.status(400).json({ error: "thumb required" });
+    const thumbProps = {
+      image_url: tm.image_url,
+      hook: tm.hook,
+      badge: tm.badge,
+      sub: tm.sub,
+      accent_color: /^#[0-9a-fA-F]{6}$/.test(String(tm.accent_color || "")) ? tm.accent_color : undefined,
+      width: Number(tm.width) || 1080,
+      height: Number(tm.height) || 1920,
+    };
+    const id = `thumb-${Date.now()}`;
+    const out = path.join(OUT_DIR, `${id}.jpg`);
+    const tcomp = await selectComposition({ serveUrl, id: "Thumb", inputProps: thumbProps });
+    await renderStill({ composition: tcomp, serveUrl, output: out, imageFormat: "jpeg", jpegQuality: 92, inputProps: thumbProps });
+    res.json({ thumbnail_url: `${PUBLIC_BASE_URL}/videos/${id}.jpg` });
+  } catch (e) {
+    res.status(500).json({ error: String(e?.message || e) });
+  }
+});
+
 app.get("/status/:id", auth, (req, res) => {
   const job = jobs.get(req.params.id);
   if (!job) return res.status(404).json({ error: "not found" });
