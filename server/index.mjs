@@ -246,6 +246,21 @@ async function runJob(job) {
             job.warnings.push(msg);
           }
         }
+        // ภาพชุด (ฉาก evolve / versions / sprite) — ใบไหนโหลดไม่ได้ก็ตัดทิ้ง ไม่ให้งานพัง
+        if (Array.isArray(s.images)) {
+          const arr = [];
+          const labs = [];
+          for (const [k, u] of s.images.entries()) {
+            try {
+              arr.push(local(await downloadImage(u, assetDir, `sx${i}_${k}`)));
+              labs.push(Array.isArray(s.labels) ? s.labels[k] ?? "" : "");
+            } catch (e) {
+              job.warnings.push(`slide ${i}: images[${k}] download failed (${e?.message || e}); skipped`);
+            }
+          }
+          slide.images = arr;
+          if (Array.isArray(s.labels)) slide.labels = labs;
+        }
         // เสียงพากย์รายสไลด์: สร้างเสียงจากข้อความ say ของแต่ละสไลด์ → ความยาวสไลด์ตามเสียงจริง
         if (s.say && job.request.tts) {
           await ttsToFile(String(s.say), path.join(assetDir, `sa${i}.mp3`), job.request.tts);
@@ -647,7 +662,8 @@ app.post("/render", auth, (req, res) => {
     const optNum = (v) => (v === undefined || v === null || v === "" ? undefined : Number(v));
     for (const [i, s] of slides.entries()) {
       const duration = Number(s.duration);
-      if ((!s.image_url && !s.video_url && s.scene !== "sprout") || !(duration > 0)) {
+      const SCENES = ["sprout", "coin", "evolve", "versions", "sprite"];
+      if ((!s.image_url && !s.video_url && !SCENES.includes(s.scene)) || !(duration > 0)) {
         return res.status(400).json({
           error: `slide ${i}: need image_url or video_url, and duration (seconds) > 0`,
         });
@@ -675,8 +691,12 @@ app.post("/render", auth, (req, res) => {
         video_end,
         video_volume,
         video_loop: s.video_loop === true || s.video_loop === "true" || s.video_loop === 1 || s.video_loop === "1",
-        image_mode: s.image_mode === "card" || s.image_mode === "detail" || s.image_mode === "art" ? s.image_mode : "fill",
-        scene: s.scene === "sprout" ? "sprout" : undefined,
+        image_mode: ["card", "detail", "art", "still"].includes(s.image_mode) ? s.image_mode : "fill",
+        scene: SCENES.includes(s.scene) ? s.scene : undefined,
+        images: Array.isArray(s.images) ? s.images.slice(0, 4).map(String) : undefined,
+        labels: Array.isArray(s.labels) ? s.labels.slice(0, 4).map(String) : undefined,
+        coin: s.coin === "tails" ? "tails" : s.coin === "heads" ? "heads" : undefined,
+        no_caption: s.no_caption === true || s.no_caption === "true",
         focus_x: optNum(s.focus_x), focus_y: optNum(s.focus_y), focus_zoom: optNum(s.focus_zoom),
         focus_to_x: optNum(s.focus_to_x), focus_to_y: optNum(s.focus_to_y), focus_to_zoom: optNum(s.focus_to_zoom),
         image_aspect: optNum(s.image_aspect),

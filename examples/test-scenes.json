@@ -1,0 +1,59 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "caption_style": "reel",
+ "caption_position": "bottom",
+ "caption_scale": 0.6,
+ "caption_bottom": 0.055,
+ "motion": 0.2,
+ "slides": [
+  {
+   "scene": "sprite",
+   "images": [
+    "https://archives.bulbagarden.net/media/upload/d/df/Spr_1g_002.png"
+   ],
+   "labels": [
+    "ฟุชิกิโซว ป่า ปรากฏตัว!"
+   ],
+   "duration": 4,
+   "text": "ทดสอบ *ฉากเกม*"
+  },
+  {
+   "scene": "coin",
+   "coin": "heads",
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-8/large",
+   "duration": 4,
+   "text": "ทดสอบ *เหรียญ*"
+  },
+  {
+   "scene": "evolve",
+   "images": [
+    "https://archives.bulbagarden.net/media/upload/f/fb/0001Bulbasaur.png",
+    "https://archives.bulbagarden.net/media/upload/8/81/0002Ivysaur.png",
+    "https://archives.bulbagarden.net/media/upload/6/6b/0003Venusaur.png"
+   ],
+   "duration": 6,
+   "text": "ทดสอบ *วิวัฒนาการ*"
+  },
+  {
+   "scene": "versions",
+   "images": [
+    "https://images.scrydex.com/pokemon/base1_ja-8/large",
+    "https://images.pokemontcg.io/base1/30_hires.png"
+   ],
+   "labels": [
+    "ญี่ปุ่น",
+    "อังกฤษ"
+   ],
+   "duration": 4,
+   "text": "ทดสอบ *เทียบการ์ด*"
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "image_mode": "still",
+   "no_caption": true,
+   "duration": 3,
+   "text": "ไม่ควรเห็นซับนี้"
+  }
+ ]
+}

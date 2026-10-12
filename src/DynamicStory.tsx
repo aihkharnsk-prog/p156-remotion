@@ -29,13 +29,17 @@ export type Slide = {
   video_end?: number; // เล่นถึงวินาทีที่เท่าไร (ไม่ใส่ = เล่นตามความยาวสไลด์)
   video_volume?: number; // เสียงของคลิปต้นฉบับ 0-1 (ค่าเริ่มต้น 0 = ปิดเสียง)
   video_loop?: boolean; // true = ถ้าช่วงคลิป (video_start→video_end) สั้นกว่าสไลด์ ให้เล่นวนจนจบสไลด์
-  image_mode?: "fill" | "card" | "art" | "detail"; // art = ภาพสี่เหลี่ยมจัตุรัส/อาร์ตโปร่งใส ลอยกลางจอบนพื้นหลังเบลอ
+  image_mode?: "fill" | "card" | "art" | "detail" | "still"; // art = ภาพสี่เหลี่ยมจัตุรัส/อาร์ตโปร่งใส ลอยกลางจอบนพื้นหลังเบลอ
   // (เดิม) // fill = เต็มจอ (ค่าเริ่มต้น) · card = โชว์ภาพการ์ดลอย/เอียงเบาๆ บนพื้นหลังเบลอ + แสงวิ่งผ่าน
   // โหมด detail: ซูม/เลื่อนกล้องไปตามจุดต่างๆ ของภาพ (หน่วย % ของภาพ, zoom 1 = ภาพกว้างเท่าจอ)
   focus_x?: number; focus_y?: number; focus_zoom?: number;
   focus_to_x?: number; focus_to_y?: number; focus_to_zoom?: number;
   image_aspect?: number; // สูง/กว้างของภาพ (ค่าเริ่มต้น 1.25 = การ์ด)
-  scene?: "sprout"; // ฉากแอนิเมชันการ์ตูนที่วาดเอง (ต้นกล้างอกจากเมล็ด) ไม่ต้องใช้ภาพ/คลิป
+  scene?: "sprout" | "coin" | "evolve" | "versions" | "sprite"; // ฉากแอนิเมชันที่สร้างเอง
+  images?: string[]; // ภาพชุดสำหรับฉาก evolve / versions / sprite
+  labels?: string[]; // ป้ายใต้ภาพ (versions) หรือข้อความกล่องบทพูด (sprite)
+  coin?: "heads" | "tails"; // ผลโยนเหรียญของฉาก coin
+  no_caption?: boolean; // ไม่ต้องแสดงซับในสไลด์นี้ (เช่น ภาพปิดท้ายที่มีข้อความในภาพแล้ว)
   credit?: string; // เครดิตที่มุมซ้ายบน เช่น "Video: Pexels / ชื่อผู้ถ่าย"
   text?: string;
   parts?: SlidePart[]; // แบ่งสไลด์เป็นหลายท่อน: ซับ+เสียงต่อท่อน ภาพเคลื่อนไหวต่อเนื่องตลอดสไลด์
@@ -66,6 +70,8 @@ export const totalFrames = (slides: Slide[]) =>
     1,
     slides.reduce((sum, s) => sum + slideFrames(s), 0)
   );
+
+import { CoinScene, EvolveScene, VersionsScene, SpriteScene } from "./Scenes";
 
 const FONT = "Noto Sans Thai, Noto Sans CJK JP, Noto Sans, sans-serif";
 
@@ -291,6 +297,18 @@ const SlideView: React.FC<{
             </div>
           </AbsoluteFill>
         </>
+      ) : slide.image_url && slide.image_mode === "still" ? (
+        <Img
+          src={slide.image_url}
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
+            transform: `scale(${interpolate(frame, [0, dur], [1, 1.03], { extrapolateRight: "clamp" })})`,
+          }}
+        />
       ) : slide.image_url ? (
         <Img
           src={slide.image_url}
@@ -306,6 +324,10 @@ const SlideView: React.FC<{
       ) : null}
 
       {slide.scene === "sprout" ? <SproutScene frame={frame} dur={dur} width={width} height={height} /> : null}
+      {slide.scene === "coin" ? <CoinScene frame={frame} dur={dur} width={width} height={height} image={slide.image_url} coin={slide.coin} /> : null}
+      {slide.scene === "evolve" ? <EvolveScene frame={frame} dur={dur} width={width} height={height} images={slide.images} /> : null}
+      {slide.scene === "versions" ? <VersionsScene frame={frame} dur={dur} width={width} height={height} images={slide.images} labels={slide.labels} /> : null}
+      {slide.scene === "sprite" ? <SpriteScene frame={frame} dur={dur} width={width} height={height} images={slide.images} labels={slide.labels} /> : null}
 
       {slide.video_url ? (
         <Sequence from={0} durationInFrames={slide.video_loop && endSec ? dur : videoFrames}>
@@ -362,12 +384,14 @@ const SlideView: React.FC<{
         })}
       </AbsoluteFill>
 
-      <AbsoluteFill
-        style={{
-          background:
-            "linear-gradient(to top, rgba(0,0,0,.8) 0%, rgba(0,0,0,.1) 34%, rgba(0,0,0,0) 55%)",
-        }}
-      />
+      {slide.no_caption ? null : (
+        <AbsoluteFill
+          style={{
+            background:
+              "linear-gradient(to top, rgba(0,0,0,.8) 0%, rgba(0,0,0,.1) 34%, rgba(0,0,0,0) 55%)",
+          }}
+        />
+      )}
 
       {slide.credit ? (
         <div
@@ -388,7 +412,7 @@ const SlideView: React.FC<{
         </div>
       ) : null}
 
-      {capText && captionStyle === "reel" ? (() => {
+      {slide.no_caption ? null : capText && captionStyle === "reel" ? (() => {
         const color = accent || "#39ff6a";
         const pop = interpolate(capFrame, [0, 7], [0.82, 1], {
           easing: Easing.out(Easing.back(1.8)),
