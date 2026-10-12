@@ -268,6 +268,8 @@ async function runJob(job) {
         fit_audio: job.request.fit_audio,
         caption_style: job.request.caption_style,
         caption_position: job.request.caption_position,
+        caption_scale: job.request.caption_scale,
+        caption_bottom: job.request.caption_bottom,
         audio_rate: job.request.audio_rate,
         accent_color: job.request.accent_color,
       };
@@ -606,6 +608,8 @@ app.post("/render", auth, (req, res) => {
       tts,
       caption_style: body.caption_style === "reel" ? "reel" : "classic",
       caption_position: body.caption_position === "bottom" ? "bottom" : "center",
+      caption_scale: Number(body.caption_scale) >= 0.3 && Number(body.caption_scale) <= 1.5 ? Number(body.caption_scale) : undefined,
+      caption_bottom: body.caption_bottom !== undefined && body.caption_bottom !== null && body.caption_bottom !== "" && Number(body.caption_bottom) >= 0 && Number(body.caption_bottom) <= 0.5 ? Number(body.caption_bottom) : undefined,
       audio_rate: Number(body.audio_rate) >= 0.5 && Number(body.audio_rate) <= 2 ? Number(body.audio_rate) : undefined,
       accent_color: /^#[0-9a-fA-F]{6}$/.test(String(body.accent_color || "")) ? String(body.accent_color) : undefined,
       fit_audio: body.fit_audio === undefined ? true : !(body.fit_audio === false || body.fit_audio === "false" || body.fit_audio === 0),

@@ -29,7 +29,8 @@ export type Slide = {
   video_end?: number; // เล่นถึงวินาทีที่เท่าไร (ไม่ใส่ = เล่นตามความยาวสไลด์)
   video_volume?: number; // เสียงของคลิปต้นฉบับ 0-1 (ค่าเริ่มต้น 0 = ปิดเสียง)
   video_loop?: boolean; // true = ถ้าช่วงคลิป (video_start→video_end) สั้นกว่าสไลด์ ให้เล่นวนจนจบสไลด์
-  image_mode?: "fill" | "card" | "detail"; // fill = เต็มจอ (ค่าเริ่มต้น) · card = โชว์ภาพการ์ดลอย/เอียงเบาๆ บนพื้นหลังเบลอ + แสงวิ่งผ่าน
+  image_mode?: "fill" | "card" | "art" | "detail"; // art = ภาพสี่เหลี่ยมจัตุรัส/อาร์ตโปร่งใส ลอยกลางจอบนพื้นหลังเบลอ
+  // (เดิม) // fill = เต็มจอ (ค่าเริ่มต้น) · card = โชว์ภาพการ์ดลอย/เอียงเบาๆ บนพื้นหลังเบลอ + แสงวิ่งผ่าน
   // โหมด detail: ซูม/เลื่อนกล้องไปตามจุดต่างๆ ของภาพ (หน่วย % ของภาพ, zoom 1 = ภาพกว้างเท่าจอ)
   focus_x?: number; focus_y?: number; focus_zoom?: number;
   focus_to_x?: number; focus_to_y?: number; focus_to_zoom?: number;
@@ -49,6 +50,8 @@ export type DynamicProps = {
   caption_style?: "classic" | "reel"; // reel = ซับกลางจอสีนีออน คำสำคัญใหญ่ (ใส่ *คำสำคัญ* ในข้อความ)
   audio_rate?: number; // เร่ง/ผ่อนเสียงพากย์ตอนประกอบวิดีโอ (1 = ปกติ, 1.15 = เร็วขึ้น 15%) ความยาวสไลด์ปรับตามเอง
   caption_position?: "center" | "bottom"; // ตำแหน่งซับแบบ reel (ค่าเริ่มต้น center)
+  caption_scale?: number; // ขนาดซับแบบ reel (1 = เดิม, 0.6 = เล็กลง)
+  caption_bottom?: number; // ระยะซับจากขอบล่าง เป็นสัดส่วนความสูง (ค่าเริ่มต้น 0.14, ยิ่งน้อยยิ่งต่ำ)
   accent_color?: string; // สีซับแบบ reel (ค่าเริ่มต้น #39ff6a)
   fit_audio?: boolean; // true (ค่าเริ่มต้น) = ถ้ามี audio_url จะยืด/หดความยาวสไลด์ทุกอันตามสัดส่วนให้พอดีกับความยาวเสียง
 };
@@ -70,7 +73,9 @@ const SlideView: React.FC<{
   captionStyle?: "classic" | "reel";
   captionPosition?: "center" | "bottom";
   accent?: string;
-}> = ({ slide, index, captionStyle, captionPosition, accent }) => {
+  capScale?: number;
+  capBottom?: number;
+}> = ({ slide, index, captionStyle, captionPosition, accent, capScale, capBottom }) => {
   const frame = useCurrentFrame();
   const { width, height, fps } = useVideoConfig();
   const dur = slideFrames(slide);
@@ -152,7 +157,7 @@ const SlideView: React.FC<{
             style={{ position: "absolute", left, top, width: W, height: H }}
           />
         );
-      })() : slide.image_url && slide.image_mode === "card" ? (
+      })() : slide.image_url && (slide.image_mode === "card" || slide.image_mode === "art") ? (
         <>
           {/* พื้นหลังเบลอจากภาพเดียวกัน ซูมช้าๆ */}
           <Img
@@ -172,15 +177,15 @@ const SlideView: React.FC<{
             <div
               style={{
                 position: "relative",
-                height: "78%",
+                ...(slide.image_mode === "art" ? { width: "88%" } : { height: "78%" }),
                 aspectRatio: "auto",
                 transform: `translateY(${Math.sin(frame / 38) * 14}px) rotateY(${Math.sin(frame / 55) * 9}deg) rotateX(${Math.cos(frame / 61) * 4}deg) scale(${scale})`,
-                boxShadow: "0 30px 80px rgba(0,0,0,.65)",
-                borderRadius: 18,
+                boxShadow: slide.image_mode === "art" ? "none" : "0 30px 80px rgba(0,0,0,.65)",
+                borderRadius: slide.image_mode === "art" ? 0 : 18,
                 overflow: "hidden",
               }}
             >
-              <Img src={slide.image_url} style={{ height: "100%", width: "auto", display: "block" }} />
+              <Img src={slide.image_url} style={slide.image_mode === "art" ? { width: "100%", height: "auto", display: "block" } : { height: "100%", width: "auto", display: "block" }} />
               {/* แสงวิ่งผ่านการ์ด */}
               <div
                 style={{
@@ -301,7 +306,7 @@ const SlideView: React.FC<{
           extrapolateRight: "clamp",
         });
         const popOpacity = interpolate(capFrame, [0, 4], [0, 1], { extrapolateRight: "clamp" });
-        const base = Math.round(Math.min(width, height) * (captionPosition === "bottom" ? 0.066 : 0.075));
+        const base = Math.round(Math.min(width, height) * (captionPosition === "bottom" ? 0.066 : 0.075) * (capScale && capScale > 0 ? capScale : 1));
         const parts = String(capText).split(/(\*[^*]+\*)/g).filter(Boolean);
         return (
           <div
@@ -310,7 +315,7 @@ const SlideView: React.FC<{
               left: 0,
               right: 0,
               ...(captionPosition === "bottom"
-                ? { bottom: Math.round(height * 0.14) }
+                ? { bottom: Math.round(height * (capBottom !== undefined && capBottom >= 0 ? capBottom : 0.14)) }
                 : { top: "50%" }),
               padding: `0 ${Math.round(width * 0.07)}px`,
               textAlign: "center",
@@ -331,7 +336,7 @@ const SlideView: React.FC<{
                   key={k}
                   style={{
                     display: "inline-block",
-                    fontSize: Math.round(base * 1.45),
+                    fontSize: Math.round(base * (capScale && capScale < 1 ? 1.3 : 1.45)),
                     fontWeight: 900,
                     color,
                     textShadow: `0 0 28px ${color}, 0 0 8px ${color}aa, 0 4px 16px rgba(0,0,0,.95)`,
@@ -374,6 +379,8 @@ export const DynamicStory: React.FC<DynamicProps> = ({
   audio_url,
   caption_style,
   caption_position,
+  caption_scale,
+  caption_bottom,
   audio_rate,
   accent_color,
 }) => {
@@ -386,7 +393,7 @@ export const DynamicStory: React.FC<DynamicProps> = ({
         cursor += dur;
         return (
           <Sequence key={i} from={from} durationInFrames={dur}>
-            <SlideView slide={slide} index={i} captionStyle={caption_style} captionPosition={caption_position} accent={accent_color} />
+            <SlideView slide={slide} index={i} captionStyle={caption_style} captionPosition={caption_position} accent={accent_color} capScale={caption_scale} capBottom={caption_bottom} />
             {slide.audio_url ? <Audio src={slide.audio_url} playbackRate={audio_rate || 1} /> : null}
             {slide.parts
               ? (() => {
