@@ -881,6 +881,20 @@ app.post("/render-files", auth, async (req, res) => {
   res.json(out);
 });
 
+// ตรวจการเชื่อม TikTok: GET /tiktok-account
+app.get("/tiktok-account", auth, async (req, res) => {
+  const out = { key: !!process.env.ZERNIO_API_KEY };
+  try {
+    tiktokAccountCache = null;
+    out.accountId = await tiktokAccountId();
+    try { out.creator = await zernio(`/accounts/${out.accountId}/tiktok/creator-info`); } catch (e) { out.creator_error = String(e?.message || e); }
+  } catch (e) {
+    out.error = String(e?.message || e);
+  }
+  console.log(`[tiktok-account] ${JSON.stringify(out).slice(0, 800)}`);
+  res.json(out);
+});
+
 // โพสต์คลิปที่ render แล้วขึ้น TikTok: POST /tiktok-post {items:[{video_url, file, at}]}
 app.post("/tiktok-post", auth, async (req, res) => {
   const out = [];
