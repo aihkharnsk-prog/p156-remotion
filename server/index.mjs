@@ -7,6 +7,7 @@ import { createWriteStream } from "node:fs";
 import { Readable } from "node:stream";
 import { pipeline } from "node:stream/promises";
 import { randomUUID } from "node:crypto";
+import { execFile } from "node:child_process";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -336,6 +337,56 @@ app.post("/upload-audio", auth, express.raw({ type: () => true, limit: "40mb" })
     await fs.mkdir(ASSET_DIR, { recursive: true });
     await fs.writeFile(path.join(ASSET_DIR, "voice-latest.mp3"), audio);
     res.json({ ok: true, bytes: audio.length, url: PUBLIC_BASE_URL + "/assets/voice-latest.mp3" });
+  } catch (e) {
+    res.status(500).json({ error: String(e.message || e) });
+  }
+});
+
+// เร่ง/ผ่อนความเร็วเสียงโดยคงระดับเสียง (ffmpeg atempo) — ใช้ให้ฟังตัวอย่างก่อนเรนเดอร์
+// POST /speed-audio?rate=1.25  (body = ไฟล์เสียงดิบ หรือ multipart) -> ตอบกลับเป็น audio/mpeg
+const runFfmpeg = (args) =>
+  new Promise((resolve, reject) => {
+    const tryRun = (cmd, cmdArgs, next) =>
+      execFile(cmd, cmdArgs, { cwd: path.join(__dirname, ".."), timeout: 60000 }, (err, _o, stderr) => {
+        if (!err) return resolve();
+        if (next) return next();
+        reject(new Error(`ffmpeg failed: ${String(stderr || err.message).slice(-300)}`));
+      });
+    tryRun("ffmpeg", args, () =>
+      tryRun(path.join(__dirname, "..", "node_modules", ".bin", "remotion"), ["ffmpeg", ...args], null)
+    );
+  });
+
+app.post("/speed-audio", auth, express.raw({ type: () => true, limit: "40mb" }), async (req, res) => {
+  try {
+    const rate = Number(req.query.rate);
+    if (!(rate >= 0.5 && rate <= 2)) return res.status(400).json({ error: "rate must be 0.5-2" });
+    const buf = req.body;
+    if (!Buffer.isBuffer(buf) || buf.length < 100) return res.status(400).json({ error: "empty body" });
+    const ct = req.get("content-type") || "";
+    const m = /boundary=(?:"([^"]+)"|([^;]+))/i.exec(ct);
+    let audio = buf;
+    if (m) {
+      const boundary = Buffer.from("--" + (m[1] || m[2]).trim());
+      const start = buf.indexOf(boundary);
+      const headEnd = buf.indexOf(Buffer.from("\r\n\r\n"), start);
+      if (start < 0 || headEnd < 0) return res.status(400).json({ error: "bad multipart" });
+      const dataStart = headEnd + 4;
+      const next = buf.indexOf(Buffer.concat([Buffer.from("\r\n"), boundary]), dataStart);
+      audio = buf.subarray(dataStart, next < 0 ? buf.length : next);
+    }
+    const id = randomUUID();
+    const inP = path.join(DATA_DIR, `speed-${id}-in.mp3`);
+    const outP = path.join(DATA_DIR, `speed-${id}-out.mp3`);
+    await fs.writeFile(inP, audio);
+    try {
+      await runFfmpeg(["-y", "-i", inP, "-filter:a", `atempo=${rate}`, "-codec:a", "libmp3lame", "-q:a", "2", outP]);
+      const out = await fs.readFile(outP);
+      res.set("Content-Type", "audio/mpeg").send(out);
+    } finally {
+      fs.rm(inP, { force: true }).catch(() => {});
+      fs.rm(outP, { force: true }).catch(() => {});
+    }
   } catch (e) {
     res.status(500).json({ error: String(e.message || e) });
   }
