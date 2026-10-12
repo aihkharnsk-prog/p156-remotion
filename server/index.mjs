@@ -66,10 +66,7 @@ async function postWebhook(url, payload) {
 const MAX_CLIP_BYTES = Number(process.env.MAX_CLIP_MB || 300) * 1024 * 1024;
 
 async function downloadTo(url, dest, maxBytes = 0) {
-  const res = await fetch(url, {
-    redirect: "follow",
-    headers: { "User-Agent": "CardzCenterRenderer/1.0 (+https://www.cardzcenter.com)", Accept: "image/*,*/*;q=0.8" },
-  });
+  const res = await fetch(url, { redirect: "follow" });
   if (!res.ok || !res.body) throw new Error(`download ${res.status}: ${url}`);
   // กัน volume เต็มจากไฟล์ใหญ่เกินไป (ตรวจจาก content-length ถ้าเซิร์ฟเวอร์ต้นทางส่งมา)
   const len = Number(res.headers.get("content-length") || 0);
@@ -91,7 +88,10 @@ const IMAGE_EXT = {
 // โหลดภาพมาเก็บครั้งเดียว แล้วคืนชื่อไฟล์ — กันลิงก์ที่ตอบภาพต่างกันทุกครั้ง (เช่น รูปสุ่ม)
 // ไม่ให้ภาพสลับ/กระพริบระหว่างเรนเดอร์ เพราะ Chrome ขอภาพซ้ำหลายรอบ
 async function downloadImage(url, destDir, baseName) {
-  const res = await fetch(url, { redirect: "follow" });
+  const res = await fetch(url, {
+    redirect: "follow",
+    headers: { "User-Agent": "CardzCenterRenderer/1.0 (+https://www.cardzcenter.com)", Accept: "image/*,*/*;q=0.8" },
+  });
   if (!res.ok || !res.body) throw new Error(`download ${res.status}: ${url}`);
   const type = (res.headers.get("content-type") || "").split(";")[0].trim().toLowerCase();
   const ext = IMAGE_EXT[type];
