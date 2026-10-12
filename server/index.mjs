@@ -218,6 +218,7 @@ async function runJob(job) {
         fit_audio: job.request.fit_audio,
         caption_style: job.request.caption_style,
         caption_position: job.request.caption_position,
+        audio_rate: job.request.audio_rate,
         accent_color: job.request.accent_color,
       };
 
@@ -465,6 +466,7 @@ app.post("/render", auth, (req, res) => {
       tts,
       caption_style: body.caption_style === "reel" ? "reel" : "classic",
       caption_position: body.caption_position === "bottom" ? "bottom" : "center",
+      audio_rate: Number(body.audio_rate) >= 0.5 && Number(body.audio_rate) <= 2 ? Number(body.audio_rate) : undefined,
       accent_color: /^#[0-9a-fA-F]{6}$/.test(String(body.accent_color || "")) ? String(body.accent_color) : undefined,
       fit_audio: body.fit_audio === undefined ? true : !(body.fit_audio === false || body.fit_audio === "false" || body.fit_audio === 0),
       webhook_url: body.webhook_url || undefined,

@@ -53,6 +53,7 @@ export const Root: React.FC = () => {
         defaultProps={defaultDynamicProps}
         calculateMetadata={async ({ props }) => {
           let slides = props.slides;
+          const rate = props.audio_rate && props.audio_rate > 0 ? props.audio_rate : 1;
           // ถ้ามีเสียงพากย์ → ปรับความยาวสไลด์ให้พอดีกับเสียง (เว้นท้าย 0.8 วินาที)
           // ถ้าสไลด์มีเสียงของตัวเอง → ความยาวสไลด์ = ความยาวเสียงช่วงนั้น + เว้นจังหวะ (ตรงกันเป๊ะ ไม่ต้องเดาสัดส่วน)
           if (slides.some((s) => s.audio_url || s.parts?.some((p) => p.audio_url))) {
@@ -64,7 +65,7 @@ export const Root: React.FC = () => {
                     s.parts.map(async (p, k) => {
                       if (!p.audio_url) return p;
                       try {
-                        const sec = await getAudioDurationInSeconds(p.audio_url);
+                        const sec = (await getAudioDurationInSeconds(p.audio_url)) / rate;
                         const lastPart = k === s.parts!.length - 1;
                         const pad = lastPart ? (lastSlide ? 0.8 : 0.3) : 0.1;
                         const frames = Math.max(1, Math.round((sec + pad) * DYN_FPS));
@@ -80,7 +81,7 @@ export const Root: React.FC = () => {
                 }
                 if (!s.audio_url) return s;
                 try {
-                  const sec = await getAudioDurationInSeconds(s.audio_url);
+                  const sec = (await getAudioDurationInSeconds(s.audio_url)) / rate;
                   const pad = lastSlide ? 0.8 : 0.3;
                   return { ...s, duration: sec + pad };
                 } catch (e) {

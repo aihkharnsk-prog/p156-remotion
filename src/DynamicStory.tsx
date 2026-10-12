@@ -47,6 +47,7 @@ export type DynamicProps = {
   width?: number; // default 1920 (YouTube แนวนอน) — ส่ง 1080 + height 1920 ถ้าทำ Shorts
   height?: number; // default 1080
   caption_style?: "classic" | "reel"; // reel = ซับกลางจอสีนีออน คำสำคัญใหญ่ (ใส่ *คำสำคัญ* ในข้อความ)
+  audio_rate?: number; // เร่ง/ผ่อนเสียงพากย์ตอนประกอบวิดีโอ (1 = ปกติ, 1.15 = เร็วขึ้น 15%) ความยาวสไลด์ปรับตามเอง
   caption_position?: "center" | "bottom"; // ตำแหน่งซับแบบ reel (ค่าเริ่มต้น center)
   accent_color?: string; // สีซับแบบ reel (ค่าเริ่มต้น #39ff6a)
   fit_audio?: boolean; // true (ค่าเริ่มต้น) = ถ้ามี audio_url จะยืด/หดความยาวสไลด์ทุกอันตามสัดส่วนให้พอดีกับความยาวเสียง
@@ -373,6 +374,7 @@ export const DynamicStory: React.FC<DynamicProps> = ({
   audio_url,
   caption_style,
   caption_position,
+  audio_rate,
   accent_color,
 }) => {
   let cursor = 0;
@@ -385,7 +387,7 @@ export const DynamicStory: React.FC<DynamicProps> = ({
         return (
           <Sequence key={i} from={from} durationInFrames={dur}>
             <SlideView slide={slide} index={i} captionStyle={caption_style} captionPosition={caption_position} accent={accent_color} />
-            {slide.audio_url ? <Audio src={slide.audio_url} /> : null}
+            {slide.audio_url ? <Audio src={slide.audio_url} playbackRate={audio_rate || 1} /> : null}
             {slide.parts
               ? (() => {
                   let acc = 0;
@@ -394,7 +396,7 @@ export const DynamicStory: React.FC<DynamicProps> = ({
                     acc += Math.max(1, Math.round(Number(p.duration) * DYN_FPS));
                     return p.audio_url ? (
                       <Sequence key={k} from={from}>
-                        <Audio src={p.audio_url} />
+                        <Audio src={p.audio_url} playbackRate={audio_rate || 1} />
                       </Sequence>
                     ) : null;
                   });
