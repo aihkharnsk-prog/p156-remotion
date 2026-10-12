@@ -519,10 +519,87 @@ app.post("/speed-audio", auth, express.raw({ type: () => true, limit: "40mb" }),
 
 app.use("/videos", express.static(OUT_DIR));
 app.use("/assets", express.static(ASSET_DIR));
-// ภาพปิดท้ายที่มีการ์ดจริง (สร้างด้วย POST /outro) ใช้แทนภาพพื้นฐานเมื่อมีแล้ว
+// ภาพปิดท้าย: เปลี่ยนการ์ดราคาสูง 5 ใบทุกวัน (เวลาไทย) จาก server/outro_pool.json
+// สร้างครั้งแรกที่มีคนขอในวันนั้น แล้วเก็บไว้ใช้ทั้งวัน · POST /outro ใช้เลือกการ์ดเองสำหรับวันนี้
 const OUTRO_FILE = path.join(ASSET_DIR, "outro-cards.png");
-app.get("/brand/outro.png", (req, res, next) => {
-  fs.stat(OUTRO_FILE).then(() => res.sendFile(OUTRO_FILE)).catch(() => next());
+const OUTRO_POOL = JSON.parse(await fs.readFile(path.join(__dirname, "outro_pool.json"), "utf8"));
+const bkkDay = () => new Date(Date.now() + 7 * 3600 * 1000).toISOString().slice(0, 10);
+const dailyFile = (day) => path.join(ASSET_DIR, `outro-${day}.png`);
+
+async function buildOutro(groups, outFile) {
+  const dir = path.join(ASSET_DIR, `outro-src-${Date.now()}`);
+  await fs.mkdir(dir, { recursive: true });
+  const used = [];
+  const failed = [];
+  try {
+    for (let i = 0; i < groups.length && used.length < 5; i++) {
+      const g = groups[i];
+      const urls = (Array.isArray(g) ? g : Array.isArray(g?.urls) ? g.urls : [g]).map(String);
+      for (const u of urls) {
+        try {
+          const name = await downloadImage(u, dir, `c${i}`);
+          used.push({ url: u, file: path.join(dir, name), name: g?.name || u });
+          break;
+        } catch (e) {
+          failed.push(`${u}: ${String(e?.message || e)}`);
+        }
+      }
+    }
+    if (!used.length) throw new Error("no card image could be downloaded: " + failed.join(" | "));
+    // ใบกลาง (ที่ 3) คือใบที่เด่นที่สุด — สลับให้การ์ดใบแรกของรายการอยู่ตรงกลาง
+    const order = used.length >= 3 ? [used[1], used[2], used[0], ...used.slice(3)] : used;
+    await execFileP("python3", [
+      path.join(__dirname, "outro_compose.py"),
+      outFile,
+      path.join(__dirname, "..", "public", "fonts"),
+      ...order.map((u) => u.file),
+    ], { timeout: 120000 });
+    console.log(`[outro] ${path.basename(outFile)} used ${used.length}: ${order.map((u) => u.name).join(" | ")}`);
+    if (failed.length) console.log(`[outro] failed: ${failed.join(" | ")}`);
+    return { used: order.map((u) => u.url), failed };
+  } finally {
+    fs.rm(dir, { recursive: true, force: true }).catch(() => {});
+  }
+}
+
+// เลือกการ์ดประจำวัน: ใบกลางเป็นโปเกมอน + ยูกิโอ + เมจิก + วันพีซ + โปเกมอนอีกใบ หมุนไปทุกวัน
+function dailyGroups(day) {
+  const n = Math.floor(Date.parse(day + "T00:00:00Z") / 86400000);
+  const pick = (arr, k) => arr[((n + k) % arr.length + arr.length) % arr.length];
+  const pk = OUTRO_POOL.pokemon, yg = OUTRO_POOL.yugioh, mg = OUTRO_POOL.magic, op = OUTRO_POOL.onepiece;
+  const main = [pick(pk, 0), pick(yg, 0), pick(mg, 0), pick(op, 0), pick(pk, 5)];
+  // สำรองถ้าบางใบโหลดไม่ได้
+  const spare = [pick(pk, 2), pick(yg, 3), pick(pk, 8), pick(yg, 5), pick(mg, 2)];
+  return [...main, ...spare];
+}
+
+let dailyBuilding = null;
+async function ensureDailyOutro() {
+  const day = bkkDay();
+  const file = dailyFile(day);
+  if (await fs.stat(file).then(() => true, () => false)) return file;
+  if (!dailyBuilding) {
+    dailyBuilding = buildOutro(dailyGroups(day), file)
+      .then(async () => {
+        // ลบไฟล์ของวันก่อนๆ
+        for (const f of await fs.readdir(ASSET_DIR).catch(() => [])) {
+          if (/^outro-\d{4}-\d{2}-\d{2}\.png$/.test(f) && f !== path.basename(file)) fs.rm(path.join(ASSET_DIR, f)).catch(() => {});
+        }
+      })
+      .finally(() => (dailyBuilding = null));
+  }
+  await dailyBuilding;
+  return file;
+}
+
+app.get("/brand/outro.png", async (req, res, next) => {
+  try {
+    res.set("Cache-Control", "no-cache");
+    res.sendFile(await ensureDailyOutro());
+  } catch (e) {
+    console.error("[outro] daily build failed", e);
+    fs.stat(OUTRO_FILE).then(() => res.sendFile(OUTRO_FILE)).catch(() => next());
+  }
 });
 app.use("/brand", express.static(path.join(__dirname, "..", "public")));
 
@@ -668,53 +745,13 @@ app.post("/render", auth, (req, res) => {
   res.status(202).json({ job_id: id, status: job.status });
 });
 
-// สร้างภาพปิดท้ายจากการ์ดจริง -> บันทึกเป็น /brand/outro.png
-// POST /outro {cards:[{urls:[url, สำรอง...], art:[x0,y0,x1,y1]}, ...]}
-//   art = กรอบรูปบนการ์ด (สัดส่วน 0..1) ถ้ามี จะตัดพื้นหลังให้ตัวละครโผล่ออกมานอกการ์ดแบบ 3D
+// เลือกการ์ดเองสำหรับวันนี้: POST /outro {cards:[[url, สำรอง...], ...]} (ใบแรก = ใบกลาง)
 app.post("/outro", auth, async (req, res) => {
   try {
-    const groups = Array.isArray(req.body?.cards) ? req.body.cards.slice(0, 7) : [];
+    const groups = Array.isArray(req.body?.cards) ? req.body.cards.slice(0, 10) : [];
     if (!groups.length) return res.status(400).json({ error: "cards required" });
-    const dir = path.join(ASSET_DIR, "outro-src");
-    await fs.rm(dir, { recursive: true, force: true });
-    await fs.mkdir(dir, { recursive: true });
-    const used = [];
-    const failed = [];
-    const notes = [];
-    const local = (n) => `http://127.0.0.1:${PORT}/assets/outro-src/${n}`;
-    for (let i = 0; i < groups.length; i++) {
-      const g = groups[i];
-      const urls = (Array.isArray(g) ? g : Array.isArray(g?.urls) ? g.urls : [g]).map(String);
-      const art = Array.isArray(g?.art) && g.art.length === 4 ? g.art.map(Number) : null;
-      let ok = null;
-      for (const u of urls) {
-        try {
-          ok = { url: u, name: await downloadImage(u, dir, `c${i}`) };
-          break;
-        } catch (e) {
-          failed.push(`${u}: ${String(e?.message || e)}`);
-        }
-      }
-      if (!ok) continue;
-      const card = { file: path.join(dir, ok.name) };
-      used.push({ url: ok.url, card });
-    }
-    if (!used.length) return res.status(502).json({ error: "no card image could be downloaded", failed });
-    // จัดภาพด้วย Python (การ์ดในเคสอะคริลิก บนพื้นเงาแบบโชว์รูม)
-    await execFileP("python3", [
-      path.join(__dirname, "outro_compose.py"),
-      OUTRO_FILE,
-      path.join(__dirname, "..", "public", "fonts"),
-      ...used.map((u) => u.card.file),
-    ], { timeout: 120000 });
-    console.log(`[outro] used ${used.length}: ${used.map((u) => u.url).join(" | ")}`);
-    if (failed.length) console.log(`[outro] failed: ${failed.join(" | ")}`);
-    res.json({
-      outro_url: `${PUBLIC_BASE_URL}/brand/outro.png?v=${Date.now()}`,
-      used: used.map((u) => u.url),
-      failed,
-      notes,
-    });
+    const r = await buildOutro(groups, dailyFile(bkkDay()));
+    res.json({ outro_url: `${PUBLIC_BASE_URL}/brand/outro.png?v=${Date.now()}`, ...r });
   } catch (e) {
     res.status(500).json({ error: String(e?.message || e) });
   }

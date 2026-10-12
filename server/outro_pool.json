@@ -1,0 +1,212 @@
+{
+ "pokemon": [
+  {
+   "name": "Charizard (Base Set)",
+   "urls": [
+    "https://images.pokemontcg.io/base1/4_hires.png",
+    "https://images.pokemontcg.io/base1/4.png"
+   ]
+  },
+  {
+   "name": "Umbreon VMAX alt art",
+   "urls": [
+    "https://images.pokemontcg.io/swsh7/215_hires.png",
+    "https://images.pokemontcg.io/swsh7/215.png"
+   ]
+  },
+  {
+   "name": "Lugia (Neo Genesis)",
+   "urls": [
+    "https://images.pokemontcg.io/neo1/9_hires.png",
+    "https://images.pokemontcg.io/neo1/9.png"
+   ]
+  },
+  {
+   "name": "Charizard ex SIR (151)",
+   "urls": [
+    "https://images.pokemontcg.io/sv3pt5/199_hires.png",
+    "https://images.pokemontcg.io/sv3pt5/199.png"
+   ]
+  },
+  {
+   "name": "Rayquaza VMAX alt art",
+   "urls": [
+    "https://images.pokemontcg.io/swsh7/218_hires.png",
+    "https://images.pokemontcg.io/swsh7/218.png"
+   ]
+  },
+  {
+   "name": "Shining Charizard",
+   "urls": [
+    "https://images.pokemontcg.io/neo4/107_hires.png",
+    "https://images.pokemontcg.io/neo4/107.png"
+   ]
+  },
+  {
+   "name": "Blastoise (Base Set)",
+   "urls": [
+    "https://images.pokemontcg.io/base1/2_hires.png",
+    "https://images.pokemontcg.io/base1/2.png"
+   ]
+  },
+  {
+   "name": "Giratina V alt art",
+   "urls": [
+    "https://images.pokemontcg.io/swsh11/186_hires.png",
+    "https://images.pokemontcg.io/swsh11/186.png"
+   ]
+  },
+  {
+   "name": "Blaine's Charizard",
+   "urls": [
+    "https://images.pokemontcg.io/gym2/2_hires.png",
+    "https://images.pokemontcg.io/gym2/2.png"
+   ]
+  },
+  {
+   "name": "Venusaur (Base Set)",
+   "urls": [
+    "https://images.pokemontcg.io/base1/15_hires.png",
+    "https://images.pokemontcg.io/base1/15.png"
+   ]
+  },
+  {
+   "name": "Sylveon VMAX alt art",
+   "urls": [
+    "https://images.pokemontcg.io/swsh7/212_hires.png",
+    "https://images.pokemontcg.io/swsh7/212.png"
+   ]
+  },
+  {
+   "name": "Mewtwo (Base Set)",
+   "urls": [
+    "https://images.pokemontcg.io/base1/10_hires.png",
+    "https://images.pokemontcg.io/base1/10.png"
+   ]
+  }
+ ],
+ "yugioh": [
+  {
+   "name": "Blue-Eyes White Dragon",
+   "urls": [
+    "https://images.ygoprodeck.com/images/cards/89631139.jpg",
+    "https://images.ygoprodeck.com/images/cards_small/89631139.jpg"
+   ]
+  },
+  {
+   "name": "Dark Magician",
+   "urls": [
+    "https://images.ygoprodeck.com/images/cards/46986414.jpg",
+    "https://images.ygoprodeck.com/images/cards_small/46986414.jpg"
+   ]
+  },
+  {
+   "name": "Exodia the Forbidden One",
+   "urls": [
+    "https://images.ygoprodeck.com/images/cards/33396948.jpg",
+    "https://images.ygoprodeck.com/images/cards_small/33396948.jpg"
+   ]
+  },
+  {
+   "name": "Red-Eyes Black Dragon",
+   "urls": [
+    "https://images.ygoprodeck.com/images/cards/74677422.jpg",
+    "https://images.ygoprodeck.com/images/cards_small/74677422.jpg"
+   ]
+  },
+  {
+   "name": "Dark Magician Girl",
+   "urls": [
+    "https://images.ygoprodeck.com/images/cards/38033121.jpg",
+    "https://images.ygoprodeck.com/images/cards_small/38033121.jpg"
+   ]
+  },
+  {
+   "name": "Slifer the Sky Dragon",
+   "urls": [
+    "https://images.ygoprodeck.com/images/cards/10000020.jpg",
+    "https://images.ygoprodeck.com/images/cards_small/10000020.jpg"
+   ]
+  },
+  {
+   "name": "Obelisk the Tormentor",
+   "urls": [
+    "https://images.ygoprodeck.com/images/cards/10000000.jpg",
+    "https://images.ygoprodeck.com/images/cards_small/10000000.jpg"
+   ]
+  },
+  {
+   "name": "The Winged Dragon of Ra",
+   "urls": [
+    "https://images.ygoprodeck.com/images/cards/10000010.jpg",
+    "https://images.ygoprodeck.com/images/cards_small/10000010.jpg"
+   ]
+  }
+ ],
+ "magic": [
+  {
+   "name": "Black Lotus",
+   "urls": [
+    "https://api.scryfall.com/cards/named?exact=Black%20Lotus&set=lea&format=image&version=large"
+   ]
+  },
+  {
+   "name": "Mox Sapphire",
+   "urls": [
+    "https://api.scryfall.com/cards/named?exact=Mox%20Sapphire&set=lea&format=image&version=large"
+   ]
+  },
+  {
+   "name": "Time Walk",
+   "urls": [
+    "https://api.scryfall.com/cards/named?exact=Time%20Walk&set=lea&format=image&version=large"
+   ]
+  },
+  {
+   "name": "Ancestral Recall",
+   "urls": [
+    "https://api.scryfall.com/cards/named?exact=Ancestral%20Recall&set=lea&format=image&version=large"
+   ]
+  },
+  {
+   "name": "Mox Jet",
+   "urls": [
+    "https://api.scryfall.com/cards/named?exact=Mox%20Jet&set=lea&format=image&version=large"
+   ]
+  }
+ ],
+ "onepiece": [
+  {
+   "name": "Luffy Gear 5 (OP05-119)",
+   "urls": [
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-119_p2.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-119_p1.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-119.png"
+   ]
+  },
+  {
+   "name": "Shanks (OP01-120)",
+   "urls": [
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-120_p2.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-120_p1.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-120.png"
+   ]
+  },
+  {
+   "name": "Portgas D. Ace (OP02-013)",
+   "urls": [
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-013_p2.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-013_p1.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-013.png"
+   ]
+  },
+  {
+   "name": "Roronoa Zoro (OP01-025)",
+   "urls": [
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-025_p2.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-025_p1.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-025.png"
+   ]
+  }
+ ]
+}
