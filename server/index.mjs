@@ -120,6 +120,55 @@ async function ttsToFile(text, destPath, tts) {
   await fs.writeFile(destPath, Buffer.from(await r.arrayBuffer()));
 }
 
+// เสียงก้อนเดียวทั้งบท + เวลาต่อตัวอักษร (with-timestamps) → หาเวลาเริ่มของแต่ละท่อน
+async function ttsSingleWithTimes(says, rawPath, tts) {
+  const key = process.env.ELEVENLABS_API_KEY;
+  if (!key) throw new Error("ELEVENLABS_API_KEY is not set on the server");
+  const full = (tts.prefix ? tts.prefix + " " : "") + says.join(" ");
+  const r = await fetch(
+    `https://api.elevenlabs.io/v1/text-to-speech/${tts.voice_id}/with-timestamps?output_format=mp3_44100_128`,
+    {
+      method: "POST",
+      headers: { "xi-api-key": key, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        text: full,
+        model_id: tts.model_id || "eleven_v4",
+        voice_settings: { stability: tts.stability ?? 0.8, speed: tts.speed ?? 0.95 },
+        seed: 42,
+      }),
+    }
+  );
+  if (!r.ok) throw new Error(`ElevenLabs ${r.status}: ${(await r.text()).slice(0, 300)}`);
+  const j = await r.json();
+  if (!j.audio_base64) throw new Error("ElevenLabs: no audio in response");
+  await fs.writeFile(rawPath, Buffer.from(j.audio_base64, "base64"));
+  const al = j.alignment || j.normalized_alignment;
+  if (!al || !Array.isArray(al.characters)) throw new Error("ElevenLabs: no alignment in response");
+  const chars = al.characters;
+  const st = al.character_start_times_seconds;
+  const en = al.character_end_times_seconds;
+  const idx = [];
+  let compact = "";
+  chars.forEach((c, i) => {
+    if (!/\s/.test(c)) {
+      idx.push(i);
+      compact += c;
+    }
+  });
+  let cursor = 0;
+  const starts = [];
+  for (const sy of says) {
+    const cs = sy.replace(/\s+/g, "");
+    let f = compact.indexOf(cs, cursor);
+    if (f < 0) f = compact.indexOf(cs.slice(0, 8), cursor);
+    if (f < 0) throw new Error(`alignment: cannot locate "${sy.slice(0, 20)}"`);
+    starts.push(st[idx[f]]);
+    cursor = f + cs.length;
+  }
+  starts[0] = 0; // ท่อนแรกเริ่มที่ต้นเสียง
+  return { starts, endAll: en[en.length - 1] };
+}
+
 async function runJob(job) {
   job.status = "rendering";
   job.started_at = new Date().toISOString();
@@ -200,8 +249,8 @@ async function runJob(job) {
         if (Array.isArray(s.parts) && job.request.tts) {
           const outParts = [];
           for (const [k, p] of s.parts.entries()) {
-            const part = { text: String(p.text || ""), duration: 4 };
-            if (p.say) {
+            const part = { text: String(p.text || ""), duration: 4, say: p.say ? String(p.say) : undefined };
+            if (p.say && job.request.tts.mode !== "single") {
               await ttsToFile(String(p.say), path.join(assetDir, `sa${i}_${k}.mp3`), job.request.tts);
               part.audio_url = local(`sa${i}_${k}.mp3`);
             }
@@ -222,6 +271,45 @@ async function runJob(job) {
         audio_rate: job.request.audio_rate,
         accent_color: job.request.accent_color,
       };
+
+      // โหมดเสียงก้อนเดียว: สร้างเสียงทั้งบทครั้งเดียว (เหมือนไฟล์ที่ฟังอนุมัติ) แล้วตัดซับตามเวลาจริงของแต่ละท่อน
+      if (job.request.tts && job.request.tts.mode === "single") {
+        const flat = [];
+        slides.forEach((sl) => (sl.parts || []).forEach((pt) => flat.push(pt)));
+        const says = flat.map((pt) => pt.say).filter(Boolean);
+        if (says.length === flat.length && flat.length > 0) {
+          const rawPath = path.join(assetDir, "voice-raw.mp3");
+          const outPath = path.join(assetDir, "voice.mp3");
+          const { starts, endAll } = await ttsSingleWithTimes(says, rawPath, job.request.tts);
+          const rate = job.request.audio_rate && job.request.audio_rate > 0 ? job.request.audio_rate : 1;
+          if (rate !== 1) {
+            await runFfmpeg(["-y", "-i", rawPath, "-filter:a", `atempo=${rate}`, "-codec:a", "libmp3lame", "-q:a", "2", outPath]);
+          } else {
+            await fs.copyFile(rawPath, outPath);
+          }
+          const FPS = 30;
+          const bounds = starts.map((t) => Math.round((t / rate) * FPS));
+          const endFrame = Math.round((endAll / rate + 0.8) * FPS);
+          let n = 0;
+          for (const sl of slides) {
+            if (!sl.parts) continue;
+            let total = 0;
+            for (const pt of sl.parts) {
+              const nextB = n + 1 < bounds.length ? bounds[n + 1] : endFrame;
+              const fr = Math.max(1, nextB - bounds[n]);
+              pt.duration = fr / FPS;
+              delete pt.say;
+              total += fr;
+              n++;
+            }
+            sl.duration = total / FPS;
+          }
+          inputProps.audio_url = local("voice.mp3");
+          inputProps.fit_audio = false;
+          inputProps.audio_rate = undefined; // เร่งเสียงด้วย ffmpeg ไปแล้ว
+          job.warnings.push(`single-pass voice: ${flat.length} parts, ${(endAll / rate).toFixed(1)}s`);
+        }
+      }
 
       // ดาวน์โหลดเสียงมาเก็บในเครื่องก่อน (Google Drive redirect ตอน render ไม่เสถียร)
       if (job.request.audio_url) {
@@ -498,6 +586,7 @@ app.post("/render", auth, (req, res) => {
       stability: Number.isFinite(Number(ttsIn.stability)) && ttsIn.stability !== undefined ? Number(ttsIn.stability) : undefined,
       speed: Number.isFinite(Number(ttsIn.speed)) && ttsIn.speed !== undefined ? Number(ttsIn.speed) : undefined,
       prefix: ttsIn.prefix ? String(ttsIn.prefix).slice(0, 80) : undefined,
+      mode: ttsIn.mode === "per_part" ? "per_part" : "single",
     };
   }
 
