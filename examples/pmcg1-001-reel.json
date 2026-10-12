@@ -55,7 +55,7 @@
     },
     {
       "image_url": "https://den-cards.pokellector.com/311/Bulbasaur.EXP.1.37251.png",
-      "image_mode": "detail",
+      "image_mode": "card",
       "text": "เป็นหนึ่งในโปเกมอน *เริ่มต้น* สามตัว",
       "duration": 4,
       "parts": [
@@ -67,14 +67,7 @@
           "text": "ของเกมแดงกับเขียว *27 กุมภาพันธ์ 1996*",
           "say": "ของเกมแดงกับเขียว ที่วางขายวันที่ ยี่สิบเจ็ด กุมภาพันธ์ หนึ่งเก้าเก้าหก."
         }
-      ],
-      "image_aspect": 1.4,
-      "focus_x": 50,
-      "focus_y": 12,
-      "focus_zoom": 1.8,
-      "focus_to_x": 50,
-      "focus_to_y": 18,
-      "focus_to_zoom": 2.1
+      ]
     },
     {
       "image_url": "https://archives.bulbagarden.net/media/upload/6/6b/0003Venusaur.png",
@@ -126,7 +119,7 @@
     },
     {
       "image_url": "https://den-cards.pokellector.com/311/Bulbasaur.EXP.1.37251.png",
-      "image_mode": "detail",
+      "image_mode": "card",
       "text": "ใบนี้ วาดโดย *มิตสึฮิโระ อาริตะ*",
       "duration": 4,
       "parts": [
@@ -138,18 +131,11 @@
           "text": "เกิดปี *1970* ที่จังหวัดฟุกุโอกะ",
           "say": "เกิดปี หนึ่งเก้าเจ็ดศูนย์ ที่จังหวัดฟุกุโอกะ."
         }
-      ],
-      "image_aspect": 1.4,
-      "focus_x": 50,
-      "focus_y": 30,
-      "focus_zoom": 1.9,
-      "focus_to_x": 50,
-      "focus_to_y": 28,
-      "focus_to_zoom": 2.3
+      ]
     },
     {
       "image_url": "https://den-cards.pokellector.com/311/Bulbasaur.EXP.1.37251.png",
-      "image_mode": "detail",
+      "image_mode": "card",
       "text": "เขาเข้าร่วมตั้งแต่การ์ดยังเป็น *ต้นแบบ*",
       "duration": 4,
       "parts": [
@@ -161,18 +147,11 @@
           "text": "และออกแบบ *สัญลักษณ์พลังงาน* หกชนิดแรก",
           "say": "และออกแบบสัญลักษณ์พลังงานหกชนิดแรกด้วย."
         }
-      ],
-      "image_aspect": 1.4,
-      "focus_x": 50,
-      "focus_y": 70,
-      "focus_zoom": 1.5,
-      "focus_to_x": 50,
-      "focus_to_y": 60,
-      "focus_to_zoom": 1.8
+      ]
     },
     {
       "image_url": "https://den-cards.pokellector.com/311/Bulbasaur.EXP.1.37251.png",
-      "image_mode": "detail",
+      "image_mode": "card",
       "text": "ตัวการ์ดมี *HP 40*",
       "duration": 4,
       "parts": [
@@ -188,14 +167,7 @@
           "text": "และฟื้นพลังให้ตัวเองได้",
           "say": "และฟื้นพลังให้ตัวเองได้."
         }
-      ],
-      "image_aspect": 1.4,
-      "focus_x": 50,
-      "focus_y": 70,
-      "focus_zoom": 1.7,
-      "focus_to_x": 50,
-      "focus_to_y": 76,
-      "focus_to_zoom": 2.0
+      ]
     },
     {
       "image_url": "https://archives.bulbagarden.net/media/upload/3/33/BulbasaurSnapBestPhotoContest.jpg",
