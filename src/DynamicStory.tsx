@@ -50,6 +50,7 @@ export type DynamicProps = {
   caption_style?: "classic" | "reel"; // reel = ซับกลางจอสีนีออน คำสำคัญใหญ่ (ใส่ *คำสำคัญ* ในข้อความ)
   audio_rate?: number; // เร่ง/ผ่อนเสียงพากย์ตอนประกอบวิดีโอ (1 = ปกติ, 1.15 = เร็วขึ้น 15%) ความยาวสไลด์ปรับตามเอง
   caption_position?: "center" | "bottom"; // ตำแหน่งซับแบบ reel (ค่าเริ่มต้น center)
+  motion?: number; // ความแรงของการซูม/เอียง/ลอยของภาพ (1 = เดิม, 0.25 = นิ่งมาก, 0 = นิ่งสนิท)
   caption_scale?: number; // ขนาดซับแบบ reel (1 = เดิม, 0.6 = เล็กลง)
   caption_bottom?: number; // ระยะซับจากขอบล่าง เป็นสัดส่วนความสูง (ค่าเริ่มต้น 0.14, ยิ่งน้อยยิ่งต่ำ)
   accent_color?: string; // สีซับแบบ reel (ค่าเริ่มต้น #39ff6a)
@@ -75,7 +76,9 @@ const SlideView: React.FC<{
   accent?: string;
   capScale?: number;
   capBottom?: number;
-}> = ({ slide, index, captionStyle, captionPosition, accent, capScale, capBottom }) => {
+  motion?: number;
+}> = ({ slide, index, captionStyle, captionPosition, accent, capScale, capBottom, motion }) => {
+  const mo = motion !== undefined && motion >= 0 ? motion : 1;
   const frame = useCurrentFrame();
   const { width, height, fps } = useVideoConfig();
   const dur = slideFrames(slide);
@@ -169,7 +172,7 @@ const SlideView: React.FC<{
               height: "100%",
               objectFit: "cover",
               filter: "blur(38px) brightness(.55) saturate(1.2)",
-              transform: `scale(${1.25 + (scale - 1) * 0.8})`,
+              transform: `scale(${1.25 + (scale - 1) * 0.8 * mo})`,
             }}
           />
           {/* การ์ดลอยขึ้นลง เอียงเบาๆ แบบ 3D */}
@@ -179,7 +182,7 @@ const SlideView: React.FC<{
                 position: "relative",
                 ...(slide.image_mode === "art" ? { width: "88%" } : { height: "78%" }),
                 aspectRatio: "auto",
-                transform: `translateY(${Math.sin(frame / 38) * 14}px) rotateY(${Math.sin(frame / 55) * 9}deg) rotateX(${Math.cos(frame / 61) * 4}deg) scale(${scale})`,
+                transform: `translateY(${Math.sin(frame / 38) * 14 * mo}px) rotateY(${Math.sin(frame / 55) * 9 * mo}deg) rotateX(${Math.cos(frame / 61) * 4 * mo}deg) scale(${1 + (scale - 1) * mo})`,
                 boxShadow: slide.image_mode === "art" ? "none" : "0 30px 80px rgba(0,0,0,.65)",
                 borderRadius: slide.image_mode === "art" ? 0 : 18,
                 overflow: "hidden",
@@ -381,6 +384,7 @@ export const DynamicStory: React.FC<DynamicProps> = ({
   caption_position,
   caption_scale,
   caption_bottom,
+  motion,
   audio_rate,
   accent_color,
 }) => {
@@ -393,7 +397,7 @@ export const DynamicStory: React.FC<DynamicProps> = ({
         cursor += dur;
         return (
           <Sequence key={i} from={from} durationInFrames={dur}>
-            <SlideView slide={slide} index={i} captionStyle={caption_style} captionPosition={caption_position} accent={accent_color} capScale={caption_scale} capBottom={caption_bottom} />
+            <SlideView slide={slide} index={i} captionStyle={caption_style} captionPosition={caption_position} accent={accent_color} capScale={caption_scale} capBottom={caption_bottom} motion={motion} />
             {slide.audio_url ? <Audio src={slide.audio_url} playbackRate={audio_rate || 1} /> : null}
             {slide.parts
               ? (() => {
