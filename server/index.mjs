@@ -514,6 +514,11 @@ app.post("/speed-audio", auth, express.raw({ type: () => true, limit: "40mb" }),
 
 app.use("/videos", express.static(OUT_DIR));
 app.use("/assets", express.static(ASSET_DIR));
+// ภาพปิดท้ายที่มีการ์ดจริง (สร้างด้วย POST /outro) ใช้แทนภาพพื้นฐานเมื่อมีแล้ว
+const OUTRO_FILE = path.join(ASSET_DIR, "outro-cards.png");
+app.get("/brand/outro.png", (req, res, next) => {
+  fs.stat(OUTRO_FILE).then(() => res.sendFile(OUTRO_FILE)).catch(() => next());
+});
 app.use("/brand", express.static(path.join(__dirname, "..", "public")));
 
 app.post("/render", auth, (req, res) => {
@@ -656,6 +661,39 @@ app.post("/render", auth, (req, res) => {
   queue.push(job);
   pump();
   res.status(202).json({ job_id: id, status: job.status });
+});
+
+// สร้างภาพปิดท้ายจากการ์ดจริง: POST /outro {cards:[[url, สำรอง...], ...]} -> บันทึกเป็น /brand/outro.png
+app.post("/outro", auth, async (req, res) => {
+  try {
+    const groups = Array.isArray(req.body?.cards) ? req.body.cards.slice(0, 7) : [];
+    if (!groups.length) return res.status(400).json({ error: "cards required" });
+    const dir = path.join(ASSET_DIR, "outro-src");
+    await fs.rm(dir, { recursive: true, force: true });
+    await fs.mkdir(dir, { recursive: true });
+    const used = [];
+    const failed = [];
+    for (let i = 0; i < groups.length; i++) {
+      const urls = (Array.isArray(groups[i]) ? groups[i] : [groups[i]]).map(String);
+      let ok = null;
+      for (const u of urls) {
+        try {
+          ok = { url: u, name: await downloadImage(u, dir, `c${i}`) };
+          break;
+        } catch (e) {
+          failed.push(`${u}: ${String(e?.message || e)}`);
+        }
+      }
+      if (ok) used.push(ok);
+    }
+    if (!used.length) return res.status(502).json({ error: "no card image could be downloaded", failed });
+    const inputProps = { cards: used.map((u) => `http://127.0.0.1:${PORT}/assets/outro-src/${u.name}`) };
+    const comp = await selectComposition({ serveUrl, id: "Outro", inputProps });
+    await renderStill({ composition: comp, serveUrl, output: OUTRO_FILE, imageFormat: "png", inputProps });
+    res.json({ outro_url: `${PUBLIC_BASE_URL}/brand/outro.png?v=${Date.now()}`, used: used.map((u) => u.url), failed });
+  } catch (e) {
+    res.status(500).json({ error: String(e?.message || e) });
+  }
 });
 
 // ทำรูปปกอย่างเดียว (ไม่ต้อง render วิดีโอ): POST /thumb {thumb:{...}} หรือ {meta:{thumb:{...}}} -> image/jpeg
