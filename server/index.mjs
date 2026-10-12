@@ -3,6 +3,8 @@ import { bundle } from "@remotion/bundler";
 import { renderMedia, renderStill, selectComposition } from "@remotion/renderer";
 import path from "node:path";
 import fs from "node:fs/promises";
+import { promisify } from "node:util";
+const execFileP = promisify(execFile);
 import { createWriteStream } from "node:fs";
 import { Readable } from "node:stream";
 import { pipeline } from "node:stream/promises";
@@ -663,7 +665,9 @@ app.post("/render", auth, (req, res) => {
   res.status(202).json({ job_id: id, status: job.status });
 });
 
-// สร้างภาพปิดท้ายจากการ์ดจริง: POST /outro {cards:[[url, สำรอง...], ...]} -> บันทึกเป็น /brand/outro.png
+// สร้างภาพปิดท้ายจากการ์ดจริง -> บันทึกเป็น /brand/outro.png
+// POST /outro {cards:[{urls:[url, สำรอง...], art:[x0,y0,x1,y1]}, ...]}
+//   art = กรอบรูปบนการ์ด (สัดส่วน 0..1) ถ้ามี จะตัดพื้นหลังให้ตัวละครโผล่ออกมานอกการ์ดแบบ 3D
 app.post("/outro", auth, async (req, res) => {
   try {
     const groups = Array.isArray(req.body?.cards) ? req.body.cards.slice(0, 7) : [];
@@ -673,8 +677,12 @@ app.post("/outro", auth, async (req, res) => {
     await fs.mkdir(dir, { recursive: true });
     const used = [];
     const failed = [];
+    const notes = [];
+    const local = (n) => `http://127.0.0.1:${PORT}/assets/outro-src/${n}`;
     for (let i = 0; i < groups.length; i++) {
-      const urls = (Array.isArray(groups[i]) ? groups[i] : [groups[i]]).map(String);
+      const g = groups[i];
+      const urls = (Array.isArray(g) ? g : Array.isArray(g?.urls) ? g.urls : [g]).map(String);
+      const art = Array.isArray(g?.art) && g.art.length === 4 ? g.art.map(Number) : null;
       let ok = null;
       for (const u of urls) {
         try {
@@ -684,13 +692,38 @@ app.post("/outro", auth, async (req, res) => {
           failed.push(`${u}: ${String(e?.message || e)}`);
         }
       }
-      if (ok) used.push(ok);
+      if (!ok) continue;
+      const card = { src: local(ok.name) };
+      if (art) {
+        try {
+          const popName = `p${i}.png`;
+          const { stdout } = await execFileP("python3", [
+            path.join(__dirname, "popout.py"),
+            path.join(dir, ok.name),
+            path.join(dir, popName),
+            ...art.map(String),
+          ], { timeout: 180000 });
+          const cover = Number(String(stdout).trim().split("\n").pop());
+          if (cover > 0.04 && cover < 0.92) {
+            card.pop = local(popName);
+            card.art = art;
+          } else notes.push(`${ok.url}: cut-out skipped (coverage ${cover})`);
+        } catch (e) {
+          notes.push(`${ok.url}: cut-out failed: ${String(e?.message || e).slice(0, 200)}`);
+        }
+      }
+      used.push({ url: ok.url, card });
     }
     if (!used.length) return res.status(502).json({ error: "no card image could be downloaded", failed });
-    const inputProps = { cards: used.map((u) => `http://127.0.0.1:${PORT}/assets/outro-src/${u.name}`) };
+    const inputProps = { cards: used.map((u) => u.card) };
     const comp = await selectComposition({ serveUrl, id: "Outro", inputProps });
     await renderStill({ composition: comp, serveUrl, output: OUTRO_FILE, imageFormat: "png", inputProps });
-    res.json({ outro_url: `${PUBLIC_BASE_URL}/brand/outro.png?v=${Date.now()}`, used: used.map((u) => u.url), failed });
+    res.json({
+      outro_url: `${PUBLIC_BASE_URL}/brand/outro.png?v=${Date.now()}`,
+      used: used.map((u) => u.url + (u.card.pop ? "  [3D pop-out]" : "")),
+      failed,
+      notes,
+    });
   } catch (e) {
     res.status(500).json({ error: String(e?.message || e) });
   }

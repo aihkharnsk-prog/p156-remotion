@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, Img } from "remotion";
+import { AbsoluteFill, Img, staticFile, delayRender, continueRender } from "remotion";
 
 export type ThumbProps = {
   image_url?: string;
@@ -11,7 +11,25 @@ export type ThumbProps = {
   height?: number;
 };
 
-const FONT = "Noto Sans Thai, Noto Sans CJK JP, Noto Sans, sans-serif";
+const FONT = "Kanit, Noto Sans Thai, Noto Sans CJK JP, Noto Sans, sans-serif";
+
+// โหลดฟอนต์ Kanit (public/fonts) ก่อนถ่ายภาพ
+let kanitLoaded: Promise<unknown> | null = null;
+const loadKanit = () => {
+  if (!kanitLoaded) {
+    const faces = [
+      ["fonts/Kanit-SemiBold.ttf", "600"],
+      ["fonts/Kanit-Bold.ttf", "700"],
+      ["fonts/Kanit-ExtraBold.ttf", "800"],
+      ["fonts/Kanit-Black.ttf", "900"],
+    ].map(([f, wgt]) => {
+      const ff = new FontFace("Kanit", `url(${staticFile(f)})`, { weight: wgt });
+      return ff.load().then((x) => (document as any).fonts.add(x));
+    });
+    kanitLoaded = Promise.all(faces).catch(() => null);
+  }
+  return kanitLoaded;
+};
 
 export const defaultThumbProps: ThumbProps = {
   hook: "ใบแรกที่\nคนไม่รู้",
@@ -21,6 +39,10 @@ export const defaultThumbProps: ThumbProps = {
 };
 
 export const Thumb: React.FC<ThumbProps> = (p) => {
+  const [handle] = React.useState(() => delayRender("kanit"));
+  React.useEffect(() => {
+    loadKanit().then(() => continueRender(handle));
+  }, [handle]);
   const w = p.width ?? 1080;
   const h = p.height ?? 1920;
   const m = Math.min(w, h);
