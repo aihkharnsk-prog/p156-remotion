@@ -883,6 +883,35 @@ app.post("/render-files", auth, async (req, res) => {
   res.json(out);
 });
 
+// เพิ่มป้าย "Your brand" ให้โพสต์ TikTok ที่ตั้งเวลาไว้แล้ว: POST /tiktok-brand {ids:[...]}
+app.post("/tiktok-brand", auth, async (req, res) => {
+  const out = [];
+  const settings = {
+    privacy_level: "PUBLIC_TO_EVERYONE", allow_comment: true, allow_duet: false, allow_stitch: false,
+    video_made_with_ai: true, content_preview_confirmed: true, express_consent_given: true,
+    commercialContentType: "brand_organic",
+  };
+  for (const id of Array.isArray(req.body?.ids) ? req.body.ids.map(String) : []) {
+    const tries = [];
+    let ok = false;
+    for (const method of ["PUT", "PATCH"]) {
+      try {
+        const r = await zernio(`/posts/${id}`, { method, body: JSON.stringify({ tiktokSettings: settings }) });
+        tries.push(`${method} ok`);
+        const after = await zernio(`/posts/${id}`).catch(() => null);
+        out.push({ id, ok: true, method, status: after?.post?.status, saved: JSON.stringify(after?.post?.tiktokSettings || after?.post?.platforms?.[0]?.platformSpecificData || r).slice(0, 200) });
+        ok = true;
+        break;
+      } catch (e) {
+        tries.push(`${method}: ${String(e?.message || e).slice(0, 160)}`);
+      }
+    }
+    if (!ok) out.push({ id, ok: false, tries });
+  }
+  console.log(`[tiktok-brand] ${JSON.stringify(out)}`);
+  res.json(out);
+});
+
 // ตรวจการเชื่อม TikTok: GET /tiktok-account
 app.get("/tiktok-account", auth, async (req, res) => {
   const out = { key: !!process.env.ZERNIO_API_KEY };
