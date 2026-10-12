@@ -1,6 +1,6 @@
 import express from "express";
 import { bundle } from "@remotion/bundler";
-import { renderMedia, selectComposition } from "@remotion/renderer";
+import { renderMedia, renderStill, selectComposition } from "@remotion/renderer";
 import path from "node:path";
 import fs from "node:fs/promises";
 import { createWriteStream } from "node:fs";
@@ -340,6 +340,34 @@ async function runJob(job) {
       },
     });
 
+    // รูปปก (thumbnail) อัตโนมัติ จาก meta.thumb_* — ถ้าพังไม่ให้งานวิดีโอล้ม
+    const tm = job.request.meta?.thumb;
+    if (tm && typeof tm === "object") {
+      try {
+        const thumbProps = {
+          image_url: tm.image_url || (job.request.slides || [])[0]?.image_url,
+          hook: tm.hook,
+          badge: tm.badge,
+          sub: tm.sub,
+          accent_color: /^#[0-9a-fA-F]{6}$/.test(String(tm.accent_color || "")) ? tm.accent_color : undefined,
+          width: Number(tm.width) || 1080,
+          height: Number(tm.height) || 1920,
+        };
+        const tcomp = await selectComposition({ serveUrl, id: "Thumb", inputProps: thumbProps });
+        await renderStill({
+          composition: tcomp,
+          serveUrl,
+          output: path.join(OUT_DIR, `${job.id}.jpg`),
+          imageFormat: "jpeg",
+          jpegQuality: 92,
+          inputProps: thumbProps,
+        });
+        job.thumbnail_url = `${PUBLIC_BASE_URL}/videos/${job.id}.jpg`;
+      } catch (e) {
+        job.warnings.push(`thumbnail failed: ${String(e?.message || e)}`);
+      }
+    }
+
     job.status = "done";
     job.progress = 100;
     job.video_url = publicVideoUrl(job.id);
@@ -348,6 +376,7 @@ async function runJob(job) {
       job_id: job.id,
       status: "done",
       video_url: job.video_url,
+      thumbnail_url: job.thumbnail_url ?? null,
       warnings: job.warnings,
       meta: job.request.meta ?? null,
     });

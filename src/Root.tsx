@@ -7,6 +7,7 @@ import {
   DYN_FPS,
   totalFrames,
 } from "./DynamicStory";
+import { Thumb, defaultThumbProps } from "./Thumb";
 import { getAudioDurationInSeconds } from "@remotion/media-utils";
 import {
   DramaStory,
@@ -110,6 +111,19 @@ export const Root: React.FC = () => {
             height: props.height ?? 1080,
           };
         }}
+      />
+      <Composition
+        id="Thumb"
+        component={Thumb}
+        durationInFrames={1}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={defaultThumbProps}
+        calculateMetadata={({ props }) => ({
+          width: props.width ?? 1080,
+          height: props.height ?? 1920,
+        })}
       />
       <Composition
         id="DramaStory"

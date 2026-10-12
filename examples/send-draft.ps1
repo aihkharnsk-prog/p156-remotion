@@ -30,4 +30,5 @@ do {
   "$($s.status)  $($s.progress)"
 } while ($s.status -in "queued","rendering")
 $s.warnings
+if ($s.thumbnail_url) { Write-Host "Thumbnail: $($s.thumbnail_url)"; Start-Process $s.thumbnail_url }
 if ($s.video_url) { Start-Process $s.video_url } else { $s | ConvertTo-Json }
