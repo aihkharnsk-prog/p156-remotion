@@ -277,6 +277,31 @@ app.get("/health", (_req, res) =>
   res.json({ ok: true, bundle_ready: Boolean(serveUrl), queued: queue.length, busy })
 );
 
+// รับไฟล์เสียงแบบ multipart/form-data จาก Make (ไม่ต้องใช้ลิงก์ Drive) -> เก็บเป็น /assets/voice-latest.mp3
+app.post("/upload-audio", auth, express.raw({ type: () => true, limit: "40mb" }), async (req, res) => {
+  try {
+    const buf = req.body;
+    if (!Buffer.isBuffer(buf) || buf.length < 100) return res.status(400).json({ error: "empty body" });
+    const ct = req.get("content-type") || "";
+    const m = /boundary=(?:"([^"]+)"|([^;]+))/i.exec(ct);
+    let audio = buf;
+    if (m) {
+      const boundary = Buffer.from("--" + (m[1] || m[2]).trim());
+      const start = buf.indexOf(boundary);
+      const headEnd = buf.indexOf(Buffer.from("\r\n\r\n"), start);
+      if (start < 0 || headEnd < 0) return res.status(400).json({ error: "bad multipart" });
+      const dataStart = headEnd + 4;
+      const next = buf.indexOf(Buffer.concat([Buffer.from("\r\n"), boundary]), dataStart);
+      audio = buf.subarray(dataStart, next < 0 ? buf.length : next);
+    }
+    await fs.mkdir(ASSET_DIR, { recursive: true });
+    await fs.writeFile(path.join(ASSET_DIR, "voice-latest.mp3"), audio);
+    res.json({ ok: true, bytes: audio.length, url: PUBLIC_BASE_URL + "/assets/voice-latest.mp3" });
+  } catch (e) {
+    res.status(500).json({ error: String(e.message || e) });
+  }
+});
+
 app.use("/videos", express.static(OUT_DIR));
 app.use("/assets", express.static(ASSET_DIR));
 
