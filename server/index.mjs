@@ -40,6 +40,73 @@ const bundleReady = bundle({
 });
 bundleReady.catch((e) => console.error("[remotion] bundle failed", e));
 
+// ---------- TikTok ผ่าน Zernio (เดิมชื่อ Late) ----------
+const ZERNIO = "https://zernio.com/api/v1";
+let tiktokAccountCache = null;
+async function zernio(pathname, init = {}) {
+  const r = await fetch(ZERNIO + pathname, {
+    ...init,
+    headers: { Authorization: `Bearer ${process.env.ZERNIO_API_KEY}`, "Content-Type": "application/json", ...(init.headers || {}) },
+  });
+  const text = await r.text();
+  let body;
+  try { body = JSON.parse(text); } catch { body = text; }
+  if (!r.ok) throw new Error(`zernio ${pathname} ${r.status}: ${typeof body === "string" ? body.slice(0, 300) : JSON.stringify(body).slice(0, 300)}`);
+  return body;
+}
+function findTiktokAccount(obj) {
+  if (!obj || typeof obj !== "object") return null;
+  if (Array.isArray(obj)) { for (const x of obj) { const f = findTiktokAccount(x); if (f) return f; } return null; }
+  if (String(obj.platform || "").toLowerCase() === "tiktok") return obj.accountId || obj._id || obj.id || null;
+  for (const v of Object.values(obj)) { const f = findTiktokAccount(v); if (f) return f; }
+  return null;
+}
+async function tiktokAccountId() {
+  if (process.env.ZERNIO_TIKTOK_ACCOUNT_ID) return process.env.ZERNIO_TIKTOK_ACCOUNT_ID;
+  if (tiktokAccountCache) return tiktokAccountCache;
+  for (const p of ["/accounts", "/accounts/health"]) {
+    try {
+      const id = findTiktokAccount(await zernio(p));
+      if (id) return (tiktokAccountCache = id);
+    } catch (e) {
+      console.warn("[tiktok] account lookup", p, String(e?.message || e));
+    }
+  }
+  throw new Error("no TikTok account connected in Zernio");
+}
+function tiktokCaption(meta = {}) {
+  if (meta.tiktok_caption) return String(meta.tiktok_caption).slice(0, 2200);
+  const title = String(meta.title || "").replace(/#shorts/gi, "").trim();
+  const first = String(meta.description || "").split("\n\n")[0] || "";
+  return [title, first, "🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 www.cardzcenter.com",
+    "#การ์ดโปเกมอน #โปเกมอน #pokemoncards #pokemontcg #การ์ดสะสม #เรื่องเล่าการ์ด #cardzcenter"]
+    .filter(Boolean).join("\n\n").slice(0, 2200);
+}
+// โพสต์คลิปขึ้น TikTok (ตั้งเวลาได้) — คืนผลจาก Zernio
+async function postTikTok(videoUrl, meta = {}, at) {
+  if (!process.env.ZERNIO_API_KEY) throw new Error("ZERNIO_API_KEY is not set");
+  const accountId = await tiktokAccountId();
+  const when = at && Date.parse(at) > Date.now() + 5 * 60 * 1000 ? new Date(at).toISOString() : null;
+  const body = {
+    content: tiktokCaption(meta),
+    mediaItems: [{ type: "video", url: videoUrl }],
+    platforms: [{ platform: "tiktok", accountId }],
+    tiktokSettings: {
+      privacy_level: "PUBLIC_TO_EVERYONE",
+      allow_comment: true,
+      allow_duet: false,
+      allow_stitch: false,
+      video_made_with_ai: true,
+      content_preview_confirmed: true,
+      express_consent_given: true,
+    },
+    ...(when ? { scheduledFor: when, timezone: "UTC" } : { publishNow: true }),
+  };
+  const r = await zernio("/posts", { method: "POST", body: JSON.stringify(body) });
+  console.log(`[tiktok] ${when ? "scheduled " + when : "published"} ${videoUrl} -> ${JSON.stringify(r).slice(0, 200)}`);
+  return r;
+}
+
 // ---------- job queue (one render at a time) ----------
 const jobs = new Map();
 const queue = [];
@@ -400,6 +467,16 @@ async function runJob(job) {
       warnings: job.warnings,
       meta: job.request.meta ?? null,
     });
+    console.log(`[job ${job.id}] done ${job.video_url}`);
+    if (job.request.tiktok) {
+      try {
+        const r = await postTikTok(job.video_url, job.request.meta || {}, job.request.tiktok.at);
+        job.tiktok = r?.post?._id || "ok";
+      } catch (e) {
+        job.warnings.push(`tiktok failed: ${String(e?.message || e)}`);
+        console.error(`[tiktok] job ${job.id} failed`, String(e?.message || e));
+      }
+    }
   } catch (e) {
     console.error(`[job ${job.id}] failed`, e);
     job.status = "failed";
@@ -758,6 +835,7 @@ app.post("/render", auth, (req, res) => {
       width: body.width ? Number(body.width) : undefined,
       height: body.height ? Number(body.height) : undefined,
       meta: body.meta,
+      tiktok: body.tiktok ? { at: typeof body.tiktok === "object" && body.tiktok.at ? String(body.tiktok.at) : undefined } : undefined,
     },
   };
   jobs.set(id, job);
@@ -784,10 +862,11 @@ const UPLOAD_HOOK = "https://hook.us2.make.com/kcld4bbtli9t1faceobohsk8wok5biay"
 app.post("/render-files", auth, async (req, res) => {
   const out = [];
   for (const f of Array.isArray(req.body?.files) ? req.body.files : []) {
-    const name = path.basename(String(f));
+    const name = path.basename(String(typeof f === "object" ? f.file : f));
     try {
       const body = JSON.parse(await fs.readFile(path.join(__dirname, "..", "examples", name), "utf8"));
       if (req.body.upload) body.webhook_url = UPLOAD_HOOK;
+      if (req.body.tiktok) body.tiktok = { at: (typeof f === "object" && f.tiktok_at) || body.meta?.publish_at };
       const r = await fetch(`http://127.0.0.1:${PORT}/render`, {
         method: "POST",
         headers: { "Content-Type": "application/json", "x-api-key": req.get("x-api-key") },
@@ -799,6 +878,23 @@ app.post("/render-files", auth, async (req, res) => {
     }
   }
   console.log(`[render-files] ${JSON.stringify(out)}`);
+  res.json(out);
+});
+
+// โพสต์คลิปที่ render แล้วขึ้น TikTok: POST /tiktok-post {items:[{video_url, file, at}]}
+app.post("/tiktok-post", auth, async (req, res) => {
+  const out = [];
+  for (const it of Array.isArray(req.body?.items) ? req.body.items : []) {
+    try {
+      let meta = {};
+      if (it.file) meta = JSON.parse(await fs.readFile(path.join(__dirname, "..", "examples", path.basename(String(it.file))), "utf8")).meta || {};
+      const r = await postTikTok(String(it.video_url), meta, it.at);
+      out.push({ file: it.file, ok: true, id: r?.post?._id, status: r?.post?.status });
+    } catch (e) {
+      out.push({ file: it.file, error: String(e?.message || e) });
+    }
+  }
+  console.log(`[tiktok-post] ${JSON.stringify(out)}`);
   res.json(out);
 });
 
