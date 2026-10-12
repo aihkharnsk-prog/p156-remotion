@@ -693,34 +693,20 @@ app.post("/outro", auth, async (req, res) => {
         }
       }
       if (!ok) continue;
-      const card = { src: local(ok.name) };
-      if (art) {
-        try {
-          const popName = `p${i}.png`;
-          const { stdout } = await execFileP("python3", [
-            path.join(__dirname, "popout.py"),
-            path.join(dir, ok.name),
-            path.join(dir, popName),
-            ...art.map(String),
-          ], { timeout: 180000 });
-          const cover = Number(String(stdout).trim().split("\n").pop());
-          if (cover > 0.04 && cover < 0.92) {
-            card.pop = local(popName);
-            card.art = art;
-          } else notes.push(`${ok.url}: cut-out skipped (coverage ${cover})`);
-        } catch (e) {
-          notes.push(`${ok.url}: cut-out failed: ${String(e?.message || e).slice(0, 200)}`);
-        }
-      }
+      const card = { file: path.join(dir, ok.name) };
       used.push({ url: ok.url, card });
     }
     if (!used.length) return res.status(502).json({ error: "no card image could be downloaded", failed });
-    const inputProps = { cards: used.map((u) => u.card) };
-    const comp = await selectComposition({ serveUrl, id: "Outro", inputProps });
-    await renderStill({ composition: comp, serveUrl, output: OUTRO_FILE, imageFormat: "png", inputProps });
+    // จัดภาพด้วย Python (การ์ดในเคสอะคริลิก บนพื้นเงาแบบโชว์รูม)
+    await execFileP("python3", [
+      path.join(__dirname, "outro_compose.py"),
+      OUTRO_FILE,
+      path.join(__dirname, "..", "public", "fonts"),
+      ...used.map((u) => u.card.file),
+    ], { timeout: 120000 });
     res.json({
       outro_url: `${PUBLIC_BASE_URL}/brand/outro.png?v=${Date.now()}`,
-      used: used.map((u) => u.url + (u.card.pop ? "  [3D pop-out]" : "")),
+      used: used.map((u) => u.url),
       failed,
       notes,
     });

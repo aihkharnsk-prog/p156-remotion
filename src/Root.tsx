@@ -8,7 +8,6 @@ import {
   totalFrames,
 } from "./DynamicStory";
 import { Thumb, defaultThumbProps } from "./Thumb";
-import { Outro, defaultOutroProps } from "./Outro";
 import { getAudioDurationInSeconds } from "@remotion/media-utils";
 import {
   DramaStory,
@@ -112,15 +111,6 @@ export const Root: React.FC = () => {
             height: props.height ?? 1080,
           };
         }}
-      />
-      <Composition
-        id="Outro"
-        component={Outro}
-        durationInFrames={1}
-        fps={30}
-        width={1080}
-        height={1920}
-        defaultProps={defaultOutroProps}
       />
       <Composition
         id="Thumb"
