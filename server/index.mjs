@@ -577,12 +577,13 @@ async function buildOutro(groups, outFile) {
   }
 }
 
-// เลือกการ์ดประจำวัน: ใบกลางเป็นโปเกมอน + ยูกิโอ + เมจิก + วันพีซ + โปเกมอนอีกใบ หมุนไปทุกวัน
+// เลือกการ์ดประจำวัน: ใบกลางเป็นโปเกมอน + ยูกิโอ + เมจิก + ยูกิโออีกใบ + โปเกมอนอีกใบ หมุนไปทุกวัน
 function dailyGroups(day) {
   const n = Math.floor(Date.parse(day + "T00:00:00Z") / 86400000);
   const pick = (arr, k) => arr[((n + k) % arr.length + arr.length) % arr.length];
   const pk = OUTRO_POOL.pokemon, yg = OUTRO_POOL.yugioh, mg = OUTRO_POOL.magic, op = OUTRO_POOL.onepiece;
-  const main = [pick(pk, 0), pick(yg, 0), pick(mg, 0), pick(op, 0), pick(pk, 5)];
+  // วันพีซไม่ใช้ เพราะรูปจากเว็บทางการมีลายน้ำ SAMPLE
+  const main = [pick(pk, 0), pick(yg, 0), pick(mg, 0), pick(yg, 4), pick(pk, 5)];
   // สำรองถ้าบางใบโหลดไม่ได้
   const spare = [pick(pk, 2), pick(yg, 3), pick(pk, 8), pick(yg, 5), pick(mg, 2)];
   return [...main, ...spare];

@@ -200,7 +200,7 @@
     },
     {
       "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
-      "image_mode": "fill",
+      "image_mode": "still",
       "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
       "duration": 4,
       "parts": [
@@ -212,7 +212,8 @@
           "text": "*ซื้อ ขาย สะสม แข่งเกมส์การ์ด* ที่ www.cardzcenter.com",
           "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
         }
-      ]
+      ],
+      "no_caption": true
     }
   ]
 }

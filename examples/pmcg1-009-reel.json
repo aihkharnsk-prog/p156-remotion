@@ -1,0 +1,242 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "caption_style": "reel",
+  "meta": {
+    "title": "คาคูนะ ดักแด้ที่มีแขนลับในเกมภาคแรก การ์ดใบที่ 9 #shorts",
+    "description": "การ์ดใบที่ 9 ของชุดโปเกมอนญี่ปุ่น (拡張パック) คาคูนะ ชื่อที่สลับกัน แขนที่แทบไม่มีใครเห็น และท่าบนการ์ดที่เกมไม่ให้\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n#shorts #โปเกมอน #การ์ดโปเกมอน #pokemoncards #เรื่องเล่าการ์ด",
+    "thumb": {
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-9/large",
+      "hook": "มีแขนลับ\nที่ไม่มีใครเห็น",
+      "badge": "#9",
+      "sub": "เบื้องหลังการ์ด"
+    },
+    "publish_at": "2026-10-16T05:00:00Z"
+  },
+  "tts": {
+    "voice_id": "bTEswxYhpv7UDkQg5VRu",
+    "model_id": "eleven_v4",
+    "stability": 0.8,
+    "speed": 1.2,
+    "prefix": "[calm, soft, natural storyteller]"
+  },
+  "caption_position": "bottom",
+  "audio_rate": 1.067,
+  "caption_scale": 0.6,
+  "caption_bottom": 0.055,
+  "motion": 0.2,
+  "slides": [
+    {
+      "duration": 4,
+      "text": "ใบที่เก้า คือดักแด้ผึ้ง *คาคูนะ*",
+      "parts": [
+        {
+          "text": "ใบที่เก้า คือดักแด้ผึ้ง *คาคูนะ*",
+          "say": "ใบที่เก้า คือดักแด้ผึ้ง คาคูนะ."
+        },
+        {
+          "text": "ชื่อญี่ปุ่นคือ *โคคูน* มาจากคำว่า ดักแด้",
+          "say": "ชื่อญี่ปุ่นคือ โคคูน มาจากคำว่า ดักแด้"
+        },
+        {
+          "text": "แต่ชื่ออังกฤษ กลับฟังดู *ญี่ปุ่นกว่า*",
+          "say": "แต่ชื่ออังกฤษ กลับฟังดูญี่ปุ่นกว่า."
+        }
+      ],
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-9/large",
+      "image_mode": "card"
+    },
+    {
+      "duration": 4,
+      "text": "ตอนเกมยังทำไม่เสร็จ ชื่ออังกฤษของมันคือ *โคคูน*",
+      "parts": [
+        {
+          "text": "ตอนเกมยังทำไม่เสร็จ ชื่ออังกฤษของมันคือ *โคคูน*",
+          "say": "ตอนเกมยังทำไม่เสร็จ ชื่ออังกฤษของมัน ก็คือ โคคูน เหมือนกัน."
+        }
+      ],
+      "image_url": "https://archives.bulbagarden.net/media/upload/f/f3/0014Kakuna.png",
+      "image_mode": "art"
+    },
+    {
+      "duration": 4,
+      "text": "ในเกมภาคแรก ภาพของมัน *มีแขนเล็กๆ* โผล่ออกมา",
+      "parts": [
+        {
+          "text": "ในเกมภาคแรก ภาพของมัน *มีแขนเล็กๆ* โผล่ออกมา",
+          "say": "ในเกมภาคแรก ภาพของมัน มีแขนเล็กๆ โผล่ออกมา"
+        },
+        {
+          "text": "หลายคนคิดว่า *วาดผิด*",
+          "say": "หลายคนคิดว่าวาดผิด"
+        },
+        {
+          "text": "เพราะแขนนี้ *แทบไม่เคยโผล่* ที่ไหนอีกเลย",
+          "say": "เพราะแขนนี้ แทบไม่เคยโผล่ที่ไหนอีกเลย."
+        }
+      ],
+      "scene": "sprite",
+      "images": [
+        "https://archives.bulbagarden.net/media/upload/0/06/Spr_1b_014.png"
+      ],
+      "labels": [
+        "คาคูนะ ป่า ปรากฏตัว!"
+      ]
+    },
+    {
+      "duration": 4,
+      "text": "ออกแบบโดย *อัตสึโกะ นิชิดะ*",
+      "parts": [
+        {
+          "text": "ออกแบบโดย *อัตสึโกะ นิชิดะ*",
+          "say": "ออกแบบโดย อัตสึโกะ นิชิดะ"
+        },
+        {
+          "text": "จาก *ดักแด้ของผึ้งหรือต่อ* ที่ห้อยด้วยเส้นใย",
+          "say": "จากดักแด้ของผึ้งหรือต่อ ที่ห้อยอยู่ด้วยเส้นใย."
+        }
+      ],
+      "image_url": "https://archives.bulbagarden.net/media/upload/f/f3/0014Kakuna.png",
+      "image_mode": "art"
+    },
+    {
+      "duration": 4,
+      "text": "การ์ดใบนี้ วาดโดย *เคจิ คิเนบุจิ*",
+      "parts": [
+        {
+          "text": "การ์ดใบนี้ วาดโดย *เคจิ คิเนบุจิ*",
+          "say": "การ์ดใบนี้ วาดโดย เคจิ คิเนบุจิ"
+        },
+        {
+          "text": "มีท่า *ตัวแข็ง* เหมือนเมทาพอด",
+          "say": "มีท่าตัวแข็ง เหมือนเมทาพอด."
+        }
+      ],
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-9/large",
+      "image_mode": "card"
+    },
+    {
+      "duration": 4,
+      "text": "โยนเหรียญ ถ้า *ออกหัว*",
+      "parts": [
+        {
+          "text": "โยนเหรียญ ถ้า *ออกหัว*",
+          "say": "โยนเหรียญ ถ้าออกหัว"
+        },
+        {
+          "text": "เทิร์นหน้า *ไม่โดนดาเมจเลย*",
+          "say": "เทิร์นหน้า ไม่โดนดาเมจเลย."
+        }
+      ],
+      "scene": "coin",
+      "coin": "heads",
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-9/large"
+    },
+    {
+      "duration": 4,
+      "text": "แต่ท่า *ผงพิษ* บนการ์ดใบนี้",
+      "parts": [
+        {
+          "text": "แต่ท่า *ผงพิษ* บนการ์ดใบนี้",
+          "say": "แต่ท่าผงพิษ บนการ์ดใบนี้"
+        },
+        {
+          "text": "คาคูนะในเกม *ใช้ไม่ได้* เลย",
+          "say": "คาคูนะในเกม ใช้ไม่ได้เลย."
+        }
+      ],
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-9/large",
+      "image_mode": "card"
+    },
+    {
+      "duration": 4,
+      "text": "การ์ดอังกฤษรุ่นแรกๆ มีจุด *พิมพ์ผิด*",
+      "parts": [
+        {
+          "text": "การ์ดอังกฤษรุ่นแรกๆ มีจุด *พิมพ์ผิด*",
+          "say": "การ์ดอังกฤษรุ่นแรกๆ มีจุดพิมพ์ผิด"
+        },
+        {
+          "text": "เขียน *น้ำหนัก* เป็น *ความยาว*",
+          "say": "เขียนน้ำหนัก เป็นความยาว."
+        }
+      ],
+      "scene": "versions",
+      "images": [
+        "https://images.scrydex.com/pokemon/base1_ja-9/large",
+        "https://images.pokemontcg.io/base1/33_hires.png",
+        "https://images.pokemontcg.io/xy12/6_hires.png"
+      ],
+      "labels": [
+        "ญี่ปุ่น",
+        "อังกฤษ",
+        "พิมพ์ใหม่"
+      ]
+    },
+    {
+      "duration": 6,
+      "text": "ว่ากันว่าในอนิเมะ คาคูนะคือตัวที่ *ถูกฉายตอนวิวัฒนาการ* บ่อยที่สุด",
+      "parts": [
+        {
+          "text": "ว่ากันว่าในอนิเมะ คาคูนะคือตัวที่ *ถูกฉายตอนวิวัฒนาการ* บ่อยที่สุด",
+          "say": "ว่ากันว่าในอนิเมะ คาคูนะ คือตัวที่ถูกฉายตอนวิวัฒนาการ บ่อยที่สุด."
+        }
+      ],
+      "scene": "evolve",
+      "images": [
+        "https://archives.bulbagarden.net/media/upload/3/36/0013Weedle.png",
+        "https://archives.bulbagarden.net/media/upload/f/f3/0014Kakuna.png",
+        "https://archives.bulbagarden.net/media/upload/f/f7/0015Beedrill.png"
+      ]
+    },
+    {
+      "duration": 4,
+      "text": "ตอนที่สี่ของอนิเมะ มี *รังคาคูนะ* เต็มป่า",
+      "parts": [
+        {
+          "text": "ตอนที่สี่ของอนิเมะ มี *รังคาคูนะ* เต็มป่า",
+          "say": "ตอนที่สี่ของอนิเมะ มีรังคาคูนะเต็มป่า"
+        },
+        {
+          "text": "ตัวหนึ่งกลายเป็น *บีดริล* ออกมาปกป้องรัง",
+          "say": "ตัวหนึ่งกลายเป็นบีดริล ออกมาปกป้องรัง."
+        }
+      ],
+      "image_url": "https://archives.bulbagarden.net/media/upload/f/f7/0015Beedrill.png",
+      "image_mode": "art"
+    },
+    {
+      "duration": 4,
+      "text": "ดักแด้ที่ดูนิ่งๆ แต่ *ซ่อนเรื่องไว้เพียบ*",
+      "parts": [
+        {
+          "text": "ดักแด้ที่ดูนิ่งๆ แต่ *ซ่อนเรื่องไว้เพียบ*",
+          "say": "ดักแด้ที่ดูนิ่งๆ แต่ซ่อนเรื่องไว้เพียบ."
+        },
+        {
+          "text": "การ์ดชุดแรกยังมีความลับอีกเยอะ *กดติดตาม* แล้วมาเปิดไปด้วยกัน",
+          "say": "การ์ดชุดแรก ยังมีความลับซ่อนอยู่อีกเยอะ. กดติดตามไว้ แล้วมาเปิดไปด้วยกัน."
+        }
+      ],
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-9/large",
+      "image_mode": "card"
+    },
+    {
+      "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+      "image_mode": "still",
+      "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "ชอบเรื่องเล่าแบบนี้ *กดติดตาม* ไว้เลย",
+          "say": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้เลย."
+        },
+        {
+          "text": "*ซื้อ ขาย สะสม แข่งเกมส์การ์ด* ที่ www.cardzcenter.com",
+          "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+        }
+      ],
+      "no_caption": true
+    }
+  ]
+}

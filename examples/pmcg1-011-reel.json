@@ -1,0 +1,231 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "caption_style": "reel",
+  "meta": {
+    "title": "ฟุชิกิบานะ การ์ดโฮโลที่พิมพ์เลขผิด การ์ดใบที่ 11 #shorts",
+    "description": "การ์ดใบที่ 11 ของชุดโปเกมอนญี่ปุ่น (拡張パック) ฟุชิกิบานะ โฮโลแรร์ที่ล็อตแรกพิมพ์เลขโปเกเด็กซ์ผิด และหน้ากล่องภาคที่ขายแค่ในญี่ปุ่น\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n#shorts #โปเกมอน #การ์ดโปเกมอน #pokemoncards #เรื่องเล่าการ์ด",
+    "thumb": {
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-11/large",
+      "hook": "ล็อตแรก\nพิมพ์เลขผิด!",
+      "badge": "#11",
+      "sub": "เบื้องหลังการ์ด"
+    },
+    "publish_at": "2026-10-17T05:00:00Z"
+  },
+  "tts": {
+    "voice_id": "bTEswxYhpv7UDkQg5VRu",
+    "model_id": "eleven_v4",
+    "stability": 0.8,
+    "speed": 1.2,
+    "prefix": "[calm, soft, natural storyteller]"
+  },
+  "caption_position": "bottom",
+  "audio_rate": 1.067,
+  "caption_scale": 0.6,
+  "caption_bottom": 0.055,
+  "motion": 0.2,
+  "slides": [
+    {
+      "duration": 4,
+      "text": "ใบที่สิบเอ็ด คือ *ฟุชิกิบานะ*",
+      "parts": [
+        {
+          "text": "ใบที่สิบเอ็ด คือ *ฟุชิกิบานะ*",
+          "say": "ใบที่สิบเอ็ด คือ ฟุชิกิบานะ."
+        },
+        {
+          "text": "การ์ด *โฮโลแรร์* ที่หลายคนตามหา",
+          "say": "การ์ดโฮโลแรร์ ที่หลายคนตามหา."
+        }
+      ],
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-11/large",
+      "image_mode": "card"
+    },
+    {
+      "duration": 4,
+      "text": "แต่การ์ดญี่ปุ่น *ล็อตแรกสุด*",
+      "parts": [
+        {
+          "text": "แต่การ์ดญี่ปุ่น *ล็อตแรกสุด*",
+          "say": "แต่การ์ดญี่ปุ่นล็อตแรกสุด"
+        },
+        {
+          "text": "พิมพ์หมายเลขโปเกเด็กซ์ผิด เป็น *หกสิบแปด*",
+          "say": "พิมพ์หมายเลขโปเกเด็กซ์ผิด เป็นหกสิบแปด"
+        },
+        {
+          "text": "แทนที่จะเป็น *สาม*",
+          "say": "แทนที่จะเป็นสาม. ก่อนจะถูกแก้ในล็อตต่อมา."
+        }
+      ],
+      "scene": "versions",
+      "images": [
+        "https://images.scrydex.com/pokemon/base1_ja-11/large",
+        "https://images.pokemontcg.io/base1/15_hires.png"
+      ],
+      "labels": [
+        "ญี่ปุ่น",
+        "อังกฤษ"
+      ]
+    },
+    {
+      "duration": 4,
+      "text": "ชื่อญี่ปุ่นแปลว่า *ดอกไม้ประหลาด*",
+      "parts": [
+        {
+          "text": "ชื่อญี่ปุ่นแปลว่า *ดอกไม้ประหลาด*",
+          "say": "ชื่อญี่ปุ่น แปลว่าดอกไม้ประหลาด"
+        },
+        {
+          "text": "ชื่ออังกฤษมาจาก *วีนัส* ของต้นกาบหอยแครง",
+          "say": "ชื่ออังกฤษ มาจากคำว่าวีนัส ของต้นกาบหอยแครง."
+        }
+      ],
+      "image_url": "https://archives.bulbagarden.net/media/upload/6/6b/0003Venusaur.png",
+      "image_mode": "art"
+    },
+    {
+      "duration": 4,
+      "text": "มันคือหน้ากล่องของ *โปเกมอนภาคเขียว*",
+      "parts": [
+        {
+          "text": "มันคือหน้ากล่องของ *โปเกมอนภาคเขียว*",
+          "say": "มันคือหน้ากล่อง ของโปเกมอนภาคเขียว"
+        },
+        {
+          "text": "ภาคที่วางขาย *เฉพาะในญี่ปุ่น*",
+          "say": "ภาคที่วางขาย เฉพาะในญี่ปุ่น."
+        }
+      ],
+      "image_url": "https://archives.bulbagarden.net/media/upload/6/6b/0003Venusaur.png",
+      "image_mode": "art"
+    },
+    {
+      "duration": 4,
+      "text": "การ์ดใบนี้ วาดโดย *มิตสึฮิโระ อาริตะ*",
+      "parts": [
+        {
+          "text": "การ์ดใบนี้ วาดโดย *มิตสึฮิโระ อาริตะ*",
+          "say": "การ์ดใบนี้ วาดโดย มิตสึฮิโระ อาริตะ"
+        },
+        {
+          "text": "มีพลังพิเศษ *เอเนอร์จี้ทรานส์*",
+          "say": "มีพลังพิเศษ เอเนอร์จี้ทรานส์"
+        },
+        {
+          "text": "ย้ายพลังงานหญ้าได้ *ไม่จำกัดครั้ง*",
+          "say": "ย้ายพลังงานหญ้าได้ ไม่จำกัดครั้ง."
+        }
+      ],
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-11/large",
+      "image_mode": "card"
+    },
+    {
+      "duration": 6,
+      "text": "จากเมล็ด สู่ต้นกล้า",
+      "parts": [
+        {
+          "text": "จากเมล็ด สู่ต้นกล้า",
+          "say": "จากเมล็ด สู่ต้นกล้า"
+        },
+        {
+          "text": "จนกลายเป็น *ดอกไม้ยักษ์*",
+          "say": "จนกลายเป็นดอกไม้ยักษ์."
+        }
+      ],
+      "scene": "evolve",
+      "images": [
+        "https://archives.bulbagarden.net/media/upload/f/fb/0001Bulbasaur.png",
+        "https://archives.bulbagarden.net/media/upload/8/81/0002Ivysaur.png",
+        "https://archives.bulbagarden.net/media/upload/6/6b/0003Venusaur.png"
+      ]
+    },
+    {
+      "duration": 4,
+      "text": "ในเกมภาคแรก ถ้าเลือก *ฮิโตคาเงะ*",
+      "parts": [
+        {
+          "text": "ในเกมภาคแรก ถ้าเลือก *ฮิโตคาเงะ*",
+          "say": "ในเกมภาคแรก ถ้าคุณเลือกฮิโตคาเงะ"
+        },
+        {
+          "text": "ทางเดียวที่จะได้ฟุชิกิบานะ คือ *การแลก*",
+          "say": "ทางเดียวที่จะได้ฟุชิกิบานะ คือการแลก."
+        }
+      ],
+      "scene": "sprite",
+      "images": [
+        "https://archives.bulbagarden.net/media/upload/c/c4/Spr_1g_003.png"
+      ],
+      "labels": [
+        "คู่แข่ง ส่ง ฟุชิกิบานะ ออกมา!"
+      ]
+    },
+    {
+      "duration": 4,
+      "text": "เคน สุงิโมริ บอกว่ามันคือหนึ่งใน *ตัวที่วาดยากที่สุด*",
+      "parts": [
+        {
+          "text": "เคน สุงิโมริ บอกว่ามันคือหนึ่งใน *ตัวที่วาดยากที่สุด*",
+          "say": "เคน สุงิโมริ บอกว่า มันคือหนึ่งในตัวที่วาดยากที่สุด."
+        },
+        {
+          "text": "แต่ก็เป็น *ตัวโปรด* ของเขาด้วย",
+          "say": "แต่ก็เป็นตัวโปรดของเขาด้วย."
+        }
+      ],
+      "image_url": "https://archives.bulbagarden.net/media/upload/6/6b/0003Venusaur.png",
+      "image_mode": "art"
+    },
+    {
+      "duration": 4,
+      "text": "ภาคหลังๆ มีร่าง *กิกะแม็กซ์*",
+      "parts": [
+        {
+          "text": "ภาคหลังๆ มีร่าง *กิกะแม็กซ์*",
+          "say": "ภาคหลังๆ มันมีร่างกิกะแม็กซ์"
+        },
+        {
+          "text": "ที่เถาวัลย์ *โค่นตึกสิบชั้น* ได้",
+          "say": "ที่เถาวัลย์ โค่นตึกสิบชั้นได้."
+        }
+      ],
+      "image_url": "https://archives.bulbagarden.net/media/upload/4/45/0003Venusaur-Gigantamax.png",
+      "image_mode": "art"
+    },
+    {
+      "duration": 4,
+      "text": "การ์ดหายากของชุดแรก *กำลังจะมาอีกหลายใบ*",
+      "parts": [
+        {
+          "text": "การ์ดหายากของชุดแรก *กำลังจะมาอีกหลายใบ*",
+          "say": "การ์ดหายากของชุดแรก กำลังจะมาอีกหลายใบ."
+        },
+        {
+          "text": "*กดติดตาม* ไว้ จะได้ไม่พลาด",
+          "say": "กดติดตามไว้ จะได้ไม่พลาด."
+        }
+      ],
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-11/large",
+      "image_mode": "card"
+    },
+    {
+      "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+      "image_mode": "still",
+      "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "ชอบเรื่องเล่าแบบนี้ *กดติดตาม* ไว้เลย",
+          "say": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้เลย."
+        },
+        {
+          "text": "*ซื้อ ขาย สะสม แข่งเกมส์การ์ด* ที่ www.cardzcenter.com",
+          "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+        }
+      ],
+      "no_caption": true
+    }
+  ]
+}
