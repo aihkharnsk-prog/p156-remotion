@@ -30,6 +30,7 @@ export type Slide = {
   image_aspect?: number; // สูง/กว้างของภาพ (ค่าเริ่มต้น 1.25 = การ์ด)
   credit?: string; // เครดิตที่มุมซ้ายบน เช่น "Video: Pexels / ชื่อผู้ถ่าย"
   text?: string;
+  audio_url?: string; // เสียงพากย์ของสไลด์นี้ — ถ้ามี ความยาวสไลด์ = ความยาวเสียง (ภาพ ซับ เสียงตรงกันแน่นอน)
   duration: number; // seconds
 };
 
@@ -39,6 +40,7 @@ export type DynamicProps = {
   width?: number; // default 1920 (YouTube แนวนอน) — ส่ง 1080 + height 1920 ถ้าทำ Shorts
   height?: number; // default 1080
   caption_style?: "classic" | "reel"; // reel = ซับกลางจอสีนีออน คำสำคัญใหญ่ (ใส่ *คำสำคัญ* ในข้อความ)
+  caption_position?: "center" | "bottom"; // ตำแหน่งซับแบบ reel (ค่าเริ่มต้น center)
   accent_color?: string; // สีซับแบบ reel (ค่าเริ่มต้น #39ff6a)
   fit_audio?: boolean; // true (ค่าเริ่มต้น) = ถ้ามี audio_url จะยืด/หดความยาวสไลด์ทุกอันตามสัดส่วนให้พอดีกับความยาวเสียง
 };
@@ -58,8 +60,9 @@ const SlideView: React.FC<{
   slide: Slide;
   index: number;
   captionStyle?: "classic" | "reel";
+  captionPosition?: "center" | "bottom";
   accent?: string;
-}> = ({ slide, index, captionStyle, accent }) => {
+}> = ({ slide, index, captionStyle, captionPosition, accent }) => {
   const frame = useCurrentFrame();
   const { width, height, fps } = useVideoConfig();
   const dur = slideFrames(slide);
@@ -280,10 +283,13 @@ const SlideView: React.FC<{
               position: "absolute",
               left: 0,
               right: 0,
-              top: "50%",
+              ...(captionPosition === "bottom"
+                ? { bottom: Math.round(height * 0.14) }
+                : { top: "50%" }),
               padding: `0 ${Math.round(width * 0.07)}px`,
               textAlign: "center",
-              transform: `translateY(-50%) scale(${pop})`,
+              transform: `${captionPosition === "bottom" ? "" : "translateY(-50%) "}scale(${pop})`,
+              transformOrigin: captionPosition === "bottom" ? "50% 100%" : "50% 50%",
               opacity: popOpacity,
               fontFamily: FONT,
               fontSize: base,
@@ -341,6 +347,7 @@ export const DynamicStory: React.FC<DynamicProps> = ({
   slides,
   audio_url,
   caption_style,
+  caption_position,
   accent_color,
 }) => {
   let cursor = 0;
@@ -352,7 +359,8 @@ export const DynamicStory: React.FC<DynamicProps> = ({
         cursor += dur;
         return (
           <Sequence key={i} from={from} durationInFrames={dur}>
-            <SlideView slide={slide} index={i} captionStyle={caption_style} accent={accent_color} />
+            <SlideView slide={slide} index={i} captionStyle={caption_style} captionPosition={caption_position} accent={accent_color} />
+            {slide.audio_url ? <Audio src={slide.audio_url} /> : null}
           </Sequence>
         );
       })}

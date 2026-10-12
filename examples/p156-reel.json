@@ -3,13 +3,21 @@
   "height": 1920,
   "caption_style": "reel",
   "meta": {
-    "title": "P-156 reel style draft"
+    "title": "P-156 reel – per-slide voice"
+  },
+  "tts": {
+    "voice_id": "bTEswxYhpv7UDkQg5VRu",
+    "model_id": "eleven_v4",
+    "stability": 0.8,
+    "speed": 0.95,
+    "prefix": "[calm, soft, natural storyteller]"
   },
   "slides": [
     {
       "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
       "image_mode": "card",
       "text": "การ์ดใบนี้ มีรหัส *P-156*",
+      "say": "การ์ดใบนี้ มีรหัส พี หนึ่ง ห้า หก. ชื่อภาษาญี่ปุ่น แปลได้ว่า ความเป็นไปได้ในอนาคต.",
       "duration": 4
     },
     {
@@ -17,7 +25,8 @@
       "image_mode": "detail",
       "image_aspect": 1.25,
       "text": "การ์ดออปชัน ของ *ดิจิมอนการ์ดเกม*",
-      "duration": 3,
+      "say": "เป็นการ์ดออปชัน ของดิจิมอนการ์ดเกม.",
+      "duration": 4,
       "focus_x": 65,
       "focus_y": 42,
       "focus_zoom": 2.2,
@@ -30,7 +39,29 @@
       "image_mode": "detail",
       "image_aspect": 1.25,
       "text": "พิกเซลอาร์ต ดิจิมอน *15 ตัว*",
-      "duration": 3.5,
+      "say": "ภาพบนการ์ดเป็นพิกเซลอาร์ต มีดิจิมอนสิบห้าตัว.",
+      "duration": 4,
+      "focus_x": 50,
+      "focus_y": 24,
+      "focus_zoom": 1.8,
+      "focus_to_x": 50,
+      "focus_to_y": 30,
+      "focus_to_zoom": 2.1
+    },
+    {
+      "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
+      "image_mode": "card",
+      "text": "ที่มา: แคมเปญ *Digimon UP* ก.ค. 2026",
+      "say": "ที่มาของมัน เริ่มจากแคมเปญฉลองกำหนดวันวางจำหน่าย ดิจิมอนอัป ในเดือนกรกฎาคม สองพันห้าร้อยยี่สิบหก. ผู้เล่นต้องติดตามบัญชีทางการ แล้วโพสต์แฮชแท็กที่กำหนด.",
+      "duration": 4
+    },
+    {
+      "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
+      "image_mode": "detail",
+      "image_aspect": 1.25,
+      "text": "แจกแค่ *15 คน* ในญี่ปุ่น",
+      "say": "ผู้ที่ได้การ์ดใบนี้ มีเพียงสิบห้าคน และจัดส่งเฉพาะในประเทศญี่ปุ่น.",
+      "duration": 4,
       "focus_x": 50,
       "focus_y": 24,
       "focus_zoom": 1.8,
@@ -42,8 +73,9 @@
       "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
       "image_mode": "detail",
       "image_aspect": 1.25,
-      "text": "ที่มา: แคมเปญ *Digimon UP* ก.ค. 2026",
-      "duration": 9,
+      "text": "*Not for sale* จริงๆ",
+      "say": "ข้อความด้านข้างที่เขียนว่า นอท ฟอร์ เซล จึงมีความหมายตามนั้น.",
+      "duration": 4,
       "focus_x": 79,
       "focus_y": 55,
       "focus_zoom": 2.6,
@@ -56,7 +88,8 @@
       "image_mode": "detail",
       "image_aspect": 1.25,
       "text": "ค่าใช้จ่าย *2*",
-      "duration": 2.5,
+      "say": "ค่าใช้จ่ายของการ์ด อยู่ที่สอง.",
+      "duration": 4,
       "focus_x": 27,
       "focus_y": 17,
       "focus_zoom": 2.6,
@@ -69,7 +102,8 @@
       "image_mode": "detail",
       "image_aspect": 1.25,
       "text": "ถ้ามี *เทมเมอร์* ไม่ต้องสนสี",
-      "duration": 5,
+      "say": "ในเกม ถ้ามีเทมเมอร์อยู่ในสนาม ก็ใช้การ์ดนี้ได้ โดยไม่ต้องสนใจเงื่อนไขเรื่องสี.",
+      "duration": 4,
       "focus_x": 50,
       "focus_y": 56,
       "focus_zoom": 1.6,
@@ -82,7 +116,8 @@
       "image_mode": "detail",
       "image_aspect": 1.25,
       "text": "เอฟเฟกต์ *Security* ลงเทมเมอร์ฟรี",
-      "duration": 5,
+      "say": "และเมื่อถูกเปิดจากกองซีเคียวริตี้ ก็ลงเทมเมอร์จากมือได้ฟรี แล้วเก็บการ์ดนี้เข้ามือ.",
+      "duration": 4,
       "focus_x": 50,
       "focus_y": 73,
       "focus_zoom": 1.8,
@@ -94,13 +129,16 @@
       "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
       "image_mode": "card",
       "text": "ภาพนี้ *ใครวาด*?",
+      "say": "ส่วนภาพบนการ์ด มีที่มาอย่างไร และใครเป็นผู้วาด.",
       "duration": 4
     },
     {
       "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
       "image_mode": "card",
       "text": "*ไปดูกัน*",
-      "duration": 2
+      "say": "ไปดูกัน.",
+      "duration": 4
     }
-  ]
+  ],
+  "caption_position": "bottom"
 }

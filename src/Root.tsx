@@ -54,7 +54,22 @@ export const Root: React.FC = () => {
         calculateMetadata={async ({ props }) => {
           let slides = props.slides;
           // ถ้ามีเสียงพากย์ → ปรับความยาวสไลด์ให้พอดีกับเสียง (เว้นท้าย 0.8 วินาที)
-          if (props.audio_url && props.fit_audio !== false) {
+          // ถ้าสไลด์มีเสียงของตัวเอง → ความยาวสไลด์ = ความยาวเสียงช่วงนั้น + เว้นจังหวะ (ตรงกันเป๊ะ ไม่ต้องเดาสัดส่วน)
+          if (slides.some((s) => s.audio_url)) {
+            slides = await Promise.all(
+              slides.map(async (s, i) => {
+                if (!s.audio_url) return s;
+                try {
+                  const sec = await getAudioDurationInSeconds(s.audio_url);
+                  const pad = i === slides.length - 1 ? 0.8 : 0.3;
+                  return { ...s, duration: sec + pad };
+                } catch (e) {
+                  console.warn("slide audio duration failed", s.audio_url, e);
+                  return s;
+                }
+              })
+            );
+          } else if (props.audio_url && props.fit_audio !== false) {
             try {
               const audioSec = await getAudioDurationInSeconds(props.audio_url);
               const slideSec = slides.reduce((a, s) => a + Number(s.duration), 0);

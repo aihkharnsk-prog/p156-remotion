@@ -99,6 +99,25 @@ async function downloadImage(url, destDir, baseName) {
   return name;
 }
 
+async function ttsToFile(text, destPath, tts) {
+  const key = process.env.ELEVENLABS_API_KEY;
+  if (!key) throw new Error("ELEVENLABS_API_KEY is not set on the server");
+  const r = await fetch(
+    `https://api.elevenlabs.io/v1/text-to-speech/${tts.voice_id}?output_format=mp3_44100_128`,
+    {
+      method: "POST",
+      headers: { "xi-api-key": key, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        text: (tts.prefix ? tts.prefix + " " : "") + text,
+        model_id: tts.model_id || "eleven_v4",
+        voice_settings: { stability: tts.stability ?? 0.8, speed: tts.speed ?? 0.95 },
+      }),
+    }
+  );
+  if (!r.ok) throw new Error(`ElevenLabs ${r.status}: ${(await r.text()).slice(0, 300)}`);
+  await fs.writeFile(destPath, Buffer.from(await r.arrayBuffer()));
+}
+
 async function runJob(job) {
   job.status = "rendering";
   job.started_at = new Date().toISOString();
@@ -171,6 +190,11 @@ async function runJob(job) {
             job.warnings.push(msg);
           }
         }
+        // เสียงพากย์รายสไลด์: สร้างเสียงจากข้อความ say ของแต่ละสไลด์ → ความยาวสไลด์ตามเสียงจริง
+        if (s.say && job.request.tts) {
+          await ttsToFile(String(s.say), path.join(assetDir, `sa${i}.mp3`), job.request.tts);
+          slide.audio_url = local(`sa${i}.mp3`);
+        }
         slides.push(slide);
       }
 
@@ -180,6 +204,7 @@ async function runJob(job) {
         height: job.request.height,
         fit_audio: job.request.fit_audio,
         caption_style: job.request.caption_style,
+        caption_position: job.request.caption_position,
         accent_color: job.request.accent_color,
       };
 
@@ -383,9 +408,29 @@ app.post("/render", auth, (req, res) => {
         image_aspect: optNum(s.image_aspect),
         credit: s.credit ? String(s.credit) : undefined,
         text: s.text ? String(s.text) : undefined,
+        say: s.say ? String(s.say) : undefined,
         duration,
       });
     }
+  }
+
+  // tts: สร้างเสียงพากย์ต่อสไลด์ด้วย ElevenLabs บนเซิร์ฟเวอร์ (ต้องตั้ง ELEVENLABS_API_KEY)
+  let tts;
+  const ttsIn = parseArr(body.tts);
+  if (ttsIn && typeof ttsIn === "object") {
+    if (!/^[A-Za-z0-9]{10,40}$/.test(String(ttsIn.voice_id || ""))) {
+      return res.status(400).json({ error: "tts.voice_id is missing or invalid" });
+    }
+    if (!process.env.ELEVENLABS_API_KEY) {
+      return res.status(400).json({ error: "server has no ELEVENLABS_API_KEY" });
+    }
+    tts = {
+      voice_id: String(ttsIn.voice_id),
+      model_id: ttsIn.model_id ? String(ttsIn.model_id) : undefined,
+      stability: Number.isFinite(Number(ttsIn.stability)) && ttsIn.stability !== undefined ? Number(ttsIn.stability) : undefined,
+      speed: Number.isFinite(Number(ttsIn.speed)) && ttsIn.speed !== undefined ? Number(ttsIn.speed) : undefined,
+      prefix: ttsIn.prefix ? String(ttsIn.prefix).slice(0, 80) : undefined,
+    };
   }
 
   const id = randomUUID();
@@ -401,7 +446,9 @@ app.post("/render", auth, (req, res) => {
       shots: composition === "DramaStory" ? clean : undefined,
       music_url: body.music_url || undefined,
       audio_url: body.audio_url || undefined,
+      tts,
       caption_style: body.caption_style === "reel" ? "reel" : "classic",
+      caption_position: body.caption_position === "bottom" ? "bottom" : "center",
       accent_color: /^#[0-9a-fA-F]{6}$/.test(String(body.accent_color || "")) ? String(body.accent_color) : undefined,
       fit_audio: body.fit_audio === undefined ? true : !(body.fit_audio === false || body.fit_audio === "false" || body.fit_audio === 0),
       webhook_url: body.webhook_url || undefined,
