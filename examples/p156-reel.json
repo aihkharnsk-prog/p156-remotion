@@ -17,127 +17,218 @@
       "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
       "image_mode": "card",
       "text": "การ์ดใบนี้ มีรหัส *P-156*",
-      "say": "การ์ดใบนี้ มีรหัส พี หนึ่ง ห้า หก. ชื่อภาษาญี่ปุ่น แปลได้ว่า ความเป็นไปได้ในอนาคต.",
-      "duration": 4
+      "duration": 4,
+      "parts": [
+        {
+          "text": "การ์ดใบนี้ มีรหัส *P-156*",
+          "say": "กาดใบนี้ มีรหัส พี หนึ่ง ห้า หก."
+        },
+        {
+          "text": "ชื่อภาษาญี่ปุ่น แปลได้ว่า *ความเป็นไปได้ในอนาคต*",
+          "say": "ชื่อภาษาญี่ปุ่น แปลได้ว่า ความเป็นไปได้ในอนาคต."
+        }
+      ]
     },
     {
       "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
       "image_mode": "detail",
       "image_aspect": 1.25,
-      "text": "การ์ดออปชัน ของ *ดิจิมอนการ์ดเกม*",
-      "say": "เป็นการ์ดออปชัน ของดิจิมอนการ์ดเกม.",
+      "text": "เป็นการ์ดออปชัน ของ *ดิจิมอนการ์ดเกม*",
       "duration": 4,
       "focus_x": 65,
       "focus_y": 42,
       "focus_zoom": 2.2,
       "focus_to_x": 65,
       "focus_to_y": 42,
-      "focus_to_zoom": 2.6
+      "focus_to_zoom": 2.6,
+      "parts": [
+        {
+          "text": "เป็นการ์ดออปชัน ของ *ดิจิมอนการ์ดเกม*",
+          "say": "เป็นกาดออปชัน ของดิจิมอนกาดเกม."
+        }
+      ]
     },
     {
       "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
       "image_mode": "detail",
       "image_aspect": 1.25,
-      "text": "พิกเซลอาร์ต ดิจิมอน *15 ตัว*",
-      "say": "ภาพบนการ์ดเป็นพิกเซลอาร์ต มีดิจิมอนสิบห้าตัว.",
+      "text": "ภาพบนการ์ดเป็นพิกเซลอาร์ต มีดิจิมอน *15 ตัว*",
       "duration": 4,
       "focus_x": 50,
       "focus_y": 24,
       "focus_zoom": 1.8,
       "focus_to_x": 50,
       "focus_to_y": 30,
-      "focus_to_zoom": 2.1
+      "focus_to_zoom": 2.1,
+      "parts": [
+        {
+          "text": "ภาพบนการ์ดเป็นพิกเซลอาร์ต มีดิจิมอน *15 ตัว*",
+          "say": "ภาพบนกาดเป็นพิกเซลอาด มีดิจิมอนสิบห้าตัว."
+        }
+      ]
     },
     {
       "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
       "image_mode": "card",
-      "text": "ที่มา: แคมเปญ *Digimon UP* ก.ค. 2026",
-      "say": "ที่มาของมัน เริ่มจากแคมเปญฉลองกำหนดวันวางจำหน่าย ดิจิมอนอัป ในเดือนกรกฎาคม สองพันห้าร้อยยี่สิบหก. ผู้เล่นต้องติดตามบัญชีทางการ แล้วโพสต์แฮชแท็กที่กำหนด.",
-      "duration": 4
+      "text": "ที่มาของมัน เริ่มจากแคมเปญฉลอง กำหนดวันวางจำหน่าย *Digimon UP*",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "ที่มาของมัน เริ่มจากแคมเปญฉลอง กำหนดวันวางจำหน่าย *Digimon UP*",
+          "say": "ที่มาของมัน เริ่มจากแคมเปญฉลองกำหนดวันวางจำหน่าย ดิจิมอนอัป"
+        },
+        {
+          "text": "ในเดือน *กรกฎาคม 2026*",
+          "say": "ในเดือนกรกฎาคม สองพันห้าร้อยยี่สิบหก."
+        },
+        {
+          "text": "ผู้เล่นต้องติดตามบัญชีทางการ แล้วโพสต์ *แฮชแท็ก* ที่กำหนด",
+          "say": "ผู้เล่นต้องติดตามบัญชีทางการ แล้วโพสต์แฮชแท็กที่กำหนด."
+        }
+      ]
     },
     {
       "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
       "image_mode": "detail",
       "image_aspect": 1.25,
-      "text": "แจกแค่ *15 คน* ในญี่ปุ่น",
-      "say": "ผู้ที่ได้การ์ดใบนี้ มีเพียงสิบห้าคน และจัดส่งเฉพาะในประเทศญี่ปุ่น.",
+      "text": "ผู้ที่ได้การ์ดใบนี้ มีเพียง *15 คน*",
       "duration": 4,
       "focus_x": 50,
       "focus_y": 24,
       "focus_zoom": 1.8,
       "focus_to_x": 50,
       "focus_to_y": 30,
-      "focus_to_zoom": 2.1
+      "focus_to_zoom": 2.1,
+      "parts": [
+        {
+          "text": "ผู้ที่ได้การ์ดใบนี้ มีเพียง *15 คน*",
+          "say": "ผู้ที่ได้กาดใบนี้ มีเพียงสิบห้าคน"
+        },
+        {
+          "text": "และจัดส่งเฉพาะในประเทศ *ญี่ปุ่น*",
+          "say": "และจัดส่งเฉพาะในประเทศญี่ปุ่น."
+        }
+      ]
     },
     {
       "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
       "image_mode": "detail",
       "image_aspect": 1.25,
-      "text": "*Not for sale* จริงๆ",
-      "say": "ข้อความด้านข้างที่เขียนว่า นอท ฟอร์ เซล จึงมีความหมายตามนั้น.",
+      "text": "ข้อความด้านข้างที่เขียนว่า *Not for sale*",
       "duration": 4,
       "focus_x": 79,
       "focus_y": 55,
       "focus_zoom": 2.6,
       "focus_to_x": 79,
       "focus_to_y": 48,
-      "focus_to_zoom": 2.8
+      "focus_to_zoom": 2.8,
+      "parts": [
+        {
+          "text": "ข้อความด้านข้างที่เขียนว่า *Not for sale*",
+          "say": "ข้อความด้านข้างที่เขียนว่า นอท ฟอร์ เซล,"
+        },
+        {
+          "text": "จึงมีความหมายตามนั้น",
+          "say": "จึงมีความหมายตามนั้น."
+        }
+      ]
     },
     {
       "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
       "image_mode": "detail",
       "image_aspect": 1.25,
-      "text": "ค่าใช้จ่าย *2*",
-      "say": "ค่าใช้จ่ายของการ์ด อยู่ที่สอง.",
+      "text": "ค่าใช้จ่ายของการ์ด อยู่ที่ *2*",
       "duration": 4,
       "focus_x": 27,
       "focus_y": 17,
       "focus_zoom": 2.6,
       "focus_to_x": 27,
       "focus_to_y": 17,
-      "focus_to_zoom": 3.0
+      "focus_to_zoom": 3.0,
+      "parts": [
+        {
+          "text": "ค่าใช้จ่ายของการ์ด อยู่ที่ *2*",
+          "say": "ค่าใช้จ่ายของกาด อยู่ที่สอง."
+        }
+      ]
     },
     {
       "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
       "image_mode": "detail",
       "image_aspect": 1.25,
-      "text": "ถ้ามี *เทมเมอร์* ไม่ต้องสนสี",
-      "say": "ในเกม ถ้ามีเทมเมอร์อยู่ในสนาม ก็ใช้การ์ดนี้ได้ โดยไม่ต้องสนใจเงื่อนไขเรื่องสี.",
+      "text": "ในเกม ถ้ามี *เทมเมอร์* อยู่ในสนาม ก็ใช้การ์ดนี้ได้",
       "duration": 4,
       "focus_x": 50,
       "focus_y": 56,
       "focus_zoom": 1.6,
       "focus_to_x": 50,
       "focus_to_y": 60,
-      "focus_to_zoom": 1.9
+      "focus_to_zoom": 1.9,
+      "parts": [
+        {
+          "text": "ในเกม ถ้ามี *เทมเมอร์* อยู่ในสนาม ก็ใช้การ์ดนี้ได้",
+          "say": "ในเกม ถ้ามีเทมเมอร์อยู่ในสนาม ก็ใช้กาดนี้ได้"
+        },
+        {
+          "text": "โดยไม่ต้องสนใจ เงื่อนไขเรื่อง *สี*",
+          "say": "โดยไม่ต้องสนใจเงื่อนไขเรื่องสี."
+        }
+      ]
     },
     {
       "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
       "image_mode": "detail",
       "image_aspect": 1.25,
-      "text": "เอฟเฟกต์ *Security* ลงเทมเมอร์ฟรี",
-      "say": "และเมื่อถูกเปิดจากกองซีเคียวริตี้ ก็ลงเทมเมอร์จากมือได้ฟรี แล้วเก็บการ์ดนี้เข้ามือ.",
+      "text": "และเมื่อถูกเปิดจากกอง *Security*",
       "duration": 4,
       "focus_x": 50,
       "focus_y": 73,
       "focus_zoom": 1.8,
       "focus_to_x": 50,
       "focus_to_y": 75,
-      "focus_to_zoom": 2.1
+      "focus_to_zoom": 2.1,
+      "parts": [
+        {
+          "text": "และเมื่อถูกเปิดจากกอง *Security*",
+          "say": "และเมื่อถูกเปิดจากกองซีเคียวริตี้"
+        },
+        {
+          "text": "ก็ลง *เทมเมอร์* จากมือได้ฟรี",
+          "say": "ก็ลงเทมเมอร์จากมือได้ฟรี"
+        },
+        {
+          "text": "แล้วเก็บการ์ดนี้เข้ามือ",
+          "say": "แล้วเก็บกาดนี้เข้ามือ."
+        }
+      ]
     },
     {
       "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
       "image_mode": "card",
-      "text": "ภาพนี้ *ใครวาด*?",
-      "say": "ส่วนภาพบนการ์ด มีที่มาอย่างไร และใครเป็นผู้วาด.",
-      "duration": 4
+      "text": "ส่วนภาพบนการ์ด มีที่มาอย่างไร",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "ส่วนภาพบนการ์ด มีที่มาอย่างไร",
+          "say": "ส่วนภาพบนกาด มีที่มาอย่างไร"
+        },
+        {
+          "text": "และ *ใครเป็นผู้วาด*?",
+          "say": "และใครเป็นผู้วาด."
+        }
+      ]
     },
     {
       "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
       "image_mode": "card",
       "text": "*ไปดูกัน*",
-      "say": "ไปดูกัน.",
-      "duration": 4
+      "duration": 4,
+      "parts": [
+        {
+          "text": "*ไปดูกัน*",
+          "say": "ไปดูกัน."
+        }
+      ]
     }
   ],
   "caption_position": "bottom"

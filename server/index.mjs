@@ -111,6 +111,7 @@ async function ttsToFile(text, destPath, tts) {
         text: (tts.prefix ? tts.prefix + " " : "") + text,
         model_id: tts.model_id || "eleven_v4",
         voice_settings: { stability: tts.stability ?? 0.8, speed: tts.speed ?? 0.95 },
+        seed: 42,
       }),
     }
   );
@@ -194,6 +195,18 @@ async function runJob(job) {
         if (s.say && job.request.tts) {
           await ttsToFile(String(s.say), path.join(assetDir, `sa${i}.mp3`), job.request.tts);
           slide.audio_url = local(`sa${i}.mp3`);
+        }
+        if (Array.isArray(s.parts) && job.request.tts) {
+          const outParts = [];
+          for (const [k, p] of s.parts.entries()) {
+            const part = { text: String(p.text || ""), duration: 4 };
+            if (p.say) {
+              await ttsToFile(String(p.say), path.join(assetDir, `sa${i}_${k}.mp3`), job.request.tts);
+              part.audio_url = local(`sa${i}_${k}.mp3`);
+            }
+            outParts.push(part);
+          }
+          slide.parts = outParts;
         }
         slides.push(slide);
       }
@@ -409,6 +422,9 @@ app.post("/render", auth, (req, res) => {
         credit: s.credit ? String(s.credit) : undefined,
         text: s.text ? String(s.text) : undefined,
         say: s.say ? String(s.say) : undefined,
+        parts: Array.isArray(s.parts)
+          ? s.parts.map((p) => ({ text: String(p?.text ?? ""), say: p?.say ? String(p.say) : undefined }))
+          : undefined,
         duration,
       });
     }

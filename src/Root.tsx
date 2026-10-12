@@ -55,13 +55,33 @@ export const Root: React.FC = () => {
           let slides = props.slides;
           // ถ้ามีเสียงพากย์ → ปรับความยาวสไลด์ให้พอดีกับเสียง (เว้นท้าย 0.8 วินาที)
           // ถ้าสไลด์มีเสียงของตัวเอง → ความยาวสไลด์ = ความยาวเสียงช่วงนั้น + เว้นจังหวะ (ตรงกันเป๊ะ ไม่ต้องเดาสัดส่วน)
-          if (slides.some((s) => s.audio_url)) {
+          if (slides.some((s) => s.audio_url || s.parts?.some((p) => p.audio_url))) {
             slides = await Promise.all(
               slides.map(async (s, i) => {
+                const lastSlide = i === slides.length - 1;
+                if (s.parts && s.parts.length) {
+                  const parts = await Promise.all(
+                    s.parts.map(async (p, k) => {
+                      if (!p.audio_url) return p;
+                      try {
+                        const sec = await getAudioDurationInSeconds(p.audio_url);
+                        const lastPart = k === s.parts!.length - 1;
+                        const pad = lastPart ? (lastSlide ? 0.8 : 0.3) : 0.1;
+                        const frames = Math.max(1, Math.round((sec + pad) * DYN_FPS));
+                        return { ...p, duration: frames / DYN_FPS };
+                      } catch (e) {
+                        console.warn("part audio duration failed", p.audio_url, e);
+                        return p;
+                      }
+                    })
+                  );
+                  const total = parts.reduce((a, p) => a + Math.max(1, Math.round(Number(p.duration) * DYN_FPS)), 0);
+                  return { ...s, parts, duration: total / DYN_FPS };
+                }
                 if (!s.audio_url) return s;
                 try {
                   const sec = await getAudioDurationInSeconds(s.audio_url);
-                  const pad = i === slides.length - 1 ? 0.8 : 0.3;
+                  const pad = lastSlide ? 0.8 : 0.3;
                   return { ...s, duration: sec + pad };
                 } catch (e) {
                   console.warn("slide audio duration failed", s.audio_url, e);

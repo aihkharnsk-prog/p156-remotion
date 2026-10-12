@@ -15,6 +15,12 @@ import {
 
 export const DYN_FPS = 30;
 
+export type SlidePart = {
+  text: string; // ซับของท่อนนี้ (ใส่ *คำสำคัญ* ได้)
+  audio_url?: string; // เสียงของท่อนนี้
+  duration: number; // วินาที (ระบบคำนวณจากความยาวเสียง)
+};
+
 export type Slide = {
   // ต้องมีอย่างน้อยหนึ่งอย่าง: image_url หรือ video_url
   image_url?: string; // ภาพนิ่ง (ซูม/แพนอัตโนมัติ) — ถ้ามี video_url ด้วยจะเป็นภาพรองพื้นหลังคลิป
@@ -30,6 +36,7 @@ export type Slide = {
   image_aspect?: number; // สูง/กว้างของภาพ (ค่าเริ่มต้น 1.25 = การ์ด)
   credit?: string; // เครดิตที่มุมซ้ายบน เช่น "Video: Pexels / ชื่อผู้ถ่าย"
   text?: string;
+  parts?: SlidePart[]; // แบ่งสไลด์เป็นหลายท่อน: ซับ+เสียงต่อท่อน ภาพเคลื่อนไหวต่อเนื่องตลอดสไลด์
   audio_url?: string; // เสียงพากย์ของสไลด์นี้ — ถ้ามี ความยาวสไลด์ = ความยาวเสียง (ภาพ ซับ เสียงตรงกันแน่นอน)
   duration: number; // seconds
 };
@@ -89,6 +96,24 @@ const SlideView: React.FC<{
     extrapolateLeft: "clamp",
   });
   const capOpacity = Math.min(fadeIn, fadeOut);
+
+  // ซับแบบแบ่งท่อน: เลือกท่อนที่กำลังพูดตามเฟรม (เวลาของท่อน = ความยาวเสียงของท่อน)
+  let capText: string | undefined = slide.text;
+  let capFrame = frame;
+  if (slide.parts && slide.parts.length) {
+    let acc = 0;
+    let idx = 0;
+    let startAt = 0;
+    for (let k = 0; k < slide.parts.length; k++) {
+      if (frame >= acc) {
+        idx = k;
+        startAt = acc;
+      }
+      acc += Math.max(1, Math.round(Number(slide.parts[k].duration) * fps));
+    }
+    capText = slide.parts[idx].text;
+    capFrame = frame - startAt;
+  }
 
   // ----- ส่วนของคลิป (ถ้ามี) -----
   const startSec = Math.max(0, Number(slide.video_start) || 0);
@@ -268,15 +293,15 @@ const SlideView: React.FC<{
         </div>
       ) : null}
 
-      {slide.text && captionStyle === "reel" ? (() => {
+      {capText && captionStyle === "reel" ? (() => {
         const color = accent || "#39ff6a";
-        const pop = interpolate(frame, [0, 7], [0.82, 1], {
+        const pop = interpolate(capFrame, [0, 7], [0.82, 1], {
           easing: Easing.out(Easing.back(1.8)),
           extrapolateRight: "clamp",
         });
-        const popOpacity = interpolate(frame, [0, 4], [0, 1], { extrapolateRight: "clamp" });
-        const base = Math.round(Math.min(width, height) * 0.075);
-        const parts = String(slide.text).split(/(\*[^*]+\*)/g).filter(Boolean);
+        const popOpacity = interpolate(capFrame, [0, 4], [0, 1], { extrapolateRight: "clamp" });
+        const base = Math.round(Math.min(width, height) * (captionPosition === "bottom" ? 0.066 : 0.075));
+        const parts = String(capText).split(/(\*[^*]+\*)/g).filter(Boolean);
         return (
           <div
             style={{
@@ -361,6 +386,20 @@ export const DynamicStory: React.FC<DynamicProps> = ({
           <Sequence key={i} from={from} durationInFrames={dur}>
             <SlideView slide={slide} index={i} captionStyle={caption_style} captionPosition={caption_position} accent={accent_color} />
             {slide.audio_url ? <Audio src={slide.audio_url} /> : null}
+            {slide.parts
+              ? (() => {
+                  let acc = 0;
+                  return slide.parts.map((p, k) => {
+                    const from = acc;
+                    acc += Math.max(1, Math.round(Number(p.duration) * DYN_FPS));
+                    return p.audio_url ? (
+                      <Sequence key={k} from={from}>
+                        <Audio src={p.audio_url} />
+                      </Sequence>
+                    ) : null;
+                  });
+                })()
+              : null}
           </Sequence>
         );
       })}
