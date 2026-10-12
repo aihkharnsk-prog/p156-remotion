@@ -896,7 +896,8 @@ app.post("/tiktok-brand", auth, async (req, res) => {
     let ok = false;
     for (const method of ["PUT", "PATCH"]) {
       try {
-        const r = await zernio(`/posts/${id}`, { method, body: JSON.stringify({ tiktokSettings: settings }) });
+        const accountId = await tiktokAccountId();
+        const r = await zernio(`/posts/${id}`, { method, body: JSON.stringify({ platforms: [{ platform: "tiktok", accountId }], tiktokSettings: settings }) });
         tries.push(`${method} ok`);
         const after = await zernio(`/posts/${id}`).catch(() => null);
         out.push({ id, ok: true, method, status: after?.post?.status, saved: JSON.stringify(after?.post?.tiktokSettings || after?.post?.platforms?.[0]?.platformSpecificData || r).slice(0, 200) });
