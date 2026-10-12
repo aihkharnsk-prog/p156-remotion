@@ -514,6 +514,7 @@ app.post("/speed-audio", auth, express.raw({ type: () => true, limit: "40mb" }),
 
 app.use("/videos", express.static(OUT_DIR));
 app.use("/assets", express.static(ASSET_DIR));
+app.use("/brand", express.static(path.join(__dirname, "..", "public")));
 
 app.post("/render", auth, (req, res) => {
   const body = req.body || {};
