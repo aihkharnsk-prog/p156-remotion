@@ -1,4 +1,4 @@
-param([string]$Key, [string]$File = "examples\p156-draft.json", [string]$Audio = "")
+param([string]$Key, [string]$File = "examples\p156-draft.json", [string]$Audio = "", [switch]$Upload)
 if (-not $Key) { $Key = $env:RENDER_API_KEY }
 if (-not $Key -or $Key -notmatch '^[\x21-\x7E]+$') {
   Write-Host "ERROR: -Key must be the real RENDER_API_KEY (English letters/numbers only, no Thai, no ?). Copy it from Railway > renderer > Variables." -ForegroundColor Red
@@ -18,6 +18,10 @@ if ($Audio) {
 }
 $j = Get-Content $File -Raw -Encoding UTF8 | ConvertFrom-Json
 if ($Audio) { $j | Add-Member -NotePropertyName audio_url -NotePropertyValue $Audio -Force }
+if ($Upload) {
+  $j | Add-Member -NotePropertyName webhook_url -NotePropertyValue "https://hook.us2.make.com/kcld4bbtli9t1faceobohsk8wok5biay" -Force
+  Write-Host "Upload: when the render finishes, Make will upload it to YouTube as PRIVATE."
+}
 $body = $j | ConvertTo-Json -Depth 10
 $r = Invoke-RestMethod -Uri "$base/render" -Method Post -Headers @{ "x-api-key" = $Key } -ContentType "application/json; charset=utf-8" -Body ([Text.Encoding]::UTF8.GetBytes($body))
 do {
