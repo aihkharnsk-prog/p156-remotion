@@ -54,11 +54,6 @@
       ]
     },
     {
-      "video_url": "https://videos.pexels.com/video-files/6596225/6596225-hd_1080_1920_30fps.mp4",
-      "video_start": 0,
-      "video_loop": true,
-      "video_volume": 0,
-      "credit": "Video: Pexels / thetopwebsites .ga",
       "text": "*เมล็ด* บนหลัง งอกและโตไปพร้อมกับมัน",
       "duration": 4,
       "parts": [
@@ -66,7 +61,8 @@
           "text": "*เมล็ด* บนหลัง งอกและโตไปพร้อมกับมัน",
           "say": "เมล็ดบนหลัง งอกและโตไปพร้อมกับมัน."
         }
-      ]
+      ],
+      "scene": "sprout"
     },
     {
       "image_url": "https://den-cards.pokellector.com/311/Bulbasaur.EXP.1.37251.png",

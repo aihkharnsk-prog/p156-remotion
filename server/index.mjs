@@ -530,7 +530,7 @@ app.post("/render", auth, (req, res) => {
     const optNum = (v) => (v === undefined || v === null || v === "" ? undefined : Number(v));
     for (const [i, s] of slides.entries()) {
       const duration = Number(s.duration);
-      if ((!s.image_url && !s.video_url) || !(duration > 0)) {
+      if ((!s.image_url && !s.video_url && s.scene !== "sprout") || !(duration > 0)) {
         return res.status(400).json({
           error: `slide ${i}: need image_url or video_url, and duration (seconds) > 0`,
         });
@@ -558,7 +558,8 @@ app.post("/render", auth, (req, res) => {
         video_end,
         video_volume,
         video_loop: s.video_loop === true || s.video_loop === "true" || s.video_loop === 1 || s.video_loop === "1",
-        image_mode: s.image_mode === "card" || s.image_mode === "detail" ? s.image_mode : "fill",
+        image_mode: s.image_mode === "card" || s.image_mode === "detail" || s.image_mode === "art" ? s.image_mode : "fill",
+        scene: s.scene === "sprout" ? "sprout" : undefined,
         focus_x: optNum(s.focus_x), focus_y: optNum(s.focus_y), focus_zoom: optNum(s.focus_zoom),
         focus_to_x: optNum(s.focus_to_x), focus_to_y: optNum(s.focus_to_y), focus_to_zoom: optNum(s.focus_to_zoom),
         image_aspect: optNum(s.image_aspect),

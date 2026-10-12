@@ -35,6 +35,7 @@ export type Slide = {
   focus_x?: number; focus_y?: number; focus_zoom?: number;
   focus_to_x?: number; focus_to_y?: number; focus_to_zoom?: number;
   image_aspect?: number; // สูง/กว้างของภาพ (ค่าเริ่มต้น 1.25 = การ์ด)
+  scene?: "sprout"; // ฉากแอนิเมชันการ์ตูนที่วาดเอง (ต้นกล้างอกจากเมล็ด) ไม่ต้องใช้ภาพ/คลิป
   credit?: string; // เครดิตที่มุมซ้ายบน เช่น "Video: Pexels / ชื่อผู้ถ่าย"
   text?: string;
   parts?: SlidePart[]; // แบ่งสไลด์เป็นหลายท่อน: ซับ+เสียงต่อท่อน ภาพเคลื่อนไหวต่อเนื่องตลอดสไลด์
@@ -67,6 +68,89 @@ export const totalFrames = (slides: Slide[]) =>
   );
 
 const FONT = "Noto Sans Thai, Noto Sans CJK JP, Noto Sans, sans-serif";
+
+
+// ฉากการ์ตูนต้นฉบับ: เมล็ดงอกเป็นต้นกล้า (วาดด้วย SVG ในโค้ด ไม่ใช้ตัวละครหรือคลิปของใคร)
+const SproutScene: React.FC<{ frame: number; dur: number; width: number; height: number }> = ({ frame, dur, width, height }) => {
+  const p = Math.min(1, Math.max(0, frame / Math.max(1, dur - 6)));
+  const ease = (a: number, b: number) =>
+    interpolate(p, [a, b], [0, 1], { easing: Easing.out(Easing.cubic), extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const stemGrow = ease(0.12, 0.62);
+  const leafGrow = interpolate(p, [0.45, 0.7], [0, 1], { easing: Easing.out(Easing.back(2)), extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const budGrow = interpolate(p, [0.68, 0.88], [0, 1], { easing: Easing.out(Easing.back(2.2)), extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const sway = Math.sin(frame / 22) * 5 * stemGrow;
+  const baseX = 540;
+  const baseY = 1380;
+  const topY = baseY - 560 * stemGrow;
+  const topX = baseX + sway * 2;
+  const ink = "#2f3b1f";
+  const seedWobble = p < 0.14 ? Math.sin(frame * 1.2) * 4 * (1 - p / 0.14) : 0;
+  const cloud = (cx: number, cy: number, s: number, speed: number) => {
+    const x = ((cx + frame * speed) % 1500) - 200;
+    return (
+      <g transform={`translate(${x} ${cy}) scale(${s})`} fill="#ffffff" stroke={ink} strokeWidth={6 / s}>
+        <ellipse cx={0} cy={0} rx={90} ry={44} />
+        <ellipse cx={-50} cy={-26} rx={52} ry={40} />
+        <ellipse cx={30} cy={-38} rx={58} ry={46} />
+      </g>
+    );
+  };
+  const rays = Array.from({ length: 10 }).map((_, k) => {
+    const a = (k / 10) * Math.PI * 2 + frame / 90;
+    return (
+      <line key={k} x1={Math.cos(a) * 118} y1={Math.sin(a) * 118} x2={Math.cos(a) * 160} y2={Math.sin(a) * 160} stroke="#ffb703" strokeWidth={14} strokeLinecap="round" />
+    );
+  });
+  const sparkles = Array.from({ length: 8 }).map((_, k) => {
+    const a = (k / 8) * Math.PI * 2;
+    const r = 70 + budGrow * 90;
+    const o = interpolate(budGrow, [0, 0.5, 1], [0, 1, 0.6]);
+    return (
+      <circle key={k} cx={topX + Math.cos(a) * r} cy={topY - 40 + Math.sin(a) * r} r={9 * budGrow} fill="#fff6a8" opacity={o} />
+    );
+  });
+  return (
+    <AbsoluteFill>
+      <svg width={width} height={height} viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="sk" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="#8fd3ff" />
+            <stop offset="0.65" stopColor="#dff6ff" />
+            <stop offset="1" stopColor="#f3fbd6" />
+          </linearGradient>
+        </defs>
+        <rect width="1080" height="1920" fill="url(#sk)" />
+        <g transform="translate(860 330)">{rays}<circle r="95" fill="#ffd23f" stroke={ink} strokeWidth={8} /></g>
+        {cloud(120, 520, 1.1, 0.35)}
+        {cloud(700, 760, 0.8, 0.22)}
+        <ellipse cx="200" cy="1560" rx="620" ry="260" fill="#8fd96a" stroke={ink} strokeWidth={8} />
+        <ellipse cx="900" cy="1600" rx="640" ry="280" fill="#74c957" stroke={ink} strokeWidth={8} />
+        <ellipse cx="540" cy="1470" rx="330" ry="110" fill="#8a5a36" stroke={ink} strokeWidth={8} />
+        <ellipse cx="540" cy="1448" rx="290" ry="78" fill="#a06b42" />
+        <g transform={`translate(${baseX + seedWobble} ${baseY + 40})`} opacity={interpolate(p, [0.1, 0.2], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })}>
+          <ellipse rx="42" ry="30" fill="#c58a4a" stroke={ink} strokeWidth={8} />
+          <path d="M-14 -4 Q0 -16 14 -4" stroke={ink} strokeWidth={6} fill="none" strokeLinecap="round" />
+        </g>
+        <path d={`M ${baseX} ${baseY + 30} Q ${baseX + sway * 3} ${(baseY + topY) / 2} ${topX} ${topY}`} stroke={ink} strokeWidth={34} fill="none" strokeLinecap="round" />
+        <path d={`M ${baseX} ${baseY + 30} Q ${baseX + sway * 3} ${(baseY + topY) / 2} ${topX} ${topY}`} stroke="#5fc24a" strokeWidth={20} fill="none" strokeLinecap="round" />
+        <g transform={`translate(${baseX + sway * 1.5} ${baseY - 250 * stemGrow}) scale(${leafGrow})`}>
+          <path d="M0 0 C-60 -70 -190 -60 -230 -10 C-170 40 -60 40 0 0 Z" fill="#7be05a" stroke={ink} strokeWidth={9} strokeLinejoin="round" />
+          <path d="M-14 0 C-80 -12 -150 -12 -200 -10" stroke={ink} strokeWidth={5} fill="none" strokeLinecap="round" />
+        </g>
+        <g transform={`translate(${baseX + sway * 2} ${baseY - 380 * stemGrow}) scale(${leafGrow})`}>
+          <path d="M0 0 C60 -70 190 -60 230 -10 C170 40 60 40 0 0 Z" fill="#7be05a" stroke={ink} strokeWidth={9} strokeLinejoin="round" />
+          <path d="M14 0 C80 -12 150 -12 200 -10" stroke={ink} strokeWidth={5} fill="none" strokeLinecap="round" />
+        </g>
+        <g transform={`translate(${topX} ${topY - 10}) scale(${budGrow})`}>
+          <path d="M0 0 C-90 -40 -80 -170 0 -230 C80 -170 90 -40 0 0 Z" fill="#ff8fb1" stroke={ink} strokeWidth={9} strokeLinejoin="round" />
+          <path d="M0 0 C-30 -60 -26 -150 0 -200" stroke={ink} strokeWidth={5} fill="none" strokeLinecap="round" />
+          <path d="M0 0 C30 -60 26 -150 0 -200" stroke={ink} strokeWidth={5} fill="none" strokeLinecap="round" />
+        </g>
+        {sparkles}
+      </svg>
+    </AbsoluteFill>
+  );
+};
 
 const SlideView: React.FC<{
   slide: Slide;
@@ -220,6 +304,8 @@ const SlideView: React.FC<{
           }}
         />
       ) : null}
+
+      {slide.scene === "sprout" ? <SproutScene frame={frame} dur={dur} width={width} height={height} /> : null}
 
       {slide.video_url ? (
         <Sequence from={0} durationInFrames={slide.video_loop && endSec ? dur : videoFrames}>
