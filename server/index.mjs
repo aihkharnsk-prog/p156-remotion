@@ -66,7 +66,10 @@ async function postWebhook(url, payload) {
 const MAX_CLIP_BYTES = Number(process.env.MAX_CLIP_MB || 300) * 1024 * 1024;
 
 async function downloadTo(url, dest, maxBytes = 0) {
-  const res = await fetch(url, { redirect: "follow" });
+  const res = await fetch(url, {
+    redirect: "follow",
+    headers: { "User-Agent": "CardzCenterRenderer/1.0 (+https://www.cardzcenter.com)", Accept: "image/*,*/*;q=0.8" },
+  });
   if (!res.ok || !res.body) throw new Error(`download ${res.status}: ${url}`);
   // กัน volume เต็มจากไฟล์ใหญ่เกินไป (ตรวจจาก content-length ถ้าเซิร์ฟเวอร์ต้นทางส่งมา)
   const len = Number(res.headers.get("content-length") || 0);
@@ -704,6 +707,8 @@ app.post("/outro", auth, async (req, res) => {
       path.join(__dirname, "..", "public", "fonts"),
       ...used.map((u) => u.card.file),
     ], { timeout: 120000 });
+    console.log(`[outro] used ${used.length}: ${used.map((u) => u.url).join(" | ")}`);
+    if (failed.length) console.log(`[outro] failed: ${failed.join(" | ")}`);
     res.json({
       outro_url: `${PUBLIC_BASE_URL}/brand/outro.png?v=${Date.now()}`,
       used: used.map((u) => u.url),
