@@ -3,17 +3,16 @@
 param([string]$Key)
 if (-not $Key) { $Key = $env:RENDER_API_KEY }
 $base = "https://renderer-production-8b7f.up.railway.app"
-# art = กรอบรูปบนการ์ด (ซ้าย, บน, ขวา, ล่าง เป็นสัดส่วน 0-1) ใช้ตัดตัวละครให้โผล่ออกมาแบบ 3D
-$pkArt = @(0.085, 0.105, 0.915, 0.47)
+# การ์ดราคาสูง 5 ใบ (ใบกลาง = ใบที่ 3) — แต่ละใบมีลิงก์สำรอง
 $cards = @(
-  @{ urls = @("https://world.digimoncard.com/images/cardlist/card/ST1-03.png", "https://world.digimoncard.com/images/cardlist/card/BT1-010.png"); art = @(0.04, 0.04, 0.96, 0.62) },        # Digimon: Agumon
-  @{ urls = @("https://images.ygoprodeck.com/images/cards/46986414.jpg", "https://images.ygoprodeck.com/images/cards_small/46986414.jpg"); art = @(0.12, 0.183, 0.88, 0.69) },          # Yu-Gi-Oh: Dark Magician
-  @{ urls = @("https://images.pokemontcg.io/base1/58_hires.png", "https://images.pokemontcg.io/base1/58.png"); art = $pkArt },                                                        # Pokemon: Pikachu
-  @{ urls = @("https://en.onepiece-cardgame.com/images/cardlist/card/ST01-001.png", "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-003.png"); art = @(0.04, 0.04, 0.96, 0.70) }, # One Piece: Luffy
-  @{ urls = @("https://images.pokemontcg.io/base1/4_hires.png", "https://images.pokemontcg.io/base1/4.png"); art = $pkArt }                                                           # Pokemon: Charizard
+  @("https://api.scryfall.com/cards/named?exact=Black%20Lotus&set=lea&format=image&version=large", "https://api.scryfall.com/cards/named?exact=Black%20Lotus&set=leb&format=image&version=large"), # Magic: Black Lotus (Alpha)
+  @("https://images.ygoprodeck.com/images/cards/89631139.jpg", "https://images.ygoprodeck.com/images/cards_small/89631139.jpg"),       # Yu-Gi-Oh: Blue-Eyes White Dragon
+  @("https://images.pokemontcg.io/base1/4_hires.png", "https://images.pokemontcg.io/base1/4.png"),                                     # Pokemon: Charizard (Base Set)
+  @("https://en.onepiece-cardgame.com/images/cardlist/card/OP05-119_p2.png", "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-119_p1.png", "https://en.onepiece-cardgame.com/images/cardlist/card/OP05-119.png"), # One Piece: Luffy Gear 5 (OP05-119)
+  @("https://images.pokemontcg.io/swsh7/215_hires.png", "https://images.pokemontcg.io/swsh7/215.png")                                  # Pokemon: Umbreon VMAX alt art (Evolving Skies)
 )
 $body = @{ cards = $cards } | ConvertTo-Json -Depth 6
-"Making the outro (cutting characters out takes 1-3 minutes)..."
+"Making the outro..."
 $r = Invoke-RestMethod -TimeoutSec 900 -Uri "$base/outro" -Method Post -Headers @{ "x-api-key" = $Key } -ContentType "application/json; charset=utf-8" -Body ([Text.Encoding]::UTF8.GetBytes($body))
 "Used:";   $r.used
 if ($r.failed) { "Failed (tried a backup):"; $r.failed }

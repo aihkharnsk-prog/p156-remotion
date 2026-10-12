@@ -184,13 +184,14 @@ for j, w_ in enumerate(words):
     if j < len(words) - 1:
         d.text((x, 1452), dot, font=f, fill=GOLD, anchor="lm"); x += d.textlength(dot, font=f)
 d.text((W // 2, 1522), "ครบจบในเว็บเดียว", font=F(KS, 46), fill=(160, 200, 255), anchor="mm")
-fu = F(PB, 82); tw = d.textlength("cardzcenter.com", font=fu); x0 = W / 2 - tw / 2 - 58; x1 = W / 2 + tw / 2 + 58
+URL = "www.cardzcenter.com"
+fu = F(PB, 70); tw = d.textlength(URL, font=fu); x0 = W / 2 - tw / 2 - 58; x1 = W / 2 + tw / 2 + 58
 im.alpha_composite(glow_layer((W, H), [("rounded_rectangle", (x0, 1578, x1, 1702), GOLD + (150,))], 28))
 pill = vgrad(int(x1 - x0), 124, [(0, (255, 222, 130)), (1, (240, 176, 50))])
 pm = Image.new("L", pill.size, 0); ImageDraw.Draw(pm).rounded_rectangle((0, 0, pill.width - 1, 123), radius=62, fill=255)
 im.paste(pill, (int(x0), 1578), pm)
 d = ImageDraw.Draw(im)
 d.rounded_rectangle((x0, 1578, x1, 1702), radius=62, outline=(255, 245, 210), width=3)
-d.text((W // 2, 1638), "cardzcenter.com", font=fu, fill=(22, 18, 40), anchor="mm")
+d.text((W // 2, 1638), URL, font=fu, fill=(22, 18, 40), anchor="mm")
 
 im.convert("RGB").save(OUT)
