@@ -9,14 +9,14 @@
     {
       "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
       "image_mode": "card",
-      "text": "เห็น *การ์ดใบนี้* มั้ย",
+      "text": "*การ์ดใบนี้* ดูเหมือนธรรมดา",
       "duration": 2.5
     },
     {
       "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
       "image_mode": "detail",
       "image_aspect": 1.25,
-      "text": "นี่คือ *P-156* จากเกมดิจิมอน",
+      "text": "แต่นี่คือ *P-156* จากดิจิมอน",
       "duration": 2.5,
       "focus_x": 65,
       "focus_y": 42,
@@ -29,7 +29,7 @@
       "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
       "image_mode": "detail",
       "image_aspect": 1.25,
-      "text": "ในภาพมีดิจิมอนตั้ง *15 ตัว*",
+      "text": "ดิจิมอน *15 ตัว* เป็นพิกเซลอาร์ต",
       "duration": 3,
       "focus_x": 50,
       "focus_y": 24,
@@ -42,7 +42,7 @@
       "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
       "image_mode": "detail",
       "image_aspect": 1.25,
-      "text": "ข้างๆ เขียนว่า *Not for sale*",
+      "text": "ข้างการ์ดพิมพ์ว่า *Not for sale*",
       "duration": 2.5,
       "focus_x": 79,
       "focus_y": 55,
@@ -55,7 +55,7 @@
       "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
       "image_mode": "detail",
       "image_aspect": 1.25,
-      "text": "มุมซ้ายบนคือ *ค่าใช้* การ์ด",
+      "text": "มุมซ้ายบนคือ *ค่าใช้*",
       "duration": 2.2,
       "focus_x": 27,
       "focus_y": 17,
@@ -68,7 +68,7 @@
       "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
       "image_mode": "detail",
       "image_aspect": 1.25,
-      "text": "ถ้ามี *เทมเมอร์* ก็ไม่ต้องสนสี",
+      "text": "มี *เทมเมอร์* ก็ไม่ต้องสนสี",
       "duration": 3,
       "focus_x": 50,
       "focus_y": 56,
@@ -81,7 +81,7 @@
       "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
       "image_mode": "detail",
       "image_aspect": 1.25,
-      "text": "แล้วก็มี *Security* ด้วยนะ",
+      "text": "ยังมีเอฟเฟกต์ *Security*",
       "duration": 2.5,
       "focus_x": 50,
       "focus_y": 73,
@@ -93,13 +93,13 @@
     {
       "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
       "image_mode": "card",
-      "text": "ว่าแต่ *ใครวาด* ภาพนี้กันนะ?",
+      "text": "แล้ว *ใครวาด* ภาพนี้?",
       "duration": 2.5
     },
     {
       "image_url": "https://raw.githubusercontent.com/aihkharnsk-prog/p156-remotion/main/public/card.png",
       "image_mode": "card",
-      "text": "ไว้ *ตอนหน้า* มาดูกัน",
+      "text": "ไปหาคำตอบ *ตอนต่อไป*",
       "duration": 2
     }
   ]
