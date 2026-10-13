@@ -126,8 +126,8 @@ export const Thumb: React.FC<ThumbProps> = (p) => {
           style={{
             position: "absolute",
             left: "50%",
-            top: h * 0.62,
-            width: w * 0.62,
+            top: h * 0.60,
+            width: w * 0.66,
             zIndex: 5,
             transform: "translate(-50%,-50%) rotate(4deg)",
             filter: `drop-shadow(0 0 ${m * 0.05}px ${acc}) drop-shadow(0 ${m * 0.03}px ${m * 0.04}px rgba(0,0,0,0.7))`,
@@ -141,6 +141,7 @@ export const Thumb: React.FC<ThumbProps> = (p) => {
         <div
           style={{
             position: "absolute",
+            zIndex: 25,
             left: w * 0.06,
             top: h * 0.43,
             width: m * 0.24,
