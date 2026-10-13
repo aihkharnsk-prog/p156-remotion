@@ -950,6 +950,26 @@ app.post("/tiktok-post", auth, async (req, res) => {
   res.json(out);
 });
 
+// ทำรูปปกจากสคริปต์ใน examples/: POST /thumb-files {files:[...]} -> /videos/thumb-<ชื่อไฟล์>.jpg
+app.post("/thumb-files", auth, async (req, res) => {
+  const out = [];
+  for (const f of Array.isArray(req.body?.files) ? req.body.files : []) {
+    const name = path.basename(String(f));
+    try {
+      const tm = JSON.parse(await fs.readFile(path.join(__dirname, "..", "examples", name), "utf8")).meta?.thumb;
+      const thumbProps = { image_url: tm.image_url, hook: tm.hook, badge: tm.badge, sub: tm.sub, width: 1080, height: 1920 };
+      const tcomp = await selectComposition({ serveUrl, id: "Thumb", inputProps: thumbProps });
+      const outName = `thumb-${name.replace(/\.json$/, "")}.jpg`;
+      await renderStill({ composition: tcomp, serveUrl, output: path.join(OUT_DIR, outName), imageFormat: "jpeg", jpegQuality: 90, inputProps: thumbProps });
+      out.push({ file: name, url: `${PUBLIC_BASE_URL}/videos/${outName}` });
+    } catch (e) {
+      out.push({ file: name, error: String(e?.message || e) });
+    }
+  }
+  console.log(`[thumb-files] ${JSON.stringify(out)}`);
+  res.json(out);
+});
+
 // ทำรูปปกอย่างเดียว (ไม่ต้อง render วิดีโอ): POST /thumb {thumb:{...}} หรือ {meta:{thumb:{...}}} -> image/jpeg
 app.post("/thumb", auth, async (req, res) => {
   try {

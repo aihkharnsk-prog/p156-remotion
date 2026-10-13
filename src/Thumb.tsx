@@ -91,27 +91,34 @@ export const Thumb: React.FC<ThumbProps> = (p) => {
       <div
         style={{
           position: "absolute",
-          top: h * 0.07,
+          top: h * 0.055,
           left: 0,
           right: 0,
           textAlign: "center",
           transform: "rotate(-2deg)",
+          zIndex: 20,
         }}
       >
-        {lines.map((t, i) => (
-          <div
-            key={i}
-            style={{
-              fontSize: m * (i === 0 ? 0.15 : 0.17),
-              lineHeight: 1.12,
-              fontWeight: 900,
-              color: i === 0 ? "#fff" : acc,
-              textShadow: stroke(m * 0.008),
-            }}
-          >
-            {t}
-          </div>
-        ))}
+        {lines.map((t, i) => {
+          // ขนาดตัวอักษรพอดีความกว้าง ไม่ตัดบรรทัดกลางคำ (นับเฉพาะตัวอักษรหลัก ไม่นับสระบน/ล่าง วรรณยุกต์)
+          const base = Array.from(String(t)).filter((ch: string) => !/[\u0E31\u0E34-\u0E3A\u0E47-\u0E4E]/.test(ch)).length || 1;
+          const fs = Math.min(m * (i === 0 ? 0.15 : 0.17), (w * 0.9) / (base * 0.62));
+          return (
+            <div
+              key={i}
+              style={{
+                fontSize: fs,
+                lineHeight: 1.18,
+                fontWeight: 900,
+                whiteSpace: "nowrap",
+                color: i === 0 ? "#fff" : acc,
+                textShadow: `${stroke(m * 0.008)}, 0 ${m * 0.02}px ${m * 0.03}px rgba(0,0,0,0.6)`,
+              }}
+            >
+              {t}
+            </div>
+          );
+        })}
       </div>
       {/* การ์ด */}
       {p.image_url ? (
@@ -119,8 +126,9 @@ export const Thumb: React.FC<ThumbProps> = (p) => {
           style={{
             position: "absolute",
             left: "50%",
-            top: h * 0.60,
-            width: w * 0.66,
+            top: h * 0.62,
+            width: w * 0.62,
+            zIndex: 5,
             transform: "translate(-50%,-50%) rotate(4deg)",
             filter: `drop-shadow(0 0 ${m * 0.05}px ${acc}) drop-shadow(0 ${m * 0.03}px ${m * 0.04}px rgba(0,0,0,0.7))`,
           }}
