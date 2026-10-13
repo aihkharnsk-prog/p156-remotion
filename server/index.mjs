@@ -913,6 +913,12 @@ app.post("/tiktok-brand", auth, async (req, res) => {
   res.json(out);
 });
 
+// บันทึกข้อมูลที่ Make ส่งมาลง log (ใช้ตรวจสถานะคลิปบน YouTube): POST /echo
+app.post("/echo", auth, (req, res) => {
+  console.log(`[echo] ${JSON.stringify(req.body).slice(0, 20000)}`);
+  res.json({ ok: true });
+});
+
 // ตรวจการเชื่อม TikTok: GET /tiktok-account
 app.get("/tiktok-account", auth, async (req, res) => {
   const out = { key: !!process.env.ZERNIO_API_KEY };
