@@ -250,7 +250,7 @@ async function downloadImage(url, destDir, baseName) {
   return name;
 }
 
-async function ttsToFile(text, destPath, tts) {
+async function ttsToFile(text, destPath, tts, raw = false) {
   const key = process.env.ELEVENLABS_API_KEY;
   if (!key) throw new Error("ELEVENLABS_API_KEY is not set on the server");
   const r = await fetch(
@@ -259,7 +259,7 @@ async function ttsToFile(text, destPath, tts) {
       method: "POST",
       headers: { "xi-api-key": key, "Content-Type": "application/json" },
       body: JSON.stringify({
-        text: (tts.prefix ? tts.prefix + " " : "") + fixSay(text),
+        text: (tts.prefix ? tts.prefix + " " : "") + (raw ? String(text) : fixSay(text)),
         model_id: tts.model_id || "eleven_v4",
         voice_settings: { stability: tts.stability ?? 0.8, speed: tts.speed ?? 0.95 },
         seed: 42,
@@ -1174,6 +1174,23 @@ app.get("/zernio-post/:id", auth, async (req, res) => {
     out = { error: String(e?.message || e) };
   }
   console.log(`[zernio-post] ${req.params.id} ${JSON.stringify(out).slice(0, 4000)}`);
+  res.json(out);
+});
+
+// ทดสอบการออกเสียง: POST /tts-test {texts:[...]} → /videos/tts-test-<n>.mp3 (เสียงเดียวกับคลิป ไม่แปลงคำ)
+app.post("/tts-test", auth, async (req, res) => {
+  const tts = { voice_id: "bTEswxYhpv7UDkQg5VRu", model_id: "eleven_v4", stability: 0.8, speed: 1.2, prefix: "[calm, soft, natural storyteller]", ...(req.body?.tts || {}) };
+  const out = [];
+  for (const [i, t] of (Array.isArray(req.body?.texts) ? req.body.texts.slice(0, 8) : []).entries()) {
+    try {
+      const name = `tts-test-${i + 1}.mp3`;
+      await ttsToFile(String(t), path.join(OUT_DIR, name), tts, true);
+      out.push({ text: t, url: `${PUBLIC_BASE_URL}/videos/${name}` });
+    } catch (e) {
+      out.push({ text: t, error: String(e?.message || e) });
+    }
+  }
+  console.log(`[tts-test] ${JSON.stringify(out)}`);
   res.json(out);
 });
 
