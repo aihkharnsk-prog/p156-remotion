@@ -369,8 +369,18 @@ async function runJob(job) {
       // รูปปกเป็นเฟรมแรก 0.5 วิ (Shorts ใช้เฟรมในคลิปเป็นปก) — ปิดได้ด้วย meta.cover_frame:false
       const ct = job.request.meta?.thumb;
       if (ct && typeof ct === "object" && job.request.meta?.cover_frame !== false) {
+        let coverImg = ct.image_url || (job.request.slides || [])[0]?.image_url;
+        // ดาวน์โหลดภาพปกมาไว้ในเครื่องด้วย (บางเว็บ เช่น onepiece-cardgame.com บล็อกการโหลดจากเบราว์เซอร์ข้ามเว็บ)
+        if (coverImg) {
+          try {
+            coverImg = local(await downloadImage(coverImg, assetDir, "cover"));
+          } catch (e) {
+            job.warnings.push(`cover image download failed (${e?.message || e})`);
+          }
+        }
+        job.cover_local = coverImg;
         inputProps.cover = {
-          image_url: ct.image_url || (job.request.slides || [])[0]?.image_url,
+          image_url: coverImg,
           hook: ct.hook,
           badge: ct.badge,
           sub: ct.sub,
@@ -450,7 +460,7 @@ async function runJob(job) {
     if (tm && typeof tm === "object") {
       try {
         const thumbProps = {
-          image_url: tm.image_url || (job.request.slides || [])[0]?.image_url,
+          image_url: job.cover_local || tm.image_url || (job.request.slides || [])[0]?.image_url,
           hook: tm.hook,
           badge: tm.badge,
           sub: tm.sub,
