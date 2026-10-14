@@ -259,7 +259,7 @@ async function ttsToFile(text, destPath, tts) {
       method: "POST",
       headers: { "xi-api-key": key, "Content-Type": "application/json" },
       body: JSON.stringify({
-        text: (tts.prefix ? tts.prefix + " " : "") + text,
+        text: (tts.prefix ? tts.prefix + " " : "") + fixSay(text),
         model_id: tts.model_id || "eleven_v4",
         voice_settings: { stability: tts.stability ?? 0.8, speed: tts.speed ?? 0.95 },
         seed: 42,
@@ -271,7 +271,11 @@ async function ttsToFile(text, destPath, tts) {
 }
 
 // เสียงก้อนเดียวทั้งบท + เวลาต่อตัวอักษร (with-timestamps) → หาเวลาเริ่มของแต่ละท่อน
+// แก้คำที่เสียงพากย์อ่านเพี้ยน (ใช้กับเสียงเท่านั้น ซับยังเขียนแบบเดิม)
+const SAY_FIX = [[/การ์ด/g, "กาด"], [/เกมส์/g, "เกม"]];
+const fixSay = (t) => SAY_FIX.reduce((a, [re, to]) => a.replace(re, to), String(t));
 async function ttsSingleWithTimes(says, rawPath, tts) {
+  says = says.map(fixSay);
   const key = process.env.ELEVENLABS_API_KEY;
   if (!key) throw new Error("ELEVENLABS_API_KEY is not set on the server");
   const full = (tts.prefix ? tts.prefix + " " : "") + says.join(" ");
