@@ -1,0 +1,249 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "meta": {
+    "title": "ลิซาร์โด ร่างกลางที่ดื้อที่สุด การ์ดใบที่ 17 #shorts",
+    "description": "การ์ดใบที่ 17 ของชุดโปเกมอนญี่ปุ่น (拡張パック) ลิซาร์โด ที่มาของชื่อ Charmeleon ท่าพ่นไฟบนการ์ด และลิซาร์โดของซาโตชิที่ไม่ยอมฟังคำสั่ง\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n#shorts #โปเกมอน #การ์ดโปเกมอน #pokemoncards #เรื่องเล่าการ์ด",
+    "thumb": {
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-17/large",
+      "hook": "ร่างกลาง\nที่ดื้อที่สุด!",
+      "badge": "#17",
+      "sub": "เบื้องหลังการ์ด"
+    },
+    "publish_at": "2026-10-20T05:00:00Z"
+  },
+  "tts": {
+    "voice_id": "bTEswxYhpv7UDkQg5VRu",
+    "model_id": "eleven_v4",
+    "stability": 0.8,
+    "speed": 1.2,
+    "prefix": "[calm, soft, natural storyteller]"
+  },
+  "audio_rate": 1.067,
+  "slides": [
+    {
+      "beat": "hook",
+      "duration": 4,
+      "text": "ร่างกลางที่ *ดื้อที่สุด* ในสายนี้",
+      "parts": [
+        {
+          "text": "ร่างกลางที่ *ดื้อที่สุด* ในสายนี้",
+          "say": "ร่างกลาง ที่ขึ้นชื่อว่าดื้อที่สุดในสายนี้."
+        }
+      ],
+      "title": "ร่างกลาง\nที่*ดื้อ*ที่สุด?",
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-17/large"
+    },
+    {
+      "beat": "reveal",
+      "duration": 4,
+      "text": "ใบที่สิบเจ็ด คือ *ลิซาร์โด*",
+      "parts": [
+        {
+          "text": "ใบที่สิบเจ็ด คือ *ลิซาร์โด*",
+          "say": "ใบที่สิบเจ็ด คือ ลิซาร์โด."
+        },
+        {
+          "text": "ร่างที่สองของ *ฮิโตคาเงะ*",
+          "say": "ร่างที่สอง ของฮิโตคาเงะ."
+        }
+      ],
+      "title": "ลิซาร์โด",
+      "subtitle": "No.005 • ธาตุไฟ",
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-17/large"
+    },
+    {
+      "beat": "name",
+      "duration": 4,
+      "text": "ชื่ออังกฤษคือ *ชาร์มีเลียน*",
+      "parts": [
+        {
+          "text": "ชื่ออังกฤษคือ *ชาร์มีเลียน*",
+          "say": "ชื่ออังกฤษ คือชาร์มีเลียน."
+        },
+        {
+          "text": "มาจาก *ไหม้เกรียม* บวก *คาเมเลียน*",
+          "say": "มาจากคำว่า ไหม้เกรียม บวกกับ กิ้งก่าคาเมเลียน."
+        },
+        {
+          "text": "ชื่อญี่ปุ่น *ลิซาร์โด* ก็มาจากกิ้งก่า",
+          "say": "ส่วนชื่อญี่ปุ่น ลิซาร์โด ก็มาจากคำว่ากิ้งก่า."
+        }
+      ],
+      "chapter": "ที่มาของชื่อ",
+      "chips": [
+        {
+          "big": "Char",
+          "small": "ไหม้เกรียม"
+        },
+        {
+          "big": "Chameleon",
+          "small": "กิ้งก่า"
+        }
+      ],
+      "title": "*Charmeleon*",
+      "image_url": "https://archives.bulbagarden.net/media/upload/0/05/0005Charmeleon.png",
+      "transition": "shutter"
+    },
+    {
+      "beat": "quiz",
+      "duration": 4,
+      "text": "ถ้ามัน *ฟาดหางที่ลุกไฟ* จะเกิดอะไรขึ้น?",
+      "parts": [
+        {
+          "text": "ถ้ามัน *ฟาดหางที่ลุกไฟ* จะเกิดอะไรขึ้น?",
+          "say": "ทายสิ ถ้ามันฟาดหางที่ลุกเป็นไฟ จะเกิดอะไรขึ้น?"
+        },
+        {
+          "text": "คำตอบคือ *อากาศรอบตัวร้อนจัด*",
+          "say": "คำตอบคือ อุณหภูมิรอบตัวจะพุ่งสูง จนแทบทนไม่ไหว."
+        }
+      ],
+      "chapter": "ทายสิ",
+      "title": "ถ้ามัน*ฟาดหาง*\nจะเกิดอะไรขึ้น?",
+      "choices": [
+        "ฝนตกหนัก",
+        "อากาศร้อนจัด",
+        "ไฟดับทั้งเมือง"
+      ],
+      "answer": 1
+    },
+    {
+      "beat": "stats",
+      "duration": 4,
+      "text": "บนการ์ด พลังชีวิต *แปดสิบ*",
+      "parts": [
+        {
+          "text": "บนการ์ด พลังชีวิต *แปดสิบ*",
+          "say": "บนการ์ด มันมีพลังชีวิตแปดสิบ."
+        },
+        {
+          "text": "ท่าฟัน แรง *สามสิบ*",
+          "say": "ท่าฟัน แรงสามสิบ."
+        },
+        {
+          "text": "และ *พ่นไฟ* แรงห้าสิบ",
+          "say": "และพ่นไฟ แรงห้าสิบ."
+        }
+      ],
+      "chapter": "บนการ์ด",
+      "title": "ค่าพลังบนการ์ด",
+      "stats": [
+        {
+          "label": "พลังชีวิต (HP)",
+          "value": 80,
+          "max": 120
+        },
+        {
+          "label": "ท่าฟัน",
+          "value": 30,
+          "max": 60
+        },
+        {
+          "label": "พ่นไฟ",
+          "value": 50,
+          "max": 60
+        }
+      ],
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-17/large"
+    },
+    {
+      "beat": "zoom",
+      "duration": 4,
+      "text": "แต่ *พ่นไฟ* มีราคาที่ต้องจ่าย",
+      "parts": [
+        {
+          "text": "แต่ *พ่นไฟ* มีราคาที่ต้องจ่าย",
+          "say": "แต่ท่าพ่นไฟ มีราคาที่ต้องจ่าย."
+        },
+        {
+          "text": "ต้อง *ทิ้งพลังงานไฟ* หนึ่งใบทุกครั้ง",
+          "say": "ต้องทิ้งพลังงานไฟหนึ่งใบ ทุกครั้งที่ใช้."
+        }
+      ],
+      "chapter": "ส่องการ์ด",
+      "title": "ทิ้งพลังงานไฟ 1 ใบ",
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-17/large",
+      "focus_x": 50,
+      "focus_y": 72,
+      "focus_zoom": 2.0
+    },
+    {
+      "beat": "art",
+      "duration": 4,
+      "text": "ในอนิเมะ ลิซาร์โดของซาโตชิ",
+      "parts": [
+        {
+          "text": "ในอนิเมะ ลิซาร์โดของซาโตชิ",
+          "say": "ในอนิเมะ พอฮิโตคาเงะของซาโตชิ กลายเป็นลิซาร์โด"
+        },
+        {
+          "text": "เริ่ม *ไม่ยอมฟังคำสั่ง*",
+          "say": "มันก็เริ่มไม่ยอมฟังคำสั่งอีกเลย."
+        }
+      ],
+      "chapter": "ในอนิเมะ",
+      "title": "Charmeleon",
+      "subtitle": "ลิซาร์โด • ร่างที่ดื้อที่สุด",
+      "image_url": "https://archives.bulbagarden.net/media/upload/0/05/0005Charmeleon.png"
+    },
+    {
+      "beat": "evolve",
+      "duration": 6,
+      "text": "จาก *ฮิโตคาเงะ* สู่ *ลิซาร์โด*",
+      "parts": [
+        {
+          "text": "จาก *ฮิโตคาเงะ* สู่ *ลิซาร์โด*",
+          "say": "จากฮิโตคาเงะ สู่ลิซาร์โด"
+        },
+        {
+          "text": "และร่างสุดท้าย *ลิซาร์ดอน*",
+          "say": "และร่างสุดท้าย ลิซาร์ดอน."
+        }
+      ],
+      "images": [
+        "https://archives.bulbagarden.net/media/upload/2/27/0004Charmander.png",
+        "https://archives.bulbagarden.net/media/upload/0/05/0005Charmeleon.png",
+        "https://archives.bulbagarden.net/media/upload/3/38/0006Charizard.png"
+      ]
+    },
+    {
+      "beat": "card",
+      "duration": 4,
+      "text": "การ์ดชุดแรก *ยังมีความลับอีกเยอะ*",
+      "parts": [
+        {
+          "text": "การ์ดชุดแรก *ยังมีความลับอีกเยอะ*",
+          "say": "การ์ดชุดแรก ยังมีความลับอีกเยอะ."
+        },
+        {
+          "text": "*กดติดตาม* แล้วมาเปิดไปด้วยกัน",
+          "say": "กดติดตาม แล้วมาเปิดไปด้วยกัน."
+        }
+      ],
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-17/large"
+    },
+    {
+      "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+      "image_mode": "still",
+      "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "ชอบเรื่องเล่าแบบนี้ *กดติดตาม* ไว้เลย",
+          "say": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้เลย."
+        },
+        {
+          "text": "*ซื้อ ขาย สะสม แข่งเกมส์การ์ด* ที่ www.cardzcenter.com",
+          "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+        }
+      ],
+      "no_caption": true,
+      "beat": "still"
+    }
+  ],
+  "composition": "CardShow",
+  "theme": "fire",
+  "badge": "#17",
+  "series": "การ์ดชุดแรก 1996"
+}

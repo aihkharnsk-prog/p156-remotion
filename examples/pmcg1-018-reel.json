@@ -1,0 +1,272 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "meta": {
+    "title": "การ์ดี้ หมาตำรวจคู่ใจคุณจุนซ่า การ์ดใบที่ 18 #shorts",
+    "description": "การ์ดใบที่ 18 ของชุดโปเกมอนญี่ปุ่น (拡張パック) การ์ดี้ สุนัขไฟที่หวงถิ่น คู่หูคุณจุนซ่าในอนิเมะ และร่างฮิซุยในตำนานอาร์เซอุส\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n#shorts #โปเกมอน #การ์ดโปเกมอน #pokemoncards #เรื่องเล่าการ์ด",
+    "thumb": {
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-18/large",
+      "hook": "หมาตำรวจ\nตัวแรก!",
+      "badge": "#18",
+      "sub": "เบื้องหลังการ์ด"
+    },
+    "publish_at": "2026-10-20T12:30:00Z"
+  },
+  "tts": {
+    "voice_id": "bTEswxYhpv7UDkQg5VRu",
+    "model_id": "eleven_v4",
+    "stability": 0.8,
+    "speed": 1.2,
+    "prefix": "[calm, soft, natural storyteller]"
+  },
+  "audio_rate": 1.067,
+  "slides": [
+    {
+      "beat": "hook",
+      "duration": 4,
+      "text": "สุนัขไฟที่ *หวงถิ่นที่สุด*",
+      "parts": [
+        {
+          "text": "สุนัขไฟที่ *หวงถิ่นที่สุด*",
+          "say": "สุนัขไฟ ที่หวงถิ่นที่สุด."
+        }
+      ],
+      "title": "สุนัขไฟ\nที่*หวงถิ่น*ที่สุด",
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-18/large"
+    },
+    {
+      "beat": "reveal",
+      "duration": 4,
+      "text": "ใบที่สิบแปด คือ *การ์ดี้*",
+      "parts": [
+        {
+          "text": "ใบที่สิบแปด คือ *การ์ดี้*",
+          "say": "ใบที่สิบแปด คือ การ์ดี้."
+        },
+        {
+          "text": "โปเกมอน *ลูกสุนัข* ธาตุไฟ",
+          "say": "โปเกมอนลูกสุนัข ธาตุไฟ."
+        }
+      ],
+      "title": "การ์ดี้",
+      "subtitle": "No.058 • ธาตุไฟ",
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-18/large",
+      "transition": "flash"
+    },
+    {
+      "beat": "quiz",
+      "duration": 4,
+      "text": "ในอนิเมะ ใครใช้การ์ดี้ *เป็นคู่หู*?",
+      "parts": [
+        {
+          "text": "ในอนิเมะ ใครใช้การ์ดี้ *เป็นคู่หู*?",
+          "say": "ทายสิ ในอนิเมะ ใครใช้การ์ดี้เป็นคู่หู?"
+        },
+        {
+          "text": "คำตอบคือ *คุณจุนซ่า* ตำรวจประจำเมือง",
+          "say": "คำตอบคือ คุณจุนซ่า ตำรวจประจำเมือง."
+        }
+      ],
+      "chapter": "ทายสิ",
+      "title": "ในอนิเมะ ใครใช้\n*การ์ดี้*เป็นคู่หู?",
+      "choices": [
+        "คุณจอย",
+        "คุณจุนซ่า",
+        "ทาเคชิ"
+      ],
+      "answer": 1
+    },
+    {
+      "beat": "name",
+      "duration": 4,
+      "text": "ชื่ออังกฤษคือ *โกรว์ไลท์*",
+      "parts": [
+        {
+          "text": "ชื่ออังกฤษคือ *โกรว์ไลท์*",
+          "say": "ชื่ออังกฤษ คือโกรว์ไลท์."
+        },
+        {
+          "text": "มาจาก *คำราม* บวก *ปราดเปรียว*",
+          "say": "มาจากคำว่า คำราม บวกกับ ปราดเปรียว."
+        }
+      ],
+      "chapter": "ที่มาของชื่อ",
+      "chips": [
+        {
+          "big": "Growl",
+          "small": "คำราม"
+        },
+        {
+          "big": "Lithe",
+          "small": "ปราดเปรียว"
+        }
+      ],
+      "title": "*Growlithe*",
+      "image_url": "https://archives.bulbagarden.net/media/upload/6/6a/0058Growlithe.png"
+    },
+    {
+      "beat": "art",
+      "duration": 4,
+      "text": "โปเกเด็กซ์บอกว่ามัน *หวงถิ่นมาก*",
+      "parts": [
+        {
+          "text": "โปเกเด็กซ์บอกว่ามัน *หวงถิ่นมาก*",
+          "say": "โปเกเด็กซ์บอกว่า มันหวงถิ่นมาก."
+        },
+        {
+          "text": "จะ *เห่าและกัด* ไล่ผู้บุกรุก",
+          "say": "มันจะเห่า และกัดไล่ผู้บุกรุก."
+        }
+      ],
+      "chapter": "นิสัย",
+      "title": "Growlithe",
+      "subtitle": "ยามเฝ้าบ้านตัวจริง",
+      "image_url": "https://archives.bulbagarden.net/media/upload/6/6a/0058Growlithe.png"
+    },
+    {
+      "beat": "stats",
+      "duration": 4,
+      "text": "บนการ์ด พลังชีวิต *หกสิบ*",
+      "parts": [
+        {
+          "text": "บนการ์ด พลังชีวิต *หกสิบ*",
+          "say": "บนการ์ด มันมีพลังชีวิตหกสิบ."
+        },
+        {
+          "text": "ท่า *เปลวไฟ* แรงยี่สิบ",
+          "say": "ท่าเปลวไฟ แรงยี่สิบ."
+        }
+      ],
+      "chapter": "บนการ์ด",
+      "title": "ค่าพลังบนการ์ด",
+      "stats": [
+        {
+          "label": "พลังชีวิต (HP)",
+          "value": 60,
+          "max": 120
+        },
+        {
+          "label": "เปลวไฟ",
+          "value": 20,
+          "max": 60
+        }
+      ],
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-18/large"
+    },
+    {
+      "beat": "versions",
+      "duration": 4,
+      "text": "เทียบ *ญี่ปุ่น* กับ *อังกฤษ*",
+      "parts": [
+        {
+          "text": "เทียบ *ญี่ปุ่น* กับ *อังกฤษ*",
+          "say": "เทียบฉบับญี่ปุ่น กับฉบับอังกฤษ."
+        },
+        {
+          "text": "ภาพเดียวกัน แต่ *กรอบต่างกัน*",
+          "say": "ภาพเดียวกัน แต่กรอบการ์ดต่างกัน."
+        }
+      ],
+      "images": [
+        "https://images.scrydex.com/pokemon/base1_ja-18/large",
+        "https://images.pokemontcg.io/base1/28_hires.png"
+      ],
+      "labels": [
+        "ญี่ปุ่น",
+        "อังกฤษ"
+      ]
+    },
+    {
+      "beat": "timeline",
+      "duration": 4,
+      "text": "ปี 1996 การ์ดใบนี้ *วางขาย*",
+      "parts": [
+        {
+          "text": "ปี 1996 การ์ดใบนี้ *วางขาย*",
+          "say": "ปีหนึ่งเก้าเก้าหก การ์ดใบนี้วางขาย."
+        },
+        {
+          "text": "ปี 1997 *อนิเมะ* เริ่มฉาย",
+          "say": "ปีหนึ่งเก้าเก้าเจ็ด อนิเมะเริ่มฉาย."
+        },
+        {
+          "text": "ปี 2022 เกิด *ร่างฮิซุย*",
+          "say": "ปีสองศูนย์สองสอง มันได้ร่างฮิซุย ธาตุไฟและหิน."
+        }
+      ],
+      "chapter": "ไทม์ไลน์",
+      "title": "เส้นทางของ*การ์ดี้*",
+      "points": [
+        {
+          "year": "1996",
+          "label": "การ์ดชุดแรก\nวางขาย"
+        },
+        {
+          "year": "1997",
+          "label": "อนิเมะ\nเริ่มฉาย"
+        },
+        {
+          "year": "2022",
+          "label": "ร่างฮิซุย\nไฟ + หิน"
+        }
+      ]
+    },
+    {
+      "beat": "evolve",
+      "duration": 6,
+      "text": "พอใช้ *หินไฟ*",
+      "parts": [
+        {
+          "text": "พอใช้ *หินไฟ*",
+          "say": "พอใช้หินไฟ"
+        },
+        {
+          "text": "จะกลายเป็น *วินดี้*",
+          "say": "มันจะกลายเป็นวินดี้."
+        }
+      ],
+      "images": [
+        "https://archives.bulbagarden.net/media/upload/6/6a/0058Growlithe.png",
+        "https://archives.bulbagarden.net/media/upload/4/42/0059Arcanine.png"
+      ]
+    },
+    {
+      "beat": "card",
+      "duration": 4,
+      "text": "การ์ดชุดแรก *ยังมีความลับอีกเยอะ*",
+      "parts": [
+        {
+          "text": "การ์ดชุดแรก *ยังมีความลับอีกเยอะ*",
+          "say": "การ์ดชุดแรก ยังมีความลับอีกเยอะ."
+        },
+        {
+          "text": "*กดติดตาม* แล้วมาเปิดไปด้วยกัน",
+          "say": "กดติดตาม แล้วมาเปิดไปด้วยกัน."
+        }
+      ],
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-18/large"
+    },
+    {
+      "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+      "image_mode": "still",
+      "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "ชอบเรื่องเล่าแบบนี้ *กดติดตาม* ไว้เลย",
+          "say": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้เลย."
+        },
+        {
+          "text": "*ซื้อ ขาย สะสม แข่งเกมส์การ์ด* ที่ www.cardzcenter.com",
+          "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+        }
+      ],
+      "no_caption": true,
+      "beat": "still"
+    }
+  ],
+  "composition": "CardShow",
+  "theme": "fire",
+  "badge": "#18",
+  "series": "การ์ดชุดแรก 1996"
+}
