@@ -59,19 +59,23 @@ export type DynamicProps = {
   caption_scale?: number; // ขนาดซับแบบ reel (1 = เดิม, 0.6 = เล็กลง)
   caption_bottom?: number; // ระยะซับจากขอบล่าง เป็นสัดส่วนความสูง (ค่าเริ่มต้น 0.14, ยิ่งน้อยยิ่งต่ำ)
   accent_color?: string; // สีซับแบบ reel (ค่าเริ่มต้น #39ff6a)
+  cover?: ThumbProps; // รูปปกเป็นเฟรมแรกของคลิป (Shorts ใช้เฟรมจากวิดีโอเป็นปก)
   fit_audio?: boolean; // true (ค่าเริ่มต้น) = ถ้ามี audio_url จะยืด/หดความยาวสไลด์ทุกอันตามสัดส่วนให้พอดีกับความยาวเสียง
 };
 
 export const slideFrames = (s: Slide) =>
   Math.max(1, Math.round(s.duration * DYN_FPS));
 
-export const totalFrames = (slides: Slide[]) =>
+export const COVER_FRAMES = 15; // 0.5 วินาที
+
+export const totalFrames = (slides: Slide[], cover?: unknown) =>
   Math.max(
     1,
     slides.reduce((sum, s) => sum + slideFrames(s), 0)
-  );
+  ) + (cover ? COVER_FRAMES : 0);
 
 import { CoinScene, EvolveScene, VersionsScene, SpriteScene } from "./Scenes";
+import { Thumb, ThumbProps } from "./Thumb";
 
 const FONT = "Noto Sans Thai, Noto Sans CJK JP, Noto Sans, sans-serif";
 
@@ -497,10 +501,18 @@ export const DynamicStory: React.FC<DynamicProps> = ({
   motion,
   audio_rate,
   accent_color,
+  cover,
 }) => {
   let cursor = 0;
+  const off = cover ? COVER_FRAMES : 0;
   return (
     <AbsoluteFill style={{ backgroundColor: "#000" }}>
+      {cover ? (
+        <Sequence from={0} durationInFrames={COVER_FRAMES}>
+          <Thumb {...cover} />
+        </Sequence>
+      ) : null}
+      <Sequence from={off}>
       {slides.map((slide, i) => {
         const from = cursor;
         const dur = slideFrames(slide);
@@ -527,6 +539,7 @@ export const DynamicStory: React.FC<DynamicProps> = ({
         );
       })}
       {audio_url ? <Audio src={audio_url} /> : null}
+      </Sequence>
     </AbsoluteFill>
   );
 };

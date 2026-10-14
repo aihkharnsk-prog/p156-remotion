@@ -106,7 +106,7 @@ export const Root: React.FC = () => {
           }
           return {
             props: { ...props, slides },
-            durationInFrames: totalFrames(slides),
+            durationInFrames: totalFrames(slides, props.cover),
             width: props.width ?? 1920,
             height: props.height ?? 1080,
           };

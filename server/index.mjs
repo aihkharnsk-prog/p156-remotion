@@ -363,6 +363,19 @@ async function runJob(job) {
         audio_rate: job.request.audio_rate,
         accent_color: job.request.accent_color,
       };
+      // รูปปกเป็นเฟรมแรก 0.5 วิ (Shorts ใช้เฟรมในคลิปเป็นปก) — ปิดได้ด้วย meta.cover_frame:false
+      const ct = job.request.meta?.thumb;
+      if (ct && typeof ct === "object" && job.request.meta?.cover_frame !== false) {
+        inputProps.cover = {
+          image_url: ct.image_url || (job.request.slides || [])[0]?.image_url,
+          hook: ct.hook,
+          badge: ct.badge,
+          sub: ct.sub,
+          accent_color: /^#[0-9a-fA-F]{6}$/.test(String(ct.accent_color || "")) ? ct.accent_color : undefined,
+          width: job.request.width || 1080,
+          height: job.request.height || 1920,
+        };
+      }
 
       // โหมดเสียงก้อนเดียว: สร้างเสียงทั้งบทครั้งเดียว (เหมือนไฟล์ที่ฟังอนุมัติ) แล้วตัดซับตามเวลาจริงของแต่ละท่อน
       if (job.request.tts && job.request.tts.mode === "single") {
