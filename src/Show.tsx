@@ -426,7 +426,7 @@ const BigNumBeat: React.FC<BP> = ({ s, f, d, pal }) => {
           <Rich text={s.title} color={pal.b} />
         </div>
       ) : null}
-      <div style={{ position: "absolute", left: 0, right: 0, top: 860 - 170, textAlign: "center", fontFamily: KANIT, fontWeight: 900, fontSize: String(v).length > 4 ? 230 : 300, lineHeight: 1.1, color: "#fff", transform: `scale(${pop})`, textShadow: `${stroke(8, pal.ink)}, 0 0 60px ${pal.a}, 0 0 120px ${pal.a}` }}>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 860 - 170, height: 340, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", fontFamily: KANIT, fontWeight: 900, fontSize: Math.min(300, 1000 / (Math.max(1, v.toLocaleString("en-US", { useGrouping: v >= 10000 }).length) * 0.6)), lineHeight: 1.1, whiteSpace: "nowrap", color: "#fff", transform: `scale(${pop})`, textShadow: `${stroke(8, pal.ink)}, 0 0 60px ${pal.a}, 0 0 120px ${pal.a}` }}>
         {shown.toLocaleString("en-US", { useGrouping: v >= 10000 })}
       </div>
       {s.subtitle ? (
