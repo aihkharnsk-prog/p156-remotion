@@ -118,6 +118,8 @@ async function postTikTok(videoUrl, meta = {}, at) {
 
 // ---------- Facebook Page (ผ่าน Zernio) ----------
 let facebookAccountCache = null;
+// คอมเมนต์แรกใต้โพสต์ Facebook: ชวนเข้าเว็บ (ลิงก์ในคอมเมนต์ไม่ลดการมองเห็นของโพสต์)
+const FB_FIRST_COMMENT = "🃏 สะสม • ซื้อ • ขาย • แข่งเกมส์การ์ด โปเกมอน วันพีซ ยูกิโอ และอีกมากมาย\n👉 https://www.cardzcenter.com";
 async function facebookAccountId() {
   if (process.env.ZERNIO_FACEBOOK_ACCOUNT_ID) return process.env.ZERNIO_FACEBOOK_ACCOUNT_ID;
   if (facebookAccountCache) return facebookAccountCache;
@@ -136,7 +138,7 @@ async function postFacebook(videoUrl, meta = {}, at, durationSec) {
   const make = (reel) => ({
     content: tiktokCaption(meta),
     mediaItems: [{ type: "video", url: videoUrl }],
-    platforms: [{ platform: "facebook", accountId, platformSpecificData: reel ? { contentType: "reel", title } : {} }],
+    platforms: [{ platform: "facebook", accountId, platformSpecificData: { ...(reel ? { contentType: "reel", title } : {}), firstComment: FB_FIRST_COMMENT } }],
     ...(when ? { scheduledFor: when, timezone: "UTC" } : { publishNow: true }),
   });
   const reelOk = !(durationSec > 60);
