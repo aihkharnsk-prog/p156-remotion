@@ -1068,6 +1068,21 @@ app.get("/zernio-accounts", auth, async (req, res) => {
   res.json(out);
 });
 
+// ยกเลิกโพสต์ที่ตั้งเวลาไว้ใน Zernio: POST /zernio-delete {ids:[...]}
+app.post("/zernio-delete", auth, async (req, res) => {
+  const out = [];
+  for (const id of Array.isArray(req.body?.ids) ? req.body.ids.map(String) : []) {
+    try {
+      await zernio(`/posts/${id}`, { method: "DELETE" });
+      out.push({ id, deleted: true });
+    } catch (e) {
+      out.push({ id, error: String(e?.message || e) });
+    }
+  }
+  console.log(`[zernio-delete] ${JSON.stringify(out)}`);
+  res.json(out);
+});
+
 // โพสต์คลิปที่ render แล้วขึ้นเพจ Facebook: POST /facebook-post {items:[{video_url, file, at, duration}]}
 app.post("/facebook-post", auth, async (req, res) => {
   const out = [];
