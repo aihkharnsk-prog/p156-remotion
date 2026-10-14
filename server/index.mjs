@@ -777,6 +777,34 @@ app.get("/brand/outro.png", async (req, res, next) => {
     fs.stat(OUTRO_FILE).then(() => res.sendFile(OUTRO_FILE)).catch(() => next());
   }
 });
+// ภาพปกเพจ Facebook (1640x624): GET /brand/fb-cover.png (?refresh=1 = สร้างใหม่)
+app.get("/brand/fb-cover.png", async (req, res) => {
+  const file = path.join(ASSET_DIR, "fb-cover.png");
+  try {
+    const have = await fs.stat(file).then(() => true, () => false);
+    if (!have || req.query.refresh) {
+      const pk = OUTRO_POOL.pokemon, yg = OUTRO_POOL.yugioh, mg = OUTRO_POOL.magic;
+      const groups = [yg[0], pk[0], pk[1], mg[0], pk[2], yg[1], mg[1]];
+      const dir = path.join(ASSET_DIR, `cover-src-${Date.now()}`);
+      await fs.mkdir(dir, { recursive: true });
+      const files = [];
+      for (const [i, g] of groups.entries()) {
+        if (files.length >= 4) break;
+        for (const u of g.urls || [g]) {
+          try { files.push(path.join(dir, await downloadImage(String(u), dir, `c${i}`))); break; } catch (e) {}
+        }
+      }
+      await execFileP("python3", [path.join(__dirname, "fb_cover_compose.py"), file, path.join(__dirname, "..", "public", "fonts"), ...files], { timeout: 120000 });
+      fs.rm(dir, { recursive: true, force: true }).catch(() => {});
+      console.log(`[fb-cover] built with ${files.length} cards`);
+    }
+    res.set("Cache-Control", "no-cache");
+    res.sendFile(file);
+  } catch (e) {
+    console.error("[fb-cover] failed", e);
+    res.status(500).send(String(e?.message || e));
+  }
+});
 app.use("/brand", express.static(path.join(__dirname, "..", "public")));
 
 app.post("/render", auth, (req, res) => {
