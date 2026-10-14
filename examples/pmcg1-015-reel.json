@@ -1,7 +1,6 @@
 {
   "width": 1080,
   "height": 1920,
-  "caption_style": "reel",
   "meta": {
     "title": "โรคอน จิ้งจอกหกหาง การ์ดใบที่ 15 #shorts",
     "description": "การ์ดใบที่ 15 ของชุดโปเกมอนญี่ปุ่น (拡張パック) โรคอน ที่มาของชื่อหกหาง ท่าแสงสับสน และร่างอาโลลาที่กลายเป็นธาตุน้ำแข็ง\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n#shorts #โปเกมอน #การ์ดโปเกมอน #pokemoncards #เรื่องเล่าการ์ด",
@@ -20,45 +19,57 @@
     "speed": 1.2,
     "prefix": "[calm, soft, natural storyteller]"
   },
-  "caption_position": "bottom",
   "audio_rate": 1.067,
-  "caption_scale": 0.6,
-  "caption_bottom": 0.055,
-  "motion": 0.2,
   "slides": [
     {
+      "beat": "hook",
+      "duration": 4,
+      "text": "จิ้งจอกที่ *หางเพิ่มได้*",
+      "parts": [
+        {
+          "text": "จิ้งจอกที่ *หางเพิ่มได้*",
+          "say": "จิ้งจอก ที่หางเพิ่มได้."
+        }
+      ],
+      "title": "หก*หาง*\nกลายเป็นเก้า?",
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-15/large"
+    },
+    {
+      "beat": "reveal",
       "duration": 4,
       "text": "ใบที่สิบห้า คือ *โรคอน*",
       "parts": [
         {
           "text": "ใบที่สิบห้า คือ *โรคอน*",
           "say": "ใบที่สิบห้า คือ โรคอน."
-        },
-        {
-          "text": "จิ้งจอกไฟ ที่มี *หกหาง*",
-          "say": "จิ้งจอกไฟ ที่มีหกหาง."
         }
       ],
-      "image_url": "https://images.scrydex.com/pokemon/base1_ja-15/large",
-      "image_mode": "card"
+      "title": "โรคอน",
+      "subtitle": "No.037 • ธาตุไฟ",
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-15/large"
     },
     {
+      "beat": "bignum",
       "duration": 4,
-      "text": "ชื่อญี่ปุ่นมาจาก *หก* กับ *จิ้งจอก*",
+      "text": "ชื่อญี่ปุ่นมาจากเลข *หก*",
       "parts": [
         {
-          "text": "ชื่อญี่ปุ่นมาจาก *หก* กับ *จิ้งจอก*",
-          "say": "ชื่อญี่ปุ่น มาจากเลขหก กับจิ้งจอก"
+          "text": "ชื่อญี่ปุ่นมาจากเลข *หก*",
+          "say": "ชื่อญี่ปุ่น มาจากเลขหก"
         },
         {
-          "text": "ตรงกับจำนวนหางของมัน",
-          "say": "ตรงกับจำนวนหางของมันพอดี."
+          "text": "ตาม *จำนวนหาง* ของมัน",
+          "say": "ตามจำนวนหางของมัน."
         }
       ],
-      "image_url": "https://archives.bulbagarden.net/media/upload/0/06/0037Vulpix.png",
-      "image_mode": "art"
+      "chapter": "ที่มาของชื่อ",
+      "title": "จำนวน*หาง*ของโรคอน",
+      "value": 6,
+      "subtitle": "ロク (โรคุ) = หก",
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-15/large"
     },
     {
+      "beat": "evolve",
       "duration": 6,
       "text": "พอใช้ *หินไฟ*",
       "parts": [
@@ -67,113 +78,56 @@
           "say": "พอใช้หินไฟ"
         },
         {
-          "text": "หางเพิ่มเป็น *เก้าหาง*",
-          "say": "หางจะเพิ่มเป็นเก้าหาง"
-        },
-        {
-          "text": "กลายเป็น *คิวคอน*",
-          "say": "กลายเป็นคิวคอน."
+          "text": "หางเพิ่มเป็นเก้า กลายเป็น *คิวคอน*",
+          "say": "หางจะเพิ่มเป็นเก้า กลายเป็นคิวคอน."
         }
       ],
-      "scene": "evolve",
       "images": [
         "https://archives.bulbagarden.net/media/upload/0/06/0037Vulpix.png",
         "https://archives.bulbagarden.net/media/upload/3/3e/0038Ninetales.png"
       ]
     },
     {
+      "beat": "coin",
       "duration": 4,
-      "text": "ท่าในการ์ดคือ *แสงสับสน*",
+      "text": "ท่า *แสงสับสน*",
       "parts": [
         {
-          "text": "ท่าในการ์ดคือ *แสงสับสน*",
-          "say": "ท่าในการ์ด คือแสงสับสน"
+          "text": "ท่า *แสงสับสน*",
+          "say": "ท่าแสงสับสน"
         },
         {
           "text": "ออกหัว ศัตรู *สับสน*",
-          "say": "โยนเหรียญ ออกหัว ศัตรูจะสับสน."
+          "say": "โยนเหรียญออกหัว ศัตรูจะสับสน."
         }
       ],
-      "scene": "coin",
       "coin": "heads"
     },
     {
+      "beat": "quiz",
       "duration": 4,
-      "text": "ร่างพัฒนา *คิวคอน*",
+      "text": "ใครในอนิเมะได้โรคอน *มาเลี้ยง*?",
       "parts": [
         {
-          "text": "ร่างพัฒนา *คิวคอน*",
-          "say": "ส่วนร่างพัฒนา คิวคอน"
+          "text": "ใครในอนิเมะได้โรคอน *มาเลี้ยง*?",
+          "say": "ทายสิ ใครในอนิเมะ ได้โรคอนมาเลี้ยง?"
         },
         {
-          "text": "เป็นการ์ด *โฮโลแรร์* ของชุดแรก",
-          "say": "เป็นการ์ดโฮโลแรร์ ของชุดแรก."
+          "text": "คำตอบคือ *ทาเคชิ*",
+          "say": "คำตอบคือ ทาเคชิ."
         }
       ],
-      "image_url": "https://images.scrydex.com/pokemon/base1_ja-15/large",
-      "image_mode": "card"
+      "chapter": "ทายสิ",
+      "title": "ใครในอนิเมะ\nได้*โรคอน*มาเลี้ยง?",
+      "choices": [
+        "ซาโตชิ",
+        "คาซึมิ",
+        "ทาเคชิ"
+      ],
+      "answer": 2
     },
     {
-      "duration": 4,
-      "text": "ฉบับญี่ปุ่นกับอังกฤษ",
-      "parts": [
-        {
-          "text": "ฉบับญี่ปุ่นกับอังกฤษ",
-          "say": "เทียบฉบับญี่ปุ่น กับอังกฤษ"
-        },
-        {
-          "text": "หน้าตาการ์ด *ต่างกันแค่ไหน*",
-          "say": "หน้าตาการ์ด ต่างกันแค่ไหน."
-        }
-      ],
-      "scene": "versions",
-      "images": [
-        "https://images.scrydex.com/pokemon/base1_ja-15/large",
-        "https://images.pokemontcg.io/base1/68_hires.png"
-      ],
-      "labels": [
-        "ญี่ปุ่น",
-        "อังกฤษ"
-      ]
-    },
-    {
-      "duration": 4,
-      "text": "ในเกมภาคแรก",
-      "parts": [
-        {
-          "text": "ในเกมภาคแรก",
-          "say": "ในเกมภาคแรก"
-        },
-        {
-          "text": "จับได้ *เฉพาะบางภาค* เท่านั้น",
-          "say": "จับโรคอนได้ เฉพาะบางภาคเท่านั้น."
-        }
-      ],
-      "scene": "sprite",
-      "images": [
-        "https://archives.bulbagarden.net/media/upload/b/b5/Spr_1g_037.png"
-      ],
-      "labels": [
-        "โรคอน ป่า ปรากฏตัว!"
-      ]
-    },
-    {
-      "duration": 4,
-      "text": "ในอนิเมะ ทาเคชิ",
-      "parts": [
-        {
-          "text": "ในอนิเมะ ทาเคชิ",
-          "say": "ในอนิเมะ ทาเคชิ"
-        },
-        {
-          "text": "ได้รับโรคอนจาก *ผู้เพาะพันธุ์* ที่ฝากให้ดูแล",
-          "say": "ได้รับโรคอน จากผู้เพาะพันธุ์ที่ฝากให้ดูแล."
-        }
-      ],
-      "image_url": "https://archives.bulbagarden.net/media/upload/0/06/0037Vulpix.png",
-      "image_mode": "art"
-    },
-    {
+      "beat": "art",
       "duration": 4,
       "text": "ภาคหลังๆ มี *โรคอนอาโลลา*",
       "parts": [
@@ -186,15 +140,18 @@
           "say": "ที่กลายเป็นธาตุน้ำแข็ง."
         }
       ],
-      "image_url": "https://archives.bulbagarden.net/media/upload/6/6b/0037Vulpix-Alola.png",
-      "image_mode": "art"
+      "chapter": "ร่างใหม่",
+      "title": "Alola",
+      "subtitle": "โรคอนอาโลลา • ธาตุน้ำแข็ง",
+      "image_url": "https://archives.bulbagarden.net/media/upload/6/6b/0037Vulpix-Alola.png"
     },
     {
+      "beat": "card",
       "duration": 4,
-      "text": "ชุดแรกยังมีความลับอีกเยอะ",
+      "text": "การ์ดชุดแรก *ยังมีความลับอีกเยอะ*",
       "parts": [
         {
-          "text": "ชุดแรกยังมีความลับอีกเยอะ",
+          "text": "การ์ดชุดแรก *ยังมีความลับอีกเยอะ*",
           "say": "การ์ดชุดแรก ยังมีความลับอีกเยอะ."
         },
         {
@@ -202,8 +159,7 @@
           "say": "กดติดตาม แล้วมาเปิดไปด้วยกัน."
         }
       ],
-      "image_url": "https://images.scrydex.com/pokemon/base1_ja-15/large",
-      "image_mode": "card"
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-15/large"
     },
     {
       "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
@@ -220,7 +176,12 @@
           "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
         }
       ],
-      "no_caption": true
+      "no_caption": true,
+      "beat": "still"
     }
-  ]
+  ],
+  "composition": "CardShow",
+  "theme": "fighting",
+  "badge": "#15",
+  "series": "การ์ดชุดแรก 1996"
 }
