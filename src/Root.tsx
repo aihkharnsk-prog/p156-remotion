@@ -8,6 +8,7 @@ import {
   totalFrames,
 } from "./DynamicStory";
 import { Thumb, defaultThumbProps } from "./Thumb";
+import { CardShow } from "./Show";
 import { getAudioDurationInSeconds } from "@remotion/media-utils";
 import {
   DramaStory,
@@ -33,26 +34,7 @@ const defaultDramaProps: DramaProps = {
   height: 1920,
 };
 
-export const Root: React.FC = () => {
-  return (
-    <>
-      <Composition
-        id="CardStory"
-        component={CardStory}
-        durationInFrames={TOTAL_FRAMES}
-        fps={FPS}
-        width={1080}
-        height={1920}
-      />
-      <Composition
-        id="DynamicStory"
-        component={DynamicStory}
-        durationInFrames={90}
-        fps={DYN_FPS}
-        width={1920}
-        height={1080}
-        defaultProps={defaultDynamicProps}
-        calculateMetadata={async ({ props }) => {
+const fitSlides = async ({ props }: { props: any }) => {
           let slides = props.slides;
           const rate = props.audio_rate && props.audio_rate > 0 ? props.audio_rate : 1;
           // ถ้ามีเสียงพากย์ → ปรับความยาวสไลด์ให้พอดีกับเสียง (เว้นท้าย 0.8 วินาที)
@@ -110,7 +92,38 @@ export const Root: React.FC = () => {
             width: props.width ?? 1920,
             height: props.height ?? 1080,
           };
-        }}
+        };
+
+export const Root: React.FC = () => {
+  return (
+    <>
+      <Composition
+        id="CardStory"
+        component={CardStory}
+        durationInFrames={TOTAL_FRAMES}
+        fps={FPS}
+        width={1080}
+        height={1920}
+      />
+      <Composition
+        id="DynamicStory"
+        component={DynamicStory}
+        durationInFrames={90}
+        fps={DYN_FPS}
+        width={1920}
+        height={1080}
+        defaultProps={defaultDynamicProps}
+        calculateMetadata={fitSlides}
+      />
+      <Composition
+        id="CardShow"
+        component={CardShow as any}
+        durationInFrames={90}
+        fps={DYN_FPS}
+        width={1080}
+        height={1920}
+        defaultProps={{ ...defaultDynamicProps, width: 1080, height: 1920 } as any}
+        calculateMetadata={fitSlides as any}
       />
       <Composition
         id="Thumb"

@@ -362,6 +362,9 @@ async function runJob(job) {
         caption_bottom: job.request.caption_bottom,
         audio_rate: job.request.audio_rate,
         accent_color: job.request.accent_color,
+        theme: job.request.theme,
+        badge: job.request.badge,
+        series: job.request.series,
       };
       // รูปปกเป็นเฟรมแรก 0.5 วิ (Shorts ใช้เฟรมในคลิปเป็นปก) — ปิดได้ด้วย meta.cover_frame:false
       const ct = job.request.meta?.thumb;
@@ -425,7 +428,7 @@ async function runJob(job) {
 
     const composition = await selectComposition({
       serveUrl,
-      id: compId === "DramaStory" ? "DramaStory" : "DynamicStory",
+      id: compId === "DramaStory" ? "DramaStory" : compId === "CardShow" ? "CardShow" : "DynamicStory",
       inputProps,
     });
 
@@ -725,7 +728,7 @@ app.post("/render", auth, (req, res) => {
     return v;
   };
 
-  const composition = body.composition === "DramaStory" ? "DramaStory" : "DynamicStory";
+  const composition = body.composition === "DramaStory" ? "DramaStory" : body.composition === "CardShow" ? "CardShow" : "DynamicStory";
   const clean = [];
 
   if (composition === "DramaStory") {
@@ -756,7 +759,8 @@ app.post("/render", auth, (req, res) => {
     for (const [i, s] of slides.entries()) {
       const duration = Number(s.duration);
       const SCENES = ["sprout", "coin", "evolve", "versions", "sprite"];
-      if ((!s.image_url && !s.video_url && !SCENES.includes(s.scene)) || !(duration > 0)) {
+      const BEATS = ["hook", "reveal", "card", "name", "stats", "bignum", "quiz", "zoom", "timeline", "art", "still", "coin", "evolve", "versions", "sprite"];
+      if ((!s.image_url && !s.video_url && !SCENES.includes(s.scene) && !BEATS.includes(s.beat)) || !(duration > 0)) {
         return res.status(400).json({
           error: `slide ${i}: need image_url or video_url, and duration (seconds) > 0`,
         });
@@ -800,6 +804,19 @@ app.post("/render", auth, (req, res) => {
           ? s.parts.map((p) => ({ text: String(p?.text ?? ""), say: p?.say ? String(p.say) : undefined }))
           : undefined,
         duration,
+        // ฟิลด์ของรูปแบบ CardShow
+        beat: BEATS.includes(s.beat) ? s.beat : undefined,
+        title: s.title !== undefined ? String(s.title) : undefined,
+        subtitle: s.subtitle !== undefined ? String(s.subtitle) : undefined,
+        chapter: s.chapter !== undefined ? String(s.chapter) : undefined,
+        chips: Array.isArray(s.chips) ? s.chips.slice(0, 5).map((c) => ({ big: String(c?.big ?? ""), small: c?.small !== undefined ? String(c.small) : undefined })) : undefined,
+        stats: Array.isArray(s.stats) ? s.stats.slice(0, 5).map((r) => ({ label: String(r?.label ?? ""), value: Number(r?.value) || 0, max: optNum(r?.max), suffix: r?.suffix !== undefined ? String(r.suffix) : undefined })) : undefined,
+        value: optNum(s.value),
+        from: optNum(s.from),
+        choices: Array.isArray(s.choices) ? s.choices.slice(0, 4).map(String) : undefined,
+        answer: optNum(s.answer),
+        points: Array.isArray(s.points) ? s.points.slice(0, 6).map((q) => ({ year: String(q?.year ?? ""), label: String(q?.label ?? "") })) : undefined,
+        transition: ["wipe", "zoom", "flash", "slide", "shutter", "none"].includes(s.transition) ? s.transition : undefined,
       });
     }
   }
@@ -833,7 +850,7 @@ app.post("/render", auth, (req, res) => {
     created_at: new Date().toISOString(),
     request: {
       composition,
-      slides: composition === "DynamicStory" ? clean : undefined,
+      slides: composition !== "DramaStory" ? clean : undefined,
       shots: composition === "DramaStory" ? clean : undefined,
       music_url: body.music_url || undefined,
       audio_url: body.audio_url || undefined,
@@ -847,6 +864,9 @@ app.post("/render", auth, (req, res) => {
       accent_color: /^#[0-9a-fA-F]{6}$/.test(String(body.accent_color || "")) ? String(body.accent_color) : undefined,
       fit_audio: body.fit_audio === undefined ? true : !(body.fit_audio === false || body.fit_audio === "false" || body.fit_audio === 0),
       webhook_url: body.webhook_url || undefined,
+      theme: ["fire", "grass", "water", "electric", "psychic", "fighting", "normal"].includes(body.theme) ? body.theme : undefined,
+      badge: body.badge ? String(body.badge).slice(0, 12) : undefined,
+      series: body.series ? String(body.series).slice(0, 40) : undefined,
       width: body.width ? Number(body.width) : undefined,
       height: body.height ? Number(body.height) : undefined,
       meta: body.meta,
