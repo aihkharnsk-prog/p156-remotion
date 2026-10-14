@@ -805,6 +805,39 @@ app.get("/brand/fb-cover.png", async (req, res) => {
     res.status(500).send(String(e?.message || e));
   }
 });
+// ปก Facebook แบบอื่น: GET /brand/fb-cover-fan.png | /brand/fb-cover-wall.png (?refresh=1)
+app.get("/brand/fb-cover-:style.png", async (req, res) => {
+  const style = ["fan", "wall"].includes(req.params.style) ? req.params.style : null;
+  if (!style) return res.status(404).send("unknown style");
+  const file = path.join(ASSET_DIR, `fb-cover-${style}.png`);
+  try {
+    const have = await fs.stat(file).then(() => true, () => false);
+    if (!have || req.query.refresh) {
+      const pk = OUTRO_POOL.pokemon, yg = OUTRO_POOL.yugioh, mg = OUTRO_POOL.magic;
+      const groups = style === "fan"
+        ? [pk[1], yg[0], pk[0], mg[0], yg[1], pk[2], mg[1]]
+        : [pk[0], yg[0], mg[0], pk[1], yg[1], mg[1], pk[2], yg[2], pk[3], mg[2], pk[4], yg[3]];
+      const want = style === "fan" ? 5 : 10;
+      const dir = path.join(ASSET_DIR, `cover-src-${Date.now()}`);
+      await fs.mkdir(dir, { recursive: true });
+      const files = [];
+      for (const [i, g] of groups.entries()) {
+        if (files.length >= want) break;
+        for (const u of (g && g.urls) || [g]) {
+          try { files.push(path.join(dir, await downloadImage(String(u), dir, `c${i}`))); break; } catch (e) {}
+        }
+      }
+      await execFileP("python3", [path.join(__dirname, "fb_cover_alt.py"), file, path.join(__dirname, "..", "public", "fonts"), style, ...files], { timeout: 120000 });
+      fs.rm(dir, { recursive: true, force: true }).catch(() => {});
+      console.log(`[fb-cover-${style}] built with ${files.length} cards`);
+    }
+    res.set("Cache-Control", "no-cache");
+    res.sendFile(file);
+  } catch (e) {
+    console.error(`[fb-cover-${style}] failed`, e);
+    res.status(500).send(String(e?.message || e));
+  }
+});
 app.use("/brand", express.static(path.join(__dirname, "..", "public")));
 
 app.post("/render", auth, (req, res) => {
