@@ -976,6 +976,41 @@ app.get("/tiktok-account", auth, async (req, res) => {
   res.json(out);
 });
 
+// ผูกเพจ Facebook กับ Zernio: GET /fb-connect → ลิงก์ให้เจ้าของเพจกดล็อกอิน Facebook แล้วเลือกเพจ
+app.get("/fb-connect", auth, async (req, res) => {
+  const out = {};
+  try {
+    const pr = await zernio("/profiles");
+    const list = Array.isArray(pr) ? pr : pr.profiles || pr.data || [];
+    out.profiles = list.map((p) => ({ id: p._id || p.id, name: p.name }));
+    const profileId = out.profiles[0]?.id;
+    const q = new URLSearchParams({ profileId, redirect_url: `${PUBLIC_BASE_URL}/fb-done` });
+    const r = await zernio(`/connect/facebook?${q}`);
+    out.authUrl = r.authUrl;
+  } catch (e) {
+    out.error = String(e?.message || e);
+  }
+  console.log(`[fb-connect] ${JSON.stringify(out).slice(0, 3000)}`);
+  res.json(out);
+});
+app.get("/fb-done", (req, res) => {
+  console.log(`[fb-done] ${JSON.stringify(req.query).slice(0, 2000)}`);
+  res.set("Content-Type", "text/html; charset=utf-8").send("<h2 style='font-family:sans-serif'>เชื่อมเพจ Facebook เรียบร้อย ปิดหน้านี้ได้เลยครับ</h2>");
+});
+// ดูบัญชีที่เชื่อมใน Zernio ทั้งหมด: GET /zernio-accounts
+app.get("/zernio-accounts", auth, async (req, res) => {
+  let out;
+  try {
+    const a = await zernio("/accounts");
+    const list = Array.isArray(a) ? a : a.accounts || a.data || [];
+    out = list.map((x) => ({ id: x._id || x.id, platform: x.platform, username: x.username, name: x.displayName || x.name || x.selectedPageName }));
+  } catch (e) {
+    out = { error: String(e?.message || e) };
+  }
+  console.log(`[zernio-accounts] ${JSON.stringify(out).slice(0, 3000)}`);
+  res.json(out);
+});
+
 // โพสต์คลิปที่ render แล้วขึ้น TikTok: POST /tiktok-post {items:[{video_url, file, at}]}
 app.post("/tiktok-post", auth, async (req, res) => {
   const out = [];
