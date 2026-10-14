@@ -1068,6 +1068,18 @@ app.get("/zernio-accounts", auth, async (req, res) => {
   res.json(out);
 });
 
+// ดูสถานะโพสต์ใน Zernio: GET /zernio-post/:id
+app.get("/zernio-post/:id", auth, async (req, res) => {
+  let out;
+  try {
+    out = await zernio(`/posts/${encodeURIComponent(req.params.id)}`);
+  } catch (e) {
+    out = { error: String(e?.message || e) };
+  }
+  console.log(`[zernio-post] ${req.params.id} ${JSON.stringify(out).slice(0, 4000)}`);
+  res.json(out);
+});
+
 // ยกเลิกโพสต์ที่ตั้งเวลาไว้ใน Zernio: POST /zernio-delete {ids:[...]}
 app.post("/zernio-delete", auth, async (req, res) => {
   const out = [];
