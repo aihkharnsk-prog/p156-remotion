@@ -1,0 +1,169 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "meta": {
+    "title": "อิโซ ซามูไรแห่งวาโนะในกลุ่มหนวดขาว OP17-003 | One Piece Card #shorts",
+    "description": "การ์ดวันพีซ OP-17 ใบที่ 003 อิโซ หัวหน้าหน่วยที่ 16 ของกลุ่มหนวดขาว ข้ารับใช้ของโคสึกิ โอเด้ง และพี่ชายของคิคุ\n\n👇 อยากให้เล่าการ์ดใบไหนต่อ? พิมพ์ชื่อไว้ในคอมเมนต์\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17",
+    "thumb": {
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-003.png",
+      "hook": "พี่ชาย\nของใคร?",
+      "badge": "OP17-003",
+      "sub": "เบื้องหลังการ์ด"
+    },
+    "publish_at": "2026-10-18T10:00:00Z"
+  },
+  "tts": {
+    "voice_id": "bTEswxYhpv7UDkQg5VRu",
+    "model_id": "eleven_v4",
+    "stability": 0.8,
+    "speed": 1.2,
+    "prefix": "[calm, soft, natural storyteller]"
+  },
+  "audio_rate": 1.067,
+  "slides": [
+    {
+      "beat": "hook",
+      "duration": 4,
+      "text": "มือปืนที่เป็น *พี่ชายของซามูไรคนดัง*",
+      "parts": [
+        {
+          "text": "มือปืนที่เป็น *พี่ชายของซามูไรคนดัง*",
+          "say": "มือปืน ที่เป็นพี่ชายของซามูไรคนดัง."
+        }
+      ],
+      "title": "พี่ชาย\nของ*ใคร*?",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-003.png"
+    },
+    {
+      "beat": "reveal",
+      "duration": 4,
+      "text": "ใบที่สาม คือ *อิโซ*",
+      "parts": [
+        {
+          "text": "ใบที่สาม คือ *อิโซ*",
+          "say": "ใบที่สาม ของชุดโอพีสิบเจ็ด คือ อิโซ."
+        }
+      ],
+      "title": "อิโซ",
+      "subtitle": "OP17-003 • แรร์ สีแดง",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-003.png"
+    },
+    {
+      "beat": "bignum",
+      "duration": 4,
+      "text": "เขาคือหัวหน้า *หน่วยที่สิบหก*",
+      "parts": [
+        {
+          "text": "เขาคือหัวหน้า *หน่วยที่สิบหก*",
+          "say": "เขาคือหัวหน้าหน่วยที่สิบหก ของกลุ่มหนวดขาว."
+        }
+      ],
+      "chapter": "กลุ่มหนวดขาว",
+      "title": "หัวหน้าหน่วยที่",
+      "value": 16,
+      "subtitle": "กลุ่มโจรสลัดหนวดขาว",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-003.png"
+    },
+    {
+      "beat": "quiz",
+      "duration": 4,
+      "text": "อิโซเป็น *พี่ชายของใคร*?",
+      "parts": [
+        {
+          "text": "อิโซเป็น *พี่ชายของใคร*?",
+          "say": "ทายสิ อิโซเป็นพี่ชายของใคร?"
+        },
+        {
+          "text": "คำตอบคือ *คิคุ* หนึ่งในฝักดาบแดง",
+          "say": "คำตอบคือ คิคุ หนึ่งในฝักดาบแดงแห่งวาโนะ."
+        }
+      ],
+      "chapter": "ทายสิ",
+      "title": "อิโซเป็น\n*พี่ชาย*ของใคร?",
+      "choices": [
+        "ยามาโตะ",
+        "คิคุ",
+        "ซาโบ้"
+      ],
+      "answer": 1
+    },
+    {
+      "beat": "zoom",
+      "duration": 4,
+      "text": "บนการ์ด เขา *ลงสนามแล้วตีได้เลย*",
+      "parts": [
+        {
+          "text": "บนการ์ด เขา *ลงสนามแล้วตีได้เลย*",
+          "say": "บนการ์ด เขาลงสนามแล้วโจมตีได้ทันที"
+        },
+        {
+          "text": "และลดพลังคู่แข่งได้ถึง *หกพัน*",
+          "say": "และลดพลังตัวละครคู่แข่ง ได้ถึงหกพัน."
+        }
+      ],
+      "chapter": "ส่องการ์ด",
+      "title": "ลดพลัง −6000",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-003.png",
+      "focus_x": 50,
+      "focus_y": 72,
+      "focus_zoom": 2.0
+    },
+    {
+      "beat": "versions",
+      "duration": 4,
+      "text": "การ์ดอิโซใบแรก มาจาก *ชุดแรกของเกม*",
+      "parts": [
+        {
+          "text": "การ์ดอิโซใบแรก มาจาก *ชุดแรกของเกม*",
+          "say": "การ์ดอิโซใบแรก มาจากชุดแรกของเกม."
+        }
+      ],
+      "images": [
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-033.png",
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-003.png"
+      ],
+      "labels": [
+        "OP-01",
+        "OP-17"
+      ]
+    },
+    {
+      "beat": "card",
+      "duration": 4,
+      "text": "การ์ดวันพีซ *ยังมีเรื่องเล่าอีกเยอะ*",
+      "parts": [
+        {
+          "text": "การ์ดวันพีซ *ยังมีเรื่องเล่าอีกเยอะ*",
+          "say": "การ์ดวันพีซ ยังมีเรื่องเล่าอีกเยอะ."
+        },
+        {
+          "text": "*กดติดตาม* แล้วมาเปิดไปด้วยกัน",
+          "say": "กดติดตาม แล้วมาเปิดไปด้วยกัน."
+        }
+      ],
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-003.png"
+    },
+    {
+      "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+      "image_mode": "still",
+      "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "ชอบเรื่องเล่าแบบนี้ *กดติดตาม* ไว้เลย",
+          "say": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้เลย."
+        },
+        {
+          "text": "*ซื้อ ขาย สะสม แข่งเกมส์การ์ด* ที่ www.cardzcenter.com",
+          "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+        }
+      ],
+      "no_caption": true,
+      "beat": "still"
+    }
+  ],
+  "composition": "CardShow",
+  "theme": "psychic",
+  "badge": "OP17-003",
+  "series": "ONE PIECE CARD GAME • OP-17"
+}

@@ -1,0 +1,183 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "meta": {
+    "title": "อินุอาราชิ & เนโกะมามุชิ หมากับแมวแห่งโซ OP17-004 | One Piece Card #shorts",
+    "description": "การ์ดวันพีซ OP-17 ใบที่ 004 อินุอาราชิและเนโกะมามุชิ สองผู้ปกครองเกาะโซ ที่เคยล่องเรือกับโอเด้งบนเรือหนวดขาว\n\n👇 แท็กเพื่อนที่ชอบวันพีซ\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17",
+    "thumb": {
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-004.png",
+      "hook": "หมากับแมว\nใบเดียวกัน!",
+      "badge": "OP17-004",
+      "sub": "เบื้องหลังการ์ด"
+    },
+    "publish_at": "2026-10-19T10:00:00Z"
+  },
+  "tts": {
+    "voice_id": "bTEswxYhpv7UDkQg5VRu",
+    "model_id": "eleven_v4",
+    "stability": 0.8,
+    "speed": 1.2,
+    "prefix": "[calm, soft, natural storyteller]"
+  },
+  "audio_rate": 1.067,
+  "slides": [
+    {
+      "beat": "hook",
+      "duration": 4,
+      "text": "หมากับแมวที่ *เกลียดกันยี่สิบปี*",
+      "parts": [
+        {
+          "text": "หมากับแมวที่ *เกลียดกันยี่สิบปี*",
+          "say": "หมากับแมว ที่เกลียดกันมายี่สิบปี."
+        }
+      ],
+      "title": "หมากับแมว\n*ใบเดียวกัน*!",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-004.png"
+    },
+    {
+      "beat": "reveal",
+      "duration": 4,
+      "text": "ใบที่สี่ คือ *อินุอาราชิ และ เนโกะมามุชิ*",
+      "parts": [
+        {
+          "text": "ใบที่สี่ คือ *อินุอาราชิ และ เนโกะมามุชิ*",
+          "say": "ใบที่สี่ คือ อินุอาราชิ และเนโกะมามุชิ."
+        }
+      ],
+      "title": "หมา & แมว",
+      "subtitle": "OP17-004 • สีแดง",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-004.png"
+    },
+    {
+      "beat": "name",
+      "duration": 4,
+      "text": "*อินุ* แปลว่าหมา",
+      "parts": [
+        {
+          "text": "*อินุ* แปลว่าหมา",
+          "say": "อินุ แปลว่าหมา"
+        },
+        {
+          "text": "*เนโกะ* แปลว่าแมว",
+          "say": "เนโกะ แปลว่าแมว."
+        }
+      ],
+      "chapter": "ที่มาของชื่อ",
+      "chips": [
+        {
+          "big": "犬",
+          "small": "อินุ = หมา"
+        },
+        {
+          "big": "猫",
+          "small": "เนโกะ = แมว"
+        }
+      ],
+      "title": "*ผู้ปกครองเกาะโซ*",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-004.png"
+    },
+    {
+      "beat": "quiz",
+      "duration": 4,
+      "text": "ใครปกครองเกาะโซ *ตอนกลางวัน*?",
+      "parts": [
+        {
+          "text": "ใครปกครองเกาะโซ *ตอนกลางวัน*?",
+          "say": "ทายสิ ใครปกครองเกาะโซตอนกลางวัน?"
+        },
+        {
+          "text": "คำตอบคือ *อินุอาราชิ* ส่วนกลางคืนเป็นของเนโกะมามุชิ",
+          "say": "คำตอบคือ อินุอาราชิ ส่วนกลางคืน เป็นของเนโกะมามุชิ."
+        }
+      ],
+      "chapter": "ทายสิ",
+      "title": "ใครปกครองเกาะโซ\n*ตอนกลางวัน*?",
+      "choices": [
+        "อินุอาราชิ",
+        "เนโกะมามุชิ",
+        "โอเด้ง"
+      ],
+      "answer": 0
+    },
+    {
+      "beat": "zoom",
+      "duration": 4,
+      "text": "ดูประเภทบนการ์ด มีคำว่า *กลุ่มหนวดขาว*",
+      "parts": [
+        {
+          "text": "ดูประเภทบนการ์ด มีคำว่า *กลุ่มหนวดขาว*",
+          "say": "ดูประเภทบนการ์ด มีคำว่า กลุ่มหนวดขาว"
+        },
+        {
+          "text": "เพราะเคย *ล่องเรือกับโอเด้ง* บนเรือหนวดขาว",
+          "say": "เพราะทั้งคู่ เคยล่องเรือกับโอเด้ง บนเรือของหนวดขาว."
+        }
+      ],
+      "chapter": "ส่องการ์ด",
+      "title": "ประเภท: กลุ่มหนวดขาว",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-004.png",
+      "focus_x": 50,
+      "focus_y": 60,
+      "focus_zoom": 2.0
+    },
+    {
+      "beat": "versions",
+      "duration": 4,
+      "text": "แต่ก่อน ทั้งคู่มีการ์ด *แยกกันคนละใบ*",
+      "parts": [
+        {
+          "text": "แต่ก่อน ทั้งคู่มีการ์ด *แยกกันคนละใบ*",
+          "say": "แต่ก่อน ทั้งคู่มีการ์ดแยกกันคนละใบ."
+        }
+      ],
+      "images": [
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-034.png",
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-004.png",
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-048.png"
+      ],
+      "labels": [
+        "OP-01",
+        "OP-17",
+        "OP-01"
+      ]
+    },
+    {
+      "beat": "card",
+      "duration": 4,
+      "text": "การ์ดวันพีซ *ยังมีเรื่องเล่าอีกเยอะ*",
+      "parts": [
+        {
+          "text": "การ์ดวันพีซ *ยังมีเรื่องเล่าอีกเยอะ*",
+          "say": "การ์ดวันพีซ ยังมีเรื่องเล่าอีกเยอะ."
+        },
+        {
+          "text": "*กดติดตาม* แล้วมาเปิดไปด้วยกัน",
+          "say": "กดติดตาม แล้วมาเปิดไปด้วยกัน."
+        }
+      ],
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-004.png"
+    },
+    {
+      "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+      "image_mode": "still",
+      "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "ชอบเรื่องเล่าแบบนี้ *กดติดตาม* ไว้เลย",
+          "say": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้เลย."
+        },
+        {
+          "text": "*ซื้อ ขาย สะสม แข่งเกมส์การ์ด* ที่ www.cardzcenter.com",
+          "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+        }
+      ],
+      "no_caption": true,
+      "beat": "still"
+    }
+  ],
+  "composition": "CardShow",
+  "theme": "normal",
+  "badge": "OP17-004",
+  "series": "ONE PIECE CARD GAME • OP-17"
+}

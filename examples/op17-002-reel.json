@@ -1,0 +1,190 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "meta": {
+    "title": "อัทมอส ควายน้ำแห่งกลุ่มหนวดขาว OP17-002 | One Piece Card #shorts",
+    "description": "การ์ดวันพีซ OP-17 ใบที่ 002 อัทมอส หัวหน้าหน่วยที่ 13 ของกลุ่มหนวดขาว ที่มาของฉายา 'ควายน้ำ' และความสามารถบนการ์ดที่แข็งขึ้นตอนเป็นฝ่ายรับ\n\n👇 ทายถูกไหม? คอมเมนต์คำตอบของคุณก่อนดูเฉลย\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17",
+    "thumb": {
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-002.png",
+      "hook": "ฉายา\nควายน้ำ!",
+      "badge": "OP17-002",
+      "sub": "เบื้องหลังการ์ด"
+    },
+    "publish_at": "2026-10-17T10:00:00Z"
+  },
+  "tts": {
+    "voice_id": "bTEswxYhpv7UDkQg5VRu",
+    "model_id": "eleven_v4",
+    "stability": 0.8,
+    "speed": 1.2,
+    "prefix": "[calm, soft, natural storyteller]"
+  },
+  "audio_rate": 1.067,
+  "slides": [
+    {
+      "beat": "hook",
+      "duration": 4,
+      "text": "ลูกน้องหนวดขาวที่มีฉายาว่า *ควายน้ำ*",
+      "parts": [
+        {
+          "text": "ลูกน้องหนวดขาวที่มีฉายาว่า *ควายน้ำ*",
+          "say": "ลูกน้องหนวดขาว ที่มีฉายาว่า ควายน้ำ."
+        }
+      ],
+      "title": "ฉายาว่า\n*ควายน้ำ*?",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-002.png"
+    },
+    {
+      "beat": "reveal",
+      "duration": 4,
+      "text": "ใบที่สอง คือ *อัทมอส*",
+      "parts": [
+        {
+          "text": "ใบที่สอง คือ *อัทมอส*",
+          "say": "ใบที่สอง ของชุดโอพีสิบเจ็ด คือ อัทมอส."
+        }
+      ],
+      "title": "อัทมอส",
+      "subtitle": "OP17-002 • สีแดง",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-002.png"
+    },
+    {
+      "beat": "name",
+      "duration": 4,
+      "text": "ฉายาญี่ปุ่นคือ *ซุยกิว*",
+      "parts": [
+        {
+          "text": "ฉายาญี่ปุ่นคือ *ซุยกิว*",
+          "say": "ฉายาภาษาญี่ปุ่น คือซุยกิว"
+        },
+        {
+          "text": "มาจาก *น้ำ* บวก *วัว* แปลว่า *ควาย*",
+          "say": "มาจากคำว่า น้ำ บวกกับ วัว แปลว่าควาย."
+        }
+      ],
+      "chapter": "ที่มาของฉายา",
+      "chips": [
+        {
+          "big": "水",
+          "small": "น้ำ"
+        },
+        {
+          "big": "牛",
+          "small": "วัว"
+        }
+      ],
+      "title": "*ควายน้ำ*",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-002.png"
+    },
+    {
+      "beat": "quiz",
+      "duration": 4,
+      "text": "อัทมอสคุม *หน่วยที่เท่าไร* ของกลุ่มหนวดขาว?",
+      "parts": [
+        {
+          "text": "อัทมอสคุม *หน่วยที่เท่าไร* ของกลุ่มหนวดขาว?",
+          "say": "ทายสิ อัทมอสเป็นหัวหน้าหน่วยที่เท่าไร ของกลุ่มหนวดขาว?"
+        },
+        {
+          "text": "คำตอบคือ *หน่วยที่สิบสาม*",
+          "say": "คำตอบคือ หน่วยที่สิบสาม."
+        }
+      ],
+      "chapter": "ทายสิ",
+      "title": "อัทมอสคุม\n*หน่วยที่เท่าไร*?",
+      "choices": [
+        "หน่วยที่ 1",
+        "หน่วยที่ 13",
+        "หน่วยที่ 16"
+      ],
+      "answer": 1
+    },
+    {
+      "beat": "stats",
+      "duration": 4,
+      "text": "บนการ์ด พลัง *หกพัน*",
+      "parts": [
+        {
+          "text": "บนการ์ด พลัง *หกพัน*",
+          "say": "บนการ์ด พลังหกพัน"
+        },
+        {
+          "text": "แต่ *ตาคู่แข่ง* เพิ่มเป็น *เก้าพัน*",
+          "say": "แต่ในตาของคู่แข่ง จะเพิ่มเป็นเก้าพัน."
+        }
+      ],
+      "chapter": "บนการ์ด",
+      "title": "พลังตอนเป็นฝ่ายรับ",
+      "stats": [
+        {
+          "label": "พลังปกติ",
+          "value": 6000,
+          "max": 10000
+        },
+        {
+          "label": "ตาคู่แข่ง",
+          "value": 9000,
+          "max": 10000
+        }
+      ],
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-002.png"
+    },
+    {
+      "beat": "versions",
+      "duration": 4,
+      "text": "การ์ดใบแรกของเขามาจาก *สงครามสุดยอด*",
+      "parts": [
+        {
+          "text": "การ์ดใบแรกของเขามาจาก *สงครามสุดยอด*",
+          "say": "การ์ดอัทมอสใบแรก มาจากชุดสงครามสุดยอด."
+        }
+      ],
+      "images": [
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-003.png",
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-002.png"
+      ],
+      "labels": [
+        "OP-02",
+        "OP-17"
+      ]
+    },
+    {
+      "beat": "card",
+      "duration": 4,
+      "text": "การ์ดวันพีซ *ยังมีเรื่องเล่าอีกเยอะ*",
+      "parts": [
+        {
+          "text": "การ์ดวันพีซ *ยังมีเรื่องเล่าอีกเยอะ*",
+          "say": "การ์ดวันพีซ ยังมีเรื่องเล่าอีกเยอะ."
+        },
+        {
+          "text": "*กดติดตาม* แล้วมาเปิดไปด้วยกัน",
+          "say": "กดติดตาม แล้วมาเปิดไปด้วยกัน."
+        }
+      ],
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-002.png"
+    },
+    {
+      "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+      "image_mode": "still",
+      "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "ชอบเรื่องเล่าแบบนี้ *กดติดตาม* ไว้เลย",
+          "say": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้เลย."
+        },
+        {
+          "text": "*ซื้อ ขาย สะสม แข่งเกมส์การ์ด* ที่ www.cardzcenter.com",
+          "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+        }
+      ],
+      "no_caption": true,
+      "beat": "still"
+    }
+  ],
+  "composition": "CardShow",
+  "theme": "fighting",
+  "badge": "OP17-002",
+  "series": "ONE PIECE CARD GAME • OP-17"
+}
