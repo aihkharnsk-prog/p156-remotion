@@ -1,0 +1,226 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "caption_style": "reel",
+  "meta": {
+    "title": "โรคอน จิ้งจอกหกหาง การ์ดใบที่ 15 #shorts",
+    "description": "การ์ดใบที่ 15 ของชุดโปเกมอนญี่ปุ่น (拡張パック) โรคอน ที่มาของชื่อหกหาง ท่าแสงสับสน และร่างอาโลลาที่กลายเป็นธาตุน้ำแข็ง\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n#shorts #โปเกมอน #การ์ดโปเกมอน #pokemoncards #เรื่องเล่าการ์ด",
+    "thumb": {
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-15/large",
+      "hook": "หกหาง\nกลายเป็นเก้า!",
+      "badge": "#15",
+      "sub": "เบื้องหลังการ์ด"
+    },
+    "publish_at": "2026-10-19T05:00:00Z"
+  },
+  "tts": {
+    "voice_id": "bTEswxYhpv7UDkQg5VRu",
+    "model_id": "eleven_v4",
+    "stability": 0.8,
+    "speed": 1.2,
+    "prefix": "[calm, soft, natural storyteller]"
+  },
+  "caption_position": "bottom",
+  "audio_rate": 1.067,
+  "caption_scale": 0.6,
+  "caption_bottom": 0.055,
+  "motion": 0.2,
+  "slides": [
+    {
+      "duration": 4,
+      "text": "ใบที่สิบห้า คือ *โรคอน*",
+      "parts": [
+        {
+          "text": "ใบที่สิบห้า คือ *โรคอน*",
+          "say": "ใบที่สิบห้า คือ โรคอน."
+        },
+        {
+          "text": "จิ้งจอกไฟ ที่มี *หกหาง*",
+          "say": "จิ้งจอกไฟ ที่มีหกหาง."
+        }
+      ],
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-15/large",
+      "image_mode": "card"
+    },
+    {
+      "duration": 4,
+      "text": "ชื่อญี่ปุ่นมาจาก *หก* กับ *จิ้งจอก*",
+      "parts": [
+        {
+          "text": "ชื่อญี่ปุ่นมาจาก *หก* กับ *จิ้งจอก*",
+          "say": "ชื่อญี่ปุ่น มาจากเลขหก กับจิ้งจอก"
+        },
+        {
+          "text": "ตรงกับจำนวนหางของมัน",
+          "say": "ตรงกับจำนวนหางของมันพอดี."
+        }
+      ],
+      "image_url": "https://archives.bulbagarden.net/media/upload/0/06/0037Vulpix.png",
+      "image_mode": "art"
+    },
+    {
+      "duration": 6,
+      "text": "พอใช้ *หินไฟ*",
+      "parts": [
+        {
+          "text": "พอใช้ *หินไฟ*",
+          "say": "พอใช้หินไฟ"
+        },
+        {
+          "text": "หางเพิ่มเป็น *เก้าหาง*",
+          "say": "หางจะเพิ่มเป็นเก้าหาง"
+        },
+        {
+          "text": "กลายเป็น *คิวคอน*",
+          "say": "กลายเป็นคิวคอน."
+        }
+      ],
+      "scene": "evolve",
+      "images": [
+        "https://archives.bulbagarden.net/media/upload/0/06/0037Vulpix.png",
+        "https://archives.bulbagarden.net/media/upload/3/3e/0038Ninetales.png"
+      ]
+    },
+    {
+      "duration": 4,
+      "text": "ท่าในการ์ดคือ *แสงสับสน*",
+      "parts": [
+        {
+          "text": "ท่าในการ์ดคือ *แสงสับสน*",
+          "say": "ท่าในการ์ด คือแสงสับสน"
+        },
+        {
+          "text": "ออกหัว ศัตรู *สับสน*",
+          "say": "โยนเหรียญ ออกหัว ศัตรูจะสับสน."
+        }
+      ],
+      "scene": "coin",
+      "coin": "heads"
+    },
+    {
+      "duration": 4,
+      "text": "ร่างพัฒนา *คิวคอน*",
+      "parts": [
+        {
+          "text": "ร่างพัฒนา *คิวคอน*",
+          "say": "ส่วนร่างพัฒนา คิวคอน"
+        },
+        {
+          "text": "เป็นการ์ด *โฮโลแรร์* ของชุดแรก",
+          "say": "เป็นการ์ดโฮโลแรร์ ของชุดแรก."
+        }
+      ],
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-15/large",
+      "image_mode": "card"
+    },
+    {
+      "duration": 4,
+      "text": "ฉบับญี่ปุ่นกับอังกฤษ",
+      "parts": [
+        {
+          "text": "ฉบับญี่ปุ่นกับอังกฤษ",
+          "say": "เทียบฉบับญี่ปุ่น กับอังกฤษ"
+        },
+        {
+          "text": "หน้าตาการ์ด *ต่างกันแค่ไหน*",
+          "say": "หน้าตาการ์ด ต่างกันแค่ไหน."
+        }
+      ],
+      "scene": "versions",
+      "images": [
+        "https://images.scrydex.com/pokemon/base1_ja-15/large",
+        "https://images.pokemontcg.io/base1/68_hires.png"
+      ],
+      "labels": [
+        "ญี่ปุ่น",
+        "อังกฤษ"
+      ]
+    },
+    {
+      "duration": 4,
+      "text": "ในเกมภาคแรก",
+      "parts": [
+        {
+          "text": "ในเกมภาคแรก",
+          "say": "ในเกมภาคแรก"
+        },
+        {
+          "text": "จับได้ *เฉพาะบางภาค* เท่านั้น",
+          "say": "จับโรคอนได้ เฉพาะบางภาคเท่านั้น."
+        }
+      ],
+      "scene": "sprite",
+      "images": [
+        "https://archives.bulbagarden.net/media/upload/b/b5/Spr_1g_037.png"
+      ],
+      "labels": [
+        "โรคอน ป่า ปรากฏตัว!"
+      ]
+    },
+    {
+      "duration": 4,
+      "text": "ในอนิเมะ ทาเคชิ",
+      "parts": [
+        {
+          "text": "ในอนิเมะ ทาเคชิ",
+          "say": "ในอนิเมะ ทาเคชิ"
+        },
+        {
+          "text": "ได้รับโรคอนจาก *ผู้เพาะพันธุ์* ที่ฝากให้ดูแล",
+          "say": "ได้รับโรคอน จากผู้เพาะพันธุ์ที่ฝากให้ดูแล."
+        }
+      ],
+      "image_url": "https://archives.bulbagarden.net/media/upload/0/06/0037Vulpix.png",
+      "image_mode": "art"
+    },
+    {
+      "duration": 4,
+      "text": "ภาคหลังๆ มี *โรคอนอาโลลา*",
+      "parts": [
+        {
+          "text": "ภาคหลังๆ มี *โรคอนอาโลลา*",
+          "say": "ภาคหลังๆ มีโรคอนร่างอาโลลา"
+        },
+        {
+          "text": "กลายเป็น *ธาตุน้ำแข็ง*",
+          "say": "ที่กลายเป็นธาตุน้ำแข็ง."
+        }
+      ],
+      "image_url": "https://archives.bulbagarden.net/media/upload/6/6b/0037Vulpix-Alola.png",
+      "image_mode": "art"
+    },
+    {
+      "duration": 4,
+      "text": "ชุดแรกยังมีความลับอีกเยอะ",
+      "parts": [
+        {
+          "text": "ชุดแรกยังมีความลับอีกเยอะ",
+          "say": "การ์ดชุดแรก ยังมีความลับอีกเยอะ."
+        },
+        {
+          "text": "*กดติดตาม* แล้วมาเปิดไปด้วยกัน",
+          "say": "กดติดตาม แล้วมาเปิดไปด้วยกัน."
+        }
+      ],
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-15/large",
+      "image_mode": "card"
+    },
+    {
+      "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+      "image_mode": "still",
+      "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "ชอบเรื่องเล่าแบบนี้ *กดติดตาม* ไว้เลย",
+          "say": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้เลย."
+        },
+        {
+          "text": "*ซื้อ ขาย สะสม แข่งเกมส์การ์ด* ที่ www.cardzcenter.com",
+          "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+        }
+      ],
+      "no_caption": true
+    }
+  ]
+}

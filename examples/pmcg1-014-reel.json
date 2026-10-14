@@ -1,0 +1,215 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "caption_style": "reel",
+  "meta": {
+    "title": "ฮิโตคาเงะ ไฟที่หางคือชีวิต การ์ดใบที่ 14 #shorts",
+    "description": "การ์ดใบที่ 14 ของชุดโปเกมอนญี่ปุ่น (拡張パック) ฮิโตคาเงะ ที่มาของชื่อ ไฟที่หางที่ห้ามดับ และฮิโตคาเงะที่ถูกทิ้งไว้กลางฝนในอนิเมะ\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n#shorts #โปเกมอน #การ์ดโปเกมอน #pokemoncards #เรื่องเล่าการ์ด",
+    "thumb": {
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-14/large",
+      "hook": "ไฟดับ\n=จบชีวิต?",
+      "badge": "#14",
+      "sub": "เบื้องหลังการ์ด"
+    },
+    "publish_at": "2026-10-18T12:30:00Z"
+  },
+  "tts": {
+    "voice_id": "bTEswxYhpv7UDkQg5VRu",
+    "model_id": "eleven_v4",
+    "stability": 0.8,
+    "speed": 1.2,
+    "prefix": "[calm, soft, natural storyteller]"
+  },
+  "caption_position": "bottom",
+  "audio_rate": 1.067,
+  "caption_scale": 0.6,
+  "caption_bottom": 0.055,
+  "motion": 0.2,
+  "slides": [
+    {
+      "duration": 4,
+      "text": "ใบที่สิบสี่ คือ *ฮิโตคาเงะ*",
+      "parts": [
+        {
+          "text": "ใบที่สิบสี่ คือ *ฮิโตคาเงะ*",
+          "say": "ใบที่สิบสี่ คือ ฮิโตคาเงะ."
+        },
+        {
+          "text": "ตัวเริ่มต้นที่ *คนเลือกมากที่สุด* ตัวหนึ่ง",
+          "say": "ตัวเริ่มต้น ที่คนเลือกมากที่สุดตัวหนึ่ง."
+        }
+      ],
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-14/large",
+      "image_mode": "card"
+    },
+    {
+      "duration": 4,
+      "text": "ชื่อญี่ปุ่นคือ *ไฟ* บวก *กิ้งก่า*",
+      "parts": [
+        {
+          "text": "ชื่อญี่ปุ่นคือ *ไฟ* บวก *กิ้งก่า*",
+          "say": "ชื่อญี่ปุ่น มาจากไฟ บวกกิ้งก่า"
+        },
+        {
+          "text": "ชื่ออังกฤษคือ *ถ่าน* บวก *ซาลาแมนเดอร์*",
+          "say": "ส่วนชื่ออังกฤษ คือถ่าน บวกซาลาแมนเดอร์."
+        }
+      ],
+      "image_url": "https://archives.bulbagarden.net/media/upload/2/27/0004Charmander.png",
+      "image_mode": "art"
+    },
+    {
+      "duration": 4,
+      "text": "โปเกเด็กซ์บอกว่า",
+      "parts": [
+        {
+          "text": "โปเกเด็กซ์บอกว่า",
+          "say": "โปเกเด็กซ์บอกว่า"
+        },
+        {
+          "text": "ถ้าไฟที่หาง *ดับลง* มันจะตาย",
+          "say": "ถ้าไฟที่หางดับลง มันจะตาย."
+        }
+      ],
+      "image_url": "https://archives.bulbagarden.net/media/upload/2/27/0004Charmander.png",
+      "image_mode": "art"
+    },
+    {
+      "duration": 4,
+      "text": "ในการ์ด ท่าเด็ดคือ *ประกายไฟ*",
+      "parts": [
+        {
+          "text": "ในการ์ด ท่าเด็ดคือ *ประกายไฟ*",
+          "say": "ในการ์ด ท่าเด็ดคือ ประกายไฟ"
+        },
+        {
+          "text": "แรงสามสิบ แต่ต้อง *ทิ้งพลังงานไฟ*",
+          "say": "แรงสามสิบ แต่ต้องทิ้งพลังงานไฟหนึ่งใบ."
+        }
+      ],
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-14/large",
+      "image_mode": "card"
+    },
+    {
+      "duration": 4,
+      "text": "ฉบับญี่ปุ่นกับอังกฤษ",
+      "parts": [
+        {
+          "text": "ฉบับญี่ปุ่นกับอังกฤษ",
+          "say": "เทียบฉบับญี่ปุ่น กับอังกฤษ"
+        },
+        {
+          "text": "วาดโดย *มิตสึฮิโระ อาริตะ*",
+          "say": "วาดโดย มิตสึฮิโระ อาริตะ."
+        }
+      ],
+      "scene": "versions",
+      "images": [
+        "https://images.scrydex.com/pokemon/base1_ja-14/large",
+        "https://images.pokemontcg.io/base1/46_hires.png"
+      ],
+      "labels": [
+        "ญี่ปุ่น",
+        "อังกฤษ"
+      ]
+    },
+    {
+      "duration": 6,
+      "text": "จากกิ้งก่าตัวน้อย",
+      "parts": [
+        {
+          "text": "จากกิ้งก่าตัวน้อย",
+          "say": "จากกิ้งก่าตัวน้อย"
+        },
+        {
+          "text": "สู่ *ลิซาร์โด*",
+          "say": "สู่ลิซาร์โด"
+        },
+        {
+          "text": "และ *ลิซาร์ดอน* การ์ดในตำนาน",
+          "say": "และลิซาร์ดอน การ์ดในตำนาน."
+        }
+      ],
+      "scene": "evolve",
+      "images": [
+        "https://archives.bulbagarden.net/media/upload/2/27/0004Charmander.png",
+        "https://archives.bulbagarden.net/media/upload/0/05/0005Charmeleon.png",
+        "https://archives.bulbagarden.net/media/upload/3/38/0006Charizard.png"
+      ]
+    },
+    {
+      "duration": 4,
+      "text": "ในเกมภาคแรก",
+      "parts": [
+        {
+          "text": "ในเกมภาคแรก",
+          "say": "ในเกมภาคแรก"
+        },
+        {
+          "text": "ฮิโตคาเงะคือ *ตัวเริ่มต้นที่ยากที่สุด*",
+          "say": "ฮิโตคาเงะ ถูกมองว่าเป็นตัวเริ่มต้นที่ยากที่สุด"
+        },
+        {
+          "text": "เพราะยิมแรกเป็น *ธาตุหิน*",
+          "say": "เพราะยิมแรก เป็นธาตุหิน."
+        }
+      ],
+      "scene": "sprite",
+      "images": [
+        "https://archives.bulbagarden.net/media/upload/2/22/Spr_1g_004.png"
+      ],
+      "labels": [
+        "ไปเลย ฮิโตคาเงะ!"
+      ]
+    },
+    {
+      "duration": 4,
+      "text": "ในอนิเมะ ฮิโตคาเงะของซาโตชิ",
+      "parts": [
+        {
+          "text": "ในอนิเมะ ฮิโตคาเงะของซาโตชิ",
+          "say": "ในอนิเมะ ฮิโตคาเงะของซาโตชิ"
+        },
+        {
+          "text": "เคยถูก *ทิ้งไว้กลางฝน* รอเจ้าของเก่า",
+          "say": "เคยถูกทิ้งไว้กลางฝน รอเจ้าของเก่าที่ไม่กลับมา."
+        }
+      ],
+      "image_url": "https://archives.bulbagarden.net/media/upload/2/27/0004Charmander.png",
+      "image_mode": "art"
+    },
+    {
+      "duration": 4,
+      "text": "ชุดแรกยังมีความลับอีกเยอะ",
+      "parts": [
+        {
+          "text": "ชุดแรกยังมีความลับอีกเยอะ",
+          "say": "การ์ดชุดแรก ยังมีความลับอีกเยอะ."
+        },
+        {
+          "text": "*กดติดตาม* แล้วมาเปิดไปด้วยกัน",
+          "say": "กดติดตาม แล้วมาเปิดไปด้วยกัน."
+        }
+      ],
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-14/large",
+      "image_mode": "card"
+    },
+    {
+      "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+      "image_mode": "still",
+      "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "ชอบเรื่องเล่าแบบนี้ *กดติดตาม* ไว้เลย",
+          "say": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้เลย."
+        },
+        {
+          "text": "*ซื้อ ขาย สะสม แข่งเกมส์การ์ด* ที่ www.cardzcenter.com",
+          "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+        }
+      ],
+      "no_caption": true
+    }
+  ]
+}

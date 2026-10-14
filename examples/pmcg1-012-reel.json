@@ -1,0 +1,227 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "caption_style": "reel",
+  "meta": {
+    "title": "สเปียร์ ผึ้งที่มีสว่านแทนเหล็กใน การ์ดใบที่ 12 #shorts",
+    "description": "การ์ดใบที่ 12 ของชุดโปเกมอนญี่ปุ่น (拡張パック) สเปียร์ ที่มาของชื่อ ท่าเข็มคู่ที่ต้องลุ้นเหรียญ และฝูงผึ้งที่ไล่ล่าซาโตชิในอนิเมะ\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n#shorts #โปเกมอน #การ์ดโปเกมอน #pokemoncards #เรื่องเล่าการ์ด",
+    "thumb": {
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-12/large",
+      "hook": "เข็มคู่\nต้องลุ้นเหรียญ!",
+      "badge": "#12",
+      "sub": "เบื้องหลังการ์ด"
+    },
+    "publish_at": "2026-10-17T12:30:00Z"
+  },
+  "tts": {
+    "voice_id": "bTEswxYhpv7UDkQg5VRu",
+    "model_id": "eleven_v4",
+    "stability": 0.8,
+    "speed": 1.2,
+    "prefix": "[calm, soft, natural storyteller]"
+  },
+  "caption_position": "bottom",
+  "audio_rate": 1.067,
+  "caption_scale": 0.6,
+  "caption_bottom": 0.055,
+  "motion": 0.2,
+  "slides": [
+    {
+      "duration": 4,
+      "text": "ใบที่สิบสอง คือ *สเปียร์*",
+      "parts": [
+        {
+          "text": "ใบที่สิบสอง คือ *สเปียร์*",
+          "say": "ใบที่สิบสอง คือ สเปียร์."
+        },
+        {
+          "text": "ผึ้งยักษ์ที่มี *เข็มแทนมือ*",
+          "say": "ผึ้งยักษ์ ที่มีเข็มแทนมือ."
+        }
+      ],
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-12/large",
+      "image_mode": "card"
+    },
+    {
+      "duration": 4,
+      "text": "ชื่อญี่ปุ่นมาจาก *หอก*",
+      "parts": [
+        {
+          "text": "ชื่อญี่ปุ่นมาจาก *หอก*",
+          "say": "ชื่อญี่ปุ่น มาจากคำว่าหอก"
+        },
+        {
+          "text": "ชื่ออังกฤษคือ *ผึ้ง* ผสม *สว่าน*",
+          "say": "ส่วนชื่ออังกฤษ คือผึ้ง ผสมกับสว่าน."
+        }
+      ],
+      "image_url": "https://archives.bulbagarden.net/media/upload/f/f7/0015Beedrill.png",
+      "image_mode": "art"
+    },
+    {
+      "duration": 6,
+      "text": "เริ่มจาก *บีเดิล* หนอนตัวเล็ก",
+      "parts": [
+        {
+          "text": "เริ่มจาก *บีเดิล* หนอนตัวเล็ก",
+          "say": "เริ่มจากบีเดิล หนอนตัวเล็ก"
+        },
+        {
+          "text": "กลายเป็นดักแด้ *โคคูน*",
+          "say": "กลายเป็นดักแด้ โคคูน"
+        },
+        {
+          "text": "แล้วออกมาเป็น *สเปียร์*",
+          "say": "แล้วออกมาเป็นสเปียร์."
+        }
+      ],
+      "scene": "evolve",
+      "images": [
+        "https://archives.bulbagarden.net/media/upload/3/36/0013Weedle.png",
+        "https://archives.bulbagarden.net/media/upload/f/f3/0014Kakuna.png",
+        "https://archives.bulbagarden.net/media/upload/f/f7/0015Beedrill.png"
+      ]
+    },
+    {
+      "duration": 4,
+      "text": "ท่าเด็ดคือ *เข็มคู่*",
+      "parts": [
+        {
+          "text": "ท่าเด็ดคือ *เข็มคู่*",
+          "say": "ท่าเด็ดในการ์ด คือเข็มคู่"
+        },
+        {
+          "text": "โยนเหรียญสองครั้ง *ออกหัวครั้งละสามสิบ*",
+          "say": "โยนเหรียญสองครั้ง ออกหัวได้ครั้งละสามสิบ."
+        }
+      ],
+      "scene": "coin",
+      "coin": "heads"
+    },
+    {
+      "duration": 4,
+      "text": "ดวงดีได้ *หกสิบ*",
+      "parts": [
+        {
+          "text": "ดวงดีได้ *หกสิบ*",
+          "say": "ถ้าดวงดี ได้หกสิบ"
+        },
+        {
+          "text": "ดวงไม่ดี *ไม่ได้สักแต้ม*",
+          "say": "ถ้าดวงไม่ดี ไม่ได้สักแต้ม."
+        }
+      ],
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-12/large",
+      "image_mode": "card"
+    },
+    {
+      "duration": 4,
+      "text": "อีกท่าคือ *เข็มพิษ*",
+      "parts": [
+        {
+          "text": "อีกท่าคือ *เข็มพิษ*",
+          "say": "อีกท่าคือ เข็มพิษ"
+        },
+        {
+          "text": "ลุ้นเหรียญให้ศัตรู *ติดพิษ*",
+          "say": "ลุ้นเหรียญ ให้ศัตรูติดพิษ."
+        }
+      ],
+      "scene": "versions",
+      "images": [
+        "https://images.scrydex.com/pokemon/base1_ja-12/large",
+        "https://images.pokemontcg.io/base1/17_hires.png"
+      ],
+      "labels": [
+        "ญี่ปุ่น",
+        "อังกฤษ"
+      ]
+    },
+    {
+      "duration": 4,
+      "text": "ในเกมภาคแรก ป่าโทคิวะ",
+      "parts": [
+        {
+          "text": "ในเกมภาคแรก ป่าโทคิวะ",
+          "say": "ในเกมภาคแรก ที่ป่าโทคิวะ"
+        },
+        {
+          "text": "เต็มไปด้วย *บีเดิล* และ *โคคูน*",
+          "say": "เต็มไปด้วยบีเดิล และโคคูน."
+        }
+      ],
+      "scene": "sprite",
+      "images": [
+        "https://archives.bulbagarden.net/media/upload/1/15/Spr_1g_015.png"
+      ],
+      "labels": [
+        "สเปียร์ ป่า ปรากฏตัว!"
+      ]
+    },
+    {
+      "duration": 4,
+      "text": "ในอนิเมะภาคแรก",
+      "parts": [
+        {
+          "text": "ในอนิเมะภาคแรก",
+          "say": "ในอนิเมะภาคแรก"
+        },
+        {
+          "text": "*ฝูงสเปียร์* ไล่ล่าซาโตชิจนต้องวิ่งหนี",
+          "say": "ฝูงสเปียร์ ไล่ล่าซาโตชิ จนต้องวิ่งหนี."
+        }
+      ],
+      "image_url": "https://archives.bulbagarden.net/media/upload/f/f7/0015Beedrill.png",
+      "image_mode": "art"
+    },
+    {
+      "duration": 4,
+      "text": "ภาคหลังๆ มันได้ร่าง *เมก้า*",
+      "parts": [
+        {
+          "text": "ภาคหลังๆ มันได้ร่าง *เมก้า*",
+          "say": "ภาคหลังๆ มันได้ร่างเมก้า"
+        },
+        {
+          "text": "เข็มยาวขึ้น *สามอัน*",
+          "say": "มีเข็มยาวขึ้นถึงสามอัน."
+        }
+      ],
+      "image_url": "https://archives.bulbagarden.net/media/upload/7/73/0015Beedrill-Mega.png",
+      "image_mode": "art"
+    },
+    {
+      "duration": 4,
+      "text": "ชุดแรกยังมีความลับอีกเยอะ",
+      "parts": [
+        {
+          "text": "ชุดแรกยังมีความลับอีกเยอะ",
+          "say": "การ์ดชุดแรก ยังมีความลับอีกเยอะ."
+        },
+        {
+          "text": "*กดติดตาม* แล้วมาเปิดไปด้วยกัน",
+          "say": "กดติดตาม แล้วมาเปิดไปด้วยกัน."
+        }
+      ],
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-12/large",
+      "image_mode": "card"
+    },
+    {
+      "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+      "image_mode": "still",
+      "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "ชอบเรื่องเล่าแบบนี้ *กดติดตาม* ไว้เลย",
+          "say": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้เลย."
+        },
+        {
+          "text": "*ซื้อ ขาย สะสม แข่งเกมส์การ์ด* ที่ www.cardzcenter.com",
+          "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+        }
+      ],
+      "no_caption": true
+    }
+  ]
+}
