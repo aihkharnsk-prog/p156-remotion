@@ -1,0 +1,201 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "meta": {
+    "title": "พิคาชูใบเดียว ขายได้กว่า 500 ล้านบาท | การ์ดแพงระดับตำนาน #shorts",
+    "description": "Pikachu Illustrator การ์ดโปเกมอนที่แพงที่สุดในโลก ไม่เคยมีขายในซอง แจกเฉพาะผู้ชนะประกวดวาดภาพปี 1998 ต้นปี 2026 ขายได้ 16.5 ล้านดอลลาร์ สถิติโลกกินเนสส์\n\n👇 ถ้ามีเงินห้าร้อยล้าน คุณจะซื้อการ์ดใบนี้ไหม? คอมเมนต์บอกหน่อย\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n#shorts #โปเกมอน #การ์ดโปเกมอน #pokemoncards #การ์ดแพง",
+    "thumb": {
+      "image_url": "https://archives.bulbagarden.net/media/upload/5/5f/Pok%C3%A9monIllustratorCoroCoropromo.jpg",
+      "hook": "ใบเดียว\n500 ล้านบาท!",
+      "badge": "ตำนาน #1",
+      "sub": "การ์ดแพงระดับตำนาน"
+    }
+  },
+  "tts": {
+    "voice_id": "bTEswxYhpv7UDkQg5VRu",
+    "model_id": "eleven_v4",
+    "stability": 0.8,
+    "speed": 1.2,
+    "prefix": "[calm, soft, natural storyteller]"
+  },
+  "audio_rate": 1.067,
+  "slides": [
+    {
+      "beat": "hook",
+      "duration": 4,
+      "text": "การ์ดใบเดียว ขายได้ *กว่า 500 ล้านบาท*",
+      "parts": [
+        {
+          "text": "การ์ดใบเดียว ขายได้ *กว่า 500 ล้านบาท*",
+          "say": "การ์ดใบเดียว ขายได้กว่าห้าร้อยล้านบาท."
+        }
+      ],
+      "title": "ใบเดียว\n*500 ล้านบาท*",
+      "image_url": "https://archives.bulbagarden.net/media/upload/5/5f/Pok%C3%A9monIllustratorCoroCoropromo.jpg"
+    },
+    {
+      "beat": "reveal",
+      "duration": 4,
+      "text": "ชื่อของมันคือ *พิคาชู อิลลัสเตรเตอร์*",
+      "parts": [
+        {
+          "text": "ชื่อของมันคือ *พิคาชู อิลลัสเตรเตอร์*",
+          "say": "ชื่อของมันคือ พิคาชู อิลลัสเตรเตอร์."
+        },
+        {
+          "text": "และมัน *ไม่เคยมีขายในซอง*",
+          "say": "ไม่เคยมีขายในซองเลย."
+        }
+      ],
+      "title": "Pikachu Illustrator",
+      "subtitle": "การ์ดรางวัล • 1998",
+      "image_url": "https://archives.bulbagarden.net/media/upload/5/5f/Pok%C3%A9monIllustratorCoroCoropromo.jpg"
+    },
+    {
+      "beat": "timeline",
+      "duration": 4,
+      "text": "นิตยสาร *โคโรโคโร* เปิดประกวดวาดการ์ด",
+      "parts": [
+        {
+          "text": "นิตยสาร *โคโรโคโร* เปิดประกวดวาดการ์ด",
+          "say": "นิตยสารโคโรโคโร เปิดประกวดวาดภาพการ์ด."
+        },
+        {
+          "text": "คนที่ *ชนะ* ถึงจะได้ใบนี้",
+          "say": "คนชนะ ถึงจะได้ใบนี้."
+        }
+      ],
+      "chapter": "ที่มา",
+      "title": "การ์ดที่*ซื้อไม่ได้*",
+      "points": [
+        {
+          "year": "1997",
+          "label": "เปิดประกวด\nวาดภาพการ์ด"
+        },
+        {
+          "year": "1998",
+          "label": "แจกเฉพาะ\nผู้ชนะ"
+        },
+        {
+          "year": "2026",
+          "label": "ขายทำ\nสถิติโลก"
+        }
+      ]
+    },
+    {
+      "beat": "zoom",
+      "duration": 4,
+      "text": "หัวการ์ดเขียนว่า *Illustrator*",
+      "parts": [
+        {
+          "text": "หัวการ์ดเขียนว่า *Illustrator*",
+          "say": "หัวการ์ดเขียนว่า อิลลัสเตรเตอร์."
+        },
+        {
+          "text": "ใบเดียวในโลกที่ *ไม่ใช่คำว่าเทรนเนอร์*",
+          "say": "ใบเดียวในโลก ที่ไม่ใช้คำว่าเทรนเนอร์."
+        }
+      ],
+      "chapter": "ส่องการ์ด",
+      "title": "คำที่ไม่มีใบไหนใช้",
+      "image_url": "https://archives.bulbagarden.net/media/upload/5/5f/Pok%C3%A9monIllustratorCoroCoropromo.jpg",
+      "focus_x": 50,
+      "focus_y": 10,
+      "focus_zoom": 2.2
+    },
+    {
+      "beat": "bignum",
+      "duration": 4,
+      "text": "ทั้งโลกมีแค่ราว *41 ใบ*",
+      "parts": [
+        {
+          "text": "ทั้งโลกมีแค่ราว *41 ใบ*",
+          "say": "ทั้งโลก มีแค่ราวสี่สิบเอ็ดใบ."
+        }
+      ],
+      "chapter": "จำนวน",
+      "title": "ทั้งโลกมีแค่ราว",
+      "value": 41,
+      "subtitle": "ใบ",
+      "image_url": "https://archives.bulbagarden.net/media/upload/5/5f/Pok%C3%A9monIllustratorCoroCoropromo.jpg"
+    },
+    {
+      "beat": "quiz",
+      "duration": 4,
+      "text": "ใครเป็น *คนวาด* การ์ดใบนี้?",
+      "parts": [
+        {
+          "text": "ใครเป็น *คนวาด* การ์ดใบนี้?",
+          "say": "ทายสิ ใครวาด?"
+        },
+        {
+          "text": "คำตอบคือ *อัตสึโกะ นิชิดะ*",
+          "say": "อัตสึโกะ นิชิดะ. คนออกแบบพิคาชูตัวแรก."
+        }
+      ],
+      "chapter": "ทายสิ",
+      "title": "ใครวาด\n*พิคาชู*ใบนี้?",
+      "choices": [
+        "ผู้ชนะประกวด",
+        "อัตสึโกะ นิชิดะ",
+        "ซาโตชิ ทาจิริ"
+      ],
+      "answer": 1
+    },
+    {
+      "beat": "bignum",
+      "duration": 4,
+      "text": "*โลแกน พอล* ซื้อมาห้าล้านกว่าดอลลาร์",
+      "parts": [
+        {
+          "text": "*โลแกน พอล* ซื้อมาห้าล้านกว่าดอลลาร์",
+          "say": "โลแกน พอล ซื้อมาห้าล้านกว่าดอลลาร์."
+        },
+        {
+          "text": "ปีนี้ขายต่อได้ *สิบหกล้านครึ่ง*",
+          "say": "ปีนี้ขายต่อได้ สิบหกล้านครึ่ง. สถิติโลก."
+        }
+      ],
+      "chapter": "ราคา",
+      "title": "ขายไปที่",
+      "value": 16492000,
+      "from": 5275000,
+      "subtitle": "ดอลลาร์สหรัฐ",
+      "image_url": "https://archives.bulbagarden.net/media/upload/5/5f/Pok%C3%A9monIllustratorCoroCoropromo.jpg"
+    },
+    {
+      "beat": "card",
+      "duration": 4,
+      "text": "*กดติดตาม* ไว้ ใบต่อไปก็แพงไม่แพ้กัน",
+      "parts": [
+        {
+          "text": "*กดติดตาม* ไว้ ใบต่อไปก็แพงไม่แพ้กัน",
+          "say": "กดติดตามไว้ ใบต่อไป ก็แพงไม่แพ้กัน."
+        }
+      ],
+      "image_url": "https://archives.bulbagarden.net/media/upload/5/5f/Pok%C3%A9monIllustratorCoroCoropromo.jpg"
+    },
+    {
+      "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+      "image_mode": "still",
+      "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+      "duration": 4,
+      "no_caption": true,
+      "beat": "still",
+      "parts": [
+        {
+          "text": "ชอบเรื่องเล่าแบบนี้ *กดติดตาม* ไว้เลย",
+          "say": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้เลย."
+        },
+        {
+          "text": "*ซื้อ ขาย สะสม แข่งเกมส์การ์ด* ที่ www.cardzcenter.com",
+          "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+        }
+      ]
+    }
+  ],
+  "composition": "CardShow",
+  "theme": "electric",
+  "badge": "ตำนาน #1",
+  "series": "การ์ดแพงระดับตำนาน"
+}

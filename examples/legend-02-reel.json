@@ -1,0 +1,181 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "meta": {
+    "title": "ลิซาร์ดอนที่ขาดไปอย่างเดียว แต่แพงกว่า 50 ล้านบาท | การ์ดแพงระดับตำนาน #shorts",
+    "description": "ลิซาร์ดอนชุดแรกญี่ปุ่นปี 1996 ล็อตแรกที่ไม่มีสัญลักษณ์ความหายาก (No Rarity) เกรด PSA 10 มีแค่ราวสิบใบ มีนาคม 2026 ขายได้ 1.7 ล้านดอลลาร์\n\n👇 ลองไปเช็กการ์ดเก่าที่บ้าน มุมขวาล่างมีสัญลักษณ์ไหม? คอมเมนต์บอกหน่อย\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n#shorts #โปเกมอน #การ์ดโปเกมอน #pokemoncards #การ์ดแพง",
+    "thumb": {
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-21/large",
+      "hook": "ขาดไปอย่างเดียว\nแพง 50 ล้าน!",
+      "badge": "ตำนาน #2",
+      "sub": "การ์ดแพงระดับตำนาน"
+    }
+  },
+  "tts": {
+    "voice_id": "bTEswxYhpv7UDkQg5VRu",
+    "model_id": "eleven_v4",
+    "stability": 0.8,
+    "speed": 1.2,
+    "prefix": "[calm, soft, natural storyteller]"
+  },
+  "audio_rate": 1.067,
+  "slides": [
+    {
+      "beat": "hook",
+      "duration": 4,
+      "text": "ลิซาร์ดอนใบนี้ *ขาดไปอย่างเดียว*",
+      "parts": [
+        {
+          "text": "ลิซาร์ดอนใบนี้ *ขาดไปอย่างเดียว*",
+          "say": "ลิซาร์ดอนใบนี้ ขาดไปอย่างเดียว."
+        },
+        {
+          "text": "แต่ราคา *กว่า 50 ล้านบาท*",
+          "say": "แต่ราคา กว่าห้าสิบล้านบาท."
+        }
+      ],
+      "title": "ขาดไป*อย่างเดียว*",
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-21/large"
+    },
+    {
+      "beat": "reveal",
+      "duration": 4,
+      "text": "ลิซาร์ดอน *การ์ดชุดแรกญี่ปุ่น*",
+      "parts": [
+        {
+          "text": "ลิซาร์ดอน *การ์ดชุดแรกญี่ปุ่น*",
+          "say": "ลิซาร์ดอน การ์ดชุดแรกญี่ปุ่น."
+        },
+        {
+          "text": "ล็อตแรก *ตุลาคม 1996*",
+          "say": "ล็อตแรกสุด ปีหนึ่งเก้าเก้าหก."
+        }
+      ],
+      "title": "ลิซาร์ดอน",
+      "subtitle": "No Rarity • 1996",
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-21/large"
+    },
+    {
+      "beat": "zoom",
+      "duration": 4,
+      "text": "ดูที่ *มุมขวาล่าง*",
+      "parts": [
+        {
+          "text": "ดูที่ *มุมขวาล่าง*",
+          "say": "ดูที่มุมขวาล่าง."
+        },
+        {
+          "text": "ล็อตแรก *ไม่มีสัญลักษณ์ความหายาก*",
+          "say": "ล็อตแรก ไม่มีสัญลักษณ์ความหายาก."
+        }
+      ],
+      "chapter": "จุดสังเกต",
+      "title": "สัญลักษณ์ที่*หายไป*",
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-21/large",
+      "focus_x": 88,
+      "focus_y": 93,
+      "focus_zoom": 2.6
+    },
+    {
+      "beat": "quiz",
+      "duration": 4,
+      "text": "ลองทาย *เกรด PSA 10* มีกี่ใบ?",
+      "parts": [
+        {
+          "text": "ลองทาย *เกรด PSA 10* มีกี่ใบ?",
+          "say": "ทายสิ เกรดเต็มสิบ มีกี่ใบ?"
+        },
+        {
+          "text": "คำตอบคือ *ราวสิบใบ*",
+          "say": "ราวสิบใบเท่านั้น."
+        }
+      ],
+      "chapter": "ทายสิ",
+      "title": "เกรด*เต็ม 10*\nมีกี่ใบ?",
+      "choices": [
+        "ราว 10 ใบ",
+        "ราว 100 ใบ",
+        "ราว 1,000 ใบ"
+      ],
+      "answer": 0
+    },
+    {
+      "beat": "bignum",
+      "duration": 4,
+      "text": "สี่ปีก่อน ขายกันที่ *สามแสนดอลลาร์*",
+      "parts": [
+        {
+          "text": "สี่ปีก่อน ขายกันที่ *สามแสนดอลลาร์*",
+          "say": "สี่ปีก่อน ขายกันราวสามแสนดอลลาร์."
+        },
+        {
+          "text": "ปีนี้พุ่งไป *หนึ่งล้านเจ็ดแสน*",
+          "say": "ปีนี้ พุ่งไปหนึ่งล้านเจ็ดแสน."
+        }
+      ],
+      "chapter": "ราคา",
+      "title": "ขายไปที่",
+      "value": 1700000,
+      "from": 324000,
+      "subtitle": "ดอลลาร์สหรัฐ",
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-21/large"
+    },
+    {
+      "beat": "versions",
+      "duration": 4,
+      "text": "ฉบับอังกฤษ *1st Edition* ก็เพิ่งทะลุล้าน",
+      "parts": [
+        {
+          "text": "ฉบับอังกฤษ *1st Edition* ก็เพิ่งทะลุล้าน",
+          "say": "ฉบับอังกฤษ เฟิร์สอิดิชั่น ก็เพิ่งทะลุล้านดอลลาร์."
+        }
+      ],
+      "images": [
+        "https://images.scrydex.com/pokemon/base1_ja-21/large",
+        "https://images.pokemontcg.io/base1/4_hires.png"
+      ],
+      "labels": [
+        "ญี่ปุ่น 1996",
+        "อังกฤษ 1999"
+      ]
+    },
+    {
+      "beat": "card",
+      "duration": 4,
+      "text": "ใครมีการ์ดเก่า *ลองเช็กมุมขวาล่าง*",
+      "parts": [
+        {
+          "text": "ใครมีการ์ดเก่า *ลองเช็กมุมขวาล่าง*",
+          "say": "ใครมีการ์ดเก่า ลองเช็กมุมขวาล่างดู."
+        },
+        {
+          "text": "*กดติดตาม* ไว้ ยังมีตำนานอีกเยอะ",
+          "say": "กดติดตามไว้ ยังมีการ์ดตำนานอีกเยอะ."
+        }
+      ],
+      "image_url": "https://images.scrydex.com/pokemon/base1_ja-21/large"
+    },
+    {
+      "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+      "image_mode": "still",
+      "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+      "duration": 4,
+      "no_caption": true,
+      "beat": "still",
+      "parts": [
+        {
+          "text": "ชอบเรื่องเล่าแบบนี้ *กดติดตาม* ไว้เลย",
+          "say": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้เลย."
+        },
+        {
+          "text": "*ซื้อ ขาย สะสม แข่งเกมส์การ์ด* ที่ www.cardzcenter.com",
+          "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+        }
+      ]
+    }
+  ],
+  "composition": "CardShow",
+  "theme": "fire",
+  "badge": "ตำนาน #2",
+  "series": "การ์ดแพงระดับตำนาน"
+}
