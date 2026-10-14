@@ -15,10 +15,10 @@
     "voice_id": "bTEswxYhpv7UDkQg5VRu",
     "model_id": "eleven_v4",
     "stability": 0.8,
-    "speed": 1.2,
+    "speed": 1.0,
     "prefix": "[calm, soft, natural storyteller]"
   },
-  "audio_rate": 1.067,
+  "audio_rate": 1.0,
   "slides": [
     {
       "beat": "hook",
@@ -94,6 +94,10 @@
         {
           "text": "ใบเดียวในโลกที่ *ไม่ใช่คำว่าเทรนเนอร์*",
           "say": "ใบเดียวในโลก ที่ไม่ใช้คำว่าเทรนเนอร์."
+        },
+        {
+          "text": "มุมขวาล่างเป็น *รูปปากกา*",
+          "say": "มุมขวาล่าง ยังมีสัญลักษณ์รูปปากกา ที่ไม่มีการ์ดใบไหนมี."
         }
       ],
       "chapter": "ส่องการ์ด",

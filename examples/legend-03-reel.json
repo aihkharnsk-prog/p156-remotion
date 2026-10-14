@@ -15,10 +15,10 @@
     "voice_id": "bTEswxYhpv7UDkQg5VRu",
     "model_id": "eleven_v4",
     "stability": 0.8,
-    "speed": 1.2,
+    "speed": 1.0,
     "prefix": "[calm, soft, natural storyteller]"
   },
-  "audio_rate": 1.067,
+  "audio_rate": 1.0,
   "slides": [
     {
       "beat": "hook",
@@ -86,6 +86,10 @@
         {
           "text": "การ์ดใบนี้จึงมี *หนึ่งใบเท่านั้น*",
           "say": "การ์ดใบนี้ จึงมีใบเดียว."
+        },
+        {
+          "text": "*เปิดซองเป็นล้านซอง* ก็ไม่เจอ",
+          "say": "ต่อให้เปิดซองเป็นล้านซอง ก็ไม่มีวันเจอ."
         }
       ],
       "chapter": "จำนวน",
