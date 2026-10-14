@@ -74,12 +74,19 @@ async function tiktokAccountId() {
   }
   throw new Error("no TikTok account connected in Zernio");
 }
+// แฮชแท็กจากบรรทัดสุดท้ายของคำอธิบาย (ถ้ามี) — ใช้ได้ทั้งโปเกมอนและวันพีซ
+function socialTags(meta = {}) {
+  const paras = String(meta.description || "").split("\n\n");
+  const last = paras[paras.length - 1] || "";
+  const tags = last.trim().startsWith("#") ? last.replace(/#shorts/gi, "").trim() : "#การ์ดโปเกมอน #โปเกมอน #pokemoncards #pokemontcg";
+  return `${tags} #การ์ดสะสม #cardzcenter`.replace(/\s+/g, " ").trim();
+}
 function tiktokCaption(meta = {}) {
   if (meta.tiktok_caption) return String(meta.tiktok_caption).slice(0, 2200);
   const title = String(meta.title || "").replace(/#shorts/gi, "").trim();
   const first = String(meta.description || "").split("\n\n")[0] || "";
   return [title, first, "🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 www.cardzcenter.com",
-    "#การ์ดโปเกมอน #โปเกมอน #pokemoncards #pokemontcg #การ์ดสะสม #เรื่องเล่าการ์ด #cardzcenter"]
+    socialTags(meta)]
     .filter(Boolean).join("\n\n").slice(0, 2200);
 }
 // โพสต์คลิปขึ้น TikTok (ตั้งเวลาได้) — คืนผลจาก Zernio
@@ -106,6 +113,42 @@ async function postTikTok(videoUrl, meta = {}, at) {
   };
   const r = await zernio("/posts", { method: "POST", body: JSON.stringify(body) });
   console.log(`[tiktok] ${when ? "scheduled " + when : "published"} ${videoUrl} -> ${JSON.stringify(r).slice(0, 200)}`);
+  return r;
+}
+
+// ---------- Facebook Page (ผ่าน Zernio) ----------
+let facebookAccountCache = null;
+async function facebookAccountId() {
+  if (process.env.ZERNIO_FACEBOOK_ACCOUNT_ID) return process.env.ZERNIO_FACEBOOK_ACCOUNT_ID;
+  if (facebookAccountCache) return facebookAccountCache;
+  const a = await zernio("/accounts");
+  const list = Array.isArray(a) ? a : a.accounts || a.data || [];
+  const fb = list.find((x) => String(x.platform || "").toLowerCase() === "facebook");
+  if (!fb) throw new Error("no Facebook Page connected in Zernio");
+  return (facebookAccountCache = fb._id || fb.id || fb.accountId);
+}
+// โพสต์คลิปขึ้นเพจ Facebook เป็น Reel (ยาวเกิน 60 วิ หรือ Reel ไม่ผ่าน → โพสต์เป็นวิดีโอปกติ)
+async function postFacebook(videoUrl, meta = {}, at, durationSec) {
+  if (!process.env.ZERNIO_API_KEY) throw new Error("ZERNIO_API_KEY is not set");
+  const accountId = await facebookAccountId();
+  const when = at && Date.parse(at) > Date.now() + 5 * 60 * 1000 ? new Date(at).toISOString() : null;
+  const title = String(meta.title || "").replace(/#shorts/gi, "").trim().slice(0, 100);
+  const make = (reel) => ({
+    content: tiktokCaption(meta),
+    mediaItems: [{ type: "video", url: videoUrl }],
+    platforms: [{ platform: "facebook", accountId, platformSpecificData: reel ? { contentType: "reel", title } : {} }],
+    ...(when ? { scheduledFor: when, timezone: "UTC" } : { publishNow: true }),
+  });
+  const reelOk = !(durationSec > 60);
+  let r;
+  try {
+    r = await zernio("/posts", { method: "POST", body: JSON.stringify(make(reelOk)) });
+  } catch (e) {
+    if (!reelOk) throw e;
+    console.warn(`[facebook] reel failed, posting as video: ${String(e?.message || e)}`);
+    r = await zernio("/posts", { method: "POST", body: JSON.stringify(make(false)) });
+  }
+  console.log(`[facebook] ${reelOk ? "reel" : "video"} ${when ? "scheduled " + when : "published"} ${videoUrl} -> ${JSON.stringify(r).slice(0, 200)}`);
   return r;
 }
 
@@ -442,6 +485,7 @@ async function runJob(job) {
       inputProps,
     });
 
+    job.duration_sec = composition.durationInFrames / composition.fps;
     const outputLocation = path.join(OUT_DIR, `${job.id}.mp4`);
     await renderMedia({
       composition,
@@ -496,6 +540,15 @@ async function runJob(job) {
       meta: job.request.meta ?? null,
     });
     console.log(`[job ${job.id}] done ${job.video_url}`);
+    if (job.request.facebook) {
+      try {
+        const r = await postFacebook(job.video_url, job.request.meta || {}, job.request.facebook.at, job.duration_sec);
+        job.facebook = r?.post?._id || "ok";
+      } catch (e) {
+        job.warnings.push(`facebook failed: ${String(e?.message || e)}`);
+        console.error(`[facebook] job ${job.id} failed`, String(e?.message || e));
+      }
+    }
     if (job.request.tiktok) {
       try {
         const r = await postTikTok(job.video_url, job.request.meta || {}, job.request.tiktok.at);
@@ -881,6 +934,7 @@ app.post("/render", auth, (req, res) => {
       height: body.height ? Number(body.height) : undefined,
       meta: body.meta,
       tiktok: body.tiktok ? { at: typeof body.tiktok === "object" && body.tiktok.at ? String(body.tiktok.at) : undefined } : undefined,
+      facebook: body.facebook ? { at: typeof body.facebook === "object" && body.facebook.at ? String(body.facebook.at) : undefined } : undefined,
     },
   };
   jobs.set(id, job);
@@ -912,6 +966,7 @@ app.post("/render-files", auth, async (req, res) => {
       const body = JSON.parse(await fs.readFile(path.join(__dirname, "..", "examples", name), "utf8"));
       if (req.body.upload) body.webhook_url = UPLOAD_HOOK;
       if (req.body.tiktok) body.tiktok = { at: (typeof f === "object" && f.tiktok_at) || body.meta?.publish_at };
+      if (req.body.facebook) body.facebook = { at: (typeof f === "object" && (f.facebook_at || f.tiktok_at)) || body.meta?.publish_at };
       const r = await fetch(`http://127.0.0.1:${PORT}/render`, {
         method: "POST",
         headers: { "Content-Type": "application/json", "x-api-key": req.get("x-api-key") },
@@ -1008,6 +1063,23 @@ app.get("/zernio-accounts", auth, async (req, res) => {
     out = { error: String(e?.message || e) };
   }
   console.log(`[zernio-accounts] ${JSON.stringify(out).slice(0, 3000)}`);
+  res.json(out);
+});
+
+// โพสต์คลิปที่ render แล้วขึ้นเพจ Facebook: POST /facebook-post {items:[{video_url, file, at, duration}]}
+app.post("/facebook-post", auth, async (req, res) => {
+  const out = [];
+  for (const it of Array.isArray(req.body?.items) ? req.body.items : []) {
+    try {
+      let meta = it.meta || {};
+      if (it.file) meta = JSON.parse(await fs.readFile(path.join(__dirname, "..", "examples", path.basename(String(it.file))), "utf8")).meta || meta;
+      const r = await postFacebook(String(it.video_url), meta, it.at, Number(it.duration) || undefined);
+      out.push({ file: it.file, ok: true, id: r?.post?._id });
+    } catch (e) {
+      out.push({ file: it.file, error: String(e?.message || e) });
+    }
+  }
+  console.log(`[facebook-post] ${JSON.stringify(out)}`);
   res.json(out);
 });
 
