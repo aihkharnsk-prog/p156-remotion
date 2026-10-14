@@ -81,11 +81,24 @@ function socialTags(meta = {}) {
   const tags = last.trim().startsWith("#") ? last.replace(/#shorts/gi, "").trim() : "#การ์ดโปเกมอน #โปเกมอน #pokemoncards #pokemontcg";
   return `${tags} #การ์ดสะสม #cardzcenter`.replace(/\s+/g, " ").trim();
 }
+// ประโยคชวนคอมเมนต์ (เปลี่ยนไปตามคลิป ไม่ซ้ำทุกโพสต์) — คอมเมนต์ช่วยให้แพลตฟอร์มดันคลิป
+const ENGAGE = [
+  "👇 คุณมีการ์ดใบนี้ในคอลเลกชันไหม? คอมเมนต์บอกหน่อย",
+  "👇 ทายถูกไหม? คอมเมนต์คำตอบของคุณก่อนดูเฉลย",
+  "👇 อยากให้เล่าการ์ดใบไหนต่อ? พิมพ์ชื่อไว้ในคอมเมนต์",
+  "👇 แท็กเพื่อนที่สะสมการ์ดใบนี้",
+  "👇 ใบนี้ควรค่าแก่การสะสมไหม? ให้คะแนน 1-10 ในคอมเมนต์",
+];
+function engageLine(title = "") {
+  let h = 0;
+  for (const ch of String(title)) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
+  return ENGAGE[h % ENGAGE.length];
+}
 function tiktokCaption(meta = {}) {
   if (meta.tiktok_caption) return String(meta.tiktok_caption).slice(0, 2200);
   const title = String(meta.title || "").replace(/#shorts/gi, "").trim();
   const first = String(meta.description || "").split("\n\n")[0] || "";
-  return [title, first, "🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 www.cardzcenter.com",
+  return [title, engageLine(title), first, "🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 www.cardzcenter.com",
     socialTags(meta)]
     .filter(Boolean).join("\n\n").slice(0, 2200);
 }
