@@ -103,15 +103,16 @@ function tiktokCaption(meta = {}) {
     .filter(Boolean).join("\n\n").slice(0, 2200);
 }
 // โพสต์คลิปขึ้น TikTok (ตั้งเวลาได้) — คืนผลจาก Zernio
-async function postTikTok(videoUrl, meta = {}, at) {
+async function postTikTok(videoUrl, meta = {}, at, draft = false) {
   if (!process.env.ZERNIO_API_KEY) throw new Error("ZERNIO_API_KEY is not set");
   const accountId = await tiktokAccountId();
-  const when = at && Date.parse(at) > Date.now() + 5 * 60 * 1000 ? new Date(at).toISOString() : null;
+  const when = !draft && at && Date.parse(at) > Date.now() + 5 * 60 * 1000 ? new Date(at).toISOString() : null;
   const body = {
     content: tiktokCaption(meta),
     mediaItems: [{ type: "video", url: videoUrl }],
     platforms: [{ platform: "tiktok", accountId }],
     tiktokSettings: {
+      ...(draft ? { draft: true } : {}),
       privacy_level: "PUBLIC_TO_EVERYONE",
       allow_comment: true,
       allow_duet: false,
@@ -125,10 +126,27 @@ async function postTikTok(videoUrl, meta = {}, at) {
     ...(when ? { scheduledFor: when, timezone: "UTC" } : { publishNow: true }),
   };
   const r = await zernio("/posts", { method: "POST", body: JSON.stringify(body) });
-  console.log(`[tiktok] ${when ? "scheduled " + when : "published"} ${videoUrl} -> ${JSON.stringify(r).slice(0, 200)}`);
+  console.log(`[tiktok] ${draft ? "draft" : when ? "scheduled " + when : "published"} ${videoUrl} -> ${JSON.stringify(r).slice(0, 200)}`);
   return r;
 }
 
+// ---------- คิว TikTok แบบร่าง (AK ใส่เสียงเพลงเองในแอปก่อนโพสต์) ----------
+// เก็บคิวในไฟล์บน volume: [{file, video_url, at, title, sent_at, post_id}]
+const TT_QUEUE = () => path.join(ASSET_DIR, "tiktok-queue.json");
+async function readTtQueue() {
+  try { return JSON.parse(await fs.readFile(TT_QUEUE(), "utf8")); } catch { return []; }
+}
+async function writeTtQueue(q) {
+  await fs.writeFile(TT_QUEUE(), JSON.stringify(q, null, 1));
+}
+async function enqueueTiktok(item) {
+  const q = await readTtQueue();
+  const i = q.findIndex((x) => x.file === item.file && !x.sent_at);
+  if (i >= 0) q[i] = { ...q[i], ...item }; else q.push(item);
+  q.sort((a, b) => Date.parse(a.at) - Date.parse(b.at));
+  await writeTtQueue(q);
+  console.log(`[tiktok-queue] + ${item.file} at ${item.at}`);
+}
 // ---------- Facebook Page (ผ่าน Zernio) ----------
 let facebookAccountCache = null;
 // คอมเมนต์แรกใต้โพสต์ Facebook: ชวนเข้าเว็บ (ลิงก์ในคอมเมนต์ไม่ลดการมองเห็นของโพสต์)
@@ -566,8 +584,8 @@ async function runJob(job) {
     }
     if (job.request.tiktok) {
       try {
-        const r = await postTikTok(job.video_url, job.request.meta || {}, job.request.tiktok.at);
-        job.tiktok = r?.post?._id || "ok";
+        await enqueueTiktok({ file: job.request.meta?.file || job.id, video_url: job.video_url, at: job.request.tiktok.at || new Date().toISOString(), title: String(job.request.meta?.title || "").replace(/#shorts/gi, "").trim(), meta: job.request.meta || {} });
+        job.tiktok = "queued";
       } catch (e) {
         job.warnings.push(`tiktok failed: ${String(e?.message || e)}`);
         console.error(`[tiktok] job ${job.id} failed`, String(e?.message || e));
@@ -1041,6 +1059,7 @@ app.post("/render-files", auth, async (req, res) => {
     try {
       const body = JSON.parse(await fs.readFile(path.join(__dirname, "..", "examples", name), "utf8"));
       if (req.body.upload) body.webhook_url = UPLOAD_HOOK;
+      if (body.meta && typeof body.meta === "object") body.meta.file = name;
       if (req.body.tiktok) body.tiktok = { at: (typeof f === "object" && f.tiktok_at) || body.meta?.publish_at };
       if (req.body.facebook) body.facebook = { at: (typeof f === "object" && (f.facebook_at || f.tiktok_at)) || body.meta?.publish_at };
       const r = await fetch(`http://127.0.0.1:${PORT}/render`, {
@@ -1151,6 +1170,63 @@ app.get("/zernio-post/:id", auth, async (req, res) => {
     out = { error: String(e?.message || e) };
   }
   console.log(`[zernio-post] ${req.params.id} ${JSON.stringify(out).slice(0, 4000)}`);
+  res.json(out);
+});
+
+// เพิ่มคลิปเข้าคิว TikTok แบบร่าง: POST /tiktok-queue {items:[{file, video_url, at}]}
+app.post("/tiktok-queue", auth, async (req, res) => {
+  const out = [];
+  for (const it of Array.isArray(req.body?.items) ? req.body.items : []) {
+    try {
+      const file = path.basename(String(it.file));
+      const meta = JSON.parse(await fs.readFile(path.join(__dirname, "..", "examples", file), "utf8")).meta || {};
+      await enqueueTiktok({ file, video_url: String(it.video_url), at: String(it.at), title: String(meta.title || "").replace(/#shorts/gi, "").trim(), meta });
+      out.push({ file, queued: it.at });
+    } catch (e) {
+      out.push({ file: it.file, error: String(e?.message || e) });
+    }
+  }
+  console.log(`[tiktok-queue] ${JSON.stringify(out)}`);
+  res.json(out);
+});
+// ส่งคลิปที่ถึงเวลาเข้า TikTok แบบร่าง: POST /tiktok-draft-due (ส่งคลิปที่เวลาลงอยู่ภายใน 30 นาทีข้างหน้า)
+app.post("/tiktok-draft-due", auth, async (req, res) => {
+  const q = await readTtQueue();
+  const horizon = Date.now() + (Number(req.body?.minutes) || 30) * 60 * 1000;
+  const sent = [];
+  for (const it of q) {
+    if (it.sent_at || Date.parse(it.at) > horizon) continue;
+    try {
+      const r = await postTikTok(it.video_url, it.meta || {}, null, true);
+      it.sent_at = new Date().toISOString();
+      it.post_id = r?.post?._id;
+      sent.push({ file: it.file, title: it.title, at: it.at, post_id: it.post_id });
+    } catch (e) {
+      sent.push({ file: it.file, title: it.title, error: String(e?.message || e) });
+    }
+  }
+  await writeTtQueue(q);
+  const next = q.find((x) => !x.sent_at);
+  console.log(`[tiktok-draft] ${JSON.stringify({ sent, next: next ? { file: next.file, at: next.at } : null })}`);
+  res.json({ sent, next });
+});
+// ดูคิว: GET /tiktok-queue
+app.get("/tiktok-queue", auth, async (req, res) => {
+  const q = await readTtQueue();
+  console.log(`[tiktok-queue-list] ${JSON.stringify(q.map((x) => ({ file: x.file, at: x.at, sent_at: x.sent_at })))}`);
+  res.json(q.map(({ meta, ...x }) => x));
+});
+// โพสต์ที่ตั้งเวลาไว้ใน Zernio: GET /zernio-scheduled
+app.get("/zernio-scheduled", auth, async (req, res) => {
+  let out;
+  try {
+    const r = await zernio("/posts?status=scheduled&limit=100");
+    const list = Array.isArray(r) ? r : r.posts || r.data || [];
+    out = list.map((p) => ({ id: p._id, at: p.scheduledFor, platforms: (p.platforms || []).map((x) => x.platform).join(","), status: p.status, text: String(p.content || "").slice(0, 40), video: p.mediaItems?.[0]?.url }));
+  } catch (e) {
+    out = { error: String(e?.message || e) };
+  }
+  console.log(`[zernio-scheduled] ${JSON.stringify(out).slice(0, 8000)}`);
   res.json(out);
 });
 
