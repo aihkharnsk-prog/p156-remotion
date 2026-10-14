@@ -144,15 +144,15 @@ elif STYLE == "wall":
     a[:] = (1 - np.clip((xs - 0.05) / 0.55, 0, 1)) * 175
     v.putalpha(Image.fromarray(a.astype(np.uint8), "L")); im.alpha_composite(v)
     # แผ่นกระจกกลาง
-    px0, py0, px1, py1 = 470, 52, 1170, 352
+    px0, py0, px1, py1 = 470, 162, 1170, 462
     panel = Image.new("RGBA", (W, H), (0, 0, 0, 0)); pd = ImageDraw.Draw(panel)
     pd.rounded_rectangle((px0, py0, px1, py1), radius=30, fill=(6, 8, 18, 205), outline=GOLD + (200,), width=3)
     im.alpha_composite(glow((W, H), [("rounded_rectangle", (px0, py0, px1, py1), GOLD + (70,))], 26))
     im.alpha_composite(panel)
-    text_glow(im, (W // 2, 118), "CARDZ CENTER", F(PB, 76), (255, 255, 255), (120, 170, 255, 160), blur=16)
+    text_glow(im, (W // 2, 228), "CARDZ CENTER", F(PB, 76), (255, 255, 255), (120, 170, 255, 160), blur=16)
     d = ImageDraw.Draw(im)
-    d.text((W // 2, 180), "เรื่องเล่าเบื้องหลังการ์ด · โปเกมอน · วันพีซ · ยูกิโอ", font=F(KS, 27), fill=(170, 205, 255), anchor="mm")
-    words_line(d, (W // 2, 230), WORDS, F(KB, 38))
-    pill(im, W // 2, 268, 326, "www.cardzcenter.com", F(PB, 33))
+    d.text((W // 2, 290), "เรื่องเล่าเบื้องหลังการ์ด · โปเกมอน · วันพีซ · ยูกิโอ", font=F(KS, 27), fill=(170, 205, 255), anchor="mm")
+    words_line(d, (W // 2, 340), WORDS, F(KB, 38))
+    pill(im, W // 2, 378, 436, "www.cardzcenter.com", F(PB, 33))
 
 im.convert("RGB").save(OUT, quality=95)
