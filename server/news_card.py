@@ -78,7 +78,7 @@ if S.get("image"):
 head = S.get("headline", "")
 bullets = S.get("bullets", [])[:5]
 game = S.get("game", "")
-PIC_MAX, PIC_MIN = 470, 380  # ภาพจริงสูงได้ถึง 460 แต่ไม่ต่ำกว่า 300 — ตัวหนังสือย่อก่อน แล้วค่อยหดภาพ
+PIC_MAX, PIC_MIN = 700, 560  # รูปการ์ดจริงต้องเด่น — ตัวหนังสือย่อก่อน แล้วค่อยหดรูป
 for hs, bs in ((112, 46), (100, 44), (92, 42), (84, 40), (76, 38), (68, 36), (60, 34), (54, 32)):
     hf, bf = F("Kanit-ExtraBold.ttf", hs), F("Kanit-Medium.ttf", bs)
     hl = wrap(head, hf, W - 2 * M)
