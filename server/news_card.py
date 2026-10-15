@@ -67,28 +67,32 @@ def wrap(text, font, maxw):
 
 
 # ---------- เนื้อหา: วัดความสูงก่อน แล้ววางกึ่งกลางพื้นที่ ----------
-TOP, BOT = 200, H - 175
-pic = None
+TOP, BOT = 196, H - 172
+src = None
 if S.get("image"):
     try:
-        pic = Image.open(S["image"]).convert("RGBA")
-        bw, bh = W - 2 * M, 440
-        r = min(bw / pic.width, bh / pic.height)
-        pic = pic.resize((int(pic.width * r), int(pic.height * r)), Image.LANCZOS)
+        src = Image.open(S["image"]).convert("RGBA")
     except Exception as e:
-        print("image skipped:", e); pic = None
+        print("image skipped:", e); src = None
 
 head = S.get("headline", "")
 bullets = S.get("bullets", [])[:5]
 game = S.get("game", "")
-for hs, bs in ((112, 46), (100, 44), (92, 42), (84, 40), (76, 38), (68, 36), (60, 34)):
+PIC_MAX, PIC_MIN = 470, 380  # ภาพจริงสูงได้ถึง 460 แต่ไม่ต่ำกว่า 300 — ตัวหนังสือย่อก่อน แล้วค่อยหดภาพ
+for hs, bs in ((112, 46), (100, 44), (92, 42), (84, 40), (76, 38), (68, 36), (60, 34), (54, 32)):
     hf, bf = F("Kanit-ExtraBold.ttf", hs), F("Kanit-Medium.ttf", bs)
     hl = wrap(head, hf, W - 2 * M)
     bls = [wrap(b, bf, W - 2 * M - 48) for b in bullets]
-    h = (64 if game else 0) + (pic.height + 48 if pic else 0) + len(hl) * int(hs * 1.2) + 36 \
-        + sum(len(x) * int(bs * 1.38) + 18 for x in bls)
-    if h <= BOT - TOP:
+    th = (64 if game else 0) + len(hl) * int(hs * 1.2) + 36 + sum(len(x) * int(bs * 1.38) + 18 for x in bls) - 18
+    room = BOT - TOP - th - (40 if src else 0)
+    if room >= (PIC_MIN if src else 0):
         break
+pic = None
+if src is not None:
+    bh = max(160, min(PIC_MAX, room))
+    r = min((W - 2 * M) / src.width, bh / src.height)
+    pic = src.resize((int(src.width * r), int(src.height * r)), Image.LANCZOS)
+h = th + (pic.height + 40 if pic else 0)
 yy = TOP + max(0, (BOT - TOP - h) // 2)
 
 if game:
@@ -100,7 +104,7 @@ if pic:
     im.alpha_composite(sh.filter(ImageFilter.GaussianBlur(14)))
     m = Image.new("L", pic.size, 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, pic.width - 1, pic.height - 1), radius=24, fill=255)
     im.paste(pic, (px, yy), m); d = ImageDraw.Draw(im)
-    yy += pic.height + 48
+    yy += pic.height + 40
 
 hi = False  # สถานะสีเน้นต่อเนื่องข้ามบรรทัด
 for line in hl:
