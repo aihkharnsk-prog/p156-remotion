@@ -239,7 +239,21 @@ async function downloadImage(url, destDir, baseName) {
   });
   if (!res.ok || !res.body) throw new Error(`download ${res.status}: ${url}`);
   const type = (res.headers.get("content-type") || "").split(";")[0].trim().toLowerCase();
-  const ext = IMAGE_EXT[type];
+  let ext = IMAGE_EXT[type];
+  if (!ext && /^(text\/plain|application\/octet-stream|binary\/octet-stream|)$/.test(type)) {
+    // บางเว็บ (เช่น supabase storage) ส่ง content-type ผิด → ดูจากหัวไฟล์แทน
+    const buf = Buffer.from(await res.arrayBuffer());
+    const sig = buf.subarray(0, 12);
+    if (sig[0] === 0xff && sig[1] === 0xd8) ext = ".jpg";
+    else if (sig.toString("hex", 0, 4) === "89504e47") ext = ".png";
+    else if (sig.toString("ascii", 0, 4) === "RIFF" && sig.toString("ascii", 8, 12) === "WEBP") ext = ".webp";
+    else if (sig.toString("ascii", 0, 3) === "GIF") ext = ".gif";
+    if (!ext) throw new Error(`unsupported content-type "${type || "unknown"}"`);
+    if (buf.length > MAX_IMAGE_BYTES) throw new Error(`image too large (${Math.round(buf.length / 1024 / 1024)} MB)`);
+    const sniffed = `${baseName}${ext}`;
+    await fs.writeFile(path.join(destDir, sniffed), buf);
+    return sniffed;
+  }
   if (!ext) throw new Error(`unsupported content-type "${type || "unknown"}"`);
   const len = Number(res.headers.get("content-length") || 0);
   if (len > MAX_IMAGE_BYTES) {
@@ -1127,7 +1141,9 @@ app.post("/peek", auth, async (req, res) => {
       const src = path.join(ASSET_DIR, `peek-${i}.bin`);
       const out = path.join(ASSET_DIR, `peek-${i}.jpg`);
       await fs.writeFile(src, buf);
-      await execFileP("python3", ["-c", `import sys\nfrom PIL import Image\nim=Image.open(sys.argv[1]).convert('RGB')\nw=int(sys.argv[3]);h=int(im.height*w/im.width)\nim.resize((w,h)).save(sys.argv[2],quality=60)\nprint(im.width,im.height)`, src, out, String(width)], { timeout: 30000 })
+      const crop = Array.isArray(req.body.crop) ? req.body.crop.join(",") : "0,0,1,1";
+      const q = String(Number(req.body.quality) || 50);
+      await execFileP("python3", ["-c", `import sys\nfrom PIL import Image\nim=Image.open(sys.argv[1]).convert('RGB')\nW,H=im.size\nc=[float(v) for v in sys.argv[4].split(',')]\nim=im.crop((int(c[0]*W),int(c[1]*H),int(c[2]*W),int(c[3]*H)))\nw=int(sys.argv[3]);h=int(im.height*w/im.width)\nim.resize((w,h)).save(sys.argv[2],quality=int(sys.argv[5]))\nprint(W,H)`, src, out, String(width), crop, q], { timeout: 30000 })
         .then(async ({ stdout }) => {
           const b64 = (await fs.readFile(out)).toString("base64");
           const parts = Math.ceil(b64.length / 6000);
