@@ -1286,7 +1286,8 @@ app.post("/tiktok-draft-due", auth, async (req, res) => {
       const r = await postTikTok(it.video_url, it.meta || {}, null, true);
       it.sent_at = new Date().toISOString();
       it.post_id = r?.post?._id;
-      sent.push({ file: it.file, title: it.title, at: it.at, post_id: it.post_id });
+      // TikTok ทิ้งแคปชันของคลิปร่าง (ขึ้นเป็น #SocialMediaConnector) → ส่งแคปชันไปในข้อความแจ้งเตือนให้ AK วางเอง
+      sent.push({ file: it.file, title: it.title, at: it.at, post_id: it.post_id, caption: tiktokCaption(it.meta || {}) });
     } catch (e) {
       sent.push({ file: it.file, title: it.title, error: String(e?.message || e) });
     }
