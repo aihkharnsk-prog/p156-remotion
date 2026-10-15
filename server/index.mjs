@@ -1156,7 +1156,7 @@ app.post("/fb-news", auth, async (req, res) => {
       }) });
       post = { id: r?.post?._id, status: r?.post?.status, when };
     }
-    console.log(`[fb-news] ${JSON.stringify({ image_url, post })}`);
+    console.log(`[fb-news] ${JSON.stringify({ image_url, post, headline: String(spec.headline || "").replace(/[*\n]/g, " ").slice(0, 120), image_src: spec.image_url || null })}`);
     res.json({ image_url, post });
   } catch (e) {
     console.log(`[fb-news] error ${String(e?.message || e).slice(0, 300)}`);
