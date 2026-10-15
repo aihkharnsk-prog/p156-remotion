@@ -1125,6 +1125,45 @@ app.post("/tiktok-brand", auth, async (req, res) => {
 });
 
 // บันทึกข้อมูลที่ Make ส่งมาลง log (ใช้ตรวจสถานะคลิปบน YouTube): POST /echo
+// ---------- ข่าวการ์ดลงเพจ Facebook ----------
+// POST /fb-news {spec:{game,accent,tag,headline,bullets,date,source,image_url?}, text, at?, publish?:bool}
+//   publish ไม่ใส่/false = สร้างภาพอย่างเดียว (ดูตัวอย่าง) → คืน image_url
+//   publish:true = โพสต์ภาพ + ข้อความลงเพจผ่าน Zernio (ตั้งเวลาได้ด้วย at) + คอมเมนต์แรกลิงก์เว็บ
+app.post("/fb-news", auth, async (req, res) => {
+  try {
+    const spec = { ...(req.body?.spec || {}) };
+    const id = `news-${Date.now().toString(36)}-${randomUUID().slice(0, 6)}`;
+    const dir = path.join(ASSET_DIR, id);
+    await fs.mkdir(dir, { recursive: true });
+    if (spec.image_url) {
+      try { spec.image = path.join(dir, await downloadImage(String(spec.image_url), dir, "img")); } catch (e) { console.warn(`[fb-news] image skipped: ${e?.message || e}`); }
+    }
+    const specFile = path.join(dir, "spec.json");
+    await fs.writeFile(specFile, JSON.stringify(spec));
+    const out = path.join(OUT_DIR, `${id}.jpg`);
+    await execFileP("python3", [path.join(__dirname, "news_card.py"), out, path.join(__dirname, "..", "public", "fonts"), specFile], { timeout: 60000 });
+    const image_url = `${PUBLIC_BASE_URL}/videos/${id}.jpg`;
+    let post = null;
+    if (req.body?.publish) {
+      const accountId = await facebookAccountId();
+      const at = req.body.at;
+      const when = at && Date.parse(at) > Date.now() + 5 * 60 * 1000 ? new Date(at).toISOString() : null;
+      const r = await zernio("/posts", { method: "POST", body: JSON.stringify({
+        content: String(req.body.text || spec.headline || "").replace(/\*/g, "").slice(0, 5000),
+        mediaItems: [{ type: "image", url: image_url }],
+        platforms: [{ platform: "facebook", accountId, platformSpecificData: { firstComment: FB_FIRST_COMMENT } }],
+        ...(when ? { scheduledFor: when, timezone: "UTC" } : { publishNow: true }),
+      }) });
+      post = { id: r?.post?._id, status: r?.post?.status, when };
+    }
+    console.log(`[fb-news] ${JSON.stringify({ image_url, post })}`);
+    res.json({ image_url, post });
+  } catch (e) {
+    console.log(`[fb-news] error ${String(e?.message || e).slice(0, 300)}`);
+    res.status(500).json({ error: String(e?.message || e) });
+  }
+});
+
 // ตรวจรูปจากเครื่อง Claude ไม่ได้ (เน็ตถูกจำกัด) — ให้ renderer ดึงรูปแล้วย่อเป็น JPEG เล็กๆ พิมพ์ base64 ลง log
 // POST /peek {urls:[...], width?:360}  → log "[peek] <i> <part>/<n> <b64>"
 // POST /peek-page {url} → log รายการรูปทั้งหมดในหน้าเว็บ (og:image, img src/data-src, alt)
