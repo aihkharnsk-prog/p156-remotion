@@ -52,16 +52,38 @@ d.text(((x0 + x1) / 2, 104), tag, font=tf, fill=(255, 255, 255), anchor="mm")
 d.line((M, 164, W - M, 164), fill=GOLD + (170,), width=3)
 
 
+THAI_MARKS = set(chr(c) for c in list(range(0x0E31, 0x0E32)) + list(range(0x0E33, 0x0E3B)) + list(range(0x0E47, 0x0E4F)))
+THAI_LEAD = set("เแโใไ")
+
+
+def clusters(word):
+    out = []
+    for ch in word:
+        if out and (ch in THAI_MARKS or out[-1][-1] in THAI_LEAD):
+            out[-1] += ch
+        else:
+            out.append(ch)
+    return out
+
+
 def wrap(text, font, maxw):
+    W_ = lambda t: d.textlength(t.replace("*", ""), font=font)
     lines = []
     for para in str(text).split("\n"):
         cur = ""
         for word in para.split(" "):
             t = (cur + " " + word).strip()
-            if d.textlength(t.replace("*", ""), font=font) <= maxw or not cur:
-                cur = t
-            else:
-                lines.append(cur); cur = word
+            if W_(t) <= maxw or not cur and W_(word) <= maxw:
+                cur = t; continue
+            if cur and W_(word) <= maxw:
+                lines.append(cur); cur = word; continue
+            # คำไทยยาวไม่มีเว้นวรรค: ตัดตามตัวอักษร (ไม่แยกสระ/วรรณยุกต์ออกจากพยัญชนะ)
+            for cl in clusters(word):
+                t = (cur + (" " if cur and not cur.endswith(" ") and cl == word[:len(cl)] else "") + cl)
+                if W_(t) <= maxw or not cur:
+                    cur = t
+                else:
+                    lines.append(cur); cur = cl
         lines.append(cur)
     return lines
 
@@ -129,7 +151,7 @@ if side:
         done = False
         for hs in (96, 88, 80, 72, 64):
             hf = F("Kanit-ExtraBold.ttf", hs); hl = wrap(head, hf, W - 2 * M)
-            if len(hl) > 3:
+            if len(hl) > max(3, head.count("\n") + 1) or (len(hl) > head.count("\n") + 1 and hs > 64):
                 continue
             for bs in (36, 34, 32, 30, 28):
                 bf = F("Kanit-Medium.ttf", bs); bls = [wrap(b, bf, cw) for b in bullets]
