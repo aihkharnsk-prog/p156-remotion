@@ -1111,6 +1111,55 @@ app.post("/tiktok-brand", auth, async (req, res) => {
 });
 
 // บันทึกข้อมูลที่ Make ส่งมาลง log (ใช้ตรวจสถานะคลิปบน YouTube): POST /echo
+// ตรวจรูปจากเครื่อง Claude ไม่ได้ (เน็ตถูกจำกัด) — ให้ renderer ดึงรูปแล้วย่อเป็น JPEG เล็กๆ พิมพ์ base64 ลง log
+// POST /peek {urls:[...], width?:360}  → log "[peek] <i> <part>/<n> <b64>"
+// POST /peek-page {url} → log รายการรูปทั้งหมดในหน้าเว็บ (og:image, img src/data-src, alt)
+const UA = { "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36", accept: "*/*" };
+app.post("/peek", auth, async (req, res) => {
+  const urls = (req.body.urls || []).slice(0, 8);
+  const width = Math.min(Number(req.body.width) || 360, 600);
+  res.json({ ok: true, n: urls.length });
+  for (let i = 0; i < urls.length; i++) {
+    const u = urls[i];
+    try {
+      const r = await fetch(u, { headers: { ...UA, referer: new URL(u).origin + "/" } });
+      const buf = Buffer.from(await r.arrayBuffer());
+      const src = path.join(ASSET_DIR, `peek-${i}.bin`);
+      const out = path.join(ASSET_DIR, `peek-${i}.jpg`);
+      await fs.writeFile(src, buf);
+      await execFileP("python3", ["-c", `import sys\nfrom PIL import Image\nim=Image.open(sys.argv[1]).convert('RGB')\nw=int(sys.argv[3]);h=int(im.height*w/im.width)\nim.resize((w,h)).save(sys.argv[2],quality=60)\nprint(im.width,im.height)`, src, out, String(width)], { timeout: 30000 })
+        .then(async ({ stdout }) => {
+          const b64 = (await fs.readFile(out)).toString("base64");
+          const parts = Math.ceil(b64.length / 6000);
+          console.log(`[peek] ${i} meta ${r.status} ${r.headers.get("content-type")} orig ${stdout.trim()} ${u}`);
+          for (let p = 0; p < parts; p++) console.log(`[peek] ${i} ${p + 1}/${parts} ${b64.slice(p * 6000, (p + 1) * 6000)}`);
+        });
+    } catch (e) {
+      console.log(`[peek] ${i} error ${String(e.message || e).slice(0, 200)} ${u}`);
+    }
+  }
+});
+app.post("/peek-page", auth, async (req, res) => {
+  const u = req.body.url;
+  res.json({ ok: true });
+  try {
+    const r = await fetch(u, { headers: UA });
+    const html = await r.text();
+    const found = [];
+    for (const m of html.matchAll(/<meta[^>]+(?:property|name)=["'](?:og:image|twitter:image)["'][^>]*content=["']([^"']+)/gi)) found.push(`og ${m[1]}`);
+    for (const m of html.matchAll(/<img\b[^>]*>/gi)) {
+      const tag = m[0];
+      const s = (tag.match(/\s(?:data-src|data-lazy-src|src)=["']([^"']+)/i) || [])[1];
+      const alt = (tag.match(/\salt=["']([^"']*)/i) || [])[1] || "";
+      if (s && !s.startsWith("data:")) found.push(`img ${s} | ${alt.slice(0, 80)}`);
+    }
+    console.log(`[peek-page] ${r.status} ${u} title=${(html.match(/<title>([^<]*)/i) || [])[1] || ""} n=${found.length}`);
+    for (const f of found.slice(0, 80)) console.log(`[peek-page] ${f}`);
+  } catch (e) {
+    console.log(`[peek-page] error ${String(e.message || e).slice(0, 200)} ${u}`);
+  }
+});
+
 app.post("/echo", auth, (req, res) => {
   console.log(`[echo] ${JSON.stringify(req.body).slice(0, 20000)}`);
   res.json({ ok: true });
