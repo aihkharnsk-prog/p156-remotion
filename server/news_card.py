@@ -76,54 +76,102 @@ if S.get("image"):
         print("image skipped:", e); src = None
 
 head = S.get("headline", "")
-bullets = S.get("bullets", [])[:5]
+bullets = S.get("bullets", [])[:6]
 game = S.get("game", "")
-PIC_MAX, PIC_MIN = 700, 560  # รูปการ์ดจริงต้องเด่น — ตัวหนังสือย่อก่อน แล้วค่อยหดรูป
-for hs, bs in ((112, 46), (100, 44), (92, 42), (84, 40), (76, 38), (68, 36), (60, 34), (54, 32)):
-    hf, bf = F("Kanit-ExtraBold.ttf", hs), F("Kanit-Medium.ttf", bs)
-    hl = wrap(head, hf, W - 2 * M)
-    bls = [wrap(b, bf, W - 2 * M - 48) for b in bullets]
-    th = (64 if game else 0) + len(hl) * int(hs * 1.2) + 36 + sum(len(x) * int(bs * 1.38) + 18 for x in bls) - 18
-    room = BOT - TOP - th - (40 if src else 0)
-    if room >= (PIC_MIN if src else 0):
-        break
-pic = None
-if src is not None:
-    bh = max(160, min(PIC_MAX, room))
-    r = min((W - 2 * M) / src.width, bh / src.height)
-    pic = src.resize((int(src.width * r), int(src.height * r)), Image.LANCZOS)
-h = th + (pic.height + 40 if pic else 0)
-yy = TOP + max(0, (BOT - TOP - h) // 2)
+SPACE = BOT - TOP
 
-if game:
-    d.text((M, yy + 20), game, font=F("Poppins-Bold.ttf", 34), fill=ACC, anchor="lm"); yy += 64
-if pic:
-    px = (W - pic.width) // 2
+
+def draw_pic(pic, px, py):
+    global d
     sh = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    ImageDraw.Draw(sh).rounded_rectangle((px + 10, yy + 16, px + pic.width + 10, yy + pic.height + 16), radius=24, fill=(0, 0, 0, 170))
+    ImageDraw.Draw(sh).rounded_rectangle((px + 10, py + 16, px + pic.width + 10, py + pic.height + 16), radius=24, fill=(0, 0, 0, 170))
     im.alpha_composite(sh.filter(ImageFilter.GaussianBlur(14)))
     m = Image.new("L", pic.size, 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, pic.width - 1, pic.height - 1), radius=24, fill=255)
-    im.paste(pic, (px, yy), m); d = ImageDraw.Draw(im)
-    yy += pic.height + 40
+    im.paste(pic, (px, py), m); d = ImageDraw.Draw(im)
 
-hi = False  # สถานะสีเน้นต่อเนื่องข้ามบรรทัด
-for line in hl:
-    x = M
-    for k, part in enumerate(line.split("*")):
-        if k > 0:
-            hi = not hi
-        col = ACC if hi else (255, 255, 255)
-        d.text((x + 3, yy + 4), part, font=hf, fill=(0, 0, 0))
-        d.text((x, yy), part, font=hf, fill=col)
-        x += d.textlength(part, font=hf)
-    yy += int(hs * 1.2)
-yy += 36
-lh = int(bs * 1.38)
-for bl in bls:
-    d.ellipse((M + 2, yy + lh // 2 - 9, M + 20, yy + lh // 2 + 9), fill=ACC)
-    for line in bl:
-        d.text((M + 48, yy), line, font=bf, fill=(234, 234, 242)); yy += lh
-    yy += 18
+
+def draw_head(hl, hf, hs, yy):
+    hi = False  # สถานะสีเน้นต่อเนื่องข้ามบรรทัด
+    for line in hl:
+        x = M
+        for k, part in enumerate(line.split("*")):
+            if k > 0:
+                hi = not hi
+            col = ACC if hi else (255, 255, 255)
+            d.text((x + 3, yy + 4), part, font=hf, fill=(0, 0, 0))
+            d.text((x, yy), part, font=hf, fill=col)
+            x += d.textlength(part, font=hf)
+        yy += int(hs * 1.2)
+    return yy
+
+
+def draw_bullets(bls, bf, bs, x0, yy, gap):
+    lh = int(bs * 1.38)
+    for bl in bls:
+        d.ellipse((x0 + 2, yy + lh // 2 - 8, x0 + 18, yy + lh // 2 + 8), fill=ACC)
+        for line in bl:
+            d.text((x0 + 36, yy), line, font=bf, fill=(234, 234, 242)); yy += lh
+        yy += gap
+    return yy
+
+
+def bul_h(bls, bs, gap):
+    return sum(len(x) * int(bs * 1.38) + gap for x in bls) - gap if bls else 0
+
+
+GH = 64 if game else 0
+side = src is not None and src.height > src.width * 1.15 and len(bullets) >= 3
+if side:
+    # สองคอลัมน์: การ์ดใหญ่ซ้าย รายละเอียดขวา (รูปไม่ต้องเล็กลงเมื่อข้อความเยอะ)
+    for PW in (440, 420, 400, 380, 360):
+        ph = int(src.height * PW / src.width)
+        x0 = M + PW + 40; cw = W - M - x0 - 36
+        done = False
+        for hs in (96, 88, 80, 72, 64):
+            hf = F("Kanit-ExtraBold.ttf", hs); hl = wrap(head, hf, W - 2 * M)
+            if len(hl) > 3:
+                continue
+            for bs in (36, 34, 32, 30, 28):
+                bf = F("Kanit-Medium.ttf", bs); bls = [wrap(b, bf, cw) for b in bullets]
+                bh = bul_h(bls, bs, 22)
+                tot = GH + len(hl) * int(hs * 1.2) + 32 + max(ph, bh)
+                if bh <= ph + 40 and tot <= SPACE:
+                    done = True; break
+            if done:
+                break
+        if done:
+            break
+    pic = src.resize((PW, ph), Image.LANCZOS)
+    yy = TOP + max(0, (SPACE - tot) // 2)
+    if game:
+        d.text((M, yy + 20), game, font=F("Poppins-Bold.ttf", 34), fill=ACC, anchor="lm"); yy += 64
+    yy = draw_head(hl, hf, hs, yy) + 32
+    row = max(ph, bh)
+    draw_pic(pic, M, yy + (row - ph) // 2)
+    draw_bullets(bls, bf, bs, x0, yy + (row - bh) // 2, 22)
+else:
+    PIC_MAX, PIC_MIN = 700, 560  # รูปการ์ดจริงต้องเด่น — ตัวหนังสือย่อก่อน แล้วค่อยหดรูป
+    for hs, bs in ((112, 46), (100, 44), (92, 42), (84, 40), (76, 38), (68, 36), (60, 34), (54, 32)):
+        hf, bf = F("Kanit-ExtraBold.ttf", hs), F("Kanit-Medium.ttf", bs)
+        hl = wrap(head, hf, W - 2 * M)
+        bls = [wrap(b, bf, W - 2 * M - 48) for b in bullets]
+        th = GH + len(hl) * int(hs * 1.2) + 36 + bul_h(bls, bs, 18)
+        room = SPACE - th - (40 if src else 0)
+        if room >= (PIC_MIN if src else 0):
+            break
+    pic = None
+    if src is not None:
+        bh = max(160, min(PIC_MAX, room))
+        r = min((W - 2 * M) / src.width, bh / src.height)
+        pic = src.resize((int(src.width * r), int(src.height * r)), Image.LANCZOS)
+    h = th + (pic.height + 40 if pic else 0)
+    yy = TOP + max(0, (SPACE - h) // 2)
+    if game:
+        d.text((M, yy + 20), game, font=F("Poppins-Bold.ttf", 34), fill=ACC, anchor="lm"); yy += 64
+    if pic:
+        draw_pic(pic, (W - pic.width) // 2, yy); yy += pic.height + 40
+    yy = draw_head(hl, hf, hs, yy) + 36
+    draw_bullets(bls, bf, bs, M, yy, 18)
 
 # ---------- ท้าย ----------
 d.line((M, H - 150, W - M, H - 150), fill=GOLD + (130,), width=2)
