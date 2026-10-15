@@ -5,7 +5,7 @@
     "title": "การ์ดหลังขาวที่มีแค่ 2 ใบในโลก | การ์ดแพงระดับตำนาน #shorts",
     "description": "Blastoise Commissioned Presentation Galaxy Star Hologram การ์ดตัวอย่างที่ Wizards of the Coast พิมพ์ปี 1998 เพื่อให้ดูว่าการ์ดโปเกมอนฉบับอังกฤษจะหน้าตาแบบไหน ด้านหลังขาวโล่ง เชื่อว่ามีแค่สองใบ ขายได้ 360,000 ดอลลาร์\n\n👇 ใบที่สองหายไปไหน คุณคิดว่ายังมีอยู่ไหม? คอมเมนต์บอกหน่อย\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n#shorts #โปเกมอน #การ์ดโปเกมอน #pokemoncards #การ์ดแพง",
     "thumb": {
-      "image_url": "https://images.pokemontcg.io/base1/2_hires.png",
+      "image_url": "https://images.ctfassets.net/t8bripszr2o9/newsimg-c4a83db53a061d4b388dc08236b11e7e/8cb203c16361ce6d6f02f06b92c0362f/Proto_3719376_O_1__D_20201203165643569.jpg",
       "hook": "หลังขาว\nมีแค่ 2 ใบ!",
       "badge": "ตำนาน #4",
       "sub": "การ์ดแพงระดับตำนาน"
@@ -35,7 +35,7 @@
         }
       ],
       "title": "หลัง*ขาวโล่ง*\nแต่แพงสุดๆ",
-      "image_url": "https://images.pokemontcg.io/base1/2_hires.png"
+      "image_url": "https://images.ctfassets.net/t8bripszr2o9/newsimg-c4a83db53a061d4b388dc08236b11e7e/8cb203c16361ce6d6f02f06b92c0362f/Proto_3719376_O_1__D_20201203165643569.jpg"
     },
     {
       "beat": "reveal",
@@ -57,7 +57,7 @@
       ],
       "title": "Blastoise",
       "subtitle": "การ์ดตัวอย่าง • 1998",
-      "image_url": "https://images.pokemontcg.io/base1/2_hires.png"
+      "image_url": "https://images.ctfassets.net/t8bripszr2o9/newsimg-c4a83db53a061d4b388dc08236b11e7e/8cb203c16361ce6d6f02f06b92c0362f/Proto_3719376_O_1__D_20201203165643569.jpg"
     },
     {
       "beat": "timeline",
@@ -97,24 +97,24 @@
     {
       "beat": "versions",
       "duration": 4,
-      "text": "นี่คือฉบับ *ญี่ปุ่น* กับ *อังกฤษ*",
+      "text": "ด้านหน้า กับ *ด้านหลังขาวโล่ง*",
       "parts": [
         {
-          "text": "นี่คือฉบับ *ญี่ปุ่น* กับ *อังกฤษ*",
-          "say": "นี่คือฉบับญี่ปุ่น กับฉบับอังกฤษ."
+          "text": "ด้านหน้า กับ *ด้านหลังขาวโล่ง*",
+          "say": "นี่คือด้านหน้า กับด้านหลังที่ขาวโล่ง."
         },
         {
-          "text": "ใบตัวอย่าง *มุมเหลี่ยม* และภาพไม่เหมือนกัน",
-          "say": "ใบตัวอย่าง มุมเป็นเหลี่ยม และภาพไม่เหมือนกัน."
+          "text": "มุมการ์ด *เป็นเหลี่ยม* ไม่มน",
+          "say": "มุมเป็นเหลี่ยม และภาพก็ต่างจากใบที่วางขายจริง."
         }
       ],
       "images": [
-        "https://images.scrydex.com/pokemon/base1_ja-32/large",
-        "https://images.pokemontcg.io/base1/2_hires.png"
+        "https://images.ctfassets.net/t8bripszr2o9/newsimg-c4a83db53a061d4b388dc08236b11e7e/8cb203c16361ce6d6f02f06b92c0362f/Proto_3719376_O_1__D_20201203165643569.jpg",
+        "https://images.ctfassets.net/t8bripszr2o9/newsimg-0c5c51b0c45a7f9824f0c123d27ae676/ba88fd17015d4c2df2551b948f24c3df/Proto_3719376_R_1__D_20201203165658173.jpg"
       ],
       "labels": [
-        "ญี่ปุ่น 1996",
-        "อังกฤษ 1999"
+        "ด้านหน้า",
+        "ด้านหลัง • ขาวโล่ง"
       ]
     },
     {
@@ -139,7 +139,7 @@
       "title": "ทั้งโลกมีแค่",
       "value": 2,
       "subtitle": "ใบ",
-      "image_url": "https://images.pokemontcg.io/base1/2_hires.png"
+      "image_url": "https://images.ctfassets.net/t8bripszr2o9/newsimg-c4a83db53a061d4b388dc08236b11e7e/8cb203c16361ce6d6f02f06b92c0362f/Proto_3719376_O_1__D_20201203165643569.jpg"
     },
     {
       "beat": "bignum",
@@ -159,7 +159,7 @@
       "title": "ขายไปที่",
       "value": 360000,
       "subtitle": "ดอลลาร์สหรัฐ",
-      "image_url": "https://images.pokemontcg.io/base1/2_hires.png"
+      "image_url": "https://images.ctfassets.net/t8bripszr2o9/newsimg-c4a83db53a061d4b388dc08236b11e7e/8cb203c16361ce6d6f02f06b92c0362f/Proto_3719376_O_1__D_20201203165643569.jpg"
     },
     {
       "beat": "card",
@@ -179,7 +179,7 @@
           "say": "กดติดตามไว้ ยังมีการ์ดตำนานอีกเยอะ."
         }
       ],
-      "image_url": "https://images.pokemontcg.io/base1/2_hires.png"
+      "image_url": "https://images.ctfassets.net/t8bripszr2o9/newsimg-c4a83db53a061d4b388dc08236b11e7e/8cb203c16361ce6d6f02f06b92c0362f/Proto_3719376_O_1__D_20201203165643569.jpg"
     },
     {
       "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",

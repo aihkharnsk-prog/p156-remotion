@@ -5,7 +5,7 @@
     "title": "ลิซาร์ดอนที่ขาดไปอย่างเดียว แต่แพงกว่า 50 ล้านบาท | การ์ดแพงระดับตำนาน #shorts",
     "description": "ลิซาร์ดอนชุดแรกญี่ปุ่นปี 1996 ล็อตแรกที่ไม่มีสัญลักษณ์ความหายาก (No Rarity) เกรด PSA 10 มีแค่ราวสิบใบ มีนาคม 2026 ขายได้ 1.7 ล้านดอลลาร์\n\n👇 ลองไปเช็กการ์ดเก่าที่บ้าน มุมขวาล่างมีสัญลักษณ์ไหม? คอมเมนต์บอกหน่อย\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n#shorts #โปเกมอน #การ์ดโปเกมอน #pokemoncards #การ์ดแพง",
     "thumb": {
-      "image_url": "https://images.scrydex.com/pokemon/base1_ja-21/large",
+      "image_url": "https://dlnxybxfzkpeatkjcztb.supabase.co/storage/v1/object/public/website-images/cards-asp/2030953-1737771457531.jpg",
       "hook": "ขาดไปอย่างเดียว\nแพง 50 ล้าน!",
       "badge": "ตำนาน #2",
       "sub": "การ์ดแพงระดับตำนาน"
@@ -35,7 +35,7 @@
         }
       ],
       "title": "ขาดไป*อย่างเดียว*",
-      "image_url": "https://images.scrydex.com/pokemon/base1_ja-21/large"
+      "image_url": "https://dlnxybxfzkpeatkjcztb.supabase.co/storage/v1/object/public/website-images/cards-asp/2030953-1737771457531.jpg"
     },
     {
       "beat": "reveal",
@@ -57,7 +57,7 @@
       ],
       "title": "ลิซาร์ดอน",
       "subtitle": "No Rarity • 1996",
-      "image_url": "https://images.scrydex.com/pokemon/base1_ja-21/large"
+      "image_url": "https://dlnxybxfzkpeatkjcztb.supabase.co/storage/v1/object/public/website-images/cards-asp/2030953-1737771457531.jpg"
     },
     {
       "beat": "zoom",
@@ -83,9 +83,9 @@
       ],
       "chapter": "จุดสังเกต",
       "title": "สัญลักษณ์ที่*หายไป*",
-      "image_url": "https://images.scrydex.com/pokemon/base1_ja-21/large",
-      "focus_x": 88,
-      "focus_y": 93,
+      "image_url": "https://dlnxybxfzkpeatkjcztb.supabase.co/storage/v1/object/public/website-images/cards-asp/2030953-1737771457531.jpg",
+      "focus_x": 80,
+      "focus_y": 94,
       "focus_zoom": 2.6
     },
     {
@@ -134,25 +134,25 @@
       "value": 1700000,
       "from": 324000,
       "subtitle": "ดอลลาร์สหรัฐ",
-      "image_url": "https://images.scrydex.com/pokemon/base1_ja-21/large"
+      "image_url": "https://dlnxybxfzkpeatkjcztb.supabase.co/storage/v1/object/public/website-images/cards-asp/2030953-1737771457531.jpg"
     },
     {
       "beat": "versions",
       "duration": 4,
-      "text": "ฉบับอังกฤษ *1st Edition* ก็เพิ่งทะลุล้าน",
+      "text": "ซ้าย *ล็อตแรก* ขวา *ล็อตต่อมา*",
       "parts": [
         {
-          "text": "ฉบับอังกฤษ *1st Edition* ก็เพิ่งทะลุล้าน",
-          "say": "ฉบับอังกฤษ เฟิร์สอิดิชั่น ก็เพิ่งทะลุล้านดอลลาร์."
+          "text": "ซ้าย *ล็อตแรก* ขวา *ล็อตต่อมา*",
+          "say": "ซ้ายคือล็อตแรก ส่วนขวาคือล็อตต่อมา ที่มีดาวบอกความหายากแล้ว."
         }
       ],
       "images": [
-        "https://images.scrydex.com/pokemon/base1_ja-21/large",
-        "https://images.pokemontcg.io/base1/4_hires.png"
+        "https://dlnxybxfzkpeatkjcztb.supabase.co/storage/v1/object/public/website-images/cards-asp/2030953-1737771457531.jpg",
+        "https://images.scrydex.com/pokemon/base1_ja-21/large"
       ],
       "labels": [
-        "ญี่ปุ่น 1996",
-        "อังกฤษ 1999"
+        "ล็อตแรก • ไม่มีดาว",
+        "ล็อตต่อมา • มีดาว"
       ]
     },
     {
@@ -169,7 +169,7 @@
           "say": "กดติดตามไว้ ยังมีการ์ดตำนานอีกเยอะ."
         }
       ],
-      "image_url": "https://images.scrydex.com/pokemon/base1_ja-21/large"
+      "image_url": "https://dlnxybxfzkpeatkjcztb.supabase.co/storage/v1/object/public/website-images/cards-asp/2030953-1737771457531.jpg"
     },
     {
       "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
