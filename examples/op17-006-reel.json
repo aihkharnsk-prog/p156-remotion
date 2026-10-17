@@ -59,14 +59,18 @@
           "text": "ในมังงะ เขา*แทบไม่มีบท*",
           "say": "ในมังงะ เขาแทบไม่มีบทพูด. และไม่เคยมีใครเห็นเขาสู้เต็มที่สักครั้ง.",
           "panel": {
-            "x": 50,
-            "y": 30,
-            "zoom": 1.4
+            "img": 1,
+            "x": 55,
+            "y": 22,
+            "zoom": 1.8
           }
         }
       ],
       "title": "หัวหน้าหน่วย\nที่*ไม่มีใครรู้จัก*",
-      "sticker": "เพิ่งรู้จัก? กดหัวใจเลย"
+      "sticker": "เพิ่งรู้จัก? กดหัวใจเลย",
+      "images": [
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-044.png"
+      ]
     },
     {
       "layout": "effect",
@@ -155,15 +159,16 @@
           "text": "คนที่ไม่มีใครรู้จัก กลายเป็น*ใบที่ใครก็จำได้*",
           "say": "คนที่ไม่มีใครรู้จัก เลยกลายเป็นการ์ดที่ใครเห็นก็จำได้.",
           "panel": {
-            "img": 0,
-            "x": 47,
-            "y": 20,
-            "zoom": 2.0
+            "img": 2,
+            "x": 45,
+            "y": 22,
+            "zoom": 1.9
           }
         }
       ],
       "images": [
-        "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-006_p1.png"
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-006_p1.png",
+        "https://en.onepiece-cardgame.com/images/cardlist/card/ST15-003.png"
       ]
     },
     {

@@ -68,11 +68,15 @@
           "text": "เพื่อไปช่วย *โทกิ*",
           "say": "เพื่อไปช่วยผู้หญิงคนหนึ่ง ชื่อโทกิ. ที่ต่อมา กลายเป็นภรรยาของเขา.",
           "panel": {
-            "x": 60,
-            "y": 16,
-            "zoom": 2.4
+            "img": 1,
+            "x": 35,
+            "y": 22,
+            "zoom": 1.9
           }
         }
+      ],
+      "images": [
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-031.png"
       ]
     },
     {
@@ -84,7 +88,8 @@
           "text": "หนวดขาว*รับเขาเข้ากลุ่ม*",
           "say": "สุดท้าย หนวดขาวก็รับเขาเข้ากลุ่ม.",
           "panel": {
-            "x": 55,
+            "img": 1,
+            "x": 45,
             "y": 22,
             "zoom": 2.0
           }
@@ -96,7 +101,10 @@
       ],
       "name": "KOUZUKI ODEN",
       "subtitle": "หน่วยที่ 2",
-      "sticker": "ชอบเรื่องนี้? กดหัวใจเลย"
+      "sticker": "ชอบเรื่องนี้? กดหัวใจเลย",
+      "images": [
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-031.png"
+      ]
     },
     {
       "layout": "effect",
@@ -133,22 +141,27 @@
           "text": "ต่อมาเขาไปเรือ*โรเจอร์*",
           "say": "หลายปีต่อมา เขาย้ายไปอยู่เรือของโรเจอร์.",
           "panel": {
-            "x": 55,
-            "y": 24,
-            "zoom": 1.7,
-            "bw": true
+            "img": 1,
+            "x": 50,
+            "y": 26,
+            "zoom": 1.8
           }
         },
         {
           "text": "เพื่อช่วย*ถอดรหัสโพเนกลีฟ*",
           "say": "เพราะโรเจอร์ ต้องการให้เขาช่วยถอดรหัสโพเนกลีฟ.",
           "panel": {
-            "x": 40,
-            "y": 32,
-            "zoom": 1.5,
+            "img": 2,
+            "x": 45,
+            "y": 24,
+            "zoom": 1.8,
             "sfx": "ปึง!"
           }
         }
+      ],
+      "images": [
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP13-064.png",
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-030.png"
       ]
     },
     {

@@ -51,7 +51,8 @@
       "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005.png",
       "images": [
         "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005_p1.png",
-        "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005_p2.png"
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005_p2.png",
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-004.png"
       ],
       "duration": 4,
       "parts": [
@@ -69,10 +70,10 @@
           "text": "สิ่งที่เขาอยากได้ที่สุด คือ *ครอบครัว*",
           "say": "เพราะเขาไม่เคยมีครอบครัว. สิ่งที่เขาอยากได้มากที่สุด คือครอบครัว.",
           "panel": {
-            "img": 1,
+            "img": 3,
             "x": 45,
-            "y": 20,
-            "zoom": 2.0
+            "y": 16,
+            "zoom": 1.9
           }
         }
       ],
@@ -87,10 +88,10 @@
           "text": "*เอส* เคยลอบฆ่าเขาเป็นร้อยครั้ง",
           "say": "แม้แต่เอส ที่เคยพยายามลอบฆ่าเขามาเป็นร้อยครั้ง.",
           "panel": {
-            "img": 1,
-            "x": 40,
-            "y": 24,
-            "zoom": 1.9,
+            "img": 3,
+            "x": 50,
+            "y": 20,
+            "zoom": 2.0,
             "sfx": "ฉึก!"
           }
         },
@@ -98,16 +99,18 @@
           "text": "สุดท้ายกลับเรียกเขาว่า *พ่อ*",
           "say": "สุดท้าย ก็กลายมาเป็นลูกคนหนึ่ง และเรียกเขาว่า พ่อ.",
           "panel": {
-            "img": 2,
+            "img": 4,
             "x": 55,
-            "y": 18,
-            "zoom": 2.2
+            "y": 20,
+            "zoom": 2.0
           }
         }
       ],
       "images": [
         "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005_p1.png",
-        "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005_p2.png"
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005_p2.png",
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-013.png",
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-119.png"
       ]
     },
     {
@@ -167,14 +170,17 @@
           "text": "*วันพีซ มีอยู่จริง*",
           "say": "ก่อนจากไป เขาตะโกนบอกทั้งโลกว่า วันพีซ มีอยู่จริง.",
           "panel": {
-            "img": 0,
-            "x": 45,
-            "y": 20,
-            "zoom": 1.6
+            "img": 1,
+            "x": 55,
+            "y": 16,
+            "zoom": 1.8
           }
         }
       ],
-      "title": "คำพูดสุดท้าย\nที่*เขย่าทั้งโลก*"
+      "title": "คำพูดสุดท้าย\nที่*เขย่าทั้งโลก*",
+      "images": [
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-043.png"
+      ]
     },
     {
       "layout": "poll",
