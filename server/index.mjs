@@ -1256,6 +1256,26 @@ app.post("/disk", auth, async (req, res) => {
   for (const n of (Array.isArray(req.body?.delete_out) ? req.body.delete_out : []).map((x) => path.basename(String(x)))) {
     await fs.rm(path.join(OUT_DIR, n), { force: true }).then(() => out.deleted.push(n)).catch(() => {});
   }
+  if (req.body?.prune_unreferenced) {
+    // ลบคลิปเก่าที่ไม่มีโพสต์ตั้งเวลา (Zernio) หรือคิว TikTok ที่ยังไม่ส่งอ้างถึง และไม่อยู่ในรายการ keep
+    const refs = new Set((Array.isArray(req.body.keep) ? req.body.keep : []).map(String));
+    const add = (u) => { const m = String(u || "").match(/videos\/([0-9a-f-]{36})/i); if (m) refs.add(m[1]); };
+    try {
+      const r = await zernio("/posts?status=scheduled&limit=200");
+      for (const p of Array.isArray(r) ? r : r.posts || r.data || []) for (const mi of p.mediaItems || []) add(mi.url);
+    } catch (e) {
+      return res.status(500).json({ error: `zernio list failed, nothing deleted: ${String(e?.message || e)}` });
+    }
+    for (const it of await readTtQueue().catch(() => [])) if (!it.sent_at) add(it.video_url);
+    const cutoff = Date.now() - (Number(req.body.older_than_hours) || 3) * 3600 * 1000;
+    out.kept_refs = refs.size;
+    for (const f of await fs.readdir(OUT_DIR).catch(() => [])) {
+      const id = (f.match(/^([0-9a-f-]{36})/i) || [])[1];
+      if (!id || refs.has(id)) continue;
+      const st = await fs.stat(path.join(OUT_DIR, f)).catch(() => null);
+      if (st && st.mtimeMs < cutoff) { await fs.rm(path.join(OUT_DIR, f), { force: true }); out.deleted.push(f); }
+    }
+  }
   if (req.body?.purge_assets) {
     // assets = ไฟล์ชั่วคราวของงาน (รูป/เสียงที่โหลดมา, peek, news, bgm) — ไม่ใช่คลิปที่ลงแล้ว; เก็บไว้แค่คิว TikTok และ outro ของวันนี้
     for (const f of await fs.readdir(ASSET_DIR).catch(() => [])) {
