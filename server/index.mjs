@@ -98,7 +98,7 @@ function tiktokCaption(meta = {}) {
   if (meta.tiktok_caption) return String(meta.tiktok_caption).slice(0, 2200);
   const title = String(meta.title || "").replace(/#shorts/gi, "").trim();
   const first = String(meta.description || "").split("\n\n")[0] || "";
-  return [title, engageLine(title), first, "🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 www.cardzcenter.com",
+  return [title, meta.engage ? String(meta.engage) : engageLine(title), first, "🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 www.cardzcenter.com",
     socialTags(meta)]
     .filter(Boolean).join("\n\n").slice(0, 2200);
 }
