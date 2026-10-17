@@ -359,9 +359,9 @@ const Sticker: React.FC<{ text: string; f: number; d: number }> = ({ text, f, d 
   const out = ez(f, d - 10, d, 1, 0);
   const beat = 1 + Math.max(0, Math.sin(lf / 4.5)) * 0.12;
   return (
-    <div style={{ position: "absolute", right: 36, top: 70, opacity: out, transform: `scale(${pop}) rotate(${4 + Math.sin(lf / 9) * 2}deg)`, transformOrigin: "100% 0%", display: "flex", alignItems: "center", gap: 14, padding: "14px 26px 14px 18px", background: "#fff", border: `6px solid ${INK}`, borderRadius: 60, boxShadow: `10px 10px 0 ${INK}` }}>
-      <div style={{ transform: `scale(${beat})` }}><Heart size={76} /></div>
-      <div style={{ fontFamily: KANIT, fontWeight: 900, fontSize: 46, color: INK, lineHeight: 1.05, maxWidth: 520 }}>{text}</div>
+    <div style={{ position: "absolute", right: 30, top: 40, opacity: out, transform: `scale(${pop}) rotate(${4 + Math.sin(lf / 9) * 2}deg)`, transformOrigin: "100% 0%", display: "flex", alignItems: "center", gap: 18, padding: "18px 36px 18px 22px", background: "#fff", border: `8px solid ${INK}`, borderRadius: 80, boxShadow: `12px 12px 0 ${INK}` }}>
+      <div style={{ transform: `scale(${beat})` }}><Heart size={120} /></div>
+      <div style={{ fontFamily: KANIT, fontWeight: 900, fontSize: 66, color: INK, lineHeight: 1.05, maxWidth: 640 }}>{text}</div>
     </div>
   );
 };
