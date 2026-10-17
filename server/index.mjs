@@ -346,12 +346,20 @@ async function mixMusic(inFile, outFile, musicFile, vol = 0.18, dur = 60) {
     `[0:a]aresample=48000,asplit=2[vo][sc];` +
     `[m][sc]sidechaincompress=threshold=0.02:ratio=6:attack=15:release=450[md];` +
     `[vo][md]amix=inputs=2:duration=first:dropout_transition=0${norm ? ":normalize=0" : ""}${norm ? "" : ",volume=2"}[a]`;
-  const args = (norm) => ["-y", "-i", inFile, "-stream_loop", "-1", "-i", musicFile, "-filter_complex", graph(norm), "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", outFile];
-  try {
-    await runFfmpeg(args(true));
-  } catch {
-    await runFfmpeg(args(false));
+  // เรียงจากดีที่สุด → ง่ายที่สุด (ffmpeg บางรุ่นไม่มี sidechaincompress / amix normalize)
+  const simple = `[1:a]aresample=48000,volume=${v},afade=t=in:d=1.2,afade=t=out:st=${fo}:d=2.5[m];[0:a]aresample=48000[vo];[vo][m]amix=inputs=2:duration=first:dropout_transition=0,volume=2[a]`;
+  const tries = [graph(true), graph(false), simple];
+  let last;
+  for (const g of tries) {
+    try {
+      await runFfmpeg(["-y", "-i", inFile, "-stream_loop", "-1", "-i", musicFile, "-filter_complex", g, "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", outFile]);
+      return g === simple ? "simple" : "ducked";
+    } catch (e) {
+      last = e;
+      console.warn(`[bgm] ${String(e?.message || e).slice(0, 600)}`);
+    }
   }
+  throw last;
 }
 
 // ช่องภาพของ MangaShow ต่อท่อน: {img, x, y, zoom, sfx, bw}
@@ -737,7 +745,7 @@ const runFfmpeg = (args) =>
       execFile(cmd, cmdArgs, { cwd: path.join(__dirname, ".."), timeout: 60000 }, (err, _o, stderr) => {
         if (!err) return resolve();
         if (next) return next();
-        reject(new Error(`ffmpeg failed: ${String(stderr || err.message).slice(-300)}`));
+        reject(new Error(`ffmpeg failed: ${String(stderr || err.message).split("\n").filter((l) => /error|invalid|not found|no such/i.test(l)).slice(-3).join(" | ").slice(0, 400) || String(stderr || err.message).slice(-300)}`));
       });
     tryRun("ffmpeg", args, () =>
       tryRun(path.join(__dirname, "..", "node_modules", ".bin", "remotion"), ["ffmpeg", ...args], null)
