@@ -19,7 +19,7 @@ export type Panel = {
   bw?: boolean; // ขาวดำตั้งแต่แรก
 };
 export type MangaPart = { text: string; audio_url?: string; duration: number; panel?: Panel };
-export type Layout = "wanted" | "panels" | "splash" | "versus" | "effect" | "still";
+export type Layout = "wanted" | "panels" | "splash" | "versus" | "effect" | "still" | "poll";
 export type MangaSlide = Slide & {
   layout?: Layout;
   title?: string;
@@ -27,6 +27,7 @@ export type MangaSlide = Slide & {
   name?: string;
   bounty?: string;
   labels?: string[];
+  sticker?: string; // ป้ายชวนกดไลค์บนหน้านี้ เช่น "เพิ่งรู้? กดหัวใจเลย"
   parts?: MangaPart[];
 };
 export type MangaProps = {
@@ -341,6 +342,85 @@ const StillLayout: React.FC<LP> = ({ s, f, d }) => (
 );
 
 // ---------------------------------------------------------------------
+// หัวใจ (วาดเอง ไม่พึ่งฟอนต์อีโมจิ)
+// ---------------------------------------------------------------------
+const Heart: React.FC<{ size: number; color?: string }> = ({ size, color = "#ff2d55" }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" style={{ display: "block" }}>
+    <path d="M12 21s-7.5-4.6-10-9.3C.3 8.4 2.1 4.5 5.8 4.1c2.2-.2 3.7 1 4.6 2.4.3.4.9.4 1.2 0 .9-1.4 2.4-2.6 4.6-2.4 3.7.4 5.5 4.3 3.8 7.6C19.5 16.4 12 21 12 21z" fill={color} stroke={INK} strokeWidth={1.6} strokeLinejoin="round" />
+  </svg>
+);
+
+// ป้ายชวนกดไลค์ เด้งเข้ามามุมขวาบนของหน้า (ไม่มีเสียงพากย์ ไม่ขัดจังหวะเรื่อง)
+const Sticker: React.FC<{ text: string; f: number; d: number }> = ({ text, f, d }) => {
+  const at = 18;
+  if (f < at) return null;
+  const lf = f - at;
+  const pop = ez(lf, 0, 12, 0, 1, back(2.6));
+  const out = ez(f, d - 10, d, 1, 0);
+  const beat = 1 + Math.max(0, Math.sin(lf / 4.5)) * 0.12;
+  return (
+    <div style={{ position: "absolute", right: 36, top: 70, opacity: out, transform: `scale(${pop}) rotate(${4 + Math.sin(lf / 9) * 2}deg)`, transformOrigin: "100% 0%", display: "flex", alignItems: "center", gap: 14, padding: "14px 26px 14px 18px", background: "#fff", border: `6px solid ${INK}`, borderRadius: 60, boxShadow: `10px 10px 0 ${INK}` }}>
+      <div style={{ transform: `scale(${beat})` }}><Heart size={76} /></div>
+      <div style={{ fontFamily: KANIT, fontWeight: 900, fontSize: 46, color: INK, lineHeight: 1.05, maxWidth: 520 }}>{text}</div>
+    </div>
+  );
+};
+
+// หน้าโพลปิดท้าย: คำถาม + ตัวเลือก 1/2 ให้คนพิมพ์ตอบในคอมเมนต์ + ปุ่มหัวใจ
+// parts: [0] อ่านคำถาม, [1] อ่านตัวเลือก, [2] ชวนคอมเมนต์/ติดตาม
+const PollLayout: React.FC<LP> = ({ s, f, d, starts, acc }) => {
+  const opts = (s.labels || []).slice(0, 2);
+  const optAt = starts[1] ?? Math.round(d * 0.3);
+  const ctaAt = starts[2] ?? Math.round(d * 0.65);
+  const q = String(s.title || "").split("\n");
+  const card = ez(f, 0, 14, 0, 1, back(1.8));
+  return (
+    <AbsoluteFill>
+      <SpeedLines w={W} h={H} cx={540} cy={560} f={f} n={90} op={0.13} />
+      {s.image_url ? (
+        <div style={{ position: "absolute", left: 60, top: 70, width: 250, height: 250 * CARD_AR, transform: `rotate(${-8 * card}deg) scale(${card})`, border: `6px solid ${INK}`, boxShadow: `10px 10px 0 ${INK}`, overflow: "hidden", background: "#fff" }}>
+          <Img src={s.image_url} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+        </div>
+      ) : null}
+      <div style={{ position: "absolute", left: 330, right: 50, top: 120, fontFamily: KANIT, fontWeight: 900, fontSize: 64, color: INK, lineHeight: 1.1, transform: `rotate(-2deg) translateY(${ez(f, 2, 12, -40, 0)}px)`, opacity: ez(f, 2, 10) }}>
+        <span style={{ display: "inline-block", padding: "6px 22px", background: acc, color: "#fff", border: `5px solid ${INK}` }}>คอมเมนต์ตอบหน่อย!</span>
+      </div>
+      <div style={{ position: "absolute", left: 50, right: 50, top: 470, fontFamily: KANIT, fontWeight: 900, lineHeight: 1.08, textAlign: "center" }}>
+        {q.map((ln, i) => {
+          const t = ez(f, 6 + i * 5, 18 + i * 5, 0, 1, back(2));
+          const len = Array.from(ln.replace(/\*/g, "")).length || 1;
+          return (
+            <div key={i} style={{ fontSize: Math.min(124, 1500 / len), color: "#fff", textShadow: `${stroke(9)}, 12px 12px 0 ${INK}`, transform: `scale(${t}) rotate(-2deg)` }}>
+              <Rich text={ln} color={acc} />
+            </div>
+          );
+        })}
+      </div>
+      {opts.map((o, i) => {
+        const lf = f - optAt - i * 8;
+        const t = ez(lf, 0, 14, 0, 1, back(1.6));
+        const pulse = f >= ctaAt ? 1 + Math.max(0, Math.sin((f - ctaAt) / 5 + i * Math.PI)) * 0.05 : 1;
+        return (
+          <div key={i} style={{ position: "absolute", left: 70, right: 70, top: 900 + i * 260, height: 220, display: "flex", alignItems: "center", gap: 30, padding: "0 36px", background: i ? "#fff" : PAPER, border: `7px solid ${INK}`, boxShadow: `14px 14px 0 ${INK}`, transform: `translateX(${(1 - t) * (i ? 1200 : -1200)}px) rotate(${i ? 1.5 : -1.5}deg) scale(${pulse})` }}>
+            <div style={{ flex: "0 0 auto", width: 150, height: 150, borderRadius: 999, background: i ? INK : acc, color: "#fff", fontFamily: KANIT, fontWeight: 900, fontSize: 110, lineHeight: "150px", textAlign: "center", border: `6px solid ${INK}` }}>{i + 1}</div>
+            <div style={{ fontFamily: KANIT, fontWeight: 900, fontSize: Math.min(78, 1500 / (Array.from(o).length || 1)), color: INK, lineHeight: 1.1 }}>{o}</div>
+          </div>
+        );
+      })}
+      {f >= ctaAt ? (
+        <div style={{ position: "absolute", left: 0, right: 0, top: 1450, display: "flex", justifyContent: "center", alignItems: "center", gap: 26, transform: `translateY(${Math.abs(Math.sin((f - ctaAt) / 6)) * -16}px) scale(${ez(f - ctaAt, 0, 12, 0.4, 1, back(2.4))})` }}>
+          <div style={{ padding: "16px 34px", background: INK, color: "#fff", fontFamily: KANIT, fontWeight: 900, fontSize: 62, borderRadius: 30 }}>พิมพ์ 1 หรือ 2 ในคอมเมนต์</div>
+          <div style={{ transform: `scale(${1 + Math.max(0, Math.sin((f - ctaAt) / 4)) * 0.18})` }}><Heart size={120} /></div>
+        </div>
+      ) : null}
+      <div style={{ position: "absolute", left: 0, right: 0, top: 1690, textAlign: "center", fontFamily: KANIT, fontWeight: 800, fontSize: 40, color: INK, opacity: ez(f, 10, 20) }}>
+        ซื้อ • ขาย • สะสมการ์ด <span style={{ color: acc, fontWeight: 900 }}>www.cardzcenter.com</span>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+// ---------------------------------------------------------------------
 // ซับเล็กด้านล่างแบบกล่องบรรยายมังงะ
 // ---------------------------------------------------------------------
 const Narration: React.FC<{ s: MangaSlide; f: number; starts: number[]; acc: string }> = ({ s, f, starts, acc }) => {
@@ -393,13 +473,15 @@ const PageView: React.FC<{ s: MangaSlide; idx: number; acc: string; pages: numbe
     layout === "versus" ? <VersusLayout {...p} /> :
     layout === "effect" ? <EffectLayout {...p} /> :
     layout === "still" ? <StillLayout {...p} /> :
+    layout === "poll" ? <PollLayout {...p} /> :
     <PanelsLayout {...p} />;
   return (
     <PageTurn f={f} first={idx === 0}>
       {layout === "still" ? null : <Paper />}
       {body}
-      {layout === "still" ? null : <Tag badge={badge} series={series} page={idx + 1} pages={pages} />}
-      <Narration s={s} f={f} starts={starts} acc={acc} />
+      {layout === "still" || layout === "poll" ? null : <Tag badge={badge} series={series} page={idx + 1} pages={pages} />}
+      {layout === "poll" ? null : <Narration s={s} f={f} starts={starts} acc={acc} />}
+      {s.sticker ? <Sticker text={s.sticker} f={f} d={d} /> : null}
     </PageTurn>
   );
 };
@@ -442,7 +524,7 @@ export const MangaShow: React.FC<MangaProps> = ({ slides, audio_url, audio_rate,
     starts.push(a);
     a += slideFrames(s);
   }
-  const pages = slides.filter((s) => (s.layout || "") !== "still" && s.image_mode !== "still").length;
+  const pages = slides.filter((s) => !["still", "poll"].includes(s.layout || "") && s.image_mode !== "still").length;
   return (
     <AbsoluteFill style={{ backgroundColor: INK }}>
       {cover ? (

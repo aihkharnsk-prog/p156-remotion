@@ -20,8 +20,18 @@
       "duration": 4,
       "parts": [
         {
-          "text": "*มาเป็นลูกข้าซะ!*",
-          "say": "การ์ดใบนี้ มีประโยคหนึ่งเขียนไว้ว่า มาเป็นลูกข้าซะ.",
+          "text": "*ชายที่แข็งแกร่งที่สุดในโลก*",
+          "say": "ชายที่แข็งแกร่งที่สุดในโลก มีสิ่งเดียวที่อยากได้. และมันไม่ใช่สมบัติ.",
+          "panel": {
+            "img": 2,
+            "x": 42,
+            "y": 8,
+            "zoom": 1.7
+          }
+        },
+        {
+          "text": "การ์ดเขียนว่า *มาเป็นลูกข้าซะ!*",
+          "say": "การ์ดใบนี้ จึงมีประโยคหนึ่งเขียนไว้ว่า มาเป็นลูกข้าซะ.",
           "panel": {
             "img": 2,
             "x": 42,
@@ -53,7 +63,7 @@
       "parts": [
         {
           "text": "สิ่งที่เขาอยากได้ที่สุด คือ *ครอบครัว*",
-          "say": "เขาไม่มีครอบครัว. สิ่งที่เขาอยากได้มากที่สุด ไม่ใช่สมบัติ แต่คือครอบครัว.",
+          "say": "เพราะเขาไม่เคยมีครอบครัว. สิ่งที่เขาอยากได้มากที่สุด คือครอบครัว.",
           "panel": {
             "img": 0,
             "x": 45,
@@ -86,7 +96,8 @@
       "images": [
         "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005_p1.png",
         "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005_p2.png"
-      ]
+      ],
+      "sticker": "เพิ่งรู้? กดหัวใจเลย"
     },
     {
       "layout": "effect",
@@ -150,42 +161,39 @@
             "y": 20,
             "zoom": 1.6
           }
-        },
-        {
-          "text": "ถ้าเขาขอให้คุณเป็นลูก *จะตอบว่าอะไร?*",
-          "say": "ถ้าหนวดขาวขอให้คุณเป็นลูก คุณจะตอบว่าอะไร?",
-          "panel": {
-            "img": 0,
-            "x": 40,
-            "y": 24,
-            "zoom": 1.8
-          }
         }
       ],
       "title": "คำพูดสุดท้าย\nที่*เขย่าทั้งโลก*"
     },
     {
-      "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
-      "image_mode": "still",
-      "layout": "still",
+      "layout": "poll",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005.png",
       "no_caption": true,
-      "duration": 4,
-      "text": "-",
+      "duration": 8,
+      "title": "ถ้าหนวดขาว\nขอให้คุณเป็น*ลูก*?",
+      "labels": [
+        "ตอบรับทันที!",
+        "ปฏิเสธ แบบเอสตอนแรก"
+      ],
       "parts": [
         {
           "text": "",
-          "say": "เรื่องของการ์ดแบบนี้ ยังมีอีกเยอะ. กดติดตามไว้ได้เลย."
+          "say": "ถ้าหนวดขาว ขอให้คุณเป็นลูก คุณจะตอบว่าอะไร?"
         },
         {
           "text": "",
-          "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+          "say": "ตอบรับทันที พิมพ์หนึ่ง. ปฏิเสธแบบเอสตอนแรก พิมพ์สอง."
+        },
+        {
+          "text": "",
+          "say": "คอมเมนต์ไว้เลย. แล้วกดติดตาม การ์ดเซ็นเตอร์ไว้ด้วยนะ."
         }
       ]
     }
   ],
   "meta": {
     "title": "หนวดขาว ชายที่อยากมีครอบครัว OP17-005 | One Piece Card #shorts",
-    "description": "การ์ดวันพีซ OP-17 ใบที่ 005 หนวดขาว SR ต้นทุน 10 พลัง 12000 ประโยค \"มาเป็นลูกข้าซะ\" บนลายพิเศษหน้ามังงะ และเรื่องของชายที่อยากได้ครอบครัวมากกว่าสมบัติ\n\n👇 ถ้าหนวดขาวขอให้คุณเป็นลูก คุณจะตอบว่าอะไร? คอมเมนต์บอกกัน\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Celtic Impulse\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17",
+    "description": "การ์ดวันพีซ OP-17 ใบที่ 005 หนวดขาว SR ต้นทุน 10 พลัง 12000 ประโยค \"มาเป็นลูกข้าซะ\" บนลายพิเศษหน้ามังงะ และเรื่องของชายที่อยากได้ครอบครัวมากกว่าสมบัติ\n\n👇 ถ้าหนวดขาวขอให้คุณเป็นลูก? พิมพ์ 1 = ตอบรับทันที / 2 = ปฏิเสธแบบเอส\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Celtic Impulse\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17",
     "thumb": {
       "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005.png",
       "hook": "มาเป็น\nลูกข้าซะ!",

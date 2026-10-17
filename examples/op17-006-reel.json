@@ -20,8 +20,8 @@
       "duration": 4,
       "parts": [
         {
-          "text": "กลุ่มหนวดขาวมีหัวหน้าหน่วย *16 คน*",
-          "say": "ในกลุ่มหนวดขาว มีหัวหน้าหน่วยทั้งหมดสิบหกคน.",
+          "text": "หัวหน้าหน่วยที่*แทบไม่มีใครจำได้*",
+          "say": "คุณจำชื่อหัวหน้าหน่วยคนนี้ได้ไหม? แฟนวันพีซส่วนใหญ่ จำไม่ได้.",
           "panel": {
             "x": 47,
             "y": 20,
@@ -29,8 +29,13 @@
           }
         },
         {
-          "text": "แต่มีคนหนึ่ง *แทบไม่มีใครจำได้*",
-          "say": "แต่มีคนหนึ่ง ที่แทบไม่มีใครจำชื่อได้."
+          "text": "กลุ่มหนวดขาวมีหัวหน้าหน่วย *16 คน*",
+          "say": "ในกลุ่มหนวดขาว มีหัวหน้าหน่วยทั้งหมดสิบหกคน. และเขา คือคนที่แทบไม่มีใครพูดถึง.",
+          "panel": {
+            "x": 47,
+            "y": 20,
+            "zoom": 2.0
+          }
         }
       ],
       "name": "KINGDEW",
@@ -60,7 +65,8 @@
           }
         }
       ],
-      "title": "หัวหน้าหน่วย\nที่*ไม่มีใครรู้จัก*"
+      "title": "หัวหน้าหน่วย\nที่*ไม่มีใครรู้จัก*",
+      "sticker": "เพิ่งรู้จัก? กดหัวใจเลย"
     },
     {
       "layout": "effect",
@@ -161,27 +167,34 @@
       ]
     },
     {
-      "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
-      "image_mode": "still",
-      "layout": "still",
+      "layout": "poll",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-006.png",
       "no_caption": true,
-      "duration": 4,
-      "text": "-",
+      "duration": 8,
+      "title": "คุณเคยรู้จัก\n*คิงดิว* ไหม?",
+      "labels": [
+        "รู้จักมาก่อนแล้ว",
+        "เพิ่งรู้จักวันนี้"
+      ],
       "parts": [
         {
           "text": "",
-          "say": "เรื่องของการ์ดแบบนี้ ยังมีอีกเยอะ. กดติดตามไว้ได้เลย."
+          "say": "แล้วคุณล่ะ เคยรู้จักคิงดิวมาก่อนไหม?"
         },
         {
           "text": "",
-          "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+          "say": "รู้จักมาก่อนแล้ว พิมพ์หนึ่ง. เพิ่งรู้จักวันนี้ พิมพ์สอง."
+        },
+        {
+          "text": "",
+          "say": "คอมเมนต์ไว้เลย. แล้วกดติดตาม การ์ดเซ็นเตอร์ไว้ด้วยนะ."
         }
       ]
     }
   ],
   "meta": {
     "title": "คิงดิว หัวหน้าหน่วยที่ไม่มีใครรู้จัก OP17-006 | One Piece Card #shorts",
-    "description": "การ์ดวันพีซ OP-17 ใบที่ 006 คิงดิว หัวหน้าหน่วยที่ 11 ของกลุ่มหนวดขาว การ์ดที่ไม่มีความสามารถ และลายพิเศษสวมหน้ากากแพนด้า\n\n👇 คุณเคยเห็นแพนด้าแมนซ่อนอยู่ในฉากไหนบ้าง? คอมเมนต์บอกกัน\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Celtic Impulse\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17",
+    "description": "การ์ดวันพีซ OP-17 ใบที่ 006 คิงดิว หัวหน้าหน่วยที่ 11 ของกลุ่มหนวดขาว การ์ดที่ไม่มีความสามารถ และลายพิเศษสวมหน้ากากแพนด้า\n\n👇 คุณเคยรู้จักคิงดิวไหม? พิมพ์ 1 = รู้จักมาก่อน / 2 = เพิ่งรู้จักวันนี้\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Celtic Impulse\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17",
     "thumb": {
       "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-006_p1.png",
       "hook": "หัวหน้าหน่วย\nที่ไม่มีใครรู้จัก",

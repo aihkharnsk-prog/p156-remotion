@@ -20,8 +20,8 @@
       "duration": 4,
       "parts": [
         {
-          "text": "ร่างกายเปลี่ยนเป็น*เพชร*",
-          "say": "ชายคนนี้ เปลี่ยนร่างกายทั้งตัว ให้กลายเป็นเพชรได้.",
+          "text": "ดาบ*มิฮอว์ค*ยังฟันไม่เข้า",
+          "say": "ดาบของนักดาบที่เก่งที่สุดในโลก ยังฟันชายคนนี้ไม่เข้า.",
           "panel": {
             "x": 45,
             "y": 22,
@@ -29,8 +29,8 @@
           }
         },
         {
-          "text": "ฉายา *ไดมอนด์ โจซ*",
-          "say": "ฉายาของเขาคือ ไดมอนด์ โจซ.",
+          "text": "ร่างกายเป็น*เพชร* ฉายา *ไดมอนด์ โจซ*",
+          "say": "เพราะเขาเปลี่ยนร่างกายทั้งตัว ให้กลายเป็นเพชรได้. ฉายาของเขาคือ ไดมอนด์ โจซ.",
           "panel": {
             "x": 65,
             "y": 28,
@@ -96,7 +96,8 @@
         }
       ],
       "name": "DIAMOND JOZU",
-      "subtitle": "หน่วยที่ 3"
+      "subtitle": "หน่วยที่ 3",
+      "sticker": "เพิ่งรู้? กดหัวใจเลย"
     },
     {
       "layout": "effect",
@@ -148,40 +149,38 @@
             "zoom": 1.8,
             "sfx": "เปรี๊ยะ!"
           }
-        },
-        {
-          "text": "*เพชร หรือ น้ำแข็ง* ใครชนะ?",
-          "say": "คุณว่า ระหว่างเพชรกับน้ำแข็ง ใครชนะ?",
-          "panel": {
-            "x": 45,
-            "y": 22,
-            "zoom": 1.7
-          }
         }
       ]
     },
     {
-      "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
-      "image_mode": "still",
-      "layout": "still",
+      "layout": "poll",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-008.png",
       "no_caption": true,
-      "duration": 4,
-      "text": "-",
+      "duration": 8,
+      "title": "*เพชร* หรือ *น้ำแข็ง*\nใครชนะ?",
+      "labels": [
+        "เพชร",
+        "น้ำแข็ง"
+      ],
       "parts": [
         {
           "text": "",
-          "say": "เรื่องของการ์ดแบบนี้ ยังมีอีกเยอะ. กดติดตามไว้ได้เลย."
+          "say": "คุณว่า ระหว่างเพชรกับน้ำแข็ง ใครชนะ?"
         },
         {
           "text": "",
-          "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+          "say": "ถ้าคิดว่าเพชร พิมพ์หนึ่ง. ถ้าคิดว่าน้ำแข็ง พิมพ์สอง."
+        },
+        {
+          "text": "",
+          "say": "คอมเมนต์ไว้เลย. แล้วกดติดตาม การ์ดเซ็นเตอร์ไว้ด้วยนะ."
         }
       ]
     }
   ],
   "meta": {
     "title": "ไดมอนด์ โจซ ชายร่างเพชร OP17-008 | One Piece Card #shorts",
-    "description": "การ์ดวันพีซ OP-17 ใบที่ 008 โจซ หัวหน้าหน่วยที่ 3 ของกลุ่มหนวดขาว ผลคิระคิระที่เปลี่ยนร่างเป็นเพชร รับดาบมิฮอว์ค ขวางคร็อกโคไดล์ และจุดอ่อนที่อาโอคิยิรู้\n\n👇 ระหว่างเพชรกับน้ำแข็ง ใครชนะ? คอมเมนต์บอกกัน\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Celtic Impulse\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17",
+    "description": "การ์ดวันพีซ OP-17 ใบที่ 008 โจซ หัวหน้าหน่วยที่ 3 ของกลุ่มหนวดขาว ผลคิระคิระที่เปลี่ยนร่างเป็นเพชร รับดาบมิฮอว์ค ขวางคร็อกโคไดล์ และจุดอ่อนที่อาโอคิยิรู้\n\n👇 เพชร vs น้ำแข็ง ใครชนะ? พิมพ์ 1 = เพชร / 2 = น้ำแข็ง\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Celtic Impulse\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17",
     "thumb": {
       "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-008.png",
       "hook": "ร่างกาย\nเป็นเพชร!",
