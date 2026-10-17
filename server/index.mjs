@@ -337,6 +337,23 @@ async function ttsSingleWithTimes(says, rawPath, tts) {
   return { starts, endAll: en[en.length - 1] };
 }
 
+// เพลงคลอเบาๆ ใต้เสียงพากย์: วนเพลงให้ยาวเท่าคลิป, เพลงเบาลงเองตอนมีเสียงพูด (sidechain), เฟดเข้า/ออก
+async function mixMusic(inFile, outFile, musicFile, vol = 0.18, dur = 60) {
+  const v = Math.max(0.02, Math.min(0.6, Number(vol) || 0.18));
+  const fo = Math.max(1, Number(dur) - 2.5).toFixed(2);
+  const graph = (norm) =>
+    `[1:a]aresample=48000,volume=${v},afade=t=in:d=1.2,afade=t=out:st=${fo}:d=2.5[m];` +
+    `[0:a]aresample=48000,asplit=2[vo][sc];` +
+    `[m][sc]sidechaincompress=threshold=0.02:ratio=6:attack=15:release=450[md];` +
+    `[vo][md]amix=inputs=2:duration=first:dropout_transition=0${norm ? ":normalize=0" : ""}${norm ? "" : ",volume=2"}[a]`;
+  const args = (norm) => ["-y", "-i", inFile, "-stream_loop", "-1", "-i", musicFile, "-filter_complex", graph(norm), "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", outFile];
+  try {
+    await runFfmpeg(args(true));
+  } catch {
+    await runFfmpeg(args(false));
+  }
+}
+
 // ช่องภาพของ MangaShow ต่อท่อน: {img, x, y, zoom, sfx, bw}
 function cleanPanel(v) {
   if (!v || typeof v !== "object") return undefined;
@@ -556,6 +573,20 @@ async function runJob(job) {
         job.progress = Math.round(progress * 100);
       },
     });
+
+    // เพลงคลอ (bgm) — ถ้าพังใช้คลิปเดิมที่ไม่มีเพลง
+    if (job.request.bgm_url) {
+      try {
+        await fs.mkdir(assetDir, { recursive: true });
+        const mf = path.join(assetDir, "bgm.mp3");
+        await downloadTo(job.request.bgm_url, mf);
+        const tmp = path.join(OUT_DIR, `${job.id}.bgm.mp4`);
+        await mixMusic(outputLocation, tmp, mf, job.request.bgm_volume, job.duration_sec);
+        await fs.rename(tmp, outputLocation);
+      } catch (e) {
+        job.warnings.push(`bgm failed: ${String(e?.message || e).slice(0, 200)}`);
+      }
+    }
 
     // รูปปก (thumbnail) อัตโนมัติ จาก meta.thumb_* — ถ้าพังไม่ให้งานวิดีโอล้ม
     const tm = job.request.meta?.thumb;
@@ -1039,6 +1070,8 @@ app.post("/render", auth, (req, res) => {
       slides: composition !== "DramaStory" ? clean : undefined,
       shots: composition === "DramaStory" ? clean : undefined,
       music_url: body.music_url || undefined,
+      bgm_url: /^https?:\/\//i.test(String(body.bgm_url || "")) ? String(body.bgm_url) : undefined,
+      bgm_volume: Number(body.bgm_volume) > 0 && Number(body.bgm_volume) <= 0.6 ? Number(body.bgm_volume) : undefined,
       audio_url: body.audio_url || undefined,
       tts,
       caption_style: body.caption_style === "reel" ? "reel" : "classic",
@@ -1179,6 +1212,36 @@ app.post("/fb-news", auth, async (req, res) => {
 // POST /peek {urls:[...], width?:360}  → log "[peek] <i> <part>/<n> <b64>"
 // POST /peek-page {url} → log รายการรูปทั้งหมดในหน้าเว็บ (og:image, img src/data-src, alt)
 const UA = { "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36", accept: "*/*" };
+// ใส่เพลงคลอให้คลิปที่ render แล้ว (ไม่ต้องสร้างเสียงพากย์ใหม่): POST /add-music {jobs:[...], bgm_url, volume, suffix?}
+//   → /videos/<job>-<suffix>.mp4 (ค่าเริ่มต้น suffix = "m")
+app.post("/add-music", auth, async (req, res) => {
+  const jobs = (Array.isArray(req.body?.jobs) ? req.body.jobs : []).map((j) => path.basename(String(j)));
+  const url = String(req.body?.bgm_url || "");
+  const suffix = String(req.body?.suffix || "m").replace(/[^a-z0-9]/gi, "").slice(0, 12) || "m";
+  res.json({ ok: true, n: jobs.length });
+  const out = [];
+  try {
+    const dir = path.join(ASSET_DIR, `bgm-${Date.now().toString(36)}`);
+    await fs.mkdir(dir, { recursive: true });
+    const mf = path.join(dir, "bgm.mp3");
+    await downloadTo(url, mf);
+    for (const j of jobs) {
+      try {
+        const inF = path.join(OUT_DIR, `${j}.mp4`);
+        const { stdout } = await execFileP("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", inF]).catch(() => ({ stdout: "60" }));
+        await mixMusic(inF, path.join(OUT_DIR, `${j}-${suffix}.mp4`), mf, req.body?.volume, Number(stdout) || 60);
+        try { await fs.copyFile(path.join(OUT_DIR, `${j}.jpg`), path.join(OUT_DIR, `${j}-${suffix}.jpg`)); } catch {}
+        out.push({ job: j, video_url: `${PUBLIC_BASE_URL}/videos/${j}-${suffix}.mp4` });
+      } catch (e) {
+        out.push({ job: j, error: String(e?.message || e).slice(0, 200) });
+      }
+    }
+  } catch (e) {
+    out.push({ error: `music download failed: ${String(e?.message || e).slice(0, 200)}` });
+  }
+  console.log(`[add-music] ${url} ${JSON.stringify(out)}`);
+});
+
 // ดูเฟรมจากคลิปที่ render แล้ว: POST /peek-video {job, times:[sec...], width} → แผ่นรวมเฟรม base64 ใน log "[peek] v …"
 app.post("/peek-video", auth, async (req, res) => {
   const job = path.basename(String(req.body.job || ""));
