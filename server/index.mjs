@@ -1179,6 +1179,32 @@ app.post("/fb-news", auth, async (req, res) => {
 // POST /peek {urls:[...], width?:360}  → log "[peek] <i> <part>/<n> <b64>"
 // POST /peek-page {url} → log รายการรูปทั้งหมดในหน้าเว็บ (og:image, img src/data-src, alt)
 const UA = { "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36", accept: "*/*" };
+// ดูเฟรมจากคลิปที่ render แล้ว: POST /peek-video {job, times:[sec...], width} → แผ่นรวมเฟรม base64 ใน log "[peek] v …"
+app.post("/peek-video", auth, async (req, res) => {
+  const job = path.basename(String(req.body.job || ""));
+  const times = (Array.isArray(req.body.times) ? req.body.times : [1, 5, 10, 20, 30, 40]).slice(0, 12).map(Number);
+  const width = Math.min(Number(req.body.width) || 270, 400);
+  res.json({ ok: true, n: times.length });
+  try {
+    const file = path.join(OUT_DIR, `${job}.mp4`);
+    const frames = [];
+    for (const [k, t] of times.entries()) {
+      const fo = path.join(ASSET_DIR, `pv-${k}.jpg`);
+      await runFfmpeg(["-y", "-ss", String(t), "-i", file, "-frames:v", "1", "-vf", `scale=${width}:-1`, fo]);
+      frames.push(fo);
+    }
+    const out = path.join(ASSET_DIR, "pv-sheet.jpg");
+    const cols = Math.min(4, frames.length);
+    await execFileP("python3", ["-c", `import sys\nfrom PIL import Image, ImageDraw\nfs=sys.argv[3:]\nims=[Image.open(f) for f in fs]\nc=int(sys.argv[2])\nw,h=ims[0].size\nr=(len(ims)+c-1)//c\nS=Image.new('RGB',(w*c,h*r),'white')\nfor i,im in enumerate(ims): S.paste(im,((i%c)*w,(i//c)*h))\nS.save(sys.argv[1],quality=70)`, out, String(cols), ...frames], { timeout: 30000 });
+    const b64 = (await fs.readFile(out)).toString("base64");
+    const parts = Math.ceil(b64.length / 6000);
+    console.log(`[peek] v meta ${job} ${JSON.stringify(times)}`);
+    for (let p = 0; p < parts; p++) console.log(`[peek] v ${p + 1}/${parts} ${b64.slice(p * 6000, (p + 1) * 6000)}`);
+  } catch (e) {
+    console.log(`[peek] v error ${String(e?.message || e).slice(0, 300)}`);
+  }
+});
+
 app.post("/peek", auth, async (req, res) => {
   const urls = (req.body.urls || []).slice(0, 8);
   const width = Math.min(Number(req.body.width) || 360, 600);
