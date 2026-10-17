@@ -201,7 +201,7 @@ const BigPanel: React.FC<{ src?: string; x?: number; y?: number; zoom?: number; 
   return (
     <div style={{ position: "absolute", left: 36, top: 80, width: W - 72, height: 1060, background: INK, transform: `rotate(-1.2deg) scale(${k})` }}>
       <div style={{ position: "absolute", inset: 12, overflow: "hidden", background: "#fff" }}>
-        <Crop src={src} w={W - 96} h={1036} x={x ?? 50} y={y ?? 28} zoom={zoom ?? 1.6} f={f} d={d} />
+        <Crop src={src} w={W - 96} h={1036} x={x ?? 50} y={Math.min(y ?? 24, 24)} zoom={Math.max(zoom ?? 2, 1.95)} f={f} d={d} />
         <SpeedLines w={W - 96} h={1036} cx={(W - 96) / 2} cy={520} f={f} n={60} op={0.35} color="#fff" />
       </div>
     </div>
