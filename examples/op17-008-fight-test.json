@@ -1,0 +1,249 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "composition": "MangaShow",
+ "accent_color": "#e2231a",
+ "badge": "OP17-008",
+ "series": "ONE PIECE CARD GAME",
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.8,
+  "speed": 1.0,
+  "prefix": "[calm, soft, natural storyteller]"
+ },
+ "audio_rate": 1.0,
+ "slides": [
+  {
+   "layout": "splash",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-008.png",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "ดาบ*มิฮอว์ค*ยังฟันไม่เข้า",
+     "say": "ดาบของนักดาบที่เก่งที่สุดในโลก ยังฟันชายคนนี้ไม่เข้า.",
+     "panel": {
+      "x": 45,
+      "y": 22,
+      "zoom": 1.6
+     }
+    },
+    {
+     "text": "ร่างกายเป็น*เพชร* ฉายา *ไดมอนด์ โจซ*",
+     "say": "เพราะเขาเปลี่ยนร่างกายทั้งตัว ให้กลายเป็นเพชรได้. ฉายาของเขาคือ ไดมอนด์ โจซ.",
+     "panel": {
+      "x": 65,
+      "y": 28,
+      "zoom": 1.5
+     }
+    }
+   ],
+   "title": "ร่างกาย\nเป็น*เพชร*"
+  },
+  {
+   "layout": "panels",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-008.png",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "ผล*คิระคิระ*",
+     "say": "เขากินผลคิระคิระ. ผลปีศาจที่ทำให้ร่างกายแข็งเป็นเพชร.",
+     "panel": {
+      "x": 78,
+      "y": 22,
+      "zoom": 2.2,
+      "sfx": "เคร้ง!"
+     }
+    },
+    {
+     "text": "รับ*ดาบมิฮอว์ค*ด้วยร่างเพชร",
+     "say": "ที่มารีนฟอร์ด เขาเปลี่ยนร่างเป็นเพชร รับดาบของมิฮอว์คไว้.",
+     "panel": {
+      "img": 1,
+      "x": 45,
+      "y": 22,
+      "zoom": 1.9
+     }
+    },
+    {
+     "text": "ขวาง*คร็อกโคไดล์*",
+     "say": "และเข้าไปขวางคร็อกโคไดล์ ที่จะลอบทำร้ายหนวดขาว.",
+     "panel": {
+      "img": 2,
+      "x": 50,
+      "y": 24,
+      "zoom": 1.8,
+      "sfx": "ตึ้ง!"
+     }
+    }
+   ],
+   "images": [
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-070.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-067.png"
+   ]
+  },
+  {
+   "layout": "panels",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-008.png",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "สงคราม*มารีนฟอร์ด*",
+     "say": "ในสงครามที่มารีนฟอร์ด หนวดขาวนำทัพ ปะทะกองทัพเรือ ทั้งกองทัพ.",
+     "panel": {
+      "img": 1,
+      "x": 50,
+      "y": 20,
+      "zoom": 1.9,
+      "sfx": "ฮ่าฮ่าฮ่า!"
+     }
+    },
+    {
+     "text": "พลังที่ทำลาย*โลก*ได้",
+     "say": "หนวดขาวมีพลังจากผลสั่นสะเทือน ที่ว่ากันว่า ทำลายโลกได้.",
+     "panel": {
+      "img": 2,
+      "x": 50,
+      "y": 18,
+      "zoom": 1.9,
+      "sfx": "ตูม!"
+     }
+    },
+    {
+     "text": "ยืนสู้จน*ลมหายใจสุดท้าย*",
+     "say": "และเขาก็ยืนหยัดสู้ ตราบจนวินาทีสุดท้าย. โจซก็อยู่ข้างเขา ในสงครามนั้น.",
+     "panel": {
+      "img": 3,
+      "x": 50,
+      "y": 20,
+      "zoom": 1.8
+     }
+    }
+   ],
+   "images": [
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-017.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-018.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-023.png"
+   ]
+  },
+  {
+   "layout": "wanted",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-008.png",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "หัวหน้า*หน่วยที่ 3*",
+     "say": "เขาคือหัวหน้าหน่วยที่สาม ของกลุ่มหนวดขาว.",
+     "panel": {
+      "x": 42,
+      "y": 22,
+      "zoom": 2.0
+     }
+    },
+    {
+     "text": "หน่วยที่ถนัด*บุกตะลุย*",
+     "say": "หน่วยที่เน้นการต่อสู้ ปะทะซึ่งหน้า."
+    }
+   ],
+   "name": "DIAMOND JOZU",
+   "subtitle": "หน่วยที่ 3",
+   "sticker": "เพิ่งรู้? กดหัวใจเลย"
+  },
+  {
+   "layout": "effect",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-008.png",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "เมื่อลงสนาม",
+     "say": "บนการ์ด เมื่อลงสนาม.",
+     "panel": {
+      "x": 50,
+      "y": 68,
+      "zoom": 1.8
+     }
+    },
+    {
+     "text": "ลีดเดอร์หนวดขาว = *พลัง 8000*",
+     "say": "ถ้าลีดเดอร์คือหนวดขาว พลังพื้นฐานของลีดเดอร์ จะกลายเป็นแปดพัน ไปจนจบตาถัดไปของคู่แข่ง.",
+     "panel": {
+      "x": 50,
+      "y": 70,
+      "zoom": 2.0
+     }
+    }
+   ],
+   "title": "ลีดเดอร์แข็งขึ้นทันที"
+  },
+  {
+   "layout": "panels",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-008.png",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "แต่เพชรมี*จุดอ่อน*",
+     "say": "แต่เพชร ก็มีจุดอ่อน.",
+     "panel": {
+      "x": 42,
+      "y": 22,
+      "zoom": 2.2,
+      "bw": true
+     }
+    },
+    {
+     "text": "*อาโอคิยิ* แช่แข็งเขาทั้งตัว",
+     "say": "ในสงครามครั้งนั้น พลเรือเอกอาโอคิยิ แช่แข็งร่างของเขา จนขยับไม่ได้.",
+     "panel": {
+      "img": 1,
+      "x": 50,
+      "y": 22,
+      "zoom": 1.9,
+      "sfx": "เปรี๊ยะ!"
+     }
+    }
+   ],
+   "images": [
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-096.png"
+   ]
+  },
+  {
+   "layout": "poll",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-008.png",
+   "no_caption": true,
+   "duration": 8,
+   "title": "*เพชร* หรือ *น้ำแข็ง*\nใครชนะ?",
+   "labels": [
+    "เพชร",
+    "น้ำแข็ง"
+   ],
+   "parts": [
+    {
+     "text": "",
+     "say": "คุณว่า ระหว่างเพชรกับน้ำแข็ง ใครชนะ?"
+    },
+    {
+     "text": "",
+     "say": "ถ้าคิดว่าเพชร พิมพ์หนึ่ง. ถ้าคิดว่าน้ำแข็ง พิมพ์สอง."
+    },
+    {
+     "text": "",
+     "say": "คอมเมนต์ไว้เลย. แล้วกดติดตาม การ์ดเซ็นเตอร์ไว้ด้วยนะ."
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "ไดมอนด์ โจซ ชายร่างเพชร OP17-008 | One Piece Card #shorts",
+  "description": "การ์ดวันพีซ OP-17 ใบที่ 008 โจซ หัวหน้าหน่วยที่ 3 ของกลุ่มหนวดขาว ผลคิระคิระที่เปลี่ยนร่างเป็นเพชร รับดาบมิฮอว์ค ขวางคร็อกโคไดล์ สงครามมารีนฟอร์ดกับฉากต่อสู้จากการ์ดอีเวนต์หนวดขาว และจุดอ่อนที่อาโอคิยิรู้\n\n👇 เพชร vs น้ำแข็ง ใครชนะ? พิมพ์ 1 = เพชร / 2 = น้ำแข็ง\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Celtic Impulse\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17",
+  "thumb": {
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-008.png",
+   "hook": "ร่างกาย\nเป็นเพชร!",
+   "badge": "OP17-008",
+   "sub": "ONE PIECE CARD GAME"
+  },
+  "publish_at": "2026-10-23T10:00:00Z",
+  "engage": "👇 เพชร vs น้ำแข็ง ใครชนะ? พิมพ์ 1 = เพชร / 2 = น้ำแข็ง\nชอบเรื่องการ์ดแบบนี้ กด ❤️ ไว้ด้วยนะ"
+ },
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Celtic%20Impulse.mp3",
+ "bgm_volume": 0.14
+}
