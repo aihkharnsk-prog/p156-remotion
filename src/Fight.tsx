@@ -85,8 +85,8 @@ function ik(s: [number, number], g: [number, number], l1: number, l2: number, be
 // ---------------------------------------------------------------------
 type Who = "H" | "V";
 const LIM = {
-  H: { th: 82, sh: 84, ua: 60, fa: 58, torso: 104, w: { leg: 24, arm: 17, torso: 40 }, blade: 200, head: 25 },
-  V: { th: 94, sh: 96, ua: 70, fa: 68, torso: 122, w: { leg: 31, arm: 22, torso: 54 }, blade: 285, head: 28 },
+  H: { th: 82, sh: 84, ua: 60, fa: 58, torso: 104, w: { leg: 33, arm: 23, torso: 54 }, blade: 200, head: 28 },
+  V: { th: 94, sh: 96, ua: 70, fa: 68, torso: 122, w: { leg: 41, arm: 29, torso: 68 }, blade: 285, head: 31 },
 };
 
 type Rigged = {
@@ -377,7 +377,7 @@ const Fx: React.FC<{ ev: Ev; t: number; frame: number }> = ({ ev, t, frame }) =>
     return (
       <g transform={`translate(${x} ${y})`}>
         <g opacity={Math.pow(1 - u, 1.5)} fill="#fff">
-          <circle r={(40 + 260 * (1 - Math.pow(1 - u, 3))) * R} opacity={0.9 * (1 - u)} />
+          <circle r={(26 + 120 * (1 - Math.pow(1 - u, 3))) * R} opacity={0.55 * (1 - u)} />
         </g>
         <g fill={ev.col || "#ffe9a8"} opacity={clamp(1.2 - u * 1.6)} transform={`rotate(${random(seed) * 90})`}>
           <g transform={`scale(${(0.5 + u * 1.4) * R})`}>
@@ -555,7 +555,8 @@ export const FightShort: React.FC = () => {
   useKanit();
   const frame = useCurrentFrame();
   const t = frame / FIGHT_FPS;
-  const cam = camAt(t);
+  const cam0 = camAt(t);
+  const cam = { ...cam0, z: cam0.z * (1 + 0.3 * clamp((t - 6) / 8)) };
 
   // สั่นจอ
   let shx = 0, shy = 0;
