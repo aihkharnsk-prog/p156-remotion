@@ -379,7 +379,9 @@ async function runJob(job) {
     const compId = job.request.composition;
     let inputProps;
 
-    if (compId === "DramaStory") {
+    if (compId === "FightShort") {
+      inputProps = { ...(job.request.fight || {}) };
+    } else if (compId === "DramaStory") {
       // ดาวน์โหลดคลิป/เสียงทุกช็อตมาไว้ในเครื่องก่อน (Drive/CDN ตอน render ไม่เสถียร)
       await fs.mkdir(assetDir, { recursive: true });
       const local = (name) => `http://127.0.0.1:${PORT}/assets/${job.id}/${name}`;
@@ -564,7 +566,7 @@ async function runJob(job) {
 
     const composition = await selectComposition({
       serveUrl,
-      id: ["DramaStory", "CardShow", "MangaShow"].includes(compId) ? compId : "DynamicStory",
+      id: ["DramaStory", "CardShow", "MangaShow", "FightShort"].includes(compId) ? compId : "DynamicStory",
       inputProps,
     });
 
@@ -936,6 +938,29 @@ app.use("/brand", express.static(path.join(__dirname, "..", "public")));
 
 app.post("/render", auth, (req, res) => {
   const body = req.body || {};
+
+  if (body.composition === "FightShort") {
+    const id = randomUUID();
+    const job = {
+      id,
+      status: "queued",
+      progress: 0,
+      warnings: [],
+      created_at: new Date().toISOString(),
+      request: {
+        composition: "FightShort",
+        fight: body.fight && typeof body.fight === "object" ? body.fight : {},
+        bgm_url: /^https?:\/\//i.test(String(body.bgm_url || "")) ? String(body.bgm_url) : undefined,
+        bgm_volume: Number(body.bgm_volume) > 0 && Number(body.bgm_volume) <= 0.6 ? Number(body.bgm_volume) : undefined,
+        webhook_url: body.webhook_url || undefined,
+        meta: body.meta,
+      },
+    };
+    jobs.set(id, job);
+    queue.push(job);
+    pump();
+    return res.status(202).json({ job_id: id, status: job.status });
+  }
 
   const parseArr = (v) => {
     if (typeof v === "string") {
@@ -1344,6 +1369,33 @@ app.post("/peek-video", auth, async (req, res) => {
     for (let p = 0; p < parts; p++) console.log(`[peek] v ${p + 1}/${parts} ${b64.slice(p * 6000, (p + 1) * 6000)}`);
   } catch (e) {
     console.log(`[peek] v error ${String(e?.message || e).slice(0, 300)}`);
+  }
+});
+
+
+// ดูภาพนิ่งจากหนังสั้น FightShort ที่เวลาต่างๆ (วินาที) — ล็อกเป็น contact sheet แบบเดียวกับ /peek-video
+app.post("/fight-still", auth, async (req, res) => {
+  const times = (Array.isArray(req.body.times) ? req.body.times : [10]).slice(0, 12).map(Number);
+  const width = Math.min(Number(req.body.width) || 480, 640);
+  res.json({ ok: true, n: times.length });
+  try {
+    await bundleReady;
+    const comp = await selectComposition({ serveUrl, id: "FightShort", inputProps: {} });
+    const files = [];
+    for (const [k, t] of times.entries()) {
+      const fo = path.join(ASSET_DIR, `fs-${k}.jpg`);
+      await renderStill({ composition: comp, serveUrl, output: fo, frame: Math.max(0, Math.min(comp.durationInFrames - 1, Math.round(t * 30))), imageFormat: "jpeg", jpegQuality: 75 });
+      files.push(fo);
+    }
+    const out = path.join(ASSET_DIR, "fs-sheet.jpg");
+    const cols = Math.min(3, files.length);
+    await execFileP("python3", ["-c", `import sys\nfrom PIL import Image\nfs=sys.argv[4:]\nW=int(sys.argv[3])\nims=[]\nfor f in fs:\n    im=Image.open(f).convert('RGB'); ims.append(im.resize((W,int(im.height*W/im.width))))\nc=int(sys.argv[2])\nw,h=ims[0].size\nr=(len(ims)+c-1)//c\nS=Image.new('RGB',(w*c,h*r),'white')\nfor i,im in enumerate(ims): S.paste(im,((i%c)*w,(i//c)*h))\nS.save(sys.argv[1],quality=70)`, out, String(cols), String(width), ...files], { timeout: 60000 });
+    const b64 = (await fs.readFile(out)).toString("base64");
+    const parts = Math.ceil(b64.length / 6000);
+    console.log(`[peek] v meta fight-still ${JSON.stringify(times)}`);
+    for (let p = 0; p < parts; p++) console.log(`[peek] v ${p + 1}/${parts} ${b64.slice(p * 6000, (p + 1) * 6000)}`);
+  } catch (e) {
+    console.log(`[peek] v error ${String(e?.message || e).slice(0, 400)}`);
   }
 });
 

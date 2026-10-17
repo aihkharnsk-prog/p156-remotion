@@ -10,6 +10,7 @@ import {
 import { Thumb, defaultThumbProps } from "./Thumb";
 import { CardShow } from "./Show";
 import { MangaShow } from "./Manga";
+import { FightShort, FIGHT_FPS, FIGHT_FRAMES } from "./Fight";
 import { getAudioDurationInSeconds } from "@remotion/media-utils";
 import {
   DramaStory,
@@ -135,6 +136,14 @@ export const Root: React.FC = () => {
         height={1920}
         defaultProps={{ ...defaultDynamicProps, width: 1080, height: 1920 } as any}
         calculateMetadata={fitSlides as any}
+      />
+      <Composition
+        id="FightShort"
+        component={FightShort as any}
+        durationInFrames={FIGHT_FRAMES}
+        fps={FIGHT_FPS}
+        width={1920}
+        height={1080}
       />
       <Composition
         id="Thumb"
