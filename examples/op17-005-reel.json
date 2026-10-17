@@ -24,9 +24,9 @@
           "say": "ชายที่แข็งแกร่งที่สุดในโลก มีสิ่งเดียวที่อยากได้. และมันไม่ใช่สมบัติ.",
           "panel": {
             "img": 2,
-            "x": 42,
-            "y": 8,
-            "zoom": 1.7
+            "x": 52,
+            "y": 24,
+            "zoom": 2.6
           }
         },
         {
@@ -37,16 +37,6 @@
             "x": 42,
             "y": 8,
             "zoom": 1.7
-          }
-        },
-        {
-          "text": "คนพูดคือ *หนวดขาว*",
-          "say": "คนพูดคือ หนวดขาว. ชายที่ไม่เรียกลูกเรือว่าลูกน้อง แต่เรียกว่า ลูก.",
-          "panel": {
-            "img": 2,
-            "x": 55,
-            "y": 16,
-            "zoom": 1.6
           }
         }
       ],
@@ -59,18 +49,40 @@
     {
       "layout": "panels",
       "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005.png",
+      "images": [
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005_p1.png",
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005_p2.png"
+      ],
       "duration": 4,
       "parts": [
+        {
+          "text": "คนพูดคือ *หนวดขาว*",
+          "say": "คนพูดคือ หนวดขาว. ชายที่ไม่เรียกลูกเรือว่าลูกน้อง แต่เรียกว่า ลูก.",
+          "panel": {
+            "img": 0,
+            "x": 50,
+            "y": 20,
+            "zoom": 1.7
+          }
+        },
         {
           "text": "สิ่งที่เขาอยากได้ที่สุด คือ *ครอบครัว*",
           "say": "เพราะเขาไม่เคยมีครอบครัว. สิ่งที่เขาอยากได้มากที่สุด คือครอบครัว.",
           "panel": {
-            "img": 0,
+            "img": 1,
             "x": 45,
-            "y": 22,
+            "y": 20,
             "zoom": 2.0
           }
-        },
+        }
+      ],
+      "sticker": "เพิ่งรู้? กดหัวใจเลย"
+    },
+    {
+      "layout": "panels",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005.png",
+      "duration": 4,
+      "parts": [
         {
           "text": "*เอส* เคยลอบฆ่าเขาเป็นร้อยครั้ง",
           "say": "แม้แต่เอส ที่เคยพยายามลอบฆ่าเขามาเป็นร้อยครั้ง.",
@@ -96,8 +108,7 @@
       "images": [
         "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005_p1.png",
         "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005_p2.png"
-      ],
-      "sticker": "เพิ่งรู้? กดหัวใจเลย"
+      ]
     },
     {
       "layout": "effect",
@@ -173,7 +184,7 @@
       "title": "ถ้าหนวดขาว\nขอให้คุณเป็น*ลูก*?",
       "labels": [
         "ตอบรับทันที!",
-        "ปฏิเสธ แบบเอสตอนแรก"
+        "ปฏิเสธ แบบเอส"
       ],
       "parts": [
         {
@@ -182,7 +193,7 @@
         },
         {
           "text": "",
-          "say": "ตอบรับทันที พิมพ์หนึ่ง. ปฏิเสธแบบเอสตอนแรก พิมพ์สอง."
+          "say": "ตอบรับทันที พิมพ์หนึ่ง. ปฏิเสธแบบเอส พิมพ์สอง."
         },
         {
           "text": "",

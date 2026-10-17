@@ -371,15 +371,15 @@ const Sticker: React.FC<{ text: string; f: number; d: number }> = ({ text, f, d 
 const PollLayout: React.FC<LP> = ({ s, f, d, starts, acc }) => {
   const opts = (s.labels || []).slice(0, 2);
   const optAt = starts[1] ?? Math.round(d * 0.3);
-  const ctaAt = starts[2] ?? Math.round(d * 0.65);
+  const ctaAt = Math.min(starts[2] ?? d, optAt + 40); // ชวนคอมเมนต์ขึ้นหลังตัวเลือกไม่นาน ให้อยู่บนจอนานพอ
   const q = String(s.title || "").split("\n");
   const card = ez(f, 0, 14, 0, 1, back(1.8));
   return (
     <AbsoluteFill>
       <SpeedLines w={W} h={H} cx={540} cy={560} f={f} n={90} op={0.13} />
       {s.image_url ? (
-        <div style={{ position: "absolute", left: 60, top: 70, width: 250, height: 250 * CARD_AR, transform: `rotate(${-8 * card}deg) scale(${card})`, border: `6px solid ${INK}`, boxShadow: `10px 10px 0 ${INK}`, overflow: "hidden", background: "#fff" }}>
-          <Img src={s.image_url} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+        <div style={{ position: "absolute", left: 60, top: 70, width: 250, height: 250, transform: `rotate(${-8 * card}deg) scale(${card})`, border: `6px solid ${INK}`, boxShadow: `10px 10px 0 ${INK}`, overflow: "hidden", background: "#fff" }}>
+          <Img src={s.image_url} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 22%", transform: "scale(1.25)", transformOrigin: "50% 20%" }} />
         </div>
       ) : null}
       <div style={{ position: "absolute", left: 330, right: 50, top: 120, fontFamily: KANIT, fontWeight: 900, fontSize: 64, color: INK, lineHeight: 1.1, transform: `rotate(-2deg) translateY(${ez(f, 2, 12, -40, 0)}px)`, opacity: ez(f, 2, 10) }}>
