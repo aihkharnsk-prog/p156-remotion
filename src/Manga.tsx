@@ -165,7 +165,8 @@ const PanelsLayout: React.FC<LP> = ({ s, f, starts, acc, idx }) => {
         const r = rects[i];
         const st = starts[i] ?? 0;
         const lf = f - st;
-        if (lf < -2) return null;
+        if (lf < -2)
+          return <div key={i} style={{ position: "absolute", left: r.x, top: r.y, width: r.w, height: r.h, border: "6px dashed rgba(17,16,20,.28)" }} />;
         const nextSt = starts[i + 1] ?? 1e9;
         const pdur = Math.max(1, (starts[i + 1] ?? starts[i] + 120) - st);
         const fromLeft = (i + idx) % 2 === 0;
@@ -194,35 +195,38 @@ const PanelsLayout: React.FC<LP> = ({ s, f, starts, acc, idx }) => {
   );
 };
 
-// หน้าใหญ่: ภาพเต็มจอ + เส้นความเร็ว + ชื่อเรื่องตัวยักษ์
+// หน้าใหญ่: ช่องภาพใหญ่ครึ่งบน (ครอปเฉพาะส่วนภาพวาด) + เส้นความเร็ว + ชื่อเรื่องตัวยักษ์บนกระดาษ
+const BigPanel: React.FC<{ src?: string; x?: number; y?: number; zoom?: number; f: number; d: number; kick?: boolean }> = ({ src, x, y, zoom, f, d, kick = true }) => {
+  const k = kick ? ez(f, 0, 14, 1.18, 1, Easing.out(Easing.exp)) : 1;
+  return (
+    <div style={{ position: "absolute", left: 36, top: 80, width: W - 72, height: 1060, background: INK, transform: `rotate(-1.2deg) scale(${k})` }}>
+      <div style={{ position: "absolute", inset: 12, overflow: "hidden", background: "#fff" }}>
+        <Crop src={src} w={W - 96} h={1036} x={x ?? 50} y={y ?? 28} zoom={zoom ?? 1.6} f={f} d={d} />
+        <SpeedLines w={W - 96} h={1036} cx={(W - 96) / 2} cy={520} f={f} n={60} op={0.35} color="#fff" />
+      </div>
+    </div>
+  );
+};
+
 const SplashLayout: React.FC<LP> = ({ s, f, d, starts, acc }) => {
   const k = activePart(starts, f);
   const pv = (s.parts || [])[k]?.panel || (s.parts || [])[0]?.panel || {};
   const lines = String(s.title || "").split("\n");
-  const kick = ez(f, 0, 14, 1.25, 1, Easing.out(Easing.exp));
   return (
     <AbsoluteFill>
-      <div style={{ position: "absolute", inset: 0, overflow: "hidden", transform: `scale(${kick})` }}>
-        <Crop src={pickImg(s, pv.img)} w={W} h={H} x={pv.x ?? 50} y={pv.y ?? 35} zoom={pv.zoom ?? 1.5} f={f} d={d} />
-      </div>
-      <SpeedLines w={W} h={H} cx={540} cy={760} f={f} n={90} op={0.85} />
-      <AbsoluteFill style={{ background: "linear-gradient(to bottom, rgba(244,236,219,0) 45%, rgba(244,236,219,.0) 60%, rgba(17,16,20,.55) 100%)" }} />
-      <div style={{ position: "absolute", left: 50, right: 50, top: 1130, fontFamily: KANIT, fontWeight: 900, lineHeight: 1.02 }}>
+      <SpeedLines w={W} h={H} cx={540} cy={600} f={f} n={80} op={0.16} />
+      <BigPanel src={pickImg(s, pv.img)} x={pv.x} y={pv.y} zoom={pv.zoom} f={f} d={d} />
+      <div style={{ position: "absolute", left: 50, right: 50, top: 1170, fontFamily: KANIT, fontWeight: 900, lineHeight: 1.04 }}>
         {lines.map((ln, i) => {
           const t = ez(f, 4 + i * 6, 14 + i * 6, 0, 1, back(2));
           const len = Array.from(ln.replace(/\*/g, "")).length || 1;
           return (
-            <div key={i} style={{ fontSize: Math.min(150, 1700 / len), color: "#fff", textShadow: `${stroke(10)}, 16px 16px 0 ${INK}`, transform: `translateX(${(1 - t) * (i % 2 ? 900 : -900)}px) rotate(-4deg)`, textAlign: i % 2 ? "right" : "left" }}>
+            <div key={i} style={{ fontSize: Math.min(140, 1600 / len), color: "#fff", textShadow: `${stroke(9)}, 14px 14px 0 ${INK}`, transform: `translateX(${(1 - t) * (i % 2 ? 900 : -900)}px) rotate(-3deg)`, textAlign: i % 2 ? "right" : "left" }}>
               <Rich text={ln} color={acc} />
             </div>
           );
         })}
       </div>
-      {s.subtitle ? (
-        <div style={{ position: "absolute", left: 60, top: 90, transform: `rotate(-3deg) scale(${ez(f, 10, 20, 0, 1, back(2))})` }}>
-          <span style={{ display: "inline-block", padding: "8px 28px", background: INK, color: "#fff", fontFamily: KANIT, fontWeight: 800, fontSize: 46 }}>{s.subtitle}</span>
-        </div>
-      ) : null}
     </AbsoluteFill>
   );
 };
@@ -291,38 +295,39 @@ const VersusLayout: React.FC<LP> = ({ s, f, d, starts, acc }) => {
   );
 };
 
-// ส่องข้อความบนการ์ด: การ์ดเต็ม + ช่องขยายลอยพร้อมลูกศรหมึก
-const EffectLayout: React.FC<LP> = ({ s, f, d, starts, acc }) => {
+// ส่องข้อความบนการ์ด: การ์ดด้านบน + ช่องขยายใหญ่ด้านล่าง + กรอบสีชี้จุด
+const EffectLayout: React.FC<LP> = ({ s, f, starts, acc }) => {
   const k = activePart(starts, f);
   const pv = (s.parts || [])[k]?.panel || {};
-  const cw = 760;
+  const cw = 600;
   const ch = cw * CARD_AR;
-  const left = 160;
-  const top = 80;
+  const left = 240;
+  const top = 70;
   const fx = left + ((pv.x ?? 50) / 100) * cw;
   const fy = top + ((pv.y ?? 70) / 100) * ch;
   const lf = f - (starts[k] ?? 0);
   const t = ez(lf, 0, 12, 0, 1, back(1.4));
-  const bw = 940;
-  const bh = 420;
-  const by = fy > top + ch * 0.55 ? 120 : 1150;
+  const enter = ez(f, 0, 12, 0, 1, Easing.out(Easing.exp));
+  const by = 1010;
+  const bw = W - 100;
+  const bh = 560;
   return (
     <AbsoluteFill>
-      <div style={{ position: "absolute", left, top, transform: `rotate(-2deg)` }}>
-        {s.image_url ? <Img src={s.image_url} style={{ width: cw, height: ch, display: "block", border: `8px solid ${INK}`, filter: `grayscale(${0.6 * t})` }} /> : null}
+      <div style={{ position: "absolute", left, top, transform: `translateY(${(1 - enter) * -900}px) rotate(-2deg)` }}>
+        {s.image_url ? <Img src={s.image_url} style={{ width: cw, height: ch, display: "block", border: `8px solid ${INK}`, boxShadow: `12px 12px 0 ${INK}` }} /> : null}
       </div>
-      <div style={{ position: "absolute", left: fx - 150, top: fy - 70, width: 300, height: 140, border: `10px solid ${acc}`, borderRadius: 18, opacity: t, transform: `scale(${0.6 + 0.4 * t})` }} />
+      <div style={{ position: "absolute", left: fx - 130, top: fy - 55, width: 260, height: 110, border: `9px solid ${acc}`, borderRadius: 14, opacity: t, transform: `scale(${0.7 + 0.3 * t})` }} />
       <svg width={W} height={H} style={{ position: "absolute", inset: 0, opacity: t }}>
-        <line x1={fx} y1={by > fy ? fy + 70 : fy - 70} x2={540} y2={by > fy ? by : by + bh} stroke={INK} strokeWidth={10} />
+        <line x1={fx} y1={fy + 55} x2={540} y2={by} stroke={acc} strokeWidth={9} strokeDasharray="22 14" />
       </svg>
-      <div style={{ position: "absolute", left: 70, top: by, width: bw, height: bh, background: INK, transform: `scale(${t})`, opacity: t }}>
-        <div style={{ position: "absolute", inset: 10, overflow: "hidden", background: "#fff" }}>
-          <Crop src={pickImg(s, pv.img)} w={bw - 20} h={bh - 20} x={pv.x ?? 50} y={pv.y ?? 70} zoom={pv.zoom ?? 2.4} f={lf} d={90} />
+      <div style={{ position: "absolute", left: 50, top: by, width: bw, height: bh, background: INK, transform: `translateY(${(1 - enter) * 900}px) rotate(0.8deg)` }}>
+        <div style={{ position: "absolute", inset: 12, overflow: "hidden", background: "#fff" }}>
+          <Crop key={k} src={pickImg(s, pv.img)} w={bw - 24} h={bh - 24} x={pv.x ?? 50} y={pv.y ?? 70} zoom={pv.zoom ?? 2.0} f={lf} d={90} />
         </div>
       </div>
       {s.title ? (
-        <div style={{ position: "absolute", left: 60, right: 60, top: by === 120 ? 570 : 1590, textAlign: "center", transform: `rotate(-2deg) scale(${ez(f, 8, 18, 0, 1, back(2))})` }}>
-          <span style={{ display: "inline-block", padding: "6px 30px", background: acc, color: "#fff", fontFamily: KANIT, fontWeight: 900, fontSize: 60, border: `6px solid ${INK}`, textShadow: stroke(3) }}>{s.title}</span>
+        <div style={{ position: "absolute", left: 60, right: 60, top: 930, textAlign: "center", transform: `rotate(-2deg) scale(${ez(f, 8, 18, 0, 1, back(2))})` }}>
+          <span style={{ display: "inline-block", padding: "4px 30px", background: acc, color: "#fff", fontFamily: KANIT, fontWeight: 900, fontSize: 56, border: `6px solid ${INK}`, textShadow: stroke(3) }}>{s.title}</span>
         </div>
       ) : null}
     </AbsoluteFill>
@@ -399,28 +404,27 @@ const PageView: React.FC<{ s: MangaSlide; idx: number; acc: string; pages: numbe
   );
 };
 
-// ปก (0.5 วินาทีแรก = ภาพปก Shorts): หน้าใหญ่ + คำโปรยตัวยักษ์
+// ปก (0.5 วินาทีแรก = ภาพปก Shorts): ช่องภาพใหญ่ + คำโปรยตัวยักษ์
 const MangaCover: React.FC<{ image_url?: string; hook?: string; badge?: string; acc: string }> = ({ image_url, hook, badge, acc }) => {
   const f = useCurrentFrame();
   const lines = String(hook || "").split("\n");
   return (
-    <AbsoluteFill style={{ background: PAPER }}>
-      <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
-        <Crop src={image_url} w={W} h={H} x={50} y={34} zoom={1.55} f={f} d={30} />
-      </div>
-      <SpeedLines w={W} h={H} cx={540} cy={700} f={0} n={90} op={0.8} />
-      <div style={{ position: "absolute", left: 40, right: 40, top: 1120, fontFamily: KANIT, fontWeight: 900, lineHeight: 1.0 }}>
+    <AbsoluteFill>
+      <Paper />
+      <SpeedLines w={W} h={H} cx={540} cy={600} f={0} n={80} op={0.16} />
+      <BigPanel src={image_url} f={f} d={30} kick={false} />
+      <div style={{ position: "absolute", left: 40, right: 40, top: 1170, fontFamily: KANIT, fontWeight: 900, lineHeight: 1.0 }}>
         {lines.map((ln, i) => {
           const len = Array.from(ln).length || 1;
           return (
-            <div key={i} style={{ fontSize: Math.min(190, 1800 / len), color: i % 2 ? acc : "#fff", textShadow: `${stroke(11)}, 18px 18px 0 ${INK}`, transform: "rotate(-4deg)", textAlign: i % 2 ? "right" : "left" }}>
+            <div key={i} style={{ fontSize: Math.min(180, 1700 / len), color: i % 2 ? acc : "#fff", textShadow: `${stroke(11)}, 16px 16px 0 ${INK}`, transform: "rotate(-3deg)", textAlign: i % 2 ? "right" : "left" }}>
               {ln}
             </div>
           );
         })}
       </div>
       {badge ? (
-        <div style={{ position: "absolute", left: 50, top: 90, transform: "rotate(-3deg)" }}>
+        <div style={{ position: "absolute", right: 40, top: 40, transform: "rotate(3deg)" }}>
           <span style={{ display: "inline-block", padding: "6px 26px", background: INK, color: "#fff", fontFamily: KANIT, fontWeight: 900, fontSize: 56 }}>{badge}</span>
         </div>
       ) : null}
