@@ -1250,6 +1250,47 @@ app.post("/add-music", auth, async (req, res) => {
   console.log(`[add-music] ${url} ${JSON.stringify(out)}`);
 });
 
+// ดูพื้นที่ดิสก์ + ลบไฟล์ที่ไม่ใช้: POST /disk {delete_out:[ชื่อไฟล์ใน out], purge_assets:true}
+app.post("/disk", auth, async (req, res) => {
+  const out = { deleted: [] };
+  for (const n of (Array.isArray(req.body?.delete_out) ? req.body.delete_out : []).map((x) => path.basename(String(x)))) {
+    await fs.rm(path.join(OUT_DIR, n), { force: true }).then(() => out.deleted.push(n)).catch(() => {});
+  }
+  if (req.body?.purge_assets) {
+    // assets = ไฟล์ชั่วคราวของงาน (รูป/เสียงที่โหลดมา, peek, news, bgm) — ไม่ใช่คลิปที่ลงแล้ว; เก็บไว้แค่คิว TikTok และ outro ของวันนี้
+    for (const f of await fs.readdir(ASSET_DIR).catch(() => [])) {
+      if (/^tiktok-queue|^outro-|\.json$/.test(f)) continue;
+      await fs.rm(path.join(ASSET_DIR, f), { recursive: true, force: true }).catch(() => {});
+    }
+    out.purged_assets = true;
+  }
+  const du = async (d) => {
+    let total = 0;
+    const files = [];
+    const walk = async (p) => {
+      for (const e of await fs.readdir(p, { withFileTypes: true }).catch(() => [])) {
+        const q = path.join(p, e.name);
+        if (e.isDirectory()) await walk(q);
+        else {
+          const st = await fs.stat(q).catch(() => null);
+          if (st) { total += st.size; files.push([q.replace(DATA_DIR, ""), st.size, st.mtime.toISOString().slice(0, 16)]); }
+        }
+      }
+    };
+    await walk(d);
+    files.sort((a, b) => b[1] - a[1]);
+    return { mb: Math.round(total / 1e6), top: files.slice(0, 40).map(([n, sz, t]) => `${n} ${Math.round(sz / 1e6)}MB ${t}`) };
+  };
+  out.out = await du(OUT_DIR);
+  out.assets = await du(ASSET_DIR);
+  try {
+    const { stdout } = await execFileP("df", ["-m", DATA_DIR]);
+    out.df = stdout.trim().split("\n").pop();
+  } catch {}
+  console.log(`[disk] ${JSON.stringify(out).slice(0, 15000)}`);
+  res.json(out);
+});
+
 // ดูเฟรมจากคลิปที่ render แล้ว: POST /peek-video {job, times:[sec...], width} → แผ่นรวมเฟรม base64 ใน log "[peek] v …"
 app.post("/peek-video", auth, async (req, res) => {
   const job = path.basename(String(req.body.job || ""));
