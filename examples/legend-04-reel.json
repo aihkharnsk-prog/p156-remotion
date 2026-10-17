@@ -3,7 +3,7 @@
   "height": 1920,
   "meta": {
     "title": "การ์ดหลังขาวที่มีแค่ 2 ใบในโลก | การ์ดแพงระดับตำนาน #shorts",
-    "description": "Blastoise Commissioned Presentation Galaxy Star Hologram การ์ดตัวอย่างที่ Wizards of the Coast พิมพ์ปี 1998 เพื่อให้ดูว่าการ์ดโปเกมอนฉบับอังกฤษจะหน้าตาแบบไหน ด้านหลังขาวโล่ง เชื่อว่ามีแค่สองใบ ขายได้ 360,000 ดอลลาร์\n\n👇 ใบที่สองหายไปไหน คุณคิดว่ายังมีอยู่ไหม? คอมเมนต์บอกหน่อย\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n#shorts #โปเกมอน #การ์ดโปเกมอน #pokemoncards #การ์ดแพง",
+    "description": "Blastoise Commissioned Presentation Galaxy Star Hologram การ์ดตัวอย่างที่ Wizards of the Coast พิมพ์ปี 1998 เพื่อให้ดูว่าการ์ดโปเกมอนฉบับอังกฤษจะหน้าตาแบบไหน ด้านหลังขาวโล่ง เชื่อว่ามีแค่สองใบ ขายได้ 360,000 ดอลลาร์\n\n👇 ใบที่สองหายไปไหน คุณคิดว่ายังมีอยู่ไหม? คอมเมนต์บอกหน่อย\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Celtic Impulse\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #โปเกมอน #การ์ดโปเกมอน #pokemoncards #การ์ดแพง",
     "thumb": {
       "image_url": "https://images.ctfassets.net/t8bripszr2o9/newsimg-c4a83db53a061d4b388dc08236b11e7e/8cb203c16361ce6d6f02f06b92c0362f/Proto_3719376_O_1__D_20201203165643569.jpg",
       "hook": "หลังขาว\nมีแค่ 2 ใบ!",
@@ -204,5 +204,7 @@
   "composition": "CardShow",
   "theme": "water",
   "badge": "ตำนาน #4",
-  "series": "การ์ดแพงระดับตำนาน"
+  "series": "การ์ดแพงระดับตำนาน",
+  "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Celtic%20Impulse.mp3",
+  "bgm_volume": 0.14
 }

@@ -3,7 +3,7 @@
   "height": 1920,
   "meta": {
     "title": "ลิซาร์ดอนที่ขาดไปอย่างเดียว แต่แพงกว่า 50 ล้านบาท | การ์ดแพงระดับตำนาน #shorts",
-    "description": "ลิซาร์ดอนชุดแรกญี่ปุ่นปี 1996 ล็อตแรกที่ไม่มีสัญลักษณ์ความหายาก (No Rarity) เกรด PSA 10 มีแค่ราวสิบใบ มีนาคม 2026 ขายได้ 1.7 ล้านดอลลาร์\n\n👇 ลองไปเช็กการ์ดเก่าที่บ้าน มุมขวาล่างมีสัญลักษณ์ไหม? คอมเมนต์บอกหน่อย\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n#shorts #โปเกมอน #การ์ดโปเกมอน #pokemoncards #การ์ดแพง",
+    "description": "ลิซาร์ดอนชุดแรกญี่ปุ่นปี 1996 ล็อตแรกที่ไม่มีสัญลักษณ์ความหายาก (No Rarity) เกรด PSA 10 มีแค่ราวสิบใบ มีนาคม 2026 ขายได้ 1.7 ล้านดอลลาร์\n\n👇 ลองไปเช็กการ์ดเก่าที่บ้าน มุมขวาล่างมีสัญลักษณ์ไหม? คอมเมนต์บอกหน่อย\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Celtic Impulse\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #โปเกมอน #การ์ดโปเกมอน #pokemoncards #การ์ดแพง",
     "thumb": {
       "image_url": "https://dlnxybxfzkpeatkjcztb.supabase.co/storage/v1/object/public/website-images/cards-asp/2030953-1737771457531.jpg",
       "hook": "ขาดไปอย่างเดียว\nแพง 50 ล้าน!",
@@ -194,5 +194,7 @@
   "composition": "CardShow",
   "theme": "fire",
   "badge": "ตำนาน #2",
-  "series": "การ์ดแพงระดับตำนาน"
+  "series": "การ์ดแพงระดับตำนาน",
+  "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Celtic%20Impulse.mp3",
+  "bgm_volume": 0.14
 }

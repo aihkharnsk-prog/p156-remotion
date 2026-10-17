@@ -3,7 +3,7 @@
   "height": 1920,
   "meta": {
     "title": "การ์ดวันพีซที่มีใบเดียวในโลก ตั้งราคา 600 ล้านเยน | การ์ดแพงระดับตำนาน #shorts",
-    "description": "ลูฟี่ OP05-119 ฉบับถ้วยรางวัลแชมป์โลก One Piece Card Game Championship 2023 มีใบเดียวในโลก ไม่มีขายในซอง ตั้งราคาขายไว้ 600 ล้านเยน\n\n👇 ถ้าได้ใบนี้มา คุณจะเก็บหรือขาย? คอมเมนต์บอกกัน\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #การ์ดแพง",
+    "description": "ลูฟี่ OP05-119 ฉบับถ้วยรางวัลแชมป์โลก One Piece Card Game Championship 2023 มีใบเดียวในโลก ไม่มีขายในซอง ตั้งราคาขายไว้ 600 ล้านเยน\n\n👇 ถ้าได้ใบนี้มา คุณจะเก็บหรือขาย? คอมเมนต์บอกกัน\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Celtic Impulse\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #การ์ดแพง",
     "thumb": {
       "image_url": "https://www.onepiece-cardgame.com/images/prize/OP05-119_gold.png",
       "hook": "มีใบเดียว\nในโลก!",
@@ -200,5 +200,7 @@
   "composition": "CardShow",
   "theme": "normal",
   "badge": "ตำนาน #3",
-  "series": "การ์ดแพงระดับตำนาน"
+  "series": "การ์ดแพงระดับตำนาน",
+  "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Celtic%20Impulse.mp3",
+  "bgm_volume": 0.14
 }

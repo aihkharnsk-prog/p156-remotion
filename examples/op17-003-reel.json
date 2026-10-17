@@ -3,7 +3,7 @@
   "height": 1920,
   "meta": {
     "title": "อิโซ ซามูไรแห่งวาโนะในกลุ่มหนวดขาว OP17-003 | One Piece Card #shorts",
-    "description": "การ์ดวันพีซ OP-17 ใบที่ 003 อิโซ หัวหน้าหน่วยที่ 16 ของกลุ่มหนวดขาว ข้ารับใช้ของโคสึกิ โอเด้ง และพี่ชายของคิคุ\n\n👇 อยากให้เล่าการ์ดใบไหนต่อ? พิมพ์ชื่อไว้ในคอมเมนต์\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17",
+    "description": "การ์ดวันพีซ OP-17 ใบที่ 003 อิโซ หัวหน้าหน่วยที่ 16 ของกลุ่มหนวดขาว ข้ารับใช้ของโคสึกิ โอเด้ง และพี่ชายของคิคุ\n\n👇 อยากให้เล่าการ์ดใบไหนต่อ? พิมพ์ชื่อไว้ในคอมเมนต์\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Celtic Impulse\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17",
     "thumb": {
       "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-003.png",
       "hook": "พี่ชาย\nของใคร?",
@@ -181,5 +181,7 @@
   "composition": "CardShow",
   "theme": "psychic",
   "badge": "OP17-003",
-  "series": "ONE PIECE CARD GAME • OP-17"
+  "series": "ONE PIECE CARD GAME • OP-17",
+  "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Celtic%20Impulse.mp3",
+  "bgm_volume": 0.14
 }

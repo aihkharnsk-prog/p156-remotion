@@ -3,7 +3,7 @@
   "height": 1920,
   "meta": {
     "title": "อินุอาราชิ & เนโกะมามุชิ หมากับแมวแห่งโซ OP17-004 | One Piece Card #shorts",
-    "description": "การ์ดวันพีซ OP-17 ใบที่ 004 อินุอาราชิและเนโกะมามุชิ สองผู้ปกครองเกาะโซ ที่เคยล่องเรือกับโอเด้งบนเรือหนวดขาว\n\n👇 แท็กเพื่อนที่ชอบวันพีซ\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17",
+    "description": "การ์ดวันพีซ OP-17 ใบที่ 004 อินุอาราชิและเนโกะมามุชิ สองผู้ปกครองเกาะโซ ที่เคยล่องเรือกับโอเด้งบนเรือหนวดขาว\n\n👇 แท็กเพื่อนที่ชอบวันพีซ\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Celtic Impulse\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17",
     "thumb": {
       "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-004.png",
       "hook": "หมากับแมว\nใบเดียวกัน!",
@@ -203,5 +203,7 @@
   "composition": "CardShow",
   "theme": "normal",
   "badge": "OP17-004",
-  "series": "ONE PIECE CARD GAME • OP-17"
+  "series": "ONE PIECE CARD GAME • OP-17",
+  "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Celtic%20Impulse.mp3",
+  "bgm_volume": 0.14
 }

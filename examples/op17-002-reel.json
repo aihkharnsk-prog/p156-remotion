@@ -3,7 +3,7 @@
   "height": 1920,
   "meta": {
     "title": "อัทมอส ควายน้ำแห่งกลุ่มหนวดขาว OP17-002 | One Piece Card #shorts",
-    "description": "การ์ดวันพีซ OP-17 ใบที่ 002 อัทมอส หัวหน้าหน่วยที่ 13 ของกลุ่มหนวดขาว ที่มาของฉายา 'ควายน้ำ' และความสามารถบนการ์ดที่แข็งขึ้นตอนเป็นฝ่ายรับ\n\n👇 ทายถูกไหม? คอมเมนต์คำตอบของคุณก่อนดูเฉลย\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17",
+    "description": "การ์ดวันพีซ OP-17 ใบที่ 002 อัทมอส หัวหน้าหน่วยที่ 13 ของกลุ่มหนวดขาว ที่มาของฉายา 'ควายน้ำ' และความสามารถบนการ์ดที่แข็งขึ้นตอนเป็นฝ่ายรับ\n\n👇 ทายถูกไหม? คอมเมนต์คำตอบของคุณก่อนดูเฉลย\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Celtic Impulse\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17",
     "thumb": {
       "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-002.png",
       "hook": "ฉายา\nควายน้ำ!",
@@ -202,5 +202,7 @@
   "composition": "CardShow",
   "theme": "fighting",
   "badge": "OP17-002",
-  "series": "ONE PIECE CARD GAME • OP-17"
+  "series": "ONE PIECE CARD GAME • OP-17",
+  "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Celtic%20Impulse.mp3",
+  "bgm_volume": 0.14
 }
