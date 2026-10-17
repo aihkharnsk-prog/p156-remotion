@@ -9,6 +9,7 @@ import {
 } from "./DynamicStory";
 import { Thumb, defaultThumbProps } from "./Thumb";
 import { CardShow } from "./Show";
+import { MangaShow } from "./Manga";
 import { getAudioDurationInSeconds } from "@remotion/media-utils";
 import {
   DramaStory,
@@ -118,6 +119,16 @@ export const Root: React.FC = () => {
       <Composition
         id="CardShow"
         component={CardShow as any}
+        durationInFrames={90}
+        fps={DYN_FPS}
+        width={1080}
+        height={1920}
+        defaultProps={{ ...defaultDynamicProps, width: 1080, height: 1920 } as any}
+        calculateMetadata={fitSlides as any}
+      />
+      <Composition
+        id="MangaShow"
+        component={MangaShow as any}
         durationInFrames={90}
         fps={DYN_FPS}
         width={1080}

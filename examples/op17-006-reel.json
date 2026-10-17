@@ -1,0 +1,193 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "composition": "MangaShow",
+  "accent_color": "#e2231a",
+  "badge": "OP17-006",
+  "series": "ONE PIECE CARD GAME",
+  "tts": {
+    "voice_id": "bTEswxYhpv7UDkQg5VRu",
+    "model_id": "eleven_v4",
+    "stability": 0.8,
+    "speed": 1.0,
+    "prefix": "[calm, soft, natural storyteller]"
+  },
+  "audio_rate": 1.0,
+  "slides": [
+    {
+      "layout": "wanted",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-006.png",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "กลุ่มหนวดขาวมีหัวหน้าหน่วย *16 คน*",
+          "say": "ในกลุ่มหนวดขาว มีหัวหน้าหน่วยทั้งหมดสิบหกคน.",
+          "panel": {
+            "x": 47,
+            "y": 20,
+            "zoom": 2.0
+          }
+        },
+        {
+          "text": "แต่มีคนหนึ่ง *แทบไม่มีใครจำได้*",
+          "say": "แต่มีคนหนึ่ง ที่แทบไม่มีใครจำชื่อได้."
+        }
+      ],
+      "name": "KINGDEW",
+      "subtitle": "ไม่มีข้อมูล"
+    },
+    {
+      "layout": "splash",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-006.png",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "*คิงดิว* หัวหน้าหน่วยที่ 11",
+          "say": "เขาชื่อ คิงดิว. หัวหน้าหน่วยที่สิบเอ็ด.",
+          "panel": {
+            "x": 47,
+            "y": 20,
+            "zoom": 1.6
+          }
+        },
+        {
+          "text": "ในมังงะ เขา*แทบไม่มีบท*",
+          "say": "ในมังงะ เขาแทบไม่มีบทพูด. และไม่เคยมีใครเห็นเขาสู้เต็มที่สักครั้ง.",
+          "panel": {
+            "x": 50,
+            "y": 30,
+            "zoom": 1.4
+          }
+        }
+      ],
+      "title": "หัวหน้าหน่วย\nที่*ไม่มีใครรู้จัก*"
+    },
+    {
+      "layout": "effect",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-006.png",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "ช่องความสามารถ *ว่างเปล่า*",
+          "say": "การ์ดของเขาก็เหมือนกัน. ช่องความสามารถ ว่างเปล่า.",
+          "panel": {
+            "x": 50,
+            "y": 70,
+            "zoom": 2.0
+          }
+        },
+        {
+          "text": "การ์ดแบบนี้เรียกว่า *วานิลลา*",
+          "say": "ในเกมการ์ด การ์ดแบบนี้ ถูกเรียกว่า วานิลลา. ไม่มีอะไรพิเศษ นอกจากตัวเลข.",
+          "panel": {
+            "x": 50,
+            "y": 72,
+            "zoom": 2.4
+          }
+        },
+        {
+          "text": "แต่ได้ *เคาน์เตอร์ 2000* มาแทน",
+          "say": "แต่ได้พลังแปดพัน และเคาน์เตอร์สองพันมาแทน.",
+          "panel": {
+            "x": 8,
+            "y": 40,
+            "zoom": 2.4
+          }
+        }
+      ],
+      "title": "การ์ดที่ไม่มีความสามารถ"
+    },
+    {
+      "layout": "versus",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-006.png",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "แต่ที่คนพูดถึงคือ *ลายพิเศษ*",
+          "say": "แต่สิ่งที่ทำให้ใบนี้ถูกพูดถึง คือลายพิเศษ."
+        },
+        {
+          "text": "คิงดิวใส่ *หน้ากากแพนด้า*",
+          "say": "เพราะคิงดิวในลายนี้ สวมหน้ากากแพนด้า."
+        }
+      ],
+      "images": [
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-006_p1.png"
+      ],
+      "labels": [
+        "ลายปกติ",
+        "ลายพิเศษ"
+      ]
+    },
+    {
+      "layout": "panels",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-006.png",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "ชวนนึกถึง *แพนด้าแมน*",
+          "say": "ชวนให้นึกถึง แพนด้าแมน.",
+          "panel": {
+            "img": 1,
+            "x": 50,
+            "y": 20,
+            "zoom": 2.2,
+            "sfx": "!?"
+          }
+        },
+        {
+          "text": "ตัวละครลับที่*โอดะแอบวาดซ่อนไว้*",
+          "say": "ตัวละครลับ ที่อาจารย์โอดะ ชอบแอบวาดซ่อนไว้ ตามฉากต่างๆ ในเรื่อง.",
+          "panel": {
+            "img": 1,
+            "x": 50,
+            "y": 32,
+            "zoom": 1.6
+          }
+        },
+        {
+          "text": "คนที่ไม่มีใครรู้จัก กลายเป็น*ใบที่ใครก็จำได้*",
+          "say": "คนที่ไม่มีใครรู้จัก เลยกลายเป็นการ์ดที่ใครเห็นก็จำได้.",
+          "panel": {
+            "img": 0,
+            "x": 47,
+            "y": 20,
+            "zoom": 2.0
+          }
+        }
+      ],
+      "images": [
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-006_p1.png"
+      ]
+    },
+    {
+      "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+      "image_mode": "still",
+      "layout": "still",
+      "no_caption": true,
+      "duration": 4,
+      "text": "-",
+      "parts": [
+        {
+          "text": "",
+          "say": "เรื่องของการ์ดแบบนี้ ยังมีอีกเยอะ. กดติดตามไว้ได้เลย."
+        },
+        {
+          "text": "",
+          "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "title": "คิงดิว หัวหน้าหน่วยที่ไม่มีใครรู้จัก OP17-006 | One Piece Card #shorts",
+    "description": "การ์ดวันพีซ OP-17 ใบที่ 006 คิงดิว หัวหน้าหน่วยที่ 11 ของกลุ่มหนวดขาว การ์ดที่ไม่มีความสามารถ และลายพิเศษสวมหน้ากากแพนด้า\n\n👇 คุณเคยเห็นแพนด้าแมนซ่อนอยู่ในฉากไหนบ้าง? คอมเมนต์บอกกัน\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17",
+    "thumb": {
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-006_p1.png",
+      "hook": "หัวหน้าหน่วย\nที่ไม่มีใครรู้จัก",
+      "badge": "OP17-006",
+      "sub": "ONE PIECE CARD GAME"
+    },
+    "publish_at": "2026-10-21T10:00:00Z"
+  }
+}

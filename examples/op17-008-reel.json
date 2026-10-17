@@ -1,0 +1,193 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "composition": "MangaShow",
+  "accent_color": "#e2231a",
+  "badge": "OP17-008",
+  "series": "ONE PIECE CARD GAME",
+  "tts": {
+    "voice_id": "bTEswxYhpv7UDkQg5VRu",
+    "model_id": "eleven_v4",
+    "stability": 0.8,
+    "speed": 1.0,
+    "prefix": "[calm, soft, natural storyteller]"
+  },
+  "audio_rate": 1.0,
+  "slides": [
+    {
+      "layout": "splash",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-008.png",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "ร่างกายเปลี่ยนเป็น*เพชร*",
+          "say": "ชายคนนี้ เปลี่ยนร่างกายทั้งตัว ให้กลายเป็นเพชรได้.",
+          "panel": {
+            "x": 45,
+            "y": 22,
+            "zoom": 1.6
+          }
+        },
+        {
+          "text": "ฉายา *ไดมอนด์ โจซ*",
+          "say": "ฉายาของเขาคือ ไดมอนด์ โจซ.",
+          "panel": {
+            "x": 65,
+            "y": 28,
+            "zoom": 1.5
+          }
+        }
+      ],
+      "title": "ร่างกาย\nเป็น*เพชร*"
+    },
+    {
+      "layout": "panels",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-008.png",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "ผล*คิระคิระ*",
+          "say": "เขากินผลคิระคิระ. ผลปีศาจที่ทำให้ร่างกายแข็งเป็นเพชร.",
+          "panel": {
+            "x": 78,
+            "y": 22,
+            "zoom": 2.2,
+            "sfx": "เคร้ง!"
+          }
+        },
+        {
+          "text": "รับ*ดาบมิฮอว์ค*ด้วยร่างเพชร",
+          "say": "ที่มารีนฟอร์ด เขาเปลี่ยนร่างเป็นเพชร รับดาบของมิฮอว์คไว้.",
+          "panel": {
+            "x": 40,
+            "y": 22,
+            "zoom": 2.0
+          }
+        },
+        {
+          "text": "ขวาง*คร็อกโคไดล์*",
+          "say": "และเข้าไปขวางคร็อกโคไดล์ ที่จะลอบทำร้ายหนวดขาว.",
+          "panel": {
+            "x": 30,
+            "y": 30,
+            "zoom": 1.7,
+            "sfx": "ตึ้ง!"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "wanted",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-008.png",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "หัวหน้า*หน่วยที่ 3*",
+          "say": "เขาคือหัวหน้าหน่วยที่สาม ของกลุ่มหนวดขาว.",
+          "panel": {
+            "x": 42,
+            "y": 22,
+            "zoom": 2.0
+          }
+        },
+        {
+          "text": "หน่วยที่ถนัด*บุกตะลุย*",
+          "say": "หน่วยที่เน้นการต่อสู้ ปะทะซึ่งหน้า."
+        }
+      ],
+      "name": "DIAMOND JOZU",
+      "subtitle": "หน่วยที่ 3"
+    },
+    {
+      "layout": "effect",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-008.png",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "เมื่อลงสนาม",
+          "say": "บนการ์ด เมื่อลงสนาม.",
+          "panel": {
+            "x": 50,
+            "y": 68,
+            "zoom": 1.8
+          }
+        },
+        {
+          "text": "ลีดเดอร์หนวดขาว = *พลัง 8000*",
+          "say": "ถ้าลีดเดอร์คือหนวดขาว พลังพื้นฐานของลีดเดอร์ จะกลายเป็นแปดพัน ไปจนจบตาถัดไปของคู่แข่ง.",
+          "panel": {
+            "x": 50,
+            "y": 70,
+            "zoom": 2.0
+          }
+        }
+      ],
+      "title": "ลีดเดอร์แข็งขึ้นทันที"
+    },
+    {
+      "layout": "panels",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-008.png",
+      "duration": 4,
+      "parts": [
+        {
+          "text": "แต่เพชรมี*จุดอ่อน*",
+          "say": "แต่เพชร ก็มีจุดอ่อน.",
+          "panel": {
+            "x": 42,
+            "y": 22,
+            "zoom": 2.2,
+            "bw": true
+          }
+        },
+        {
+          "text": "*อาโอคิยิ* แช่แข็งเขาทั้งตัว",
+          "say": "ในสงครามครั้งนั้น พลเรือเอกอาโอคิยิ แช่แข็งร่างของเขา จนขยับไม่ได้.",
+          "panel": {
+            "x": 80,
+            "y": 30,
+            "zoom": 1.8,
+            "sfx": "เปรี๊ยะ!"
+          }
+        },
+        {
+          "text": "*เพชร หรือ น้ำแข็ง* ใครชนะ?",
+          "say": "คุณว่า ระหว่างเพชรกับน้ำแข็ง ใครชนะ?",
+          "panel": {
+            "x": 45,
+            "y": 22,
+            "zoom": 1.7
+          }
+        }
+      ]
+    },
+    {
+      "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+      "image_mode": "still",
+      "layout": "still",
+      "no_caption": true,
+      "duration": 4,
+      "text": "-",
+      "parts": [
+        {
+          "text": "",
+          "say": "เรื่องของการ์ดแบบนี้ ยังมีอีกเยอะ. กดติดตามไว้ได้เลย."
+        },
+        {
+          "text": "",
+          "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "title": "ไดมอนด์ โจซ ชายร่างเพชร OP17-008 | One Piece Card #shorts",
+    "description": "การ์ดวันพีซ OP-17 ใบที่ 008 โจซ หัวหน้าหน่วยที่ 3 ของกลุ่มหนวดขาว ผลคิระคิระที่เปลี่ยนร่างเป็นเพชร รับดาบมิฮอว์ค ขวางคร็อกโคไดล์ และจุดอ่อนที่อาโอคิยิรู้\n\n👇 ระหว่างเพชรกับน้ำแข็ง ใครชนะ? คอมเมนต์บอกกัน\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17",
+    "thumb": {
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-008.png",
+      "hook": "ร่างกาย\nเป็นเพชร!",
+      "badge": "OP17-008",
+      "sub": "ONE PIECE CARD GAME"
+    },
+    "publish_at": "2026-10-23T10:00:00Z"
+  }
+}

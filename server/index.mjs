@@ -337,6 +337,13 @@ async function ttsSingleWithTimes(says, rawPath, tts) {
   return { starts, endAll: en[en.length - 1] };
 }
 
+// ช่องภาพของ MangaShow ต่อท่อน: {img, x, y, zoom, sfx, bw}
+function cleanPanel(v) {
+  if (!v || typeof v !== "object") return undefined;
+  const n = (x) => (x === undefined || x === null || x === "" || !Number.isFinite(Number(x)) ? undefined : Number(x));
+  return { img: n(v.img), x: n(v.x), y: n(v.y), zoom: n(v.zoom), sfx: v.sfx ? String(v.sfx).slice(0, 16) : undefined, bw: v.bw === true };
+}
+
 async function runJob(job) {
   job.status = "rendering";
   job.started_at = new Date().toISOString();
@@ -432,7 +439,7 @@ async function runJob(job) {
         if (Array.isArray(s.parts) && job.request.tts) {
           const outParts = [];
           for (const [k, p] of s.parts.entries()) {
-            const part = { text: String(p.text || ""), duration: 4, say: p.say ? String(p.say) : undefined };
+            const part = { text: String(p.text || ""), duration: 4, say: p.say ? String(p.say) : undefined, panel: p.panel };
             if (p.say && job.request.tts.mode !== "single") {
               await ttsToFile(String(p.say), path.join(assetDir, `sa${i}_${k}.mp3`), job.request.tts);
               part.audio_url = local(`sa${i}_${k}.mp3`);
@@ -532,7 +539,7 @@ async function runJob(job) {
 
     const composition = await selectComposition({
       serveUrl,
-      id: compId === "DramaStory" ? "DramaStory" : compId === "CardShow" ? "CardShow" : "DynamicStory",
+      id: ["DramaStory", "CardShow", "MangaShow"].includes(compId) ? compId : "DynamicStory",
       inputProps,
     });
 
@@ -903,7 +910,7 @@ app.post("/render", auth, (req, res) => {
     return v;
   };
 
-  const composition = body.composition === "DramaStory" ? "DramaStory" : body.composition === "CardShow" ? "CardShow" : "DynamicStory";
+  const composition = ["DramaStory", "CardShow", "MangaShow"].includes(body.composition) ? body.composition : "DynamicStory";
   const clean = [];
 
   if (composition === "DramaStory") {
@@ -976,7 +983,7 @@ app.post("/render", auth, (req, res) => {
         text: s.text ? String(s.text) : undefined,
         say: s.say ? String(s.say) : undefined,
         parts: Array.isArray(s.parts)
-          ? s.parts.map((p) => ({ text: String(p?.text ?? ""), say: p?.say ? String(p.say) : undefined }))
+          ? s.parts.map((p) => ({ text: String(p?.text ?? ""), say: p?.say ? String(p.say) : undefined, panel: cleanPanel(p?.panel) }))
           : undefined,
         duration,
         // ฟิลด์ของรูปแบบ CardShow
@@ -992,6 +999,10 @@ app.post("/render", auth, (req, res) => {
         answer: optNum(s.answer),
         points: Array.isArray(s.points) ? s.points.slice(0, 6).map((q) => ({ year: String(q?.year ?? ""), label: String(q?.label ?? "") })) : undefined,
         transition: ["wipe", "zoom", "flash", "slide", "shutter", "none"].includes(s.transition) ? s.transition : undefined,
+        // ฟิลด์ของรูปแบบ MangaShow
+        layout: ["wanted", "panels", "splash", "versus", "effect", "still"].includes(s.layout) ? s.layout : undefined,
+        name: s.name !== undefined ? String(s.name).slice(0, 60) : undefined,
+        bounty: s.bounty !== undefined ? String(s.bounty).slice(0, 30) : undefined,
       });
     }
   }
