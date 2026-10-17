@@ -8,7 +8,7 @@ const execFileP = promisify(execFile);
 import { createWriteStream } from "node:fs";
 import { Readable } from "node:stream";
 import { pipeline } from "node:stream/promises";
-import { randomUUID } from "node:crypto";
+import { randomUUID, createHash } from "node:crypto";
 import { execFile } from "node:child_process";
 import { fileURLToPath } from "node:url";
 
@@ -586,8 +586,7 @@ async function runJob(job) {
     if (job.request.bgm_url) {
       try {
         await fs.mkdir(assetDir, { recursive: true });
-        const mf = path.join(assetDir, "bgm.mp3");
-        await downloadTo(job.request.bgm_url, mf);
+        const mf = await getMusic(job.request.bgm_url);
         const tmp = path.join(OUT_DIR, `${job.id}.bgm.mp4`);
         await mixMusic(outputLocation, tmp, mf, job.request.bgm_volume, job.duration_sec);
         await fs.rename(tmp, outputLocation);
@@ -1222,6 +1221,19 @@ app.post("/fb-news", auth, async (req, res) => {
 const UA = { "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36", accept: "*/*" };
 // ใส่เพลงคลอให้คลิปที่ render แล้ว (ไม่ต้องสร้างเสียงพากย์ใหม่): POST /add-music {jobs:[...], bgm_url, volume, suffix?}
 //   → /videos/<job>-<suffix>.mp4 (ค่าเริ่มต้น suffix = "m")
+// เพลงคลอ: เก็บไฟล์ไว้ใน /data/music (ไม่โดนล้างพร้อม assets) โหลดครั้งเดียว ลองซ้ำ 3 ครั้งถ้าเว็บเพลงล่ม
+async function getMusic(url) {
+  const dir = path.join(path.dirname(ASSET_DIR), "music");
+  await fs.mkdir(dir, { recursive: true });
+  const f = path.join(dir, createHash("sha1").update(url).digest("hex").slice(0, 16) + ".mp3");
+  try { if ((await fs.stat(f)).size > 100000) return f; } catch {}
+  let err;
+  for (let k = 0; k < 3; k++) {
+    try { await downloadTo(url, f + ".tmp"); await fs.rename(f + ".tmp", f); return f; }
+    catch (e) { err = e; await new Promise((r) => setTimeout(r, 3000 * (k + 1))); }
+  }
+  throw err;
+}
 app.post("/add-music", auth, async (req, res) => {
   const jobs = (Array.isArray(req.body?.jobs) ? req.body.jobs : []).map((j) => path.basename(String(j)));
   const url = String(req.body?.bgm_url || "");
@@ -1229,10 +1241,7 @@ app.post("/add-music", auth, async (req, res) => {
   res.json({ ok: true, n: jobs.length });
   const out = [];
   try {
-    const dir = path.join(ASSET_DIR, `bgm-${Date.now().toString(36)}`);
-    await fs.mkdir(dir, { recursive: true });
-    const mf = path.join(dir, "bgm.mp3");
-    await downloadTo(url, mf);
+    const mf = await getMusic(url);
     for (const j of jobs) {
       try {
         const inF = path.join(OUT_DIR, `${j}.mp4`);
