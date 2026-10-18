@@ -139,10 +139,24 @@ async function readTtQueue() {
 async function writeTtQueue(q) {
   await fs.writeFile(TT_QUEUE(), JSON.stringify(q, null, 1));
 }
+// AK 18 ต.ค.: ให้ลง TikTok อัตโนมัติ (ตั้งเวลาโพสต์ตรงผ่าน Zernio) ไม่ต้องผ่านแบบร่างแล้ว
+// TIKTOK_AUTO=0 เพื่อกลับไปใช้แบบร่าง
 async function enqueueTiktok(item) {
   const q = await readTtQueue();
-  const i = q.findIndex((x) => x.file === item.file && !x.sent_at);
-  if (i >= 0) q[i] = { ...q[i], ...item }; else q.push(item);
+  const i = q.findIndex((x) => x.file === item.file && x.direct);
+  if (process.env.TIKTOK_AUTO !== "0") {
+    // ไฟล์เดิมที่ตั้งเวลาไว้แล้ว → ยกเลิกโพสต์เดิมก่อน แล้วตั้งใหม่ (ใช้ตอนเปลี่ยนเวอร์ชันคลิป)
+    if (i >= 0 && q[i].post_id) { try { await zernio(`/posts/${q[i].post_id}`, { method: "DELETE" }); } catch (e) { console.warn(`[tiktok-queue] delete old failed: ${String(e?.message || e)}`); } }
+    const r = await postTikTok(item.video_url, item.meta || {}, item.at);
+    const rec = { ...item, direct: true, sent_at: new Date().toISOString(), post_id: r?.post?._id };
+    if (i >= 0) q[i] = rec; else q.push(rec);
+    q.sort((a, b) => Date.parse(a.at) - Date.parse(b.at));
+    await writeTtQueue(q);
+    console.log(`[tiktok-queue] direct ${item.file} at ${item.at} -> ${rec.post_id}`);
+    return;
+  }
+  const j = q.findIndex((x) => x.file === item.file && !x.sent_at);
+  if (j >= 0) q[j] = { ...q[j], ...item }; else q.push(item);
   q.sort((a, b) => Date.parse(a.at) - Date.parse(b.at));
   await writeTtQueue(q);
   console.log(`[tiktok-queue] + ${item.file} at ${item.at}`);
@@ -1650,6 +1664,25 @@ app.post("/tiktok-draft-due", auth, async (req, res) => {
   const next = q.find((x) => !x.sent_at);
   console.log(`[tiktok-draft] ${JSON.stringify({ sent, next: next ? { file: next.file, at: next.at } : null })}`);
   res.json({ sent, next });
+});
+// ย้ายคลิปที่ยังค้างในคิวแบบร่าง ไปตั้งเวลาโพสต์ตรง: POST /tiktok-queue-migrate
+app.post("/tiktok-queue-migrate", auth, async (req, res) => {
+  const q = await readTtQueue();
+  const out = [];
+  for (const it of q) {
+    if (it.sent_at) continue;
+    if (!(Date.parse(it.at) > Date.now() + 10 * 60 * 1000)) { out.push({ file: it.file, at: it.at, skipped: "time too close or past" }); continue; }
+    try {
+      const r = await postTikTok(it.video_url, it.meta || {}, it.at);
+      it.direct = true; it.sent_at = new Date().toISOString(); it.post_id = r?.post?._id;
+      out.push({ file: it.file, at: it.at, post_id: it.post_id, status: r?.post?.status });
+    } catch (e) {
+      out.push({ file: it.file, at: it.at, error: String(e?.message || e) });
+    }
+  }
+  await writeTtQueue(q);
+  console.log(`[tiktok-migrate] ${JSON.stringify(out)}`);
+  res.json(out);
 });
 // ดูคิว: GET /tiktok-queue
 app.get("/tiktok-queue", auth, async (req, res) => {
