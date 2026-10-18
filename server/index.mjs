@@ -1063,7 +1063,7 @@ app.post("/render", auth, (req, res) => {
         points: Array.isArray(s.points) ? s.points.slice(0, 6).map((q) => ({ year: String(q?.year ?? ""), label: String(q?.label ?? "") })) : undefined,
         transition: ["wipe", "zoom", "flash", "slide", "shutter", "none"].includes(s.transition) ? s.transition : undefined,
         // ฟิลด์ของรูปแบบ MangaShow
-        layout: ["wanted", "panels", "splash", "versus", "effect", "still", "poll"].includes(s.layout) ? s.layout : undefined,
+        layout: ["wanted", "panels", "splash", "versus", "effect", "still", "poll", "cinema"].includes(s.layout) ? s.layout : undefined,
         name: s.name !== undefined ? String(s.name).slice(0, 60) : undefined,
         bounty: s.bounty !== undefined ? String(s.bounty).slice(0, 30) : undefined,
         sticker: s.sticker !== undefined ? String(s.sticker).slice(0, 40) : undefined,
