@@ -1451,6 +1451,86 @@ app.post("/echo", auth, (req, res) => {
   res.json({ ok: true });
 });
 
+// ---- Wan 3.0 image-to-video via fal.ai (ต้องตั้ง FAL_KEY บนเซิร์ฟเวอร์) ----
+// POST /wan-shot {image_url, prompt, duration=5, resolution="720p", aspect_ratio="adaptive", audio=false, tag?}
+// ตอบทันทีด้วย {job}; ทำงานเบื้องหลัง แล้ว log "[wan] done <url>" / "[wan] fail ..."; ดูผลที่ GET /wan-status/:job
+const wanJobs = new Map();
+const FAL_BASE = "https://queue.fal.run/alibaba/wan-3.0/image-to-video";
+
+async function falFetch(url, init = {}) {
+  const r = await fetch(url, {
+    ...init,
+    headers: { Authorization: `Key ${process.env.FAL_KEY}`, "Content-Type": "application/json", ...(init.headers || {}) },
+  });
+  const text = await r.text();
+  let body; try { body = JSON.parse(text); } catch { body = { raw: text.slice(0, 500) }; }
+  if (!r.ok) throw new Error(`fal ${r.status}: ${JSON.stringify(body).slice(0, 500)}`);
+  return body;
+}
+
+async function runWanShot(id, input) {
+  const job = wanJobs.get(id);
+  try {
+    const sub = await falFetch(FAL_BASE, { method: "POST", body: JSON.stringify(input) });
+    job.request_id = sub.request_id;
+    const statusUrl = sub.status_url || `${FAL_BASE}/requests/${sub.request_id}/status`;
+    const resultUrl = sub.response_url || `${FAL_BASE}/requests/${sub.request_id}`;
+    job.status = "queued";
+    const t0 = Date.now();
+    for (;;) {
+      if (Date.now() - t0 > 20 * 60 * 1000) throw new Error("timeout waiting for fal");
+      await new Promise((r) => setTimeout(r, 6000));
+      const st = await falFetch(statusUrl);
+      job.fal_status = st.status;
+      if (st.status === "COMPLETED") break;
+      if (st.status && !["IN_QUEUE", "IN_PROGRESS"].includes(st.status)) throw new Error(`fal status ${st.status}`);
+    }
+    const out = await falFetch(resultUrl);
+    const vurl = out?.video?.url;
+    if (!vurl) throw new Error(`no video url: ${JSON.stringify(out).slice(0, 300)}`);
+    const file = `wan-${id}.mp4`;
+    await downloadTo(vurl, path.join(OUT_DIR, file), MAX_CLIP_BYTES);
+    job.status = "done";
+    job.video_url = `${PUBLIC_BASE_URL}/videos/${file}`;
+    job.fal_video = vurl;
+    job.seconds = out.duration ?? input.duration;
+    job.cost_usd = Math.round((job.seconds || 0) * ({ "480p": 0.05, "720p": 0.1, "1080p": 0.2 }[input.resolution] || 0.2) * 1000) / 1000;
+    console.log(`[wan] done ${id} ${job.video_url} ${job.seconds}s ~$${job.cost_usd}`);
+  } catch (e) {
+    job.status = "failed";
+    job.error = String(e?.message || e);
+    console.error(`[wan] fail ${id} ${job.error}`);
+  }
+}
+
+app.post("/wan-shot", auth, (req, res) => {
+  if (!process.env.FAL_KEY) return res.status(400).json({ error: "FAL_KEY is not set on the server" });
+  const b = req.body || {};
+  if (!b.image_url) return res.status(400).json({ error: "image_url required" });
+  const input = {
+    start_image_url: b.image_url,
+    prompt: b.prompt || "",
+    duration: Math.max(2, Math.min(30, Number(b.duration) || 5)),
+    resolution: ["480p", "720p", "1080p"].includes(b.resolution) ? b.resolution : "720p",
+    aspect_ratio: b.aspect_ratio || "adaptive",
+    audio: b.audio === true,
+    enable_prompt_expansion: b.enable_prompt_expansion !== false,
+  };
+  if (b.end_image_url) input.end_image_url = b.end_image_url;
+  if (Number.isInteger(b.seed)) input.seed = b.seed;
+  const id = `${(b.tag || "shot").replace(/[^a-z0-9-]/gi, "").slice(0, 24) || "shot"}-${Date.now().toString(36)}`;
+  wanJobs.set(id, { id, status: "submitting", created: new Date().toISOString(), input });
+  runWanShot(id, input);
+  console.log(`[wan] start ${id} ${input.resolution} ${input.duration}s`);
+  res.json({ ok: true, job: id });
+});
+
+app.get("/wan-status/:id", auth, (req, res) => {
+  const j = wanJobs.get(req.params.id);
+  if (!j) return res.status(404).json({ error: "not found" });
+  res.json(j);
+});
+
 // ตรวจการเชื่อม TikTok: GET /tiktok-account
 app.get("/tiktok-account", auth, async (req, res) => {
   const out = { key: !!process.env.ZERNIO_API_KEY };
