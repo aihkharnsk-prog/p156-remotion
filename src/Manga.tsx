@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, Audio, Img, Sequence, interpolate, Easing, random, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, Audio, Img, Loop, OffthreadVideo, Sequence, interpolate, Easing, random, useCurrentFrame, useVideoConfig } from "remotion";
 import { useKanit, KANIT } from "./fonts";
 import { Slide, slideFrames, COVER_FRAMES, DYN_FPS } from "./DynamicStory";
 
@@ -19,7 +19,7 @@ export type Panel = {
   bw?: boolean; // ขาวดำตั้งแต่แรก
 };
 export type MangaPart = { text: string; audio_url?: string; duration: number; panel?: Panel };
-export type Layout = "wanted" | "panels" | "splash" | "versus" | "effect" | "still" | "poll";
+export type Layout = "wanted" | "panels" | "splash" | "versus" | "effect" | "still" | "poll" | "cinema";
 export type MangaSlide = Slide & {
   layout?: Layout;
   title?: string;
@@ -27,6 +27,7 @@ export type MangaSlide = Slide & {
   name?: string;
   bounty?: string;
   labels?: string[];
+  video_loop_sec?: number; // layout cinema: ความยาวคลิปพื้นหลังที่จะวนซ้ำ (ค่าเริ่มต้น 5)
   sticker?: string; // ป้ายชวนกดไลค์บนหน้านี้ เช่น "เพิ่งรู้? กดหัวใจเลย"
   parts?: MangaPart[];
 };
@@ -228,6 +229,62 @@ const SplashLayout: React.FC<LP> = ({ s, f, d, starts, acc }) => {
           );
         })}
       </div>
+    </AbsoluteFill>
+  );
+};
+
+
+// ฉากหนังเต็มจอ (18 ต.ค. 2026): คลิปฉากทั่วไปจาก Wan (ไม่มีตัวละคร) เป็นพื้นหลัง + การ์ดจริงลอยเด่นกลางจอ + ชื่อเรื่องตัวยักษ์
+// ใช้: layout "cinema", video_url (คลิป 5 วิ วนซ้ำ), image_url (การ์ด, ไม่ใส่ก็ได้), title, sticker
+const CinemaLayout: React.FC<LP> = ({ s, f, d, acc }) => {
+  const lines = String(s.title || "").split("\n").filter(Boolean);
+  const zoom = interpolate(f, [0, Math.max(1, d)], [1.04, 1.16], C);
+  const flash = ez(f, 0, 10, 0.9, 0, Easing.out(Easing.exp));
+  const shake = f < 12 ? Math.sin(f * 3.1) * (12 - f) * 1.4 : 0;
+  const cardIn = ez(f, 6, 22, 0, 1, back(1.6));
+  const float = Math.sin(f / 18) * 14;
+  const tilt = -5 + Math.sin(f / 40) * 1.6;
+  const glow = 0.75 + Math.sin(f / 9) * 0.25;
+  const loopF = Math.max(1, Math.round((Number(s.video_loop_sec) || 5) * 30));
+  return (
+    <AbsoluteFill style={{ backgroundColor: "#000" }}>
+      <AbsoluteFill style={{ transform: `scale(${zoom}) translate(${shake}px, ${-shake * 0.6}px)` }}>
+        {s.video_url ? (
+          <Loop durationInFrames={loopF}>
+            <OffthreadVideo src={s.video_url} muted style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+          </Loop>
+        ) : null}
+      </AbsoluteFill>
+      <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 38%, rgba(0,0,0,0) 30%, rgba(0,0,0,.62) 100%), linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,0) 28%, rgba(0,0,0,0) 55%, rgba(0,0,0,.78) 100%)" }} />
+      <AbsoluteFill style={{ mixBlendMode: "screen", pointerEvents: "none" }}>
+        {Array.from({ length: 26 }).map((_, k) => {
+          const sx = random(`ce-x${k}`) * 100;
+          const sp = 3 + random(`ce-s${k}`) * 5;
+          const sz = 4 + random(`ce-z${k}`) * 9;
+          const ph = random(`ce-p${k}`) * 900;
+          const y = 108 - (((f * sp + ph) % 1300) / 1300) * 125;
+          const x = sx + Math.sin((f + ph) / 30) * 3;
+          return <div key={k} style={{ position: "absolute", left: `${x}%`, top: `${y}%`, width: sz, height: sz, borderRadius: "50%", background: "#ffb347", boxShadow: "0 0 14px 4px #ff7a18", opacity: 0.35 + random(`ce-o${k}`) * 0.55 }} />;
+        })}
+      </AbsoluteFill>
+      {s.image_url ? (
+        <div style={{ position: "absolute", left: 540 - 330, top: 150 + float, width: 660, height: 660 * CARD_AR, transform: `scale(${0.3 + cardIn * 0.7}) rotate(${tilt}deg)`, opacity: Math.min(1, cardIn * 1.6), filter: `drop-shadow(0 0 ${46 * glow}px ${acc}) drop-shadow(0 30px 40px rgba(0,0,0,.7))` }}>
+          <Img src={s.image_url} style={{ width: "100%", height: "100%", borderRadius: 26, objectFit: "cover" }} />
+          <AbsoluteFill style={{ borderRadius: 26, background: `linear-gradient(115deg, rgba(255,255,255,0) ${(f * 2.2) % 220 - 60}%, rgba(255,255,255,.28) ${(f * 2.2) % 220 - 50}%, rgba(255,255,255,0) ${(f * 2.2) % 220 - 40}%)`, mixBlendMode: "screen" }} />
+        </div>
+      ) : null}
+      <div style={{ position: "absolute", left: 50, right: 50, top: s.image_url ? 1130 : 640, fontFamily: KANIT, fontWeight: 900, lineHeight: 1.04 }}>
+        {lines.map((ln, i) => {
+          const t = ez(f, 12 + i * 7, 22 + i * 7, 0, 1, back(2));
+          const len = Array.from(ln.replace(/\*/g, "")).length || 1;
+          return (
+            <div key={i} style={{ fontSize: Math.min(150, 1650 / len), color: "#fff", textShadow: `${stroke(9)}, 0 0 40px ${acc}, 14px 14px 0 ${INK}`, transform: `translateX(${(1 - t) * (i % 2 ? 900 : -900)}px) rotate(-3deg)`, textAlign: i % 2 ? "right" : "left" }}>
+              <Rich text={ln} color={acc} />
+            </div>
+          );
+        })}
+      </div>
+      <AbsoluteFill style={{ background: "#fff", opacity: flash }} />
     </AbsoluteFill>
   );
 };
@@ -474,12 +531,13 @@ const PageView: React.FC<{ s: MangaSlide; idx: number; acc: string; pages: numbe
     layout === "effect" ? <EffectLayout {...p} /> :
     layout === "still" ? <StillLayout {...p} /> :
     layout === "poll" ? <PollLayout {...p} /> :
+    layout === "cinema" ? <CinemaLayout {...p} /> :
     <PanelsLayout {...p} />;
   return (
     <PageTurn f={f} first={idx === 0}>
-      {layout === "still" ? null : <Paper />}
+      {layout === "still" || layout === "cinema" ? null : <Paper />}
       {body}
-      {layout === "still" || layout === "poll" ? null : <Tag badge={badge} series={series} page={idx + 1} pages={pages} />}
+      {layout === "still" || layout === "poll" || layout === "cinema" ? null : <Tag badge={badge} series={series} page={idx + 1} pages={pages} />}
       {layout === "poll" ? null : <Narration s={s} f={f} starts={starts} acc={acc} />}
       {s.sticker ? <Sticker text={s.sticker} f={f} d={d} /> : null}
     </PageTurn>

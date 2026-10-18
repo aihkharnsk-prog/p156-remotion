@@ -1455,7 +1455,8 @@ app.post("/echo", auth, (req, res) => {
 // POST /wan-shot {image_url, prompt, duration=5, resolution="720p", aspect_ratio="adaptive", audio=false, tag?}
 // ตอบทันทีด้วย {job}; ทำงานเบื้องหลัง แล้ว log "[wan] done <url>" / "[wan] fail ..."; ดูผลที่ GET /wan-status/:job
 const wanJobs = new Map();
-const FAL_BASE = "https://queue.fal.run/alibaba/wan-3.0/image-to-video";
+const FAL_I2V = "https://queue.fal.run/alibaba/wan-3.0/image-to-video";
+const FAL_T2V = "https://queue.fal.run/alibaba/wan-3.0/text-to-video"; // ไม่มีภาพตั้งต้น: ใช้กับฉากทั่วไป (ทะเล/ไฟ/ท้องฟ้า) ที่ไม่มีตัวละครมีลิขสิทธิ์
 
 async function falFetch(url, init = {}) {
   const r = await fetch(url, {
@@ -1470,6 +1471,7 @@ async function falFetch(url, init = {}) {
 
 async function runWanShot(id, input) {
   const job = wanJobs.get(id);
+  const FAL_BASE = input.start_image_url ? FAL_I2V : FAL_T2V;
   try {
     const sub = await falFetch(FAL_BASE, { method: "POST", body: JSON.stringify(input) });
     job.request_id = sub.request_id;
@@ -1507,9 +1509,9 @@ const WAN_MAX_SECONDS = 5;
 app.post("/wan-shot", auth, (req, res) => {
   if (!process.env.FAL_KEY) return res.status(400).json({ error: "FAL_KEY is not set on the server" });
   const b = req.body || {};
-  if (!b.image_url) return res.status(400).json({ error: "image_url required" });
+  if (!b.image_url && !b.prompt) return res.status(400).json({ error: "image_url or prompt required" });
   const input = {
-    start_image_url: b.image_url,
+    ...(b.image_url ? { start_image_url: b.image_url } : {}),
     prompt: b.prompt || "",
     // กฎของ AK (18 ต.ค. 2026): ช็อตละไม่เกิน 5 วินาที และ 480p เท่านั้น เพื่อคุมค่าใช้จ่าย
     duration: Math.max(2, Math.min(WAN_MAX_SECONDS, Number(b.duration) || WAN_MAX_SECONDS)),
