@@ -16,7 +16,7 @@
  "slides": [
   {
    "layout": "cinema",
-   "video_url": "@ACE1@",
+   "video_url": "https://renderer-production-8b7f.up.railway.app/videos/wan-ace1-mvdyis9a.mp4",
    "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-013.png",
    "duration": 5,
    "title": "หมัดไฟ\n*เอซ*",
@@ -83,7 +83,7 @@
   },
   {
    "layout": "cinema",
-   "video_url": "@ACE2@",
+   "video_url": "https://renderer-production-8b7f.up.railway.app/videos/wan-ace2-mvdyisax.mp4",
    "duration": 5,
    "title": "ศึก\n*มารีนฟอร์ด*",
    "parts": [
@@ -125,7 +125,7 @@
   },
   {
    "layout": "cinema",
-   "video_url": "@ACE3@",
+   "video_url": "https://renderer-production-8b7f.up.railway.app/videos/wan-ace3-mvdyisc6.mp4",
    "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-013.png",
    "duration": 5,
    "title": "ปกป้อง\n*น้องชาย*",
