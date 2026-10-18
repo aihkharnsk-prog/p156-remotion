@@ -1,0 +1,182 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "composition": "MangaShow",
+ "accent_color": "#e2231a",
+ "badge": "OP17-013",
+ "series": "ONE PIECE CARD GAME",
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.8,
+  "speed": 1.0,
+  "prefix": "[calm, soft, natural storyteller]"
+ },
+ "audio_rate": 1.0,
+ "slides": [
+  {
+   "layout": "cinema",
+   "video_url": "@ACE1@",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-013.png",
+   "duration": 5,
+   "title": "หมัดไฟ\n*เอซ*",
+   "parts": [
+    {
+     "text": "ชายผู้ลุกเป็น*ไฟ*",
+     "say": "เขาคือชายที่ลุกเป็นไฟ. พอร์ทกัส ดี เอซ."
+    },
+    {
+     "text": "หน่วยที่ 2 *หนวดขาว*",
+     "say": "หัวหน้าหน่วยสอง กลุ่มหนวดขาว. พี่ชายสาบานของลูฟี่."
+    }
+   ]
+  },
+  {
+   "layout": "splash",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-013.png",
+   "duration": 4,
+   "title": "ผล*เมระเมระ*",
+   "parts": [
+    {
+     "text": "ผล*เมระเมระ*",
+     "say": "พลังของเขามาจากผลเมระเมระ. ผลปีศาจประเภทโลเกีย ที่เปลี่ยนร่างกายให้กลายเป็นไฟ.",
+     "panel": {
+      "x": 50,
+      "y": 24,
+      "zoom": 1.8
+     }
+    },
+    {
+     "text": "ฉายา *หมัดไฟ*",
+     "say": "เขาจึงได้ฉายาว่า หมัดไฟ.",
+     "panel": {
+      "x": 50,
+      "y": 30,
+      "zoom": 1.6
+     }
+    }
+   ]
+  },
+  {
+   "layout": "wanted",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-013.png",
+   "duration": 4,
+   "name": "PORTGAS D. ACE",
+   "bounty": "550000000",
+   "subtitle": "หน่วยที่ 2",
+   "sticker": "เพิ่งรู้? กดหัวใจเลย",
+   "parts": [
+    {
+     "text": "ค่าหัว *550 ล้าน*",
+     "say": "ค่าหัวของเขา อยู่ที่ห้าร้อยห้าสิบล้านเบรี.",
+     "panel": {
+      "x": 50,
+      "y": 26,
+      "zoom": 1.9
+     }
+    },
+    {
+     "text": "ลูกชาย*ราชาโจรสลัด*",
+     "say": "และเขายังเป็นลูกชาย ของโกลด์ ดี โรเจอร์ ราชาโจรสลัด."
+    }
+   ]
+  },
+  {
+   "layout": "cinema",
+   "video_url": "@ACE2@",
+   "duration": 5,
+   "title": "ศึก\n*มารีนฟอร์ด*",
+   "parts": [
+    {
+     "text": "ศึก*มารีนฟอร์ด*",
+     "say": "ที่มารีนฟอร์ด เขาถูกจับ และกำลังจะถูกประหาร."
+    },
+    {
+     "text": "ทั้งโลกสะเทือน",
+     "say": "กลุ่มหนวดขาว บุกมาช่วยเขา จนทั้งโลกสะเทือน."
+    }
+   ]
+  },
+  {
+   "layout": "effect",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-013.png",
+   "duration": 4,
+   "title": "ใบนี้ทำอะไรได้",
+   "parts": [
+    {
+     "text": "คู่แข่งมีตัว*พลัง 10000*",
+     "say": "บนการ์ดใบนี้ ถ้าคู่แข่งมีตัวละครพลังหมื่นขึ้นไป คอสต์ในมือ ลดลงสอง.",
+     "panel": {
+      "x": 50,
+      "y": 68,
+      "zoom": 1.8
+     }
+    },
+    {
+     "text": "ลงปุ๊บ ลดพลัง *-6000*",
+     "say": "และเมื่อลงสนาม ถ้าลีดเดอร์คือหนวดขาว ลดพลังตัวละครที่นอนอยู่ของคู่แข่ง หกพัน.",
+     "panel": {
+      "x": 50,
+      "y": 70,
+      "zoom": 2.0
+     }
+    }
+   ]
+  },
+  {
+   "layout": "cinema",
+   "video_url": "@ACE3@",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-013.png",
+   "duration": 5,
+   "title": "ปกป้อง\n*น้องชาย*",
+   "parts": [
+    {
+     "text": "ปกป้อง*ลูฟี่*",
+     "say": "ในวินาทีสุดท้าย เขาปกป้องลูฟี่ จากหมัดแมกม่าของอาคาอินุ."
+    },
+    {
+     "text": "ชื่อยังอยู่ใน*ใจ*",
+     "say": "เขาจากไปตอนอายุยี่สิบ. แต่ชื่อยังอยู่ในใจแฟนๆ ทั่วโลก."
+    }
+   ]
+  },
+  {
+   "layout": "poll",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-013.png",
+   "no_caption": true,
+   "duration": 8,
+   "title": "*เอซ* หรือ *ซาโบ*\nชอบใคร?",
+   "labels": [
+    "เอซ",
+    "ซาโบ"
+   ],
+   "parts": [
+    {
+     "text": "",
+     "say": "คุณชอบใคร ระหว่างเอซ กับซาโบ?"
+    },
+    {
+     "text": "",
+     "say": "ถ้าชอบเอซ พิมพ์หนึ่ง. ถ้าชอบซาโบ พิมพ์สอง."
+    },
+    {
+     "text": "",
+     "say": "คอมเมนต์ไว้เลย. แล้วกดติดตาม การ์ดเซ็นเตอร์ไว้ด้วยนะ."
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "เอซ หมัดไฟ ลูกชายราชาโจรสลัด OP17-013 | One Piece Card #shorts",
+  "description": "การ์ดวันพีซ OP-17 ใบที่ 013 พอร์ทกัส ดี เอซ หัวหน้าหน่วยที่ 2 ของกลุ่มหนวดขาว ผลเมระเมระ ค่าหัว 550 ล้านเบรี ศึกมารีนฟอร์ด และเอฟเฟกต์ลดพลังบนการ์ด\n\n👇 เอซ vs ซาโบ ชอบใคร? พิมพ์ 1 = เอซ / 2 = ซาโบ\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Celtic Impulse\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17 #เอซ",
+  "thumb": {
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-013.png",
+   "hook": "หมัดไฟ\nเอซ!",
+   "badge": "OP17-013",
+   "sub": "ONE PIECE CARD GAME"
+  },
+  "engage": "👇 เอซ vs ซาโบ ชอบใคร? พิมพ์ 1 = เอซ / 2 = ซาโบ\nชอบเรื่องการ์ดแบบนี้ กด ❤️ ไว้ด้วยนะ"
+ },
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Celtic%20Impulse.mp3",
+ "bgm_volume": 0.14
+}
