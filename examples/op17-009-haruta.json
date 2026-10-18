@@ -42,7 +42,7 @@
   },
   {
    "layout": "cinema",
-   "video_url": "@FLEET@",
+   "video_url": "https://renderer-production-8b7f.up.railway.app/videos/wan-fleet-mvdz9it2.mp4",
    "duration": 5,
    "title": "หน่วยที่\n*12*",
    "parts": [
@@ -123,7 +123,7 @@
   },
   {
    "layout": "cinema",
-   "video_url": "@WAR@",
+   "video_url": "https://renderer-production-8b7f.up.railway.app/videos/wan-ace2-mvdyisax.mp4",
    "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-009.png",
    "duration": 5,
    "title": "ศึก\n*มารีนฟอร์ด*",
