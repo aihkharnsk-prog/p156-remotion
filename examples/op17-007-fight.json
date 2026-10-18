@@ -1,0 +1,251 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "composition": "MangaShow",
+ "accent_color": "#e2231a",
+ "badge": "OP17-007",
+ "series": "ONE PIECE CARD GAME",
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.8,
+  "speed": 1.0,
+  "prefix": "[calm, soft, natural storyteller]"
+ },
+ "audio_rate": 1.0,
+ "slides": [
+  {
+   "layout": "splash",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-007.png",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "เหลือแค่ *10 นาที* คุณจะปล่อยมือไหม?",
+     "say": "ถ้าเหลืออีกแค่สิบนาที จะได้สิ่งที่รอมาทั้งชีวิต. คุณจะปล่อยมือไหม?",
+     "panel": {
+      "x": 55,
+      "y": 24,
+      "zoom": 1.6
+     }
+    },
+    {
+     "text": "ชายคนนี้*จับโซ่เรือ*เพื่อไปกับ*หนวดขาว*",
+     "say": "ชายคนนี้ จับโซ่เรือโจรสลัดไว้ไม่ยอมปล่อย. เพื่อขอออกทะเล ไปกับหนวดขาว.",
+     "panel": {
+      "x": 50,
+      "y": 30,
+      "zoom": 1.4
+     }
+    }
+   ],
+   "title": "ห้อยโซ่เรือ\n*สามวันสามคืน*"
+  },
+  {
+   "layout": "panels",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-007.png",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "จับไว้ครบ *3 วัน* จะได้ขึ้นเรือ",
+     "say": "หนวดขาวยื่นข้อเสนอ. ถ้าจับไว้ได้ครบสามวัน จะยอมให้ขึ้นเรือ.",
+     "panel": {
+      "x": 55,
+      "y": 24,
+      "zoom": 2.1
+     }
+    },
+    {
+     "text": "เหลือแค่ *10 นาที* เขากลับปล่อยมือ",
+     "say": "แต่เหลืออีกแค่สิบนาที เขากลับปล่อยมือ.",
+     "panel": {
+      "x": 30,
+      "y": 30,
+      "zoom": 1.8,
+      "sfx": "จ๋อม!"
+     }
+    },
+    {
+     "text": "เพื่อไปช่วย *โทกิ*",
+     "say": "เพื่อไปช่วยผู้หญิงคนหนึ่ง ชื่อโทกิ. ที่ต่อมา กลายเป็นภรรยาของเขา.",
+     "panel": {
+      "img": 1,
+      "x": 35,
+      "y": 22,
+      "zoom": 1.9
+     }
+    }
+   ],
+   "images": [
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-031.png"
+   ]
+  },
+  {
+   "layout": "wanted",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-007.png",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "หนวดขาว*รับเขาเข้ากลุ่ม*",
+     "say": "สุดท้าย หนวดขาวก็รับเขาเข้ากลุ่ม.",
+     "panel": {
+      "img": 1,
+      "x": 45,
+      "y": 22,
+      "zoom": 2.0
+     }
+    },
+    {
+     "text": "ได้เป็น *หัวหน้าหน่วยที่ 2*",
+     "say": "ไม่นาน เขาได้เป็นหัวหน้าหน่วยที่สอง. ตำแหน่งเดียวกับเอส ในอีกหลายปีต่อมา."
+    }
+   ],
+   "name": "KOUZUKI ODEN",
+   "subtitle": "หน่วยที่ 2",
+   "sticker": "ชอบเรื่องนี้? กดหัวใจเลย",
+   "images": [
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP01-031.png"
+   ]
+  },
+  {
+   "layout": "panels",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-007.png",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "ดาบคู่ *เอ็นมะ*",
+     "say": "โอเด้ง เป็นนักดาบผู้ใช้ดาบคู่. หนึ่งในนั้นคือ ดาบเอ็นมะ.",
+     "panel": {
+      "img": 1,
+      "x": 50,
+      "y": 25,
+      "zoom": 1.08,
+      "sfx": "ฉัวะ!"
+     }
+    },
+    {
+     "text": "ฟัน*หนวดขาว*เป็นแผล",
+     "say": "เขาเคยฟันหนวดขาว จนเกิดรอยแผลเป็นบนอก.",
+     "panel": {
+      "img": 2,
+      "x": 50,
+      "y": 25,
+      "zoom": 1.08,
+      "sfx": "วูบ!"
+     }
+    },
+    {
+     "text": "ยิ้มสู้*ทุกศึก*",
+     "say": "และเขายิ้มสู้ได้ทุกศึก.",
+     "panel": {
+      "img": 3,
+      "x": 50,
+      "y": 25,
+      "zoom": 1.08
+     }
+    }
+   ],
+   "images": [
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-030.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP09-047.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP14-026.png"
+   ]
+  },
+  {
+   "layout": "effect",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-007.png",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "เมื่อลงสนาม",
+     "say": "บนการ์ด เมื่อลงสนาม.",
+     "panel": {
+      "x": 50,
+      "y": 68,
+      "zoom": 1.8
+     }
+    },
+    {
+     "text": "เรียก*พวกพ้อง*ลงมาอีก 1 ใบ",
+     "say": "ถ้าลีดเดอร์คือหนวดขาว หรือเป็นชาววาโนะ. จะเรียกพวกพ้องพลังไม่เกินหกพัน จากมือลงมาได้อีกหนึ่งใบ.",
+     "panel": {
+      "x": 50,
+      "y": 73,
+      "zoom": 2.0
+     }
+    }
+   ],
+   "title": "ลงมาพร้อมพวกพ้อง"
+  },
+  {
+   "layout": "panels",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-007.png",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "ต่อมาเขาไปเรือ*โรเจอร์*",
+     "say": "หลายปีต่อมา เขาย้ายไปอยู่เรือของโรเจอร์.",
+     "panel": {
+      "img": 1,
+      "x": 50,
+      "y": 26,
+      "zoom": 1.8
+     }
+    },
+    {
+     "text": "เพื่อช่วย*ถอดรหัสโพเนกลีฟ*",
+     "say": "เพราะโรเจอร์ ต้องการให้เขาช่วยถอดรหัสโพเนกลีฟ.",
+     "panel": {
+      "img": 2,
+      "x": 45,
+      "y": 24,
+      "zoom": 1.8,
+      "sfx": "ปึง!"
+     }
+    }
+   ],
+   "images": [
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP13-064.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-030.png"
+   ]
+  },
+  {
+   "layout": "poll",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-007.png",
+   "no_caption": true,
+   "duration": 8,
+   "title": "ถ้าเป็นคุณ\nจะ*ปล่อยโซ่*ไหม?",
+   "labels": [
+    "ปล่อย ไปช่วยโทกิ",
+    "ไม่ปล่อย อีกแค่ 10 นาที"
+   ],
+   "parts": [
+    {
+     "text": "",
+     "say": "ถ้าเป็นคุณ ในวันนั้น จะปล่อยโซ่ไหม?"
+    },
+    {
+     "text": "",
+     "say": "ปล่อยไปช่วยโทกิ พิมพ์หนึ่ง. จับต่ออีกสิบนาที พิมพ์สอง."
+    },
+    {
+     "text": "",
+     "say": "คอมเมนต์ไว้เลย. แล้วกดติดตาม การ์ดเซ็นเตอร์ไว้ด้วยนะ."
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "โอเด้ง ห้อยโซ่เรือหนวดขาวสามวัน OP17-007 | One Piece Card #shorts",
+  "description": "การ์ดวันพีซ OP-17 ใบที่ 007 โคสึกิ โอเด้ง ชายที่จับโซ่เรือหนวดขาวไว้สามวันเพื่อขอขึ้นเรือ แต่ปล่อยมือก่อนครบสิบนาทีเพื่อช่วยโทกิ ความสามารถเรียกพวกพ้องลงสนาม\n\n👇 ถ้าเป็นคุณจะปล่อยโซ่ไหม? พิมพ์ 1 = ปล่อยไปช่วยโทกิ / 2 = จับต่ออีก 10 นาที\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Celtic Impulse\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17",
+  "thumb": {
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-007.png",
+   "hook": "ห้อยโซ่เรือ\n3 วัน 3 คืน",
+   "badge": "OP17-007",
+   "sub": "ONE PIECE CARD GAME"
+  },
+  "publish_at": "2026-10-22T10:00:00Z",
+  "engage": "👇 ถ้าเป็นคุณจะปล่อยโซ่ไหม? พิมพ์ 1 = ปล่อยไปช่วยโทกิ / 2 = จับต่ออีก 10 นาที\nชอบเรื่องการ์ดแบบนี้ กด ❤️ ไว้ด้วยนะ"
+ },
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Celtic%20Impulse.mp3",
+ "bgm_volume": 0.14
+}

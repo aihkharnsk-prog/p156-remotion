@@ -1,0 +1,269 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "composition": "MangaShow",
+ "accent_color": "#e2231a",
+ "badge": "OP17-005",
+ "series": "ONE PIECE CARD GAME",
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.8,
+  "speed": 1.0,
+  "prefix": "[calm, soft, natural storyteller]"
+ },
+ "audio_rate": 1.0,
+ "slides": [
+  {
+   "layout": "splash",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005.png",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "*ชายที่แข็งแกร่งที่สุดในโลก*",
+     "say": "ชายที่แข็งแกร่งที่สุดในโลก มีสิ่งเดียวที่อยากได้. และมันไม่ใช่สมบัติ.",
+     "panel": {
+      "img": 2,
+      "x": 52,
+      "y": 24,
+      "zoom": 2.6
+     }
+    },
+    {
+     "text": "การ์ดเขียนว่า *มาเป็นลูกข้าซะ!*",
+     "say": "การ์ดใบนี้ จึงมีประโยคหนึ่งเขียนไว้ว่า มาเป็นลูกข้าซะ.",
+     "panel": {
+      "img": 2,
+      "x": 42,
+      "y": 8,
+      "zoom": 1.7
+     }
+    }
+   ],
+   "images": [
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005_p1.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005_p2.png"
+   ],
+   "title": "มาเป็น\n*ลูกข้าซะ!*"
+  },
+  {
+   "layout": "panels",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005.png",
+   "images": [
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005_p1.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005_p2.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-004.png"
+   ],
+   "duration": 4,
+   "parts": [
+    {
+     "text": "คนพูดคือ *หนวดขาว*",
+     "say": "คนพูดคือ หนวดขาว. ชายที่ไม่เรียกลูกเรือว่าลูกน้อง แต่เรียกว่า ลูก.",
+     "panel": {
+      "img": 0,
+      "x": 50,
+      "y": 20,
+      "zoom": 1.7
+     }
+    },
+    {
+     "text": "สิ่งที่เขาอยากได้ที่สุด คือ *ครอบครัว*",
+     "say": "เพราะเขาไม่เคยมีครอบครัว. สิ่งที่เขาอยากได้มากที่สุด คือครอบครัว.",
+     "panel": {
+      "img": 3,
+      "x": 45,
+      "y": 16,
+      "zoom": 1.9
+     }
+    }
+   ],
+   "sticker": "เพิ่งรู้? กดหัวใจเลย"
+  },
+  {
+   "layout": "panels",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005.png",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "*เอส* เคยลอบฆ่าเขาเป็นร้อยครั้ง",
+     "say": "แม้แต่เอส ที่เคยพยายามลอบฆ่าเขามาเป็นร้อยครั้ง.",
+     "panel": {
+      "img": 3,
+      "x": 50,
+      "y": 20,
+      "zoom": 2.0,
+      "sfx": "ฉึก!"
+     }
+    },
+    {
+     "text": "สุดท้ายกลับเรียกเขาว่า *พ่อ*",
+     "say": "สุดท้าย ก็กลายมาเป็นลูกคนหนึ่ง และเรียกเขาว่า พ่อ.",
+     "panel": {
+      "img": 4,
+      "x": 55,
+      "y": 20,
+      "zoom": 2.0
+     }
+    }
+   ],
+   "images": [
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005_p1.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005_p2.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-013.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP07-119.png"
+   ]
+  },
+  {
+   "layout": "effect",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005.png",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "ต้นทุน *10* พลัง *12000*",
+     "say": "บนการ์ด เขาคือตัวละครต้นทุนสิบ พลังหนึ่งหมื่นสองพัน.",
+     "panel": {
+      "x": 50,
+      "y": 6,
+      "zoom": 1.6
+     }
+    },
+    {
+     "text": "คู่แข่งตัวแรง = *ต้นทุนลด 4*",
+     "say": "และถ้าฝั่งคู่แข่ง มีตัวละครพลังหนึ่งหมื่นขึ้นไป ต้นทุนในมือจะลดลงสี่.",
+     "panel": {
+      "x": 50,
+      "y": 67,
+      "zoom": 2.0
+     }
+    }
+   ],
+   "title": "ยิ่งคู่แข่งแรง ยิ่งลงง่าย"
+  },
+  {
+   "layout": "versus",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005_p1.png",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "ใบนี้มี *ลายพิเศษ* สองแบบ",
+     "say": "ใบนี้ยังมีลายพิเศษอีกสองแบบ."
+    },
+    {
+     "text": "อีกใบใช้ *หน้ามังงะ* เป็นพื้นหลัง",
+     "say": "แบบหนึ่งวาดใหม่ทั้งใบ. อีกแบบ ใช้หน้ามังงะต้นฉบับ เป็นพื้นหลัง."
+    }
+   ],
+   "images": [
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005_p2.png"
+   ],
+   "labels": [
+    "ลายวาดใหม่",
+    "ลายหน้ามังงะ"
+   ]
+  },
+  {
+   "layout": "panels",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005.png",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "สงคราม*มารีนฟอร์ด*",
+     "say": "ที่มารีนฟอร์ด เขายืนหยัดสู้ เพื่อปกป้องลูกๆ ของเขา.",
+     "panel": {
+      "img": 1,
+      "x": 50,
+      "y": 25,
+      "zoom": 1.08,
+      "sfx": "ตูม!"
+     }
+    },
+    {
+     "text": "หัวเราะ*กลางสนามรบ*",
+     "say": "แม้อยู่กลางสนามรบ เขาก็ยังหัวเราะ.",
+     "panel": {
+      "img": 2,
+      "x": 50,
+      "y": 25,
+      "zoom": 1.08,
+      "sfx": "ฮ่า!"
+     }
+    },
+    {
+     "text": "สู้เพื่อ*ลูกๆ*",
+     "say": "ทุกการต่อสู้ของเขา คือการปกป้องครอบครัว.",
+     "panel": {
+      "img": 3,
+      "x": 50,
+      "y": 25,
+      "zoom": 1.08
+     }
+    }
+   ],
+   "images": [
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-018.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-017.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-019.png"
+   ]
+  },
+  {
+   "layout": "splash",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005.png",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "*วันพีซ มีอยู่จริง*",
+     "say": "ก่อนจากไป เขาตะโกนบอกทั้งโลกว่า วันพีซ มีอยู่จริง.",
+     "panel": {
+      "img": 1,
+      "x": 55,
+      "y": 16,
+      "zoom": 1.8
+     }
+    }
+   ],
+   "title": "คำพูดสุดท้าย\nที่*เขย่าทั้งโลก*",
+   "images": [
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-043.png"
+   ]
+  },
+  {
+   "layout": "poll",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005.png",
+   "no_caption": true,
+   "duration": 8,
+   "title": "ถ้าหนวดขาว\nขอให้คุณเป็น*ลูก*?",
+   "labels": [
+    "ตอบรับทันที!",
+    "ปฏิเสธ แบบเอส"
+   ],
+   "parts": [
+    {
+     "text": "",
+     "say": "ถ้าหนวดขาว ขอให้คุณเป็นลูก คุณจะตอบว่าอะไร?"
+    },
+    {
+     "text": "",
+     "say": "ตอบรับทันที พิมพ์หนึ่ง. ปฏิเสธแบบเอส พิมพ์สอง."
+    },
+    {
+     "text": "",
+     "say": "คอมเมนต์ไว้เลย. แล้วกดติดตาม การ์ดเซ็นเตอร์ไว้ด้วยนะ."
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "หนวดขาว ชายที่อยากมีครอบครัว OP17-005 | One Piece Card #shorts",
+  "description": "การ์ดวันพีซ OP-17 ใบที่ 005 หนวดขาว SR ต้นทุน 10 พลัง 12000 ประโยค \"มาเป็นลูกข้าซะ\" บนลายพิเศษหน้ามังงะ และเรื่องของชายที่อยากได้ครอบครัวมากกว่าสมบัติ\n\n👇 ถ้าหนวดขาวขอให้คุณเป็นลูก? พิมพ์ 1 = ตอบรับทันที / 2 = ปฏิเสธแบบเอส\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Celtic Impulse\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17",
+  "thumb": {
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-005.png",
+   "hook": "มาเป็น\nลูกข้าซะ!",
+   "badge": "OP17-005",
+   "sub": "ONE PIECE CARD GAME"
+  },
+  "publish_at": "2026-10-20T10:00:00Z",
+  "engage": "👇 ถ้าหนวดขาวขอให้คุณเป็นลูก? พิมพ์ 1 = ตอบรับทันที / 2 = ปฏิเสธแบบเอส\nชอบเรื่องการ์ดแบบนี้ กด ❤️ ไว้ด้วยนะ"
+ },
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Celtic%20Impulse.mp3",
+ "bgm_volume": 0.14
+}
