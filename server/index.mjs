@@ -1503,6 +1503,7 @@ async function runWanShot(id, input) {
   }
 }
 
+const WAN_MAX_SECONDS = 5;
 app.post("/wan-shot", auth, (req, res) => {
   if (!process.env.FAL_KEY) return res.status(400).json({ error: "FAL_KEY is not set on the server" });
   const b = req.body || {};
@@ -1510,8 +1511,9 @@ app.post("/wan-shot", auth, (req, res) => {
   const input = {
     start_image_url: b.image_url,
     prompt: b.prompt || "",
-    duration: Math.max(2, Math.min(30, Number(b.duration) || 5)),
-    resolution: ["480p", "720p", "1080p"].includes(b.resolution) ? b.resolution : "720p",
+    // กฎของ AK (18 ต.ค. 2026): ช็อตละไม่เกิน 5 วินาที และ 480p เท่านั้น เพื่อคุมค่าใช้จ่าย
+    duration: Math.max(2, Math.min(WAN_MAX_SECONDS, Number(b.duration) || WAN_MAX_SECONDS)),
+    resolution: "480p",
     aspect_ratio: b.aspect_ratio || "adaptive",
     audio: b.audio === true,
     enable_prompt_expansion: b.enable_prompt_expansion !== false,
