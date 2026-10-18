@@ -1,287 +1,278 @@
 {
- "width": 1080,
- "height": 1920,
- "composition": "MangaShow",
- "accent_color": "#e2231a",
- "badge": "OP17-009",
- "series": "ONE PIECE CARD GAME",
- "tts": {
-  "voice_id": "bTEswxYhpv7UDkQg5VRu",
-  "model_id": "eleven_v4",
-  "stability": 0.8,
-  "speed": 1.0,
-  "prefix": "[calm, soft, natural storyteller]"
- },
- "audio_rate": 1.0,
- "slides": [
-  {
-   "layout": "splash",
-   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-009.png",
-   "duration": 4,
-   "title": "ชาย หรือ\n*หญิง?*",
-   "parts": [
-    {
-     "text": "ชาย หรือ *หญิง?*",
-     "say": "คนนี้ ผู้ชาย หรือผู้หญิง? แฟนวันพีซ เถียงกันมาหลายปี.",
-     "panel": {
-      "x": 32,
-      "y": 24,
-      "zoom": 1.9
-     }
-    },
-    {
-     "text": "ชื่อ *ฮารุตะ*",
-     "say": "เขาชื่อ ฮารุตะ. หัวหน้าหน่วยที่สิบสอง ของกลุ่มหนวดขาว.",
-     "panel": {
-      "x": 32,
-      "y": 24,
-      "zoom": 2.3
-     }
-    }
-   ]
+  "width": 1080,
+  "height": 1920,
+  "composition": "MangaShow",
+  "accent_color": "#e2231a",
+  "badge": "OP17-009",
+  "series": "ONE PIECE CARD GAME",
+  "tts": {
+    "voice_id": "bTEswxYhpv7UDkQg5VRu",
+    "model_id": "eleven_v4",
+    "stability": 0.8,
+    "speed": 1.0,
+    "prefix": "[calm, soft, natural storyteller]"
   },
-  {
-   "layout": "cinema",
-   "video_url": "https://renderer-production-8b7f.up.railway.app/videos/wan-fleet-mvdz9it2.mp4",
-   "duration": 5,
-   "title": "หน่วยที่\n*12*",
-   "parts": [
+  "audio_rate": 1.0,
+  "slides": [
     {
-     "text": "หัวหน้า *16 หน่วย*",
-     "say": "กลุ่มหนวดขาว มีหัวหน้าหน่วยสิบหกคน. ฮารุตะ คือหน่วยที่สิบสอง."
+      "layout": "splash",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-009.png",
+      "duration": 4,
+      "title": "ชาย หรือ\n*หญิง?*",
+      "parts": [
+        {
+          "text": "ชาย หรือ *หญิง?*",
+          "say": "คนนี้ ผู้ชาย หรือผู้หญิง? แฟนวันพีซ เถียงกันมาหลายปี.",
+          "panel": {
+            "x": 32,
+            "y": 24,
+            "zoom": 1.9
+          }
+        },
+        {
+          "text": "ชื่อ *ฮารุตะ*",
+          "say": "เขาชื่อ ฮารุตะ. หัวหน้าหน่วยที่สิบสอง ของกลุ่มหนวดขาว.",
+          "panel": {
+            "x": 32,
+            "y": 24,
+            "zoom": 2.3
+          }
+        }
+      ]
+    },
+    {
+      "layout": "cinema",
+      "video_url": "https://renderer-production-8b7f.up.railway.app/videos/wan-fleet-mvdz9it2.mp4",
+      "duration": 5,
+      "title": "หน่วยที่\n*12*",
+      "parts": [
+        {
+          "text": "หัวหน้า *16 หน่วย*",
+          "say": "กลุ่มหนวดขาว มีสิบหกหน่วย. ฮารุตะ คือหน่วยสิบสอง."
+        }
+      ]
+    },
+    {
+      "layout": "panels",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-009.png",
+      "duration": 4,
+      "images": [
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-009.png",
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP13-045.png"
+      ],
+      "parts": [
+        {
+          "text": "การ์ด *3 ใบ* 3 ชุด",
+          "say": "ฮารุตะ มีการ์ดสามใบ ในสามชุด. วาดไม่เหมือนกันเลย.",
+          "panel": {
+            "x": 32,
+            "y": 24,
+            "zoom": 2.0
+          }
+        },
+        {
+          "text": "ใบที่ 2 จาก*ชุด 3*",
+          "say": "ใบสอง.",
+          "panel": {
+            "img": 1,
+            "x": 42,
+            "y": 22,
+            "zoom": 1.9
+          }
+        },
+        {
+          "text": "อีกใบ *สีฟ้า*",
+          "say": "ใบสาม.",
+          "panel": {
+            "img": 2,
+            "x": 50,
+            "y": 25,
+            "zoom": 1.9,
+            "sfx": "ฟึ่บ!"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "wanted",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-009.png",
+      "duration": 4,
+      "name": "HARUTA",
+      "subtitle": "หน่วยที่ 12",
+      "sticker": "เพิ่งรู้? กดหัวใจเลย",
+      "parts": [
+        {
+          "text": "ผมสั้น *น้ำตาล*",
+          "say": "ผมสั้นสีน้ำตาล ตาสีฟ้า. ชุดเขียวขาว ระบายคอแบบยุโรปโบราณ.",
+          "panel": {
+            "x": 32,
+            "y": 24,
+            "zoom": 1.9
+          }
+        }
+      ]
+    },
+    {
+      "layout": "cinema",
+      "video_url": "https://renderer-production-8b7f.up.railway.app/videos/wan-ace2-mvdyisax.mp4",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-009.png",
+      "duration": 5,
+      "title": "ศึก\n*มารีนฟอร์ด*",
+      "parts": [
+        {
+          "text": "บุกช่วย*เอส*",
+          "say": "ที่มารีนฟอร์ด ฮารุตะ บุกไปช่วยเอส. และหนุนลูฟี่ ตอนถูกคิซารุโจมตี."
+        },
+        {
+          "text": "ร้องไห้ตอน*เอสจากไป*",
+          "say": "แล้วร้องไห้ ตอนเอสจากไป."
+        }
+      ]
+    },
+    {
+      "layout": "panels",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-009.png",
+      "duration": 4,
+      "images": [
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-009_r1.png"
+      ],
+      "parts": [
+        {
+          "text": "เพิ่งรู้ชื่อ *ตอน SBS*",
+          "say": "ชื่อฮารุตะ เพิ่งเปิดเผย ใน เอสบีเอส เล่มห้าสิบแปด.",
+          "panel": {
+            "x": 32,
+            "y": 24,
+            "zoom": 2.1,
+            "bw": true
+          }
+        },
+        {
+          "text": "นักพากย์ *หญิง*",
+          "say": "อนิเมะ ให้นักพากย์หญิง.",
+          "panel": {
+            "img": 1,
+            "x": 42,
+            "y": 22,
+            "zoom": 1.9
+          }
+        },
+        {
+          "text": "โอดะ: ไม่มี *ผู้หญิง*",
+          "say": "แต่โอดะ เคยตอบว่า ศึกนั้น ไม่มีผู้หญิง ในกลุ่มหนวดขาวเลย.",
+          "panel": {
+            "x": 32,
+            "y": 24,
+            "zoom": 1.7,
+            "sfx": "หา!?"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "effect",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-009.png",
+      "duration": 4,
+      "title": "ใบนี้ทำอะไรได้",
+      "parts": [
+        {
+          "text": "ตาคู่แข่ง *+3000*",
+          "say": "บนการ์ด พลังห้าพัน. ตาคู่แข่ง เพิ่มเป็นแปดพัน.",
+          "panel": {
+            "x": 50,
+            "y": 68,
+            "zoom": 1.8
+          }
+        },
+        {
+          "text": "ลงปุ๊บ *ล้ม* ตัวละคร",
+          "say": "ลงสนาม ล้มตัวละครพลังสองพันลงมา หนึ่งตัว.",
+          "panel": {
+            "x": 50,
+            "y": 70,
+            "zoom": 2.0
+          }
+        }
+      ]
+    },
+    {
+      "layout": "panels",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-008.png",
+      "duration": 4,
+      "images": [
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-003.png",
+        "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-013.png"
+      ],
+      "parts": [
+        {
+          "text": "หน่วยที่ *3* โจซ",
+          "say": "ชุดนี้ยังมี โจซ หน่วยสาม.",
+          "panel": {
+            "x": 45,
+            "y": 28,
+            "zoom": 1.8
+          }
+        },
+        {
+          "text": "หน่วยที่ *16* อิโซ",
+          "say": "อิโซ หน่วยสิบหก.",
+          "panel": {
+            "img": 1,
+            "x": 50,
+            "y": 28,
+            "zoom": 1.8
+          }
+        },
+        {
+          "text": "หน่วยที่ *2* เอส",
+          "say": "และเอส หน่วยสอง.",
+          "panel": {
+            "img": 2,
+            "x": 50,
+            "y": 28,
+            "zoom": 1.8,
+            "sfx": "ว้าว!"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "poll",
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-009.png",
+      "no_caption": true,
+      "duration": 8,
+      "title": "ฮารุตะ เป็น\n*ชาย* หรือ *หญิง*?",
+      "labels": [
+        "ชาย",
+        "หญิง"
+      ],
+      "parts": [
+        {
+          "text": "",
+          "say": "คุณคิดว่า ฮารุตะ เป็นผู้ชาย หรือผู้หญิง?"
+        },
+        {
+          "text": "",
+          "say": "ชาย พิมพ์หนึ่ง. หญิง พิมพ์สอง."
+        },
+        {
+          "text": "",
+          "say": "คอมเมนต์ไว้เลย. แล้วกดติดตาม การ์ดเซ็นเตอร์ไว้ด้วยนะ."
+        }
+      ]
     }
-   ]
+  ],
+  "meta": {
+    "title": "ฮารุตะ หัวหน้าหน่วย 12 ชายหรือหญิง OP17-009 | One Piece Card #shorts",
+    "description": "การ์ดวันพีซ OP-17 ใบที่ 009 ฮารุตะ หัวหน้าหน่วยที่ 12 ของกลุ่มหนวดขาว ชื่อที่เพิ่งเปิดเผยใน SBS เล่ม 58 บทบาทในศึกมารีนฟอร์ด การ์ดทั้ง 3 ใบ และเอฟเฟกต์บนการ์ด\n\n👇 ฮารุตะ เป็นชาย หรือหญิง? พิมพ์ 1 = ชาย / 2 = หญิง\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Celtic Impulse\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17 #ฮารุตะ",
+    "thumb": {
+      "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-009.png",
+      "hook": "ชาย หรือ\nหญิง?",
+      "badge": "OP17-009",
+      "sub": "ONE PIECE CARD GAME"
+    },
+    "engage": "👇 ฮารุตะ เป็นชาย หรือหญิง? พิมพ์ 1 = ชาย / 2 = หญิง\nชอบเรื่องการ์ดแบบนี้ กด ❤️ ไว้ด้วยนะ"
   },
-  {
-   "layout": "panels",
-   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-009.png",
-   "duration": 4,
-   "images": [
-    "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-009.png",
-    "https://en.onepiece-cardgame.com/images/cardlist/card/OP13-045.png"
-   ],
-   "parts": [
-    {
-     "text": "การ์ด *3 ใบ* 3 ชุด",
-     "say": "ฮารุตะ มีการ์ดสามใบ ในสามชุด. วาดไม่เหมือนกันเลย.",
-     "panel": {
-      "x": 32,
-      "y": 24,
-      "zoom": 2.0
-     }
-    },
-    {
-     "text": "ใบที่ 2 จาก*ชุด 3*",
-     "say": "ใบสอง.",
-     "panel": {
-      "img": 1,
-      "x": 42,
-      "y": 22,
-      "zoom": 1.9
-     }
-    },
-    {
-     "text": "อีกใบ *สีฟ้า*",
-     "say": "ใบสาม.",
-     "panel": {
-      "img": 2,
-      "x": 50,
-      "y": 25,
-      "zoom": 1.9,
-      "sfx": "ฟึ่บ!"
-     }
-    }
-   ]
-  },
-  {
-   "layout": "wanted",
-   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-009.png",
-   "duration": 4,
-   "name": "HARUTA",
-   "subtitle": "หน่วยที่ 12",
-   "sticker": "เพิ่งรู้? กดหัวใจเลย",
-   "parts": [
-    {
-     "text": "ผมสั้น *น้ำตาล*",
-     "say": "ผมสั้นสีน้ำตาล ตาสีฟ้า. ชุดเขียวขาว ระบายคอแบบยุโรปโบราณ.",
-     "panel": {
-      "x": 32,
-      "y": 24,
-      "zoom": 1.9
-     }
-    },
-    {
-     "text": "ดาบที่ด้าม *เหมือนระบาย*",
-     "say": "ดาบเซเบอร์ ด้ามเหมือนระบายบนเสื้อ.",
-     "panel": {
-      "x": 28,
-      "y": 50,
-      "zoom": 1.8
-     }
-    }
-   ]
-  },
-  {
-   "layout": "cinema",
-   "video_url": "https://renderer-production-8b7f.up.railway.app/videos/wan-ace2-mvdyisax.mp4",
-   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-009.png",
-   "duration": 5,
-   "title": "ศึก\n*มารีนฟอร์ด*",
-   "parts": [
-    {
-     "text": "บุกช่วย*เอส*",
-     "say": "ที่มารีนฟอร์ด ฮารุตะ บุกไปช่วยเอส. และหนุนลูฟี่ ตอนถูกคิซารุโจมตี."
-    },
-    {
-     "text": "ร้องไห้ตอน*เอสจากไป*",
-     "say": "แล้วร้องไห้ ตอนเอสจากไป."
-    }
-   ]
-  },
-  {
-   "layout": "panels",
-   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-009.png",
-   "duration": 4,
-   "images": [
-    "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-009_r1.png"
-   ],
-   "parts": [
-    {
-     "text": "เพิ่งรู้ชื่อ *ตอน SBS*",
-     "say": "ชื่อฮารุตะ เพิ่งเปิดเผย ใน เอสบีเอส เล่มห้าสิบแปด.",
-     "panel": {
-      "x": 32,
-      "y": 24,
-      "zoom": 2.1,
-      "bw": true
-     }
-    },
-    {
-     "text": "นักพากย์ *หญิง*",
-     "say": "อนิเมะ ให้นักพากย์หญิง.",
-     "panel": {
-      "img": 1,
-      "x": 42,
-      "y": 22,
-      "zoom": 1.9
-     }
-    },
-    {
-     "text": "โอดะ: ไม่มี *ผู้หญิง*",
-     "say": "แต่โอดะ เคยตอบว่า ศึกนั้น ไม่มีผู้หญิง ในกลุ่มหนวดขาวเลย.",
-     "panel": {
-      "x": 32,
-      "y": 24,
-      "zoom": 1.7,
-      "sfx": "หา!?"
-     }
-    }
-   ]
-  },
-  {
-   "layout": "effect",
-   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-009.png",
-   "duration": 4,
-   "title": "ใบนี้ทำอะไรได้",
-   "parts": [
-    {
-     "text": "ตาคู่แข่ง *+3000*",
-     "say": "บนการ์ด พลังห้าพัน. ตาคู่แข่ง เพิ่มเป็นแปดพัน.",
-     "panel": {
-      "x": 50,
-      "y": 68,
-      "zoom": 1.8
-     }
-    },
-    {
-     "text": "ลงปุ๊บ *ล้ม* ตัวละคร",
-     "say": "ลงสนาม ล้มตัวละครพลังพื้นฐานไม่เกินสองพัน หนึ่งตัว.",
-     "panel": {
-      "x": 50,
-      "y": 70,
-      "zoom": 2.0
-     }
-    }
-   ]
-  },
-  {
-   "layout": "panels",
-   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-008.png",
-   "duration": 4,
-   "images": [
-    "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-003.png",
-    "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-013.png"
-   ],
-   "parts": [
-    {
-     "text": "หน่วยที่ *3* โจซ",
-     "say": "ชุดนี้ยังมี โจซ หน่วยสาม.",
-     "panel": {
-      "x": 45,
-      "y": 28,
-      "zoom": 1.8
-     }
-    },
-    {
-     "text": "หน่วยที่ *16* อิโซ",
-     "say": "อิโซ หน่วยสิบหก.",
-     "panel": {
-      "img": 1,
-      "x": 50,
-      "y": 28,
-      "zoom": 1.8
-     }
-    },
-    {
-     "text": "หน่วยที่ *2* เอส",
-     "say": "และเอส หน่วยสอง.",
-     "panel": {
-      "img": 2,
-      "x": 50,
-      "y": 28,
-      "zoom": 1.8,
-      "sfx": "ว้าว!"
-     }
-    }
-   ]
-  },
-  {
-   "layout": "poll",
-   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-009.png",
-   "no_caption": true,
-   "duration": 8,
-   "title": "ฮารุตะ เป็น\n*ชาย* หรือ *หญิง*?",
-   "labels": [
-    "ชาย",
-    "หญิง"
-   ],
-   "parts": [
-    {
-     "text": "",
-     "say": "คุณคิดว่า ฮารุตะ เป็นผู้ชาย หรือผู้หญิง?"
-    },
-    {
-     "text": "",
-     "say": "ชาย พิมพ์หนึ่ง. หญิง พิมพ์สอง."
-    },
-    {
-     "text": "",
-     "say": "คอมเมนต์ไว้เลย. แล้วกดติดตาม การ์ดเซ็นเตอร์ไว้ด้วยนะ."
-    }
-   ]
-  }
- ],
- "meta": {
-  "title": "ฮารุตะ หัวหน้าหน่วย 12 ชายหรือหญิง OP17-009 | One Piece Card #shorts",
-  "description": "การ์ดวันพีซ OP-17 ใบที่ 009 ฮารุตะ หัวหน้าหน่วยที่ 12 ของกลุ่มหนวดขาว ชื่อที่เพิ่งเปิดเผยใน SBS เล่ม 58 บทบาทในศึกมารีนฟอร์ด การ์ดทั้ง 3 ใบ และเอฟเฟกต์บนการ์ด\n\n👇 ฮารุตะ เป็นชาย หรือหญิง? พิมพ์ 1 = ชาย / 2 = หญิง\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Celtic Impulse\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17 #ฮารุตะ",
-  "thumb": {
-   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-009.png",
-   "hook": "ชาย หรือ\nหญิง?",
-   "badge": "OP17-009",
-   "sub": "ONE PIECE CARD GAME"
-  },
-  "engage": "👇 ฮารุตะ เป็นชาย หรือหญิง? พิมพ์ 1 = ชาย / 2 = หญิง\nชอบเรื่องการ์ดแบบนี้ กด ❤️ ไว้ด้วยนะ"
- },
- "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Celtic%20Impulse.mp3",
- "bgm_volume": 0.14
+  "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Celtic%20Impulse.mp3",
+  "bgm_volume": 0.14
 }
