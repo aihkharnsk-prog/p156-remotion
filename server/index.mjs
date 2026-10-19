@@ -1213,6 +1213,39 @@ app.post("/render-files", auth, async (req, res) => {
   res.json(out);
 });
 
+// ส่งคลิปที่ render แล้วเข้า Make อัปโหลด YouTube (ใช้ข้อความจาก meta ในสคริปต์ตรงๆ ไม่ต้องพิมพ์ซ้ำ)
+// POST /yt-upload {items:[{file:"op17-008-reel.json", job:"<job id>", publish_at?:"2026-10-23T10:00:00Z"}]}
+app.post("/yt-upload", auth, async (req, res) => {
+  const out = [];
+  for (const it of Array.isArray(req.body?.items) ? req.body.items : []) {
+    const name = path.basename(String(it.file || ""));
+    const job = String(it.job || "");
+    try {
+      if (!/^[0-9a-f-]{36}(-[a-z0-9]+)?$/.test(job)) throw new Error("bad job id");
+      await fs.stat(path.join(OUT_DIR, `${job}.mp4`));
+      const meta = JSON.parse(await fs.readFile(path.join(__dirname, "..", "examples", name), "utf8")).meta || {};
+      const publish_at = it.publish_at || meta.publish_at;
+      if (!publish_at) throw new Error("publish_at missing");
+      const thumbName = `thumb-${name.replace(/\.json$/, "")}.jpg`;
+      const hasThumb = await fs.stat(path.join(OUT_DIR, thumbName)).then(() => true, () => false);
+      const payload = {
+        job_id: job,
+        status: "done",
+        video_url: publicVideoUrl(job),
+        thumbnail_url: hasThumb ? `${PUBLIC_BASE_URL}/videos/${thumbName}` : null,
+        warnings: [],
+        meta: { title: meta.title, description: meta.description, publish_at },
+      };
+      await postWebhook(UPLOAD_HOOK, payload);
+      out.push({ file: name, job, publish_at, title: meta.title, thumbnail: hasThumb });
+    } catch (e) {
+      out.push({ file: name, job, error: String(e?.message || e) });
+    }
+  }
+  console.log(`[yt-upload] ${JSON.stringify(out)}`);
+  res.json(out);
+});
+
 // เพิ่มป้าย "Your brand" ให้โพสต์ TikTok ที่ตั้งเวลาไว้แล้ว: POST /tiktok-brand {ids:[...]}
 app.post("/tiktok-brand", auth, async (req, res) => {
   const out = [];
