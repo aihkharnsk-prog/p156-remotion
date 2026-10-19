@@ -1545,6 +1545,28 @@ app.post("/img-ascii", auth, async (req, res) => {
   }
 });
 
+
+// POST /music-probe {titles[]} -> download incompetech mp3s, log duration, rough BPM and loudness
+app.post("/music-probe", auth, async (req, res) => {
+  const titles = (req.body.titles || []).slice(0, 30);
+  res.json({ ok: true });
+  const py = `import sys,subprocess,numpy as np\nf=sys.argv[1]\nraw=subprocess.run(['ffmpeg','-v','error','-i',f,'-t','60','-ac','1','-ar','11025','-f','s16le','-'],capture_output=True).stdout\nx=np.frombuffer(raw,dtype=np.int16).astype(float)\nif len(x)<11025*5: print('short');sys.exit()\nrms=np.sqrt((x**2).mean())\nh=512\nn=len(x)//h\ne=np.array([np.sqrt((x[i*h:(i+1)*h]**2).mean()) for i in range(n)])\nd=np.maximum(np.diff(e),0)\nd=d-d.mean()\nfr=11025/h\nac=np.correlate(d,d,'full')[len(d)-1:]\nlo=int(fr*60/200);hi=int(fr*60/70)\nk=lo+int(np.argmax(ac[lo:hi]))\nb=60*fr/k\nwhile b<110: b*=2\nwhile b>190: b/=2\nprint('bpm~%d rms=%d'%(b,rms))\n`;
+  for (const t of titles) {
+    try {
+      const u = `https://incompetech.com/music/royalty-free/mp3-royaltyfree/${encodeURIComponent(t)}.mp3`;
+      const r = await fetch(u, { headers: UA });
+      if (!r.ok) { console.log(`[music] ${t} HTTP ${r.status}`); continue; }
+      const f = `${ASSET_DIR}/probe-${Date.now()}.mp3`;
+      await fs.writeFile(f, Buffer.from(await r.arrayBuffer()));
+      const dur = (await execFileP("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", f])).stdout.trim();
+      const out = (await execFileP("python3", ["-c", py, f], { maxBuffer: 1e7 })).stdout.trim();
+      fs.unlink(f).catch(() => {});
+      console.log(`[music] ${t} dur=${Math.round(dur)}s ${out}`);
+    } catch (e) { console.log(`[music] ${t} error ${String(e.message || e).slice(0, 150)}`); }
+  }
+  console.log("[music] done");
+});
+
 app.post("/echo", auth, (req, res) => {
   console.log(`[echo] ${JSON.stringify(req.body).slice(0, 20000)}`);
   res.json({ ok: true });
