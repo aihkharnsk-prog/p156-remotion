@@ -136,31 +136,40 @@ export const Thumb: React.FC<ThumbProps> = (p) => {
           <Img src={p.image_url} style={{ width: "100%", borderRadius: m * 0.03, border: `${m * 0.012}px solid #fff` }} />
         </div>
       ) : null}
-      {/* ป้ายเลขใบ */}
-      {p.badge ? (
-        <div
-          style={{
-            position: "absolute",
-            zIndex: 25,
-            left: w * 0.06,
-            top: h * 0.43,
-            width: m * 0.24,
-            height: m * 0.24,
-            borderRadius: "50%",
-            background: acc,
-            border: `${m * 0.01}px solid #000`,
-            color: "#111",
-            fontWeight: 900,
-            fontSize: m * 0.11,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            transform: "rotate(-12deg)",
-          }}
-        >
-          {p.badge}
-        </div>
-      ) : null}
+      {/* ป้ายเลขใบ: ถ้ามีช่องว่าง เช่น "SPORTS #2" แยกเป็นป้ายเล็กบน + เลขใหญ่ล่าง ให้พอดีวง */}
+      {p.badge ? (() => {
+        const bs = String(p.badge).trim();
+        const k = bs.lastIndexOf(" ");
+        const label = k > 0 ? bs.slice(0, k) : "";
+        const num = k > 0 ? bs.slice(k + 1) : bs;
+        return (
+          <div
+            style={{
+              position: "absolute",
+              zIndex: 25,
+              left: w * 0.05,
+              top: h * 0.415,
+              width: m * 0.25,
+              height: m * 0.25,
+              borderRadius: "50%",
+              background: `radial-gradient(circle at 30% 25%, #fff6c9, ${acc} 55%)`,
+              border: `${m * 0.01}px solid #000`,
+              boxShadow: `0 ${m * 0.012}px ${m * 0.03}px rgba(0,0,0,0.6)`,
+              color: "#111",
+              fontWeight: 900,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              lineHeight: 1,
+              transform: "rotate(-10deg)",
+            }}
+          >
+            {label ? <div style={{ fontSize: m * 0.04, letterSpacing: m * 0.003, whiteSpace: "nowrap" }}>{label}</div> : null}
+            <div style={{ fontSize: m * (label ? 0.1 : 0.11), whiteSpace: "nowrap" }}>{num}</div>
+          </div>
+        );
+      })() : null}
       {/* แถบล่าง */}
       <div
         style={{
