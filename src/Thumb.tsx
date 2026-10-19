@@ -126,7 +126,7 @@ export const Thumb: React.FC<ThumbProps> = (p) => {
           style={{
             position: "absolute",
             left: "50%",
-            top: h * 0.60,
+            top: h * 0.535,
             width: w * 0.66,
             zIndex: 5,
             transform: "translate(-50%,-50%) rotate(4deg)",
