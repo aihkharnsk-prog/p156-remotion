@@ -1500,6 +1500,21 @@ app.post("/peek", auth, async (req, res) => {
     }
   }
 });
+// POST /fetch-text {url, max=3000} -> log the first max chars of the response (for JSON APIs such as the Wikimedia imageinfo API)
+app.post("/fetch-text", auth, async (req, res) => {
+  const u = req.body.url;
+  const max = Math.min(Number(req.body.max) || 3000, 12000);
+  res.json({ ok: true });
+  try {
+    const r = await fetch(u, { headers: UA });
+    const t = (await r.text()).replace(/\s+/g, " ");
+    console.log(`[fetch-text] ${r.status} ${u.slice(0, 120)} len=${t.length}`);
+    for (let p = 0; p < t.length && p < max; p += 1500) console.log(`[fetch-text] ${p / 1500} ${t.slice(p, Math.min(p + 1500, max))}`);
+  } catch (e) {
+    console.log(`[fetch-text] error ${String(e.message || e).slice(0, 200)} ${u}`);
+  }
+});
+
 app.post("/peek-page", auth, async (req, res) => {
   const u = req.body.url;
   res.json({ ok: true });
