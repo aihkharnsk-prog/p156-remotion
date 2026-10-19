@@ -1610,6 +1610,24 @@ app.get("/zernio-post/:id", auth, async (req, res) => {
   res.json(out);
 });
 
+// อ่านสถิติจาก Zernio แบบอ่านอย่างเดียว (รายงานประจำสัปดาห์): GET /zernio-get?path=/analytics...  (อนุญาตเฉพาะ /analytics และ /accounts)
+app.get("/zernio-get", auth, async (req, res) => {
+  const p = String(req.query.path || "");
+  let out;
+  if (!/^\/(analytics|accounts)(\/|\?|$)/.test(p) || p.includes("..")) {
+    out = { error: "path must start with /analytics or /accounts" };
+  } else {
+    try {
+      out = await zernio(p);
+    } catch (e) {
+      out = { error: String(e?.message || e) };
+    }
+  }
+  const tag = String(req.query.tag || "");
+  console.log(`[zernio-get] ${tag} ${p} ${JSON.stringify(out).slice(0, 15000)}`);
+  res.json(out);
+});
+
 // ทดสอบการออกเสียง: POST /tts-test {texts:[...]} → /videos/tts-test-<n>.mp3 (เสียงเดียวกับคลิป ไม่แปลงคำ)
 app.post("/tts-test", auth, async (req, res) => {
   const tts = { voice_id: "bTEswxYhpv7UDkQg5VRu", model_id: "eleven_v4", stability: 0.8, speed: 1.2, prefix: "[calm, soft, natural storyteller]", ...(req.body?.tts || {}) };
