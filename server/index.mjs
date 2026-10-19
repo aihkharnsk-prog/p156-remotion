@@ -1556,6 +1556,45 @@ app.post("/img-stats", auth, async (req, res) => {
   }
 });
 
+// POST /img-crawl {sitemap, match, from, max} -> crawl site set pages (from sitemap), keep pages whose html matches `match`, measure card pictures, log totals + worst sets
+app.post("/img-crawl", auth, async (req, res) => {
+  const { sitemap, match = "tennis", from = 0, max = 120 } = req.body || {};
+  res.json({ ok: true });
+  try {
+    const xml = await (await fetch(sitemap, { headers: UA })).text();
+    const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]).slice(from, from + max);
+    const re = new RegExp(match, "i");
+    let sets = 0, imgs = 0, land = 0, bad = 0, scanned = 0;
+    const worst = [];
+    const probe = (b) => new Promise((ok) => { const c = execFile("python3", ["-c", "import sys,io\nfrom PIL import Image\nim=Image.open(io.BytesIO(sys.stdin.buffer.read()))\nprint(im.size[0],im.size[1])"], (e, o) => ok(e ? null : String(o).trim().split(" ").map(Number))); c.stdin.end(b); });
+    for (let i = 0; i < urls.length; i += 6) {
+      await Promise.all(urls.slice(i, i + 6).map(async (u) => {
+        try {
+          const html = await (await fetch(u, { headers: UA })).text();
+          scanned++;
+          if (!re.test(html)) return;
+          const title = (html.match(/<title>([^<]*)/i) || [])[1] || "";
+          const list = [...new Set([...html.matchAll(/<img\b[^>]*>/gi)].map((m) => (m[0].match(/\s(?:data-src|src)=["']([^"']+)/i) || [])[1]).filter((x) => x && /pricecharting|\/uploads\/|card/i.test(x) && !/logo|brand|icon/i.test(x)))].slice(0, 60);
+          let l = 0, n = 0;
+          for (const x of list) {
+            try {
+              const z = await probe(Buffer.from(await (await fetch(new URL(x, u).href, { headers: UA })).arrayBuffer()));
+              if (!z) { bad++; continue; }
+              n++; if (z[0] > z[1]) l++;
+            } catch { bad++; }
+          }
+          sets++; imgs += n; land += l;
+          if (l) worst.push(`${l}/${n} ${u} ${title.slice(0, 50)}`);
+        } catch {}
+      }));
+    }
+    console.log(`[img-crawl] scanned=${scanned} matched_sets=${sets} images=${imgs} landscape=${land} bad=${bad}`);
+    for (const w of worst.sort().slice(0, 20)) console.log(`[img-crawl] WORST ${w}`);
+  } catch (e) {
+    console.log(`[img-crawl] error ${String(e.message || e).slice(0, 150)}`);
+  }
+});
+
 // POST /img-ascii {urls[], cols=48} -> log image size + coarse luminance map (for checking orientation when we cannot view the image)
 app.post("/img-ascii", auth, async (req, res) => {
   const urls = (req.body.urls || []).slice(0, 8);
