@@ -1810,7 +1810,14 @@ app.post("/thumb-files", auth, async (req, res) => {
     const name = path.basename(String(f));
     try {
       const tm = JSON.parse(await fs.readFile(path.join(__dirname, "..", "examples", name), "utf8")).meta?.thumb;
-      const thumbProps = { image_url: tm.image_url, hook: tm.hook, badge: tm.badge, sub: tm.sub, width: 1080, height: 1920 };
+      // โหลดภาพการ์ดมาเก็บในเซิร์ฟเวอร์ก่อน (เว็บทางการบล็อก Chrome ที่โหลดตรง) แล้วให้ Chrome ใช้ลิงก์ของเราแทน
+      let thumbImg = tm.image_url;
+      try {
+        const sdir = path.join(ASSET_DIR, `thumb-src-${Date.now().toString(36)}`);
+        await fs.mkdir(sdir, { recursive: true });
+        thumbImg = `${PUBLIC_BASE_URL}/assets/${path.basename(sdir)}/${await downloadImage(String(tm.image_url), sdir, "img")}`;
+      } catch (e) { console.warn(`[thumb-files] image download failed, using remote: ${e?.message || e}`); }
+      const thumbProps = { image_url: thumbImg, hook: tm.hook, badge: tm.badge, sub: tm.sub, width: 1080, height: 1920 };
       const tcomp = await selectComposition({ serveUrl, id: "Thumb", inputProps: thumbProps });
       const outName = `thumb-${name.replace(/\.json$/, "")}.jpg`;
       await renderStill({ composition: tcomp, serveUrl, output: path.join(OUT_DIR, outName), imageFormat: "jpeg", jpegQuality: 90, inputProps: thumbProps });
