@@ -1533,7 +1533,7 @@ app.post("/img-ascii", auth, async (req, res) => {
       const buf = Buffer.from(await r.arrayBuffer());
       const f = `${ASSET_DIR}/ascii-${Date.now()}-${i}.img`;
       await fs.writeFile(f, buf);
-      const py = `import sys\nfrom PIL import Image\nim=Image.open(sys.argv[1]).convert('L')\nw,h=im.size\nc=int(sys.argv[2])\nr=max(1,int(c*h/w*0.5))\nsm=im.resize((c,r))\nch=' .:-=+*#%@'\nprint('SIZE',w,h)\nfor y in range(r):\n  print(''.join(ch[min(9,sm.getpixel((x,y))*10//256)] for x in range(c)))\n`;
+      const py = `import sys\nfrom PIL import Image\nfrom PIL import ImageOps\nim0=Image.open(sys.argv[1])\nex=im0.getexif().get(274)\nim=ImageOps.exif_transpose(im0).convert('L')\nw,h=im.size\nprint('EXIF',ex,'raw',im0.size,'after',im.size)\nc=int(sys.argv[2])\nr=max(1,int(c*h/w*0.5))\nsm=im.resize((c,r))\nch=' .:-=+*#%@'\nprint('SIZE',w,h)\nfor y in range(r):\n  print(''.join(ch[min(9,sm.getpixel((x,y))*10//256)] for x in range(c)))\n`;
       execFile("python3", ["-c", py, f, String(cols)], { maxBuffer: 1e7 }, (err, stdout) => {
         fs.unlink(f).catch(() => {});
         console.log(`[ascii] ${i} ${r.status} ${urls[i].slice(-24)} ${err ? "err " + err.message.slice(0, 120) : ""}`);
