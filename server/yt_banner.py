@@ -182,3 +182,7 @@ d.text((CX, (y0 + y1) // 2), URL, font=fu, fill=(22, 18, 40), anchor="mm")
 im = im.convert("RGB")
 im.save(OUT, optimize=True)
 im.save(OUT.rsplit(".", 1)[0] + ".jpg", quality=92, optimize=True)
+# ปกกลุ่ม Facebook (1640x856): ครอปแนวตั้งให้ข้อความอยู่กลาง แล้วย่อให้ชัด (เซฟที่ <โฟลเดอร์เดียวกัน>/fb-group-cover.png)
+import os
+gc = im.crop((0, 41, 2048, 1110)).resize((1640, 856), Image.LANCZOS)
+gc.save(os.path.join(os.path.dirname(OUT), "fb-group-cover.png"), optimize=True)
