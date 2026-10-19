@@ -242,7 +242,7 @@ const HookBeat: React.FC<BP> = ({ s, f, d, pal }) => {
         </g>
       </svg>
       {/* การ์ดเอียงลอยด้านล่าง */}
-      <div style={{ position: "absolute", left: 540 - 240, top: 860 + Math.sin(f / 10) * 14, transform: `rotate(${-7 + Math.sin(f / 16) * 3}deg) scale(${ez(f, lastSlam, lastSlam + 14, 0.4, 1, back(1.5))})`, opacity: ez(f, lastSlam, lastSlam + 6) }}>
+      <div style={{ position: "absolute", left: 540 - 240, top: 790 + Math.sin(f / 10) * 10, transform: `rotate(${-3 + Math.sin(f / 16) * 2}deg) scale(${ez(f, lastSlam, lastSlam + 14, 0.4, 1, back(1.5))})`, opacity: ez(f, lastSlam, lastSlam + 6) }}>
         <CardImg src={s.image_url} w={480} f={f} glow={pal.a} />
       </div>
       {/* ข้อความกระแทกทีละบรรทัด */}
@@ -539,7 +539,7 @@ const TimelineBeat: React.FC<BP> = ({ s, f, d, pal, starts }) => {
           return (
             <div key={i} style={{ position: "absolute", left: i * step - 200, top: 0, width: 400, height: H }}>
               <div style={{ position: "absolute", left: 200 - 34, top: y - 34, width: 68, height: 68, borderRadius: "50%", background: active ? pal.b : pal.a, border: "8px solid #fff", transform: `scale(${t * (active ? 1.15 : 0.9)})`, boxShadow: active ? `0 0 40px ${pal.b}` : "none" }} />
-              <div style={{ position: "absolute", left: 0, right: 0, top: y - 230, textAlign: "center", fontFamily: KANIT, fontWeight: 900, fontSize: active ? 120 : 84, color: active ? pal.b : "rgba(255,255,255,.6)", opacity: t, textShadow: active ? `${stroke(5, pal.ink)}, 0 0 40px ${pal.a}` : stroke(4, "#000") }}>{pt.year}</div>
+              <div style={{ position: "absolute", left: 0, right: 0, bottom: H - (y - 62), lineHeight: 1.0, textAlign: "center", fontFamily: KANIT, fontWeight: 900, fontSize: active ? 112 : 80, color: active ? pal.b : "rgba(255,255,255,.6)", opacity: t, textShadow: active ? `${stroke(5, pal.ink)}, 0 0 40px ${pal.a}` : stroke(4, "#000") }}>{pt.year}</div>
               <div style={{ position: "absolute", left: 0, right: 0, top: y + 70, textAlign: "center", fontFamily: KANIT, fontWeight: 700, fontSize: active ? 54 : 44, lineHeight: 1.25, color: "#fff", whiteSpace: "pre-line", opacity: t * (active ? 1 : 0.55), textShadow: stroke(3, "#000") }}>{pt.label}</div>
             </div>
           );
