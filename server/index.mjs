@@ -1567,6 +1567,26 @@ app.post("/music-probe", auth, async (req, res) => {
   console.log("[music] done");
 });
 
+
+// POST /img-fix {url, name, exif=false, rot=0, flip=false} -> /assets/fix-<name>.jpg : upright, whole card on a portrait canvas (no crop)
+app.post("/img-fix", auth, async (req, res) => {
+  const { url, name } = req.body || {};
+  const exif = req.body.exif ? "1" : "0";
+  const rot = String(Number(req.body.rot) || 0);
+  res.json({ ok: true });
+  try {
+    const r = await fetch(url, { headers: UA });
+    const buf = Buffer.from(await r.arrayBuffer());
+    const src = `${ASSET_DIR}/fixsrc-${name}.img`;
+    const out = `${ASSET_DIR}/fix-${name}.jpg`;
+    await fs.writeFile(src, buf);
+    const py = `import sys\nfrom PIL import Image, ImageOps, ImageFilter, ImageDraw\nim=Image.open(sys.argv[1])\nif sys.argv[3]=='1': im=ImageOps.exif_transpose(im)\nim=im.convert('RGB')\nrot=int(sys.argv[4])\nif rot: im=im.rotate(-rot,expand=True)\nW,H=900,1256\nbg=ImageOps.fit(im,(W,H)).filter(ImageFilter.GaussianBlur(40))\nbg=Image.eval(bg,lambda v:int(v*0.45))\nsc=min((W-50)/im.width,(H-50)/im.height)\nfg=im.resize((int(im.width*sc),int(im.height*sc)),Image.LANCZOS)\nbg.paste(fg,((W-fg.width)//2,(H-fg.height)//2))\nbg.save(sys.argv[2],quality=90)\nprint('ok',im.size,fg.size)\n`;
+    const { stdout } = await execFileP("python3", ["-c", py, src, out, exif, rot], { maxBuffer: 1e7 });
+    fs.unlink(src).catch(() => {});
+    console.log(`[img-fix] ${name} ${stdout.trim()} -> /assets/fix-${name}.jpg`);
+  } catch (e) { console.log(`[img-fix] ${name} error ${String(e.message || e).slice(0, 200)}`); }
+});
+
 app.post("/echo", auth, (req, res) => {
   console.log(`[echo] ${JSON.stringify(req.body).slice(0, 20000)}`);
   res.json({ ok: true });
