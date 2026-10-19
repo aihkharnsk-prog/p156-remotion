@@ -139,9 +139,11 @@ export const Thumb: React.FC<ThumbProps> = (p) => {
       {/* ป้ายเลขใบ: ถ้ามีช่องว่าง เช่น "SPORTS #2" แยกเป็นป้ายเล็กบน + เลขใหญ่ล่าง ให้พอดีวง */}
       {p.badge ? (() => {
         const bs = String(p.badge).trim();
+        // "SPORTS #2" -> SPORTS / #2 ; "OP17-013" -> OP17 / #013 (card number of a set) ; "#5" -> just #5
         const k = bs.lastIndexOf(" ");
-        const label = k > 0 ? bs.slice(0, k) : "";
-        const num = k > 0 ? bs.slice(k + 1) : bs;
+        const dash = k < 0 ? bs.indexOf("-") : -1;
+        const label = k > 0 ? bs.slice(0, k) : dash > 0 ? bs.slice(0, dash) : "";
+        const num = k > 0 ? bs.slice(k + 1) : dash > 0 ? "#" + bs.slice(dash + 1) : bs;
         return (
           <div
             style={{
@@ -166,7 +168,7 @@ export const Thumb: React.FC<ThumbProps> = (p) => {
             }}
           >
             {label ? <div style={{ fontSize: m * 0.04, letterSpacing: m * 0.003, whiteSpace: "nowrap" }}>{label}</div> : null}
-            <div style={{ fontSize: m * (label ? 0.1 : 0.11), whiteSpace: "nowrap" }}>{num}</div>
+            <div style={{ fontSize: Math.min(m * (label ? 0.1 : 0.11), (m * 0.19) / (Math.max(2, num.length) * 0.6)), whiteSpace: "nowrap" }}>{num}</div>
           </div>
         );
       })() : null}
