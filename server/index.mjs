@@ -1521,6 +1521,30 @@ app.post("/peek-page", auth, async (req, res) => {
   }
 });
 
+
+// POST /img-ascii {urls[], cols=48} -> log image size + coarse luminance map (for checking orientation when we cannot view the image)
+app.post("/img-ascii", auth, async (req, res) => {
+  const urls = (req.body.urls || []).slice(0, 8);
+  const cols = Math.min(80, Math.max(20, Number(req.body.cols) || 48));
+  res.json({ ok: true });
+  for (let i = 0; i < urls.length; i++) {
+    try {
+      const r = await fetch(urls[i], { headers: UA });
+      const buf = Buffer.from(await r.arrayBuffer());
+      const f = `${ASSET_DIR}/ascii-${Date.now()}-${i}.img`;
+      await fs.writeFile(f, buf);
+      const py = `import sys\nfrom PIL import Image\nim=Image.open(sys.argv[1]).convert('L')\nw,h=im.size\nc=int(sys.argv[2])\nr=max(1,int(c*h/w*0.5))\nsm=im.resize((c,r))\nch=' .:-=+*#%@'\nprint('SIZE',w,h)\nfor y in range(r):\n  print(''.join(ch[min(9,sm.getpixel((x,y))*10//256)] for x in range(c)))\n`;
+      execFile("python3", ["-c", py, f, String(cols)], { maxBuffer: 1e7 }, (err, stdout) => {
+        fs.unlink(f).catch(() => {});
+        console.log(`[ascii] ${i} ${r.status} ${urls[i].slice(-24)} ${err ? "err " + err.message.slice(0, 120) : ""}`);
+        for (const line of String(stdout).split("\n")) console.log(`[ascii] ${i}| ${line}`);
+      });
+    } catch (e) {
+      console.log(`[ascii] ${i} error ${String(e.message || e).slice(0, 200)}`);
+    }
+  }
+});
+
 app.post("/echo", auth, (req, res) => {
   console.log(`[echo] ${JSON.stringify(req.body).slice(0, 20000)}`);
   res.json({ ok: true });
