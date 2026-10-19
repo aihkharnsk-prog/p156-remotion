@@ -1624,6 +1624,10 @@ app.get("/zernio-get", auth, async (req, res) => {
     }
   }
   const tag = String(req.query.tag || "");
+  // compact=1: ย่อโพสต์ให้เหลือแค่ตัวเลข (log ไม่ถูกตัด)
+  if (req.query.compact && out && Array.isArray(out.posts)) {
+    out = { overview: out.overview, pagination: out.pagination, posts: out.posts.map((x) => ({ id: x._id, platformPostId: x.platformPostId || (x.platforms || [])[0]?.platformPostId, platform: x.platform || (x.platforms || [])[0]?.platform, at: x.publishedAt || x.scheduledFor, text: String(x.content || "").slice(0, 70), url: x.platformPostUrl || (x.platforms || [])[0]?.platformPostUrl, a: x.analytics })) };
+  }
   console.log(`[zernio-get] ${tag} ${p} ${JSON.stringify(out).slice(0, 15000)}`);
   res.json(out);
 });
