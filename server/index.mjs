@@ -915,6 +915,34 @@ app.get("/brand/fb-cover.png", async (req, res) => {
     res.status(500).send(String(e?.message || e));
   }
 });
+// แบนเนอร์ช่อง YouTube (2048x1152): GET /brand/yt-banner.png (?refresh=1 = สร้างใหม่)
+app.get("/brand/yt-banner.png", async (req, res) => {
+  const file = path.join(ASSET_DIR, "yt-banner.png");
+  try {
+    const have = await fs.stat(file).then(() => true, () => false);
+    if (!have || req.query.refresh) {
+      const pk = OUTRO_POOL.pokemon, yg = OUTRO_POOL.yugioh, mg = OUTRO_POOL.magic;
+      const groups = [pk[0], yg[0], mg[0], pk[1], yg[1], pk[2], mg[1]];
+      const dir = path.join(ASSET_DIR, `cover-src-${Date.now()}`);
+      await fs.mkdir(dir, { recursive: true });
+      const files = [];
+      for (const [i, g] of groups.entries()) {
+        if (files.length >= 4) break;
+        for (const u of g.urls || [g]) {
+          try { files.push(path.join(dir, await downloadImage(String(u), dir, `c${i}`))); break; } catch (e) {}
+        }
+      }
+      await execFileP("python3", [path.join(__dirname, "yt_banner.py"), file, path.join(__dirname, "..", "public", "fonts"), ...files], { timeout: 120000 });
+      fs.rm(dir, { recursive: true, force: true }).catch(() => {});
+      console.log(`[yt-banner] built with ${files.length} cards`);
+    }
+    res.set("Cache-Control", "no-cache");
+    res.sendFile(file);
+  } catch (e) {
+    console.error("[yt-banner] failed", e);
+    res.status(500).send(String(e?.message || e));
+  }
+});
 // ปก Facebook แบบอื่น: GET /brand/fb-cover-fan.png | /brand/fb-cover-wall.png (?refresh=1)
 app.get("/brand/fb-cover-:style.png", async (req, res) => {
   const style = ["fan", "wall"].includes(req.params.style) ? req.params.style : null;
