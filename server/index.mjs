@@ -1522,6 +1522,40 @@ app.post("/peek-page", auth, async (req, res) => {
 });
 
 
+// POST /img-stats {pages[]} -> for each page, probe every unique card image: log landscape/odd shapes (width>height) with their alt text
+app.post("/img-stats", auth, async (req, res) => {
+  const pages = (req.body.pages || []).slice(0, 12);
+  res.json({ ok: true });
+  for (const u of pages) {
+    try {
+      const html = await (await fetch(u, { headers: UA })).text();
+      const seen = new Map();
+      for (const m of html.matchAll(/<img\b[^>]*>/gi)) {
+        const s = (m[0].match(/\s(?:data-src|data-lazy-src|src)=["']([^"']+)/i) || [])[1];
+        const alt = (m[0].match(/\salt=["']([^"']*)/i) || [])[1] || "";
+        if (s && /pricecharting|\/240\.jpg/.test(s) && !seen.has(s)) seen.set(s, alt);
+      }
+      const urls = [...seen.keys()];
+      let land = 0, port = 0, bad = 0;
+      const odd = [];
+      const sizes = await Promise.all(urls.map(async (s) => {
+        try {
+          const b = Buffer.from(await (await fetch(s, { headers: UA })).arrayBuffer());
+          return await new Promise((ok) => execFile("python3", ["-c", "import sys,io\nfrom PIL import Image\nim=Image.open(io.BytesIO(sys.stdin.buffer.read()))\nprint(im.size[0],im.size[1])"], (e, o) => ok(e ? null : String(o).trim().split(" ").map(Number))).stdin.end(b));
+        } catch { return null; }
+      }));
+      sizes.forEach((z, i) => {
+        if (!z) { bad++; return; }
+        if (z[0] > z[1]) { land++; odd.push(`${z[0]}x${z[1]} ${seen.get(urls[i])} ${urls[i].split("/").slice(-2)[0]}`); } else port++;
+      });
+      console.log(`[img-stats] ${u} unique=${urls.length} portrait=${port} landscape=${land} bad=${bad}`);
+      for (const o of odd.slice(0, 15)) console.log(`[img-stats] LAND ${o}`);
+    } catch (e) {
+      console.log(`[img-stats] error ${String(e.message || e).slice(0, 150)} ${u}`);
+    }
+  }
+});
+
 // POST /img-ascii {urls[], cols=48} -> log image size + coarse luminance map (for checking orientation when we cannot view the image)
 app.post("/img-ascii", auth, async (req, res) => {
   const urls = (req.body.urls || []).slice(0, 8);
