@@ -937,7 +937,7 @@ app.get("/brand/yt-banner.png", async (req, res) => {
       console.log(`[yt-banner] built with ${files.length} cards`);
     }
     res.set("Cache-Control", "no-cache");
-    res.sendFile(file);
+    res.sendFile(req.query.fmt === "jpg" ? file.replace(/\.png$/, ".jpg") : file);
   } catch (e) {
     console.error("[yt-banner] failed", e);
     res.status(500).send(String(e?.message || e));

@@ -179,4 +179,6 @@ d = ImageDraw.Draw(im)
 d.rounded_rectangle((x0, y0, x1, y1), radius=(y1 - y0) // 2, outline=(255, 245, 210), width=3)
 d.text((CX, (y0 + y1) // 2), URL, font=fu, fill=(22, 18, 40), anchor="mm")
 
-im.convert("RGB").save(OUT, quality=95)
+im = im.convert("RGB")
+im.save(OUT, optimize=True)
+im.save(OUT.rsplit(".", 1)[0] + ".jpg", quality=92, optimize=True)
