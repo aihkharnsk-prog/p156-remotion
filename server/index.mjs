@@ -1860,10 +1860,13 @@ app.get("/zernio-get", auth, async (req, res) => {
 app.post("/tts-test", auth, async (req, res) => {
   const tts = { voice_id: "bTEswxYhpv7UDkQg5VRu", model_id: "eleven_v4", stability: 0.8, speed: 1.2, prefix: "[calm, soft, natural storyteller]", ...(req.body?.tts || {}) };
   const out = [];
-  for (const [i, t] of (Array.isArray(req.body?.texts) ? req.body.texts.slice(0, 8) : []).entries()) {
+  for (const [i, t0] of (Array.isArray(req.body?.texts) ? req.body.texts.slice(0, 8) : []).entries()) {
+    // t0 = "ข้อความ" หรือ {text, tts:{...override}, name} เพื่อเทียบสไตล์เสียงหลายแบบ
+    const t = typeof t0 === "object" ? t0.text : t0;
+    const one = typeof t0 === "object" && t0.tts ? { ...tts, ...t0.tts } : tts;
     try {
-      const name = `tts-test-${i + 1}.mp3`;
-      await ttsToFile(String(t), path.join(OUT_DIR, name), tts, true);
+      const name = typeof t0 === "object" && t0.name ? `tts-test-${String(t0.name).replace(/[^a-z0-9-]/gi, "")}.mp3` : `tts-test-${i + 1}.mp3`;
+      await ttsToFile(String(t), path.join(OUT_DIR, name), one, true);
       out.push({ text: t, url: `${PUBLIC_BASE_URL}/videos/${name}` });
     } catch (e) {
       out.push({ text: t, error: String(e?.message || e) });
