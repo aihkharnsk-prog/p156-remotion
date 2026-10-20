@@ -333,13 +333,17 @@ const NameBeat: React.FC<BP> = ({ s, f, d, pal }) => {
   const gap = Math.min(16, Math.max(8, (d * 0.45) / Math.max(1, chips.length)));
   const at = (i: number) => 6 + i * gap;
   const eqAt = at(chips.length) + 4;
-  const fsBig = chips.length >= 3 ? 92 : 120;
+  // ชิปต้องอยู่แถวเดียวเสมอ: ลดขนาดตัวอักษรตามจำนวนตัวอักษรรวม (กันตัดบรรทัดแล้วป้ายเล็กไปทับ "=" / ชื่อ)
+  const baseBig = chips.length >= 3 ? 92 : 120;
+  const totalChars = Math.max(1, chips.reduce((n, c) => n + String(c.big || "").length, 0));
+  const room = 1000 - chips.length * 64 - Math.max(0, chips.length - 1) * (100 + 36);
+  const fsBig = Math.max(56, Math.min(baseBig, Math.floor(room / (totalChars * 0.68))));
   return (
     <AbsoluteFill>
       {s.image_url ? (
         <Img src={s.image_url} style={{ position: "absolute", right: -180, bottom: 120, width: 900, opacity: 0.22, transform: `translateX(${-f * 0.6}px) rotate(-6deg)`, filter: `drop-shadow(0 0 30px ${pal.a})` }} />
       ) : null}
-      <div style={{ position: "absolute", left: 0, right: 0, top: 470, display: "flex", justifyContent: "center", alignItems: "flex-start", gap: 18, flexWrap: "wrap", padding: "0 40px" }}>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 470, display: "flex", justifyContent: "center", alignItems: "flex-start", gap: 18, flexWrap: "nowrap", padding: "0 40px" }}>
         {chips.map((c, i) => {
           const t = ez(f, at(i), at(i) + 10, 0, 1, back(2));
           return (

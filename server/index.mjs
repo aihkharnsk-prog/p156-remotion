@@ -1509,6 +1509,23 @@ app.post("/peek", auth, async (req, res) => {
     }
   }
 });
+// POST /frame-grab {job, times:[sec...], width=400} -> log JPEG frames (base64) of /videos/<job>.mp4 so a slide can be inspected
+app.post("/frame-grab", auth, async (req, res) => {
+  const job = path.basename(String(req.body.job || ""));
+  const times = (req.body.times || []).slice(0, 6).map(Number);
+  const width = Math.min(Number(req.body.width) || 400, 600);
+  res.json({ ok: true, n: times.length });
+  for (const [i, t] of times.entries()) {
+    try {
+      const out = path.join(ASSET_DIR, `frame-${i}.jpg`);
+      await execFileP("ffmpeg", ["-y", "-v", "error", "-ss", String(t), "-i", path.join(OUT_DIR, `${job}.mp4`), "-frames:v", "1", "-vf", `scale=${width}:-1`, "-q:v", "5", out], { timeout: 30000 });
+      const b64 = (await fs.readFile(out)).toString("base64");
+      const parts = Math.ceil(b64.length / 6000);
+      console.log(`[frame] ${i} meta t=${t} parts=${parts}`);
+      for (let p = 0; p < parts; p++) console.log(`[frame] ${i} ${p + 1}/${parts} ${b64.slice(p * 6000, (p + 1) * 6000)}`);
+    } catch (e) { console.log(`[frame] ${i} error ${String(e?.message || e).slice(0, 200)}`); }
+  }
+});
 // POST /fetch-text {url, max=3000} -> log the first max chars of the response (for JSON APIs such as the Wikimedia imageinfo API)
 app.post("/fetch-text", auth, async (req, res) => {
   const u = req.body.url;
