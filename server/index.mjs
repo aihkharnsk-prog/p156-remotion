@@ -94,13 +94,22 @@ function engageLine(title = "") {
   for (const ch of String(title)) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
   return ENGAGE[h % ENGAGE.length];
 }
-function tiktokCaption(meta = {}) {
+// ลิงก์เว็บแยกแพลตฟอร์ม: คลิปที่ตั้ง meta.campaign จะได้ utm_source/medium/campaign (เว็บนับที่ /admin/traffic)
+// meta.site_path = หน้าปลายทาง (เช่น /card/123); ไม่ตั้ง → หน้าแรก. คลิปเก่าที่ไม่มี campaign ไม่เปลี่ยน
+function tagLinks(text, meta = {}, platform = "tiktok") {
+  if (!meta.campaign) return text;
+  const camp = String(meta.campaign).toLowerCase().replace(/[^a-z0-9_-]/g, "-").slice(0, 60);
+  const med = { youtube: "shorts", tiktok: "video", facebook: "reel" }[platform] || "video";
+  return String(text).replace(/(?:https?:\/\/)?www\.cardzcenter\.com((?:\/[^\s?]*)?)(?!\?utm_)/g, (_m, pth) =>
+    `https://www.cardzcenter.com${pth || meta.site_path || ""}?utm_source=${platform}&utm_medium=${med}&utm_campaign=${camp}`);
+}
+function tiktokCaption(meta = {}, platform = "tiktok") {
   if (meta.tiktok_caption) return String(meta.tiktok_caption).slice(0, 2200);
   const title = String(meta.title || "").replace(/#shorts/gi, "").trim();
   const first = String(meta.description || "").split("\n\n")[0] || "";
-  return [title, meta.engage ? String(meta.engage) : engageLine(title), first, "🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 www.cardzcenter.com",
+  return tagLinks([title, meta.engage ? String(meta.engage) : engageLine(title), first, "🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 www.cardzcenter.com",
     socialTags(meta)]
-    .filter(Boolean).join("\n\n").slice(0, 2200);
+    .filter(Boolean).join("\n\n"), meta, platform).slice(0, 2200);
 }
 // โพสต์คลิปขึ้น TikTok (ตั้งเวลาได้) — คืนผลจาก Zernio
 async function postTikTok(videoUrl, meta = {}, at, draft = false) {
@@ -181,9 +190,9 @@ async function postFacebook(videoUrl, meta = {}, at, durationSec) {
   const when = at && Date.parse(at) > Date.now() + 5 * 60 * 1000 ? new Date(at).toISOString() : null;
   const title = String(meta.title || "").replace(/#shorts/gi, "").trim().slice(0, 100);
   const make = (reel) => ({
-    content: tiktokCaption(meta),
+    content: tiktokCaption(meta, "facebook"),
     mediaItems: [{ type: "video", url: videoUrl }],
-    platforms: [{ platform: "facebook", accountId, platformSpecificData: { ...(reel ? { contentType: "reel", title } : {}), firstComment: FB_FIRST_COMMENT } }],
+    platforms: [{ platform: "facebook", accountId, platformSpecificData: { ...(reel ? { contentType: "reel", title } : {}), firstComment: tagLinks(FB_FIRST_COMMENT, meta, "facebook") } }],
     ...(when ? { scheduledFor: when, timezone: "UTC" } : { publishNow: true }),
   });
   const reelOk = !(durationSec > 60);
@@ -1234,7 +1243,7 @@ app.post("/yt-upload", auth, async (req, res) => {
         video_url: publicVideoUrl(job),
         thumbnail_url: hasThumb ? `${PUBLIC_BASE_URL}/videos/${thumbName}` : null,
         warnings: [],
-        meta: { title: meta.title, description: meta.description, publish_at },
+        meta: { title: meta.title, description: tagLinks(meta.description || "", meta, "youtube"), publish_at },
       };
       await postWebhook(UPLOAD_HOOK, payload);
       out.push({ file: name, job, publish_at, title: meta.title, thumbnail: hasThumb });
