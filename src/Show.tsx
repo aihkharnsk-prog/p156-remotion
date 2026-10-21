@@ -450,6 +450,8 @@ const FullBeat: React.FC<BP> = ({ s, f, d, pal }) => {
   const zoom = 1 + 0.07 * (f / Math.max(1, d));
   const contain = s.fit === "contain";
   const pt = ez(f, 6, 18, 0, 1, back(2.2));
+  const tLines = Math.max(1, String(s.title || "").split("\n").length);
+  const tSize = tLines >= 3 ? 78 : 92;
   const pulse = 1 + 0.05 * Math.sin(f / 5);
   return (
     <AbsoluteFill style={{ background: pal.bg2 }}>
@@ -465,12 +467,12 @@ const FullBeat: React.FC<BP> = ({ s, f, d, pal }) => {
       ) : null}
       <AbsoluteFill style={{ background: "linear-gradient(to bottom, rgba(0,0,0,.72) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 62%, rgba(0,0,0,.7) 100%)" }} />
       {s.title ? (
-        <div style={{ position: "absolute", left: 40, right: 40, top: 150, textAlign: "center", fontFamily: KANIT, fontWeight: 900, fontSize: 92, lineHeight: 1.1, color: "#fff", whiteSpace: "pre-line", textShadow: `${stroke(6, "#000")}, 0 0 40px rgba(0,0,0,.8)`, opacity: ez(f, 0, 8), transform: `translateY(${ez(f, 0, 12, -50, 0)}px)` }}>
+        <div style={{ position: "absolute", left: 40, right: 40, top: 150, textAlign: "center", fontFamily: KANIT, fontWeight: 900, fontSize: tSize, lineHeight: 1.1, color: "#fff", whiteSpace: "pre-line", textShadow: `${stroke(6, "#000")}, 0 0 40px rgba(0,0,0,.8)`, opacity: ez(f, 0, 8), transform: `translateY(${ez(f, 0, 12, -50, 0)}px)` }}>
           <Rich text={s.title} color={pal.b} />
         </div>
       ) : null}
       {s.subtitle ? (
-        <div style={{ position: "absolute", left: 40, right: 40, top: 150 + 2 * 100 + 20, textAlign: "center", fontFamily: KANIT, fontWeight: 700, fontSize: 46, color: "#fff", textShadow: stroke(4, "#000"), opacity: ez(f, 8, 16) }}>{s.subtitle}</div>
+        <div style={{ position: "absolute", left: 40, right: 40, top: 150 + Math.round(tLines * tSize * 1.1) + 24, textAlign: "center", fontFamily: KANIT, fontWeight: 700, fontSize: 46, color: "#fff", textShadow: stroke(4, "#000"), opacity: ez(f, 8, 16) }}>{s.subtitle}</div>
       ) : null}
       {s.price ? (
         <div style={{ position: "absolute", right: 50, top: 760, transform: `rotate(-9deg) scale(${pt * pulse})`, transformOrigin: "center", textAlign: "center" }}>
