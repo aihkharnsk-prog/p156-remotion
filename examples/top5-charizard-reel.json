@@ -1,204 +1,205 @@
 {
-  "width": 1080,
-  "height": 1920,
-  "meta": {
-    "title": "5 ใบ Charizard แพงที่สุดในโลก ใบไหนแพงสุด? | #shorts",
-    "description": "นับถอยหลัง 5 ใบ Charizard ที่ขายแพงที่สุด\n5) 1st Edition Base Set PSA 10 — $550,000 Heritage ธ.ค. 2025\n4) ฉบับญี่ปุ่น No Rarity Symbol PSA 10 — $641,721 Goldin ก.ย. 2025\n3) 1st Edition \"Logan Paul Break\" PSA 10 — $954,800 Goldin 16 ก.พ. 2026\n2) ฉบับญี่ปุ่น เคสเซ็นโดย Mitsuhiro Arita — $1,232,200 Goldin 8 มี.ค. 2026\n1) ฉบับญี่ปุ่น No Rarity Symbol PSA 10 — $1,700,000 วันที่ 3 มี.ค. 2026 (สื่อรายงาน ไม่ระบุเวทีประมูล)\n\n👇 ถ้าเลือกเก็บได้ใบเดียว คุณเลือกใบไหน?\n\nอัตราแลกเปลี่ยนประมาณ 33.6 บาท/ดอลลาร์ (20 ต.ค. 2026) ราคารวมค่าธรรมเนียมผู้ซื้อ\nข้อมูล: SI Collectibles, Polkastarter, BankTCG, Bulbapedia\nภาพการ์ด: pokemontcg.io (ลายเดียวกัน ไม่ใช่สำเนาที่ขายจริง) · วิดีโอเปิด: Pexels (ฟรี)\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #charizard #pokemon #การ์ดแพง #การ์ดโปเกมอน",
-    "thumb": {
-      "image_url": "https://images.pokemontcg.io/base1/4_hires.png",
-      "hook": "5 ใบ Charizard\nแพงที่สุด",
-      "sub": "ใบไหนแพงสุด?",
-      "badge": ""
-    },
-    "publish_at": "2026-10-23T10:00:00Z",
-    "engage": "👇 ถ้าเลือกเก็บได้ใบเดียว คุณเลือกใบไหน?",
-    "campaign": "top5-02-charizard",
-    "site_path": "/"
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "5 ใบ Charizard แพงที่สุดในโลก ใบไหนแพงสุด? | #shorts",
+  "description": "นับถอยหลัง 5 ใบ Charizard ที่ขายแพงที่สุด\n5) 1st Edition Base Set PSA 10 — $550,000 Heritage ธ.ค. 2025\n4) ฉบับญี่ปุ่น No Rarity Symbol PSA 10 — $641,721 Goldin ก.ย. 2025\n3) 1st Edition \"Logan Paul Break\" PSA 10 — $954,800 Goldin 16 ก.พ. 2026\n2) ฉบับญี่ปุ่น เคสเซ็นโดย Mitsuhiro Arita — $1,232,200 Goldin 8 มี.ค. 2026\n1) ฉบับญี่ปุ่น No Rarity Symbol PSA 10 — $1,700,000 วันที่ 3 มี.ค. 2026 (สื่อรายงาน ไม่ระบุเวทีประมูล)\n\n👇 ถ้าเลือกเก็บได้ใบเดียว คุณเลือกใบไหน?\n\nอัตราแลกเปลี่ยนประมาณ 33.6 บาท/ดอลลาร์ (20 ต.ค. 2026) ราคารวมค่าธรรมเนียมผู้ซื้อ\nข้อมูล: SI Collectibles, Polkastarter, BankTCG, Bulbapedia\nภาพการ์ด: Goldin / Heritage Auctions ผ่าน essential-japan.com · วิดีโอเปิด: Pexels (ฟรี)\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #charizard #pokemon #การ์ดแพง #การ์ดโปเกมอน",
+  "thumb": {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-chz-jp1.jpg",
+   "hook": "5 ใบ Charizard\nแพงที่สุด",
+   "sub": "ใบไหนแพงสุด?",
+   "badge": ""
   },
-  "tts": {
-    "voice_id": "bTEswxYhpv7UDkQg5VRu",
-    "model_id": "eleven_v4",
-    "stability": 0.5,
-    "speed": 1.04,
-    "prefix": "[upbeat, confident, clear sports presenter, lively but not shouting]"
-  },
-  "audio_rate": 1.0,
-  "composition": "CardShow",
-  "theme": "psychic",
-  "badge": "Charizard TOP 5",
-  "series": "การ์ดแพงเท่าอะไร",
-  "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
-  "bgm_volume": 0.055,
-  "slides": [
+  "publish_at": "2026-10-23T10:00:00Z",
+  "engage": "👇 ถ้าเลือกเก็บได้ใบเดียว คุณเลือกใบไหน?",
+  "campaign": "top5-02-charizard",
+  "site_path": "/"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, confident, clear sports presenter, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "composition": "CardShow",
+ "theme": "psychic",
+ "badge": "Charizard TOP 5",
+ "series": "การ์ดแพงเท่าอะไร",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055,
+ "slides": [
+  {
+   "beat": "full",
+   "duration": 5,
+   "title": "5 ใบ *Charizard*\nแพงที่สุดในโลก",
+   "subtitle": "ใบไหนแพงสุด?",
+   "price": "฿57M",
+   "price_label": "แพงสุด",
+   "video_url": "https://videos.pexels.com/video-files/7005913/7005913-uhd_1440_2560_24fps.mp4",
+   "text": "5 ใบ Charizard แพงที่สุดในโลก",
+   "parts": [
     {
-      "beat": "full",
-      "duration": 5,
-      "title": "5 ใบ *Charizard*\nแพงที่สุดในโลก",
-      "subtitle": "ใบไหนแพงสุด?",
-      "price": "฿57M",
-      "price_label": "แพงสุด",
-      "video_url": "https://videos.pexels.com/video-files/7005913/7005913-uhd_1440_2560_24fps.mp4",
-      "text": "5 ใบ Charizard แพงที่สุดในโลก",
-      "parts": [
-        {
-          "text": "5 ใบ *Charizard* แพงที่สุดในโลก",
-          "say": "ห้าใบ ลิซาร์ดอน ที่แพงที่สุดในโลก."
-        },
-        {
-          "text": "ใบไหน *แพงสุด?* ลองเดา",
-          "say": "ใบไหนแพงสุด ลองเดาดู."
-        }
-      ]
+     "text": "5 ใบ *Charizard* แพงที่สุดในโลก",
+     "say": "ห้าใบ ลิซาร์ดอน ที่แพงที่สุดในโลก."
     },
     {
-      "beat": "full",
-      "duration": 6,
-      "title": "ภาพวาดโดย\n*Mitsuhiro Arita*",
-      "subtitle": "Base Set ปี 1996–1999",
-      "image_url": "https://images.pokemontcg.io/base1/4_hires.png",
-      "fit": "contain",
-      "text": "ภาพวาดโดย Mitsuhiro Arita",
-      "parts": [
-        {
-          "text": "ลาย *ลิซาร์ดอน* ใบนี้ วาดโดย *Mitsuhiro Arita*",
-          "say": "ลายลิซาร์ดอนใบนี้ วาดโดย มิตสึฮิโระ อาริตะ."
-        },
-        {
-          "text": "มีทั้ง *ญี่ปุ่น* และ *1st Edition* ภาษาอังกฤษ",
-          "say": "มีทั้งฉบับญี่ปุ่น และฉบับพิมพ์แรกภาษาอังกฤษ."
-        }
-      ]
-    },
-    {
-      "beat": "rank",
-      "duration": 8,
-      "rank": "5",
-      "title": "Charizard 1st Edition\n*Base Set อังกฤษ*",
-      "image_url": "https://images.pokemontcg.io/base1/4_hires.png",
-      "price": "$550,000",
-      "price_label": "ขายแล้ว",
-      "subtitle": "≈ ฿18.5 ล้าน",
-      "fit": "cover",
-      "parts": [
-        {
-          "text": "อันดับ 5 *ลิซาร์ดอน 1st Edition* PSA 10",
-          "say": "อันดับห้า ลิซาร์ดอน พิมพ์แรก เกรดพีเอสเอสิบ."
-        },
-        {
-          "text": "*550,000 ดอลลาร์* Heritage ธ.ค. 2025",
-          "say": "ห้าแสนห้าหมื่นดอลลาร์ ที่เฮอริเทจ เดือนธันวาคม สองพันยี่สิบห้า."
-        }
-      ]
-    },
-    {
-      "beat": "rank",
-      "duration": 8,
-      "rank": "4",
-      "title": "Charizard\n*Japanese No Rarity*",
-      "image_url": "https://images.pokemontcg.io/base1/4_hires.png",
-      "price": "$641,721",
-      "price_label": "ขายแล้ว",
-      "subtitle": "≈ ฿21.6 ล้าน",
-      "fit": "cover",
-      "parts": [
-        {
-          "text": "อันดับ 4 *ลิซาร์ดอนญี่ปุ่น* ไม่มีสัญลักษณ์ความหายาก",
-          "say": "อันดับสี่ ลิซาร์ดอนฉบับญี่ปุ่น ไม่มีสัญลักษณ์ความหายาก."
-        },
-        {
-          "text": "*641,721 ดอลลาร์* Goldin ก.ย. 2025",
-          "say": "หกแสนสี่หมื่นหนึ่งพันเจ็ดร้อยยี่สิบเอ็ดดอลลาร์ ที่โกลดิน เดือนกันยายน สองพันยี่สิบห้า."
-        }
-      ]
-    },
-    {
-      "beat": "rank",
-      "duration": 8,
-      "rank": "3",
-      "title": "Charizard 1st Edition\n*Logan Paul Break*",
-      "image_url": "https://images.pokemontcg.io/base1/4_hires.png",
-      "price": "$954,800",
-      "price_label": "ขายแล้ว",
-      "subtitle": "≈ ฿32.1 ล้าน",
-      "fit": "cover",
-      "parts": [
-        {
-          "text": "อันดับ 3 *1st Edition* ฉลาก *Logan Paul Break*",
-          "say": "อันดับสาม ลิซาร์ดอน พิมพ์แรก ฉลากโลแกน พอล เบรก."
-        },
-        {
-          "text": "*954,800 ดอลลาร์* Goldin 16 ก.พ. 2026",
-          "say": "เก้าแสนห้าหมื่นสี่พันแปดร้อยดอลลาร์ ที่โกลดิน วันที่สิบหก กุมภาพันธ์."
-        }
-      ]
-    },
-    {
-      "beat": "rank",
-      "duration": 8,
-      "rank": "2",
-      "title": "Charizard Japanese\n*เซ็นโดย Arita*",
-      "image_url": "https://images.pokemontcg.io/base1/4_hires.png",
-      "price": "$1.23M",
-      "price_label": "ขายแล้ว",
-      "subtitle": "≈ ฿41.4 ล้าน",
-      "fit": "cover",
-      "parts": [
-        {
-          "text": "อันดับ 2 *ฉบับญี่ปุ่น* เคสเซ็นโดย *Arita*",
-          "say": "อันดับสอง ฉบับญี่ปุ่น เคสเซ็นชื่อโดยอาริตะ ผู้วาด."
-        },
-        {
-          "text": "*1.23 ล้านดอลลาร์* Goldin 8 มี.ค. 2026",
-          "say": "หนึ่งล้านสองแสนสามหมื่นดอลลาร์ ที่โกลดิน วันที่แปด มีนาคม."
-        }
-      ]
-    },
-    {
-      "beat": "rank",
-      "duration": 8,
-      "rank": "1",
-      "title": "Charizard Japanese\n*No Rarity Symbol*",
-      "image_url": "https://images.pokemontcg.io/base1/4_hires.png",
-      "price": "$1.7M",
-      "price_label": "สถิติสูงสุด",
-      "subtitle": "≈ ฿57 ล้าน",
-      "fit": "cover",
-      "parts": [
-        {
-          "text": "อันดับ 1 *ลิซาร์ดอนญี่ปุ่น* PSA 10",
-          "say": "อันดับหนึ่ง ลิซาร์ดอนญี่ปุ่น เกรดพีเอสเอสิบ."
-        },
-        {
-          "text": "*1.7 ล้านดอลลาร์* 3 มี.ค. 2026 (สื่อรายงาน)",
-          "say": "หนึ่งล้านเจ็ดแสนดอลลาร์ วันที่สาม มีนาคม. สื่อรายงานราคานี้ แต่ไม่ระบุเวทีประมูล."
-        }
-      ]
-    },
-    {
-      "beat": "card",
-      "duration": 5,
-      "image_url": "https://images.pokemontcg.io/base1/4_hires.png",
-      "text": "ถ้าเลือกได้ใบเดียว\n*คุณเลือกใบไหน?*",
-      "parts": [
-        {
-          "text": "ถ้าเลือกได้ใบเดียว *คุณเลือกใบไหน?*",
-          "say": "ถ้าเลือกเก็บได้ใบเดียว คุณเลือกใบไหน? คอมเมนต์บอกได้เลย."
-        }
-      ]
-    },
-    {
-      "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
-      "image_mode": "still",
-      "text": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด",
-      "duration": 3,
-      "no_caption": true,
-      "beat": "still",
-      "parts": [
-        {
-          "text": "*ซื้อ ขาย สะสม แข่งเกมส์การ์ด* ที่ www.cardzcenter.com",
-          "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
-        }
-      ]
+     "text": "ใบไหน *แพงสุด?* ลองเดา",
+     "say": "ใบไหนแพงสุด ลองเดาดู."
     }
-  ]
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 6,
+   "title": "ภาพวาดโดย\n*Mitsuhiro Arita*",
+   "subtitle": "Base Set ปี 1996–1999",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-chz-jp3.jpg",
+   "fit": "cover",
+   "text": "ภาพวาดโดย Mitsuhiro Arita",
+   "parts": [
+    {
+     "text": "ลาย *ลิซาร์ดอน* ใบนี้ วาดโดย *Mitsuhiro Arita*",
+     "say": "ลายลิซาร์ดอนใบนี้ วาดโดย มิตสึฮิโระ อาริตะ."
+    },
+    {
+     "text": "มีทั้ง *ญี่ปุ่น* และ *1st Edition* ภาษาอังกฤษ",
+     "say": "มีทั้งฉบับญี่ปุ่น และฉบับพิมพ์แรกภาษาอังกฤษ."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 8,
+   "rank": "5",
+   "title": "Charizard 1st Edition\n*Base Set อังกฤษ*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-chz-first1.jpg",
+   "price": "$550,000",
+   "price_label": "ขายแล้ว",
+   "subtitle": "≈ ฿18.5 ล้าน",
+   "fit": "cover",
+   "parts": [
+    {
+     "text": "อันดับ 5 *ลิซาร์ดอน 1st Edition* PSA 10",
+     "say": "อันดับห้า ลิซาร์ดอน พิมพ์แรก เกรดพีเอสเอสิบ."
+    },
+    {
+     "text": "*550,000 ดอลลาร์* Heritage ธ.ค. 2025",
+     "say": "ห้าแสนห้าหมื่นดอลลาร์ ที่เฮอริเทจ เดือนธันวาคม สองพันยี่สิบห้า."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 8,
+   "rank": "4",
+   "title": "Charizard\n*Japanese No Rarity*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-chz-jp3.jpg",
+   "price": "$641,721",
+   "price_label": "ขายแล้ว",
+   "subtitle": "≈ ฿21.6 ล้าน",
+   "fit": "cover",
+   "parts": [
+    {
+     "text": "อันดับ 4 *ลิซาร์ดอนญี่ปุ่น* ไม่มีสัญลักษณ์ความหายาก",
+     "say": "อันดับสี่ ลิซาร์ดอนฉบับญี่ปุ่น ไม่มีสัญลักษณ์ความหายาก."
+    },
+    {
+     "text": "*641,721 ดอลลาร์* Goldin ก.ย. 2025",
+     "say": "หกแสนสี่หมื่นหนึ่งพันเจ็ดร้อยยี่สิบเอ็ดดอลลาร์ ที่โกลดิน เดือนกันยายน สองพันยี่สิบห้า."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 8,
+   "rank": "3",
+   "title": "Charizard 1st Edition\n*Logan Paul Break*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-chz-lp1.jpg",
+   "price": "$954,800",
+   "price_label": "ขายแล้ว",
+   "subtitle": "≈ ฿32.1 ล้าน",
+   "fit": "cover",
+   "parts": [
+    {
+     "text": "อันดับ 3 *1st Edition* ฉลาก *Logan Paul Break*",
+     "say": "อันดับสาม ลิซาร์ดอน พิมพ์แรก ฉลากโลแกน พอล เบรก."
+    },
+    {
+     "text": "*954,800 ดอลลาร์* Goldin 16 ก.พ. 2026",
+     "say": "เก้าแสนห้าหมื่นสี่พันแปดร้อยดอลลาร์ ที่โกลดิน วันที่สิบหก กุมภาพันธ์."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 8,
+   "rank": "2",
+   "title": "Charizard Japanese\n*เซ็นโดย Arita*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-chz-arita2.jpg",
+   "price": "$1.23M",
+   "price_label": "ขายแล้ว",
+   "subtitle": "≈ ฿41.4 ล้าน",
+   "fit": "cover",
+   "parts": [
+    {
+     "text": "อันดับ 2 *ฉบับญี่ปุ่น* เคสเซ็นโดย *Arita*",
+     "say": "อันดับสอง ฉบับญี่ปุ่น เคสเซ็นชื่อโดยอาริตะ ผู้วาด."
+    },
+    {
+     "text": "*1.23 ล้านดอลลาร์* Goldin 8 มี.ค. 2026",
+     "say": "หนึ่งล้านสองแสนสามหมื่นดอลลาร์ ที่โกลดิน วันที่แปด มีนาคม."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 8,
+   "rank": "1",
+   "title": "Charizard Japanese\n*No Rarity Symbol*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-chz-jp2.jpg",
+   "price": "$1.7M",
+   "price_label": "สถิติสูงสุด",
+   "subtitle": "≈ ฿57 ล้าน",
+   "fit": "cover",
+   "parts": [
+    {
+     "text": "อันดับ 1 *ลิซาร์ดอนญี่ปุ่น* PSA 10",
+     "say": "อันดับหนึ่ง ลิซาร์ดอนญี่ปุ่น เกรดพีเอสเอสิบ."
+    },
+    {
+     "text": "*1.7 ล้านดอลลาร์* 3 มี.ค. 2026 (สื่อรายงาน)",
+     "say": "หนึ่งล้านเจ็ดแสนดอลลาร์ วันที่สาม มีนาคม. สื่อรายงานราคานี้ แต่ไม่ระบุเวทีประมูล."
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 5,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-chz-first1.jpg",
+   "text": "ถ้าเลือกได้ใบเดียว\n*คุณเลือกใบไหน?*",
+   "parts": [
+    {
+     "text": "ถ้าเลือกได้ใบเดียว *คุณเลือกใบไหน?*",
+     "say": "ถ้าเลือกเก็บได้ใบเดียว คุณเลือกใบไหน? คอมเมนต์บอกได้เลย."
+    }
+   ],
+   "fit": "cover"
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "image_mode": "still",
+   "text": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด",
+   "duration": 3,
+   "no_caption": true,
+   "beat": "still",
+   "parts": [
+    {
+     "text": "*ซื้อ ขาย สะสม แข่งเกมส์การ์ด* ที่ www.cardzcenter.com",
+     "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ]
+  }
+ ]
 }
