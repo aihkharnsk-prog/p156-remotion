@@ -1055,7 +1055,7 @@ app.post("/render", auth, (req, res) => {
     for (const [i, s] of slides.entries()) {
       const duration = Number(s.duration);
       const SCENES = ["sprout", "coin", "evolve", "versions", "sprite"];
-      const BEATS = ["hook", "reveal", "card", "name", "stats", "bignum", "quiz", "zoom", "timeline", "art", "still", "coin", "evolve", "versions", "sprite"];
+      const BEATS = ["hook", "reveal", "card", "name", "stats", "bignum", "quiz", "zoom", "timeline", "art", "still", "coin", "evolve", "versions", "sprite", "full"];
       if ((!s.image_url && !s.video_url && !SCENES.includes(s.scene) && !BEATS.includes(s.beat)) || !(duration > 0)) {
         return res.status(400).json({
           error: `slide ${i}: need image_url or video_url, and duration (seconds) > 0`,
@@ -1108,6 +1108,9 @@ app.post("/render", auth, (req, res) => {
         chips: Array.isArray(s.chips) ? s.chips.slice(0, 5).map((c) => ({ big: String(c?.big ?? ""), small: c?.small !== undefined ? String(c.small) : undefined })) : undefined,
         stats: Array.isArray(s.stats) ? s.stats.slice(0, 5).map((r) => ({ label: String(r?.label ?? ""), value: Number(r?.value) || 0, max: optNum(r?.max), suffix: r?.suffix !== undefined ? String(r.suffix) : undefined })) : undefined,
         value: optNum(s.value),
+        price: s.price !== undefined ? String(s.price).slice(0, 30) : undefined,
+        price_label: s.price_label !== undefined ? String(s.price_label).slice(0, 30) : undefined,
+        fit: s.fit === "contain" ? "contain" : s.fit === "cover" ? "cover" : undefined,
         from: optNum(s.from),
         choices: Array.isArray(s.choices) ? s.choices.slice(0, 4).map(String) : undefined,
         answer: optNum(s.answer),
