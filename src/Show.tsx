@@ -103,6 +103,15 @@ const H = 1920;
 const stroke = (px: number, _c = "#000") =>
   `0 ${Math.max(2, Math.round(px * 0.6))}px ${Math.round(px * 2.2 + 4)}px rgba(20,12,40,.55), 0 1px 2px rgba(20,12,40,.5)`;
 
+// หัวข้อสไตล์สติกเกอร์: ตัวกลมหนา เติมสีเหลือง ขอบน้ำตาลเข้มหนา + เงาล่างให้ลอยขึ้น (ตามตัวอย่างที่ AK ชอบ)
+const HEAD = (w = 14): React.CSSProperties =>
+  ({
+    WebkitTextStroke: `${w}px #4a2208`,
+    paintOrder: "stroke fill",
+    strokeLinejoin: "round",
+    textShadow: `0 ${Math.round(w * 0.6)}px 0 #4a2208, 0 ${w}px ${w * 2}px rgba(40,18,0,.35)`,
+  } as React.CSSProperties);
+
 const partStarts = (s: ShowSlide, fps: number) => {
   let acc = 0;
   return (s.parts || []).map((p) => {
@@ -250,8 +259,8 @@ const HookBeat: React.FC<BP> = ({ s, f, d, pal }) => {
           const len = Array.from(ln.replace(/\*/g, "")).length || 1;
           const fs = Math.min(150, 940 / (len * 0.58));
           return (
-            <div key={i} style={{ fontSize: fs, color: "#fff", transform: `scale(${sc}) rotate(${i % 2 ? 2 : -2}deg)`, opacity: op, textShadow: `${stroke(7, pal.ink)}, 0 0 40px ${pal.a}` }}>
-              <Rich text={ln} color={pal.b} />
+            <div key={i} style={{ fontSize: fs, color: "#ffe14d", transform: `scale(${sc}) rotate(${i % 2 ? 2 : -2}deg)`, opacity: op, ...HEAD(16) }}>
+              <Rich text={ln} color="#ffffff" />
             </div>
           );
         })}
@@ -422,11 +431,11 @@ const BigNumBeat: React.FC<BP> = ({ s, f, d, pal }) => {
         </g>
       </svg>
       {s.title ? (
-        <div style={{ position: "absolute", left: 40, right: 40, top: 330, textAlign: "center", fontFamily: FRIEND, fontWeight: 800, fontSize: 72, color: "#fff", textShadow: stroke(4, "#000"), opacity: ez(f, 0, 8), transform: `translateY(${ez(f, 0, 12, -60, 0)}px)` }}>
-          <Rich text={s.title} color={pal.b} />
+        <div style={{ position: "absolute", left: 40, right: 40, top: 330, textAlign: "center", fontFamily: FRIEND, fontWeight: 800, fontSize: 72, color: "#ffe14d", ...HEAD(16), opacity: ez(f, 0, 8), transform: `translateY(${ez(f, 0, 12, -60, 0)}px)` }}>
+          <Rich text={s.title} color="#ffffff" />
         </div>
       ) : null}
-      <div style={{ position: "absolute", left: 0, right: 0, top: 860 - 170, height: 340, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", fontFamily: FRIEND, fontWeight: 900, fontSize: Math.min(300, 1000 / (Math.max(1, v.toLocaleString("en-US", { useGrouping: v >= 10000 }).length) * 0.6)), lineHeight: 1.1, whiteSpace: "nowrap", color: "#fff", transform: `scale(${pop})`, textShadow: `${stroke(8, pal.ink)}, 0 0 60px ${pal.a}, 0 0 120px ${pal.a}` }}>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 860 - 170, height: 340, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", fontFamily: FRIEND, fontWeight: 900, fontSize: Math.min(300, 1000 / (Math.max(1, v.toLocaleString("en-US", { useGrouping: v >= 10000 }).length) * 0.6)), lineHeight: 1.1, whiteSpace: "nowrap", color: "#ffe14d", transform: `scale(${pop})`, ...HEAD(22) }}>
         {shown.toLocaleString("en-US", { useGrouping: v >= 10000 })}
       </div>
       {s.subtitle ? (
@@ -459,8 +468,8 @@ const FullBeat: React.FC<BP> = ({ s, f, d, pal }) => {
       ) : null}
       <AbsoluteFill style={{ background: "linear-gradient(to bottom, rgba(0,0,0,.72) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 62%, rgba(0,0,0,.7) 100%)" }} />
       {s.title ? (
-        <div style={{ position: "absolute", left: 40, right: 40, top: 150, textAlign: "center", fontFamily: FRIEND, fontWeight: 900, fontSize: tSize, lineHeight: 1.1, color: "#fff", whiteSpace: "pre-line", textShadow: `${stroke(6, "#000")}, 0 0 40px rgba(0,0,0,.8)`, opacity: ez(f, 0, 8), transform: `translateY(${ez(f, 0, 12, -50, 0)}px)` }}>
-          <Rich text={s.title} color={pal.b} />
+        <div style={{ position: "absolute", left: 40, right: 40, top: 150, textAlign: "center", fontFamily: FRIEND, fontWeight: 900, fontSize: tSize, lineHeight: 1.1, color: "#ffe14d", whiteSpace: "pre-line", ...HEAD(16), opacity: ez(f, 0, 8), transform: `translateY(${ez(f, 0, 12, -50, 0)}px)` }}>
+          <Rich text={s.title} color="#ffffff" />
         </div>
       ) : null}
       {s.subtitle ? (
@@ -490,8 +499,8 @@ const QuizBeat: React.FC<BP> = ({ s, f, d, pal, starts }) => {
       <div style={{ position: "absolute", left: 0, right: 0, top: 230, textAlign: "center", transform: `rotate(${-6 + Math.sin(f / 6) * 2}deg) scale(${ez(f, 0, 10, 2.4, 1, back(2))})`, opacity: ez(f, 0, 4) }}>
         <span style={{ display: "inline-block", padding: "4px 46px", background: pal.b, color: pal.ink, fontFamily: FRIEND, fontWeight: 900, fontSize: 84, borderRadius: 16, boxShadow: `0 10px 28px rgba(30,16,60,.30)` }}>ทายสิ!</span>
       </div>
-      <div style={{ position: "absolute", left: 60, right: 60, top: 420, textAlign: "center", fontFamily: FRIEND, fontWeight: 800, fontSize: 66, lineHeight: 1.25, color: "#fff", textShadow: stroke(4, "#000"), opacity: ez(f, 4, 12), whiteSpace: "pre-line" }}>
-        <Rich text={String(s.title || "")} color={pal.b} />
+      <div style={{ position: "absolute", left: 60, right: 60, top: 420, textAlign: "center", fontFamily: FRIEND, fontWeight: 800, fontSize: 66, lineHeight: 1.25, color: "#ffe14d", ...HEAD(16), opacity: ez(f, 4, 12), whiteSpace: "pre-line" }}>
+        <Rich text={String(s.title || "")} color="#ffffff" />
       </div>
       <div style={{ position: "absolute", left: 90, right: 90, top: 690, height: 18, borderRadius: 9, background: "rgba(255,255,255,.15)", overflow: "hidden" }}>
         <div style={{ width: `${timer * 100}%`, height: "100%", background: timer < 0.3 ? "#ff3b3b" : pal.a }} />
@@ -579,15 +588,15 @@ const TimelineBeat: React.FC<BP> = ({ s, f, d, pal, starts }) => {
           return (
             <div key={i} style={{ position: "absolute", left: i * step - 200, top: 0, width: 400, height: H }}>
               <div style={{ position: "absolute", left: 200 - 34, top: y - 34, width: 68, height: 68, borderRadius: "50%", background: active ? pal.b : pal.a, border: "8px solid #fff", transform: `scale(${t * (active ? 1.15 : 0.9)})`, boxShadow: active ? `0 0 40px ${pal.b}` : "none" }} />
-              <div style={{ position: "absolute", left: 0, right: 0, bottom: H - (y - 62), lineHeight: 1.0, textAlign: "center", fontFamily: FRIEND, fontWeight: 900, fontSize: active ? 112 : 80, color: active ? pal.b : "rgba(255,255,255,.6)", opacity: t, textShadow: active ? `${stroke(5, pal.ink)}, 0 0 40px ${pal.a}` : stroke(4, "#000") }}>{pt.year}</div>
+              <div style={{ position: "absolute", left: 0, right: 0, bottom: H - (y - 62), lineHeight: 1.0, textAlign: "center", fontFamily: FRIEND, fontWeight: 900, fontSize: active ? 112 : 80, color: active ? "#ffe14d" : "#fff6d6", opacity: t, ...HEAD(active ? 16 : 12) }}>{pt.year}</div>
               <div style={{ position: "absolute", left: 0, right: 0, top: y + 70, textAlign: "center", fontFamily: FRIEND, fontWeight: 700, fontSize: active ? 54 : 44, lineHeight: 1.25, color: "#fff", whiteSpace: "pre-line", opacity: t * (active ? 1 : 0.55), textShadow: stroke(3, "#000") }}>{pt.label}</div>
             </div>
           );
         })}
       </div>
       {s.title ? (
-        <div style={{ position: "absolute", left: 0, right: 0, top: 330, textAlign: "center", fontFamily: FRIEND, fontWeight: 900, fontSize: 78, color: "#fff", textShadow: stroke(5, pal.ink), opacity: ez(f, 0, 8) }}>
-          <Rich text={s.title} color={pal.b} />
+        <div style={{ position: "absolute", left: 0, right: 0, top: 330, textAlign: "center", fontFamily: FRIEND, fontWeight: 900, fontSize: 78, color: "#ffe14d", ...HEAD(16), opacity: ez(f, 0, 8) }}>
+          <Rich text={s.title} color="#ffffff" />
         </div>
       ) : null}
     </AbsoluteFill>
