@@ -10,7 +10,7 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
-import { useKanit, KANIT } from "./fonts";
+import { useKanit, FRIEND } from "./fonts";
 import { Slide, slideFrames, COVER_FRAMES, DYN_FPS } from "./DynamicStory";
 import { Thumb, ThumbProps } from "./Thumb";
 import { CoinScene, EvolveScene, VersionsScene, SpriteScene } from "./Scenes";
@@ -83,13 +83,13 @@ export type ShowProps = {
 
 type Pal = { a: string; b: string; bg1: string; bg2: string; ink: string; particle: "ember" | "leaf" | "bubble" | "spark" | "sparkle" };
 const THEMES: Record<ShowTheme, Pal> = {
-  fire: { a: "#ff5a1f", b: "#ffd23f", bg1: "#3a0d04", bg2: "#0d0302", ink: "#2a0800", particle: "ember" },
-  grass: { a: "#2fd667", b: "#d8ff5c", bg1: "#07301a", bg2: "#020c06", ink: "#032010", particle: "leaf" },
-  water: { a: "#2a9dff", b: "#9ff0ff", bg1: "#062250", bg2: "#020818", ink: "#021230", particle: "bubble" },
-  electric: { a: "#ffcc00", b: "#fff59e", bg1: "#2e2503", bg2: "#0c0a01", ink: "#2a2000", particle: "spark" },
-  psychic: { a: "#ff4fa3", b: "#d2b0ff", bg1: "#2c0733", bg2: "#0c0210", ink: "#2a0430", particle: "sparkle" },
-  fighting: { a: "#ff7a3d", b: "#ffe0b0", bg1: "#331505", bg2: "#0e0602", ink: "#2a1000", particle: "ember" },
-  normal: { a: "#ffb84d", b: "#fff1d6", bg1: "#24203a", bg2: "#0a0912", ink: "#1c1630", particle: "sparkle" },
+  fire: { a: "#ff7a45", b: "#ffe29a", bg1: "#e8643a", bg2: "#8f2d4f", ink: "#5a1d2e", particle: "ember" },
+  grass: { a: "#34c47c", b: "#f4ffb0", bg1: "#3aa97a", bg2: "#1d5c78", ink: "#0f3d4a", particle: "leaf" },
+  water: { a: "#4aa8ff", b: "#c9f4ff", bg1: "#4a8de0", bg2: "#3b4aa8", ink: "#1c2b6b", particle: "bubble" },
+  electric: { a: "#ffb300", b: "#fff2b3", bg1: "#ff9f43", bg2: "#d9577a", ink: "#6b2a3d", particle: "spark" },
+  psychic: { a: "#ff6fb1", b: "#e8d4ff", bg1: "#b565e0", bg2: "#5b3fb0", ink: "#3a1f7a", particle: "sparkle" },
+  fighting: { a: "#ff8a4c", b: "#ffe9c4", bg1: "#e87a52", bg2: "#8a3d5e", ink: "#5a2236", particle: "ember" },
+  normal: { a: "#ffa94d", b: "#fff1d6", bg1: "#7b6fd6", bg2: "#40308f", ink: "#2b2066", particle: "sparkle" },
 };
 
 const C = { extrapolateLeft: "clamp" as const, extrapolateRight: "clamp" as const };
@@ -100,11 +100,8 @@ const back = (s = 1.7) => Easing.out(Easing.back(s));
 const W = 1080;
 const H = 1920;
 
-const stroke = (px: number, c = "#000") =>
-  [
-    `${-px}px ${-px}px 0 ${c}`, `${px}px ${-px}px 0 ${c}`, `${-px}px ${px}px 0 ${c}`, `${px}px ${px}px 0 ${c}`,
-    `0 ${-px}px 0 ${c}`, `0 ${px}px 0 ${c}`, `${-px}px 0 0 ${c}`, `${px}px 0 0 ${c}`,
-  ].join(", ");
+const stroke = (px: number, _c = "#000") =>
+  `0 ${Math.max(2, Math.round(px * 0.6))}px ${Math.round(px * 2.2 + 4)}px rgba(20,12,40,.55), 0 1px 2px rgba(20,12,40,.5)`;
 
 const partStarts = (s: ShowSlide, fps: number) => {
   let acc = 0;
@@ -139,21 +136,16 @@ const Rich: React.FC<{ text: string; color: string; scale?: number }> = ({ text,
 const Stage: React.FC<{ pal: Pal }> = ({ pal }) => {
   const f = useCurrentFrame();
   return (
-    <AbsoluteFill style={{ background: `radial-gradient(circle at 50% 42%, ${pal.bg1} 0%, ${pal.bg2} 72%)`, overflow: "hidden" }}>
-      <div
-        style={{
-          position: "absolute", left: -600, top: -400, width: 2280, height: 2720,
-          background: `conic-gradient(from ${f * 0.35}deg at 50% 50%, ${pal.a}00, ${pal.a}22, ${pal.a}00 25%, ${pal.b}18, ${pal.a}00 50%, ${pal.a}22, ${pal.a}00 75%, ${pal.b}18, ${pal.a}00)`,
-        }}
-      />
-      <AbsoluteFill
-        style={{
-          backgroundImage: `repeating-linear-gradient(-28deg, rgba(255,255,255,.035) 0 26px, transparent 26px 90px)`,
-          backgroundPosition: `${(f * 2.2) % 400}px 0px`,
-        }}
-      />
-      <Particles pal={pal} f={f} />
-      <AbsoluteFill style={{ background: "radial-gradient(circle at 50% 50%, rgba(0,0,0,0) 55%, rgba(0,0,0,.6) 100%)" }} />
+    <AbsoluteFill style={{ background: `linear-gradient(165deg, ${pal.bg1} 0%, ${pal.bg2} 100%)`, overflow: "hidden" }}>
+      <div style={{ position: "absolute", left: -300, top: 200 + Math.sin(f / 90) * 60, width: 1200, height: 1200, borderRadius: "50%", background: `radial-gradient(circle, ${pal.b}55 0%, ${pal.b}00 65%)` }} />
+      <div style={{ position: "absolute", right: -400, bottom: -100 + Math.cos(f / 110) * 70, width: 1300, height: 1300, borderRadius: "50%", background: `radial-gradient(circle, ${pal.a}66 0%, ${pal.a}00 65%)` }} />
+      {Array.from({ length: 14 }).map((_, k) => {
+        const r = (t: string) => random(`bk-${t}-${k}`);
+        const sz = 60 + r("s") * 160;
+        const y = H + 200 - ((f * (0.5 + r("v") * 0.9) + r("p") * 2400) % (H + 400));
+        const x = r("x") * W + Math.sin((f + r("p") * 400) / 70) * 30;
+        return <div key={k} style={{ position: "absolute", left: x, top: y, width: sz, height: sz, borderRadius: "50%", background: "rgba(255,255,255,.10)" }} />;
+      })}
     </AbsoluteFill>
   );
 };
@@ -228,7 +220,7 @@ const HookBeat: React.FC<BP> = ({ s, f, d, pal }) => {
   const slamAt = (i: number) => 3 + i * 7;
   const lastSlam = slamAt(lines.length - 1);
   const shake = lines.some((_, i) => f >= slamAt(i) && f < slamAt(i) + 6)
-    ? { x: (random(`hx${f}`) - 0.5) * 26, y: (random(`hy${f}`) - 0.5) * 26 }
+    ? { x: (random(`hx${f}`) - 0.5) * 8, y: (random(`hy${f}`) - 0.5) * 8 }
     : { x: 0, y: 0 };
   return (
     <AbsoluteFill style={{ transform: `translate(${shake.x}px, ${shake.y}px)` }}>
@@ -250,7 +242,7 @@ const HookBeat: React.FC<BP> = ({ s, f, d, pal }) => {
         <CardImg src={s.image_url} w={480} f={f} glow={pal.a} />
       </div>
       {/* ข้อความกระแทกทีละบรรทัด */}
-      <div style={{ position: "absolute", left: 40, right: 40, top: 250, textAlign: "center", fontFamily: KANIT, fontWeight: 900, lineHeight: 1.08 }}>
+      <div style={{ position: "absolute", left: 40, right: 40, top: 250, textAlign: "center", fontFamily: FRIEND, fontWeight: 900, lineHeight: 1.08 }}>
         {lines.map((ln, i) => {
           const t = f - slamAt(i);
           const sc = ez(t, 0, 7, 2.8, 1, back(2.2));
@@ -265,7 +257,7 @@ const HookBeat: React.FC<BP> = ({ s, f, d, pal }) => {
         })}
       </div>
       {/* แฟลชตอนกระแทก */}
-      <AbsoluteFill style={{ background: "#fff", opacity: lines.reduce((m, _, i) => Math.max(m, ez(f - slamAt(i), 0, 5, 0.45, 0)), 0) * (f >= 3 ? 1 : 0) }} />
+      <AbsoluteFill style={{ background: "#fff", opacity: lines.reduce((m, _, i) => Math.max(m, ez(f - slamAt(i), 0, 5, 0.12, 0)), 0) * (f >= 3 ? 1 : 0) }} />
     </AbsoluteFill>
   );
 };
@@ -307,10 +299,10 @@ const RevealBeat: React.FC<BP> = ({ s, f, pal }) => {
       })}
       {s.title ? (
         <div style={{ position: "absolute", left: 0, right: 0, top: 1290, textAlign: "center", transform: `translateX(${(1 - plate) * -900}px) skewX(-8deg)` }}>
-          <div style={{ display: "inline-block", padding: "6px 48px", background: pal.a, boxShadow: `10px 10px 0 ${pal.ink}`, fontFamily: KANIT, fontWeight: 900, fontSize: 104, color: "#fff", textShadow: stroke(4, pal.ink) }}>{s.title}</div>
+          <div style={{ display: "inline-block", padding: "6px 48px", background: pal.a, boxShadow: `0 10px 28px rgba(30,16,60,.30)`, fontFamily: FRIEND, fontWeight: 900, fontSize: 104, color: "#fff", textShadow: stroke(4, pal.ink) }}>{s.title}</div>
           {s.subtitle ? (
             <div style={{ marginTop: 22, transform: `translateX(${(1 - ez(f, 24, 36, 0, 1, back(1.4))) * 900}px)` }}>
-              <span style={{ display: "inline-block", padding: "6px 30px", background: "#fff", color: pal.ink, fontFamily: KANIT, fontWeight: 800, fontSize: 46, borderRadius: 8 }}>{s.subtitle}</span>
+              <span style={{ display: "inline-block", padding: "6px 30px", background: "#fff", color: pal.ink, fontFamily: FRIEND, fontWeight: 800, fontSize: 46, borderRadius: 8 }}>{s.subtitle}</span>
             </div>
           ) : null}
         </div>
@@ -353,11 +345,11 @@ const NameBeat: React.FC<BP> = ({ s, f, d, pal }) => {
           return (
             <React.Fragment key={i}>
               {i > 0 ? (
-                <div style={{ fontFamily: KANIT, fontWeight: 900, fontSize: 100, color: "#fff", opacity: ez(f, at(i) - 2, at(i) + 4), marginTop: 20 }}>+</div>
+                <div style={{ fontFamily: FRIEND, fontWeight: 900, fontSize: 100, color: "#fff", opacity: ez(f, at(i) - 2, at(i) + 4), marginTop: 20 }}>+</div>
               ) : null}
               <div style={{ textAlign: "center", transform: `scale(${t}) rotate(${(i % 2 ? 4 : -4) * (1 - t * 0.5)}deg)`, opacity: Math.min(1, t * 2) }}>
-                <div style={{ padding: "4px 30px", background: i % 2 ? pal.b : pal.a, color: i % 2 ? pal.ink : "#fff", borderRadius: 18, fontFamily: KANIT, fontWeight: 900, fontSize: fsBig, boxShadow: `8px 8px 0 ${pal.ink}`, textShadow: i % 2 ? "none" : stroke(3, pal.ink) }}>{c.big}</div>
-                {c.small ? <div style={{ marginTop: 18, fontFamily: KANIT, fontWeight: 700, fontSize: 48, color: "#fff", textShadow: stroke(3, "#000") }}>{c.small}</div> : null}
+                <div style={{ padding: "4px 30px", background: i % 2 ? pal.b : pal.a, color: i % 2 ? pal.ink : "#fff", borderRadius: 18, fontFamily: FRIEND, fontWeight: 900, fontSize: fsBig, boxShadow: `0 10px 28px rgba(30,16,60,.30)`, textShadow: i % 2 ? "none" : stroke(3, pal.ink) }}>{c.big}</div>
+                {c.small ? <div style={{ marginTop: 18, fontFamily: FRIEND, fontWeight: 700, fontSize: 48, color: "#fff", textShadow: stroke(3, "#000") }}>{c.small}</div> : null}
               </div>
             </React.Fragment>
           );
@@ -365,8 +357,8 @@ const NameBeat: React.FC<BP> = ({ s, f, d, pal }) => {
       </div>
       {s.title ? (
         <div style={{ position: "absolute", left: 0, right: 0, top: 930, textAlign: "center" }}>
-          <div style={{ fontFamily: KANIT, fontWeight: 900, fontSize: 110, color: "#fff", opacity: ez(f, eqAt, eqAt + 4), transform: `scale(${ez(f, eqAt, eqAt + 8, 2, 1, back(1.6))})` }}>=</div>
-          <div style={{ display: "inline-block", position: "relative", fontFamily: KANIT, fontWeight: 900, fontSize: 130, color: "#fff", textShadow: `${stroke(6, pal.ink)}, 0 0 50px ${pal.a}`, transform: `scale(${ez(f, eqAt + 6, eqAt + 16, 0.3, 1, back(1.8))})`, opacity: ez(f, eqAt + 6, eqAt + 10) }}>
+          <div style={{ fontFamily: FRIEND, fontWeight: 900, fontSize: 110, color: "#fff", opacity: ez(f, eqAt, eqAt + 4), transform: `scale(${ez(f, eqAt, eqAt + 8, 2, 1, back(1.6))})` }}>=</div>
+          <div style={{ display: "inline-block", position: "relative", fontFamily: FRIEND, fontWeight: 900, fontSize: 130, color: "#fff", textShadow: `${stroke(6, pal.ink)}, 0 0 50px ${pal.a}`, transform: `scale(${ez(f, eqAt + 6, eqAt + 16, 0.3, 1, back(1.8))})`, opacity: ez(f, eqAt + 6, eqAt + 10) }}>
             <Rich text={s.title} color={pal.b} />
             <div style={{ position: "absolute", left: 0, bottom: 10, height: 18, width: `${ez(f, eqAt + 14, eqAt + 26) * 100}%`, background: pal.a, zIndex: -1, borderRadius: 9 }} />
           </div>
@@ -385,7 +377,7 @@ const StatsBeat: React.FC<BP> = ({ s, f, pal }) => {
         <CardImg src={s.image_url} w={500} f={f} glow={pal.a} />
       </div>
       <div style={{ position: "absolute", left: 60, right: 60, top: 920, padding: "34px 44px", borderRadius: 34, background: "rgba(8,8,20,.72)", border: `4px solid ${pal.a}`, boxShadow: `0 0 50px ${pal.a}55`, transform: `translateY(${(1 - enter) * 700}px)` }}>
-        {s.title ? <div style={{ fontFamily: KANIT, fontWeight: 900, fontSize: 64, color: pal.b, marginBottom: 14 }}>{s.title}</div> : null}
+        {s.title ? <div style={{ fontFamily: FRIEND, fontWeight: 900, fontSize: 64, color: pal.b, marginBottom: 14 }}>{s.title}</div> : null}
         {rows.map((r, i) => {
           const st = 10 + i * 9;
           const fill = ez(f, st, st + 22, 0, 1, Easing.out(Easing.quad));
@@ -393,7 +385,7 @@ const StatsBeat: React.FC<BP> = ({ s, f, pal }) => {
           const val = Math.round(r.value * fill);
           return (
             <div key={i} style={{ marginTop: 18, opacity: ez(f, st - 4, st + 2) }}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", fontFamily: KANIT, color: "#fff" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", fontFamily: FRIEND, color: "#fff" }}>
                 <span style={{ fontWeight: 700, fontSize: 48 }}>{r.label}</span>
                 <span style={{ fontWeight: 900, fontSize: 70, color: pal.b, textShadow: `0 0 20px ${pal.a}` }}>
                   {val}
@@ -430,16 +422,16 @@ const BigNumBeat: React.FC<BP> = ({ s, f, d, pal }) => {
         </g>
       </svg>
       {s.title ? (
-        <div style={{ position: "absolute", left: 40, right: 40, top: 330, textAlign: "center", fontFamily: KANIT, fontWeight: 800, fontSize: 72, color: "#fff", textShadow: stroke(4, "#000"), opacity: ez(f, 0, 8), transform: `translateY(${ez(f, 0, 12, -60, 0)}px)` }}>
+        <div style={{ position: "absolute", left: 40, right: 40, top: 330, textAlign: "center", fontFamily: FRIEND, fontWeight: 800, fontSize: 72, color: "#fff", textShadow: stroke(4, "#000"), opacity: ez(f, 0, 8), transform: `translateY(${ez(f, 0, 12, -60, 0)}px)` }}>
           <Rich text={s.title} color={pal.b} />
         </div>
       ) : null}
-      <div style={{ position: "absolute", left: 0, right: 0, top: 860 - 170, height: 340, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", fontFamily: KANIT, fontWeight: 900, fontSize: Math.min(300, 1000 / (Math.max(1, v.toLocaleString("en-US", { useGrouping: v >= 10000 }).length) * 0.6)), lineHeight: 1.1, whiteSpace: "nowrap", color: "#fff", transform: `scale(${pop})`, textShadow: `${stroke(8, pal.ink)}, 0 0 60px ${pal.a}, 0 0 120px ${pal.a}` }}>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 860 - 170, height: 340, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", fontFamily: FRIEND, fontWeight: 900, fontSize: Math.min(300, 1000 / (Math.max(1, v.toLocaleString("en-US", { useGrouping: v >= 10000 }).length) * 0.6)), lineHeight: 1.1, whiteSpace: "nowrap", color: "#fff", transform: `scale(${pop})`, textShadow: `${stroke(8, pal.ink)}, 0 0 60px ${pal.a}, 0 0 120px ${pal.a}` }}>
         {shown.toLocaleString("en-US", { useGrouping: v >= 10000 })}
       </div>
       {s.subtitle ? (
         <div style={{ position: "absolute", left: 0, right: 0, top: 1180, textAlign: "center", opacity: ez(f, 14, 22), transform: `scale(${ez(f, 14, 24, 0.6, 1, back(1.6))})` }}>
-          <span style={{ display: "inline-block", padding: "10px 40px", borderRadius: 50, background: pal.a, color: "#fff", fontFamily: KANIT, fontWeight: 800, fontSize: 54, boxShadow: `6px 6px 0 ${pal.ink}` }}>{s.subtitle}</span>
+          <span style={{ display: "inline-block", padding: "10px 40px", borderRadius: 50, background: pal.a, color: "#fff", fontFamily: FRIEND, fontWeight: 800, fontSize: 54, boxShadow: `0 10px 28px rgba(30,16,60,.30)` }}>{s.subtitle}</span>
         </div>
       ) : null}
     </AbsoluteFill>
@@ -467,16 +459,16 @@ const FullBeat: React.FC<BP> = ({ s, f, d, pal }) => {
       ) : null}
       <AbsoluteFill style={{ background: "linear-gradient(to bottom, rgba(0,0,0,.72) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 62%, rgba(0,0,0,.7) 100%)" }} />
       {s.title ? (
-        <div style={{ position: "absolute", left: 40, right: 40, top: 150, textAlign: "center", fontFamily: KANIT, fontWeight: 900, fontSize: tSize, lineHeight: 1.1, color: "#fff", whiteSpace: "pre-line", textShadow: `${stroke(6, "#000")}, 0 0 40px rgba(0,0,0,.8)`, opacity: ez(f, 0, 8), transform: `translateY(${ez(f, 0, 12, -50, 0)}px)` }}>
+        <div style={{ position: "absolute", left: 40, right: 40, top: 150, textAlign: "center", fontFamily: FRIEND, fontWeight: 900, fontSize: tSize, lineHeight: 1.1, color: "#fff", whiteSpace: "pre-line", textShadow: `${stroke(6, "#000")}, 0 0 40px rgba(0,0,0,.8)`, opacity: ez(f, 0, 8), transform: `translateY(${ez(f, 0, 12, -50, 0)}px)` }}>
           <Rich text={s.title} color={pal.b} />
         </div>
       ) : null}
       {s.subtitle ? (
-        <div style={{ position: "absolute", left: 40, right: 40, top: 150 + Math.round(tLines * tSize * 1.1) + 24, textAlign: "center", fontFamily: KANIT, fontWeight: 700, fontSize: 46, color: "#fff", textShadow: stroke(4, "#000"), opacity: ez(f, 8, 16) }}>{s.subtitle}</div>
+        <div style={{ position: "absolute", left: 40, right: 40, top: 150 + Math.round(tLines * tSize * 1.1) + 24, textAlign: "center", fontFamily: FRIEND, fontWeight: 700, fontSize: 46, color: "#fff", textShadow: stroke(4, "#000"), opacity: ez(f, 8, 16) }}>{s.subtitle}</div>
       ) : null}
       {s.price ? (
         <div style={{ position: "absolute", right: 50, top: 760, transform: `rotate(-9deg) scale(${pt * pulse})`, transformOrigin: "center", textAlign: "center" }}>
-          <div style={{ padding: "14px 46px 20px", borderRadius: 28, background: pal.b, color: pal.ink, fontFamily: KANIT, fontWeight: 900, boxShadow: `10px 10px 0 ${pal.ink}, 0 0 50px ${pal.a}` }}>
+          <div style={{ padding: "14px 46px 20px", borderRadius: 28, background: pal.b, color: pal.ink, fontFamily: FRIEND, fontWeight: 900, boxShadow: `0 10px 28px rgba(30,16,60,.30), 0 0 50px ${pal.a}` }}>
             {s.price_label ? <div style={{ fontSize: 42, fontWeight: 800, lineHeight: 1 }}>{s.price_label}</div> : null}
             <div style={{ fontSize: 120, lineHeight: 1.05, whiteSpace: "nowrap" }}>{s.price}</div>
           </div>
@@ -496,9 +488,9 @@ const QuizBeat: React.FC<BP> = ({ s, f, d, pal, starts }) => {
   return (
     <AbsoluteFill>
       <div style={{ position: "absolute", left: 0, right: 0, top: 230, textAlign: "center", transform: `rotate(${-6 + Math.sin(f / 6) * 2}deg) scale(${ez(f, 0, 10, 2.4, 1, back(2))})`, opacity: ez(f, 0, 4) }}>
-        <span style={{ display: "inline-block", padding: "4px 46px", background: pal.b, color: pal.ink, fontFamily: KANIT, fontWeight: 900, fontSize: 84, borderRadius: 16, boxShadow: `8px 8px 0 ${pal.ink}` }}>ทายสิ!</span>
+        <span style={{ display: "inline-block", padding: "4px 46px", background: pal.b, color: pal.ink, fontFamily: FRIEND, fontWeight: 900, fontSize: 84, borderRadius: 16, boxShadow: `0 10px 28px rgba(30,16,60,.30)` }}>ทายสิ!</span>
       </div>
-      <div style={{ position: "absolute", left: 60, right: 60, top: 420, textAlign: "center", fontFamily: KANIT, fontWeight: 800, fontSize: 66, lineHeight: 1.25, color: "#fff", textShadow: stroke(4, "#000"), opacity: ez(f, 4, 12), whiteSpace: "pre-line" }}>
+      <div style={{ position: "absolute", left: 60, right: 60, top: 420, textAlign: "center", fontFamily: FRIEND, fontWeight: 800, fontSize: 66, lineHeight: 1.25, color: "#fff", textShadow: stroke(4, "#000"), opacity: ez(f, 4, 12), whiteSpace: "pre-line" }}>
         <Rich text={String(s.title || "")} color={pal.b} />
       </div>
       <div style={{ position: "absolute", left: 90, right: 90, top: 690, height: 18, borderRadius: 9, background: "rgba(255,255,255,.15)", overflow: "hidden" }}>
@@ -512,10 +504,10 @@ const QuizBeat: React.FC<BP> = ({ s, f, d, pal, starts }) => {
         const pulse = revealed && correct ? 1 + 0.06 * Math.sin(rv / 3) * Math.exp(-rv / 18) + 0.04 * ez(rv, 0, 6) : 1;
         return (
           <div key={i} style={{ position: "absolute", left: 80, right: 80, top: 770 + i * 175, height: 145, borderRadius: 30, background: bg, display: "flex", alignItems: "center", padding: "0 30px", transform: `translateX(${(1 - t) * 1100}px) scale(${pulse})`, boxShadow: revealed && correct ? "0 0 60px #22c55e" : "0 12px 30px rgba(0,0,0,.4)" }}>
-            <div style={{ width: 92, height: 92, borderRadius: "50%", background: revealed ? (correct ? "#fff" : "rgba(255,255,255,.15)") : pal.a, color: revealed && correct ? "#16a34a" : "#fff", fontFamily: KANIT, fontWeight: 900, fontSize: 56, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+            <div style={{ width: 92, height: 92, borderRadius: "50%", background: revealed ? (correct ? "#fff" : "rgba(255,255,255,.15)") : pal.a, color: revealed && correct ? "#16a34a" : "#fff", fontFamily: FRIEND, fontWeight: 900, fontSize: 56, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
               {revealed ? (correct ? "✓" : "✕") : "ABC"[i] || "?"}
             </div>
-            <div style={{ marginLeft: 28, fontFamily: KANIT, fontWeight: 800, fontSize: 56, color: fg }}>{c}</div>
+            <div style={{ marginLeft: 28, fontFamily: FRIEND, fontWeight: 800, fontSize: 56, color: fg }}>{c}</div>
           </div>
         );
       })}
@@ -561,7 +553,7 @@ const ZoomBeat: React.FC<BP> = ({ s, f, d, pal }) => {
       </div>
       {s.title ? (
         <div style={{ position: "absolute", left: 60, right: 60, top: ly, textAlign: "center", opacity: ez(f, Math.min(32, d * 0.4), Math.min(32, d * 0.4) + 8), transform: `scale(${ez(f, Math.min(32, d * 0.4), Math.min(32, d * 0.4) + 12, 0.5, 1, back(1.8))})` }}>
-          <span style={{ display: "inline-block", padding: "10px 36px", borderRadius: 20, background: pal.b, color: pal.ink, fontFamily: KANIT, fontWeight: 900, fontSize: 62, boxShadow: `8px 8px 0 ${pal.ink}` }}>{s.title}</span>
+          <span style={{ display: "inline-block", padding: "10px 36px", borderRadius: 20, background: pal.b, color: pal.ink, fontFamily: FRIEND, fontWeight: 900, fontSize: 62, boxShadow: `0 10px 28px rgba(30,16,60,.30)` }}>{s.title}</span>
         </div>
       ) : null}
     </AbsoluteFill>
@@ -587,14 +579,14 @@ const TimelineBeat: React.FC<BP> = ({ s, f, d, pal, starts }) => {
           return (
             <div key={i} style={{ position: "absolute", left: i * step - 200, top: 0, width: 400, height: H }}>
               <div style={{ position: "absolute", left: 200 - 34, top: y - 34, width: 68, height: 68, borderRadius: "50%", background: active ? pal.b : pal.a, border: "8px solid #fff", transform: `scale(${t * (active ? 1.15 : 0.9)})`, boxShadow: active ? `0 0 40px ${pal.b}` : "none" }} />
-              <div style={{ position: "absolute", left: 0, right: 0, bottom: H - (y - 62), lineHeight: 1.0, textAlign: "center", fontFamily: KANIT, fontWeight: 900, fontSize: active ? 112 : 80, color: active ? pal.b : "rgba(255,255,255,.6)", opacity: t, textShadow: active ? `${stroke(5, pal.ink)}, 0 0 40px ${pal.a}` : stroke(4, "#000") }}>{pt.year}</div>
-              <div style={{ position: "absolute", left: 0, right: 0, top: y + 70, textAlign: "center", fontFamily: KANIT, fontWeight: 700, fontSize: active ? 54 : 44, lineHeight: 1.25, color: "#fff", whiteSpace: "pre-line", opacity: t * (active ? 1 : 0.55), textShadow: stroke(3, "#000") }}>{pt.label}</div>
+              <div style={{ position: "absolute", left: 0, right: 0, bottom: H - (y - 62), lineHeight: 1.0, textAlign: "center", fontFamily: FRIEND, fontWeight: 900, fontSize: active ? 112 : 80, color: active ? pal.b : "rgba(255,255,255,.6)", opacity: t, textShadow: active ? `${stroke(5, pal.ink)}, 0 0 40px ${pal.a}` : stroke(4, "#000") }}>{pt.year}</div>
+              <div style={{ position: "absolute", left: 0, right: 0, top: y + 70, textAlign: "center", fontFamily: FRIEND, fontWeight: 700, fontSize: active ? 54 : 44, lineHeight: 1.25, color: "#fff", whiteSpace: "pre-line", opacity: t * (active ? 1 : 0.55), textShadow: stroke(3, "#000") }}>{pt.label}</div>
             </div>
           );
         })}
       </div>
       {s.title ? (
-        <div style={{ position: "absolute", left: 0, right: 0, top: 330, textAlign: "center", fontFamily: KANIT, fontWeight: 900, fontSize: 78, color: "#fff", textShadow: stroke(5, pal.ink), opacity: ez(f, 0, 8) }}>
+        <div style={{ position: "absolute", left: 0, right: 0, top: 330, textAlign: "center", fontFamily: FRIEND, fontWeight: 900, fontSize: 78, color: "#fff", textShadow: stroke(5, pal.ink), opacity: ez(f, 0, 8) }}>
           <Rich text={s.title} color={pal.b} />
         </div>
       ) : null}
@@ -609,7 +601,7 @@ const ArtBeat: React.FC<BP> = ({ s, f, d, pal, idx }) => {
     <AbsoluteFill>
       {word
         ? [0, 1, 2, 3].map((row) => (
-            <div key={row} style={{ position: "absolute", left: 0, top: 260 + row * 330, whiteSpace: "nowrap", fontFamily: KANIT, fontWeight: 900, fontSize: 300, lineHeight: 1, color: "transparent", WebkitTextStroke: `4px ${row % 2 ? pal.a : pal.b}`, opacity: 0.22, transform: `translateX(${(row % 2 ? -1 : 1) * ((f * 3) % 1400) - 700}px)` }}>
+            <div key={row} style={{ position: "absolute", left: 0, top: 260 + row * 330, whiteSpace: "nowrap", fontFamily: FRIEND, fontWeight: 900, fontSize: 300, lineHeight: 1, color: "transparent", WebkitTextStroke: `4px ${row % 2 ? pal.a : pal.b}`, opacity: 0.22, transform: `translateX(${(row % 2 ? -1 : 1) * ((f * 3) % 1400) - 700}px)` }}>
               {`${word} • ${word} • ${word} • ${word} • `}
             </div>
           ))
@@ -619,7 +611,7 @@ const ArtBeat: React.FC<BP> = ({ s, f, d, pal, idx }) => {
       </div>
       {s.subtitle ? (
         <div style={{ position: "absolute", left: 0, right: 0, top: 1300, textAlign: "center", transform: `translateY(${(1 - ez(f, 8, 20)) * 200}px)`, opacity: ez(f, 8, 16) }}>
-          <span style={{ display: "inline-block", padding: "8px 34px", background: "#fff", color: pal.ink, fontFamily: KANIT, fontWeight: 800, fontSize: 50, borderRadius: 12, boxShadow: `6px 6px 0 ${pal.a}` }}>{s.subtitle}</span>
+          <span style={{ display: "inline-block", padding: "8px 34px", background: "#fff", color: pal.ink, fontFamily: FRIEND, fontWeight: 800, fontSize: 50, borderRadius: 12, boxShadow: `0 10px 28px rgba(30,16,60,.30)` }}>{s.subtitle}</span>
         </div>
       ) : null}
     </AbsoluteFill>
@@ -635,7 +627,7 @@ const StillBeat: React.FC<BP> = ({ s, f, d }) => (
 // ---------------------------------------------------------------------
 // ทรานซิชันตอนเข้าบีต
 // ---------------------------------------------------------------------
-const TRANS_CYCLE: Transition[] = ["wipe", "zoom", "slide", "shutter", "flash"];
+const TRANS_CYCLE: Transition[] = ["zoom", "slide"];
 
 const Enter: React.FC<{ type: Transition; f: number; pal: Pal; children: React.ReactNode }> = ({ type, f, pal, children }) => {
   let style: React.CSSProperties = {};
@@ -684,10 +676,10 @@ const Caption: React.FC<{ s: ShowSlide; f: number; fps: number; pal: Pal; starts
   const pieces = String(text).split(/(\*[^*]+\*)/g).filter(Boolean);
   return (
     <div style={{ position: "absolute", left: 50, right: 50, bottom: 150, textAlign: "center", transform: `scale(${pop})`, transformOrigin: "50% 100%", opacity: op }}>
-      <div style={{ display: "inline-block", padding: "16px 34px", borderRadius: 26, background: "rgba(255,255,255,.96)", boxShadow: `0 10px 0 ${pal.ink}, 0 18px 40px rgba(0,0,0,.5)`, fontFamily: KANIT, fontWeight: 700, fontSize: 54, lineHeight: 1.4, color: "#15121f" }}>
+      <div style={{ display: "inline-block", padding: "16px 34px", borderRadius: 40, background: "rgba(255,255,255,.97)", boxShadow: `0 10px 30px rgba(30,16,60,.35)`, fontFamily: FRIEND, fontWeight: 500, fontSize: 54, lineHeight: 1.45, color: "#2a2140" }}>
         {pieces.map((p, i) =>
           p.startsWith("*") && p.endsWith("*") ? (
-            <span key={i} style={{ display: "inline-block", margin: "0 6px", padding: "0 14px", borderRadius: 12, background: pal.a, color: "#fff", fontWeight: 900, transform: `rotate(${i % 4 === 1 ? -3 : 3}deg) scale(${ez(cf, 3, 10, 1.5, 1, back(2.5))})`, textShadow: stroke(2, pal.ink) }}>
+            <span key={i} style={{ display: "inline-block", margin: "0 4px", padding: "0 8px", borderRadius: 10, background: `linear-gradient(transparent 52%, ${pal.b} 52%)`, color: pal.ink, fontWeight: 700, transform: `scale(${ez(cf, 3, 10, 1.2, 1, back(2.2))})` }}>
               {p.slice(1, -1)}
             </span>
           ) : (
@@ -723,13 +715,13 @@ const Hud: React.FC<{ slides: ShowSlide[]; starts: number[]; total: number; pal:
           );
         })}
       </div>
-      <div style={{ position: "absolute", left: 40, top: 100, display: "flex", alignItems: "center", gap: 14, fontFamily: KANIT }}>
+      <div style={{ position: "absolute", left: 40, top: 100, display: "flex", alignItems: "center", gap: 14, fontFamily: FRIEND }}>
         {badge ? <span style={{ padding: "2px 18px", borderRadius: 10, background: pal.a, color: "#fff", fontWeight: 900, fontSize: 40, textShadow: stroke(2, pal.ink) }}>{badge}</span> : null}
         <span style={{ color: "rgba(255,255,255,.9)", fontWeight: 700, fontSize: 34, textShadow: stroke(2, "#000") }}>{series || "CARDZ CENTER"}</span>
       </div>
       {cur?.chapter ? (
         <div style={{ position: "absolute", right: 40, top: 98, transform: `translateX(${(1 - ez(chapF, 0, 10, 0, 1, back(1.5))) * 600}px)` }}>
-          <span style={{ display: "inline-block", padding: "4px 22px", borderRadius: 10, background: "rgba(0,0,0,.55)", border: `3px solid ${pal.b}`, color: pal.b, fontFamily: KANIT, fontWeight: 800, fontSize: 38 }}>{cur.chapter}</span>
+          <span style={{ display: "inline-block", padding: "4px 22px", borderRadius: 10, background: "rgba(0,0,0,.55)", border: `3px solid ${pal.b}`, color: pal.b, fontFamily: FRIEND, fontWeight: 800, fontSize: 38 }}>{cur.chapter}</span>
         </div>
       ) : null}
     </AbsoluteFill>
