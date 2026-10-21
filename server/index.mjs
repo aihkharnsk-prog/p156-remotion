@@ -715,9 +715,49 @@ async function cleanup() {
     const st = await fs.stat(p).catch(() => null);
     if (st && st.mtimeMs < cutoff) await fs.rm(p, { force: true });
   }
+  await autoPrune().catch((e) => console.log(`[disk-auto] failed: ${String(e?.message || e).slice(0, 200)}`));
+}
+
+// ดิสก์ใช้เกิน DISK_PRUNE_PCT% (ค่าเริ่ม 70) → ลบคลิปเก่ากว่า 24 ชม. ที่ไม่มีโพสต์ตั้งเวลา (Zernio) หรือคิว TikTok ที่ยังไม่ส่งอ้างถึง
+// และไฟล์ชั่วคราวใน assets ที่เก่ากว่า 24 ชม. (เก็บคิว TikTok / outro / .json / music ไว้) — ถ้าเช็ก Zernio ไม่ได้ จะไม่ลบคลิปเลย
+async function diskPct() {
+  try {
+    const { stdout } = await execFileP("df", ["-m", DATA_DIR]);
+    const m = stdout.trim().split("\n").pop().match(/(\d+)%/);
+    return m ? Number(m[1]) : 0;
+  } catch { return 0; }
+}
+async function autoPrune() {
+  const limit = Number(process.env.DISK_PRUNE_PCT || 70);
+  const before = await diskPct();
+  if (before < limit) return;
+  const cutoff = Date.now() - 24 * 3600 * 1000;
+  const deleted = [];
+  for (const f of await fs.readdir(ASSET_DIR).catch(() => [])) {
+    if (/^tiktok-queue|^outro-|\.json$/.test(f)) continue;
+    const st = await fs.stat(path.join(ASSET_DIR, f)).catch(() => null);
+    if (st && st.mtimeMs < cutoff) { await fs.rm(path.join(ASSET_DIR, f), { recursive: true, force: true }).catch(() => {}); deleted.push("assets/" + f); }
+  }
+  const refs = new Set();
+  const add = (u) => { const m = String(u || "").match(/videos\/([0-9a-f-]{36})/i); if (m) refs.add(m[1]); };
+  let zernioOk = true;
+  try {
+    const r = await zernio("/posts?status=scheduled&limit=200");
+    for (const p of Array.isArray(r) ? r : r.posts || r.data || []) for (const mi of p.mediaItems || []) add(mi.url);
+  } catch { zernioOk = false; }
+  if (zernioOk) {
+    for (const it of await readTtQueue().catch(() => [])) if (!it.sent_at) add(it.video_url);
+    for (const f of await fs.readdir(OUT_DIR).catch(() => [])) {
+      const id = (f.match(/^([0-9a-f-]{36})/i) || [])[1];
+      if (!id || refs.has(id)) continue;
+      const st = await fs.stat(path.join(OUT_DIR, f)).catch(() => null);
+      if (st && st.mtimeMs < cutoff) { await fs.rm(path.join(OUT_DIR, f), { force: true }); deleted.push(f); }
+    }
+  }
+  console.log(`[disk-auto] ${before}% -> ${await diskPct()}% deleted ${deleted.length} (zernio ${zernioOk ? "ok" : "unreachable: clips kept"}, kept refs ${refs.size})`);
 }
 cleanup();
-setInterval(cleanup, 6 * 3600 * 1000);
+setInterval(cleanup, 1 * 3600 * 1000);
 
 // ---------- HTTP ----------
 const app = express();
