@@ -37,7 +37,8 @@ export type Beat =
   | "evolve"
   | "versions"
   | "sprite"
-  | "full";
+  | "full"
+  | "rank";
 
 export type Transition = "wipe" | "zoom" | "flash" | "slide" | "shutter" | "none";
 
@@ -56,6 +57,7 @@ export type ShowSlide = Slide & {
   transition?: Transition;
   price?: string; // บีต full: ป้ายราคาแปะบนการ์ด เช่น "$16.49M"
   price_label?: string; // ข้อความเล็กเหนือราคา เช่น "ขายได้"
+  rank?: string; // บีต rank: เลขอันดับใหญ่มุมซ้ายบน
   fit?: "cover" | "contain"; // บีต full: ภาพเต็มจอ (cover) หรือพอดีภาพ (contain) บนพื้นเบลอ
 };
 
@@ -104,12 +106,12 @@ const stroke = (px: number, _c = "#000") =>
   `0 ${Math.max(2, Math.round(px * 0.6))}px ${Math.round(px * 2.2 + 4)}px rgba(20,12,40,.55), 0 1px 2px rgba(20,12,40,.5)`;
 
 // หัวข้อสไตล์สติกเกอร์: ตัวกลมหนา เติมสีเหลือง ขอบน้ำตาลเข้มหนา + เงาล่างให้ลอยขึ้น (ตามตัวอย่างที่ AK ชอบ)
-const HEAD = (w = 14): React.CSSProperties =>
+const HEAD = (w = 14, c = "#4a2208"): React.CSSProperties =>
   ({
-    WebkitTextStroke: `${w}px #4a2208`,
+    WebkitTextStroke: `${w}px ${c}`,
     paintOrder: "stroke fill",
     strokeLinejoin: "round",
-    textShadow: `0 ${Math.round(w * 0.6)}px 0 #4a2208, 0 ${w}px ${w * 2}px rgba(40,18,0,.35)`,
+    textShadow: `0 ${Math.round(w * 0.6)}px 0 ${c}, 0 ${w}px ${w * 2}px rgba(40,18,0,.35)`,
   } as React.CSSProperties);
 
 const partStarts = (s: ShowSlide, fps: number) => {
@@ -487,6 +489,49 @@ const FullBeat: React.FC<BP> = ({ s, f, d, pal }) => {
   );
 };
 
+const RankBeat: React.FC<BP> = ({ s, f, d, pal, starts }) => {
+  const contain = s.fit === "contain";
+  const enter = ez(f, 0, 14, 0, 1, back(1.5));
+  const priceAt = starts.length > 1 ? starts[1] : Math.round(d * 0.4);
+  const pp = ez(f, priceAt, priceAt + 12, 0, 1, back(2.4));
+  const pulse = 1 + 0.04 * Math.sin(f / 5);
+  const num = ez(f, 0, 10, 2.2, 1, back(2));
+  return (
+    <AbsoluteFill style={{ background: pal.bg2 }}>
+      {s.image_url ? (
+        <Img src={s.image_url} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", filter: "blur(34px) brightness(.55) saturate(1.3)", transform: "scale(1.25)" }} />
+      ) : null}
+      <AbsoluteFill style={{ background: "linear-gradient(to bottom, rgba(20,10,40,.45) 0%, rgba(0,0,0,0) 28%, rgba(0,0,0,0) 70%, rgba(20,10,40,.5) 100%)" }} />
+      <div style={{ position: "absolute", left: 0, right: 0, top: 330, display: "flex", justifyContent: "center", transform: `scale(${0.5 + 0.5 * enter}) translateY(${(1 - enter) * 120 + Math.sin(f / 18) * 8}px)`, opacity: Math.min(1, enter * 1.6) }}>
+        {s.image_url ? (
+          contain ? (
+            <div style={{ width: 800, height: 1040, borderRadius: 28, overflow: "hidden", boxShadow: "0 40px 80px rgba(0,0,0,.55)", background: "rgba(255,255,255,.08)" }}>
+              <Img src={s.image_url} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+            </div>
+          ) : (
+            <CardImg src={s.image_url} w={740} f={f} radius={30} />
+          )
+        ) : null}
+      </div>
+      {s.rank ? (
+        <div style={{ position: "absolute", left: 46, top: 175, fontFamily: FRIEND, fontWeight: 700, fontSize: 250, lineHeight: 1, color: "#ffe14d", transform: `scale(${num}) rotate(${-4 * (1 - enter)}deg)`, transformOrigin: "0 50%", ...HEAD(22) }}>{s.rank}</div>
+      ) : null}
+      {s.price ? (
+        <div style={{ position: "absolute", right: 40, top: 190, textAlign: "right", transform: `scale(${pp * pulse})`, transformOrigin: "100% 0", opacity: Math.min(1, pp * 2) }}>
+          {s.price_label ? <div style={{ fontFamily: FRIEND, fontWeight: 600, fontSize: 44, color: "#fff", textShadow: stroke(4) }}>{s.price_label}</div> : null}
+          <div style={{ fontFamily: FRIEND, fontWeight: 700, fontSize: 138, lineHeight: 1.05, color: "#4dff7a", whiteSpace: "nowrap", ...HEAD(18, "#0b3d1c") }}>{s.price}</div>
+          {s.subtitle ? <div style={{ fontFamily: FRIEND, fontWeight: 700, fontSize: 56, color: "#fff", textShadow: stroke(5) }}>{s.subtitle}</div> : null}
+        </div>
+      ) : null}
+      {s.title ? (
+        <div style={{ position: "absolute", left: 40, right: 40, top: 1405, textAlign: "center", fontFamily: FRIEND, fontWeight: 700, fontSize: 60, lineHeight: 1.15, color: "#fff", whiteSpace: "pre-line", textShadow: stroke(6), opacity: ez(f, 6, 14) }}>
+          <Rich text={s.title} color={pal.b} />
+        </div>
+      ) : null}
+    </AbsoluteFill>
+  );
+};
+
 const QuizBeat: React.FC<BP> = ({ s, f, d, pal, starts }) => {
   const choices = s.choices || [];
   const ans = Math.max(0, Math.min(choices.length - 1, Number(s.answer) || 0));
@@ -763,6 +808,7 @@ const BeatView: React.FC<{ s: ShowSlide; idx: number; pal: Pal }> = ({ s, idx, p
     beat === "versions" ? <VersionsScene {...sceneProps} /> :
     beat === "sprite" ? <SpriteScene {...sceneProps} /> :
     beat === "full" ? <FullBeat {...p} /> :
+    beat === "rank" ? <RankBeat {...p} /> :
     <CardBeat {...p} />;
   return (
     <Enter type={tr} f={f} pal={pal}>

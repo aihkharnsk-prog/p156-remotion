@@ -1,0 +1,186 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "5 การ์ดแพงจาก 4 เกม ใบไหนแพงสุด? | Pikachu Pelé Minnie Tyler #shorts",
+  "description": "นับถอยหลัง 5 การ์ดแพงจาก 4 เกม\n5) Minnie Mouse Iconic (Lorcana) ราคาตลาดราว 4,200 ดอลลาร์ (ไม่ใช่ราคาขายสำเร็จ)\n4) Tyler the Great Warrior (Yu-Gi-Oh!) ขาย 311,211 ดอลลาร์ ที่ eBay เมษายน 2023\n3) Pelé 1958 Alifabolaget #635 PSA 9 ปิด 1.17 ล้านดอลลาร์ (รวมค่าธรรมเนียมผู้ซื้อ) Fanatics Collect 24 ก.ค. 2026\n2) Raincoat Pikachu PSA 10 ปิด 8.4 ล้านดอลลาร์ (รวมค่าธรรมเนียมผู้ซื้อ) Fanatics Collect 28 ก.ย. 2026\n1) Pikachu Illustrator PSA 10 ขาย 16,492,000 ดอลลาร์ ที่ Goldin 16 ก.พ. 2026 สถิติโลก\n\n👇 ในห้าใบนี้ ถ้าเลือกเก็บได้ใบเดียว คุณเลือกใบไหน?\n\nอัตราแลกเปลี่ยนประมาณ 33.6 บาท/ดอลลาร์ (ธนาคาร 20 ต.ค. 2026)\nข้อมูล: Wikipedia (List of most expensive cards from CCGs), Goldin, Kotaku, Dexerto, Wargamer, Fanatics Collect, SI, YGOrganization, Lorcast\nภาพ: ภาพข่าวการ์ดที่ขายจริง/ภาพทางการ ไม่ใช่สำเนาที่ขายเสมอไป\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #การ์ดแพง #pokemon #yugioh #lorcana #ฟุตบอล #การ์ดโปเกมอน",
+  "thumb": {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-raincoat-dexerto.jpg",
+   "hook": "5 การ์ดแพง\nจาก 4 เกม",
+   "sub": "ใบไหนแพงสุด?",
+   "badge": ""
+  },
+  "publish_at": "2026-10-23T10:00:00Z",
+  "engage": "👇 ในห้าใบนี้ ถ้าเลือกเก็บได้ใบเดียว คุณเลือกใบไหน?",
+  "campaign": "top5-01-mixed",
+  "site_path": "/"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, confident, clear sports presenter, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "composition": "CardShow",
+ "theme": "psychic",
+ "badge": "การ์ดแพง TOP 5",
+ "series": "การ์ดแพงเท่าอะไร",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055,
+ "slides": [
+  {
+   "beat": "full",
+   "duration": 4,
+   "title": "5 การ์ดแพง\n*จาก 4 เกม*",
+   "subtitle": "คุณรู้จักกี่ใบ?",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-raincoat-dexerto.jpg",
+   "fit": "contain",
+   "price": "฿554M",
+   "price_label": "แพงสุด",
+   "text": "5 การ์ดแพง จาก 4 เกม",
+   "parts": [
+    {
+     "text": "5 การ์ดแพง *จาก 4 เกม*",
+     "say": "ห้าการ์ดแพง จากสี่เกม. ใครแพงสุด ลองเดาดู."
+    },
+    {
+     "text": "เริ่มที่ *อันดับ 5*",
+     "say": "เริ่มจากอันดับห้า."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 7,
+   "rank": "5",
+   "title": "Minnie Mouse Iconic\n*Lorcana*",
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_77b92f4bb7d2460ea85b9d547cb8e72f.avif",
+   "price": "$4,200",
+   "price_label": "ราคาตลาด",
+   "subtitle": "≈ ฿141,000",
+   "fit": "cover",
+   "parts": [
+    {
+     "text": "อันดับ 5 *มินนี่ เมาส์* ลอร์คานา",
+     "say": "อันดับห้า มินนี่ เมาส์ จากลอร์คานา."
+    },
+    {
+     "text": "ราคาตลาด *4,200 ดอลลาร์* ไม่ใช่ราคาขายจริง",
+     "say": "ราคาตลาด สี่พันสองร้อยดอลลาร์. นี่เป็นราคาตลาด ไม่ใช่ราคาที่ขายสำเร็จ."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 7,
+   "rank": "4",
+   "title": "Tyler the Great Warrior\n*Yu-Gi-Oh!*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-tyler-mmo.jpg",
+   "price": "$311,211",
+   "price_label": "ขายจริง",
+   "subtitle": "≈ ฿10.5 ล้าน",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "อันดับ 4 *ไทเลอร์ เดอะ เกรท วอร์ริเออร์*",
+     "say": "อันดับสี่ ไทเลอร์ เดอะ เกรท วอร์ริเออร์ ของยูกิ."
+    },
+    {
+     "text": "เด็ก *14 ปี* เป็นคนออกแบบ ใบเดียวในโลก",
+     "say": "เด็กชายอายุสิบสี่ เป็นคนออกแบบ มีใบเดียวในโลก. ขายได้สามแสนหนึ่งหมื่นดอลลาร์ ปีสองศูนย์สองสาม."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 7,
+   "rank": "3",
+   "title": "Pelé 1958\n*ฟุตบอล*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-pele-psa9.jpg",
+   "price": "$1.17M",
+   "price_label": "ปิดประมูล",
+   "subtitle": "≈ ฿39 ล้าน",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "อันดับ 3 *เพเล่* ปี 1958",
+     "say": "อันดับสาม เพเล่ ปีหนึ่งเก้าห้าแปด ตอนอายุสิบเจ็ด."
+    },
+    {
+     "text": "ปิดที่ *1.17 ล้านดอลลาร์* เดือน ก.ค. ปีนี้",
+     "say": "ปิดประมูลที่ หนึ่งล้านหนึ่งแสนเจ็ดหมื่นดอลลาร์ เดือนกรกฎาคมปีนี้."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 7,
+   "rank": "2",
+   "title": "Raincoat Pikachu\n*Pokémon*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-raincoat-dexerto.jpg",
+   "price": "$8.4M",
+   "price_label": "ขายไป",
+   "subtitle": "≈ ฿282 ล้าน",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "อันดับ 2 *เรนโค้ต พิคาชู*",
+     "say": "อันดับสอง เรนโค้ต พิคาชู. การ์ดรางวัลประกวดวาดรูป พิมพ์แค่ร้อยใบ."
+    },
+    {
+     "text": "ปิดที่ *8.4 ล้านดอลลาร์* เดือน ก.ย. ปีนี้",
+     "say": "ปิดประมูลที่ แปดล้านสี่แสนดอลลาร์ เดือนกันยายนปีนี้."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 7,
+   "rank": "1",
+   "title": "Pikachu Illustrator\n*Pokémon*",
+   "image_url": "https://www.guinnessworldrecords.com/news/2026/1/images/logan-paul-pokemon-close-up-of-card.jpg",
+   "price": "$16.49M",
+   "price_label": "สถิติโลก",
+   "subtitle": "≈ ฿554 ล้าน",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "อันดับ 1 *พิคาชู อิลลัสเตรเตอร์*",
+     "say": "อันดับหนึ่ง พิคาชู อิลลัสเตรเตอร์."
+    },
+    {
+     "text": "*16.49 ล้านดอลลาร์* กุมภาพันธ์ ปีนี้",
+     "say": "สิบหกล้านสี่แสนเก้าหมื่นดอลลาร์ เดือนกุมภาพันธ์ปีนี้. สถิติโลก."
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 4,
+   "image_url": "https://www.guinnessworldrecords.com/news/2026/1/images/logan-paul-pokemon-close-up-of-card.jpg",
+   "text": "ใน 5 ใบนี้\n*คุณเลือกเก็บใบไหน?*",
+   "parts": [
+    {
+     "text": "ใน 5 ใบนี้ *คุณเลือกเก็บใบไหน?*",
+     "say": "ในห้าใบนี้ ถ้าเลือกเก็บได้ใบเดียว คุณเลือกใบไหน?"
+    }
+   ]
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "image_mode": "still",
+   "text": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด",
+   "duration": 3,
+   "no_caption": true,
+   "beat": "still",
+   "parts": [
+    {
+     "text": "*ซื้อ ขาย สะสม แข่งเกมส์การ์ด* ที่ www.cardzcenter.com",
+     "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ]
+  }
+ ]
+}
