@@ -2092,6 +2092,34 @@ app.post("/thumb-files", auth, async (req, res) => {
   res.json(out);
 });
 
+// ภาพสไลด์โพสต์ (คนดัง+การ์ดจริง): POST /carousel {id, slides:[{photo_url,card_url,year,code,name,price,caption,card_pos}]} -> /videos/carousel-<id>-N.jpg
+app.post("/carousel", auth, async (req, res) => {
+  const id = String(req.body?.id || Date.now().toString(36)).replace(/[^a-z0-9-]/gi, "").slice(0, 40);
+  const slides = (Array.isArray(req.body?.slides) ? req.body.slides : []).slice(0, 10);
+  res.json({ ok: true, id, n: slides.length });
+  const out = [];
+  for (let i = 0; i < slides.length; i++) {
+    try {
+      const s = slides[i] || {};
+      const sdir = path.join(ASSET_DIR, `car-${id}-${i}`);
+      await fs.mkdir(sdir, { recursive: true });
+      const local = async (u, b) => (u ? `${PUBLIC_BASE_URL}/assets/${path.basename(sdir)}/${await downloadImage(String(u), sdir, b)}` : undefined);
+      const props = {
+        photo_url: await local(s.photo_url, "photo"),
+        card_url: await local(s.card_url, "card"),
+        card_pos: ["bottom-left", "center", "bottom-right"].includes(s.card_pos) ? s.card_pos : "bottom-right",
+        year: s.year, code: s.code, name: s.name, price: s.price, caption: s.caption,
+        index: i + 1, total: slides.length, width: 1080, height: 1920,
+      };
+      const comp = await selectComposition({ serveUrl, id: "CarouselSlide", inputProps: props });
+      const outName = `carousel-${id}-${i + 1}.jpg`;
+      await renderStill({ composition: comp, serveUrl, output: path.join(OUT_DIR, outName), imageFormat: "jpeg", jpegQuality: 92, inputProps: props });
+      out.push(`${PUBLIC_BASE_URL}/videos/${outName}`);
+    } catch (e) { out.push({ slide: i + 1, error: String(e?.message || e).slice(0, 200) }); }
+  }
+  console.log(`[carousel] ${id} ${JSON.stringify(out)}`);
+});
+
 // ทำรูปปกอย่างเดียว (ไม่ต้อง render วิดีโอ): POST /thumb {thumb:{...}} หรือ {meta:{thumb:{...}}} -> image/jpeg
 app.post("/thumb", auth, async (req, res) => {
   try {

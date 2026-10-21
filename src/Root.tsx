@@ -8,6 +8,7 @@ import {
   totalFrames,
 } from "./DynamicStory";
 import { Thumb, defaultThumbProps } from "./Thumb";
+import { CarouselSlide, defaultCarouselProps } from "./CarouselSlide";
 import { CardShow } from "./Show";
 import { MangaShow } from "./Manga";
 import { FightShort, FIGHT_FPS, FIGHT_FRAMES } from "./Fight";
@@ -157,6 +158,16 @@ export const Root: React.FC = () => {
           width: props.width ?? 1080,
           height: props.height ?? 1920,
         })}
+      />
+      <Composition
+        id="CarouselSlide"
+        component={CarouselSlide}
+        durationInFrames={1}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={defaultCarouselProps}
+        calculateMetadata={({ props }) => ({ width: props.width ?? 1080, height: props.height ?? 1920 })}
       />
       <Composition
         id="DramaStory"
