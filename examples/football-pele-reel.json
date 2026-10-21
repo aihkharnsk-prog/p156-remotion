@@ -1,0 +1,235 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "การ์ดเพเล่ตอนอายุ 17 ซื้อ iPhone ได้ 800 เครื่อง | Pelé 1958 #shorts",
+  "description": "การ์ดรุกกี้ Pelé 1958 Alifabolaget (สวีเดน) #635 เกรด PSA 9 ปิดประมูล 1.17 ล้านดอลลาร์ (รวมค่าธรรมเนียมผู้ซื้อ) ที่ Fanatics Collect เมื่อ 24 ก.ค. 2026 เท่ากับ iPhone 18 Pro (48,900 บาท) กว่า 800 เครื่อง PSA ตรวจการ์ดนี้ 214 ใบ เกรด 9 มี 6 ใบ ต้นเดือน ก.ค. มีอีกการขายที่ Goldin ราว 976,000 ดอลลาร์\n\n👇 เพเล่ตอนเด็ก 17 ปี กับเมสซี่ ถ้าต้องเลือกใบเดียว คุณเลือกใคร?\n\nอัตราแลกเปลี่ยนประมาณ 33.6 บาท/ดอลลาร์ (ธนาคาร 20 ต.ค. 2026) • iPhone 18 Pro 256GB ราคาไทย 48,900 บาท (Apple ผ่าน Advice, Droidsans)\nภาพ: ภาพการ์ดจริงจากหน้าประมูล Fanatics Collect • เมสซี่: Fanatics Collect\nข้อมูล: Fanatics Collect, SI Collectibles, Goldin\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #pele #เพเล่ #การ์ดฟุตบอล #การ์ดแพง",
+  "thumb": {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-pele-psa9.jpg",
+   "hook": "เพเล่ 17 ปี\n= iPhone 800 เครื่อง",
+   "sub": "การ์ดแพงเท่าอะไร",
+   "badge": ""
+  },
+  "publish_at": "2026-10-22T14:00:00Z",
+  "engage": "👇 เพเล่ตอนเด็ก 17 ปี กับเมสซี่ ถ้าต้องเลือกใบเดียว คุณเลือกใคร?",
+  "campaign": "expensive-04-pele",
+  "site_path": "/"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, confident, clear sports presenter, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "slides": [
+  {
+   "beat": "full",
+   "duration": 5,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-pele-psa9.jpg",
+   "title": "การ์ดเด็ก 17 ปี\n*เพเล่*\n= iPhone 800+ เครื่อง",
+   "subtitle": "iPhone 18 Pro ราคา 48,900 บาท",
+   "price_label": "ขายไป",
+   "price": "$1.17M",
+   "fit": "cover",
+   "text": "การ์ดเด็ก 17 ปี *เพเล่* = iPhone 800+ เครื่อง",
+   "parts": [
+    {
+     "text": "การ์ดตอนเพเล่ *อายุ 17* ขายได้ *1.17 ล้านดอลลาร์*",
+     "say": "การ์ดตอนเพเล่ อายุสิบเจ็ด ขายได้ หนึ่งล้านหนึ่งแสนเจ็ดหมื่นดอลลาร์!"
+    },
+    {
+     "text": "เท่ากับ *iPhone 18 Pro* 800 เครื่อง",
+     "say": "เท่ากับ ไอโฟน สิบแปด โปร กว่าแปดร้อยเครื่อง!"
+    }
+   ]
+  },
+  {
+   "beat": "reveal",
+   "duration": 4,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-pele-psa9.jpg",
+   "title": "Pelé 1958",
+   "subtitle": "การ์ดรุกกี้ • Alifabolaget สวีเดน",
+   "text": "Pelé 1958",
+   "parts": [
+    {
+     "text": "*เพเล่* การ์ดรุกกี้ ปี *1958*",
+     "say": "การ์ดรุกกี้ของ เพเล่ ปีหนึ่งเก้าห้าแปด!"
+    }
+   ]
+  },
+  {
+   "beat": "timeline",
+   "duration": 6,
+   "chapter": "ที่มา",
+   "title": "เด็ก 17 ปี\nบน*เวทีโลก*",
+   "text": "ฟุตบอลโลก *1958*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-pele-psa9.jpg",
+   "points": [
+    {
+     "year": "1958",
+     "label": "บอลโลก\nที่สวีเดน"
+    },
+    {
+     "year": "อายุ 17",
+     "label": "เพเล่\nเด็กสุดในทีม"
+    },
+    {
+     "year": "การ์ด",
+     "label": "ออกที่สวีเดน\nปีเดียวกัน"
+    }
+   ],
+   "parts": [
+    {
+     "text": "ฟุตบอลโลก 1958 จัดที่ประเทศสวีเดน",
+     "say": "ฟุตบอลโลกปีหนึ่งเก้าห้าแปด จัดที่ประเทศสวีเดน!"
+    },
+    {
+     "text": "เพเล่ ตอนนั้นอายุ 17",
+     "say": "เพเล่ตอนนั้น อายุแค่สิบเจ็ด!"
+    }
+   ]
+  },
+  {
+   "beat": "quiz",
+   "duration": 4,
+   "chapter": "ทายสิ",
+   "title": "ตอนบอลโลก 1958\nเพเล่อายุเท่าไร?",
+   "choices": [
+    "17 ปี",
+    "21 ปี",
+    "25 ปี"
+   ],
+   "answer": 0,
+   "text": "ตอนบอลโลก 1958 เพเล่ *อายุเท่าไร*?",
+   "parts": [
+    {
+     "text": "ตอนบอลโลก 1958 เพเล่ *อายุเท่าไร*?",
+     "say": "ทายสิ ตอนบอลโลกปีห้าแปด เพเล่อายุเท่าไหร่?"
+    },
+    {
+     "text": "คำตอบคือ *17 ปี*",
+     "say": "คำตอบคือ สิบเจ็ดปี!"
+    }
+   ]
+  },
+  {
+   "beat": "bignum",
+   "duration": 4,
+   "chapter": "ราคาปิด",
+   "title": "ปิดประมูลที่",
+   "value": 1170000,
+   "subtitle": "ดอลลาร์สหรัฐ • PSA 9",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-pele-psa9.jpg",
+   "text": "Fanatics Collect • *24 ก.ค. 2026*",
+   "parts": [
+    {
+     "text": "ปิดที่ *1.17 ล้านดอลลาร์* เกรด *PSA 9*",
+     "say": "ปิดที่ หนึ่งล้านหนึ่งแสนเจ็ดหมื่นดอลลาร์ เกรดพีเอสเอเก้า!"
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 5,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-pele-psa9.jpg",
+   "title": "เป็นเงินไทย\nราว *39 ล้านบาท*",
+   "subtitle": "หรือ iPhone 18 Pro 800+ เครื่อง",
+   "price_label": "≈",
+   "price": "฿39M",
+   "fit": "cover",
+   "text": "เป็นเงินไทย ราว *39 ล้านบาท*",
+   "parts": [
+    {
+     "text": "เป็นเงินไทย ราว *39 ล้านบาท*",
+     "say": "เป็นเงินไทย ก็ราวสามสิบเก้าล้านบาท!"
+    }
+   ]
+  },
+  {
+   "beat": "bignum",
+   "duration": 4,
+   "chapter": "หายาก",
+   "title": "เกรดสูงสุด มีแค่",
+   "value": 6,
+   "subtitle": "ใบ • PSA 9",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-pele-psa9.jpg",
+   "text": "PSA ตรวจมา *214 ใบ*",
+   "parts": [
+    {
+     "text": "เกรด 9 มีแค่ *6 ใบ*",
+     "say": "แต่เกรดเก้า มีแค่หกใบ!"
+    }
+   ]
+  },
+  {
+   "beat": "timeline",
+   "duration": 6,
+   "chapter": "อันดับ",
+   "title": "ใครแพงกว่า*ใคร*",
+   "text": "การ์ดฟุตบอล *แพงสุด*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-messi-front.jpg",
+   "points": [
+    {
+     "year": "#3",
+     "label": "เพเล่ 1958\n$1.17M (2026)"
+    },
+    {
+     "year": "#2",
+     "label": "เพเล่ 1958\n$1.33M (2022)"
+    },
+    {
+     "year": "#1",
+     "label": "เมสซี่ 2004\n$1.5M (2025)"
+    }
+   ],
+   "parts": [
+    {
+     "text": "การ์ดเพเล่ ปีนี้ 1.17 ล้านดอลลาร์",
+     "say": "การ์ดเพเล่ใบนี้ ปีนี้ หนึ่งล้านหนึ่งแสนเจ็ดหมื่น."
+    },
+    {
+     "text": "เพเล่อีกใบ ปี 2022 ขาย 1.33 ล้าน",
+     "say": "เพเล่ อีกใบ ปีสองศูนย์สองสอง หนึ่งล้านสามแสนสามหมื่น."
+    },
+    {
+     "text": "แต่ที่ 1 คือ เมสซี่ 1.5 ล้านดอลลาร์",
+     "say": "แต่ที่หนึ่ง คือ เมสซี่ หนึ่งล้านห้าแสนดอลลาร์!"
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 4,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-pele-psa9.jpg",
+   "text": "เพเล่ หรือ เมสซี่\n*ใครคุ้มกว่า?*",
+   "parts": [
+    {
+     "text": "ถ้าต้องเลือก *คุณเลือกใคร*?",
+     "say": "ถ้าต้องเลือกใบเดียว คุณเลือกใคร?"
+    }
+   ]
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "image_mode": "still",
+   "text": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด",
+   "duration": 3,
+   "no_caption": true,
+   "beat": "still",
+   "parts": [
+    {
+     "text": "*ซื้อ ขาย สะสม แข่งเกมส์การ์ด* ที่ www.cardzcenter.com",
+     "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ]
+  }
+ ],
+ "composition": "CardShow",
+ "theme": "grass",
+ "badge": "การ์ดแพง #4",
+ "series": "การ์ดแพงเท่าอะไร",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055
+}

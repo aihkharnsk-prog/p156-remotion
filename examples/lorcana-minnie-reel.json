@@ -1,0 +1,231 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "การ์ดมินนี่ใบเดียว เกือบเท่า iPhone 3 เครื่อง | Lorcana Iconic #shorts",
+  "description": "Minnie Mouse – Sweetheart Princess (Iconic) 241/204 ชุด Fabled ของ Disney Lorcana (วางขาย 29 ส.ค. 2025) ราคาตลาด 4,200 ดอลลาร์ ตามลิสต์ของ Wargamer อัปเดต 14 ต.ค. 2026 เกือบเท่า iPhone 18 Pro (48,900 บาท) 3 เครื่อง ส่วน EchoMTG รายงานราว 2,500 ดอลลาร์ (ฟอยล์ NM) เมื่อต้น ก.ย. ราคาตลาดไม่ใช่ราคาที่ขายสำเร็จและขึ้นลงตลอด\n\n👇 การ์ดดิสนีย์ใบเดียว ราคาเท่า iPhone 3 เครื่อง ถ้าเป็นคุณ เลือกอะไร?\n\nอัตราแลกเปลี่ยนประมาณ 33.6 บาท/ดอลลาร์ (ธนาคาร 20 ต.ค. 2026) • iPhone 18 Pro 256GB ราคาไทย 48,900 บาท (Apple ผ่าน Advice, Droidsans)\nภาพ: ภาพการ์ดทางการจาก Lorcast\nข้อมูล: Wargamer, EchoMTG, Beckett, Lorcast\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #lorcana #ลอคาน่า #การ์ดแพง #disney",
+  "thumb": {
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_77b92f4bb7d2460ea85b9d547cb8e72f.avif",
+   "hook": "มินนี่ใบเดียว\n= iPhone 3 เครื่อง",
+   "sub": "การ์ดแพงเท่าอะไร",
+   "badge": ""
+  },
+  "publish_at": "2026-10-22T10:00:00Z",
+  "engage": "👇 การ์ดดิสนีย์ใบเดียว ราคาเท่า iPhone 3 เครื่อง ถ้าเป็นคุณ เลือกอะไร?",
+  "campaign": "expensive-03-minnie",
+  "site_path": "/"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, confident, clear sports presenter, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "slides": [
+  {
+   "beat": "full",
+   "duration": 5,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_77b92f4bb7d2460ea85b9d547cb8e72f.avif",
+   "title": "การ์ดมินนี่\nใบเดียว *เกือบเท่า*\niPhone 3 เครื่อง",
+   "subtitle": "iPhone 18 Pro ราคา 48,900 บาท",
+   "price_label": "ราคาตลาด",
+   "price": "$4,200",
+   "fit": "contain",
+   "text": "การ์ดมินนี่ ใบเดียว *เกือบเท่า* iPhone 3 เครื่อง",
+   "parts": [
+    {
+     "text": "การ์ด *มินนี่* ใบเดียว ราคาตลาด *4,200 ดอลลาร์*",
+     "say": "การ์ดมินนี่ใบเดียว ราคาตลาดสี่พันสองร้อยดอลลาร์!"
+    },
+    {
+     "text": "เกือบเท่า *iPhone 18 Pro* 3 เครื่อง",
+     "say": "เกือบเท่า ไอโฟน สิบแปด โปร สามเครื่อง!"
+    }
+   ]
+  },
+  {
+   "beat": "reveal",
+   "duration": 4,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_77b92f4bb7d2460ea85b9d547cb8e72f.avif",
+   "title": "Minnie Mouse",
+   "subtitle": "Sweetheart Princess • Iconic",
+   "text": "Minnie Mouse",
+   "parts": [
+    {
+     "text": "*Minnie Mouse* Sweetheart Princess",
+     "say": "มินนี่ เมาส์ สวีทฮาร์ต พริ้นเซส."
+    }
+   ]
+  },
+  {
+   "beat": "timeline",
+   "duration": 6,
+   "chapter": "ที่มา",
+   "title": "ระดับ*ใหม่*ล่าสุด",
+   "text": "ชุด *Fabled* ของลอคาน่า",
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_77b92f4bb7d2460ea85b9d547cb8e72f.avif",
+   "points": [
+    {
+     "year": "29 ส.ค. 2025",
+     "label": "ชุด Fabled\nวางขาย"
+    },
+    {
+     "year": "ระดับใหม่",
+     "label": "Iconic\nหายากสุด"
+    },
+    {
+     "year": "241/204",
+     "label": "เลขเกิน\nจำนวนในชุด"
+    }
+   ],
+   "parts": [
+    {
+     "text": "ชุด เฟเบิ้ล วางขาย 29 สิงหาคม 2025",
+     "say": "ชุดเฟเบิ้ล วางขาย ยี่สิบเก้า สิงหาคม สองศูนย์สองห้า!"
+    },
+    {
+     "text": "เฟเบิ้ล เพิ่มระดับ Iconic หายากกว่า Enchanted",
+     "say": "ชุดนี้เพิ่มระดับใหม่ ชื่อไอโคนิก ที่หายากกว่าเอนแชนเต็ด!"
+    },
+    {
+     "text": "เลขการ์ด 241/204 เกินจำนวนในชุด",
+     "say": "และเลขการ์ด สองร้อยสี่สิบเอ็ด จากสองร้อยสี่ เกินจำนวนในชุดอีก!"
+    }
+   ]
+  },
+  {
+   "beat": "timeline",
+   "duration": 6,
+   "chapter": "อันดับ",
+   "title": "3 อันดับ*แพงสุด*",
+   "text": "ลิสต์ของ *Wargamer* 14 ต.ค.",
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_77b92f4bb7d2460ea85b9d547cb8e72f.avif",
+   "points": [
+    {
+     "year": "#3",
+     "label": "Buzz Lightyear\n$1,850"
+    },
+    {
+     "year": "#2",
+     "label": "Mickey Brave\nLittle Prince $2,500"
+    },
+    {
+     "year": "#1",
+     "label": "Minnie Mouse\n$4,200"
+    }
+   ],
+   "parts": [
+    {
+     "text": "อันดับสาม บัซ ไลท์เยียร์ ราคา 1,850 ดอลลาร์",
+     "say": "อันดับสาม บัซ ไลท์เยียร์ หนึ่งพันแปดร้อยห้าสิบดอลลาร์."
+    },
+    {
+     "text": "อันดับสอง มิกกี้ ราคา 2,500 ดอลลาร์",
+     "say": "อันดับสอง มิกกี้ สองพันห้าร้อยดอลลาร์."
+    },
+    {
+     "text": "อันดับหนึ่ง มินนี่ 4,200 ดอลลาร์",
+     "say": "แต่อันดับหนึ่ง คือ มินนี่ สี่พันสองร้อยดอลลาร์!"
+    }
+   ]
+  },
+  {
+   "beat": "bignum",
+   "duration": 4,
+   "chapter": "ราคาตลาด",
+   "title": "ตลาดตอนนี้",
+   "value": 4200,
+   "subtitle": "ดอลลาร์สหรัฐ • ราคาตลาด",
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_77b92f4bb7d2460ea85b9d547cb8e72f.avif",
+   "text": "ไม่ใช่ราคาที่ขายสำเร็จ • *Wargamer 14 ต.ค.*",
+   "parts": [
+    {
+     "text": "อัปเดต *14 ต.ค.* โดย Wargamer",
+     "say": "อัปเดตล่าสุด สิบสี่ ตุลา โดยเว็บ วอร์เกมเมอร์."
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 5,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_77b92f4bb7d2460ea85b9d547cb8e72f.avif",
+   "title": "เป็นเงินไทย\nราว *1.4 แสนบาท*",
+   "subtitle": "หรือ iPhone 18 Pro เกือบ 3 เครื่อง",
+   "price_label": "≈",
+   "price": "฿141K",
+   "fit": "contain",
+   "text": "เป็นเงินไทย ราว *1.4 แสนบาท*",
+   "parts": [
+    {
+     "text": "เป็นเงินไทย ราว *141,000 บาท*",
+     "say": "เป็นเงินไทย ราวหนึ่งแสนสี่หมื่นหนึ่งพันบาท!"
+    }
+   ]
+  },
+  {
+   "beat": "timeline",
+   "duration": 6,
+   "chapter": "ราคาขึ้นลง",
+   "title": "ราคา*ไม่นิ่ง*",
+   "text": "ต่างแหล่ง *ต่างเวลา*",
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_77b92f4bb7d2460ea85b9d547cb8e72f.avif",
+   "points": [
+    {
+     "year": "กลางปี 2026",
+     "label": "ราคาตก"
+    },
+    {
+     "year": "ต้น ก.ย.",
+     "label": "ราว $2,500\nEchoMTG"
+    },
+    {
+     "year": "14 ต.ค.",
+     "label": "$4,200\nWargamer"
+    }
+   ],
+   "parts": [
+    {
+     "text": "ต้นกันยา ที่ อีโคเอ็มทีจี ราว 2,500 ดอลลาร์",
+     "say": "ต้นกันยา ที่เว็บ อีโค เอ็มทีจี ราวสองพันห้าร้อยดอลลาร์."
+    },
+    {
+     "text": "14 ตุลา กลับมา 4,200 ดอลลาร์",
+     "say": "แต่สิบสี่ตุลา กลับมาสี่พันสองร้อยดอลลาร์!"
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 4,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_77b92f4bb7d2460ea85b9d547cb8e72f.avif",
+   "text": "การ์ดดิสนีย์ใบเดียว\n*เท่า iPhone 3 เครื่อง*",
+   "parts": [
+    {
+     "text": "การ์ดดิสนีย์ ใบเดียว ราคาเท่า *iPhone 3 เครื่อง*",
+     "say": "การ์ดดิสนีย์ใบเดียว ราคาเท่าไอโฟนสามเครื่อง."
+    },
+    {
+     "text": "ถ้าเป็นคุณ *เลือกอะไร*?",
+     "say": "ถ้าเป็นคุณ เลือกอะไร?"
+    }
+   ]
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "image_mode": "still",
+   "text": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด",
+   "duration": 3,
+   "no_caption": true,
+   "beat": "still",
+   "parts": []
+  }
+ ],
+ "composition": "CardShow",
+ "theme": "water",
+ "badge": "การ์ดแพง #3",
+ "series": "การ์ดแพงเท่าอะไร",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055
+}
