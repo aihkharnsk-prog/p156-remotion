@@ -36,7 +36,8 @@ export type Beat =
   | "coin"
   | "evolve"
   | "versions"
-  | "sprite";
+  | "sprite"
+  | "full";
 
 export type Transition = "wipe" | "zoom" | "flash" | "slide" | "shutter" | "none";
 
@@ -53,6 +54,9 @@ export type ShowSlide = Slide & {
   answer?: number; // บีต quiz: index ของคำตอบที่ถูก
   points?: { year: string; label: string }[]; // บีต timeline
   transition?: Transition;
+  price?: string; // บีต full: ป้ายราคาแปะบนการ์ด เช่น "$16.49M"
+  price_label?: string; // ข้อความเล็กเหนือราคา เช่น "ขายได้"
+  fit?: "cover" | "contain"; // บีต full: ภาพเต็มจอ (cover) หรือพอดีภาพ (contain) บนพื้นเบลอ
 };
 
 export type ShowTheme = "fire" | "grass" | "water" | "electric" | "psychic" | "fighting" | "normal";
@@ -442,6 +446,44 @@ const BigNumBeat: React.FC<BP> = ({ s, f, d, pal }) => {
   );
 };
 
+const FullBeat: React.FC<BP> = ({ s, f, d, pal }) => {
+  const zoom = 1 + 0.07 * (f / Math.max(1, d));
+  const contain = s.fit === "contain";
+  const pt = ez(f, 6, 18, 0, 1, back(2.2));
+  const pulse = 1 + 0.05 * Math.sin(f / 5);
+  return (
+    <AbsoluteFill style={{ background: pal.bg2 }}>
+      {s.image_url ? (
+        contain ? (
+          <>
+            <Img src={s.image_url} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", filter: "blur(30px) brightness(.6)", transform: "scale(1.2)" }} />
+            <Img src={s.image_url} style={{ position: "absolute", left: 0, right: 0, top: 260, width: "100%", height: 1300, objectFit: "contain", transform: `scale(${zoom})` }} />
+          </>
+        ) : (
+          <Img src={s.image_url} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", transform: `scale(${zoom})` }} />
+        )
+      ) : null}
+      <AbsoluteFill style={{ background: "linear-gradient(to bottom, rgba(0,0,0,.72) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 62%, rgba(0,0,0,.7) 100%)" }} />
+      {s.title ? (
+        <div style={{ position: "absolute", left: 40, right: 40, top: 150, textAlign: "center", fontFamily: KANIT, fontWeight: 900, fontSize: 92, lineHeight: 1.1, color: "#fff", whiteSpace: "pre-line", textShadow: `${stroke(6, "#000")}, 0 0 40px rgba(0,0,0,.8)`, opacity: ez(f, 0, 8), transform: `translateY(${ez(f, 0, 12, -50, 0)}px)` }}>
+          <Rich text={s.title} color={pal.b} />
+        </div>
+      ) : null}
+      {s.subtitle ? (
+        <div style={{ position: "absolute", left: 40, right: 40, top: 150 + 2 * 100 + 20, textAlign: "center", fontFamily: KANIT, fontWeight: 700, fontSize: 46, color: "#fff", textShadow: stroke(4, "#000"), opacity: ez(f, 8, 16) }}>{s.subtitle}</div>
+      ) : null}
+      {s.price ? (
+        <div style={{ position: "absolute", right: 50, top: 760, transform: `rotate(-9deg) scale(${pt * pulse})`, transformOrigin: "center", textAlign: "center" }}>
+          <div style={{ padding: "14px 46px 20px", borderRadius: 28, background: pal.b, color: pal.ink, fontFamily: KANIT, fontWeight: 900, boxShadow: `10px 10px 0 ${pal.ink}, 0 0 50px ${pal.a}` }}>
+            {s.price_label ? <div style={{ fontSize: 42, fontWeight: 800, lineHeight: 1 }}>{s.price_label}</div> : null}
+            <div style={{ fontSize: 120, lineHeight: 1.05, whiteSpace: "nowrap" }}>{s.price}</div>
+          </div>
+        </div>
+      ) : null}
+    </AbsoluteFill>
+  );
+};
+
 const QuizBeat: React.FC<BP> = ({ s, f, d, pal, starts }) => {
   const choices = s.choices || [];
   const ans = Math.max(0, Math.min(choices.length - 1, Number(s.answer) || 0));
@@ -717,6 +759,7 @@ const BeatView: React.FC<{ s: ShowSlide; idx: number; pal: Pal }> = ({ s, idx, p
     beat === "evolve" ? <EvolveScene {...sceneProps} /> :
     beat === "versions" ? <VersionsScene {...sceneProps} /> :
     beat === "sprite" ? <SpriteScene {...sceneProps} /> :
+    beat === "full" ? <FullBeat {...p} /> :
     <CardBeat {...p} />;
   return (
     <Enter type={tr} f={f} pal={pal}>
