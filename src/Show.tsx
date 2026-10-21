@@ -3,6 +3,7 @@ import {
   AbsoluteFill,
   Audio,
   Img,
+  OffthreadVideo,
   Sequence,
   interpolate,
   Easing,
@@ -58,6 +59,8 @@ export type ShowSlide = Slide & {
   price?: string; // บีต full: ป้ายราคาแปะบนการ์ด เช่น "$16.49M"
   price_label?: string; // ข้อความเล็กเหนือราคา เช่น "ขายได้"
   rank?: string; // บีต rank: เลขอันดับใหญ่มุมซ้ายบน
+  video_url?: string; // บีต full: วิดีโอพื้นหลัง (Pexels)
+  pos?: string; // บีต rank: objectPosition เมื่อครอปภาพให้เต็มกรอบ
   fit?: "cover" | "contain"; // บีต full: ภาพเต็มจอ (cover) หรือพอดีภาพ (contain) บนพื้นเบลอ
 };
 
@@ -458,7 +461,10 @@ const FullBeat: React.FC<BP> = ({ s, f, d, pal }) => {
   const pulse = 1 + 0.05 * Math.sin(f / 5);
   return (
     <AbsoluteFill style={{ background: pal.bg2 }}>
-      {s.image_url ? (
+      {s.video_url ? (
+        <OffthreadVideo src={s.video_url} muted loop style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", transform: `scale(${zoom})` }} />
+      ) : null}
+      {s.image_url && !s.video_url ? (
         contain ? (
           <>
             <Img src={s.image_url} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", filter: "blur(30px) brightness(.6)", transform: "scale(1.2)" }} />
@@ -506,7 +512,7 @@ const RankBeat: React.FC<BP> = ({ s, f, d, pal, starts }) => {
         {s.image_url ? (
           contain ? (
             <div style={{ width: 800, height: 1040, borderRadius: 28, overflow: "hidden", boxShadow: "0 40px 80px rgba(0,0,0,.55)", background: "rgba(255,255,255,.08)" }}>
-              <Img src={s.image_url} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+              <Img src={s.image_url} style={{ width: "100%", height: "100%", objectFit: s.pos ? "cover" : "contain", objectPosition: s.pos || "50% 50%" }} />
             </div>
           ) : (
             <CardImg src={s.image_url} w={740} f={f} radius={30} />
