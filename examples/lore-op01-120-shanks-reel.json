@@ -1,0 +1,153 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "ยอมเสียแขนเพื่อเด็กคนเดียว วันนี้เป็นการ์ดใบละ 5 หมื่น | One Piece Card #shorts",
+  "description": "แชงคูส (ผมแดง) OP01-120 ฉบับ Manga Alternate Art จากชุดแรกของ One Piece Card Game (ญี่ปุ่นปี 2022) ใช้งานต้นฉบับของ Eiichiro Oda ราคาตลาดวันนี้: ใบดิบราว 1,500 ดอลลาร์ (≈ 51,000 บาท) เกรด PSA 10 ราว 4,200 ดอลลาร์ (≈ 140,000 บาท) ราคาขึ้นลงตามตลาด\n\n👇 ถ้าเก็บได้ใบเดียว ลูฟี่ หรือ แชงคูส เลือกใคร?\n\nอัตราแลกเปลี่ยนประมาณ 33.6 บาท/ดอลลาร์ • ราคา: PriceCharting (24 ต.ค. 2026) • ข้อมูลการ์ด: PreGradeCards, TCG King, Slab-Z • ภาพการ์ด: TCGplayer\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP01",
+  "thumb": {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-shanks-op01-120.jpg",
+   "hook": "ยอมเสียแขน\nเพื่อเด็กคนเดียว",
+   "sub": "แชงคูส ผมแดง",
+   "badge": "OP01-120"
+  },
+  "engage": "👇 ถ้าเก็บได้ใบเดียว ลูฟี่ หรือ แชงคูส เลือกใคร?",
+  "campaign": "lore-op01-120-shanks",
+  "site_path": "/"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.38,
+  "speed": 1.0,
+  "prefix": "[casual Thai, chatting with a friend, warm, a little amused, natural pauses and breaths, never like an announcer]"
+ },
+ "audio_rate": 1.0,
+ "composition": "CardShow",
+ "theme": "fire",
+ "badge": "OP01-120",
+ "series": "ที่มาของการ์ด",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055,
+ "slides": [
+  {
+   "beat": "full",
+   "duration": 7,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-shanks-op01-120.jpg",
+   "fit": "contain",
+   "title": "ยอมเสียแขน\n*เพื่อเด็กคนเดียว*",
+   "subtitle": "วันนี้เขาเป็นการ์ดใบละห้าหมื่น",
+   "price_label": "ราคาดิบ",
+   "price": "฿51K",
+   "parts": [
+    {
+     "text": "ยอมเสียแขน *เพื่อเด็กคนเดียว*",
+     "say": "รู้มั้ย… มีผู้ชายคนนึง ยอมเสียแขนไปข้างนึง เพื่อช่วยเด็กคนเดียวเนี่ย."
+    },
+    {
+     "text": "วันนี้เขาเป็น *การ์ดใบละห้าหมื่น*",
+     "say": "แล้ววันนี้ เขากลายเป็นการ์ด ใบละห้าหมื่นบาทเลยนะ."
+    }
+   ]
+  },
+  {
+   "beat": "zoom",
+   "duration": 8,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-shanks-op01-120.jpg",
+   "focus_x": 50,
+   "focus_y": 14,
+   "focus_zoom": 2.4,
+   "title": "เด็กคนนั้น\nคือ *ลูฟี่*",
+   "parts": [
+    {
+     "text": "เด็กคนนั้นคือ *ลูฟี่*",
+     "say": "เด็กคนนั้นก็ ลูฟี่ไง. ตอนเล็กๆ โดนสัตว์ประหลาดทะเลงับเข้าไปเต็มๆ."
+    },
+    {
+     "text": "แชงคูสพุ่งเข้าไป *แลกด้วยแขนซ้าย*",
+     "say": "แชงคูสไม่คิดเลยสักวินาที พุ่งเข้าไปช่วย แลกด้วยแขนซ้ายทั้งข้างเลย."
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 7,
+   "video_url": "__VIDEO__",
+   "title": "หมวกฟาง\n*ฝากไว้ให้*",
+   "parts": [
+    {
+     "text": "เขาฝาก *หมวกฟาง* ไว้ให้ลูฟี่",
+     "say": "ก่อนจะจากกัน เขาเอาหมวกฟางใบเก่าๆ ของตัวเอง ใส่หัวให้เด็กคนนั้น."
+    },
+    {
+     "text": "แล้วบอกว่า *มาคืนวันที่เป็นโจรสลัดตัวจริง*",
+     "say": "แล้วบอกว่า ไว้เป็นโจรสลัดตัวจริงเมื่อไหร่ ค่อยเอามาคืนละกัน."
+    }
+   ]
+  },
+  {
+   "beat": "zoom",
+   "duration": 8,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-shanks-op01-120.jpg",
+   "focus_x": 50,
+   "focus_y": 40,
+   "focus_zoom": 1.5,
+   "title": "ใบนี้\n*ฉากหลังคือมังงะ*",
+   "parts": [
+    {
+     "text": "ใบนี้ฉากหลังเป็น *ลายเส้นมังงะ*",
+     "say": "ส่วนใบนี้ ดูฉากหลังดีๆ นะ เป็นลายเส้นหน้ามังงะเลย."
+    },
+    {
+     "text": "ออกใน *ชุดแรก* ปี 2022",
+     "say": "เป็นหนึ่งในใบแรกๆ ของเกมวันพีซ ตั้งแต่ชุดแรกสุด ปีสองพันยี่สิบสอง."
+    }
+   ]
+  },
+  {
+   "beat": "bignum",
+   "duration": 7,
+   "chapter": "ราคาตลาด",
+   "title": "ใบดิบตอนนี้",
+   "value": 1529,
+   "from": 0,
+   "subtitle": "ดอลลาร์ • ≈ ฿51,000",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-shanks-op01-120.jpg",
+   "parts": [
+    {
+     "text": "ใบดิบ ราว *51,000 บาท*",
+     "say": "ตอนนี้ ใบดิบๆ ก็ราวห้าหมื่นหนึ่งแล้ว."
+    },
+    {
+     "text": "ถ้าได้ *PSA 10* ราว 140,000 บาท",
+     "say": "ถ้าส่งเกรดได้ พีเอสเอสสิบ นี่ทะลุแสนสี่เลย."
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 5,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-shanks-op01-120.jpg",
+   "text": "ลูฟี่ หรือ *แชงคูส*?",
+   "parts": [
+    {
+     "text": "เก็บได้ใบเดียว *ลูฟี่* หรือ *แชงคูส*?",
+     "say": "ถ้าเก็บได้ใบเดียวนะ เอาลูฟี่ หรือแชงคูสล่ะ?"
+    }
+   ]
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "image_mode": "still",
+   "text": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด",
+   "duration": 3,
+   "no_caption": true,
+   "beat": "still",
+   "parts": [
+    {
+     "text": "*ซื้อ ขาย สะสม แข่งเกมส์การ์ด* ที่ www.cardzcenter.com",
+     "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ]
+  }
+ ]
+}
