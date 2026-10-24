@@ -421,8 +421,8 @@ const BigNumBeat: React.FC<BP> = ({ s, f, d, pal }) => {
   const v = Number(s.value) || 0;
   const from = s.from !== undefined ? Number(s.from) : 0;
   const t = ez(f, 4, Math.max(10, Math.min(d * 0.45, 40)), 0, 1, Easing.out(Easing.exp));
-  const shown = Math.round(from + (v - from) * t);
-  const done = t >= 0.999;
+  const done = t >= 0.99;
+  const shown = done ? Math.round(v) : Math.round(from + (v - from) * t);
   const pop = done ? 1 + 0.08 * Math.exp(-(f - Math.min(d * 0.45, 40)) / 5) : 1;
   return (
     <AbsoluteFill>
