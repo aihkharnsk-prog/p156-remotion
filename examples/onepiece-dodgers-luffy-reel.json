@@ -1,0 +1,189 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "การ์ดวันพีซที่โอดะวาดเอง แจกฟรีที่สนามเบสบอล วันนี้ขายต่อ $1,200 | One Piece Card #shorts",
+  "description": "การ์ดวันพีซที่ผู้สร้าง Eiichiro Oda วาดภาพให้เอง แจกฟรีที่ Dodger Stadium 3 ก.ค. 2025 ตอนนี้ขายต่อราว $1,225\n• Toei Animation USA ประกาศ 3 มิ.ย. 2025: การ์ดลิมิเต็ด Luffy ใส่ชุด LA Dodgers เป็น \"งานร่วมครั้งเดียว\" วาดโดย Oda แจกคนละ 1 ใบ มาก่อนได้ก่อน ที่จุดกิจกรรมในสนาม วันที่ 3 ก.ค. 2025\n• การ์ดเลข EB02-010 (Leader, พลัง 5000) มีข้อความ NOT FOR SALE ไม่ได้วางขายในร้าน\n• ราคาใบดิบ (ซื้อขายจริงบน eBay/TCGplayer ผ่าน PriceCharting): 3 ก.ค. 2026 ~$2,600 · 7 ต.ค. 2026 ~$1,200–1,250 · 24 ต.ค. 2026 ~$1,225 ราคาบาทเป็นการประมาณที่ 33.6 บาท/ดอลลาร์ และราคาซื้อขายจริงขึ้นลงได้\n• วันพีซเริ่มลง Weekly Shonen Jump 22 ก.ค. 1997 รวมเล่ม 115 เล่ม (3 ก.ค. 2026) ยอดพิมพ์กว่า 600 ล้านเล่ม (มี.ค. 2026 ตามรายงาน)\nแหล่งข้อมูล: Toei Animation USA, Anime Corner, PriceCharting, Wikipedia, Samurai Sword Tokyo\n\n📷 Dodger Stadium โดย Frederick Dennstedt CC BY-SA 2.0 · ภาพการ์ด © Eiichiro Oda/Shueisha, Toei Animation\n🎬 \"First nights in Tokyo\" โดย Guillaume J. Lauzier CC BY 3.0 https://creativecommons.org/licenses/by/3.0/\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #วันพีซ #onepiece #onepiececardgame #Luffy #Dodgers #การ์ดวันพีซ #การ์ดแพง",
+  "thumb": {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-dodg-card.jpg",
+   "hook": "โอดะวาดเอง\nแจกฟรีที่สนาม",
+   "sub": "EB02-010",
+   "badge": "เรื่องเล่า"
+  },
+  "engage": "👇 ถ้าได้ใบนี้ เก็บหรือขาย? พิมพ์ 1 = เก็บ / 2 = ขาย",
+  "campaign": "op-dodgers-luffy",
+  "site_path": "/"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[calm, confident Thai storyteller, clear and engaging, natural pacing, not shouting]"
+ },
+ "audio_rate": 1.0,
+ "composition": "CardShow",
+ "theme": "fire",
+ "badge": "เรื่องเล่า",
+ "series": "การ์ดวันพีซ",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055,
+ "slides": [
+  {
+   "beat": "hook",
+   "duration": 7,
+   "text": "การ์ดที่ *โอดะวาดเอง*",
+   "title": "การ์ดวันพีซ\n*ที่โอดะวาดเอง*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-dodg-card.jpg",
+   "parts": [
+    {
+     "text": "ผู้สร้างวันพีซ *วาดเอง* ใบเดียว",
+     "say": "การ์ดวันพีซใบนี้ ผู้สร้างวันพีซ อาจารย์โอดะ วาดภาพให้เอง!"
+    },
+    {
+     "text": "แจกฟรี แต่วันนี้ขายต่อ *~$1,200*",
+     "say": "ตอนนั้นแจกฟรีที่สนามเบสบอล แต่วันนี้ขายต่อกัน ราวพันสองร้อยดอลลาร์!"
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 8,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-dodg-stad.jpg",
+   "title": "สนาม\n*Dodger Stadium*",
+   "parts": [
+    {
+     "text": "3 ก.ค. 2025 *แจกที่สนามดอดเจอร์ส*",
+     "say": "สามกรกฎาคม สองพันยี่สิบห้า ที่สนามดอดเจอร์ สเตเดียม เมืองลอสแอนเจลิส."
+    },
+    {
+     "text": "แฟนบัตร *คนละ 1 ใบ* มาก่อนได้ก่อน",
+     "say": "แฟนบอลที่มีบัตรเข้าชม ได้การ์ดคนละหนึ่งใบ มาก่อนได้ก่อน!"
+    }
+   ]
+  },
+  {
+   "beat": "art",
+   "duration": 9,
+   "chapter": "ลูฟี่ใส่ชุดเบสบอล",
+   "title": "Monkey D. Luffy",
+   "subtitle": "EB02-010 • ลีดเดอร์ • พลัง 5000",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-dodg-card.jpg",
+   "parts": [
+    {
+     "text": "ลูฟี่ใส่ *หมวก+ชุด Dodgers*",
+     "say": "ลูฟี่ ในชุดและหมวกของทีมดอดเจอร์ส."
+    },
+    {
+     "text": "Toei บอกว่า *งานร่วมครั้งเดียว* วาดโดยโอดะ",
+     "say": "ผู้จัดจำหน่ายอย่าง โตเออิ แอนิเมชัน สหรัฐฯ ระบุว่า เป็นงานร่วมพิเศษครั้งเดียว โดยภาพวาดฝีมืออาจารย์โอดะ!"
+    }
+   ]
+  },
+  {
+   "beat": "timeline",
+   "duration": 10,
+   "chapter": "โอดะ",
+   "title": "ผู้สร้าง\n*วันพีซ*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-dodg-card.jpg",
+   "points": [
+    {
+     "year": "22 ก.ค. 1997",
+     "label": "เริ่มลงใน\nWeekly Jump"
+    },
+    {
+     "year": "3 ก.ค. 2026",
+     "label": "รวมเล่ม\n115 เล่ม"
+    },
+    {
+     "year": "มี.ค. 2026",
+     "label": "ยอดพิมพ์\nกว่า 600 ล้านเล่ม"
+    }
+   ],
+   "parts": [
+    {
+     "text": "เริ่มลงใน *Weekly Jump* ปี 1997",
+     "say": "วันพีซ เริ่มลงในนิตยสารวีคลีจัมป์ ยี่สิบสองกรกฎาคม ปีหนึ่งเก้าเก้าเจ็ด."
+    },
+    {
+     "text": "ยอดพิมพ์ *600 ล้านเล่ม+*",
+     "say": "ตอนนี้ รวมเล่มหนึ่งร้อยสิบห้าเล่ม และมียอดพิมพ์ ตามรายงาน กว่าหกร้อยล้านเล่ม."
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 8,
+   "video_url": "https://renderer-production-8b7f.up.railway.app/videos/clip-op09-tok-b.mp4",
+   "title": "ไม่เคย\n*วางขาย*",
+   "parts": [
+    {
+     "text": "บนการ์ดเขียนว่า *NOT FOR SALE*",
+     "say": "บนการ์ดเขียนไว้ว่า น็อต ฟอร์ เซล คือไม่มีขายในร้าน."
+    },
+    {
+     "text": "เลขชุด *EB02-010* แต่ไม่อยู่ในซอง",
+     "say": "แม้เลขชุดจะเป็น อีบีศูนย์สอง แต่ไม่ได้อยู่ในซองของชุดนั้นนะ!"
+    }
+   ]
+  },
+  {
+   "beat": "bignum",
+   "duration": 10,
+   "chapter": "ราคา",
+   "title": "ราคาใบดิบ ตอนนี้",
+   "value": 1225,
+   "from": 2600,
+   "subtitle": "ดอลลาร์ • ≈ ฿41,000",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-dodg-card.jpg",
+   "parts": [
+    {
+     "text": "ก.ค. 2026 ราว *$2,600*",
+     "say": "ต้นกรกฎาคมปีนี้ ใบดิบขายกันราวสองพันหกร้อยดอลลาร์."
+    },
+    {
+     "text": "24 ต.ค. เหลือ *$1,225*",
+     "say": "วันที่ยี่สิบสี่ตุลาคม เหลือราวพันสองร้อยยี่สิบห้าดอลลาร์ ลดลงเกือบครึ่ง!"
+    },
+    {
+     "text": "ราคาซื้อขายจริงมี *ขึ้นลง*",
+     "say": "ราคานี้มาจากการซื้อขายบน อีเบย์ และทีซีจีเพลเยอร์ ซึ่งขึ้นลงได้เสมอ."
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 6,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-dodg-card.jpg",
+   "text": "ถ้าได้ใบนี้ *เก็บหรือขาย*?",
+   "parts": [
+    {
+     "text": "ถ้าได้ใบนี้ *เก็บหรือขาย*?",
+     "say": "ถ้าตอนนั้นคุณได้การ์ดใบนี้มา คุณจะเก็บ หรือขาย?"
+    },
+    {
+     "text": "พิมพ์ *1 = เก็บ* / *2 = ขาย*",
+     "say": "พิมพ์หนึ่ง เก็บ พิมพ์สอง ขาย!"
+    }
+   ]
+  },
+  {
+   "beat": "still",
+   "duration": 4,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "image_mode": "still",
+   "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+   "no_caption": true,
+   "parts": [
+    {
+     "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+     "say": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้เลย!"
+    },
+    {
+     "text": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด",
+     "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ]
+  }
+ ]
+}

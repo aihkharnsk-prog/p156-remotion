@@ -1,0 +1,236 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "การ์ดโปเกมอนใบเดียว 1.38 ล้านดอลลาร์ ย้อนที่มาตั้งแต่ปี 1996 | Charizard #shorts",
+  "description": "การ์ดโปเกมอนใบเดียว ขายไป $1,385,274 (ราว 46 ล้านบาท) ย้อนที่มาตั้งแต่ปี 1996\n• 20 ต.ค. 1996 ชุดแรกวางขายที่ญี่ปุ่น 102 ใบ (Media Factory) • 14-15 มิ.ย. 1997 แข่งอย่างเป็นทางการครั้งแรกที่ Makuhari Messe • 9 ม.ค. 1999 ฉบับอังกฤษโดย Wizards of the Coast • ก.ย. 1999 Hasbro ซื้อ Wizards 325 ล้านดอลลาร์\n• ราคา Charizard 1st Edition PSA 10: มี.ค. 2022 $420,000 (PWCC) · ธ.ค. 2025 $550,000 (Heritage) · ก.พ. 2026 $954,800 (Goldin) · 8 ต.ค. 2026 $1,385,274 (ALT, รายงานว่ารอยืนยันการชำระเงิน)\nภาพการ์ดในคลิปเป็นภาพประกอบ (Charizard Base Set เกรด PSA 10) ไม่ใช่ใบที่ขายจริง ราคาบาทเป็นการประมาณที่ 33.6 บาท/ดอลลาร์\nแหล่งข้อมูล: Bulbapedia, Heritage Auctions, CNN, Sports Illustrated, Vice, Gempire, AP/Deseret News, Christian Science Monitor\n\n📷 Makuhari Messe โดย 掬茶 CC BY-SA 4.0 · Hasbro HQ โดย Kenneth C. Zirkel CC BY 4.0 · ตรา 1st Edition (สาธารณสมบัติ)\n🎬 \"First nights in Tokyo\" โดย Guillaume J. Lauzier CC BY 3.0 https://creativecommons.org/licenses/by/3.0/\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #โปเกมอน #การ์ดโปเกมอน #pokemon #pokemontcg #Charizard #ลิซาร์ดอน #การ์ดแพง",
+  "thumb": {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-pk30c-char1.jpg",
+   "hook": "การ์ดโปเกมอน\n1.38 ล้านดอลลาร์",
+   "sub": "ย้อนที่มา 1996",
+   "badge": "ประวัติ"
+  },
+  "engage": "👇 ถ้าเป็นคุณ จะซื้อหรือเก็บ? คอมเมนต์เลย",
+  "campaign": "pkm-charizard-history",
+  "site_path": "/"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[calm, confident Thai storyteller, clear and engaging, natural pacing, not shouting]"
+ },
+ "audio_rate": 1.0,
+ "composition": "CardShow",
+ "theme": "fire",
+ "badge": "ประวัติ",
+ "series": "ตำนานการ์ดโปเกมอน",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055,
+ "slides": [
+  {
+   "beat": "hook",
+   "duration": 7,
+   "text": "การ์ดใบเดียว *1.38 ล้านดอลลาร์*",
+   "title": "การ์ดโปเกมอน\n*1.38 ล้านดอลลาร์*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-pk30c-char1.jpg",
+   "parts": [
+    {
+     "text": "ขายไป *1,385,274 ดอลลาร์*",
+     "say": "การ์ดโปเกมอนใบเดียว ขายไปหนึ่งล้านสามแสนแปดหมื่นห้าพันดอลลาร์!"
+    },
+    {
+     "text": "ราว *46 ล้านบาท*",
+     "say": "ราวสี่สิบหกล้านบาท! แต่มันเริ่มต้นมาจากอะไร? ย้อนไปปีหนึ่งเก้าเก้าหก!"
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 7,
+   "video_url": "https://renderer-production-8b7f.up.railway.app/videos/clip-op09-tok-a.mp4",
+   "title": "ปี *1996*\nที่ญี่ปุ่น",
+   "parts": [
+    {
+     "text": "20 ต.ค. 1996 *ชุดแรก* วางขาย",
+     "say": "ยี่สิบ ตุลาคม ปีหนึ่งเก้าเก้าหก การ์ดโปเกมอนชุดแรก วางขายที่ญี่ปุ่น."
+    },
+    {
+     "text": "ทั้งชุด *102 ใบ*",
+     "say": "ทั้งชุดมีร้อยสองใบ จัดพิมพ์โดย มีเดียแฟคทอรี่."
+    }
+   ]
+  },
+  {
+   "beat": "timeline",
+   "duration": 9,
+   "chapter": "แข่งครั้งแรก",
+   "title": "จากการ์ด\n*สู่การแข่งขัน*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-n-makuhari.jpg",
+   "points": [
+    {
+     "year": "ต.ค. 1996",
+     "label": "วางขาย\nที่ญี่ปุ่น"
+    },
+    {
+     "year": "มิ.ย. 1997",
+     "label": "แข่งอย่างเป็นทางการ\nครั้งแรก"
+    },
+    {
+     "year": "ม.ค. 1999",
+     "label": "ฉบับอังกฤษ\nที่สหรัฐฯ"
+    }
+   ],
+   "parts": [
+    {
+     "text": "14-15 มิ.ย. 1997 *แข่งครั้งแรก*",
+     "say": "มิถุนายน ปีหนึ่งเก้าเก้าเจ็ด จัดการแข่งขันอย่างเป็นทางการครั้งแรก ที่มาคุฮาริ เมสเสะ จังหวัดชิบะ."
+    },
+    {
+     "text": "สามอันดับแรกได้ *การ์ดรางวัล*",
+     "say": "ผู้ชนะสามอันดับแรก ได้การ์ดรางวัลเทรนเนอร์ ซึ่งวันนี้ ราคาสูงมาก!"
+    }
+   ]
+  },
+  {
+   "beat": "art",
+   "duration": 9,
+   "chapter": "ลิซาร์ดอน",
+   "title": "Charizard",
+   "subtitle": "ใบที่ 4 ของชุด • วาดโดย Mitsuhiro Arita",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-pk30c-char1.jpg",
+   "parts": [
+    {
+     "text": "ลิซาร์ดอน *ใบที่ 4* ของชุด",
+     "say": "ลิซาร์ดอน คือการ์ดใบที่สี่ของชุดนี้ วาดโดย มิตสึฮิโระ อาริตะ."
+    },
+    {
+     "text": "ภาพ *ประกอบ* ไม่ใช่ใบที่ขายจริง",
+     "say": "ภาพในคลิปเป็นภาพประกอบ ไม่ใช่ใบที่ขายจริงนะ!"
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 9,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-n-stamp.jpg",
+   "title": "ตราประทับ\n*1st Edition*",
+   "parts": [
+    {
+     "text": "9 ม.ค. 1999 *ฉบับอังกฤษ*",
+     "say": "เก้า มกราคม ปีหนึ่งเก้าเก้าเก้า บริษัท วิซาร์ดส์ ออฟ เดอะ โคสต์ ออกฉบับภาษาอังกฤษ ที่สหรัฐอเมริกา."
+    },
+    {
+     "text": "ตรา *1st Edition* มีเฉพาะ *พิมพ์แรก*",
+     "say": "ตราประทับ เฟิร์สต์ เอดิชัน มีเฉพาะการพิมพ์ครั้งแรกเท่านั้น!"
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 9,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-n-hasbro.jpg",
+   "title": "กระแส\n*ทั่วอเมริกา*",
+   "parts": [
+    {
+     "text": "โรงเรียนหลายแห่ง *สั่งห้าม*",
+     "say": "ปีนั้น โรงเรียนในสหรัฐฯ หลายแห่ง สั่งห้ามเอาการ์ดมาเล่นกันในโรงเรียน."
+    },
+    {
+     "text": "ก.ย. 1999 Hasbro ซื้อ Wizards *325 ล้านดอลลาร์*",
+     "say": "กันยายน ปีเดียวกัน ฮาสโบร ซื้อบริษัทวิซาร์ดส์ ในราคาสามร้อยยี่สิบห้าล้านดอลลาร์."
+    }
+   ]
+  },
+  {
+   "beat": "timeline",
+   "duration": 10,
+   "chapter": "ราคา",
+   "title": "ราคาใบ\n*PSA 10*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-pk30c-char1.jpg",
+   "points": [
+    {
+     "year": "มี.ค. 2022",
+     "label": "$420,000\nPWCC"
+    },
+    {
+     "year": "ธ.ค. 2025",
+     "label": "$550,000\nHeritage"
+    },
+    {
+     "year": "ก.พ. 2026",
+     "label": "$954,800\nGoldin"
+    }
+   ],
+   "parts": [
+    {
+     "text": "*1st Edition PSA 10* มี.ค. 2022 = *$420,000*",
+     "say": "ลิซาร์ดอน เฟิร์สต์ เอดิชัน เกรด PSA สิบ มีนาคม สองศูนย์สองสอง ขายสี่แสนสองหมื่นดอลลาร์."
+    },
+    {
+     "text": "ธ.ค. 2025 *$550,000* ก.พ. 2026 *$954,800*",
+     "say": "ธันวาคมปีที่แล้ว ห้าแสนห้าหมื่น และกุมภาพันธ์ปีนี้ เก้าแสนห้าหมื่นสี่พันแปดร้อยดอลลาร์!"
+    }
+   ]
+  },
+  {
+   "beat": "bignum",
+   "duration": 10,
+   "chapter": "ล่าสุด",
+   "title": "8 ต.ค. 2026 ขายที่",
+   "value": 1385274,
+   "from": 954800,
+   "subtitle": "ดอลลาร์ • ≈ ฿46 ล้าน",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-pk30c-char1.jpg",
+   "parts": [
+    {
+     "text": "*$1,385,274* ที่ ALT",
+     "say": "แปดตุลาคม ปีนี้ ขายที่แพลตฟอร์มออลต์ หนึ่งล้านสามแสนแปดหมื่นห้าพันดอลลาร์!"
+    },
+    {
+     "text": "*รอยืนยันการชำระเงิน*",
+     "say": "แต่รายงานระบุว่า ยังรอยืนยันการชำระเงิน."
+    },
+    {
+     "text": "PSA 10 มีราว *120-125 ใบ* ทั่วโลก",
+     "say": "ใบแบบนี้ เกรด PSA สิบ ทั้งโลกมีราวร้อยยี่สิบถึงร้อยยี่สิบห้าใบเท่านั้น!"
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 6,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-pk30c-char1.jpg",
+   "text": "คุณจะ *ซื้อ* หรือ *เก็บ*?",
+   "parts": [
+    {
+     "text": "ถ้าเก็บมาตั้งแต่ 2022 *โตกว่า 3 เท่า*",
+     "say": "ใครเก็บมาตั้งแต่สองศูนย์สองสอง ราคาโตกว่าสามเท่าเลยนะ!"
+    },
+    {
+     "text": "คุณจะ *ซื้อ* หรือ *เก็บ*?",
+     "say": "แล้วคุณล่ะ จะซื้อ หรือจะเก็บ? คอมเมนต์ไว้เลย!"
+    }
+   ]
+  },
+  {
+   "beat": "still",
+   "duration": 4,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "image_mode": "still",
+   "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+   "no_caption": true,
+   "parts": [
+    {
+     "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+     "say": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้เลย!"
+    },
+    {
+     "text": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด",
+     "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ]
+  }
+ ]
+}
