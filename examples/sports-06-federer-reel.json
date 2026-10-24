@@ -1,0 +1,356 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, confident, clear sports presenter, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "composition": "CardShow",
+ "theme": "water",
+ "badge": "กีฬา #6",
+ "series": "การ์ดกีฬาสุดแพง",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055,
+ "slides": [
+  {
+   "beat": "hook",
+   "duration": 4,
+   "text": "การ์ดของ *เฟเดอเรอร์*",
+   "title": "เฟเดอเรอร์\n*การ์ดแพง*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-fed-card-patch.jpg",
+   "parts": [
+    {
+     "text": "การ์ดเฟเดอเรอร์ *84,000 ดอลลาร์*",
+     "say": "แปดหมื่นสี่พันดอลลาร์! ราวสองล้านแปดแสนบาท! นี่คือราคาการ์ดของ เฟเดอเรอร์!"
+    },
+    {
+     "text": "ขายเดือน *ต.ค. 2022* หลังเขาเกษียณ",
+     "say": "ขายเมื่อเดือนตุลาคม สองศูนย์สองสอง ประมาณหนึ่งเดือน หลังเขาเกษียณ!"
+    }
+   ]
+  },
+  {
+   "beat": "reveal",
+   "duration": 4,
+   "text": "การ์ด *ลายเซ็น + ชิ้นส่วนเสื้อ*",
+   "title": "Roger Federer",
+   "subtitle": "NetPro 2003 • Patch Auto /25 • BGS 9.5",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-fed-card-patch.jpg",
+   "parts": [
+    {
+     "text": "การ์ดปี *2003* ผลิตแค่ *25 ใบ*",
+     "say": "การ์ดปีสองศูนย์ศูนย์สาม ชุดเน็ตโปร ผลิตแค่ยี่สิบห้าใบในโลก!"
+    },
+    {
+     "text": "มี *ลายเซ็น* และ *ชิ้นส่วนเสื้อ* ที่ใช้แข่งจริง",
+     "say": "บนการ์ด มีลายเซ็นของเขา และชิ้นส่วนเสื้อที่ใช้แข่งจริง!"
+    },
+    {
+     "text": "เกรด *BGS 9.5* ไม่มีใบไหนสูงกว่า",
+     "say": "เกรดเก้าจุดห้า และทั่วโลก ไม่มีใบไหนเกรดสูงกว่านี้!"
+    }
+   ]
+  },
+  {
+   "beat": "timeline",
+   "duration": 4,
+   "chapter": "ทำไมถึงแพง",
+   "title": "เขาคือ *ตำนาน*",
+   "text": "เส้นทาง *แกรนด์สแลม*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-fed-wb2005.jpg",
+   "points": [
+    {
+     "year": "2003",
+     "label": "แชมป์ใหญ่แรก\nวิมเบิลดัน"
+    },
+    {
+     "year": "2009",
+     "label": "แชมป์ที่ 15\nแซงแซมพราส"
+    },
+    {
+     "year": "2018",
+     "label": "คนแรกที่\nครบ 20 แชมป์"
+    }
+   ],
+   "parts": [
+    {
+     "text": "2003 แชมป์ใหญ่แรก *วิมเบิลดัน* อายุ 21",
+     "say": "สองศูนย์ศูนย์สาม แชมป์แกรนด์สแลมแรก ที่วิมเบิลดัน ตอนอายุแค่ยี่สิบเอ็ด!"
+    },
+    {
+     "text": "2009 แซงสถิติ *แซมพราส* ที่ 14",
+     "say": "สองศูนย์ศูนย์เก้า แซงสถิติของ พีท แซมพราส ที่สิบสี่แชมป์!"
+    },
+    {
+     "text": "2018 คนแรกที่ครบ *20 แชมป์*",
+     "say": "และสองศูนย์หนึ่งแปด กลายเป็นผู้ชายคนแรก ที่ครบยี่สิบแชมป์แกรนด์สแลม!"
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 6,
+   "text": "ฟุตเทจจริง *ซ้อมที่ยูเอส โอเพน 2012*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-fed-wb2009a.jpg",
+   "video_url": "https://renderer-production-8b7f.up.railway.app/videos/clip-federer-practice.mp4",
+   "parts": [
+    {
+     "text": "ภาพจริง *เฟเดอเรอร์ซ้อม* ที่ยูเอส โอเพน 2012",
+     "say": "นี่คือภาพจริง เฟเดอเรอร์ลงซ้อม ที่ยูเอส โอเพน ปีสองศูนย์หนึ่งสอง ต่อหน้าแฟนๆ!"
+    },
+    {
+     "text": "คลิป: *JC* (Flickr) CC BY-SA 2.0",
+     "say": "คนดูเต็มสนาม แค่มาดูตอนซ้อม!"
+    }
+   ]
+  },
+  {
+   "beat": "bignum",
+   "duration": 4,
+   "chapter": "วิมเบิลดัน",
+   "title": "แชมป์ วิมเบิลดัน",
+   "value": 8,
+   "subtitle": "สมัย",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-fed-wb2009a.jpg",
+   "text": "ตั้งแต่ *2003* ถึง *2017*",
+   "parts": [
+    {
+     "text": "ชนะ *วิมเบิลดัน* ถึง 8 สมัย",
+     "say": "วิมเบิลดัน เขาชนะถึงแปดสมัย!"
+    },
+    {
+     "text": "ตั้งแต่ *2003* ถึง *2017*",
+     "say": "ตั้งแต่สองศูนย์ศูนย์สาม ไปจนถึงสองศูนย์หนึ่งเจ็ด!"
+    }
+   ]
+  },
+  {
+   "beat": "bignum",
+   "duration": 4,
+   "chapter": "มือหนึ่งโลก",
+   "title": "เป็นมือ 1 โลกรวม",
+   "value": 310,
+   "subtitle": "สัปดาห์",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-fed-wb2009b.jpg",
+   "text": "ติดต่อกัน *237 สัปดาห์* เป็นสถิติ",
+   "parts": [
+    {
+     "text": "เป็น *มือ 1 โลก* รวม 310 สัปดาห์",
+     "say": "เขาเป็นมือหนึ่งของโลก รวมสามร้อยสิบสัปดาห์!"
+    },
+    {
+     "text": "ติดต่อกัน *237 สัปดาห์* สถิติชาย",
+     "say": "และเป็นมือหนึ่งติดกัน สองร้อยสามสิบเจ็ดสัปดาห์ ซึ่งเป็นสถิติ!"
+    }
+   ]
+  },
+  {
+   "beat": "timeline",
+   "duration": 4,
+   "chapter": "ปี 2022",
+   "title": "เกษียณ แล้ว *ราคาพุ่ง*",
+   "text": "ราว *หนึ่งเดือน* หลังเกษียณ",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-fed-wb2005.jpg",
+   "points": [
+    {
+     "year": "15 ก.ย.",
+     "label": "ประกาศ\nเกษียณ"
+    },
+    {
+     "year": "23 ก.ย.",
+     "label": "เลเวอร์คัพ\nลอนดอน"
+    },
+    {
+     "year": "21 ต.ค.",
+     "label": "การ์ดขาย\n84K"
+    }
+   ],
+   "parts": [
+    {
+     "text": "15 ก.ย. 2022 *ประกาศเกษียณ*",
+     "say": "สิบห้ากันยายน เขาประกาศเกษียณ!"
+    },
+    {
+     "text": "เลเวอร์คัพ *ลอนดอน* เป็นรายการสุดท้าย",
+     "say": "ตามด้วยเลเวอร์คัพที่ลอนดอน รายการสุดท้ายของเขา!"
+    },
+    {
+     "text": "21 ต.ค. การ์ดขาย *84,000*",
+     "say": "และวันที่ยี่สิบเอ็ดตุลาคม การ์ดของเขาขาย แปดหมื่นสี่พันดอลลาร์!"
+    }
+   ]
+  },
+  {
+   "beat": "bignum",
+   "duration": 4,
+   "chapter": "ตลาดอีเบย์",
+   "title": "ค้นหาการ์ดรุกกี้ เพิ่มขึ้น",
+   "value": 3900,
+   "subtitle": "เปอร์เซ็นต์ (eBay)",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-fed-card-g3.jpg",
+   "text": "ยอดขายของสะสม *+1,050%*",
+   "parts": [
+    {
+     "text": "ค้นหา *การ์ดรุกกี้* เพิ่ม 3,900%",
+     "say": "บนอีเบย์ คนค้นหาการ์ดรุกกี้ของเขา เพิ่มขึ้นสามพันเก้าร้อยเปอร์เซ็นต์!"
+    },
+    {
+     "text": "ยอดขายของสะสม *เพิ่ม 1,050%*",
+     "say": "ส่วนยอดขายของสะสม เพิ่มหนึ่งพันห้าสิบเปอร์เซ็นต์!"
+    }
+   ]
+  },
+  {
+   "beat": "reveal",
+   "duration": 4,
+   "text": "การ์ดรุกกี้ที่ใครๆ *ตามหา*",
+   "title": "NetPro Elite Glossy",
+   "subtitle": "#G3 • ผลิต 100 ใบ • PSA 10",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-fed-card-g3.jpg",
+   "parts": [
+    {
+     "text": "*NetPro Elite Glossy* #G3 ปี 2003",
+     "say": "ใบที่นักสะสมตามหา คือเน็ตโปร อีไลท์ กลอสซี่ หมายเลขจีสามปีสองศูนย์ศูนย์สาม!"
+    },
+    {
+     "text": "ผลิต *100 ใบ* เกรด *PSA 10*",
+     "say": "ผลิตแค่หนึ่งร้อยใบ เกรดพีเอสเอสิบ ซึ่งคือเกรดเต็ม!"
+    }
+   ]
+  },
+  {
+   "beat": "timeline",
+   "duration": 4,
+   "chapter": "ราคา PSA 10",
+   "title": "ราคา *เรือนหมื่น*",
+   "text": "ใบเดียวกัน เกรดเดียวกัน",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-fed-card-g3.jpg",
+   "points": [
+    {
+     "year": "เม.ย. 2021",
+     "label": "eBay\n$20,000"
+    },
+    {
+     "year": "2024",
+     "label": "รายงาน\n$52,127"
+    },
+    {
+     "year": "ก.ย. 2026",
+     "label": "Fanatics\n$45,600"
+    }
+   ],
+   "parts": [
+    {
+     "text": "เม.ย. 2021 ขายใน eBay *20,000*",
+     "say": "เมษายน สองศูนย์สองหนึ่ง ขายบนอีเบย์ สองหมื่นดอลลาร์!"
+    },
+    {
+     "text": "ปี 2024 มีรายงาน *52,127*",
+     "say": "ปีสองศูนย์สองสี่ มีรายงานว่าขายได้ ห้าหมื่นสองพันหนึ่งร้อยยี่สิบเจ็ด!"
+    },
+    {
+     "text": "ก.ย. 2026 Fanatics *45,600*",
+     "say": "และกันยายนปีนี้ ที่แฟนาติกส์ สี่หมื่นห้าพันหกร้อยดอลลาร์!"
+    }
+   ]
+  },
+  {
+   "beat": "versions",
+   "duration": 4,
+   "text": "ภาพการ์ดจาก *หน้าประมูล*",
+   "images": [
+    "https://renderer-production-8b7f.up.railway.app/assets/fix-fed-card-patch.jpg",
+    "https://renderer-production-8b7f.up.railway.app/assets/fix-fed-card-g3.jpg"
+   ],
+   "labels": [
+    "Patch Auto /25 BGS 9.5",
+    "NetPro #G3 PSA 10"
+   ],
+   "parts": [
+    {
+     "text": "ภาพการ์ดจาก *หน้าประมูล Fanatics Collect*",
+     "say": "ภาพการ์ดในคลิป มาจากหน้าประมูล แฟนาติกส์ คอลเลกต์!"
+    },
+    {
+     "text": "*ซ้าย* คือใบที่ขาย 84,000 ส่วน *ขวา* คนละใบ",
+     "say": "ใบซ้ายคือใบที่ขายแปดหมื่นสี่พันดอลลาร์ ส่วนใบขวา เป็นการ์ดรุกกี้ อีกใบหนึ่ง ไม่ใช่ใบเดียวกัน!"
+    }
+   ]
+  },
+  {
+   "beat": "versions",
+   "duration": 4,
+   "text": "ภาพนักเทนนิสจาก *Wikimedia Commons*",
+   "images": [
+    "https://renderer-production-8b7f.up.railway.app/assets/fix-fed-wb2005.jpg",
+    "https://renderer-production-8b7f.up.railway.app/assets/fix-fed-wb2009a.jpg",
+    "https://renderer-production-8b7f.up.railway.app/assets/fix-fed-wb2009b.jpg"
+   ],
+   "labels": [
+    "Holtham BY-SA 3.0",
+    "Squeaky Knees BY 2.0",
+    "J. Smith BY-SA 2.0"
+   ],
+   "parts": [
+    {
+     "text": "ภาพ *Wikimedia Commons* ให้เครดิตผู้ถ่าย",
+     "say": "ภาพของเฟเดอเรอร์ ที่วิมเบิลดัน มาจากวิกิมีเดีย คอมมอนส์ ให้เครดิตช่างภาพ ตามที่เห็นบนจอ!"
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 4,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-fed-card-patch.jpg",
+   "text": "จะ *เก็บ* หรือ *ขาย*?",
+   "parts": [
+    {
+     "text": "ถ้ามีการ์ดเฟเดอเรอร์ จะ *เก็บ* หรือ *ขาย*?",
+     "say": "ถ้าคุณมีการ์ดเฟเดอเรอร์สักใบ จะเก็บ หรือขาย?"
+    },
+    {
+     "text": "พิมพ์ *1* เก็บ พิมพ์ *2* ขาย",
+     "say": "พิมพ์หนึ่ง เก็บ! พิมพ์สอง ขาย!"
+    },
+    {
+     "text": "*กดติดตาม* ไว้ ยังมีอีกเยอะ",
+     "say": "กดติดตามไว้ ยังมีการ์ดแพงอีกเยอะ!"
+    }
+   ]
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "image_mode": "still",
+   "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+   "duration": 4,
+   "no_caption": true,
+   "beat": "still",
+   "parts": [
+    {
+     "text": "ชอบเรื่องเล่าแบบนี้ *กดติดตาม* ไว้เลย",
+     "say": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้เลย!"
+    },
+    {
+     "text": "*ซื้อ ขาย สะสม แข่งเกมส์การ์ด* ที่ www.cardzcenter.com",
+     "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "การ์ดเฟเดอเรอร์ใบเดียว 84,000 ดอลลาร์ ขายหลังเขาเกษียณ | การ์ดเทนนิสสุดฮิต #shorts",
+  "description": "การ์ดเทนนิสของ โรเจอร์ เฟเดอเรอร์ ปี 2003 ชุด NetPro International Series Authentic Apparel Autograph ผลิต 25 ใบ เกรด BGS 9.5 (ลายเซ็น + ชิ้นส่วนเสื้อที่ใช้แข่ง) ขายได้ 84,000 ดอลลาร์ (ราว 2.8 ล้านบาท) ใน Fanatics Collect วันที่ 21 ต.ค. 2022 หลังเขาประกาศเกษียณ 15 ก.ย. 2022 และลงเล่นรายการสุดท้ายที่ Laver Cup ลอนดอน ส่วนการ์ดรุกกี้ NetPro Elite Glossy #G3 /100 PSA 10 ขาย 20,000 ดอลลาร์ (eBay เม.ย. 2021) และ 45,600 ดอลลาร์ (Fanatics ก.ย. 2026) ราคาไม่นิ่ง ตัวเลขอัตราแลกเปลี่ยนเป็นค่าประมาณ\n\n👇 ถ้ามีการ์ดเฟเดอเรอร์ จะเก็บหรือขาย? พิมพ์ 1 = เก็บ / 2 = ขาย\n\nภาพการ์ด: หน้าประมูล Fanatics Collect (ใบที่ขาย 84,000 และใบ NetPro #G3 PSA 10 อีกชุดหนึ่ง)\nภาพนักเทนนิส (Wikimedia Commons): \"Roger Federer at Wimbledon 2005\" โดย Derek Holtham CC BY-SA 3.0 · \"Roger Federer (26 June 2009, Wimbledon)\" โดย Squeaky Knees CC BY 2.0 · \"Roger Federer at the 2009 Wimbledon Championships 03\" โดย Justin Smith CC BY-SA 2.0\nคลิปซ้อมยูเอส โอเพน 2012: \"Federer v. Clilic Practice with Crowd\" โดย JC (Flickr) CC BY-SA 2.0 https://creativecommons.org/licenses/by-sa/2.0/\nข้อมูล: Wikipedia, Sports Collectors Digest (eBay), Fanatics Collect, SportsCardsPro, Collectibles.com\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #เฟเดอเรอร์ #rogerfederer #การ์ดเทนนิส #การ์ดสะสม #การ์ดแพง #tennis",
+  "thumb": {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-fed-card-patch.jpg",
+   "hook": "การ์ดเฟเดอเรอร์\n84,000 ดอลลาร์",
+   "sub": "การ์ดเทนนิสสุดฮิต",
+   "badge": ""
+  },
+  "publish_at": "2026-10-30T05:00:00Z",
+  "engage": "👇 ถ้ามีการ์ดเฟเดอเรอร์ จะเก็บหรือขาย? พิมพ์ 1 = เก็บ / 2 = ขาย\nชอบเรื่องการ์ดแบบนี้ กด ❤️ ไว้ด้วยนะ"
+ }
+}
