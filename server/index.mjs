@@ -1151,7 +1151,7 @@ app.post("/render", auth, (req, res) => {
         price: s.price !== undefined ? String(s.price).slice(0, 30) : undefined,
         price_label: s.price_label !== undefined ? String(s.price_label).slice(0, 30) : undefined,
         rank: s.rank !== undefined ? String(s.rank).slice(0, 6) : undefined,
-        video_url: typeof s.video_url === "string" && /^https:\/\/videos\.pexels\.com\//.test(s.video_url) ? s.video_url : undefined,
+        video_url: typeof s.video_url === "string" && /^https:\/\/(videos\.pexels\.com\/|renderer-production-8b7f\.up\.railway\.app\/videos\/wan-)/.test(s.video_url) ? s.video_url : undefined,
         pos: typeof s.pos === "string" && /^[0-9.% ]{3,20}$/.test(s.pos) ? s.pos : undefined,
         fit: s.fit === "contain" ? "contain" : s.fit === "cover" ? "cover" : undefined,
         from: optNum(s.from),

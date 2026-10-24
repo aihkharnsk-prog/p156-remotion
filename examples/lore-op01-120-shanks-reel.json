@@ -56,7 +56,7 @@
    "focus_x": 50,
    "focus_y": 14,
    "focus_zoom": 2.4,
-   "title": "เด็กคนนั้น\nคือ *ลูฟี่*",
+   "title": "เด็กคนนั้น\nคือลูฟี่",
    "parts": [
     {
      "text": "เด็กคนนั้นคือ *ลูฟี่*",
@@ -88,10 +88,10 @@
    "beat": "zoom",
    "duration": 8,
    "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-shanks-op01-120.jpg",
-   "focus_x": 50,
-   "focus_y": 40,
-   "focus_zoom": 1.5,
-   "title": "ใบนี้\n*ฉากหลังคือมังงะ*",
+   "focus_x": 24,
+   "focus_y": 24,
+   "focus_zoom": 2.1,
+   "title": "ใบนี้\nฉากหลังคือมังงะ",
    "parts": [
     {
      "text": "ใบนี้ฉากหลังเป็น *ลายเส้นมังงะ*",
