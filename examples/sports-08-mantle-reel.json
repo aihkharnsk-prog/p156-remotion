@@ -1,0 +1,183 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "การ์ดใบเดียว ซื้อมา $50,000 ขายได้ $12.6 ล้าน มิกกี้ แมนเทิล 1952 | การ์ดกีฬาสุดแพง #shorts",
+  "description": "การ์ด Mickey Mantle 1952 Topps #311 ซื้อมา $50,000 ปี 1991 ขายได้ $12.6 ล้าน (ราว 423 ล้านบาท) ปี 2022\n• ขายที่ Heritage Auctions ปิดประมูล 27-28 ส.ค. 2022 เกรด SGC 9.5 ราคา $12.6 ล้านรวมค่าธรรมเนียมผู้ซื้อ 20% (ผู้ขายได้ไม่ถึงนี้ ไม่ใช่กำไร) แพงกว่าสถิติเดิมกว่า $5 ล้าน\n• Anthony Giordano ซื้อจากพ่อค้า Al \"Mr. Mint\" Rosen ที่งานการ์ดในแมดิสันสแควร์การ์เดน วันพ่อ 1991 ราคา $50,000 ไม่เคยขายต่อ ส่งตรวจเกรดที่ SGC ปี 2022 ได้ 9.5 (SGC 9.5 ใบแรกของ Mantle 1952)\n• ชุด 1952 Topps มี 407 ใบ ใบ #311 เป็นต้นซีรีส์สุดท้าย สถิติถูกแซงเมื่อ ส.ค. 2025 โดยการ์ด Jordan/Kobe $12.932 ล้าน\n• Mantle: 536 โฮมรัน, แชมป์เวิลด์ซีรีส์ 7 สมัย, Triple Crown 1956 ราคาบาทเป็นการประมาณที่ 33.6 บาท/ดอลลาร์\nแหล่งข้อมูล: Sports Collectors Digest, Beckett, Heritage Auctions, ABC7 Chicago, Wikipedia\n📷 ภาพการ์ด: Heritage Auctions · ภาพ Giordano: Jeff Owens / SCD · ภาพ Mantle 1957 (AP, สาธารณสมบัติ) · ภาพ Mantle 1953 (สาธารณสมบัติ)\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #การ์ดเบสบอล #MickeyMantle #การ์ดกีฬา #mlb #การ์ดแพง",
+  "thumb": {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-mm-card.jpg",
+   "hook": "ซื้อมา $50,000\nขายได้ $12.6 ล้าน",
+   "sub": "แมนเทิล 1952",
+   "badge": "เบสบอล"
+  },
+  "engage": "👇 ถ้ากลับไป 1991 คุณจะซื้อไหม?",
+  "campaign": "sports-mantle",
+  "site_path": "/"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, confident, clear sports presenter, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "slides": [
+  {
+   "beat": "hook",
+   "duration": 7,
+   "text": "ซื้อมา *$50,000* ขายได้ *$12.6 ล้าน*",
+   "title": "การ์ดใบเดียว\n*ซื้อมา $50,000*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-mm-card.jpg",
+   "parts": [
+    {
+     "text": "ซื้อมา *$50,000* เมื่อปี 1991",
+     "say": "การ์ดใบเดียว ซื้อมาห้าหมื่นดอลลาร์ เมื่อปีหนึ่งเก้าเก้าหนึ่ง!"
+    },
+    {
+     "text": "เก็บ *31 ปี* ขายได้ *$12.6 ล้าน*",
+     "say": "เก็บไว้สามสิบเอ็ดปี แล้วขายได้สิบสองล้านหกแสนดอลลาร์!"
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 9,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-mm-gif.jpg",
+   "title": "วันพ่อ\n*ปี 1991*",
+   "parts": [
+    {
+     "text": "งานการ์ดที่ *Madison Square Garden*",
+     "say": "วันพ่อ ปีหนึ่งเก้าเก้าหนึ่ง ที่งานการ์ดในแมดิสัน สแควร์ การ์เดน."
+    },
+    {
+     "text": "แอนโทนี จิออร์ดาโน ซื้อจากพ่อค้า *$50,000*",
+     "say": "แอนโทนี จิออร์ดาโน ซื้อการ์ดใบนี้จากพ่อค้า ในราคาห้าหมื่นดอลลาร์ และไม่เคยขายต่ออีกเลย!"
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 9,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-mm-card.jpg",
+   "fit": "contain",
+   "title": "ใบที่ *311*\nท็อปส์ 1952",
+   "parts": [
+    {
+     "text": "*Topps 1952* ใบที่ 311 มิกกี้ แมนเทิล",
+     "say": "ท็อปส์ ปีหนึ่งเก้าห้าสอง ใบที่สามร้อยสิบเอ็ด มิกกี้ แมนเทิล."
+    },
+    {
+     "text": "ไม่เคยส่งตรวจเกรด *31 ปี*",
+     "say": "เก็บไว้สามสิบเอ็ดปี ไม่เคยส่งตรวจเกรดเลย จนปีสองศูนย์สองสอง ส่งให้ เอส จี ซี ได้เกรดเก้าจุดห้า!"
+    }
+   ]
+  },
+  {
+   "beat": "bignum",
+   "duration": 10,
+   "chapter": "ราคาปิด",
+   "title": "27-28 ส.ค. 2022",
+   "value": 12600000,
+   "from": 50000,
+   "subtitle": "ดอลลาร์ • ราว 423 ล้านบาท",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-mm-card.jpg",
+   "parts": [
+    {
+     "text": "ขาย *$12.6 ล้าน* ที่ Heritage",
+     "say": "ปลายสิงหาคม สองศูนย์สองสอง ขายที่เฮอริเทจ ออกชั่น สิบสองล้านหกแสนดอลลาร์!"
+    },
+    {
+     "text": "เป็นราคา *รวมค่าธรรมเนียม* 20%",
+     "say": "ราคานี้รวมค่าธรรมเนียมผู้ซื้อยี่สิบเปอร์เซ็นต์ คนขายจึงได้ไม่ถึงนี้ และมันไม่ใช่กำไรนะ!"
+    },
+    {
+     "text": "แพงกว่าสถิติเดิม *เกิน $5 ล้าน*",
+     "say": "แต่ก็ทำลายสถิติการ์ดกีฬาเดิม ไปกว่าห้าล้านดอลลาร์!"
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 8,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-mm-57.jpg",
+   "title": "ทำไม *แมนเทิล*\nถึงเป็นตำนาน",
+   "parts": [
+    {
+     "text": "*536* โฮมรัน • *7* แชมป์",
+     "say": "แมนเทิล เล่นให้แยงกี้ส์ ตีโฮมรันห้าร้อยสามสิบหกลูก และได้แชมป์เวิลด์ซีรีส์เจ็ดสมัย."
+    },
+    {
+     "text": "ทริปเปิลคราวน์ *ปี 1956*",
+     "say": "ปีหนึ่งเก้าห้าหก เขาคว้าทริปเปิลคราวน์ คือตีเฉลี่ย โฮมรัน และแต้มวิ่งเข้าสูงสุดในลีก!"
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 7,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-mm-card.jpg",
+   "title": "ใบที่ 311\n*ออกช้า*",
+   "parts": [
+    {
+     "text": "ใบ 311 คือ *ต้นซีรีส์สุดท้าย*",
+     "say": "ใบที่สามร้อยสิบเอ็ด เป็นต้นซีรีส์สุดท้ายของชุดสี่ร้อยเจ็ดใบ."
+    },
+    {
+     "text": "ออกช้า *ขายไม่ดี*",
+     "say": "เล่ากันว่า ออกช้า ขายไม่ดี ใบเหลือจึงน้อย"
+    }
+   ],
+   "fit": "contain"
+  },
+  {
+   "beat": "full",
+   "duration": 8,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-jd-rec.jpg",
+   "fit": "contain",
+   "title": "แต่สถิติ\n*อยู่ได้ 3 ปี*",
+   "parts": [
+    {
+     "text": "ส.ค. 2025 *จอร์แดน+โคบี้* $12.932 ล้าน",
+     "say": "สิงหาคม สองศูนย์สองห้า การ์ดจอร์แดนกับโคบี้ ขายได้สิบสองล้านเก้าแสนสามหมื่นสองพันดอลลาร์ แซงแมนเทิลไป!"
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 6,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-mm-card.jpg",
+   "text": "ถ้ากลับไป *1991* คุณจะซื้อไหม?",
+   "parts": [
+    {
+     "text": "ถ้ากลับไป *ปี 1991* คุณจะซื้อไหม?",
+     "say": "ถ้าย้อนกลับไปปีเก้าหนึ่ง คุณจะซื้อการ์ดใบนี้ไหม? คอมเมนต์ไว้เลย!"
+    }
+   ]
+  },
+  {
+   "beat": "still",
+   "duration": 4,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "image_mode": "still",
+   "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+   "no_caption": true,
+   "parts": [
+    {
+     "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+     "say": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้เลย!"
+    },
+    {
+     "text": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด",
+     "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ]
+  }
+ ],
+ "composition": "CardShow",
+ "theme": "water",
+ "badge": "เบสบอล",
+ "series": "การ์ดเบสบอลสุดแพง",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055
+}
