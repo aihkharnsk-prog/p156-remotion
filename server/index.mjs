@@ -309,7 +309,7 @@ async function ttsToFile(text, destPath, tts, raw = false) {
 
 // เสียงก้อนเดียวทั้งบท + เวลาต่อตัวอักษร (with-timestamps) → หาเวลาเริ่มของแต่ละท่อน
 // แก้คำที่เสียงพากย์อ่านเพี้ยน (ใช้กับเสียงเท่านั้น ซับยังเขียนแบบเดิม)
-const SAY_FIX = [[/การ์ด/g, "ก๊าด"], [/เกมส์/g, "เกม"]];
+const SAY_FIX = [[/การ์ด/g, "ก๊าด"], [/เกมส์/g, "เกม"], [/PSA|พีเอสเอ|พี เอส เอ/g, "พี เอส เอ"]];
 const fixSay = (t) => SAY_FIX.reduce((a, [re, to]) => a.replace(re, to), String(t));
 async function ttsSingleWithTimes(says, rawPath, tts) {
   says = says.map(fixSay);
