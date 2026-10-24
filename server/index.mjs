@@ -1151,7 +1151,7 @@ app.post("/render", auth, (req, res) => {
         price: s.price !== undefined ? String(s.price).slice(0, 30) : undefined,
         price_label: s.price_label !== undefined ? String(s.price_label).slice(0, 30) : undefined,
         rank: s.rank !== undefined ? String(s.rank).slice(0, 6) : undefined,
-        video_url: typeof s.video_url === "string" && /^https:\/\/(videos\.pexels\.com\/|renderer-production-8b7f\.up\.railway\.app\/videos\/wan-)/.test(s.video_url) ? s.video_url : undefined,
+        video_url: typeof s.video_url === "string" && /^https:\/\/(videos\.pexels\.com\/|renderer-production-8b7f\.up\.railway\.app\/videos\/(?:wan|clip)-)/.test(s.video_url) ? s.video_url : undefined,
         pos: typeof s.pos === "string" && /^[0-9.% ]{3,20}$/.test(s.pos) ? s.pos : undefined,
         fit: s.fit === "contain" ? "contain" : s.fit === "cover" ? "cover" : undefined,
         from: optNum(s.from),
@@ -1745,6 +1745,74 @@ app.post("/img-fix", auth, async (req, res) => {
     fs.unlink(src).catch(() => {});
     console.log(`[img-fix] ${name} ${stdout.trim()} -> /assets/fix-${name}.jpg`);
   } catch (e) { console.log(`[img-fix] ${name} error ${String(e.message || e).slice(0, 200)}`); }
+});
+
+// ---- Real footage from Wikimedia Commons (CC BY / PD only; credit in label + description) ----
+// POST /clip-fetch {url, name} -> download an upload.wikimedia.org video to /assets/clipsrc-<name>.bin (log: size + duration)
+app.post("/clip-fetch", auth, async (req, res) => {
+  const { url } = req.body || {};
+  const name = String(req.body?.name || "").replace(/[^a-z0-9-]/gi, "").slice(0, 40);
+  if (!name || !/^https:\/\/(upload|commons)\.wikimedia\.org\//.test(String(url))) return res.status(400).json({ error: "need name + wikimedia url" });
+  res.json({ ok: true });
+  try {
+    await fs.mkdir(ASSET_DIR, { recursive: true });
+    const dest = path.join(ASSET_DIR, `clipsrc-${name}.bin`);
+    let r;
+    for (let i = 0; i < 6; i++) {
+      r = await fetch(url, { headers: UA, redirect: "follow" });
+      if (r.status !== 429 && r.status !== 503) break;
+      await new Promise((ok) => setTimeout(ok, 8000 * (i + 1)));
+    }
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const { Readable } = await import("node:stream");
+    const { pipeline } = await import("node:stream/promises");
+    const fsn = await import("node:fs");
+    await pipeline(Readable.fromWeb(r.body), fsn.createWriteStream(dest));
+    const { stdout } = await execFileP("ffprobe", ["-v", "error", "-show_entries", "format=duration:stream=width,height", "-of", "csv=p=0", dest]).catch((e) => ({ stdout: "probe-failed " + String(e.message).slice(0, 100) }));
+    const st = await fs.stat(dest);
+    console.log(`[clip] fetch ${name} ok bytes=${st.size} probe=${stdout.replace(/\s+/g, " ").trim()}`);
+  } catch (e) { console.log(`[clip] fetch ${name} error ${String(e?.message || e).slice(0, 200)}`); }
+});
+// POST /clip-sheet {name, times:[sec...], width=240} -> contact sheet (base64 JPEG parts) in the log "[clip] sheet"
+app.post("/clip-sheet", auth, async (req, res) => {
+  const name = String(req.body?.name || "").replace(/[^a-z0-9-]/gi, "");
+  const times = (Array.isArray(req.body?.times) ? req.body.times : []).slice(0, 24).map(Number);
+  const width = Math.min(Number(req.body?.width) || 240, 400);
+  res.json({ ok: true, n: times.length });
+  try {
+    const src = path.join(ASSET_DIR, `clipsrc-${name}.bin`);
+    const frames = [];
+    for (const [k, t] of times.entries()) {
+      const fo = path.join(ASSET_DIR, `cs-${k}.jpg`);
+      await execFileP("ffmpeg", ["-y", "-v", "error", "-ss", String(t), "-i", src, "-frames:v", "1", "-vf", `scale=${width}:-1`, "-q:v", "6", fo], { timeout: 60000 });
+      frames.push(fo);
+    }
+    const out = path.join(ASSET_DIR, "cs-sheet.jpg");
+    const cols = Math.min(6, frames.length);
+    await execFileP("python3", ["-c", `import sys\nfrom PIL import Image, ImageDraw\nout,c=sys.argv[1],int(sys.argv[2])\nts=sys.argv[3].split(',')\nfs=sys.argv[4:]\nims=[Image.open(f) for f in fs]\nw,h=ims[0].size\nr=(len(ims)+c-1)//c\nS=Image.new('RGB',(w*c,h*r),'white')\nfor i,im in enumerate(ims):\n    S.paste(im,((i%c)*w,(i//c)*h)); ImageDraw.Draw(S).text(((i%c)*w+4,(i//c)*h+4),ts[i],fill=(255,255,0))\nS.save(out,quality=70)`, out, String(cols), times.join(","), ...frames], { timeout: 30000 });
+    const b64 = (await fs.readFile(out)).toString("base64");
+    const parts = Math.ceil(b64.length / 6000);
+    console.log(`[clip] sheet meta ${name} ${JSON.stringify(times)} parts=${parts}`);
+    for (let p = 0; p < parts; p++) console.log(`[clip] sheet ${p + 1}/${parts} ${b64.slice(p * 6000, (p + 1) * 6000)}`);
+  } catch (e) { console.log(`[clip] sheet error ${String(e?.message || e).slice(0, 300)}`); }
+});
+// POST /clip-cut {name, start, dur=6, out, cx=0.5} -> /videos/clip-<out>.mp4 : vertical 720x1280 crop (cx = horizontal centre 0..1), no audio
+app.post("/clip-cut", auth, async (req, res) => {
+  const name = String(req.body?.name || "").replace(/[^a-z0-9-]/gi, "");
+  const out = String(req.body?.out || "").replace(/[^a-z0-9-]/gi, "").slice(0, 40);
+  const start = Math.max(0, Number(req.body?.start) || 0);
+  const dur = Math.min(12, Math.max(1, Number(req.body?.dur) || 6));
+  const cx = Math.min(1, Math.max(0, req.body?.cx === undefined ? 0.5 : Number(req.body.cx)));
+  if (!name || !out) return res.status(400).json({ error: "need name + out" });
+  res.json({ ok: true, url: `${PUBLIC_BASE_URL}/videos/clip-${out}.mp4` });
+  try {
+    const src = path.join(ASSET_DIR, `clipsrc-${name}.bin`);
+    const dest = path.join(OUT_DIR, `clip-${out}.mp4`);
+    const vf = `crop=floor(ih*9/16/2)*2:ih:max(0\\,min(iw-floor(ih*9/16/2)*2\\,iw*${cx}-ih*9/32)):0,scale=720:1280,fps=30,format=yuv420p`;
+    await execFileP("ffmpeg", ["-y", "-v", "error", "-ss", String(start), "-i", src, "-t", String(dur), "-an", "-vf", vf, "-c:v", "libx264", "-preset", "veryfast", "-crf", "24", "-movflags", "+faststart", dest], { timeout: 120000 });
+    const st = await fs.stat(dest);
+    console.log(`[clip] cut ${out} ok bytes=${st.size} -> /videos/clip-${out}.mp4`);
+  } catch (e) { console.log(`[clip] cut ${out} error ${String(e?.message || e).slice(0, 300)}`); }
 });
 
 app.post("/echo", auth, (req, res) => {
