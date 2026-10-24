@@ -1,0 +1,283 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "การ์ดโรนัลโด้ใบเดียว 1.35 ล้านดอลลาร์ แพงกว่าสถิติเดิมกว่า 3 เท่า | การ์ดบอลสุดฮิต #shorts",
+  "description": "การ์ด Panini Kaboom ปี 2018 รุ่นสีเขียว 1 ใน 1 ของ คริสเตียโน โรนัลโด้ (ยุคยูเวนตุส) เกรด PSA 10 ขายแบบส่วนตัวผ่าน Fanatics Collect ในราคา 1.35 ล้านดอลลาร์ (ราว 45 ล้านบาท) เมื่อ 24 พฤษภาคม 2026 มากกว่า 3 เท่าของสถิติเดิม 420,000 ดอลลาร์ (Panini Flawless Finishes 2015 PSA 7, ประมูล Fanatics Premier 22 พ.ค. 2026) เป็นการ์ดฟุตบอลที่แพงเป็นอันดับ 2 ของโลก รองจากการ์ดรุกกี้เมสซี่ 1.5 ล้านดอลลาร์\n\n👇 โรนัลโด้จะแซง 1.5 ล้านของเมสซี่ไหม? พิมพ์ 1 = แซงได้ / 2 = ไม่ได้\n\nภาพประกอบ: ภาพการ์ดเป็นรุ่นธรรมดาของชุดเดียวกัน (ไม่ใช่ใบ Green 1/1 ที่ขาย) จาก TraderCracks; ตัวอย่างลายรุ่นสีเขียวเป็นการ์ดของ Jayson Tatum\nภาพ: \"Cristiano Ronaldo - October 12, 2010\" โดย Dagur Brynjólfsson CC BY-SA 2.0 https://creativecommons.org/licenses/by-sa/2.0/ · \"C.Ronaldo at Museum Mundo Sporting\" โดย Threeohsix CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/ · \"Cristiano Ronaldo Boots on display at Santiago Bernabeu\" โดย Reubentg CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0/ (Wikimedia Commons)\nข้อมูลราคา: ESPN/The Athletic ผ่าน Goal.com, beIN SPORTS, Dynes Pressbox, SI Collectibles, Cardbase (ราคาบาทเป็นการประมาณ)\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #โรนัลโด้ #cristianoronaldo #CR7 #การ์ดฟุตบอล #การ์ดสะสม #การ์ดแพง #เมสซี่",
+  "thumb": {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-r7-kaboom.jpg",
+   "hook": "การ์ดโรนัลโด้\nทุบสถิติตัวเอง",
+   "sub": "การ์ดบอลสุดฮิต",
+   "badge": ""
+  },
+  "engage": "👇 โรนัลโด้จะแซง 1.5 ล้านของเมสซี่ไหม? พิมพ์ 1 = แซงได้ / 2 = ไม่ได้\nชอบเรื่องการ์ดแบบนี้ กด ❤️ ไว้ด้วยนะ"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, confident, clear sports presenter, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "slides": [
+  {
+   "beat": "hook",
+   "duration": 5,
+   "text": "การ์ดใบเดียว *1.35 ล้านดอลลาร์*",
+   "title": "การ์ดโรนัลโด้\n*ทุบสถิติตัวเอง*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-r7-kaboom.jpg",
+   "parts": [
+    {
+     "text": "การ์ดโรนัลโด้ *1.35 ล้านดอลลาร์*",
+     "say": "หนึ่งล้านสามแสนห้าหมื่นดอลลาร์! การ์ดของโรนัลโด้ ที่ทำสถิติใหม่!"
+    },
+    {
+     "text": "มากกว่า *3 เท่า* ของสถิติเก่า",
+     "say": "แพงกว่าสถิติเดิมของตัวเอง มากกว่าสามเท่า!"
+    }
+   ]
+  },
+  {
+   "beat": "reveal",
+   "duration": 5,
+   "text": "การ์ดของ *โรนัลโด้*",
+   "title": "Cristiano Ronaldo",
+   "subtitle": "Panini Kaboom • 2018",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-r7-kaboom.jpg",
+   "parts": [
+    {
+     "text": "ชุด *Panini Kaboom* ปี 2018",
+     "say": "การ์ดชุดคาบูม ของพานินี ปีสองศูนย์หนึ่งแปด!"
+    },
+    {
+     "text": "รุ่นสีเขียว *1 ใน 1*",
+     "say": "ใบที่ขาย เป็นรุ่นสีเขียว มีใบเดียวในโลก!"
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 7,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-r7-boots.jpg",
+   "title": "9 ปี\n*เรอัล มาดริด*",
+   "parts": [
+    {
+     "text": "ก่อนมีการ์ดใบนี้ เขาสร้างตำนานที่ *เรอัล มาดริด*",
+     "say": "ก่อนจะมีการ์ดใบนี้ โรนัลโด้ สร้างตำนานไว้ที่ เรอัล มาดริด เก้าปี!"
+    }
+   ]
+  },
+  {
+   "beat": "timeline",
+   "duration": 5,
+   "chapter": "เส้นทางสู่เบอร์ 7",
+   "title": "จากลิสบอน\nสู่ *ยุโรป*",
+   "text": "ก่อนจะเป็น *CR7*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-r7-sporting.jpg",
+   "points": [
+    {
+     "year": "2002",
+     "label": "เปิดตัวที่\nสปอร์ติ้ง อายุ 17"
+    },
+    {
+     "year": "2003",
+     "label": "แมนยู\nได้เบอร์ 7"
+    },
+    {
+     "year": "2018",
+     "label": "ย้ายสู่\nยูเวนตุส"
+    }
+   ],
+   "parts": [
+    {
+     "text": "2002 เปิดตัวที่ *สปอร์ติ้ง* อายุ 17",
+     "say": "สองศูนย์ศูนย์สอง อายุสิบเจ็ด เปิดตัวที่สปอร์ติ้ง!"
+    },
+    {
+     "text": "2003 แมนยู ขอเบอร์ 28 แต่ได้ *เบอร์ 7*",
+     "say": "สองศูนย์ศูนย์สาม แมนยู ขอเบอร์ยี่สิบแปด แต่ได้เบอร์เจ็ดแทน!"
+    },
+    {
+     "text": "2018 ย้ายไป *ยูเวนตุส*",
+     "say": "สองศูนย์หนึ่งแปด ย้ายไปยูเวนตุส!"
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 7,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-r7-2010.jpg",
+   "title": "ตำนาน\n*เบอร์ 7*",
+   "parts": [
+    {
+     "text": "ยิงราว *450 ประตู* คว้า *แชมเปียนส์ลีก 4 สมัย*",
+     "say": "ที่เรอัล มาดริด ยิงราวสี่ร้อยห้าสิบประตู! และคว้าแชมเปียนส์ลีก ถึงสี่สมัย!"
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 6,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-r7-kaboom.jpg",
+   "title": "10 ก.ค. 2018\n*ลาเรอัล*",
+   "parts": [
+    {
+     "text": "10 ก.ค. 2018 ประกาศย้าย *ยูเวนตุส*",
+     "say": "สิบกรกฎาคม สองศูนย์หนึ่งแปด เรอัล มาดริด ประกาศ โรนัลโด้ ย้ายไปยูเวนตุส!"
+    }
+   ]
+  },
+  {
+   "beat": "timeline",
+   "duration": 5,
+   "chapter": "การ์ดชุดนี้",
+   "title": "Kaboom\n*ไม่ใช่การ์ดทั่วไป*",
+   "text": "ปี 2018 *ยุคยูเวนตุส*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-r7-kaboom.jpg",
+   "points": [
+    {
+     "year": "2013",
+     "label": "Kaboom\nเปิดตัวครั้งแรก"
+    },
+    {
+     "year": "2018",
+     "label": "เพิ่มรุ่น\nเขียว 1 ใน 1"
+    },
+    {
+     "year": "พ.ค. 2026",
+     "label": "ขายส่วนตัว\nสถิติใหม่"
+    }
+   ],
+   "parts": [
+    {
+     "text": "ชุด Kaboom ไม่ได้ *วางขายทั่วไป*",
+     "say": "ชุดคาบูมปีสองศูนย์หนึ่งแปด ไม่ได้วางขายทั่วไป แจกผ่านโปรแกรมรีวอร์ด!"
+    },
+    {
+     "text": "ปี 2018 เพิ่มรุ่น *สีเขียว 1 ใน 1*",
+     "say": "ปีนั้นเพิ่งเพิ่มรุ่นสีเขียว ใบเดียวในโลก!"
+    },
+    {
+     "text": "พ.ค. 2026 *ขายส่วนตัว*",
+     "say": "จนพฤษภาคม สองศูนย์สองหก!"
+    }
+   ]
+  },
+  {
+   "beat": "bignum",
+   "duration": 5,
+   "chapter": "ราคาสถิติ",
+   "title": "ขายส่วนตัวที่",
+   "value": 1350000,
+   "subtitle": "ดอลลาร์สหรัฐ",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-r7-kaboom.jpg",
+   "text": "ราว *45 ล้านบาท*",
+   "parts": [
+    {
+     "text": "ราว *45 ล้านบาท* เกรด *PSA 10*",
+     "say": "หนึ่งล้านสามแสนห้าหมื่นดอลลาร์ ประมาณสี่สิบห้าล้านบาท! เกรดพีเอสเอ สิบ ผ่านแฟนาติกส์ คอลเลกต์!"
+    }
+   ]
+  },
+  {
+   "beat": "timeline",
+   "duration": 5,
+   "chapter": "แซงสถิติเก่า",
+   "title": "2 วัน\n*ทุบสถิติสองครั้ง*",
+   "text": "การ์ด *Flawless* กับ *Kaboom*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-r7-2010.jpg",
+   "points": [
+    {
+     "year": "22 พ.ค.",
+     "label": "Flawless 2015\n420K"
+    },
+    {
+     "year": "24 พ.ค.",
+     "label": "Kaboom Green\n1.35M"
+    },
+    {
+     "year": "สถิติโลก",
+     "label": "เมสซี่\n1.5M"
+    }
+   ],
+   "parts": [
+    {
+     "text": "22 พ.ค. Flawless ขาย *420,000*",
+     "say": "ยี่สิบสองพฤษภาคม การ์ดฟลอเลส ฟินิชเชส สองศูนย์หนึ่งห้า ขายสี่แสนสองหมื่นดอลลาร์ ทำสถิติใหม่!"
+    },
+    {
+     "text": "24 พ.ค. Kaboom ขาย *1.35 ล้าน*",
+     "say": "สองวันต่อมา คาบูม ขายหนึ่งล้านสามแสนห้าหมื่นดอลลาร์! ทุบสถิติที่เพิ่งทำ!"
+    },
+    {
+     "text": "ยังเป็นรอง *เมสซี่ 1.5 ล้าน*",
+     "say": "แต่ยังเป็นรองการ์ดของเมสซี่ ที่หนึ่งล้านห้าแสนดอลลาร์!"
+    }
+   ]
+  },
+  {
+   "beat": "versions",
+   "duration": 5,
+   "text": "ภาพประกอบ *ไม่ใช่ใบที่ขาย*",
+   "images": [
+    "https://renderer-production-8b7f.up.railway.app/assets/fix-r7-kaboom.jpg",
+    "https://renderer-production-8b7f.up.railway.app/assets/fix-r7-kgreen.jpg"
+   ],
+   "labels": [
+    "Kaboom 2018 ของโรนัลโด้ (รุ่นธรรมดา)",
+    "ตัวอย่างรุ่นสีเขียว (ใบของเททัม)"
+   ],
+   "parts": [
+    {
+     "text": "ภาพในคลิป *ไม่ใช่ใบที่ขาย*",
+     "say": "ภาพการ์ดในคลิป เป็นรุ่นธรรมดา ไม่ใช่ใบที่ขายสถิตินะ!"
+    },
+    {
+     "text": "สีเขียว หน้าตาประมาณนี้",
+     "say": "รุ่นสีเขียวหน้าตาประมาณนี้ ใบในภาพเป็นของเททัม!"
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 5,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-r7-kaboom.jpg",
+   "text": "โรนัลโด้จะ *แซงเมสซี่?*",
+   "parts": [
+    {
+     "text": "โรนัลโด้จะแซง *1.5 ล้าน?*",
+     "say": "การ์ดโรนัลโด้ จะแซงสถิติหนึ่งล้านห้าของเมสซี่ ได้ไหม?"
+    },
+    {
+     "text": "พิมพ์ 1 = แซงได้ / 2 = ไม่ได้",
+     "say": "พิมพ์หนึ่ง แซงได้! พิมพ์สอง ไม่ได้!"
+    }
+   ]
+  },
+  {
+   "beat": "still",
+   "duration": 4,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "image_mode": "still",
+   "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+   "no_caption": true,
+   "parts": [
+    {
+     "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+     "say": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้เลย!"
+    },
+    {
+     "text": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด",
+     "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ]
+  }
+ ],
+ "composition": "CardShow",
+ "theme": "water",
+ "badge": "กีฬา #5",
+ "series": "การ์ดบอลสุดฮิต",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055
+}
