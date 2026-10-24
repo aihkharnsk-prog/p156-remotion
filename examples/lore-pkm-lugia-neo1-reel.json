@@ -1,0 +1,233 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "ลูเกีย Neo Genesis การ์ดที่ต้องทิ้งพลังงาน 3 ชนิด วันนี้ 5 หมื่นบาท | Pokémon Card #shorts",
+  "description": "ลูเกีย (Lugia) Neo Genesis 9/111 Holo ฉบับ 1st Edition ชุดแรกของเกมการ์ดโปเกมอนภาษาอังกฤษที่มีโปเกมอนจาก Pokémon Gold/Silver (วางขาย 16 ธ.ค. 2000) ภาพประกอบโดย Hironobu Yoshida ท่า Elemental Blast ต้องทิ้งพลังงานไฟ น้ำ สายฟ้าอย่างละหนึ่งใบ\nราคาตลาดวันนี้ (1st Edition): ใบดิบราว 1,700 ดอลลาร์ (≈ 57,000 บาท) เกรด 9 ราว 16,100 ดอลลาร์ (≈ 541,000 บาท) PSA 10 ราว 19,300 ดอลลาร์ (≈ 649,000 บาท) เกรดสูงขายน้อยมาก ราคาขึ้นลงตามตลาด\n\n👇 ถ้าให้เลือกโปเกมอนจากภาค Gold/Silver สักตัว คุณจะเลือกใคร?\n\nอัตราแลกเปลี่ยนประมาณ 33.6 บาท/ดอลลาร์ • ราคา: PriceCharting (24 ต.ค. 2026) • ข้อมูลการ์ด: Bulbapedia, PkmnCards, Bill's Archive • ข้อมูลโปเกมอน: th.portal-pokemon.com, Bulbapedia • ภาพการ์ด: TCGplayer • ภาพโปเกมอน: Bulbagarden Archives\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #โปเกมอน #การ์ดโปเกมอน #pokemon #pokemontcg #lugia #neogenesis",
+  "thumb": {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-lugia-neo1-9-1st.jpg",
+   "hook": "ทิ้งพลังงาน 3 ชนิด\nเพื่อโจมตีครั้งเดียว",
+   "sub": "ลูเกีย • Neo Genesis",
+   "badge": "NG-009"
+  },
+  "engage": "👇 ถ้าให้เลือกโปเกมอนจากภาค Gold/Silver สักตัว คุณจะเลือกใคร?",
+  "campaign": "lore-pkm-lugia-neo1",
+  "site_path": "/"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[calm, confident Thai storyteller, clear and engaging, natural pacing, not shouting]"
+ },
+ "audio_rate": 1.0,
+ "composition": "CardShow",
+ "theme": "water",
+ "badge": "NG-009",
+ "series": "ที่มาของการ์ด",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055,
+ "slides": [
+  {
+   "beat": "full",
+   "duration": 12,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-lugia-neo1-9-1st.jpg",
+   "fit": "contain",
+   "title": "ทิ้งพลังงาน\n*3 ชนิด*",
+   "subtitle": "เพื่อโจมตีแค่ครั้งเดียว",
+   "price_label": "ใบดิบ",
+   "price": "฿57K",
+   "parts": [
+    {
+     "text": "การ์ดใบนี้ต้อง *ทิ้งพลังงาน 3 ชนิด* เพื่อโจมตีครั้งเดียว",
+     "say": "การ์ดใบนี้ ต้องทิ้งพลังงานถึงสามชนิด เพื่อโจมตีแค่ครั้งเดียว."
+    },
+    {
+     "text": "แต่วันนี้ใบดิบ *เกิน 5 หมื่นบาท*",
+     "say": "แต่วันนี้ ใบดิบของมัน ราคาเกินห้าหมื่นบาทไปแล้ว."
+    },
+    {
+     "text": "*ลูเกีย* • Neo Genesis ฉบับพิมพ์ครั้งแรก",
+     "say": "นี่คือ ลูเกีย จากชุด นีโอ เจเนซิส ฉบับพิมพ์ครั้งแรก."
+    }
+   ]
+  },
+  {
+   "beat": "art",
+   "duration": 10,
+   "chapter": "โปเกมอน",
+   "title": "Lugia",
+   "subtitle": "ลูเกีย • #249",
+   "image_url": "https://archives.bulbagarden.net/media/upload/e/e2/0249Lugia.png",
+   "parts": [
+    {
+     "text": "*ลูเกีย* โปเกมอนหมายเลข 249 พลังจิต • บิน",
+     "say": "ลูเกีย โปเกมอนหมายเลขสองร้อยสี่สิบเก้า พลังจิตและบิน สูงห้าจุดสองเมตร."
+    },
+    {
+     "text": "กระพือปีกเบาๆ ก็ *พัดบ้านปลิว*",
+     "say": "โปเกเด็กซ์เล่าว่า แค่กระพือปีกเบาๆ ก็พัดบ้านคนปลิวได้ มันเลยหลบอยู่ใต้ท้องทะเล."
+    }
+   ]
+  },
+  {
+   "beat": "zoom",
+   "duration": 8,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-lugia-neo1-9-1st.jpg",
+   "focus_x": 12,
+   "focus_y": 68,
+   "focus_zoom": 2.5,
+   "title": "ท่า Elemental Blast",
+   "parts": [
+    {
+     "text": "*Elemental Blast* ดาเมจ 90",
+     "say": "ท่า เอเลเมนทัล บลาสต์ ทำความเสียหายเก้าสิบ."
+    },
+    {
+     "text": "ต้องทิ้ง *ไฟ น้ำ สายฟ้า* อย่างละใบ",
+     "say": "แต่ต้องทิ้งพลังงานไฟ น้ำ และสายฟ้า อย่างละหนึ่งใบที่แนบอยู่กับมัน."
+    }
+   ]
+  },
+  {
+   "beat": "timeline",
+   "duration": 13,
+   "chapter": "ที่มาของชุด",
+   "title": "จากหนัง\n*สู่การ์ด*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-lugia-neo1-9-1st.jpg",
+   "points": [
+    {
+     "year": "ก.ค. 1999",
+     "label": "หนังโปเกมอน\nภาค 2 ฉายญี่ปุ่น"
+    },
+    {
+     "year": "ก.ค. 2000",
+     "label": "หนังฉาย\nในอเมริกา"
+    },
+    {
+     "year": "ธ.ค. 2000",
+     "label": "Neo Genesis\nฉบับอังกฤษ"
+    }
+   ],
+   "parts": [
+    {
+     "text": "ก.ค. 1999 หนังโปเกมอนภาค 2 ฉายที่ญี่ปุ่น",
+     "say": "กรกฎาคม ปีค.ศ. 1999 หนังโปเกมอนภาคสอง ที่มีลูเกียเป็นตัวสำคัญ ฉายที่ญี่ปุ่น."
+    },
+    {
+     "text": "ก.ค. 2000 หนังฉายในอเมริกา",
+     "say": "กรกฎาคม ปี 2000 หนังฉายในอเมริกา."
+    },
+    {
+     "text": "16 ธ.ค. 2000 *Neo Genesis* ฉบับอังกฤษ",
+     "say": "และสิบหกธันวาคม นีโอ เจเนซิส ฉบับอังกฤษก็ออก ร้อยสิบเอ็ดใบ ชุดแรกที่มีโปเกมอนจากโกลด์และซิลเวอร์."
+    }
+   ]
+  },
+  {
+   "beat": "zoom",
+   "duration": 8,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-lugia-neo1-9-1st.jpg",
+   "focus_x": 12,
+   "focus_y": 55,
+   "focus_zoom": 2.6,
+   "title": "ตรา 1st Edition",
+   "parts": [
+    {
+     "text": "ดูที่ *ใต้รูปด้านซ้าย*",
+     "say": "วิธีดูฉบับพิมพ์ครั้งแรก ให้ดูใต้รูปด้านซ้าย จะมีตราวงกลมเขียนว่า เฟิร์สต์ เอดิชัน."
+    },
+    {
+     "text": "ไม่มีตรา = *ฉบับธรรมดา*",
+     "say": "ถ้าไม่มีตรา คือฉบับธรรมดา."
+    }
+   ]
+  },
+  {
+   "beat": "quiz",
+   "duration": 9,
+   "chapter": "ทายสิ",
+   "title": "ใบดิบ *1st Edition*\nแพงกว่าฉบับธรรมดากี่เท่า?",
+   "choices": [
+    "ประมาณ 1.5 เท่า",
+    "ประมาณ 3.7 เท่า",
+    "ประมาณ 10 เท่า"
+   ],
+   "answer": 1,
+   "parts": [
+    {
+     "text": "ใบดิบ 1st Edition แพงกว่าฉบับธรรมดา *กี่เท่า*?",
+     "say": "ทายสิ ใบดิบฉบับพิมพ์ครั้งแรก แพงกว่าฉบับธรรมดากี่เท่า?"
+    },
+    {
+     "text": "คำตอบ *ประมาณ 3.7 เท่า*",
+     "say": "คำตอบ ประมาณสามจุดเจ็ดเท่า หนึ่งพันเจ็ดร้อยดอลลาร์ เทียบสี่ร้อยหกสิบ."
+    }
+   ]
+  },
+  {
+   "beat": "stats",
+   "duration": 10,
+   "chapter": "ราคาตามเกรด",
+   "title": "1st Edition\nราคาตามเกรด",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-lugia-neo1-9-1st.jpg",
+   "stats": [
+    {
+     "label": "ใบดิบ",
+     "value": 57,
+     "max": 650,
+     "suffix": " พันบาท"
+    },
+    {
+     "label": "เกรด 9",
+     "value": 541,
+     "max": 650,
+     "suffix": " พันบาท"
+    },
+    {
+     "label": "PSA 10",
+     "value": 649,
+     "max": 650,
+     "suffix": " พันบาท"
+    }
+   ],
+   "parts": [
+    {
+     "text": "ใบดิบ ราว *57,000 บาท*",
+     "say": "ใบดิบราวห้าหมื่นเจ็ดพันบาท เกรดเก้าราวห้าแสนสี่หมื่น."
+    },
+    {
+     "text": "*PSA 10* ราว 650,000 บาท",
+     "say": "พีเอสเอสสิบ ราวหกแสนห้าหมื่นบาท แต่ขายออกแค่ราวปีละใบ."
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 5,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-lugia-neo1-9-1st.jpg",
+   "text": "เลือกโปเกมอน *โกลด์ • ซิลเวอร์* สักตัว",
+   "parts": [
+    {
+     "text": "เลือกโปเกมอนจาก *โกลด์ • ซิลเวอร์* สักตัว?",
+     "say": "ถ้าเลือกโปเกมอนจากโกลด์และซิลเวอร์ได้สักตัว คุณเลือกใคร?"
+    }
+   ]
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "image_mode": "still",
+   "text": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด",
+   "duration": 3,
+   "no_caption": true,
+   "beat": "still",
+   "parts": [
+    {
+     "text": "*ซื้อ ขาย สะสม แข่งเกมส์การ์ด* ที่ www.cardzcenter.com",
+     "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ]
+  }
+ ]
+}

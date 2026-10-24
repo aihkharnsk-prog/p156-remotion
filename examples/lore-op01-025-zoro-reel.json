@@ -1,0 +1,261 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "การ์ดโซโลใบเดียว ราคาต่างกัน 700 เท่า OP01-025 | One Piece Card #shorts",
+  "description": "โรโรโนอา โซโล OP01-025 (SR) จากชุดแรก Romance Dawn ค่าใช้จ่าย 3 พลัง 5000 ความสามารถ Rush มีหลายฉบับ เลขเดียวกันแต่ราคาต่างกันมาก\nราคาดิบวันนี้ (PriceCharting 24 ต.ค. 2026): ใบธรรมดา ≈ $4.89 (≈ 164 บาท) • Alternate Art ≈ $249 (≈ 8,400 บาท) • Flagship Battle ญี่ปุ่น ≈ $1,791 (≈ 60,000 บาท) • Top 8 ≈ $3,586 (≈ 120,500 บาท) ราคาขึ้นลงตามตลาด\nเนื้อเรื่องตัวละคร: สมาชิกคนที่สองของกลุ่มโจรสลัดหมวกฟาง สัญญากับคูอินะว่าจะเป็นนักดาบที่เก่งที่สุดในโลก มีแผลเป็นหน้าอกจากมิฮอว์ก ใช้ฮาคิอาวุธ ฮาคิสังเกต และฮาคิราชา\n\n👇 คุณจะเก็บโซโลฉบับไหน? ธรรมดา Alternate Art หรือ Top 8?\n\nอัตราแลกเปลี่ยนประมาณ 33.6 บาท/ดอลลาร์ • ราคาและภาพการ์ด: PriceCharting • ข้อมูลการ์ด: One Piece Card Game (Bandai) • ข้อมูลตัวละคร: The Standard, Wikipedia\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP01 #โซโล",
+  "thumb": {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-zoro-op01-025-base.jpg",
+   "hook": "การ์ดโซโลใบเดียว\nต่างกัน 700 เท่า",
+   "sub": "โรโรโนอา โซโล",
+   "badge": "OP01-025"
+  },
+  "engage": "👇 คุณจะเก็บโซโลฉบับไหน? ธรรมดา Alternate Art หรือ Top 8?",
+  "campaign": "lore-op01-025-zoro",
+  "site_path": "/"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[calm, confident Thai storyteller, clear and engaging, natural pacing, not shouting]"
+ },
+ "audio_rate": 1.0,
+ "composition": "CardShow",
+ "theme": "fire",
+ "badge": "OP01-025",
+ "series": "ที่มาของการ์ด",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055,
+ "slides": [
+  {
+   "beat": "full",
+   "duration": 9,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-zoro-op01-025-base.jpg",
+   "fit": "contain",
+   "title": "การ์ดโซโลใบเดียว\n*ราคาต่างกัน 700 เท่า*",
+   "subtitle": "เลขเดียวกัน เอฟเฟกต์เดียวกัน",
+   "price_label": "ห่างกัน",
+   "price": "733×",
+   "parts": [
+    {
+     "text": "โซโลใบเดียว *ราคาต่างกันกว่า 700 เท่า*",
+     "say": "การ์ดโซโลใบเดียว เลขเดียวกัน เอฟเฟกต์เดียวกัน แต่ราคาต่างกันกว่าเจ็ดร้อยเท่า."
+    },
+    {
+     "text": "มาดูกันว่า *ทำไม*",
+     "say": "มาดูกันว่าทำไม."
+    }
+   ]
+  },
+  {
+   "beat": "zoom",
+   "duration": 12,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-zoro-op01-025-base.jpg",
+   "focus_x": 50,
+   "focus_y": 17,
+   "focus_zoom": 2.2,
+   "title": "โรโรโนอา โซโล",
+   "parts": [
+    {
+     "text": "*โรโรโนอา โซโล* คนที่สองของกลุ่มหมวกฟาง",
+     "say": "โรโรโนอา โซโล สมาชิกคนที่สองของกลุ่มโจรสลัดหมวกฟาง."
+    },
+    {
+     "text": "สัญญากับ *คูอินะ* เพื่อนสมัยเด็ก",
+     "say": "สมัยเด็ก เขาให้สัญญากับเพื่อนชื่อ คูอินะ ว่าจะเป็นนักดาบที่เก่งที่สุดในโลก."
+    },
+    {
+     "text": "เธอจากไปในวันรุ่งขึ้น",
+     "say": "แต่เธอเสียชีวิตจากอุบัติเหตุ ในวันรุ่งขึ้น."
+    }
+   ]
+  },
+  {
+   "beat": "quiz",
+   "duration": 12,
+   "title": "แผลเป็นยาวพาดหน้าอกโซโล\n*มาจากใคร?*",
+   "choices": [
+    "ลูฟี่",
+    "มิฮอว์ก",
+    "แชงคูส"
+   ],
+   "answer": 1,
+   "parts": [
+    {
+     "text": "แผลเป็นพาดหน้าอกโซโล *มาจากใคร?*",
+     "say": "ลองทายดูครับ แผลเป็นยาวพาดหน้าอกของโซโล มาจากใคร?"
+    },
+    {
+     "text": "*มิฮอว์ก* ตาเหยี่ยว",
+     "say": "คำตอบคือ มิฮอว์ก ตาเหยี่ยว."
+    },
+    {
+     "text": "สัญญา: *ไม่แพ้ใคร* จนกว่าจะชนะเขา",
+     "say": "โซโลแพ้เขา แต่ก็สัญญากับลูฟี่ว่า จะไม่แพ้ใครอีก จนกว่าจะเอาชนะมิฮอว์กได้."
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 11,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-zoro-op01-025-base.jpg",
+   "fit": "contain",
+   "title": "ฮาคิ *3 ชนิด*",
+   "subtitle": "อาวุธ • สังเกต • ราชา",
+   "parts": [
+    {
+     "text": "ใช้ได้ทั้ง *ฮาคิอาวุธ* และ *ฮาคิสังเกต*",
+     "say": "ในมังงะ โซโลใช้ฮาคิอาวุธและฮาคิสังเกตได้ทั้งคู่."
+    },
+    {
+     "text": "และเป็นหนึ่งในไม่กี่คนที่มี *ฮาคิราชา*",
+     "say": "แถมยังเป็นหนึ่งในไม่กี่คนที่มีฮาคิราชา."
+    },
+    {
+     "text": "สู้กับ *คิง* ปลดล็อกการเคลือบดาบ",
+     "say": "ตอนสู้กับคิง เขาปลดล็อกฮาคิที่เคลือบดาบได้."
+    }
+   ]
+  },
+  {
+   "beat": "stats",
+   "duration": 11,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-zoro-op01-025-base.jpg",
+   "title": "OP01-025 • Rush",
+   "stats": [
+    {
+     "label": "ค่าใช้จ่าย",
+     "value": 3,
+     "max": 10
+    },
+    {
+     "label": "พลัง",
+     "value": 5000,
+     "max": 12000
+    }
+   ],
+   "parts": [
+    {
+     "text": "การ์ดใบนี้ *ค่าใช้ 3 พลัง 5000*",
+     "say": "แล้วการ์ดใบนี้ล่ะ ค่าใช้สาม พลังห้าพัน."
+    },
+    {
+     "text": "ความสามารถ *Rush* ลงสนามแล้วตีได้ทันที",
+     "say": "มีความสามารถ รัช ลงสนามแล้วโจมตีได้ทันที."
+    },
+    {
+     "text": "เหมือนนิสัย *พุ่งเข้าใส่* ของโซโล (ตีความ)",
+     "say": "เหมือนนิสัยพุ่งเข้าใส่ของโซโล ถ้าตีความเอง."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 7,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-zoro-op01-025-base.jpg",
+   "rank": "#1",
+   "price_label": "ใบธรรมดา",
+   "price": "฿164",
+   "subtitle": "ราว $5",
+   "title": "ใบธรรมดา จากชุด Romance Dawn",
+   "parts": [
+    {
+     "text": "ใบธรรมดา *ไม่ถึง 200 บาท*",
+     "say": "เริ่มจากใบธรรมดา ไม่ถึงสองร้อยบาท."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 8,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-zoro-op01-025-aa.jpg",
+   "rank": "#2",
+   "price_label": "Alternate Art",
+   "price": "฿8.4K",
+   "subtitle": "ราว $249",
+   "title": "ฉบับ Alternate Art",
+   "parts": [
+    {
+     "text": "ฉบับ *Alternate Art* ราว 8,400 บาท",
+     "say": "ฉบับ อัลเทอร์เนต อาร์ต ภาพวาดใหม่ทั้งใบ ราวแปดพันสี่ร้อยบาท."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 9,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-zoro-op01-025-flag.jpg",
+   "rank": "#3",
+   "price_label": "Flagship Battle (JP)",
+   "price": "฿60K",
+   "subtitle": "ราว $1,791",
+   "title": "รางวัลแข่งขันของญี่ปุ่น",
+   "parts": [
+    {
+     "text": "ฉบับรางวัล *Flagship Battle* ราว 60,000 บาท",
+     "say": "ฉบับรางวัลแฟลกชิป แบตเทิล ของญี่ปุ่น แจกผู้ชนะการแข่งขัน ช่วงพฤษภาคมถึงมิถุนายนปีสองพันยี่สิบสาม ราวหกหมื่นบาท."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 8,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-zoro-op01-025-top8.jpg",
+   "rank": "#4",
+   "price_label": "Top 8",
+   "price": "฿120K",
+   "subtitle": "ราว $3,586",
+   "title": "ฉบับ Top 8",
+   "parts": [
+    {
+     "text": "แพงสุด ฉบับ *Top 8* ราว 120,000 บาท",
+     "say": "และแพงที่สุด ฉบับ ท็อป เอต ราวหนึ่งแสนสองหมื่นบาท."
+    }
+   ]
+  },
+  {
+   "beat": "bignum",
+   "duration": 7,
+   "chapter": "สรุป",
+   "title": "ใบธรรมดา เทียบ Top 8",
+   "value": 733,
+   "from": 0,
+   "subtitle": "เท่า • ราคาดิบ",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-zoro-op01-025-base.jpg",
+   "parts": [
+    {
+     "text": "ใบธรรมดา เทียบ Top 8 ต่างกัน *733 เท่า*",
+     "say": "ใบธรรมดากับฉบับท็อป เอต ราคาดิบต่างกัน เจ็ดร้อยสามสิบสามเท่า."
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 6,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-zoro-op01-025-base.jpg",
+   "text": "โซโลฉบับไหน *ที่คุณเลือก?*",
+   "parts": [
+    {
+     "text": "ถ้าเก็บได้ใบเดียว *โซโลฉบับไหน?*",
+     "say": "ถ้าเลือกเก็บได้ใบเดียว คุณจะเก็บโซโลฉบับไหน?"
+    }
+   ]
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "image_mode": "still",
+   "text": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด",
+   "duration": 3,
+   "no_caption": true,
+   "beat": "still",
+   "parts": [
+    {
+     "text": "*ซื้อ ขาย สะสม แข่งเกมส์การ์ด* ที่ www.cardzcenter.com",
+     "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ]
+  }
+ ]
+}

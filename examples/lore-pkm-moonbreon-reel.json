@@ -1,0 +1,231 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "การ์ดโปเกมอนใบเดียวเกือบ 6 หมื่น ทั้งที่มี PSA 10 กว่า 2 หมื่นใบ | Moonbreon #shorts",
+  "description": "Umbreon VMAX Alternate Art (215/203) จากชุด Evolving Skies ภาพวาดโดย Keiichiro Ito ฉบับภาษาอังกฤษออก 27 ส.ค. 2021 (ฉบับญี่ปุ่นออกใน Eevee Heroes พ.ค. 2021) ชื่อเล่น \"Moonbreon\" นักสะสมตั้งกันเอง ไม่ใช่ชื่อทางการ\nตัวละคร: แบ็คกี้ (Umbreon) เลขโปเกเด็กซ์ 197 ธาตุ Dark วิวัฒนาการจากอีวุยด้วยความสนิทสูงตอนกลางคืน\nราคาตลาดวันนี้ (PriceCharting 24 ต.ค. 2026): ใบดิบ $1,725 (≈ 58,000 บาท) • PSA 10 $3,750 (≈ 126,000 บาท) ราคาขึ้นลงตามตลาด\n\n👇 อีวุยร่างไหนคือร่างโปรดของคุณ? พิมพ์บอกกันได้เลย\n\nอัตราแลกเปลี่ยนประมาณ 33.6 บาท/ดอลลาร์ • ราคา: PriceCharting • ข้อมูลการ์ด: Pokémon TCG API, Bulbapedia, Card Codex, Samurai Sword Tokyo • จำนวน PSA 10: Pokemon Price Tracker, Card Codex (ประมาณ) • ภาพการ์ด: pokemontcg.io\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #โปเกมอน #การ์ดโปเกมอน #pokemon #pokemontcg #Umbreon #Moonbreon",
+  "thumb": {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-pkm-umbreon-vmax-215.jpg",
+   "hook": "เกือบ 6 หมื่นบาท\nการ์ดใบเดียว",
+   "sub": "Moonbreon",
+   "badge": "215/203"
+  },
+  "engage": "👇 อีวุยร่างไหนคือร่างโปรดของคุณ?",
+  "campaign": "lore-pkm-umbreon-vmax-215",
+  "site_path": "/"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[calm, confident Thai storyteller, clear and engaging, natural pacing, not shouting]"
+ },
+ "audio_rate": 1.0,
+ "composition": "CardShow",
+ "theme": "psychic",
+ "badge": "215/203",
+ "series": "ที่มาของการ์ด",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055,
+ "slides": [
+  {
+   "beat": "full",
+   "duration": 9,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-pkm-umbreon-vmax-215.jpg",
+   "fit": "contain",
+   "title": "การ์ดใบเดียว\n*เกือบหกหมื่นบาท*",
+   "subtitle": "ทั้งที่มี PSA 10 กว่า 2 หมื่นใบ",
+   "price_label": "ราคาดิบ",
+   "price": "฿58K",
+   "parts": [
+    {
+     "text": "การ์ดโปเกมอนใบเดียว *เกือบหกหมื่นบาท*",
+     "say": "การ์ดโปเกมอนใบเดียว ราคาเกือบ หกหมื่นบาท. ทั้งที่ มีการ์ดเกรดสิบ อยู่ในโลก กว่าสองหมื่นใบ."
+    },
+    {
+     "text": "ใบนี้คือ *Moonbreon* แห่งชุด Evolving Skies",
+     "say": "ใบนี้คือ มูนเบรียน จากชุด อีโวลฟวิ่ง สกายส์."
+    }
+   ]
+  },
+  {
+   "beat": "quiz",
+   "duration": 10,
+   "title": "วงแหวนบนตัวแบ็คกี้\nเรืองแสง*สีอะไร*?",
+   "choices": [
+    "สีฟ้า",
+    "สีเหลือง",
+    "สีแดง"
+   ],
+   "answer": 1,
+   "parts": [
+    {
+     "text": "วงแหวนบนตัวแบ็คกี้ เรืองแสงสีอะไร?",
+     "say": "ทายสิ วงแหวนบนตัวแบ็คกี้ ในเกมโปเกมอน เรืองแสงสีอะไร?"
+    },
+    {
+     "text": "*สีเหลือง* ในคืนจันทร์เต็มดวง",
+     "say": "สีเหลือง! ในคืนจันทร์เต็มดวง หรือตอนที่มันตื่นเต้น."
+    }
+   ]
+  },
+  {
+   "beat": "zoom",
+   "duration": 11,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-pkm-umbreon-vmax-215.jpg",
+   "focus_x": 60,
+   "focus_y": 27,
+   "focus_zoom": 2.0,
+   "title": "เกาะหอคอย เอื้อมหาพระจันทร์",
+   "parts": [
+    {
+     "text": "ภาพโดย *Keiichiro Ito*",
+     "say": "ภาพบนการ์ดใบนี้ วาดโดย เคอิจิโร อิโตะ เป็นแบ็คกี้เกาะยอดหอคอย เอื้อมไปหาพระจันทร์เต็มดวง."
+    },
+    {
+     "text": "แสงจันทร์เปลี่ยน *อีวุย* เป็น Umbreon",
+     "say": "ในเกมเล่าว่า แสงจันทร์เปลี่ยนโครงสร้างพันธุกรรมของอีวุย จนกลายเป็นแบ็คกี้."
+    }
+   ]
+  },
+  {
+   "beat": "stats",
+   "duration": 13,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-pkm-umbreon-vmax-215.jpg",
+   "title": "บนสนามแข่งจริง",
+   "stats": [
+    {
+     "label": "พลังชีวิต HP",
+     "value": 310,
+     "max": 340
+    },
+    {
+     "label": "Max Darkness",
+     "value": 160,
+     "max": 340,
+     "suffix": " ดาเมจ"
+    },
+    {
+     "label": "การ์ดรางวัลที่คู่ต่อสู้ได้",
+     "value": 3,
+     "max": 3,
+     "suffix": " ใบ"
+    }
+   ],
+   "parts": [
+    {
+     "text": "VMAX พลังชีวิต *310* ท่า Max Darkness *160*",
+     "say": "เวลาเอาไปเล่นจริง มันเป็นการ์ด วีแมกซ์ พลังชีวิตสามร้อยสิบ ท่า แม็กซ์ ดาร์กเนส ทำความเสียหายร้อยหกสิบ."
+    },
+    {
+     "text": "อาบิลิตี้ *Dark Signal* สลับตัวสำรองคู่ต่อสู้",
+     "say": "และอาบิลิตี้ ดาร์ก ซิกแนล สลับตัวสำรองของคู่ต่อสู้ ขึ้นมาหน้าสนามได้."
+    },
+    {
+     "text": "ถ้าถูกน็อก คู่ต่อสู้ได้ *3 ใบ*",
+     "say": "แต่ถ้าถูกน็อกเอาต์ คู่ต่อสู้ได้การ์ดรางวัลสามใบ."
+    }
+   ]
+  },
+  {
+   "beat": "timeline",
+   "duration": 11,
+   "chapter": "ที่มา",
+   "title": "ออกเมื่อไหร่\n*ใครตั้งชื่อ*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-pkm-umbreon-vmax-215.jpg",
+   "points": [
+    {
+     "year": "พ.ค. 2021",
+     "label": "ญี่ปุ่น\nEevee Heroes"
+    },
+    {
+     "year": "27 ส.ค. 2021",
+     "label": "อังกฤษ\nEvolving Skies"
+    },
+    {
+     "year": "Moonbreon",
+     "label": "นักสะสม\nตั้งเอง"
+    }
+   ],
+   "parts": [
+    {
+     "text": "ญี่ปุ่น *พ.ค. 2021* • อังกฤษ *27 ส.ค. 2021*",
+     "say": "ญี่ปุ่นออกก่อน พฤษภาคม ปีสองพันยี่สิบเอ็ด ฉบับอังกฤษตามมา ยี่สิบเจ็ดสิงหาคม ในชุด อีโวลฟวิ่ง สกายส์."
+    },
+    {
+     "text": "ชื่อ *Moonbreon* นักสะสมตั้งกันเอง",
+     "say": "ส่วนชื่อ มูนเบรียน ไม่ใช่ชื่อทางการ นักสะสมช่วยกันตั้งขึ้นมาเอง."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 8,
+   "rank": "#1",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-pkm-umbreon-vmax-215.jpg",
+   "fit": "cover",
+   "pos": "50% 30%",
+   "price_label": "ราคาดิบ",
+   "price": "฿58K",
+   "subtitle": "≈ $1,725",
+   "title": "แพงสุดในชุด\n*Evolving Skies*",
+   "parts": [
+    {
+     "text": "แพงสุดในชุด *Evolving Skies*",
+     "say": "ในชุดนี้ มูนเบรียน แพงที่สุด"
+    },
+    {
+     "text": "แซง *Rayquaza VMAX* อันดับสอง",
+     "say": "แซงเรย์ควาซา วีแมกซ์ อัลเทอร์เนต อาร์ต ที่อยู่อันดับสองไปไกล."
+    }
+   ]
+  },
+  {
+   "beat": "bignum",
+   "duration": 11,
+   "chapter": "ที่น่าสนใจ",
+   "title": "ส่งเกรดแล้วได้ PSA 10",
+   "value": 21000,
+   "from": 0,
+   "subtitle": "ใบ (ประมาณ) • แต่ราคายังสูง",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-pkm-umbreon-vmax-215.jpg",
+   "parts": [
+    {
+     "text": "PSA 10 กว่า *21,000 ใบ*",
+     "say": "มีคนส่งเกรดได้ พีเอสเอสสิบ ไปแล้วกว่าสองหมื่นใบ แต่ราคายังอยู่ระดับนี้."
+    },
+    {
+     "text": "ใบดิบ *58,000* • PSA 10 *126,000 บาท*",
+     "say": "ใบดิบราวห้าหมื่นแปดพันบาท พีเอสเอสสิบ ราวหนึ่งแสนสองหมื่นหกพันบาท."
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 6,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-pkm-umbreon-vmax-215.jpg",
+   "text": "อีวุยร่างโปรดคือ*ร่างไหน*?",
+   "parts": [
+    {
+     "text": "อีวุยร่างไหนคือ *ร่างโปรด* ของคุณ?",
+     "say": "ถ้าต้องเลือกอีวุยสักร่าง คุณเลือกร่างไหน? พิมพ์บอกกันได้เลย."
+    }
+   ]
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "image_mode": "still",
+   "text": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด",
+   "duration": 3,
+   "no_caption": true,
+   "beat": "still",
+   "parts": [
+    {
+     "text": "*ซื้อ ขาย สะสม แข่งเกมส์การ์ด* ที่ www.cardzcenter.com",
+     "say": "ซื้อ ขาย สะสม แข่งเกม การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ]
+  }
+ ]
+}
