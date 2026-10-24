@@ -1,0 +1,320 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[calm, confident Thai storyteller, clear and engaging, natural pacing, not shouting]"
+ },
+ "audio_rate": 1.0,
+ "composition": "CardShow",
+ "theme": "grass",
+ "badge": "ME06",
+ "series": "การ์ดน่าจับตา",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055,
+ "meta": {
+  "title": "การ์ดโปเกมอนใบเดียว วันเปิดตัว 7 หมื่นบาท สองเดือนเหลือ 1.5 หมื่น | Delta Reign #shorts",
+  "description": "Pokémon TCG: Mega Evolution Delta Reign (ME06) ฉบับภาษาอังกฤษ วางขาย 6 พ.ย. 2026 (พรีรีลีส 24 ต.ค.–1 พ.ย., แข่งขันได้ 20 พ.ย.) เป็นฉบับอังกฤษของชุด Storm Emeralda ที่ญี่ปุ่นออก 31 ก.ค. 2026 ไฮไลต์คือ Mega Rayquaza ex\nราคาในคลิป: ตลาดญี่ปุ่น ณ วันเปิดตัว 31 ก.ค. (Mega Rayquaza ex MUR 113/076 เปิด ¥348,000, SAR 110/076 ¥118,000–138,000, Raikou ex SAR ¥11,800–16,800, Zinnia's Trust SAR ¥9,980–10,800) เทียบกับต้น ต.ค. (MUR ≈ ¥69,800, SAR ≈ ¥39,800 ที่ Yuyu-tei 3 ต.ค.) ราคาบาทคำนวณที่ ¥1 ≈ 0.22 บาท เป็นการประมาณ ราคาการ์ดก่อนวางขายและหลังวางขายอาจเปลี่ยนเร็วมาก ไม่ใช่คำแนะนำการลงทุน\nภาพการ์ดเป็นฉบับญี่ปุ่น (Storm Emeralda) ฉบับอังกฤษอาจต่างเล็กน้อย\nวิดีโอบรรยากาศนักเล่นการ์ด: AFN Okinawa / U.S. Air Force (ผลงานของรัฐบาลสหรัฐฯ สาธารณสมบัติ)\nข้อมูล: Serebii, Bill's Archive, Cardlines, Samurai Sword Tokyo, TCGdex, TCGplayer, Pokémon TCG Pokennoisseur calendar อัตราแลกเปลี่ยนประมาณ\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #โปเกมอน #การ์ดโปเกมอน #pokemon #pokemontcg #DeltaReign #MegaRayquaza",
+  "thumb": {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-m6-113.jpg",
+   "hook": "ชุดใหม่ที่ต้องจับตา\nMega Rayquaza",
+   "sub": "Delta Reign 6 พ.ย.",
+   "badge": "ME06"
+  },
+  "engage": "👇 เปิดซองวันแรก หรือรอราคาลง? พิมพ์ 1 = วันแรก / 2 = รอก่อน",
+  "campaign": "pkm-delta-reign-watch",
+  "site_path": "/"
+ },
+ "slides": [
+  {
+   "beat": "full",
+   "duration": 5,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-m6-113.jpg",
+   "fit": "contain",
+   "title": "วันเปิดตัว *฿77K*\nสองเดือนต่อมา *฿15K*",
+   "subtitle": "Mega Rayquaza ex (MUR) ฉบับญี่ปุ่น",
+   "price_label": "ต้น ต.ค. (ประมาณ)",
+   "price": "฿15K",
+   "parts": [
+    {
+     "text": "วันเปิดตัว *฿77K* เหลือ *฿15K*",
+     "say": "การ์ดใบเดียว วันเปิดตัวที่ญี่ปุ่น สามแสนสี่หมื่นแปดพันเยน. สองเดือนต่อมา เหลือเจ็ดหมื่นเยน!"
+    }
+   ]
+  },
+  {
+   "beat": "reveal",
+   "duration": 4,
+   "text": "ชุดใหม่ที่ต้อง*จับตา*",
+   "title": "Mega Rayquaza ex",
+   "subtitle": "Mega Evolution Delta Reign",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-m6-110.jpg",
+   "parts": [
+    {
+     "text": "*Delta Reign* วางขาย *6 พ.ย.*",
+     "say": "ชุดนี้คือ เมก้า อีโวลูชัน เดลต้า เรน. ฉบับอังกฤษ วางขายหกพฤศจิกายน."
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 4,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-m6-110.jpg",
+   "fit": "contain",
+   "video_url": "https://renderer-production-8b7f.up.railway.app/videos/clip-pkmnew-a.mp4",
+   "title": "พรีรีลีส\n*24 ต.ค. – 1 พ.ย.*",
+   "parts": [
+    {
+     "text": "*พรีรีลีส* ก่อนวางขาย",
+     "say": "ตอนนี้ ร้านการ์ดเริ่มจัดพรีรีลีสแล้ว."
+    }
+   ]
+  },
+  {
+   "beat": "timeline",
+   "duration": 5,
+   "chapter": "ไทม์ไลน์",
+   "title": "จากญี่ปุ่น\n*สู่ฉบับอังกฤษ*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-m6-110.jpg",
+   "points": [
+    {
+     "year": "31 ก.ค.",
+     "label": "ญี่ปุ่น\nStorm Emeralda"
+    },
+    {
+     "year": "24 ต.ค.",
+     "label": "พรีรีลีส\nฉบับอังกฤษ"
+    },
+    {
+     "year": "6 พ.ย.",
+     "label": "วางขาย\nทั่วโลก"
+    },
+    {
+     "year": "20 พ.ย.",
+     "label": "ใช้แข่ง\nได้จริง"
+    }
+   ],
+   "parts": [
+    {
+     "text": "ญี่ปุ่น *31 ก.ค.*",
+     "say": "ที่ญี่ปุ่นออกไปแล้ว สามสิบเอ็ดกรกฎาคม."
+    },
+    {
+     "text": "แข่งจริง *20 พ.ย.*",
+     "say": "ฉบับอังกฤษ ใช้แข่งขันได้ ยี่สิบพฤศจิกายน."
+    }
+   ]
+  },
+  {
+   "beat": "zoom",
+   "duration": 6,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-m6-110.jpg",
+   "focus_x": 50,
+   "focus_y": 30,
+   "focus_zoom": 1.7,
+   "title": "มังกรแห่งชั้นบรรยากาศ",
+   "parts": [
+    {
+     "text": "*Rayquaza* มังกรเหนือเมฆ",
+     "say": "เรย์ควาซา มังกรเขียว ที่อาศัยอยู่ในชั้นโอโซน."
+    },
+    {
+     "text": "*Mega* ไม่ต้องใช้หินเมก้า",
+     "say": "ในเกม มันเมก้าอีโวลูชัน ได้เอง โดยไม่ต้องมีหินเมก้า!"
+    }
+   ]
+  },
+  {
+   "beat": "stats",
+   "duration": 5,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-m6-110.jpg",
+   "title": "บนสนามแข่ง",
+   "stats": [
+    {
+     "label": "พลังชีวิต HP",
+     "value": 280,
+     "max": 340
+    },
+    {
+     "label": "ดาเมจต่อพลังงานไฟ/ฟ้า",
+     "value": 50,
+     "max": 100,
+     "suffix": " ต่อดวง"
+    },
+    {
+     "label": "ถอยหนีใช้พลังงาน",
+     "value": 2,
+     "max": 4,
+     "suffix": " ดวง"
+    }
+   ],
+   "parts": [
+    {
+     "text": "พลังชีวิต *280*",
+     "say": "พลังชีวิตสองร้อยแปดสิบ."
+    },
+    {
+     "text": "*50 ต่อพลังงาน* ไฟ/ฟ้า",
+     "say": "ท่าโจมตี นับพลังงานไฟกับสายฟ้า ทุกตัวในฝั่งเรา คูณห้าสิบ."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 5,
+   "rank": "#1",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-m6-110.jpg",
+   "fit": "cover",
+   "pos": "50% 30%",
+   "price_label": "ญี่ปุ่น ต้น ต.ค.",
+   "price": "฿9K",
+   "subtitle": "≈ ¥39,800 • SAR",
+   "title": "เมก้า เรย์ควาซา\n*ภาพพิเศษ SAR*",
+   "parts": [
+    {
+     "text": "SAR *¥118,000* → *¥39,800*",
+     "say": "ภาพพิเศษ เอสเอเออาร์ เปิดตัวหนึ่งแสนหนึ่งหมื่นแปดพันเยน. ต้นตุลาคม เหลือสามหมื่นเก้าพันเยน."
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 3,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-m6-113.jpg",
+   "fit": "contain",
+   "text": "ใบ *ทองคำ MUR*\nหายากสุดของชุด",
+   "parts": [
+    {
+     "text": "ใบทอง *MUR* หายากสุด",
+     "say": "ส่วนใบทอง เอ็มยูอาร์ หายากที่สุดของชุด."
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 4,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-m6-113.jpg",
+   "fit": "contain",
+   "video_url": "https://renderer-production-8b7f.up.railway.app/videos/clip-pkmnew-b.mp4",
+   "title": "ทำไม *ราคาลง*",
+   "parts": [
+    {
+     "text": "คนเปิดซองเยอะ *ราคาลง*",
+     "say": "ราคาลงเร็ว เพราะคนเปิดซองเยอะ ของในตลาดเพิ่มขึ้น."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 4,
+   "rank": "#2",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-m6-108.jpg",
+   "fit": "cover",
+   "pos": "50% 30%",
+   "price_label": "ญี่ปุ่น วันเปิดตัว",
+   "price": "฿3K",
+   "subtitle": "≈ ¥11,800–16,800 • SAR",
+   "title": "ไรโค ex\n*ฟ้าผ่าแห่งตำนาน*",
+   "parts": [
+    {
+     "text": "*ไรโค* ตำนานสายฟ้า",
+     "say": "อันดับสอง ไรโค อีเอ็กซ์ วันเปิดตัวประมาณสามพันบาท."
+    }
+   ]
+  },
+  {
+   "beat": "zoom",
+   "duration": 4,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-m6-112.jpg",
+   "focus_x": 50,
+   "focus_y": 40,
+   "focus_zoom": 1.5,
+   "title": "ใบที่อาจ *พลิกเกม*",
+   "parts": [
+    {
+     "text": "*Zinnia's Trust* ผูกกับ Rayquaza",
+     "say": "อีกใบที่น่าจับตา คือการ์ดซินเนีย ตัวละครที่ผูกกับเรย์ควาซา ในเกมโอเมก้า รูบี้."
+    }
+   ]
+  },
+  {
+   "beat": "bignum",
+   "duration": 5,
+   "chapter": "ของพรีออเดอร์",
+   "title": "กล่อง ETB พรีออเดอร์ (ดอลลาร์)",
+   "value": 116,
+   "from": 0,
+   "subtitle": "ราคาตลาดรีเซล เทียบ $50 ราคาร้าน",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-m6-110.jpg",
+   "parts": [
+    {
+     "text": "กล่อง ETB *$50* → รีเซล *$116*",
+     "say": "กล่องอีทีบี ราคาร้านห้าสิบดอลลาร์. แต่พรีออเดอร์ในตลาดรีเซล หนึ่งร้อยสิบหกดอลลาร์."
+    }
+   ]
+  },
+  {
+   "beat": "versions",
+   "duration": 4,
+   "text": "ภาพในคลิป *เป็นฉบับญี่ปุ่น*",
+   "images": [
+    "https://renderer-production-8b7f.up.railway.app/assets/fix-m6-110.jpg",
+    "https://renderer-production-8b7f.up.railway.app/assets/fix-m6-113.jpg"
+   ],
+   "labels": [
+    "Mega Rayquaza ex SAR (ญี่ปุ่น)",
+    "Mega Rayquaza ex MUR (ญี่ปุ่น)"
+   ],
+   "parts": [
+    {
+     "text": "ภาพคือ *ฉบับญี่ปุ่น* ราคาขึ้นลงเร็ว",
+     "say": "ภาพในคลิปเป็นฉบับญี่ปุ่น และราคาช่วงนี้ขึ้นลงเร็ว ไม่ใช่คำแนะนำให้ซื้อ."
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 4,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-m6-113.jpg",
+   "fit": "contain",
+   "video_url": "https://renderer-production-8b7f.up.railway.app/videos/clip-pkmnew-c.mp4",
+   "title": "การ์ดดี ต้อง *ได้เล่น*",
+   "parts": [
+    {
+     "text": "ซื้อเพราะ *อยากเล่น* ก็ได้",
+     "say": "การ์ดชุดนี้ ใช้แข่งได้จริงด้วย."
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 4,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-m6-110.jpg",
+   "fit": "contain",
+   "text": "เปิดซอง*วันแรก*\nหรือ *รอราคาลง*?",
+   "parts": [
+    {
+     "text": "เปิดซอง *วันแรก* หรือ *รอ*?",
+     "say": "เปิดซองวันแรก หรือรอราคาลง? พิมพ์หนึ่ง วันแรก. พิมพ์สอง รอก่อน."
+    }
+   ]
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "image_mode": "still",
+   "text": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด",
+   "duration": 3,
+   "no_caption": true,
+   "beat": "still",
+   "parts": [
+    {
+     "text": "*ซื้อ ขาย สะสม แข่งเกมส์การ์ด* ที่ www.cardzcenter.com",
+     "say": "ซื้อ ขาย สะสม แข่งเกม การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ]
+  }
+ ]
+}
