@@ -1493,6 +1493,9 @@ app.post("/peek-video", auth, async (req, res) => {
     const out = path.join(ASSET_DIR, "pv-sheet.jpg");
     const cols = Math.min(4, frames.length);
     await execFileP("python3", ["-c", `import sys\nfrom PIL import Image, ImageDraw\nfs=sys.argv[3:]\nims=[Image.open(f) for f in fs]\nc=int(sys.argv[2])\nw,h=ims[0].size\nr=(len(ims)+c-1)//c\nS=Image.new('RGB',(w*c,h*r),'white')\nfor i,im in enumerate(ims): S.paste(im,((i%c)*w,(i//c)*h))\nS.save(sys.argv[1],quality=70)`, out, String(cols), ...frames], { timeout: 30000 });
+    await fs.copyFile(out, path.join(OUT_DIR, `sheet-${name}.jpg`));
+    console.log(`[clip] sheet saved -> ${PUBLIC_BASE_URL}/videos/sheet-${name}.jpg`);
+    return;
     const b64 = (await fs.readFile(out)).toString("base64");
     const parts = Math.ceil(b64.length / 6000);
     console.log(`[peek] v meta ${job} ${JSON.stringify(times)}`);
@@ -1520,6 +1523,9 @@ app.post("/fight-still", auth, async (req, res) => {
     const out = path.join(ASSET_DIR, "fs-sheet.jpg");
     const cols = Math.min(3, files.length);
     await execFileP("python3", ["-c", `import sys\nfrom PIL import Image\nfs=sys.argv[4:]\nW=int(sys.argv[3])\nims=[]\nfor f in fs:\n    im=Image.open(f).convert('RGB'); ims.append(im.resize((W,int(im.height*W/im.width))))\nc=int(sys.argv[2])\nw,h=ims[0].size\nr=(len(ims)+c-1)//c\nS=Image.new('RGB',(w*c,h*r),'white')\nfor i,im in enumerate(ims): S.paste(im,((i%c)*w,(i//c)*h))\nS.save(sys.argv[1],quality=70)`, out, String(cols), String(width), ...files], { timeout: 60000 });
+    await fs.copyFile(out, path.join(OUT_DIR, `sheet-${name}.jpg`));
+    console.log(`[clip] sheet saved -> ${PUBLIC_BASE_URL}/videos/sheet-${name}.jpg`);
+    return;
     const b64 = (await fs.readFile(out)).toString("base64");
     const parts = Math.ceil(b64.length / 6000);
     console.log(`[peek] v meta fight-still ${JSON.stringify(times)}`);
@@ -1790,6 +1796,9 @@ app.post("/clip-sheet", auth, async (req, res) => {
     const out = path.join(ASSET_DIR, "cs-sheet.jpg");
     const cols = Math.min(6, frames.length);
     await execFileP("python3", ["-c", `import sys\nfrom PIL import Image, ImageDraw\nout,c=sys.argv[1],int(sys.argv[2])\nts=sys.argv[3].split(',')\nfs=sys.argv[4:]\nims=[Image.open(f) for f in fs]\nw,h=ims[0].size\nr=(len(ims)+c-1)//c\nS=Image.new('RGB',(w*c,h*r),'white')\nfor i,im in enumerate(ims):\n    S.paste(im,((i%c)*w,(i//c)*h)); ImageDraw.Draw(S).text(((i%c)*w+4,(i//c)*h+4),ts[i],fill=(255,255,0))\nS.save(out,quality=70)`, out, String(cols), times.join(","), ...frames], { timeout: 30000 });
+    await fs.copyFile(out, path.join(OUT_DIR, `sheet-${name}.jpg`));
+    console.log(`[clip] sheet saved -> ${PUBLIC_BASE_URL}/videos/sheet-${name}.jpg`);
+    return;
     const b64 = (await fs.readFile(out)).toString("base64");
     const parts = Math.ceil(b64.length / 6000);
     console.log(`[clip] sheet meta ${name} ${JSON.stringify(times)} parts=${parts}`);
