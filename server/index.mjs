@@ -1095,7 +1095,7 @@ app.post("/render", auth, (req, res) => {
     for (const [i, s] of slides.entries()) {
       const duration = Number(s.duration);
       const SCENES = ["sprout", "coin", "evolve", "versions", "sprite"];
-      const BEATS = ["hook", "reveal", "card", "name", "stats", "bignum", "quiz", "zoom", "timeline", "art", "still", "coin", "evolve", "versions", "sprite", "full", "rank"];
+      const BEATS = ["hook", "reveal", "card", "name", "stats", "bignum", "quiz", "zoom", "timeline", "art", "still", "coin", "evolve", "versions", "sprite", "full", "rank", "pixel"];
       if ((!s.image_url && !s.video_url && !SCENES.includes(s.scene) && !BEATS.includes(s.beat)) || !(duration > 0)) {
         return res.status(400).json({
           error: `slide ${i}: need image_url or video_url, and duration (seconds) > 0`,
@@ -1137,7 +1137,7 @@ app.post("/render", auth, (req, res) => {
         text: s.text ? String(s.text) : undefined,
         say: s.say ? String(s.say) : undefined,
         parts: Array.isArray(s.parts)
-          ? s.parts.map((p) => ({ text: String(p?.text ?? ""), say: p?.say ? String(p.say) : undefined, panel: cleanPanel(p?.panel) }))
+          ? s.parts.map((p) => ({ text: String(p?.text ?? ""), say: p?.say ? String(p.say) : undefined, panel: cleanPanel(p?.panel), cue: p?.cue ? String(p.cue).slice(0, 12) : undefined }))
           : undefined,
         duration,
         // ฟิลด์ของรูปแบบ CardShow

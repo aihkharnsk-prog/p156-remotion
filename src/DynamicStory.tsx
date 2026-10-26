@@ -19,6 +19,7 @@ export type SlidePart = {
   text: string; // ซับของท่อนนี้ (ใส่ *คำสำคัญ* ได้)
   audio_url?: string; // เสียงของท่อนนี้
   duration: number; // วินาที (ระบบคำนวณจากความยาวเสียง)
+  cue?: string; // บีต pixel: จุดที่กล้องซูมไปตอนท่อนนี้ (all|fridge|food|comp|cond|cap|evap|back)
 };
 
 export type Slide = {

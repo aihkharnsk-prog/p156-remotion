@@ -15,6 +15,7 @@ import { useKanit, FRIEND } from "./fonts";
 import { Slide, slideFrames, COVER_FRAMES, DYN_FPS } from "./DynamicStory";
 import { Thumb, ThumbProps } from "./Thumb";
 import { CoinScene, EvolveScene, VersionsScene, SpriteScene } from "./Scenes";
+import { PixelFridge } from "./Pixel";
 
 // =====================================================================
 // CardShow — รูปแบบคลิปใหม่ (แอนิเมชันเต็มรูปแบบ)
@@ -39,7 +40,8 @@ export type Beat =
   | "versions"
   | "sprite"
   | "full"
-  | "rank";
+  | "rank"
+  | "pixel";
 
 export type Transition = "wipe" | "zoom" | "flash" | "slide" | "shutter" | "none";
 
@@ -815,11 +817,12 @@ const BeatView: React.FC<{ s: ShowSlide; idx: number; pal: Pal }> = ({ s, idx, p
     beat === "sprite" ? <SpriteScene {...sceneProps} /> :
     beat === "full" ? <FullBeat {...p} /> :
     beat === "rank" ? <RankBeat {...p} /> :
+    beat === "pixel" ? <PixelFridge frame={f} dur={d} parts={s.parts || []} starts={starts} /> :
     <CardBeat {...p} />;
   return (
     <Enter type={tr} f={f} pal={pal}>
       {body}
-      {beat === "still" ? null : (
+      {beat === "still" || beat === "pixel" ? null : (
         <AbsoluteFill style={{ background: "linear-gradient(to top, rgba(0,0,0,.55) 0%, rgba(0,0,0,0) 22%)" }} />
       )}
       <Caption s={s} f={f} fps={fps} pal={pal} starts={starts} />
