@@ -421,3 +421,5 @@ export const WASH: SceneDef = {
 };
 
 export const SCENES: Record<string, SceneDef> = { toilet: TOILET, ac: AC, wash: WASH };
+
+export const H = { f2, cl, lerp, ease, mixc, plen, along, rpath, tube, dot, wave, warrow, varrow, box, DEFS, room, waterColor };
