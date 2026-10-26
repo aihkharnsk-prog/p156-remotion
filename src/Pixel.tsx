@@ -3,6 +3,7 @@ import { AbsoluteFill, interpolate, Easing } from "remotion";
 import { useKanit, KANIT } from "./fonts";
 import { pixelFridge, FOCUS, GW, GH } from "./pixelFridge";
 import { vecFridge } from "./vecFridge";
+import { SCENES } from "./vecScenes";
 
 // บีต "pixel": ฉากพิกเซลตู้เย็นตัดครึ่งที่วาดด้วยโค้ด + ซับทีละคำกลางจอ
 // ภาพเดียวต่อเนื่องทั้งสไลด์ กล้องซูมไปตาม cue ของแต่ละท่อน (parts[k].cue)
@@ -28,33 +29,50 @@ const words = (t: string): string[] => {
   }
 };
 
+// แบ่งซับเป็นวลียาว ~10-16 ตัวอักษร (ไม่ให้เหลือชิ้นสั้นเกิน)
+const chunks = (t: string): string[] => {
+  const ws = words(t);
+  const out: string[] = [];
+  let cur = "";
+  for (const w of ws) {
+    if (cur && (cur + w).length > 16) { out.push(cur); cur = w; } else cur += w;
+    if (cur.length >= 11 && /[ ,.!?]$/.test(w)) { out.push(cur); cur = ""; }
+  }
+  if (cur) { if (out.length && cur.length < 6) out[out.length - 1] += cur; else out.push(cur); }
+  return out;
+};
+
 export const PixelFridge: React.FC<{
   frame: number;
   dur: number;
   parts: { text: string; cue?: string; duration?: number }[];
   starts: number[];
   vec?: boolean;
-}> = ({ frame, dur, parts, starts, vec }) => {
+  scene?: string;
+}> = ({ frame, dur, parts, starts, vec, scene }) => {
   useKanit();
   let k = 0;
   for (let i = 0; i < starts.length; i++) if (frame >= starts[i]) k = i;
-  const cue = (i: number) => (FOCUS[parts[i]?.cue || ""] ? parts[i].cue! : "all");
-  const cur = FOCUS[cue(k)];
-  const prev = FOCUS[k > 0 ? cue(k - 1) : cue(k)];
+  const SC = scene ? SCENES[scene] : null;
+  const FC: Record<string, any> = SC ? SC.focus : FOCUS;
+  const cue = (i: number) => (FC[parts[i]?.cue || ""] ? parts[i].cue! : "all");
+  const cur = FC[cue(k)];
+  const prev = FC[k > 0 ? cue(k - 1) : cue(k)];
   const ef = frame - (starts[k] || 0);
   const e = interpolate(ef, [0, 22], [0, 1], { ...C, easing: Easing.inOut(Easing.cubic) });
   const L = (a: number, b: number) => a + (b - a) * e;
   const cx = L(prev.cx, cur.cx), cy = L(prev.cy, cur.cy), z = L(prev.z, cur.z);
   const cold = interpolate(frame, [dur * 0.08, dur * 0.88], [0, 1], { ...C, easing: Easing.inOut(Easing.quad) });
   const temp = Math.round(24 - 20 * cold);
-  const rs = vec ? [] : pixelFridge({ frame, cold, focus: cue(k), heat: true, run: true });
-  const vecSvg = vec ? vecFridge({ frame, cold, focus: cue(k), heat: true, run: true }) : "";
+  const rs = vec || SC ? [] : pixelFridge({ frame, cold, focus: cue(k), heat: true, run: true });
+  const pk0 = starts[k] || 0, pk1 = k + 1 < starts.length ? starts[k + 1] : dur;
+  const vecSvg = SC ? SC.render({ frame, cue: cue(k), p: Math.min(1, Math.max(0, (frame - pk0) / Math.max(1, pk1 - pk0))), ef }) : vec ? vecFridge({ frame, cold, focus: cue(k), heat: true, run: true }) : "";
 
   // ซับทีละคำ
   const part = parts[k];
   const pStart = starts[k] || 0;
   const pEnd = k + 1 < starts.length ? starts[k + 1] : dur;
-  const ws = part ? words(part.text) : [];
+  const ws = part ? (SC ? chunks(part.text) : words(part.text)) : [];
   const tot = ws.reduce((a, w) => a + w.length + 1, 0) || 1;
   const span = Math.max(1, pEnd - pStart - 6);
   let acc = 0, wi = 0;
@@ -67,22 +85,22 @@ export const PixelFridge: React.FC<{
   acc = 0;
   for (let i = 0; i < wi; i++) acc += ws[i].length + 1;
   wStart = (acc / tot) * span;
-  const wp = interpolate(wf - wStart, [0, 5], [0.7, 1], { ...C, easing: Easing.out(Easing.back(2)) });
-  const label = FOCUS[cue(k)]?.label;
-  const box = FOCUS[cue(k)]?.box;
+  const wp = interpolate(wf - wStart, [0, 5], [SC ? 0.92 : 0.7, 1], { ...C, easing: Easing.out(Easing.back(2)) });
+  const label = FC[cue(k)]?.label;
+  const box = FC[cue(k)]?.box;
   const lp = interpolate(ef, [10, 22], [0, 1], C);
 
   return (
     <AbsoluteFill style={{ background: "#f1dfb9" }}>
       <svg width={1080} height={1920} viewBox={`0 0 ${GW} ${GH}`} shapeRendering={vec ? "geometricPrecision" : "crispEdges"} style={{ position: "absolute", inset: 0 }}>
         <g transform={`translate(135 240) scale(${z}) translate(${-cx} ${-cy})`}>
-          {vec ? <g dangerouslySetInnerHTML={{ __html: vecSvg }} /> : null}
+          {vec || SC ? <g dangerouslySetInnerHTML={{ __html: vecSvg }} /> : null}
           {rs.map((r, i) => (
             <rect key={i} x={r.x} y={r.y} width={r.w} height={r.h} fill={r.c} opacity={r.o} />
           ))}
-          <text x={25} y={286} fontSize={9} fontFamily={KANIT} fontWeight={900} textAnchor="middle" fill="#46526b" shapeRendering="auto">
+          {!SC ? <text x={25} y={286} fontSize={9} fontFamily={KANIT} fontWeight={900} textAnchor="middle" fill="#46526b" shapeRendering="auto">
             {temp}°C
-          </text>
+          </text> : null}
           {label && box ? (
             <text
               x={box[0] + box[2] / 2}
@@ -105,14 +123,14 @@ export const PixelFridge: React.FC<{
         </g>
       </svg>
       {ws.length ? (
-        <div style={{ position: "absolute", left: 0, right: 0, top: 1130, textAlign: "center", transform: `scale(${wp})` }}>
+        <div style={{ position: "absolute", left: 60, right: 60, top: SC ? 1150 : 1130, textAlign: "center", lineHeight: 1.15, transform: `scale(${wp})` }}>
           <span
             style={{
               fontFamily: KANIT,
               fontWeight: 900,
-              fontSize: 128,
+              fontSize: SC ? 92 : 128,
               color: "#fff",
-              WebkitTextStroke: "16px #17102b",
+              WebkitTextStroke: SC ? "12px #17102b" : "16px #17102b",
               paintOrder: "stroke fill",
               strokeLinejoin: "round",
               textShadow: "0 8px 0 #17102b",
