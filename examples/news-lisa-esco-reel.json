@@ -1,0 +1,128 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "การ์ดลิซ่าใบเดียว 4.2 ล้านบาท ร้านฮ่องกงตั้งราคารับซื้อ | LISA x ESCO #shorts #LISA",
+  "description": "การ์ด LISA x ESCO Autograph Card Gold 1/1 (ซับเซ็ต Alter Ego ภาพคาแรกเตอร์ Roxi) ถูกร้านการ์ด HKTCG ในฮ่องกงตั้งราคารับซื้อที่ HK$1,000,000 (ราว 4.2 ล้านบาท)\n• นี่เป็นราคารับซื้อ ไม่ใช่ราคาที่ขายไปจริง\n• ESCO x LISA Trading Card Pack ฉลอง EP PRESS PLAY รวม 50 แบบ มีการ์ดลายเซ็นสุ่มใส่ พรีเซลล์ 19 ต.ค. 2026 วางขายทั่วไป 23 ต.ค. 2026\nแหล่งข้อมูลชุดการ์ด: Complex\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #LISA #ลิซ่า #Lalisa #LalisaManobal #BLACKPINK #ลิซ่าBLACKPINK #LISAxESCO #ESCO #ESCOTradingCards #PRESSPLAY #AlterEgo #Roxi #การ์ดลิซ่า #การ์ดสะสม #การ์ดแพง #kpop #Blink"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, confident, clear presenter, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "slides": [
+  {
+   "beat": "hook",
+   "duration": 7,
+   "text": "การ์ดลิซ่าใบเดียว *4.2 ล้านบาท*",
+   "title": "การ์ดลิซ่า\n*4.2 ล้านบาท*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-lisa-esco.jpg",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "การ์ดลิซ่าใบเดียว *4.2 ล้านบาท*",
+     "say": "การ์ดลิซ่าใบเดียว มีร้านในฮ่องกง ตั้งราคารับซื้อ สี่ล้านสองแสนบาท!"
+    },
+    {
+     "text": "แต่นี่คือ *ราคารับซื้อ*",
+     "say": "แต่ต้องบอกก่อนว่า นี่คือราคารับซื้อ ยังไม่ใช่ราคาที่ขายไปจริง"
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 9,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-lisa-esco.jpg",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "*ESCO x LISA* ชุด Alter Ego",
+     "say": "ก๊าดใบนี้ มาจากชุด อีสโก คูณ ลิซ่า ซับเซ็ต อัลเตอร์ เอโก้ ภาพลิซ่าในคาแรกเตอร์ ร็อกซี่"
+    },
+    {
+     "text": "ลายเซ็นจริง กรอบทอง *1/1*",
+     "say": "มีลายเซ็นจริงของลิซ่า และเป็นกรอบสีทอง ที่มีเพียงใบเดียวในโลก"
+    }
+   ],
+   "text": "การ์ดใบนี้ *มีใบเดียวในโลก*"
+  },
+  {
+   "beat": "bignum",
+   "duration": 9,
+   "chapter": "ราคารับซื้อ",
+   "title": "HKTCG ฮ่องกง",
+   "value": 4200000,
+   "from": 0,
+   "subtitle": "บาท • ราว HK$1,000,000",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-lisa-esco.jpg",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "HKTCG ตั้งราคา *HK$1 ล้าน*",
+     "say": "ร้านการ์ด เอช เค ที ซี จี ในฮ่องกง ตั้งราคารับซื้อ หนึ่งล้านดอลลาร์ฮ่องกง"
+    },
+    {
+     "text": "ราว *4.2 ล้านบาท*",
+     "say": "หรือประมาณสี่ล้านสองแสนบาท."
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 9,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-lisa-esco.jpg",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "ฉลอง EP *PRESS PLAY*",
+     "say": "ก๊าดชุดนี้ออกมาฉลองอีพีใหม่ เพรส เพลย์ ของลิซ่า รวมห้าสิบแบบ"
+    },
+    {
+     "text": "ซองมี *ลายเซ็นสุ่ม*",
+     "say": "ในซองมีการ์ดลายเซ็นจริง สุ่มใส่ และมีพาราเรล ที่นับเลขตั้งแต่แปดร้อย ไปจนถึงใบเดียว"
+    }
+   ],
+   "text": "การ์ดชุดนี้ *มาจากไหน*"
+  },
+  {
+   "beat": "card",
+   "duration": 6,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-lisa-esco.jpg",
+   "fit": "contain",
+   "text": "ถ้าเปิดซองเจอใบนี้ คุณจะ *ขาย* ไหม?",
+   "parts": [
+    {
+     "text": "ถ้าเจอใบนี้ คุณจะ *ขาย* ไหม?",
+     "say": "ถ้าคุณเปิดซองเจอใบนี้ คุณจะขายไหม? คอมเมนต์ไว้เลย!"
+    }
+   ]
+  },
+  {
+   "beat": "still",
+   "duration": 4,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "image_mode": "still",
+   "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+   "no_caption": true,
+   "parts": [
+    {
+     "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+     "say": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้เลย!"
+    },
+    {
+     "text": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด",
+     "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ]
+  }
+ ],
+ "composition": "CardShow",
+ "theme": "psychic",
+ "badge": "ข่าวการ์ด",
+ "series": "ข่าวการ์ดสะสม",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055
+}
