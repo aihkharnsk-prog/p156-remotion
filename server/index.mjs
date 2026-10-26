@@ -489,7 +489,7 @@ async function runJob(job) {
         if (Array.isArray(s.parts) && job.request.tts) {
           const outParts = [];
           for (const [k, p] of s.parts.entries()) {
-            const part = { text: String(p.text || ""), duration: 4, say: p.say ? String(p.say) : undefined, panel: p.panel };
+            const part = { text: String(p.text || ""), duration: 4, say: p.say ? String(p.say) : undefined, panel: p.panel, cue: p.cue };
             if (p.say && job.request.tts.mode !== "single") {
               await ttsToFile(String(p.say), path.join(assetDir, `sa${i}_${k}.mp3`), job.request.tts);
               part.audio_url = local(`sa${i}_${k}.mp3`);
