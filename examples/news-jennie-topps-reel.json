@@ -1,0 +1,132 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "การ์ดเจนนี่ 3 ใบ รวม 1.5 ล้านบาท | Topps Chrome x Jennie #shorts #Jennie",
+  "description": "การ์ด 2026 Topps Chrome x Jennie เพิ่งวางขายได้ไม่กี่วัน แต่ราคาการ์ดหายากพุ่งแรง มี 3 ใบที่มีรายงานราคาขายสูงสุด รวมกันกว่า 1.5 ล้านบาท\n• Ruby RSSP Autograph 3/5 — ฿804,000\n• Concert-Worn Relic 10/10 — ฿608,000\n• #1 Black Refractor 01/10 \"Mantra 1\" — ฿128,000\nราคาตามที่มีรายงาน ไม่ใช่ราคากลางที่ยืนยันแล้ว\nภาพการ์ดในคลิปคือใบ Ruby RSSP Autograph 3/5\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #Jennie #เจนนี่ #JennieKim #JennieRuby #Ruby #BLACKPINK #เจนนี่BLACKPINK #ToppsChrome #ToppsChromexJennie #การ์ดเจนนี่ #การ์ดสะสม #การ์ดแพง #kpop #Blink"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, confident, clear presenter, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "slides": [
+  {
+   "beat": "hook",
+   "duration": 7,
+   "text": "การ์ดเจนนี่ 3 ใบ *1.5 ล้านบาท*",
+   "title": "การ์ดเจนนี่\n*1.5 ล้านบาท*",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-jennie-ruby.jpg",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "การ์ดเจนนี่ 3 ใบ *1.5 ล้านบาท*",
+     "say": "การ์ดเจนนี่แค่สามใบ รวมกันกว่าหนึ่งล้านห้าแสนบาท!"
+    },
+    {
+     "text": "วางขายได้ *ไม่กี่วัน*",
+     "say": "และชุดนี้เพิ่งวางขายได้ ไม่กี่วันเองนะ"
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 10,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-jennie-ruby.jpg",
+   "fit": "contain",
+   "text": "Ruby RSSP *Autograph 3/5*",
+   "parts": [
+    {
+     "text": "ท็อปส์ โครม x เจนนี่",
+     "say": "ก๊าดชุดนี้คือ ท็อปส์ โครม คูณ เจนนี่ สองพันยี่สิบหก"
+    },
+    {
+     "text": "ลายเซ็นจริง *3/5*",
+     "say": "ใบในภาพคือรูบี้ อาร์ เอส เอส พี ออโต้กราฟ มีลายเซ็นจริงของเจนนี่ และมีเพียงห้าใบในโลก ใบนี้คือใบที่สาม"
+    },
+    {
+     "text": "*฿804,000*",
+     "say": "มีรายงานราคาอยู่ที่ แปดแสนสี่พันบาท"
+    }
+   ]
+  },
+  {
+   "beat": "bignum",
+   "duration": 10,
+   "chapter": "3 ใบที่แพงที่สุด",
+   "title": "รวมกัน",
+   "value": 1500000,
+   "from": 0,
+   "subtitle": "บาท • ตามรายงานราคา",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-jennie-ruby.jpg",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "อีก 2 ใบ *฿608,000* และ *฿128,000*",
+     "say": "อีกสองใบ คือคอนเสิร์ต วอร์น เรลิก สิบจากสิบ ราคาหกแสนแปดพันบาท และแบล็ก รีแฟรกเตอร์ แมนทรา วัน ใบที่หนึ่งจากสิบ ราคาหนึ่งแสนสองหมื่นแปดพันบาท"
+    },
+    {
+     "text": "รวมกัน *1.5 ล้านบาท*",
+     "say": "รวมสามใบ กว่าหนึ่งล้านห้าแสนบาท."
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 9,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-jennie-ruby.jpg",
+   "fit": "contain",
+   "text": "ทำไมราคา *พุ่ง*",
+   "parts": [
+    {
+     "text": "กล่องหมดจากเว็บ *Topps*",
+     "say": "เหตุผลหนึ่งคือ กล่องของชุดนี้ หมดจากเว็บท็อปส์ไปแล้ว"
+    },
+    {
+     "text": "ใบเลขน้อย *หายาก*",
+     "say": "การ์ดลายเซ็นที่มีเลขกำกับน้อยๆ อย่างสามส่วนห้า ยิ่งหาได้ยาก ราคาก็ยิ่งขยับ"
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 6,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/assets/fix-jennie-ruby.jpg",
+   "fit": "contain",
+   "text": "ถ้าเปิดซองเจอใบนี้ คุณจะ *ขาย* ไหม?",
+   "parts": [
+    {
+     "text": "ถ้าเจอใบนี้ คุณจะ *ขาย* ไหม?",
+     "say": "ถ้าคุณเปิดซองเจอใบนี้ คุณจะขายไหม? คอมเมนต์ไว้เลย!"
+    }
+   ]
+  },
+  {
+   "beat": "still",
+   "duration": 4,
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "image_mode": "still",
+   "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+   "no_caption": true,
+   "parts": [
+    {
+     "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+     "say": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้เลย!"
+    },
+    {
+     "text": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด",
+     "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ]
+  }
+ ],
+ "composition": "CardShow",
+ "theme": "psychic",
+ "badge": "ข่าวการ์ด",
+ "series": "ข่าวการ์ดสะสม",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055
+}
