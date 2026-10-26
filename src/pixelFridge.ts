@@ -39,7 +39,7 @@ const build = (): { pts: { p: Pt; zone: Zone }[] } => {
   add("suct", [[202, 150], [202, 340], [160, 340], [160, 348]]);
   return { pts };
 };
-const PATH = build().pts;
+export const PATH = build().pts;
 const SEGS: Seg[] = [];
 let TOTAL = 0;
 for (let i = 0; i < PATH.length - 1; i++) {
@@ -59,7 +59,7 @@ SEGS.forEach((s) => {
 });
 export const PATH_LEN = TOTAL;
 
-const at = (d: number): { p: Pt; zone: Zone; u: number } => {
+export const at = (d: number): { p: Pt; zone: Zone; u: number } => {
   const dd = ((d % TOTAL) + TOTAL) % TOTAL;
   for (const s of SEGS) {
     if (dd <= s.start + s.len) {
@@ -71,7 +71,7 @@ const at = (d: number): { p: Pt; zone: Zone; u: number } => {
   return { p: SEGS[0].a, zone: "comp", u: 0 };
 };
 
-const stateColor = (zone: Zone, u: number): string => {
+export const stateColor = (zone: Zone, u: number): string => {
   switch (zone) {
     case "comp": return mix("#8fe3ff", "#ff5a3c", u);
     case "disch": return "#ff3b30";

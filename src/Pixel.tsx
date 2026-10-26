@@ -2,6 +2,7 @@ import React from "react";
 import { AbsoluteFill, interpolate, Easing } from "remotion";
 import { useKanit, KANIT } from "./fonts";
 import { pixelFridge, FOCUS, GW, GH } from "./pixelFridge";
+import { vecFridge } from "./vecFridge";
 
 // บีต "pixel": ฉากพิกเซลตู้เย็นตัดครึ่งที่วาดด้วยโค้ด + ซับทีละคำกลางจอ
 // ภาพเดียวต่อเนื่องทั้งสไลด์ กล้องซูมไปตาม cue ของแต่ละท่อน (parts[k].cue)
@@ -32,7 +33,8 @@ export const PixelFridge: React.FC<{
   dur: number;
   parts: { text: string; cue?: string; duration?: number }[];
   starts: number[];
-}> = ({ frame, dur, parts, starts }) => {
+  vec?: boolean;
+}> = ({ frame, dur, parts, starts, vec }) => {
   useKanit();
   let k = 0;
   for (let i = 0; i < starts.length; i++) if (frame >= starts[i]) k = i;
@@ -45,7 +47,8 @@ export const PixelFridge: React.FC<{
   const cx = L(prev.cx, cur.cx), cy = L(prev.cy, cur.cy), z = L(prev.z, cur.z);
   const cold = interpolate(frame, [dur * 0.08, dur * 0.88], [0, 1], { ...C, easing: Easing.inOut(Easing.quad) });
   const temp = Math.round(24 - 20 * cold);
-  const rs = pixelFridge({ frame, cold, focus: cue(k), heat: true, run: true });
+  const rs = vec ? [] : pixelFridge({ frame, cold, focus: cue(k), heat: true, run: true });
+  const vecSvg = vec ? vecFridge({ frame, cold, focus: cue(k), heat: true, run: true }) : "";
 
   // ซับทีละคำ
   const part = parts[k];
@@ -71,8 +74,9 @@ export const PixelFridge: React.FC<{
 
   return (
     <AbsoluteFill style={{ background: "#f1dfb9" }}>
-      <svg width={1080} height={1920} viewBox={`0 0 ${GW} ${GH}`} shapeRendering="crispEdges" style={{ position: "absolute", inset: 0 }}>
+      <svg width={1080} height={1920} viewBox={`0 0 ${GW} ${GH}`} shapeRendering={vec ? "geometricPrecision" : "crispEdges"} style={{ position: "absolute", inset: 0 }}>
         <g transform={`translate(135 240) scale(${z}) translate(${-cx} ${-cy})`}>
+          {vec ? <g dangerouslySetInnerHTML={{ __html: vecSvg }} /> : null}
           {rs.map((r, i) => (
             <rect key={i} x={r.x} y={r.y} width={r.w} height={r.h} fill={r.c} opacity={r.o} />
           ))}

@@ -41,7 +41,8 @@ export type Beat =
   | "sprite"
   | "full"
   | "rank"
-  | "pixel";
+  | "pixel"
+  | "vec";
 
 export type Transition = "wipe" | "zoom" | "flash" | "slide" | "shutter" | "none";
 
@@ -818,11 +819,12 @@ const BeatView: React.FC<{ s: ShowSlide; idx: number; pal: Pal }> = ({ s, idx, p
     beat === "full" ? <FullBeat {...p} /> :
     beat === "rank" ? <RankBeat {...p} /> :
     beat === "pixel" ? <PixelFridge frame={f} dur={d} parts={s.parts || []} starts={starts} /> :
+    beat === "vec" ? <PixelFridge vec frame={f} dur={d} parts={s.parts || []} starts={starts} /> :
     <CardBeat {...p} />;
   return (
     <Enter type={tr} f={f} pal={pal}>
       {body}
-      {beat === "still" || beat === "pixel" ? null : (
+      {beat === "still" || beat === "pixel" || beat === "vec" ? null : (
         <AbsoluteFill style={{ background: "linear-gradient(to top, rgba(0,0,0,.55) 0%, rgba(0,0,0,0) 22%)" }} />
       )}
       <Caption s={s} f={f} fps={fps} pal={pal} starts={starts} />
