@@ -1,0 +1,103 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "composition": "MangaShow",
+ "accent_color": "#e2231a",
+ "badge": "OP17-010",
+ "series": "ONE PIECE CARD GAME",
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.8,
+  "speed": 1.0,
+  "prefix": "[calm, soft, natural storyteller]"
+ },
+ "audio_rate": 1.0,
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Celtic%20Impulse.mp3",
+ "bgm_volume": 0.14,
+ "slides": [
+  {
+   "layout": "splash",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-010.png",
+   "duration": 4,
+   "title": "หน่วย *15*\nที่คนลืม",
+   "parts": [
+    "กลุ่มหนวดขาว มีหัวหน้าหน่วยสิบหกคน. แต่คนส่วนใหญ่ จำได้แค่ไม่กี่คน.",
+    "วันนี้ คือหัวหน้าหน่วยที่สิบห้า. ฟอสซ่า."
+   ]
+  },
+  {
+   "layout": "wanted",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-010.png",
+   "duration": 4,
+   "name": "FOSSA",
+   "subtitle": "หน่วยที่ 15",
+   "sticker": "เพิ่งรู้? กดหัวใจเลย",
+   "parts": [
+    "ฟอสซ่า คือหัวหน้าหน่วยที่สิบห้า ของกลุ่มหนวดขาว.",
+    "ชื่อเขา เพิ่งเปิดเผย ใน เอสบีเอส เล่มห้าสิบแปด."
+   ]
+  },
+  {
+   "layout": "effect",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-010.png",
+   "duration": 4,
+   "title": "ตัวเล็ก\nแต่ตั้งรับได้",
+   "parts": [
+    "ใบนี้ ราคาแค่หนึ่ง. พลังสามพัน. สีแดง.",
+    "ถ้าคู่ต่อสู้ มีตัวละครพลังหนึ่งหมื่นขึ้นไป ใบนี้ได้บล็อกเกอร์ และพลังเพิ่มสองพัน.",
+    "ใช้ได้ครั้งเดียวต่อเทิร์น."
+   ]
+  },
+  {
+   "layout": "panels",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-010.png",
+   "duration": 4,
+   "images": [
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-010.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP13-047.png"
+   ],
+   "parts": [
+    "และในชุดโอพีสิบสาม เป็นใบสีน้ำเงิน ที่ปกป้องพวกพ้องหนวดขาว จากการถูกเอฟเฟกต์ล้ม.",
+    "ใบใหม่ ถูกลง และแรงขึ้น. แต่ต้องรอให้คู่ต่อสู้ ปล่อยตัวใหญ่ลงมาก่อน."
+   ]
+  },
+  {
+   "layout": "poll",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-010.png",
+   "no_caption": true,
+   "duration": 8,
+   "title": "ใบละ *1* คุ้มไหม?",
+   "labels": [
+    "คุ้ม",
+    "ไม่คุ้ม"
+   ],
+   "parts": [
+    "คุณว่า การ์ดราคาหนึ่งใบนี้ คุ้มไหม?",
+    "คุ้ม พิมพ์หนึ่ง. ไม่คุ้ม พิมพ์สอง.",
+    "คอมเมนต์ไว้เลย. แล้วกดติดตาม การ์ดเซ็นเตอร์ไว้ด้วยนะ."
+   ]
+  },
+  {
+   "layout": "still",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "duration": 4,
+   "parts": [
+    "ชอบเรื่องการ์ดแบบนี้ กดติดตามไว้เลย.",
+    "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+   ]
+  }
+ ],
+ "meta": {
+  "title": "ฟอสซ่า หัวหน้าหน่วย 15 ที่คนลืม OP17-010 | One Piece Card #shorts",
+  "description": "การ์ดวันพีซ OP-17 ใบที่ 010 ฟอสซ่า หัวหน้าหน่วยที่ 15 ของกลุ่มหนวดขาว ชื่อที่เปิดเผยใน SBS เล่ม 58 การ์ดสีแดงราคา 1 พลัง 3000 ได้ Blocker เมื่อคู่ต่อสู้มีตัวละครพลัง 10000 ขึ้นไป และการ์ดฟอสซ่าใบเก่า OP03-010 กับ OP13-047\n\n👇 การ์ดราคา 1 ใบนี้ คุ้มไหม? พิมพ์ 1 = คุ้ม / 2 = ไม่คุ้ม\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Celtic Impulse\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17 #ฟอสซ่า",
+  "thumb": {
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-010.png",
+   "hook": "หน่วย 15\nที่คนลืม",
+   "badge": "OP17-010",
+   "sub": "ONE PIECE CARD GAME"
+  },
+  "engage": "👇 การ์ดราคา 1 ใบนี้ คุ้มไหม? พิมพ์ 1 = คุ้ม / 2 = ไม่คุ้ม\nชอบเรื่องการ์ดแบบนี้ กด ❤️ ไว้ด้วยนะ",
+  "publish_at": "2026-10-29T10:00:00Z"
+ }
+}

@@ -1,0 +1,162 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "audio_rate": 1.0,
+ "composition": "CardShow",
+ "theme": "grass",
+ "badge": "#3",
+ "series": "ลอร์คานาชุดแรก",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055,
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[warm, curious, clear Thai storyteller, lively but not shouting]"
+ },
+ "slides": [
+  {
+   "beat": "hook",
+   "duration": 4,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_5a280549e94f43c09ef0bcdf8ce4fa31.avif?1709690747",
+   "parts": [
+    {
+     "text": "ซินเดอเรลล่าใบนี้ รักษาเจ้าหญิงได้ ทุกรอบ",
+     "say": "ซินเดอเรลล่าใบนี้ รักษาเจ้าหญิงได้ ทุกรอบ แถมตัวเองก็รักษาได้."
+    }
+   ],
+   "title": "เจ้าหญิง\n*รักษา*เจ้าหญิง"
+  },
+  {
+   "beat": "reveal",
+   "duration": 4,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_5a280549e94f43c09ef0bcdf8ce4fa31.avif?1709690747",
+   "parts": [
+    {
+     "text": "ใบที่ 3 ซินเดอเรลล่า",
+     "say": "ใบที่สาม ซินเดอเรลล่า เจนเทิล แอนด์ ไคนด์."
+    }
+   ],
+   "title": "Cinderella\nGentle and Kind"
+  },
+  {
+   "beat": "stats",
+   "duration": 4,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_5a280549e94f43c09ef0bcdf8ce4fa31.avif?1709690747",
+   "parts": [
+    {
+     "text": "ราคา 4 · โจมตี 2 · ป้องกัน 5",
+     "say": "ราคาสี่. พลังโจมตีสอง. แต่พลังป้องกันห้า."
+    }
+   ],
+   "title": "ค่าบนการ์ด"
+  },
+  {
+   "beat": "zoom",
+   "duration": 6,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_5a280549e94f43c09ef0bcdf8ce4fa31.avif?1709690747",
+   "parts": [
+    {
+     "text": "เอ็กเซิร์ต ลบดาเมจได้ 3",
+     "say": "ความสามารถ อะ วันเดอร์ฟูล ดรีม. จ่ายด้วยการเอ็กเซิร์ต."
+    },
+    {
+     "text": "เลือกเจ้าหญิง 1 ตัว",
+     "say": "เลือกเจ้าหญิงหนึ่งตัว ลบดาเมจออก สูงสุดสามแต้ม."
+    }
+   ],
+   "title": "A Wonderful Dream\n*ลบดาเมจ 3*",
+   "focus_x": 50,
+   "focus_y": 70,
+   "focus_zoom": 1.6
+  },
+  {
+   "beat": "quiz",
+   "duration": 5,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_5a280549e94f43c09ef0bcdf8ce4fa31.avif?1709690747",
+   "parts": [
+    {
+     "text": "ซิงเกอร์ 5 ทำอะไรได้?",
+     "say": "เธอมีซิงเกอร์ห้าเหมือนใบที่สอง."
+    }
+   ],
+   "title": "ซิงเกอร์ 5\nคืออะไร?"
+  },
+  {
+   "beat": "name",
+   "duration": 5,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_5a280549e94f43c09ef0bcdf8ce4fa31.avif?1709690747",
+   "parts": [
+    {
+     "text": "มาจากหนังปี 1950",
+     "say": "ซินเดอเรลล่า มาจากหนังดิสนีย์ ปีหนึ่งเก้าห้าศูนย์."
+    }
+   ],
+   "title": "Cinderella (1950)"
+  },
+  {
+   "beat": "art",
+   "duration": 5,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_5a280549e94f43c09ef0bcdf8ce4fa31.avif?1709690747",
+   "parts": [
+    {
+     "text": "ผู้วาด คือ ฮาเวียร์ ซาลาส",
+     "say": "ภาพนี้ วาดโดย ฮาเวียร์ ซาลาส."
+    }
+   ],
+   "title": "ผู้วาด\nJavier Salas"
+  },
+  {
+   "beat": "card",
+   "duration": 5,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_5a280549e94f43c09ef0bcdf8ce4fa31.avif?1709690747",
+   "parts": [
+    {
+     "text": "ระวังสับสนกับเวอร์ชันใหม่",
+     "say": "ระวังนะ ซินเดอเรลล่า ชื่อนี้ มีออกใหม่อีกใบ ในชุดที่เก้า."
+    },
+    {
+     "text": "ใบนี้คือ เลข 3 ชุดแรก",
+     "say": "ใบนี้ คือเลขสาม ของชุดแรกเท่านั้น."
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 4,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_5a280549e94f43c09ef0bcdf8ce4fa31.avif?1709690747",
+   "parts": [
+    {
+     "text": "เจ้าหญิงคนไหน อยากได้การ์ดแรง?",
+     "say": "เจ้าหญิงคนไหน ที่คุณอยากให้มีการ์ดแรงๆ? คอมเมนต์ไว้เลย."
+    }
+   ]
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "duration": 4,
+   "beat": "still",
+   "parts": [
+    {
+     "text": "ชอบแบบนี้ กดติดตามไว้เลย.",
+     "say": "ชอบเรื่องการ์ดแบบนี้ กดติดตามไว้เลยนะ. ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "ซินเดอเรลล่า รักษาเจ้าหญิงได้ 3 แต้ม | Lorcana #3 #shorts",
+  "description": "Cinderella, Gentle and Kind 3/204 ชุด The First Chapter ของ Disney Lorcana (Uncommon) หมึกอำพัน ราคา 4 พลังโจมตี 2 พลังป้องกัน 5 ลอร์ 2 ความสามารถ Singer 5 และ A Wonderful Dream เอ็กเซิร์ตเพื่อลบดาเมจสูงสุด 3 จากเจ้าหญิง 1 ตัว วาดโดย Javier Salas\n\n👇 เจ้าหญิงดิสนีย์คนไหน ที่คุณอยากให้มีการ์ดแรงๆ?\n\nภาพ: ภาพการ์ดทางการจาก Lorcast\nข้อมูล: Lorcast\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #lorcana #ลอคาน่า #ดิสนีย์ลอร์คานา #disneylorcana #การ์ดดิสนีย์",
+  "thumb": {
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_5a280549e94f43c09ef0bcdf8ce4fa31.avif?1709690747",
+   "hook": "ซินเดอเรลล่า\nรักษาได้ 3",
+   "badge": "#3",
+   "sub": "ลอร์คานา ชุดแรก"
+  },
+  "engage": "👇 เจ้าหญิงดิสนีย์คนไหน ที่คุณอยากให้มีการ์ดแรงๆ?",
+  "publish_at": "2026-10-29T12:30:00Z",
+  "campaign": "lorcana-set1-003",
+  "site_path": "/"
+ }
+}

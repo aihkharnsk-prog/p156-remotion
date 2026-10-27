@@ -1,0 +1,178 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "ลิซาร์ดอน ใบที่ทำให้พลังงานทุกสีเป็นไฟ การ์ดใบที่ 21 #shorts",
+  "description": "การ์ดใบที่ 21 ของชุดโปเกมอนญี่ปุ่น (拡張パック) ลิซาร์ดอน (Charizard) Stage 2 HP 120 ความสามารถ Energy Burn นับพลังงานสีอื่นเป็นพลังงานไฟ ท่าวนไฟ 100 ต้องทิ้งพลังงาน 2 ใบ วาดโดย Mitsuhiro Arita ข้อความโปเกเด็กซ์ในการ์ดบอกว่าบินได้สูง 1,400 เมตร\n\n👇 แท็กเพื่อนที่ตามหาลิซาร์ดอนใบนี้\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n#shorts #โปเกมอน #การ์ดโปเกมอน #pokemoncards #pokemon #เรื่องเล่าการ์ด",
+  "thumb": {
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-21/large",
+   "hook": "พลังงานทุกสี\nเป็นไฟ?",
+   "badge": "#21",
+   "sub": "เบื้องหลังการ์ด"
+  },
+  "publish_at": "2026-10-29T11:20:00Z"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, warm, lively storyteller]"
+ },
+ "audio_rate": 1.0,
+ "slides": [
+  {
+   "beat": "hook",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "ลิซาร์ดอนใบนี้ ทำให้พลังงานทุกสี กลายเป็นไฟได้.",
+     "say": "ลิซาร์ดอนใบนี้ มีความสามารถที่ทำให้พลังงานสีอื่น กลายเป็นพลังงานไฟได้ทั้งหมด."
+    }
+   ],
+   "title": "พลังงานทุกสี\n*กลายเป็นไฟ*",
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-21/large"
+  },
+  {
+   "beat": "reveal",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "ใบที่ยี่สิบเอ็ด คือ ลิซาร์ดอน.",
+     "say": "ใบที่ยี่สิบเอ็ด คือ ลิซาร์ดอน."
+    },
+    {
+     "text": "พัฒนามาจากลิซาโดะ.",
+     "say": "พัฒนามาจากลิซาโดะ อีกที."
+    }
+   ],
+   "title": "ลิซาร์ดอน",
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-21/large"
+  },
+  {
+   "beat": "stats",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "พลังชีวิตหนึ่งร้อยยี่สิบ.",
+     "say": "พลังชีวิตหนึ่งร้อยยี่สิบ."
+    },
+    {
+     "text": "ท่าวนไฟ แรงหนึ่งร้อย.",
+     "say": "ท่าวนไฟ แรงหนึ่งร้อย."
+    },
+    {
+     "text": "แต่ต้องทิ้งพลังงานสองใบ.",
+     "say": "แต่ต้องทิ้งพลังงานของตัวเอง สองใบ."
+    }
+   ],
+   "title": "ค่าพลังบนการ์ด",
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-21/large"
+  },
+  {
+   "beat": "quiz",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "เอนเนอร์จีเบิร์น ทำอะไร?",
+     "say": "ความสามารถ เอนเนอร์จีเบิร์น ทำอะไรได้?"
+    },
+    {
+     "text": "นับพลังงานทุกสี เป็นพลังงานไฟ.",
+     "say": "นับพลังงานสีอื่น เป็นพลังงานไฟทั้งหมด. ยกเว้นตอนสับสน."
+    }
+   ],
+   "title": "ความสามารถ\nเอนเนอร์จีเบิร์น"
+  },
+  {
+   "beat": "bignum",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "บินได้สูงพันสี่ร้อยเมตร.",
+     "say": "โปเกเด็กซ์บนการ์ด บอกว่าบินได้สูง พันสี่ร้อยเมตร ด้วยปีก."
+    }
+   ],
+   "title": "เมตร",
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-21/large",
+   "value": 1400
+  },
+  {
+   "beat": "art",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "ใบนี้ วาดโดย อาริตะ.",
+     "say": "ภาพบนการ์ดใบนี้ วาดโดย มิตสึฮิโระ อาริตะ."
+    },
+    {
+     "text": "หนึ่งในผู้วาดการ์ดชุดแรก.",
+     "say": "หนึ่งในศิลปินสำคัญ ของการ์ดชุดแรก."
+    }
+   ],
+   "title": "Charizard",
+   "image_url": "https://archives.bulbagarden.net/media/upload/3/38/0006Charizard.png"
+  },
+  {
+   "beat": "name",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "ชื่ออังกฤษ ชาร์ลิซาร์ด.",
+     "say": "ชื่ออังกฤษ ชาร์ลิซาร์ด."
+    },
+    {
+     "text": "หมายเลขโปเกเด็กซ์ หก.",
+     "say": "หมายเลขโปเกเด็กซ์ หก."
+    }
+   ],
+   "title": "*ลิซาร์ดอน*",
+   "image_url": "https://archives.bulbagarden.net/media/upload/3/38/0006Charizard.png"
+  },
+  {
+   "beat": "card",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "ใบนี้ เป็นฉบับพิมพ์ใหม่ มีดาวมุมขวา.",
+     "say": "ใบนี้เป็นฉบับแก้ไขแล้ว มีเครื่องหมายดาวที่มุมขวา."
+    },
+    {
+     "text": "ฉบับแรกสุด บางล็อต ไม่มีดาว.",
+     "say": "ส่วนล็อตแรกสุด ไม่มีดาว ซึ่งเป็นใบที่คนตามหากัน."
+    }
+   ],
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-21/large"
+  },
+  {
+   "beat": "card",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "ชอบใบไหนมากกว่ากัน?",
+     "say": "คุณชอบลิซาร์ดอน หรือบูบามากกว่ากัน? คอมเมนต์ไว้เลย."
+    }
+   ],
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-21/large"
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้เลย.",
+     "say": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้เลย."
+    },
+    {
+     "text": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม.",
+     "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ],
+   "beat": "still"
+  }
+ ],
+ "composition": "CardShow",
+ "theme": "fire",
+ "badge": "#21",
+ "series": "การ์ดชุดแรก 1996"
+}

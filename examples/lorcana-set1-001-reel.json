@@ -1,0 +1,162 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "audio_rate": 1.0,
+ "composition": "CardShow",
+ "theme": "water",
+ "badge": "#1",
+ "series": "ลอร์คานาชุดแรก",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055,
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[warm, curious, clear Thai storyteller, lively but not shouting]"
+ },
+ "slides": [
+  {
+   "beat": "hook",
+   "duration": 4,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_d9f3b86af85f48579ed9d0d7ce0de129.avif?1709690747",
+   "parts": [
+    {
+     "text": "ใบแรกของลอร์คานา เป็นการ์ดที่ร้องเพลงไม่ได้!",
+     "say": "ใบแรกของลอร์คานาชุดแรก เป็นการ์ดที่ร้องเพลงไม่ได้ ทั้งที่เป็นเอเรียล!"
+    }
+   ],
+   "title": "ใบแรกของเกม\n*ร้องเพลงไม่ได้*"
+  },
+  {
+   "beat": "reveal",
+   "duration": 4,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_d9f3b86af85f48579ed9d0d7ce0de129.avif?1709690747",
+   "parts": [
+    {
+     "text": "ใบที่ 1 จาก 204",
+     "say": "ใบที่หนึ่ง จากสองร้อยสี่ใบ ในชุดแรก."
+    },
+    {
+     "text": "เอเรียล ตอนมีขา",
+     "say": "ชื่อว่า เอเรียล ออน ฮิวแมน เลกส์. ก็คือเอเรียลตอนมีขา."
+    }
+   ],
+   "title": "Ariel\nOn Human Legs"
+  },
+  {
+   "beat": "timeline",
+   "duration": 6,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_d9f3b86af85f48579ed9d0d7ce0de129.avif?1709690747",
+   "parts": [
+    {
+     "text": "วางขาย 18 สิงหาคม 2023",
+     "say": "ชุดแรก ชื่อ เดอะ เฟิร์ส แชปเตอร์ วางขาย สิบแปด สิงหาคม สองศูนย์สองสาม."
+    }
+   ],
+   "title": "ชุดแรก\n*เดอะ เฟิร์ส แชปเตอร์*"
+  },
+  {
+   "beat": "stats",
+   "duration": 4,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_d9f3b86af85f48579ed9d0d7ce0de129.avif?1709690747",
+   "parts": [
+    {
+     "text": "ราคา 4 · โจมตี 3 · ป้องกัน 4",
+     "say": "ราคาสี่. พลังโจมตีสาม. พลังป้องกันสี่."
+    }
+   ],
+   "title": "ค่าบนการ์ด"
+  },
+  {
+   "beat": "quiz",
+   "duration": 5,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_d9f3b86af85f48579ed9d0d7ce0de129.avif?1709690747",
+   "parts": [
+    {
+     "text": "ทายสิ ความสามารถคืออะไร?",
+     "say": "ทายสิ ความสามารถเดียวของใบนี้ คืออะไร?"
+    },
+    {
+     "text": "วอยซ์เลส ห้ามร้องเพลง",
+     "say": "คำตอบคือ วอยซ์เลส. ห้ามเอ็กเซิร์ต เพื่อร้องเพลง. ภาษาง่ายๆ คือ ไร้เสียง."
+    }
+   ],
+   "title": "ความสามารถ\nของใบนี้คือ?"
+  },
+  {
+   "beat": "zoom",
+   "duration": 5,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_d9f3b86af85f48579ed9d0d7ce0de129.avif?1709690747",
+   "parts": [
+    {
+     "text": "ข้อความเล่าเรื่อง มีแค่จุดสามจุด",
+     "say": "ลองดูข้อความเล่าเรื่องใต้การ์ด. มีแค่จุดสามจุด. เพราะเธอพูดไม่ได้."
+    }
+   ],
+   "title": "ข้อความเล่าเรื่อง\n*มีแค่ 3 จุด*",
+   "focus_x": 50,
+   "focus_y": 82,
+   "focus_zoom": 2.2
+  },
+  {
+   "beat": "name",
+   "duration": 5,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_d9f3b86af85f48579ed9d0d7ce0de129.avif?1709690747",
+   "parts": [
+    {
+     "text": "มาจากเดอะลิตเติลเมอร์เมด",
+     "say": "ฉากนี้มาจากเดอะลิตเติลเมอร์เมด ปีหนึ่งเก้าแปดเก้า."
+    }
+   ],
+   "title": "The Little Mermaid"
+  },
+  {
+   "beat": "card",
+   "duration": 5,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_d9f3b86af85f48579ed9d0d7ce0de129.avif?1709690747",
+   "parts": [
+    {
+     "text": "ใบที่สอง คือเอเรียลอีกใบ",
+     "say": "แล้วใบที่สอง ก็เป็นเอเรียลอีกใบ."
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 4,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_d9f3b86af85f48579ed9d0d7ce0de129.avif?1709690747",
+   "parts": [
+    {
+     "text": "คุณชอบเอเรียลแบบไหน?",
+     "say": "ถ้าให้เลือก เอเรียลเสียงหาย หรือเอเรียลร้องเก่ง คุณเลือกใบไหน? คอมเมนต์ไว้เลย."
+    }
+   ]
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "duration": 4,
+   "beat": "still",
+   "parts": [
+    {
+     "text": "ชอบแบบนี้ กดติดตามไว้เลย.",
+     "say": "ชอบเรื่องการ์ดแบบนี้ กดติดตามไว้เลยนะ. ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "การ์ดใบแรกของลอร์คานา ร้องเพลงไม่ได้! | Lorcana #1 #shorts",
+  "description": "Ariel, On Human Legs 1/204 ชุด The First Chapter ของ Disney Lorcana (วางขาย 18 ส.ค. 2023) หมึกอำพัน ราคา 4 พลังโจมตี 3 พลังป้องกัน 4 ลอร์ 2 ความสามารถ Voiceless ห้ามเอ็กเซิร์ตเพื่อร้องเพลง วาดโดย Matthew Robert Davies\n\n👇 ถ้าต้องเลือก เอเรียลที่ร้องไม่ได้ หรือเอเรียลที่ร้องเก่ง คุณเลือกใบไหน?\n\nภาพ: ภาพการ์ดทางการจาก Lorcast\nข้อมูล: Lorcast\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #lorcana #ลอคาน่า #ดิสนีย์ลอร์คานา #disneylorcana #การ์ดดิสนีย์",
+  "thumb": {
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_d9f3b86af85f48579ed9d0d7ce0de129.avif?1709690747",
+   "hook": "ใบแรกของเกม\nร้องเพลงไม่ได้?",
+   "badge": "#1",
+   "sub": "ลอร์คานา ชุดแรก"
+  },
+  "engage": "👇 ถ้าต้องเลือก เอเรียลที่ร้องไม่ได้ หรือเอเรียลที่ร้องเก่ง คุณเลือกใบไหน?",
+  "publish_at": "2026-10-29T05:00:00Z",
+  "campaign": "lorcana-set1-001",
+  "site_path": "/"
+ }
+}

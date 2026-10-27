@@ -1,0 +1,158 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "audio_rate": 1.0,
+ "composition": "CardShow",
+ "theme": "electric",
+ "badge": "#4",
+ "series": "ลอร์คานาชุดแรก",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055,
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[warm, curious, clear Thai storyteller, lively but not shouting]"
+ },
+ "slides": [
+  {
+   "beat": "hook",
+   "duration": 4,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_9bd583ab207a4366a12f37ab94ed8619.avif?1709690747",
+   "parts": [
+    {
+     "text": "กูฟฟี่ใบนี้ เป็นกำแพงพลังป้องกันหก",
+     "say": "กูฟฟี่ใบนี้ เป็นกำแพงที่พลังป้องกันถึงหก."
+    }
+   ],
+   "title": "กูฟฟี่\n*กำแพง* 6"
+  },
+  {
+   "beat": "reveal",
+   "duration": 4,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_9bd583ab207a4366a12f37ab94ed8619.avif?1709690747",
+   "parts": [
+    {
+     "text": "ใบที่ 4 กูฟฟี่ ทหารเสือ",
+     "say": "ใบที่สี่ กูฟฟี่ มัสเก็ตเทียร์ ก็คือกูฟฟี่ ทหารเสือ."
+    }
+   ],
+   "title": "Goofy\nMusketeer"
+  },
+  {
+   "beat": "stats",
+   "duration": 4,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_9bd583ab207a4366a12f37ab94ed8619.avif?1709690747",
+   "parts": [
+    {
+     "text": "ราคา 5 · โจมตี 3 · ป้องกัน 6",
+     "say": "ราคาห้า. พลังโจมตีสาม. พลังป้องกันหก."
+    }
+   ],
+   "title": "ค่าบนการ์ด"
+  },
+  {
+   "beat": "zoom",
+   "duration": 6,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_9bd583ab207a4366a12f37ab94ed8619.avif?1709690747",
+   "parts": [
+    {
+     "text": "Bodyguard เข้าสนามแบบเอ็กเซิร์ตได้",
+     "say": "ความสามารถแรก บอดี้การ์ด. ลงสนามแบบเอ็กเซิร์ตก็ได้."
+    }
+   ],
+   "title": "Bodyguard\n*บอดี้การ์ด*",
+   "focus_x": 50,
+   "focus_y": 72,
+   "focus_zoom": 1.6
+  },
+  {
+   "beat": "quiz",
+   "duration": 5,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_9bd583ab207a4366a12f37ab94ed8619.avif?1709690747",
+   "parts": [
+    {
+     "text": "And Two for Tea! ทำอะไร?",
+     "say": "ความสามารถที่สอง ชื่อ แอนด์ ทู ฟอร์ ที. ทำอะไร?"
+    },
+    {
+     "text": "ตอนลงสนาม ลบดาเมจ 2 จากทหารเสือ",
+     "say": "ตอนลงสนาม ลบดาเมจสูงสุดสองแต้ม จากทหารเสือทุกตัวของเรา."
+    }
+   ],
+   "title": "And Two for Tea!\nทำอะไร?"
+  },
+  {
+   "beat": "name",
+   "duration": 5,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_9bd583ab207a4366a12f37ab94ed8619.avif?1709690747",
+   "parts": [
+    {
+     "text": "ทหารเสือ มาจากหนังปี 2004",
+     "say": "กูฟฟี่ในชุดทหารเสือ มาจากหนัง มิกกี้ โดนัลด์ กูฟฟี่ สามทหารเสือ ปีสองศูนย์ศูนย์สี่."
+    }
+   ],
+   "title": "Goofy · Musketeer"
+  },
+  {
+   "beat": "art",
+   "duration": 5,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_9bd583ab207a4366a12f37ab94ed8619.avif?1709690747",
+   "parts": [
+    {
+     "text": "ผู้วาด โยเคม ฟาน กูล",
+     "say": "ภาพนี้วาดโดย โยเคม ฟาน กูล."
+    }
+   ],
+   "title": "ผู้วาด\nJochem Van Gool"
+  },
+  {
+   "beat": "card",
+   "duration": 5,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_9bd583ab207a4366a12f37ab94ed8619.avif?1709690747",
+   "parts": [
+    {
+     "text": "ใบแรก ถึงใบสี่ ล้วนหมึกอำพัน",
+     "say": "สี่ใบแรกของชุด เป็นหมึกอำพัน ทั้งหมด."
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 4,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_9bd583ab207a4366a12f37ab94ed8619.avif?1709690747",
+   "parts": [
+    {
+     "text": "กูฟฟี่ หรือ โดนัลด์ ใครเท่กว่า?",
+     "say": "กูฟฟี่หรือโดนัลด์ ใครคือทหารเสือที่คุณอยากได้มากกว่า? คอมเมนต์ไว้เลย."
+    }
+   ]
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "duration": 4,
+   "beat": "still",
+   "parts": [
+    {
+     "text": "ชอบแบบนี้ กดติดตามไว้เลย.",
+     "say": "ชอบเรื่องการ์ดแบบนี้ กดติดตามไว้เลยนะ. ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "กูฟฟี่ ทหารเสือ กำแพง 6 พลังป้องกัน | Lorcana #4 #shorts",
+  "description": "Goofy, Musketeer 4/204 ชุด The First Chapter ของ Disney Lorcana (Uncommon) หมึกอำพัน ราคา 5 พลังโจมตี 3 พลังป้องกัน 6 ลอร์ 1 ความสามารถ Bodyguard และ And Two for Tea! ตอนลงสนามลบดาเมจสูงสุด 2 จากทหารเสือทุกตัวของเรา วาดโดย Jochem Van Gool\n\n👇 กูฟฟี่หรือโดนัลด์ ใครคือทหารเสือที่คุณอยากได้มากกว่า?\n\nภาพ: ภาพการ์ดทางการจาก Lorcast\nข้อมูล: Lorcast\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #lorcana #ลอคาน่า #ดิสนีย์ลอร์คานา #disneylorcana #การ์ดดิสนีย์",
+  "thumb": {
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_9bd583ab207a4366a12f37ab94ed8619.avif?1709690747",
+   "hook": "กูฟฟี่ทหารเสือ\nกำแพง 6",
+   "badge": "#4",
+   "sub": "ลอร์คานา ชุดแรก"
+  },
+  "engage": "👇 กูฟฟี่หรือโดนัลด์ ใครคือทหารเสือที่คุณอยากได้มากกว่า?",
+  "publish_at": "2026-10-30T05:00:00Z",
+  "campaign": "lorcana-set1-004",
+  "site_path": "/"
+ }
+}

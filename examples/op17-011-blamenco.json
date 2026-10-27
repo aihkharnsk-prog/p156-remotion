@@ -1,0 +1,102 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "composition": "MangaShow",
+ "accent_color": "#e2231a",
+ "badge": "OP17-011",
+ "series": "ONE PIECE CARD GAME",
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.8,
+  "speed": 1.0,
+  "prefix": "[calm, soft, natural storyteller]"
+ },
+ "audio_rate": 1.0,
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Celtic%20Impulse.mp3",
+ "bgm_volume": 0.14,
+ "slides": [
+  {
+   "layout": "splash",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-011.png",
+   "duration": 4,
+   "title": "ลด*พลัง*\nคู่ต่อสู้ 4000",
+   "parts": [
+    "การ์ดใบนี้ ทำให้ตัวละครคู่ต่อสู้ พลังหายไปสี่พัน เฉพาะเทิร์นนั้น.",
+    "เขาชื่อ บลาเมนโก้. หัวหน้าหน่วยที่หก ของกลุ่มหนวดขาว."
+   ]
+  },
+  {
+   "layout": "wanted",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-011.png",
+   "duration": 4,
+   "name": "BLAMENCO",
+   "subtitle": "หน่วยที่ 6",
+   "sticker": "เพิ่งรู้? กดหัวใจเลย",
+   "parts": [
+    "บลาเมนโก้ คือหัวหน้าหน่วยที่หก ของกลุ่มหนวดขาว.",
+    "ชื่อของเขา เพิ่งเปิดเผย ใน เอสบีเอส เล่มห้าสิบแปด เหมือนฟอสซ่า."
+   ]
+  },
+  {
+   "layout": "effect",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-011.png",
+   "duration": 4,
+   "title": "ดอนสองใบ\nโจมตีแล้วลดพลัง",
+   "parts": [
+    "ใบนี้ ราคาห้า. พลังหกพัน. เคาน์เตอร์หนึ่งพัน.",
+    "ถ้ามีดอนติดสองใบ ตอนโจมตี เลือกตัวละครคู่ต่อสู้หนึ่งตัว ให้พลังลดสี่พัน."
+   ]
+  },
+  {
+   "layout": "panels",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-011.png",
+   "duration": 4,
+   "images": [
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-011.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP13-048.png"
+   ],
+   "parts": [
+    "บลาเมนโก้ เคยมีการ์ดมาก่อน. ในชุดโอพีสาม ใบราคาสอง ดอนหนึ่งใบ ลดพลังสองพัน.",
+    "ใบใหม่ ลดสี่พัน เป็นสองเท่า. แต่ต้องมีดอนสองใบ และราคาแพงขึ้น."
+   ]
+  },
+  {
+   "layout": "poll",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-011.png",
+   "no_caption": true,
+   "duration": 8,
+   "title": "*ฟอสซ่า* หรือ *บลาเมนโก้*",
+   "labels": [
+    "ฟอสซ่า",
+    "บลาเมนโก้"
+   ],
+   "parts": [
+    "สองใบนี้ ใบไหนน่าใช้กว่ากัน?",
+    "ฟอสซ่าราคาหนึ่ง พิมพ์หนึ่ง. บลาเมนโก้ลดพลังสี่พัน พิมพ์สอง.",
+    "คอมเมนต์ไว้เลย. แล้วกดติดตาม การ์ดเซ็นเตอร์ไว้ด้วยนะ."
+   ]
+  },
+  {
+   "layout": "still",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "duration": 4,
+   "parts": [
+    "ชอบเรื่องการ์ดแบบนี้ กดติดตามไว้เลย.",
+    "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+   ]
+  }
+ ],
+ "meta": {
+  "title": "บลาเมนโก้ หัวหน้าหน่วย 6 ลดพลัง 4000 OP17-011 | One Piece Card #shorts",
+  "description": "การ์ดวันพีซ OP-17 ใบที่ 011 บลาเมนโก้ หัวหน้าหน่วยที่ 6 ของกลุ่มหนวดขาว การ์ดสีแดงราคา 5 พลัง 6000 DON!! x2 ตอนโจมตี ลดพลังตัวละครคู่ต่อสู้ 4000 ในเทิร์นนั้น และการ์ดบลาเมนโก้ใบเก่า OP03-011 กับ OP13-048\n\n👇 ฟอสซ่า หรือ บลาเมนโก้ ใบไหนน่าใช้กว่า? พิมพ์ 1 = ฟอสซ่า / 2 = บลาเมนโก้\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Celtic Impulse\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17 #บลาเมนโก้",
+  "thumb": {
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-011.png",
+   "hook": "ลดพลัง\n4000",
+   "badge": "OP17-011",
+   "sub": "ONE PIECE CARD GAME"
+  },
+  "engage": "👇 ฟอสซ่า หรือ บลาเมนโก้ ใบไหนน่าใช้กว่า? พิมพ์ 1 = ฟอสซ่า / 2 = บลาเมนโก้\nชอบเรื่องการ์ดแบบนี้ กด ❤️ ไว้ด้วยนะ",
+  "publish_at": "2026-10-29T14:00:00Z"
+ }
+}

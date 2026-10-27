@@ -1,0 +1,182 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "บูบา ร่างกายร้อน 1,200 องศา การ์ดใบที่ 20 #shorts",
+  "description": "การ์ดใบที่ 20 ของชุดโปเกมอนญี่ปุ่น (拡張パック) บูบา (Magmar) โปเกมอนไฟ HP 50 ท่าหมัดไฟ 30 พ่นไฟ 50 ต้องทิ้งพลังงานไฟ 1 ใบ โปเกเด็กซ์บนการ์ดบอกว่าอุณหภูมิร่างกาย 1,200 องศาเซลเซียส วาดโดย Ken Sugimori\n\n👇 แท็กเพื่อนที่เล่นโปเกมอนสายไฟ\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n#shorts #โปเกมอน #การ์ดโปเกมอน #pokemoncards #pokemon #เรื่องเล่าการ์ด",
+  "thumb": {
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-20/large",
+   "hook": "ร่างกาย\n1,200 องศา",
+   "badge": "#20",
+   "sub": "เบื้องหลังการ์ด"
+  },
+  "publish_at": "2026-10-29T05:00:00Z"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, warm, lively storyteller]"
+ },
+ "audio_rate": 1.0,
+ "slides": [
+  {
+   "beat": "hook",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "ร่างกายร้อนพันสองร้อยองศา แต่แพ้ทางน้ำ.",
+     "say": "ตัวนี้ ร่างกายร้อนถึงพันสองร้อยองศา แต่กลับแพ้ทางน้ำ."
+    }
+   ],
+   "title": "ร่างกายร้อน\n*1,200 องศา*",
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-20/large"
+  },
+  {
+   "beat": "reveal",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "ใบที่ยี่สิบ คือ บูบา.",
+     "say": "ใบที่ยี่สิบ คือ บูบา."
+    },
+    {
+     "text": "ชื่ออังกฤษ แม็กมาร์.",
+     "say": "ชื่ออังกฤษ แม็กมาร์."
+    }
+   ],
+   "title": "บูบา",
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-20/large"
+  },
+  {
+   "beat": "quiz",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "ทายสิ บนการ์ดเขียนว่า ร้อนกี่องศา?",
+     "say": "ทายสิ โปเกเด็กซ์บนการ์ด บอกว่าร่างกายมันร้อนกี่องศา?"
+    },
+    {
+     "text": "คำตอบ พันสองร้อยองศาเซลเซียส.",
+     "say": "คำตอบ พันสองร้อยองศาเซลเซียส."
+    }
+   ],
+   "title": "อุณหภูมิ\nร่างกายบูบา?"
+  },
+  {
+   "beat": "bignum",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "ร้อนกว่าลาวาหลายแบบ.",
+     "say": "ร้อนระดับ ที่น้ำเดือดยังต้องหลบ."
+    }
+   ],
+   "title": "องศาเซลเซียส",
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-20/large",
+   "value": 1200
+  },
+  {
+   "beat": "art",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "เจอใกล้ปากปล่องภูเขาไฟ.",
+     "say": "โปเกเด็กซ์เล่าว่า เจอมันใกล้ปากปล่องภูเขาไฟ."
+    },
+    {
+     "text": "พ่นไฟออกจากปากได้.",
+     "say": "และพ่นไฟออกจากปากได้."
+    }
+   ],
+   "title": "Magmar",
+   "image_url": "https://archives.bulbagarden.net/media/upload/7/72/0126Magmar.png"
+  },
+  {
+   "beat": "stats",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "พลังชีวิตห้าสิบ.",
+     "say": "พลังชีวิตห้าสิบ."
+    },
+    {
+     "text": "หมัดไฟสามสิบ. พ่นไฟห้าสิบ.",
+     "say": "หมัดไฟ แรงสามสิบ. ส่วนพ่นไฟ แรงห้าสิบ."
+    },
+    {
+     "text": "แต่ต้องทิ้งพลังงานไฟหนึ่งใบ.",
+     "say": "แต่ต้องทิ้งพลังงานไฟของตัวเอง หนึ่งใบ."
+    }
+   ],
+   "title": "ค่าพลังบนการ์ด",
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-20/large"
+  },
+  {
+   "beat": "name",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "ชื่อญี่ปุ่น บูบา.",
+     "say": "ชื่อญี่ปุ่น บูบา."
+    },
+    {
+     "text": "หมายเลขโปเกเด็กซ์ หนึ่งร้อยยี่สิบหก.",
+     "say": "หมายเลขโปเกเด็กซ์ หนึ่งร้อยยี่สิบหก."
+    }
+   ],
+   "title": "*บูบา*",
+   "image_url": "https://archives.bulbagarden.net/media/upload/7/72/0126Magmar.png"
+  },
+  {
+   "beat": "card",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "ข้อความบนการ์ดญี่ปุ่น มาจากเกมเรดกรีน.",
+     "say": "ข้อความโปเกเด็กซ์ บนการ์ดญี่ปุ่นใบนี้ มาจากเกมเรดกรีน."
+    },
+    {
+     "text": "ไม่ตรงกับการ์ดอังกฤษ ที่มาจากเรดบลู.",
+     "say": "ซึ่งไม่ตรงกับบนการ์ดอังกฤษ ที่ใช้ข้อความจากเรดบลู."
+    }
+   ],
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-20/large"
+  },
+  {
+   "beat": "card",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "ใบถัดไป ลิซาร์ดอน.",
+     "say": "ใบถัดไป คือตัวที่หลายคนรอ."
+    },
+    {
+     "text": "กดติดตามไว้เลย.",
+     "say": "กดติดตามไว้เลย."
+    }
+   ],
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-20/large"
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้เลย.",
+     "say": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้เลย."
+    },
+    {
+     "text": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม.",
+     "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ],
+   "beat": "still"
+  }
+ ],
+ "composition": "CardShow",
+ "theme": "fire",
+ "badge": "#20",
+ "series": "การ์ดชุดแรก 1996"
+}

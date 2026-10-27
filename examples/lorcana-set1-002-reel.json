@@ -1,0 +1,159 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "audio_rate": 1.0,
+ "composition": "CardShow",
+ "theme": "psychic",
+ "badge": "#2",
+ "series": "ลอร์คานาชุดแรก",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055,
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[warm, curious, clear Thai storyteller, lively but not shouting]"
+ },
+ "slides": [
+  {
+   "beat": "hook",
+   "duration": 4,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_be92bba983424f2f9546f237e65ce357.avif?1709690747",
+   "parts": [
+    {
+     "text": "เอเรียลใบนี้ ร้องเพลงเก่งสุดในชุดแรก",
+     "say": "ถ้าใบที่หนึ่งร้องเพลงไม่ได้ ใบที่สองนี่ ร้องเก่งสุดๆ."
+    }
+   ],
+   "title": "เอเรียล\n*ร้องเพลง*เก่งสุด"
+  },
+  {
+   "beat": "reveal",
+   "duration": 4,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_be92bba983424f2f9546f237e65ce357.avif?1709690747",
+   "parts": [
+    {
+     "text": "ใบที่ 2 เอเรียลนักร้อง",
+     "say": "ใบที่สอง เอเรียล สเป็กแท็กคิวลาร์ ซิงเกอร์."
+    }
+   ],
+   "title": "Ariel\nSpectacular Singer"
+  },
+  {
+   "beat": "stats",
+   "duration": 4,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_be92bba983424f2f9546f237e65ce357.avif?1709690747",
+   "parts": [
+    {
+     "text": "ราคา 3 · โจมตี 2 · ป้องกัน 3",
+     "say": "ราคาสามเท่านั้น. พลังโจมตีสอง. พลังป้องกันสาม."
+    },
+    {
+     "text": "คะแนนลอร์ 1",
+     "say": "ได้คะแนนลอร์ หนึ่งแต้ม."
+    }
+   ],
+   "title": "ค่าบนการ์ด"
+  },
+  {
+   "beat": "quiz",
+   "duration": 6,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_be92bba983424f2f9546f237e65ce357.avif?1709690747",
+   "parts": [
+    {
+     "text": "Singer 5 คืออะไร?",
+     "say": "ความสามารถแรก ชื่อ ซิงเกอร์ ห้า. ทายสิ มันทำอะไร?"
+    },
+    {
+     "text": "นับเป็นราคา 5 ตอนร้องเพลง",
+     "say": "คำตอบ ตอนร้องเพลง ให้นับเธอเป็นการ์ดราคาห้า."
+    }
+   ],
+   "title": "Singer 5\nคืออะไร?"
+  },
+  {
+   "beat": "zoom",
+   "duration": 6,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_be92bba983424f2f9546f237e65ce357.avif?1709690747",
+   "parts": [
+    {
+     "text": "ตอนลงสนาม ดู 4 ใบบนสุดของเด็ค",
+     "say": "ความสามารถที่สอง ชื่อ มิวสิคัล เดบิว. ตอนลงสนาม ดูการ์ดสี่ใบบนสุดของเด็ค."
+    },
+    {
+     "text": "เลือกการ์ดเพลงขึ้นมือได้ 1 ใบ",
+     "say": "ถ้าเจอการ์ดเพลง จะโชว์แล้วเอาขึ้นมือได้."
+    }
+   ],
+   "title": "Musical Debut\n*ดู 4 ใบบนสุด*",
+   "focus_x": 50,
+   "focus_y": 70,
+   "focus_zoom": 1.6
+  },
+  {
+   "beat": "name",
+   "duration": 5,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_be92bba983424f2f9546f237e65ce357.avif?1709690747",
+   "parts": [
+    {
+     "text": "ร้องเพลง คือพลังของเธอ",
+     "say": "ในหนัง เอเรียลรักการร้องเพลง ตั้งแต่ต้นเรื่อง."
+    }
+   ],
+   "title": "The Little Mermaid"
+  },
+  {
+   "beat": "timeline",
+   "duration": 6,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_be92bba983424f2f9546f237e65ce357.avif?1709690747",
+   "parts": [
+    {
+     "text": "ใบที่ 1 ร้องไม่ได้",
+     "say": "ใบที่หนึ่ง ร้องเพลงไม่ได้."
+    },
+    {
+     "text": "ตัวละครเดียว สองด้านของเรื่อง",
+     "say": "ตัวละครเดียวกัน แต่เล่นกันคนละสไตล์."
+    }
+   ],
+   "title": "สองเอเรียล\n*ใบที่ 1 และ 2*"
+  },
+  {
+   "beat": "card",
+   "duration": 4,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_be92bba983424f2f9546f237e65ce357.avif?1709690747",
+   "parts": [
+    {
+     "text": "เด็คคุณ มีการ์ดเพลงกี่ใบ?",
+     "say": "แล้วเด็คของคุณ มีการ์ดเพลงกี่ใบ? พิมพ์ตัวเลขไว้เลย."
+    }
+   ]
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "duration": 4,
+   "beat": "still",
+   "parts": [
+    {
+     "text": "ชอบแบบนี้ กดติดตามไว้เลย.",
+     "say": "ชอบเรื่องการ์ดแบบนี้ กดติดตามไว้เลยนะ. ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "เอเรียลใบนี้ ร้องเพลงแล้วได้การ์ดเพลง | Lorcana #2 #shorts",
+  "description": "Ariel, Spectacular Singer 2/204 ชุด The First Chapter ของ Disney Lorcana (Super Rare) หมึกอำพัน ราคา 3 พลังโจมตี 2 พลังป้องกัน 3 ลอร์ 1 ความสามารถ Singer 5 และ Musical Debut ตอนลงสนามดูการ์ดบนสุดของเด็ค 4 ใบ เลือกการ์ดเพลงขึ้นมือได้ วาดโดย Alice Pisoni\n\n👇 เด็คของคุณมีการ์ดเพลงกี่ใบ? พิมพ์ตัวเลขไว้เลย\n\nภาพ: ภาพการ์ดทางการจาก Lorcast\nข้อมูล: Lorcast\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #lorcana #ลอคาน่า #ดิสนีย์ลอร์คานา #disneylorcana #การ์ดดิสนีย์",
+  "thumb": {
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_be92bba983424f2f9546f237e65ce357.avif?1709690747",
+   "hook": "เอเรียลใบนี้\nขุดการ์ดเพลง",
+   "badge": "#2",
+   "sub": "ลอร์คานา ชุดแรก"
+  },
+  "engage": "👇 เด็คของคุณมีการ์ดเพลงกี่ใบ? พิมพ์ตัวเลขไว้เลย",
+  "publish_at": "2026-10-29T11:20:00Z",
+  "campaign": "lorcana-set1-002",
+  "site_path": "/"
+ }
+}
