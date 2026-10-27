@@ -47,7 +47,9 @@ export type Beat =
   | "v_ac"
   | "v_wash"
   | "v_micro"
-  | "v_rice";
+  | "v_rice"
+  | "v_kettle"
+  | "v_shower";
 
 export type Transition = "wipe" | "zoom" | "flash" | "slide" | "shutter" | "none";
 
@@ -824,7 +826,7 @@ const BeatView: React.FC<{ s: ShowSlide; idx: number; pal: Pal }> = ({ s, idx, p
     beat === "full" ? <FullBeat {...p} /> :
     beat === "rank" ? <RankBeat {...p} /> :
     beat === "pixel" ? <PixelFridge frame={f} dur={d} parts={s.parts || []} starts={starts} /> :
-    beat === "v_toilet" || beat === "v_ac" || beat === "v_wash" || beat === "v_micro" || beat === "v_rice" ? <PixelFridge scene={beat.slice(2)} frame={f} dur={d} parts={s.parts || []} starts={starts} /> :
+    beat === "v_toilet" || beat === "v_ac" || beat === "v_wash" || beat === "v_micro" || beat === "v_rice" || beat === "v_kettle" || beat === "v_shower" ? <PixelFridge scene={beat.slice(2)} frame={f} dur={d} parts={s.parts || []} starts={starts} /> :
     beat === "vec" ? <PixelFridge vec frame={f} dur={d} parts={s.parts || []} starts={starts} /> :
     <CardBeat {...p} />;
   return (

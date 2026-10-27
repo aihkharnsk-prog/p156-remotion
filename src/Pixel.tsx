@@ -5,7 +5,8 @@ import { pixelFridge, FOCUS, GW, GH } from "./pixelFridge";
 import { vecFridge } from "./vecFridge";
 import { SCENES as S1 } from "./vecScenes";
 import { SCENES2 } from "./vecScenes2";
-const SCENES: Record<string, any> = { ...S1, ...SCENES2 };
+import { SCENES3 } from "./vecScenes3";
+const SCENES: Record<string, any> = { ...S1, ...SCENES2, ...SCENES3 };
 
 // บีต "pixel": ฉากพิกเซลตู้เย็นตัดครึ่งที่วาดด้วยโค้ด + ซับทีละคำกลางจอ
 // ภาพเดียวต่อเนื่องทั้งสไลด์ กล้องซูมไปตาม cue ของแต่ละท่อน (parts[k].cue)

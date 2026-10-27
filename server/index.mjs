@@ -1095,7 +1095,7 @@ app.post("/render", auth, (req, res) => {
     for (const [i, s] of slides.entries()) {
       const duration = Number(s.duration);
       const SCENES = ["sprout", "coin", "evolve", "versions", "sprite"];
-      const BEATS = ["hook", "reveal", "card", "name", "stats", "bignum", "quiz", "zoom", "timeline", "art", "still", "coin", "evolve", "versions", "sprite", "full", "rank", "pixel", "vec", "v_toilet", "v_ac", "v_wash", "v_micro", "v_rice"];
+      const BEATS = ["hook", "reveal", "card", "name", "stats", "bignum", "quiz", "zoom", "timeline", "art", "still", "coin", "evolve", "versions", "sprite", "full", "rank", "pixel", "vec", "v_toilet", "v_ac", "v_wash", "v_micro", "v_rice", "v_kettle", "v_shower"];
       if ((!s.image_url && !s.video_url && !SCENES.includes(s.scene) && !BEATS.includes(s.beat)) || !(duration > 0)) {
         return res.status(400).json({
           error: `slide ${i}: need image_url or video_url, and duration (seconds) > 0`,
