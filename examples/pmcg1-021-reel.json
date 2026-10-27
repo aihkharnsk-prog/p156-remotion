@@ -47,7 +47,8 @@
     }
    ],
    "title": "ลิซาร์ดอน",
-   "image_url": "https://images.scrydex.com/pokemon/base1_ja-21/large"
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-21/large",
+   "subtitle": "No.006 • ธาตุไฟ • ร่างที่ 2"
   },
   {
    "beat": "stats",
@@ -67,7 +68,20 @@
     }
    ],
    "title": "ค่าพลังบนการ์ด",
-   "image_url": "https://images.scrydex.com/pokemon/base1_ja-21/large"
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-21/large",
+   "chapter": "บนการ์ด",
+   "stats": [
+    {
+     "label": "พลังชีวิต (HP)",
+     "value": 120,
+     "max": 120
+    },
+    {
+     "label": "ท่าวนไฟ",
+     "value": 100,
+     "max": 100
+    }
+   ]
   },
   {
    "beat": "quiz",
@@ -82,7 +96,14 @@
      "say": "นับพลังงานสีอื่น เป็นพลังงานไฟทั้งหมด. ยกเว้นตอนสับสน."
     }
    ],
-   "title": "ความสามารถ\nเอนเนอร์จีเบิร์น"
+   "title": "ความสามารถ\nเอนเนอร์จีเบิร์น",
+   "chapter": "ทายสิ",
+   "choices": [
+    "นับพลังงานสีอื่นเป็นไฟ",
+    "ห้ามใช้ท่าโจมตี",
+    "เพิ่มพลังชีวิต 50"
+   ],
+   "answer": 0
   },
   {
    "beat": "bignum",
@@ -93,9 +114,11 @@
      "say": "โปเกเด็กซ์บนการ์ด บอกว่าบินได้สูง พันสี่ร้อยเมตร ด้วยปีก."
     }
    ],
-   "title": "เมตร",
+   "title": "บินได้สูง",
    "image_url": "https://images.scrydex.com/pokemon/base1_ja-21/large",
-   "value": 1400
+   "value": 1400,
+   "chapter": "โปเกเด็กซ์",
+   "subtitle": "เมตร • ตามโปเกเด็กซ์บนการ์ด"
   },
   {
    "beat": "art",
@@ -111,7 +134,9 @@
     }
    ],
    "title": "Charizard",
-   "image_url": "https://archives.bulbagarden.net/media/upload/3/38/0006Charizard.png"
+   "image_url": "https://archives.bulbagarden.net/media/upload/3/38/0006Charizard.png",
+   "chapter": "ผู้วาด",
+   "subtitle": "ลิซาร์ดอน • Mitsuhiro Arita"
   },
   {
    "beat": "name",
@@ -127,7 +152,9 @@
     }
    ],
    "title": "*ลิซาร์ดอน*",
-   "image_url": "https://archives.bulbagarden.net/media/upload/3/38/0006Charizard.png"
+   "image_url": "https://archives.bulbagarden.net/media/upload/3/38/0006Charizard.png",
+   "chapter": "ชื่อ",
+   "subtitle": "Charizard • No.006"
   },
   {
    "beat": "card",
@@ -168,7 +195,10 @@
      "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
     }
    ],
-   "beat": "still"
+   "beat": "still",
+   "image_mode": "still",
+   "no_caption": true,
+   "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้"
   }
  ],
  "composition": "CardShow",

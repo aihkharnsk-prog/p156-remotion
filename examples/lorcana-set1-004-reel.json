@@ -5,7 +5,7 @@
  "composition": "CardShow",
  "theme": "electric",
  "badge": "#4",
- "series": "ลอร์คานาชุดแรก",
+ "series": "ลอคาน่าชุดแรก",
  "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
  "bgm_volume": 0.055,
  "tts": {
@@ -38,7 +38,9 @@
      "say": "ใบที่สี่ กูฟฟี่ มัสเก็ตเทียร์ ก็คือกูฟฟี่ ทหารเสือ."
     }
    ],
-   "title": "Goofy\nMusketeer"
+   "title": "Goofy\nMusketeer",
+   "subtitle": "ชุดแรก • ใบที่ 4 จาก 204",
+   "chapter": "กูฟฟี่"
   },
   {
    "beat": "stats",
@@ -50,7 +52,25 @@
      "say": "ราคาห้า. พลังโจมตีสาม. พลังป้องกันหก."
     }
    ],
-   "title": "ค่าบนการ์ด"
+   "title": "ค่า*บนการ์ด*",
+   "chapter": "บนการ์ด",
+   "stats": [
+    {
+     "label": "ราคา",
+     "value": 5,
+     "max": 7
+    },
+    {
+     "label": "พลังโจมตี",
+     "value": 3,
+     "max": 7
+    },
+    {
+     "label": "พลังป้องกัน",
+     "value": 6,
+     "max": 7
+    }
+   ]
   },
   {
    "beat": "zoom",
@@ -65,7 +85,8 @@
    "title": "Bodyguard\nบอดี้การ์ด",
    "focus_x": 50,
    "focus_y": 72,
-   "focus_zoom": 1.6
+   "focus_zoom": 1.6,
+   "chapter": "ความสามารถที่ 1"
   },
   {
    "beat": "quiz",
@@ -81,7 +102,14 @@
      "say": "ตอนลงสนาม ลบดาเมจสูงสุดสองแต้ม จากทหารเสือทุกตัวของเรา."
     }
    ],
-   "title": "And Two for Tea!\nทำอะไร?"
+   "title": "And Two for Tea!\nทำอะไร?",
+   "chapter": "ทายสิ",
+   "choices": [
+    "ลบดาเมจ 2 จากทหารเสือของเรา",
+    "ห้ามโจมตี",
+    "ดูการ์ดบนสุด 4 ใบ"
+   ],
+   "answer": 0
   },
   {
    "beat": "name",
@@ -93,7 +121,18 @@
      "say": "กูฟฟี่ในชุดทหารเสือ มาจากหนัง มิกกี้ โดนัลด์ กูฟฟี่ สามทหารเสือ ปีสองศูนย์ศูนย์สี่."
     }
    ],
-   "title": "Goofy · Musketeer"
+   "title": "Goofy · Musketeer",
+   "chapter": "ที่มา",
+   "chips": [
+    {
+     "big": "2004",
+     "small": "ปีที่หนังออกฉาย"
+    },
+    {
+     "big": "Goofy",
+     "small": "ทหารเสือ"
+    }
+   ]
   },
   {
    "beat": "art",
@@ -105,7 +144,9 @@
      "say": "ภาพนี้วาดโดย โยเคม ฟาน กูล."
     }
    ],
-   "title": "ผู้วาด\nJochem Van Gool"
+   "title": "ผู้วาด\nJochem Van Gool",
+   "subtitle": "Goofy • Musketeer",
+   "chapter": "ผู้วาด"
   },
   {
    "beat": "card",
@@ -138,17 +179,20 @@
      "text": "ชอบแบบนี้ กดติดตามไว้เลย.",
      "say": "ชอบเรื่องการ์ดแบบนี้ กดติดตามไว้เลยนะ. ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
     }
-   ]
+   ],
+   "image_mode": "still",
+   "no_caption": true,
+   "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้"
   }
  ],
  "meta": {
   "title": "กูฟฟี่ ทหารเสือ กำแพง 6 พลังป้องกัน | Lorcana #4 #shorts",
-  "description": "Goofy, Musketeer 4/204 ชุด The First Chapter ของ Disney Lorcana (Uncommon) หมึกอำพัน ราคา 5 พลังโจมตี 3 พลังป้องกัน 6 ลอร์ 1 ความสามารถ Bodyguard และ And Two for Tea! ตอนลงสนามลบดาเมจสูงสุด 2 จากทหารเสือทุกตัวของเรา วาดโดย Jochem Van Gool\n\n👇 กูฟฟี่หรือโดนัลด์ ใครคือทหารเสือที่คุณอยากได้มากกว่า?\n\nภาพ: ภาพการ์ดทางการจาก Lorcast\nข้อมูล: Lorcast\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #lorcana #ลอคาน่า #ดิสนีย์ลอร์คานา #disneylorcana #การ์ดดิสนีย์",
+  "description": "Goofy, Musketeer 4/204 ชุด The First Chapter ของ Disney Lorcana (Uncommon) หมึกอำพัน ราคา 5 พลังโจมตี 3 พลังป้องกัน 6 ลอร์ 1 ความสามารถ Bodyguard และ And Two for Tea! ตอนลงสนามลบดาเมจสูงสุด 2 จากทหารเสือทุกตัวของเรา วาดโดย Jochem Van Gool\n\n👇 กูฟฟี่หรือโดนัลด์ ใครคือทหารเสือที่คุณอยากได้มากกว่า?\n\nภาพ: ภาพการ์ดทางการจาก Lorcast\nข้อมูล: Lorcast\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #lorcana #ลอคาน่า #ดิสนีย์ลอคาน่า #disneylorcana #การ์ดดิสนีย์",
   "thumb": {
    "image_url": "https://cards.lorcast.io/card/digital/large/crd_9bd583ab207a4366a12f37ab94ed8619.avif?1709690747",
    "hook": "กูฟฟี่ทหารเสือ\nกำแพง 6",
    "badge": "#4",
-   "sub": "ลอร์คานา ชุดแรก"
+   "sub": "ลอคาน่า ชุดแรก"
   },
   "engage": "👇 กูฟฟี่หรือโดนัลด์ ใครคือทหารเสือที่คุณอยากได้มากกว่า?",
   "publish_at": "2026-10-30T05:00:00Z",

@@ -47,7 +47,8 @@
     }
    ],
    "title": "บูบา",
-   "image_url": "https://images.scrydex.com/pokemon/base1_ja-20/large"
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-20/large",
+   "subtitle": "No.126 • ธาตุไฟ"
   },
   {
    "beat": "quiz",
@@ -62,7 +63,14 @@
      "say": "คำตอบ พันสองร้อยองศาเซลเซียส."
     }
    ],
-   "title": "อุณหภูมิ\nร่างกายบูบา?"
+   "title": "อุณหภูมิ\nร่างกายบูบา?",
+   "chapter": "ทายสิ",
+   "choices": [
+    "300 องศา",
+    "1,200 องศา",
+    "5,000 องศา"
+   ],
+   "answer": 1
   },
   {
    "beat": "bignum",
@@ -73,9 +81,11 @@
      "say": "ร้อนระดับ ที่น้ำเดือดยังต้องหลบ."
     }
    ],
-   "title": "องศาเซลเซียส",
+   "title": "ร้อนแค่ไหน?",
    "image_url": "https://images.scrydex.com/pokemon/base1_ja-20/large",
-   "value": 1200
+   "value": 1200,
+   "chapter": "บนการ์ด",
+   "subtitle": "องศาเซลเซียส • ตามโปเกเด็กซ์"
   },
   {
    "beat": "art",
@@ -91,7 +101,9 @@
     }
    ],
    "title": "Magmar",
-   "image_url": "https://archives.bulbagarden.net/media/upload/7/72/0126Magmar.png"
+   "image_url": "https://archives.bulbagarden.net/media/upload/7/72/0126Magmar.png",
+   "chapter": "โปเกเด็กซ์",
+   "subtitle": "บูบา • โปเกมอนพ่นไฟ"
   },
   {
    "beat": "stats",
@@ -111,7 +123,25 @@
     }
    ],
    "title": "ค่าพลังบนการ์ด",
-   "image_url": "https://images.scrydex.com/pokemon/base1_ja-20/large"
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-20/large",
+   "chapter": "บนการ์ด",
+   "stats": [
+    {
+     "label": "พลังชีวิต (HP)",
+     "value": 50,
+     "max": 120
+    },
+    {
+     "label": "หมัดไฟ",
+     "value": 30,
+     "max": 100
+    },
+    {
+     "label": "พ่นไฟ",
+     "value": 50,
+     "max": 100
+    }
+   ]
   },
   {
    "beat": "name",
@@ -127,7 +157,9 @@
     }
    ],
    "title": "*บูบา*",
-   "image_url": "https://archives.bulbagarden.net/media/upload/7/72/0126Magmar.png"
+   "image_url": "https://archives.bulbagarden.net/media/upload/7/72/0126Magmar.png",
+   "chapter": "ชื่อ",
+   "subtitle": "Magmar • No.126"
   },
   {
    "beat": "card",
@@ -172,7 +204,10 @@
      "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
     }
    ],
-   "beat": "still"
+   "beat": "still",
+   "image_mode": "still",
+   "no_caption": true,
+   "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้"
   }
  ],
  "composition": "CardShow",
