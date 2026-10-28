@@ -1244,6 +1244,7 @@ app.post("/outro", auth, async (req, res) => {
 // สั่ง render สคริปต์ที่อยู่ใน examples/ ของ repo เลย (ไม่ต้องส่ง JSON ยาวๆ)
 // POST /render-files {files:["pmcg1-004-reel.json", ...], upload:true}
 const UPLOAD_HOOK = "https://hook.us2.make.com/kcld4bbtli9t1faceobohsk8wok5biay";
+const YNN_HOOK = "https://hook.us2.make.com/e73f2bdhgkjcspriy4o3uxr45muvrp7v"; // ช่อง "ยังไงนะ"
 app.post("/render-files", auth, async (req, res) => {
   const out = [];
   for (const f of Array.isArray(req.body?.files) ? req.body.files : []) {
@@ -1312,7 +1313,7 @@ app.post("/yt-upload", auth, async (req, res) => {
         warnings: [],
         meta: { title: meta.title, description: tagLinks(meta.description || "", meta, "youtube"), publish_at },
       };
-      await postWebhook(UPLOAD_HOOK, payload);
+      await postWebhook(String(it.channel || req.body?.channel) === "yng" ? YNN_HOOK : UPLOAD_HOOK, payload);
       out.push({ file: name, job, publish_at, title: meta.title, thumbnail: hasThumb });
     } catch (e) {
       out.push({ file: name, job, error: String(e?.message || e) });
