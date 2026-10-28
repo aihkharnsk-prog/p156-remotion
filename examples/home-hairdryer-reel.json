@@ -8,9 +8,9 @@
  "tts": {
   "voice_id": "bTEswxYhpv7UDkQg5VRu",
   "model_id": "eleven_v4",
-  "stability": 0.35,
-  "speed": 1.05,
-  "prefix": "[mellow, soft and smooth, friendly, lightly upbeat, unhurried]"
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, confident, clear presenter, lively but not shouting]"
  },
  "audio_rate": 1.0,
  "slides": [
@@ -27,7 +27,7 @@
     },
     {
      "text": "ข้างในมีหลักๆ แค่ *สองอย่าง*",
-     "say": "ข้างในมีของหลักๆ คือพัดลมที่หมุนด้วยมอเตอร์ กับขดลวดที่ร้อนจัด",
+     "say": "ข้างในมีของหลักๆ แค่สองอย่าง คือพัดลมที่หมุนด้วยมอเตอร์ กับขดลวดที่ร้อนจัด",
      "cue": "all"
     },
     {

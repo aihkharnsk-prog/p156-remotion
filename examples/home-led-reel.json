@@ -8,9 +8,9 @@
  "tts": {
   "voice_id": "bTEswxYhpv7UDkQg5VRu",
   "model_id": "eleven_v4",
-  "stability": 0.35,
-  "speed": 1.05,
-  "prefix": "[mellow, soft and smooth, friendly, lightly upbeat, unhurried]"
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, confident, clear presenter, lively but not shouting]"
  },
  "audio_rate": 1.0,
  "slides": [
@@ -27,7 +27,7 @@
     },
     {
      "text": "แกะดู *สี่ส่วนหลัก*",
-     "say": "แกะดูหลอดทั่วไป จะเจอไดรเวอร์ ชิปเปล่งแสง สารเรืองแสง และตัวระบายความร้อน มาดูกัน",
+     "say": "แกะดูหลอดทั่วไป จะมีสี่ส่วนหลักๆ ไดรเวอร์ ชิปเปล่งแสง สารเรืองแสง และตัวระบายความร้อน มาดูตามลำดับที่ไฟไหลผ่าน",
      "cue": "parts"
     },
     {
