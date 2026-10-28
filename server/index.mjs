@@ -1287,7 +1287,7 @@ app.post("/yt-upload", auth, async (req, res) => {
         job_id: job,
         status: "done",
         video_url: publicVideoUrl(job),
-        thumbnail_url: hasThumb ? `${PUBLIC_BASE_URL}/videos/${thumbName}` : null,
+        thumbnail_url: hasThumb ? `${PUBLIC_BASE_URL}/videos/${thumbName}` : (/^https?:\/\//.test(String(meta.thumb_url || "")) ? String(meta.thumb_url) : null),
         warnings: [],
         meta: { title: meta.title, description: tagLinks(meta.description || "", meta, "youtube"), publish_at },
       };
