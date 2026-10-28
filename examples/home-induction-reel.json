@@ -1,0 +1,97 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "เตาแม่เหล็กไฟฟ้า ไม่มีไฟ แต่ทำให้หม้อร้อนได้ยังไง? #shorts #เตาแม่เหล็กไฟฟ้า",
+  "description": "เตาแม่เหล็กไฟฟ้าใช้ขดลวดใต้กระจกสร้างสนามแม่เหล็กสลับทิศ ทำให้เกิดกระแสไหลวนในก้นหม้อ ความร้อนจึงเกิดที่หม้อโดยตรง: ขดลวด → สนามแม่เหล็ก → กระแสไหลวน → ก้นหม้อร้อน\nภาพเคลื่อนไหววาดเองทั้งหมด\n\nแหล่งข้อมูล:\n- Swiss Federal Office of Public Health (BAG) Induction hob factsheet: https://www.bag.admin.ch/dam/bag/en/dokumente/str/nis/faktenblaetter-emf/faktenblatt-induktionskochherd.pdf.download.pdf/faktenblatt%20induktionskochherd%20e.pdf\n- Electronic Design, Induction Cooking: How Do Coil/Pan Characteristics Affect Heating Ability?: https://www.electronicdesign.com/technologies/power/article/21801050/induction-cooking-how-do-coil-pan-characteristics-affect-heating-ability\n- ENERGY STAR (EPA) Residential Induction Cooking Tops: https://www.energystar.gov/about/2021_residential_induction_cooking_tops\n- EECA New Zealand, Induction cooktops: https://www.eeca.govt.nz/for-homes/energy-saving-technology/induction-cooktops/\n- Green Building Advisor, Efficient Cooking: https://www.greenbuildingadvisor.com/article/efficient-cooking\n- AEG, Induction: https://www.aeg.co.uk/local/from-aeg/induction/\n- Miele, cooling fan after switch-off: https://miele.ie/support/customer-assistance/hob-1232/all/cooling_fan_continues_to_operate_after_switch_off-95464256907\n- CDA HN6860FR manual (hob protection): https://www.manualslib.com/manual/3212441/Cda-Hn6860fr.html?page=13\n- Wikipedia, Induction cooking (สำเนา): https://cavac.at/cavacopedia/Induction%20cooking\n- ไฟบ้านไทย 50 Hz: https://www.thailandstarterkit.com/accommodation/electricity-in-thailand/\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #เตาแม่เหล็กไฟฟ้า #ความรู้รอบตัว #ของใช้ในบ้าน #ทำงานยังไง"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, confident, clear presenter, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "slides": [
+  {
+   "beat": "v_induction",
+   "duration": 90,
+   "no_caption": true,
+   "transition": "none",
+   "parts": [
+    {
+     "text": "ทำไมเตาแม่เหล็กไฟฟ้า *ไม่มีไฟ* ไม่มีเปลวแดง แต่ทำให้หม้อร้อนได้?",
+     "say": "ทำไมเตาแม่เหล็กไฟฟ้า ไม่มีเปลวไฟ ไม่มีขดลวดร้อนแดง แต่ทำให้หม้อร้อนได้?",
+     "cue": "all"
+    },
+    {
+     "text": "ใต้กระจกมี *ขดลวด* ไฟสลับ หลายหมื่นรอบต่อวินาที",
+     "say": "ใต้กระจกมีขดลวดม้วนเป็นวง วงจรอิเล็กทรอนิกส์ส่งไฟกระแสสลับ สลับทิศหลายหมื่นรอบต่อวินาที ผ่านขดลวดนี้",
+     "cue": "coil"
+    },
+    {
+     "text": "เกิด *สนามแม่เหล็ก* กลับทิศตามไปด้วย",
+     "say": "ไฟที่สลับไปมา ทำให้เกิดสนามแม่เหล็กที่กลับทิศตามไปด้วย และสนามนี้ทะลุกระจกขึ้นไปได้",
+     "cue": "field"
+    },
+    {
+     "text": "วางหม้อ เกิด *กระแสไหลวน* ในก้นหม้อ",
+     "say": "พอวางหม้อ สนามที่เปลี่ยนไปมาทำให้เกิดกระแสไฟวนเป็นวงในก้นหม้อ เรียกว่ากระแสไหลวน โลหะมีความต้านทาน กระแสนี้จึงกลายเป็นความร้อน",
+     "cue": "eddy"
+    },
+    {
+     "text": "หม้อเหล็ก ร้อนเพิ่มอีกทาง",
+     "say": "หม้อเหล็กยังร้อนเพิ่มอีกทาง เพราะสนามสลับทำให้แม่เหล็กจิ๋วในเนื้อโลหะกลับขั้วไปมา เกิดเป็นความร้อนอีกส่วน",
+     "cue": "hyst"
+    },
+    {
+     "text": "เอา *แม่เหล็ก* แตะก้นหม้อ ดูดติดก็ใช้ได้",
+     "say": "เพราะแบบนี้ หม้อต้องมีก้นเป็นแม่เหล็ก ลองเอาแม่เหล็กแตะก้นหม้อ ถ้าดูดติดก็ใช้ได้ ส่วนอะลูมิเนียมกับทองแดง ส่วนใหญ่ใช้ไม่ได้",
+     "cue": "magnet"
+    },
+    {
+     "text": "ความร้อนเกิดที่ *ก้นหม้อ* กระจกอุ่นเพราะหม้อ",
+     "say": "ความร้อนเกิดที่ก้นหม้อโดยตรง ไม่ได้ผ่านกระจกขึ้นมา กระจกอุ่นเพราะรับความร้อนจากหม้อ จึงควรระวังหลังทำอาหารนานๆ",
+     "cue": "glass"
+    },
+    {
+     "text": "*พัดลม* ระบายความร้อนแผงวงจร",
+     "say": "ส่วนพัดลมใต้เตา ทำหน้าที่ระบายความร้อนให้วงจรอิเล็กทรอนิกส์ และอาจเดินต่ออีกพักหลังปิดเตา",
+     "cue": "fan"
+    },
+    {
+     "text": "ไม่มีหม้อ ก็ไม่ให้ความร้อน",
+     "say": "ถ้าไม่มีหม้อ เตาจะไม่ให้ความร้อน ช้อนเล็กๆ ก็ไม่ถูกมองเป็นหม้อ แต่ก็ไม่ควรวางโลหะทิ้งไว้บนเตา",
+     "cue": "nopan"
+    },
+    {
+     "text": "ไฟบ้านสลับ *ห้าสิบรอบ* ในเตาเร็วกว่าหลายร้อยเท่า",
+     "say": "ที่น่าทึ่งคือ ไฟบ้านเราสลับทิศแค่ห้าสิบรอบต่อวินาที แต่ในเตาสลับเร็วกว่านั้นหลายร้อยเท่า",
+     "cue": "freq"
+    },
+    {
+     "text": "ส่งพลังงานถึงหม้อ *ราวเจ็ดสิบถึงแปดสิบห้า* เปอร์เซ็นต์",
+     "say": "ผลทดสอบส่วนใหญ่พบว่า เตาแม่เหล็กไฟฟ้าส่งพลังงานเข้าหม้อได้ราวเจ็ดสิบถึงแปดสิบห้าเปอร์เซ็นต์ เตาแก๊สต่ำกว่าครึ่ง แต่ตัวเลขต่างกันตามรุ่นและหม้อ",
+     "cue": "eff"
+    },
+    {
+     "text": "เคล็ดลับ: ก้นเรียบ ขนาดพอดีวง *วางตรงกลาง*",
+     "say": "เคล็ดลับคือ เลือกหม้อก้นเรียบ ขนาดพอดีกับวงบนเตา แล้ววางไว้ตรงกลาง ใช้งานได้ดี และสนามแม่เหล็กรั่วน้อยลงด้วย",
+     "cue": "tip"
+    },
+    {
+     "text": "ติดตาม *ยังไงนะ* ดูของใช้ในบ้านทำงานยังไงอีก",
+     "say": "ติดตามช่องยังไงนะ แล้วมาดูกันว่าของใช้ในบ้านอื่นๆ ข้างในทำงานยังไง",
+     "cue": "end"
+    }
+   ]
+  }
+ ],
+ "composition": "CardShow",
+ "theme": "psychic",
+ "badge": "",
+ "series": "",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055
+}

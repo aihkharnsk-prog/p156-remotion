@@ -1,0 +1,92 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "เบรกเกอร์ตัดไฟเองได้ยังไง? แล้วกันดูดต่างกันตรงไหน #shorts #เบรกเกอร์",
+  "description": "เบรกเกอร์ตัดไฟเองได้ด้วยกลไกสองแบบ: แผ่นไบเมทัลร้อนแล้วงอเมื่อไฟเกินนานๆ และขดลวดแม่เหล็กไฟฟ้าดึงทันทีเมื่อลัดวงจร ส่วนเครื่องตัดไฟรั่ว (RCD / กันดูด) ใช้วงแหวนแม่เหล็กเปรียบเทียบกระแสไฟที่ไหลไปกับไหลกลับ ถ้าไม่เท่ากันก็สั่งตัดไฟ\nภาพเคลื่อนไหววาดเองทั้งหมด เป็นแผนผังอย่างง่าย ไม่ใช่รุ่นใดรุ่นหนึ่ง และไม่ใช่คำแนะนำให้แกะหรือซ่อมระบบไฟเอง ถ้าเครื่องมีปัญหาให้เรียกช่างไฟ\n\nแหล่งข้อมูล:\n- Electrical Engineering Portal (ไบเมทัล/แม่เหล็ก) https://electrical-engineering-portal.com/how-circuit-breaker-trip-unit-works\n- Crown/Sparks Electrical News https://www.crown.co.za/latest-news/sparks-electrical-news-latest-news/6233-circuit-breakers-designed-to-protect-electrical-circuits-from-damage\n- Relectric https://www.relectric.com/training/thermal-magnetic-circuit-breaker-components/\n- ControlBooth (trip curve) https://www.controlbooth.com/wiki/trip-curve\n- TLC Electrical (วงแหวน/ปุ่มทดสอบ) https://tlc-direct.co.uk/Technical/Distribution/How%20RCD%20Works.htm\n- ABB ประเทศไทย (RCCB 30 mA / 40 ms / ทดสอบ / ใช้คู่ MCB) https://new.abb.com/th/home-protections/residual-current-devices\n- RS Components ประเทศไทย (CBCT / 30 mA / ทดสอบเดือนละครั้ง) https://th.rs-online.com/web/content/discovery/ideas-and-advice/guide-to-rcbo\n- Fuji Electric (ELCB/RCD ปุ่มทดสอบ) https://americas.fujielectric.com/simple-ways-to-test-your-earth-leakage-circuit-breakers/\n- This Old House (GFCI ตัดไฟเร็ว/ทดสอบทุกเดือน) https://www.thisoldhouse.com/ideas/how-gfci-receptacles-keep-you-safe\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #เบรกเกอร์ #ความรู้รอบตัว #ของใช้ในบ้าน #ทำงานยังไง"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, confident, clear presenter, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "slides": [
+  {
+   "beat": "v_breaker",
+   "duration": 90,
+   "no_caption": true,
+   "transition": "none",
+   "parts": [
+    {
+     "text": "ไฟเกิน ไฟลัดวงจร ไฟรั่ว เบรกเกอร์ *ตัดไฟให้เอง* ได้ยังไง?",
+     "say": "เวลาไฟเกิน ไฟลัดวงจร หรือไฟรั่ว เบรกเกอร์ในตู้ไฟตัดไฟให้เองได้ยังไง ทั้งที่ไม่มีใครมายกสวิตช์?",
+     "cue": "all"
+    },
+    {
+     "text": "เบรกเกอร์ทั่วไปมี *สองกลไก*",
+     "say": "เริ่มจากเบรกเกอร์ธรรมดา แบบทั่วไปมีกลไกตรวจจับสองแบบ แบบแรกใช้ความร้อน อีกแบบใช้แม่เหล็ก",
+     "cue": "mcb"
+    },
+    {
+     "text": "ไฟเกินนานๆ → *ไบเมทัล* ร้อนแล้วงอ",
+     "say": "ถ้ากระแสเกินพิกัดอยู่นาน แผ่นไบเมทัล ซึ่งเป็นโลหะสองชนิดติดกัน จะร้อนขึ้น โลหะสองชนิดขยายตัวไม่เท่ากัน แผ่นจึงงอ ยิ่งร้อนยิ่งงอ",
+     "cue": "heat"
+    },
+    {
+     "text": "งอจนดันสลัก *สปริงดีดสวิตช์*",
+     "say": "พอแผ่นงอไปดันสลักล็อก สลักก็หลุด สปริงดีดหน้าสัมผัสให้แยกออกจากกัน ไฟดับ ยิ่งกระแสสูงก็ยิ่งตัดเร็ว",
+     "cue": "heat2"
+    },
+    {
+     "text": "ลัดวงจร → *แม่เหล็กไฟฟ้า* ดึงทันที",
+     "say": "แต่ถ้าลัดวงจร กระแสพุ่งสูงมาก ขดลวดแม่เหล็กไฟฟ้าจะดึงทันที ไม่ต้องรอให้ร้อน เบรกเกอร์จึงตัดในพริบตา",
+     "cue": "short"
+    },
+    {
+     "text": "ไฟรั่ว เบรกเกอร์ปกติ *จับไม่ได้* ต้องมีกันดูด",
+     "say": "แต่ไฟรั่วลงดินเล็กน้อย เบรกเกอร์ธรรมดาจับไม่ได้ จึงมีเครื่องตัดไฟรั่ว ที่คนไทยเรียกว่ากันดูด อีกตัวมาทำหน้าที่นี้",
+     "cue": "rcd"
+    },
+    {
+     "text": "ปกติ ไฟไป = ไฟกลับ *หักล้างกัน*",
+     "say": "สายเส้นไฟและสายนิวทรัลลอดผ่านวงแหวนแม่เหล็ก ตอนปกติกระแสที่ไหลไปกับไหลกลับเท่ากัน สนามแม่เหล็กหักล้างกันหมด",
+     "cue": "sense_ok"
+    },
+    {
+     "text": "ไฟรั่วลงดิน → *ไม่เท่ากัน* → ตัดไฟ",
+     "say": "แต่ถ้ามีไฟรั่วลงดิน กระแสส่วนหนึ่งไม่ย้อนกลับทางสายนิวทรัล สองฝั่งไม่เท่ากัน วงแหวนเกิดสนามแม่เหล็ก ขดลวดส่งสัญญาณให้รีเลย์ สั่งตัดไฟ",
+     "cue": "sense_leak"
+    },
+    {
+     "text": "ตัดไฟใน *ไม่ถึง 0.1 วินาที*",
+     "say": "ที่น่าทึ่งคือ เอบีบีระบุว่ารุ่นของเขาตัดไฟภายในสี่สิบมิลลิวินาที ที่กระแสรั่วสามสิบมิลลิแอมป์ ซึ่งเป็นค่าทั่วไปในบ้าน สั้นกว่าหนึ่งในสิบวินาที",
+     "cue": "fact"
+    },
+    {
+     "text": "ตัดไฟรั่ว *ไม่ป้องกัน* ไฟเกิน",
+     "say": "แต่เครื่องตัดไฟรั่วอย่างเดียวไม่ป้องกันกระแสเกินหรือลัดวงจร จึงต้องใช้คู่กับเบรกเกอร์ หรือใช้แบบรวมสองหน้าที่ในตัวเดียว",
+     "cue": "limit"
+    },
+    {
+     "text": "กดปุ่ม *Test* อย่างน้อยเดือนละครั้ง",
+     "say": "ปุ่มทดสอบจะจำลองกระแสไม่สมดุลให้เครื่องตัด ผู้ผลิตหลายรายแนะนำให้กดอย่างน้อยเดือนละครั้ง ถ้ากดแล้วไม่ตัดไฟ แปลว่ามีปัญหา ให้เรียกช่างไฟมาตรวจ",
+     "cue": "test"
+    },
+    {
+     "text": "ชอบแบบนี้ กดติดตาม *ยังไงนะ*",
+     "say": "ชอบเรื่องของใช้ในบ้านแบบนี้ กดติดตามช่องยังไงนะ ไว้ได้เลย เดี๋ยวพาแกะดูข้างในอีกหลายอย่าง",
+     "cue": "end"
+    }
+   ]
+  }
+ ],
+ "composition": "CardShow",
+ "theme": "psychic",
+ "badge": "",
+ "series": "",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055
+}

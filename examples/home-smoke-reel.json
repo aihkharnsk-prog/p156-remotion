@@ -1,0 +1,102 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "เครื่องตรวจจับควันรู้ได้ไงว่ามีควัน? แกะดูข้างใน #shorts #เครื่องตรวจจับควัน",
+  "description": "เครื่องตรวจจับควันแบบไอออไนซ์ใช้อะเมริเซียม-241 สร้างกระแสไฟในอากาศ พอควันมาเกาะไอออนกระแสก็ลด ส่วนแบบโฟโตอิเล็กทริกใช้แสงกระเจิงจากควันตกบนตัวรับแสง\nภาพเคลื่อนไหววาดเองทั้งหมด\n\nแหล่งข้อมูล:\n- NRC https://www.nrc.gov/reading-rm/doc-collections/fact-sheets/smoke-detectors\n- EPA https://19january2025snapshot.epa.gov/radtown/americium-ionization-smoke-detectors\n- EPA https://webarchive.library.unt.edu/eot2008/20090508081306/http:/epa.gov/radiation/sources/smoke_alarm.html\n- Britannica https://britannica.com/technology/smoke-detector\n- NIST https://www.nist.gov/el/home-smoke-alarm-tests\n- USFA https://www.usfa.fema.gov/prevention/home-fires/prepare-for-fire/smoke-alarms/\n- CPSC https://www.cpsc.gov/s3fs-public/SmokeAlarmWhyWhereandWhichCPSCPub559RevisedJuly2016PostReview(2).pdf\n- EC&M (ประวัติ Jaeger) https://www.ecmag.com/magazine/articles/article-detail/a-brief-history-of-fire-alarm-equipment-the-invention-of-smoke-detectors-heat-detectors-and-related-equipment\n- Wikipedia https://en.wikipedia.org/wiki/Smoke_detector\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #เครื่องตรวจจับควัน #ความรู้รอบตัว #ของใช้ในบ้าน #ทำงานยังไง"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, confident, clear presenter, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "slides": [
+  {
+   "beat": "v_smoke",
+   "duration": 90,
+   "no_caption": true,
+   "transition": "none",
+   "parts": [
+    {
+     "text": "เคยสงสัยไหม เครื่องตรวจจับควันบนเพดาน *รู้ได้ยังไง* ว่ามีควัน?",
+     "say": "เคยสงสัยไหม เครื่องตรวจจับควันบนเพดาน รู้ได้ยังไงว่ามีควัน ทั้งที่ไม่มีตา ไม่มีจมูก?",
+     "cue": "all"
+    },
+    {
+     "text": "หลักการใหญ่ๆ มี *สองแบบ*",
+     "say": "หลักการใหญ่ๆ มีสองแบบ แบบแรกเรียกว่าไอออไนซ์",
+     "cue": "all"
+    },
+    {
+     "text": "แผ่นโลหะสองแผ่น + *อะเมริเซียม-241*",
+     "say": "ข้างในมีแผ่นโลหะสองแผ่นต่อไฟคนละขั้ว กับธาตุกัมมันตรังสีอะเมริเซียมสองสี่หนึ่ง ปริมาณน้อยนิด คอยปล่อยอนุภาคแอลฟา",
+     "cue": "ion"
+    },
+    {
+     "text": "อากาศแตกตัวเป็น *ไอออน* เกิดกระแสไฟ",
+     "say": "อนุภาคแอลฟาชนอากาศจนแตกตัวเป็นไอออนบวกกับลบ วิ่งไปหาแผ่นโลหะคนละขั้ว เกิดเป็นกระแสไฟเล็กๆ ไหลสม่ำเสมอ",
+     "cue": "ion"
+    },
+    {
+     "text": "ควันเกาะไอออน *กระแสลดลง*",
+     "say": "พอควันลอยเข้ามา อนุภาคควันจะไปเกาะกับไอออนเหล่านี้ กระแสไฟจึงลดลง",
+     "cue": "smoke"
+    },
+    {
+     "text": "กระแสต่ำกว่าเกณฑ์ *เสียงเตือนดัง*",
+     "say": "วงจรเห็นว่ากระแสต่ำกว่าที่ตั้งไว้ ก็สั่งให้เสียงเตือนดังขึ้น",
+     "cue": "alarm"
+    },
+    {
+     "text": "อีกแบบ ใช้ *แสง*",
+     "say": "อีกแบบคือโฟโตอิเล็กทริก ใช้แสง ข้างในมีหลอดไฟเล็กๆ ส่องเป็นลำ ส่วนตัวรับแสงหันหลบอยู่ ตอนอากาศใส จึงไม่เห็นแสง",
+     "cue": "photo"
+    },
+    {
+     "text": "ควัน *กระเจิงแสง* ตกบนตัวรับ",
+     "say": "พอมีควันเข้ามา อนุภาคควันกระเจิงแสงไปทุกทิศ บางส่วนตกลงบนตัวรับ เกิดสัญญาณ แล้วเสียงเตือนก็ดัง",
+     "cue": "scatter"
+    },
+    {
+     "text": "ไฟลุกไหม้ vs ไฟคุ *ไวไม่เท่ากัน*",
+     "say": "สองแบบเก่งไม่เหมือนกัน จากการทดสอบของเอ็นไอเอสทีสหรัฐฯ ไอออไนซ์ไวกว่าเล็กน้อยกับไฟลุกไหม้ ส่วนโฟโตอิเล็กทริกมักไวกว่ามากกับไฟคุที่ควันอนุภาคใหญ่",
+     "cue": "compare"
+    },
+    {
+     "text": "เกิดจาก *ความบังเอิญ* ของบุหรี่มวนเดียว",
+     "say": "แบบไอออไนซ์เริ่มจากความบังเอิญ เมื่อเกือบเก้าสิบปีก่อน นักฟิสิกส์ชาวสวิส วอลเตอร์ เยเกอร์ พยายามทำเซนเซอร์จับแก๊สพิษ แต่แก๊สไม่ทำให้กระแสเปลี่ยน พอเขาจุดบุหรี่ ควันกลับทำให้เข็มวัดตกลง",
+     "cue": "fact"
+    },
+    {
+     "text": "อะเมริเซียมน้อยมาก *ไม่อันตราย* ถ้าเครื่องไม่เสียหาย",
+     "say": "อะเมริเซียมในเครื่องมีไม่เกินหนึ่งไมโครคูรี และแอลฟาทะลุกระดาษแผ่นเดียวไม่ได้ ถ้าเครื่องไม่เสียหายก็ไม่อันตราย",
+     "cue": "ion"
+    },
+    {
+     "text": "ทดสอบ *เดือนละครั้ง*",
+     "say": "กดปุ่มทดสอบเดือนละครั้ง",
+     "cue": "test"
+    },
+    {
+     "text": "เปลี่ยนทั้งเครื่อง *ทุก 10 ปี*",
+     "say": "และเปลี่ยนทั้งเครื่องทุกสิบปีนับจากวันผลิต ตามคำแนะนำของหน่วยงานความปลอดภัยสหรัฐฯ",
+     "cue": "life"
+    },
+    {
+     "text": "ชอบแบบนี้ กดติดตาม *ยังไงนะ*",
+     "say": "ชอบเรื่องของใช้ในบ้านแบบนี้ กดติดตามช่องยังไงนะ ไว้ได้เลย เดี๋ยวพาแกะดูข้างในอีกหลายอย่าง",
+     "cue": "end"
+    }
+   ]
+  }
+ ],
+ "composition": "CardShow",
+ "theme": "psychic",
+ "badge": "",
+ "series": "",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055
+}

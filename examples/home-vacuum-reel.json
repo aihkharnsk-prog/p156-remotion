@@ -1,0 +1,102 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "เครื่องดูดฝุ่นดูดฝุ่นได้ยังไง? แกะดูข้างใน #shorts #เครื่องดูดฝุ่น",
+  "description": "เครื่องดูดฝุ่นไม่ได้ดึงฝุ่น แต่มอเตอร์หมุนใบพัดให้ความดันข้างในต่ำลง อากาศในห้องที่ความดันสูงกว่าจึงถูกดันเข้าไปพาฝุ่นมา แล้วถุงหรือไซโคลนกับไส้กรองคอยแยกฝุ่นออกจากอากาศ\nภาพเคลื่อนไหววาดเองทั้งหมด (แผนผังง่ายๆ ไม่ใช่ผังของรุ่นใดรุ่นหนึ่ง)\n\nแหล่งข้อมูล:\n- Ecovacs https://www.ecovacs.com/us/blog/how-do-vacuum-cleaners-work\n- Bissell https://www.bissellcommercial.com/blogs/blog/how-do-vacuum-cleaners-work\n- Lou Bloomfield, How Everything Works https://www.howeverythingworks.org/supplements/vacuum_cleaners.pdf\n- Home Vacuum Zone https://homevacuumzone.com/how-does-a-vacuum-cleaner-work/\n- Britannica (Vacuum cleaner) https://www.britannica.com/technology/vacuum-cleaner\n- Britannica (James Dyson) https://www.britannica.com/money/James-Dyson\n- Dyson https://www.dyson.com/discover/innovation/behind-the-invention/only-a-dyson-works-like-a-dyson\n- Wikipedia (Hubert Cecil Booth) https://en.wikipedia.org/wiki/Hubert_Cecil_Booth\n- TIME https://time.com/5330077/google-doodle-hubert-cecil-booth-vacuum-cleaner\n- Homes & Gardens https://www.homesandgardens.com/solved/why-has-my-vacuum-cleaner-lost-suction-power\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #เครื่องดูดฝุ่น #ความรู้รอบตัว #ของใช้ในบ้าน #ทำงานยังไง"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, confident, clear presenter, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "slides": [
+  {
+   "beat": "v_vacuum",
+   "duration": 90,
+   "no_caption": true,
+   "transition": "none",
+   "parts": [
+    {
+     "text": "เคยสงสัยไหม เครื่องดูดฝุ่น *ดูดฝุ่นขึ้นมา* ได้ยังไง?",
+     "say": "เคยสงสัยไหม เครื่องดูดฝุ่นดูดเศษฝุ่นขึ้นมาจากพื้นได้ยังไง ทั้งที่ไม่มีมือสักข้าง?",
+     "cue": "all"
+    },
+    {
+     "text": "หัวใจคือ *มอเตอร์* หมุนใบพัด",
+     "say": "หัวใจของมันคือมอเตอร์ไฟฟ้า ที่คอยหมุนใบพัดลมอยู่ภายในตัวเครื่อง",
+     "cue": "motor"
+    },
+    {
+     "text": "ใบพัดไล่อากาศออก *ความดันข้างในต่ำลง*",
+     "say": "ใบพัดลมไล่อากาศในตัวเครื่องออกไป ทำให้ความดันอากาศข้างในต่ำกว่าอากาศในห้อง",
+     "cue": "pressure"
+    },
+    {
+     "text": "จริงๆ ไม่ได้ดึง แต่ *อากาศในห้องดันเข้า*",
+     "say": "จริงๆ แล้วเครื่องไม่ได้ดึงอะไรเลยนะ แต่เป็นอากาศในห้องที่ความดันสูงกว่า ถูกดันเข้าไปทางหัวดูดต่างหาก",
+     "cue": "pressure"
+    },
+    {
+     "text": "ลมพา *เศษฝุ่น* เข้าท่อ",
+     "say": "ลมที่พุ่งเข้ามาพาเศษฝุ่นตามไปด้วย วิ่งผ่านท่อเข้าสู่ตัวเครื่อง",
+     "cue": "nozzle"
+    },
+    {
+     "text": "แบบถุง ฝุ่นติด *ในถุง* ลมซึมออก",
+     "say": "ในเครื่องแบบถุง ฝุ่นจะถูกถุงกระดาษหรือผ้าดักไว้ ส่วนอากาศซึมผ่านเนื้อถุงออกไปได้",
+     "cue": "bag"
+    },
+    {
+     "text": "ไส้กรอง ดัก *ฝุ่นละเอียด*",
+     "say": "ถัดมาคือไส้กรอง คอยดักฝุ่นละเอียดที่หลุดผ่านถุงมา ก่อนถึงพัดลม",
+     "cue": "filter"
+    },
+    {
+     "text": "ลมที่สะอาดขึ้น *ออกทางช่องลม*",
+     "say": "เมื่อผ่านพัดลมแล้ว อากาศที่สะอาดขึ้นก็ถูกปล่อยออกทางช่องลมออก",
+     "cue": "exhaust"
+    },
+    {
+     "text": "รุ่นไร้ถุงใช้ *ไซโคลน* แรงเหวี่ยงแยกฝุ่น",
+     "say": "ส่วนรุ่นไร้ถุงใช้ไซโคลน หมุนอากาศเป็นวน แรงเหวี่ยงจะเหวี่ยงฝุ่นที่หนักกว่าออกไปที่ผนัง แล้วตกลงถังเก็บฝุ่น",
+     "cue": "cyclone"
+    },
+    {
+     "text": "ค.ศ. 1901 เครื่องใหญ่จน *ต้องใช้ม้าลาก*",
+     "say": "เรื่องน่าทึ่ง เมื่อปีค.ศ. หนึ่งพันเก้าร้อยเอ็ด ฮิวเบิร์ต เซซิล บูธ สร้างเครื่องดูดฝุ่นที่ใหญ่จนเอาเข้าอาคารไม่ได้ ต้องใช้ม้าลากมาจอดข้างนอก แล้วต่อท่อยาวเข้าไปดูดข้างใน",
+     "cue": "fact"
+    },
+    {
+     "text": "เริ่มจากทดลองดูด *ผ่านผ้าเช็ดหน้า*",
+     "say": "และเขาเริ่มจากทดลองเอาผ้าเช็ดหน้ามาปิด แล้วใช้ปากดูดฝุ่นผ่านผ้า เพื่อดูว่าผ้าจะดักฝุ่นไว้ได้ไหม",
+     "cue": "fact"
+    },
+    {
+     "text": "ดูดไม่แรง เช็ก *สามจุด*",
+     "say": "ถ้าเครื่องดูดไม่แรง ลองเช็กสามจุด ถุงหรือถังฝุ่นเต็มไหม ไส้กรองตันไหม และท่อมีอะไรอุดอยู่ไหม เพราะลมผ่านไม่สะดวก แรงดูดก็ลดลง",
+     "cue": "tip"
+    },
+    {
+     "text": "ล้าง/เปลี่ยนไส้กรอง *ตามคู่มือรุ่น*",
+     "say": "ส่วนวิธีล้างหรือเปลี่ยนไส้กรอง ให้ดูตามคู่มือของรุ่นนั้นนะ",
+     "cue": "tip"
+    },
+    {
+     "text": "ชอบแบบนี้ กดติดตาม *ยังไงนะ*",
+     "say": "ชอบเรื่องของใช้ในบ้านแบบนี้ กดติดตามช่องยังไงนะ ไว้ได้เลย เดี๋ยวพาแกะดูข้างในอีกหลายอย่าง",
+     "cue": "end"
+    }
+   ]
+  }
+ ],
+ "composition": "CardShow",
+ "theme": "psychic",
+ "badge": "",
+ "series": "",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055
+}

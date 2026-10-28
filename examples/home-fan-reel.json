@@ -1,0 +1,87 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "พัดลมหมุนได้ยังไง? แกะดูมอเตอร์ข้างใน #shorts #พัดลม",
+  "description": "พัดลมใช้มอเตอร์เหนี่ยวนำ ไฟบ้านเฟสเดียวอย่างเดียวไม่ทำให้เกิดสนามหมุน ต้องมีขดลวดอีกชุดต่อผ่านตัวเก็บประจุให้กระแสนำหน้า สนามหมุนจึงดึงโรเตอร์ให้หมุนตาม แล้วใบพัดก็ดันลมไปข้างหน้า\nภาพเคลื่อนไหววาดเองทั้งหมด (แผนผังเพื่อความเข้าใจ ไม่ใช่รุ่นใดรุ่นหนึ่ง)\n\nแหล่งข้อมูล:\n- Britannica (มอเตอร์เหนี่ยวนำแบบมีตัวเก็บประจุ) https://www.britannica.com/technology/electric-motor/Capacitor-induction-motor\n- Electrical4U https://www.electrical4u.com/types-of-single-phase-induction-motor/\n- Nidec (หลักการหมุนของมอเตอร์เหนี่ยวนำ) https://www.nidec.com/en/technology/motor/basic/00026/\n- Wikipedia https://en.wikipedia.org/wiki/Induction_motor\n- สิทธิบัตร US4737701 (มอเตอร์พัดลมหลายความเร็ว) https://patents.google.com/patent/US4737701\n- Sentera (สวิตช์ 3 ระดับของพัดลม) https://sentera.eu/en/faq/g/how-to-control-ceiling-fans-with-3-speed-motor/522\n- สิทธิบัตร US1517169 (พัดลมส่าย) https://patents.google.com/patent/US1517169\n- สิทธิบัตร US2041921 (พัดลมส่าย) https://patents.google.com/patent/US2041921A/en\n- Britannica Kids (พัดลมไฟฟ้า) https://kids.britannica.com/students/article/electric-fan/274264\n- U.S. DOE (พัดลมช่วยคลายร้อน) https://webarchive.library.unt.edu/web/20161227070401/https://energy.gov/energysaver/fans-cooling\n- มหาวิทยาลัยซิดนีย์ https://sydney.edu.au/news-opinion/news/2015/11/20/study-heats-up-debate-about-electric-fans.html\n- CBE Berkeley https://cbe-berkeley.gitbook.io/thermal-comfort-tool/documentation/fans-heatwaves\n- เมืองไทยประกันชีวิต (ซ่อมพัดลม ถอดปลั๊กก่อน) https://www.muangthai.co.th/en/article/health/fix-electric-fan-not-spin\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #พัดลม #ความรู้รอบตัว #ของใช้ในบ้าน #ทำงานยังไง"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, confident, clear presenter, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "slides": [
+  {
+   "beat": "v_fan",
+   "duration": 90,
+   "no_caption": true,
+   "transition": "none",
+   "parts": [
+    {
+     "text": "เคยสงสัยไหม พัดลม *เสียบปลั๊กเข้าไฟบ้าน* แล้วหมุนได้ยังไง?",
+     "say": "เคยสงสัยไหม พัดลมที่บ้านเสียบปลั๊กเข้ากับไฟบ้านธรรมดา แล้วมอเตอร์ข้างในหมุนได้ยังไง วันนี้พาแกะดูข้างในพัดลมกัน",
+     "cue": "all"
+    },
+    {
+     "text": "มอเตอร์ = *ขดลวดอยู่กับที่* + *โรเตอร์*",
+     "say": "พัดลมทั่วไปหลายรุ่นใช้มอเตอร์เหนี่ยวนำ ข้างในมีขดลวดทองแดงที่อยู่กับที่เรียกว่าสเตเตอร์ ล้อมรอบโรเตอร์ที่ติดอยู่กับแกนใบพัด",
+     "cue": "motor"
+    },
+    {
+     "text": "ไฟบ้านเฟสเดียว สนามแม่เหล็ก *ไม่หมุน*",
+     "say": "แต่ไฟบ้านเป็นไฟกระแสสลับเฟสเดียว ถ้ามีขดลวดชุดเดียว สนามแม่เหล็กจะแค่กลับไปกลับมาในแนวเดิม ไม่หมุนวน โรเตอร์จึงไม่เริ่มหมุนเอง",
+     "cue": "single"
+    },
+    {
+     "text": "ตัวเก็บประจุทำให้กระแส *นำหน้าราว 90°*",
+     "say": "ทางแก้คือเพิ่มขดลวดอีกชุด ต่อผ่านตัวเก็บประจุ ตัวเก็บประจุทำให้กระแสขดนี้นำหน้าอีกชุดราวเก้าสิบองศา สองสนามแม่เหล็กรวมกัน กลายเป็นสนามที่หมุนวน",
+     "cue": "cap"
+    },
+    {
+     "text": "สนามหมุน → *กระแสเหนี่ยวนำ* → โรเตอร์ตาม",
+     "say": "สนามที่หมุนตัดผ่านโรเตอร์ ทำให้เกิดกระแสเหนี่ยวนำในโรเตอร์ แล้วเกิดแรงดึงให้โรเตอร์หมุนตามสนาม โดยหมุนช้ากว่าสนามเล็กน้อยเสมอ",
+     "cue": "rotor"
+    },
+    {
+     "text": "ใบพัด *เอียงเป็นมุม* ดันลมไปข้างหน้า",
+     "say": "แกนโรเตอร์พาใบพัดหมุนไปด้วย ใบพัดเอียงเป็นมุม เวลาหมุนก็ดันอากาศไปข้างหน้า",
+     "cue": "blade"
+    },
+    {
+     "text": "ปุ่มปรับแรงลม = *เลือกจุดต่อ* บนขดลวด",
+     "say": "ปุ่มเลือกความแรงลมของพัดลมหลายรุ่น เป็นสวิตช์เลือกว่าจะต่อไฟเข้าจุดไหนของขดลวด ทำให้สนามแม่เหล็กแรงไม่เท่ากัน โรเตอร์จึงหมุนช้าเร็วต่างกัน",
+     "cue": "taps"
+    },
+    {
+     "text": "ส่ายหน้า = *เฟืองตัวหนอน* + แขนหมุน",
+     "say": "ส่วนการส่ายหน้า หลายรุ่นก็ใช้แรงจากมอเตอร์ตัวเดิม เฟืองตัวหนอนทดรอบให้ช้าลง แล้วแขนหมุนก็ดันก้านต่อ ให้หัวพัดลมส่ายไปมา",
+     "cue": "osc"
+    },
+    {
+     "text": "พัดลมไม่ได้ทำให้อากาศ *เย็นลง*",
+     "say": "แล้วรู้ไหม พัดลมไม่ได้ทำให้อากาศเย็นลง แต่ลมช่วยให้เหงื่อบนผิวระเหยเร็วขึ้น พาความร้อนออกจากตัวเรา เราเลยรู้สึกเย็น",
+     "cue": "fact"
+    },
+    {
+     "text": "ไม่มีคนอยู่ *ปิดได้เลย*",
+     "say": "ดังนั้นถ้าไม่มีใครอยู่ในห้อง ปิดพัดลมได้เลย เพราะเปิดทิ้งไว้ก็ไม่ได้ทำให้ห้องเย็นขึ้น และก่อนเช็ดฝุ่นหรือซ่อม อย่าลืมถอดปลั๊กก่อนเสมอ",
+     "cue": "tip"
+    },
+    {
+     "text": "ชอบแบบนี้ กดติดตาม *ยังไงนะ*",
+     "say": "ชอบเรื่องของใช้ในบ้านแบบนี้ กดติดตามช่องยังไงนะ ไว้ได้เลย เดี๋ยวพาแกะดูข้างในอีกหลายอย่าง",
+     "cue": "end"
+    }
+   ]
+  }
+ ],
+ "composition": "CardShow",
+ "theme": "psychic",
+ "badge": "",
+ "series": "",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055
+}

@@ -6,7 +6,17 @@ import { vecFridge } from "./vecFridge";
 import { SCENES as S1 } from "./vecScenes";
 import { SCENES2 } from "./vecScenes2";
 import { SCENES3 } from "./vecScenes3";
-const SCENES: Record<string, any> = { ...S1, ...SCENES2, ...SCENES3 };
+import { SCENE_SMOKE } from "./vecHome_smoke";
+import { SCENE_HAIRDRYER } from "./vecHome_hairdryer";
+import { SCENE_INDUCTION } from "./vecHome_induction";
+import { SCENE_TOASTER } from "./vecHome_toaster";
+import { SCENE_AIRFRYER } from "./vecHome_airfryer";
+import { SCENE_FAN } from "./vecHome_fan";
+import { SCENE_VACUUM } from "./vecHome_vacuum";
+import { SCENE_LED } from "./vecHome_led";
+import { SCENE_BREAKER } from "./vecHome_breaker";
+import { SCENE_PUMP } from "./vecHome_pump";
+const SCENES: Record<string, any> = { ...S1, ...SCENES2, ...SCENES3, ...{ smoke: SCENE_SMOKE, hairdryer: SCENE_HAIRDRYER, induction: SCENE_INDUCTION, toaster: SCENE_TOASTER, airfryer: SCENE_AIRFRYER, fan: SCENE_FAN, vacuum: SCENE_VACUUM, led: SCENE_LED, breaker: SCENE_BREAKER, pump: SCENE_PUMP } };
 
 // บีต "pixel": ฉากพิกเซลตู้เย็นตัดครึ่งที่วาดด้วยโค้ด + ซับทีละคำกลางจอ
 // ภาพเดียวต่อเนื่องทั้งสไลด์ กล้องซูมไปตาม cue ของแต่ละท่อน (parts[k].cue)

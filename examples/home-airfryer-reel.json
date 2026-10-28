@@ -1,0 +1,92 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "หม้อทอดไร้น้ำมันทำให้กรอบได้ยังไง? ข้างในมีอะไร #shorts #หม้อทอดไร้น้ำมัน",
+  "description": "หม้อทอดไร้น้ำมัน (air fryer) จริงๆ คือเตาอบพัดลมลูกเล็ก: ขดลวดความร้อนด้านบน → พัดลมเป่าลมร้อนวนรอบอาหาร → ตะแกรงรูพรุน → ลมพัดไอน้ำที่ผิวทิ้ง ผิวแห้งและร้อนเร็ว → ปฏิกิริยาเมลลาร์ด ได้สีน้ำตาลทองและกลิ่นหอม ใช้น้ำมันน้อยกว่าการทอดแบบจุ่ม\nภาพเคลื่อนไหววาดเองทั้งหมด\n\nแหล่งข้อมูล:\n- https://ingenia.org.uk/articles/how-do-air-fryers-work/\n- https://www.sciencefocus.com/science/how-do-air-fryers-work\n- https://www.scienceabc.com/innovation/how-does-an-air-fryer-work\n- https://www.americastestkitchen.com/cooksillustrated/articles/7238-what-is-air-frying-ask-paul\n- https://morphyrichards.co.uk/blogs/love-your-morphy/how-does-an-air-fryer-work\n- https://instantpot.com.au/blogs/blog/how-does-an-air-fryer-work\n- https://tomsguide.com/home/how-to-use-your-new-air-fryer-7-essential-tips-for-beginners\n- https://www.tastingtable.com/1149069/the-crispy-conundrum-that-inspired-the-inventor-of-the-air-fryer\n- https://www.packagingdigest.com/packaging-design/50-years-in-the-making-how-air-fryers-are-revolutionizing-the-kitchen\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #หม้อทอดไร้น้ำมัน #airfryer #ความรู้รอบตัว #ของใช้ในบ้าน #ทำงานยังไง"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, confident, clear presenter, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "slides": [
+  {
+   "beat": "v_airfryer",
+   "duration": 90,
+   "no_caption": true,
+   "transition": "none",
+   "parts": [
+    {
+     "text": "ทำไมหม้อทอดไร้น้ำมัน ทำให้ของกรอบได้ *ทั้งที่ไม่จุ่มน้ำมัน?*",
+     "say": "ทำไมหม้อทอดไร้น้ำมัน ทำให้ของกรอบได้ ทั้งที่ไม่ได้จุ่มในน้ำมันเลย?",
+     "cue": "all"
+    },
+    {
+     "text": "จริงๆ ไม่ได้ทอด แต่เป็น *เตาอบพัดลมลูกเล็ก*",
+     "say": "ความจริงคือ มันไม่ได้ทอดเลยนะ แต่เป็นเตาอบพัดลมลูกเล็กๆ ที่วางบนเคาน์เตอร์ครัว ห้องเล็กกว่าเตาอบทั่วไปมาก ความร้อนจึงขึ้นเร็ว",
+     "cue": "inside"
+    },
+    {
+     "text": "ตั้งเวลา-อุณหภูมิ ไฟวิ่งเข้า *ขดลวด*",
+     "say": "เริ่มจากตั้งเวลากับอุณหภูมิที่ปุ่มด้านหน้า แล้วไฟฟ้าก็วิ่งเข้าสู่ขดลวดความร้อนด้านในเครื่อง",
+     "cue": "set"
+    },
+    {
+     "text": "ขดลวดด้านบนร้อนแดง ราว *200 องศา*",
+     "say": "ขดลวดอยู่ด้านบนของเครื่อง มันร้อนแดง แล้วปล่อยความร้อนลงมาในห้องเล็กๆ จนอากาศร้อนจัด หลายรุ่นไปถึงราวสองร้อยองศาเซลเซียส",
+     "cue": "element"
+    },
+    {
+     "text": "พัดลมเป่าลมร้อนให้ *วนรอบอาหาร*",
+     "say": "ใกล้ๆ กันมีพัดลมแรงสูง คอยเป่าอากาศร้อนให้วนรอบอาหารตลอดเวลา ความร้อนจึงทั่วถึงและไวกว่าเตาอบทั่วไป",
+     "cue": "fan"
+    },
+    {
+     "text": "ตะแกรง *รูพรุน* ลมผ่านรอบด้าน",
+     "say": "อาหารที่ทาน้ำมันบางๆ วางอยู่บนตะแกรงรูพรุน ลมร้อนจึงลอดผ่านได้ทั้งด้านบน ด้านข้าง และด้านล่าง",
+     "cue": "basket"
+    },
+    {
+     "text": "ลมแรง *พัดไอน้ำ* ที่ผิวทิ้ง",
+     "say": "ปกติผิวอาหารจะมีไอน้ำเคลือบอยู่บางๆ ทำให้แห้งช้า แต่ลมแรงจะพัดไอน้ำนั้นทิ้งไป ผิวจึงแห้งและร้อนเร็วขึ้น",
+     "cue": "dry"
+    },
+    {
+     "text": "น้ำตาล+โปรตีน = *ปฏิกิริยาเมลลาร์ด*",
+     "say": "พอผิวแห้งและร้อนจัด น้ำตาลกับโปรตีนในอาหารก็ทำปฏิกิริยากัน เรียกว่าปฏิกิริยาเมลลาร์ด ได้สีน้ำตาลทองกับกลิ่นหอมที่เราชอบ",
+     "cue": "maillard"
+    },
+    {
+     "text": "น้ำมัน *น้อยกว่า* ทอดแบบจุ่ม",
+     "say": "ส่วนน้ำมัน ใช้น้อยกว่าการทอดแบบจุ่มมาก แต่ก็ไม่ได้แปลว่าไม่ใช้เลย เพราะน้ำมันบางๆ ช่วยให้เหลืองกรอบ และตัวอาหารก็ยังเป็นอาหารชนิดเดิมนะ",
+     "cue": "oil"
+    },
+    {
+     "text": "ต้นแบบเปิดตัวที่ *เบอร์ลิน ปี 2010*",
+     "say": "เรื่องที่หลายคนไม่รู้ ต้นแบบหม้อทอดไร้น้ำมันเป็นผลงานของนักประดิษฐ์ชาวดัตช์ และถูกเปิดตัวในงานแสดงสินค้าที่เบอร์ลิน เมื่อปีสองพันสิบ นี่เอง",
+     "cue": "fact"
+    },
+    {
+     "text": "อย่า *ใส่แน่น* เกินไป",
+     "say": "เคล็ดลับคือ อย่าใส่อาหารแน่นตะแกรง เพราะจะบังทางลม อาจสุกไม่เท่ากันและไม่กรอบ ถ้าของเยอะ ให้แบ่งทำทีละรอบ",
+     "cue": "tip"
+    },
+    {
+     "text": "ติดตาม *ยังไงนะ* ไว้เลย",
+     "say": "ชอบแบบนี้ กดติดตามช่องยังไงนะ ไว้ได้เลย เดี๋ยวจะพาดูข้างในของใช้ในบ้านอีกหลายอย่าง",
+     "cue": "end"
+    }
+   ]
+  }
+ ],
+ "composition": "CardShow",
+ "theme": "psychic",
+ "badge": "",
+ "series": "",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055
+}

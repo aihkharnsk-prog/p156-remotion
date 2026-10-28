@@ -1,0 +1,87 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "หลอดไฟ LED เปล่งแสงได้ไง? แกะดูข้างใน #shorts #หลอดLED",
+  "description": "หลอดไฟ LED ไม่มีไส้หลอดร้อนแดง ไดรเวอร์แปลงไฟสลับเป็นไฟตรง ชิปเปล่งแสงเมื่ออิเล็กตรอนรวมกับโฮลที่รอยต่อ p-n สารเรืองแสงเปลี่ยนแสงน้ำเงินบางส่วนเป็นเหลืองจนเห็นเป็นสีขาว และฮีตซิงก์พาความร้อนออก\nภาพเคลื่อนไหววาดเองทั้งหมด (ภาพแผนผัง ไม่ใช่รุ่นใดรุ่นหนึ่ง)\n\nแหล่งข้อมูล:\n- สถาบันโนเบล (ประกาศรางวัลฟิสิกส์ 2014) https://www.nobelprize.org/prizes/physics/2014/\n- ScienceDaily (ข่าวราชบัณฑิตยสภาวิทยาศาสตร์สวีเดน) https://sciencedaily.com/releases/2014/10/141007071741.htm\n- Laser Focus World https://www.laserfocusworld.com/articles/2014/10/shuji-nakamura-two-others-receive-nobel-prize-for-inventing-gan-based-blue-leds.html\n- Nippon.com https://www.nippon.com/en/genre/sci-tech/l00069/\n- Lighting Research Center (RPI) https://www.lrc.rpi.edu/programs/NLPIP/lightingAnswers/pdf/print/LED.pdf\n- US DOE (Thermal Management of White LEDs) https://www1.eere.energy.gov/buildings/publications/pdfs/ssl/thermal_led_feb07_2.pdf\n- US DOE (Solid-State Lighting overview) https://www1.eere.energy.gov/buildings/publications/pdfs/ssl/ssl-overview_brochure_feb2013.pdf\n- Engineering LibreTexts https://eng.libretexts.org/Bookshelves/Materials_Science/Supplemental_Modules_(Materials_Science)/Semiconductors/Light_Emitting_Diodes\n- RS https://uk.rs-online.com/web/content/discovery/ideas-and-advice/led-drivers-guide\n- Dasenic https://www.dasenic.com/blog/knowledgeHub/what-is-an-electronic-led-driver-how-much-do-you-know\n- Connected (heat) https://connectedmag.com.au/?p=13789\n- How-To Geek https://www.howtogeek.com/855424/do-led-bulbs-burn-out/\n- 1000Bulbs https://blog.1000bulbs.com/home/how-to-choose-bulbs-for-enclosed-fixtures\n- Buildings.com https://www.buildings.com/home/article/55259298/led-lamp-life-expectancy-depends-on-fixture-type-and-usage-scenario\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #หลอดLED #ความรู้รอบตัว #ของใช้ในบ้าน #ทำงานยังไง"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, confident, clear presenter, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "slides": [
+  {
+   "beat": "v_led",
+   "duration": 90,
+   "no_caption": true,
+   "transition": "none",
+   "parts": [
+    {
+     "text": "หลอดไฟ LED ไม่มีไส้หลอดร้อนแดง แล้ว *แสงมาจากไหน*?",
+     "say": "หลอดไฟแอลอีดี ไม่มีไส้หลอดที่ร้อนจนเรืองแสง แล้วแสงสว่างๆ นี้ มาจากไหนกัน?",
+     "cue": "all"
+    },
+    {
+     "text": "แกะดู *สี่ส่วนหลัก*",
+     "say": "แกะดูหลอดทั่วไป จะมีสี่ส่วนหลักๆ ไดรเวอร์ ชิปเปล่งแสง สารเรืองแสง และตัวระบายความร้อน มาดูตามลำดับที่ไฟไหลผ่าน",
+     "cue": "parts"
+    },
+    {
+     "text": "ไฟบ้านเป็น *ไฟสลับ*",
+     "say": "เริ่มจากไดรเวอร์ในตัวหลอด ไฟบ้านเป็นไฟกระแสสลับ ที่กลับทิศไปมา แต่ชิปแอลอีดีต้องใช้ไฟกระแสตรง",
+     "cue": "driver"
+    },
+    {
+     "text": "ไดรเวอร์แปลงเป็น *ไฟตรง*",
+     "say": "ไดรเวอร์จึงแปลงไฟสลับให้เป็นไฟตรง และคอยควบคุมกระแสที่ไหลผ่านชิป",
+     "cue": "driver"
+    },
+    {
+     "text": "ชิปคือ *สารกึ่งตัวนำ* สองชนิดต่อกัน",
+     "say": "ต่อมาคือชิปเปล่งแสง ทำจากสารกึ่งตัวนำสองชนิดต่อกัน ด้านเอ็นมีอิเล็กตรอนมาก ด้านพีมีที่ว่างให้อิเล็กตรอน เรียกว่าโฮล",
+     "cue": "junction"
+    },
+    {
+     "text": "อิเล็กตรอนเจอโฮล ปล่อย *แสง*",
+     "say": "พอไฟตรงไหลเข้ามา อิเล็กตรอนกับโฮลถูกดันให้มาเจอกันที่รอยต่อ แล้วรวมกัน พลังงานที่เหลือถูกปล่อยออกมาเป็นอนุภาคแสง เรียกว่าโฟตอน",
+     "cue": "photon"
+    },
+    {
+     "text": "ชิปให้แค่ *สีน้ำเงิน*",
+     "say": "แต่ชิปของหลอดสีขาวให้แสงสีน้ำเงิน จึงเคลือบสารเรืองแสงสีเหลืองไว้ มันดูดแสงน้ำเงินบางส่วน แล้วปล่อยออกมาเป็นสีเหลือง พอผสมกับแสงน้ำเงินที่เหลือ ตาเราเห็นเป็นสีขาว",
+     "cue": "phosphor"
+    },
+    {
+     "text": "ความร้อนไปที่ *ฮีตซิงก์*",
+     "say": "แต่หลอดแอลอีดีก็ร้อนนะ ตามรายงานของกระทรวงพลังงานสหรัฐฯ ไฟที่ใช้ ราวสามในสี่กลายเป็นความร้อน ต้องนำออกจากชิปไปที่ฮีตซิงก์ ซึ่งมักมีครีบเพิ่มพื้นที่ผิว",
+     "cue": "heat"
+    },
+    {
+     "text": "สีน้ำเงิน *ใช้เวลาราว 30 ปี*",
+     "say": "เรื่องน่าทึ่งคือ แอลอีดีสีแดงกับสีเขียวมีมานานแล้ว แต่ไม่มีสีน้ำเงิน ก็ทำหลอดสีขาวไม่ได้ นักวิจัยพยายามอยู่ราวสามสิบปี จนนักวิจัยสามคนทำสำเร็จ และได้รางวัลโนเบลสาขาฟิสิกส์ ปีคริสต์ศักราชสองพันสิบสี่",
+     "cue": "fact"
+    },
+    {
+     "text": "ระวัง *โคมปิดมิด*",
+     "say": "เคล็ดลับ ความร้อนสะสมทำให้วงจรในหลอดเสียเร็วกว่าปกติ ถ้าจะใส่ในโคมที่ปิดมิด ให้ดูข้างกล่องว่าระบุว่าใช้กับโคมปิดได้",
+     "cue": "tip"
+    },
+    {
+     "text": "ชอบแบบนี้ กดติดตาม *ยังไงนะ*",
+     "say": "ชอบเรื่องของใช้ในบ้านแบบนี้ กดติดตามช่องยังไงนะ ไว้ได้เลย เดี๋ยวพาแกะดูข้างในอีกหลายอย่าง",
+     "cue": "end"
+    }
+   ]
+  }
+ ],
+ "composition": "CardShow",
+ "theme": "psychic",
+ "badge": "",
+ "series": "",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055
+}

@@ -1,0 +1,92 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "ปั๊มน้ำที่บ้านรู้ได้ไงว่าต้องเดินหรือหยุด? แกะดูข้างใน #shorts #ปั๊มน้ำ",
+  "description": "ปั๊มน้ำถังแรงดัน ใบพัดเหวี่ยงน้ำเข้าถังที่มีลมอัดกั้นด้วยแผ่นยาง พอแรงดันถึงค่าตัดออก สวิตช์แรงดันก็ตัดไฟ พอเปิดก๊อกแรงดันตกถึงค่าตัดเข้า ปั๊มก็เริ่มเดินใหม่ มีวาล์วกันกลับกันน้ำไหลย้อน\nภาพเคลื่อนไหววาดเองทั้งหมด (แผนผังย่อ ไม่ใช่รุ่นใดรุ่นหนึ่ง ค่าแรงดันเป็นตัวอย่าง)\n\nแหล่งข้อมูล:\n- Clemson HGIC https://hgic.clemson.edu/factsheet/residential-drinking-water-well-well-components-1st-in-series/\n- Fresh Water Systems (ถังแรงดัน) https://www.freshwatersystems.com/blogs/blog/how-to-check-your-well-tanks-pressure\n- Fresh Water Systems (ปัญหาถัง/วาล์วกันกลับ) https://www.freshwatersystems.com/blogs/blog/well-pressure-tank-problems-and-how-to-fix-them\n- Pentair Sta-Rite คู่มือถัง https://www.pentair.com/content/dam/extranet/web/nam/sta-rite/manuals/psp973-prosource-plus-steel-pressure-tanks-iom.pdf\n- InspectApedia https://inspectapedia.com/water/Water_Tanks.php\n- InspectApedia (ลมล่วงหน้า) https://inspectapedia.com/water/Water-Tank-Bladder-Pressure-Adjustment-FAQs.php\n- Boshart https://support.boshart.com/adjusting-the-pre-charge-pressure-of-a-captive-air-bladder-or-diaphragm-type-tank\n- Watson-Marlow (ปั๊มหอยโข่ง) https://www.watson-marlow.com/en/support/pump-principles/centrifugal-pumps/\n- The Engineering Mindset https://theengineeringmindset.com/?p=6933\n- Wikipedia: Volute (pump) https://en.wikipedia.org/wiki/Volute_(pump)\n- Private Well Class https://intercom.help/privatewellclassorg/en/articles/8926795-how-does-my-private-well-system-work\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #ปั๊มน้ำ #ความรู้รอบตัว #ของใช้ในบ้าน #ทำงานยังไง"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, confident, clear presenter, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "slides": [
+  {
+   "beat": "v_pump",
+   "duration": 90,
+   "no_caption": true,
+   "transition": "none",
+   "parts": [
+    {
+     "text": "เปิดก๊อกน้ำปุ๊บ น้ำพุ่งมาทันที แต่ปั๊มน้ำที่บ้าน *ไม่ได้เดินตลอด*",
+     "say": "เปิดก๊อกปุ๊บ น้ำก็ไหลมาทันที แต่ปั๊มน้ำที่บ้านไม่ได้เดินตลอดเวลา แล้วมันรู้ได้ยังไงว่าเมื่อไหร่ต้องเดิน เมื่อไหร่ต้องหยุด วันนี้แกะดูข้างในกัน",
+     "cue": "all"
+    },
+    {
+     "text": "หัวใจคือ *ใบพัด* หมุนเหวี่ยงน้ำออก",
+     "say": "หัวใจของมันคือใบพัด มอเตอร์หมุนใบพัดเร็วๆ น้ำที่เข้ามาตรงกลาง ก็ถูกเหวี่ยงออกไปด้านนอกด้วยแรงเหวี่ยงหนีศูนย์กลาง",
+     "cue": "impeller"
+    },
+    {
+     "text": "เปลือก *ก้นหอย* รวบน้ำส่งเข้าท่อ",
+     "say": "น้ำที่หลุดออกจากใบพัดมีความเร็วสูง วิ่งเข้าห้องรูปก้นหอย ซึ่งค่อยๆ กว้างขึ้นไปทางท่อออก คอยรวบน้ำส่งเข้าท่อ",
+     "cue": "volute"
+    },
+    {
+     "text": "น้ำเข้า *ถังแรงดัน* ลมถูกอัด",
+     "say": "น้ำถูกส่งเข้าถังแรงดัน ข้างในมีลมอยู่ ถูกกั้นจากน้ำด้วยแผ่นยางหรือถุงยาง พอน้ำไหลเข้ามา ลมก็ถูกอัดให้แน่นขึ้น แรงดันจึงสูงขึ้น",
+     "cue": "tank"
+    },
+    {
+     "text": "ถึงค่าตัดออก *สวิตช์ตัดไฟ*",
+     "say": "ตัวคุมคือสวิตช์แรงดัน พอแรงดันขึ้นถึงค่าตัดออกที่ตั้งไว้ มันก็ตัดไฟมอเตอร์ ปั๊มหยุด ตัวอย่างที่พบบ่อยคือสามสิบถึงห้าสิบปอนด์ต่อตารางนิ้ว",
+     "cue": "switch"
+    },
+    {
+     "text": "*วาล์วกันกลับ* กันน้ำไหลย้อน",
+     "say": "พอปั๊มหยุด วาล์วกันกลับจะปิด ไม่ให้น้ำไหลย้อนกลับลงบ่อ น้ำที่อยู่ในระบบก็เลยไม่ไหลกลับ",
+     "cue": "check"
+    },
+    {
+     "text": "เปิดก๊อก *ลมที่ถูกอัด* ดันน้ำออก",
+     "say": "ทีนี้เปิดก๊อก ตอนปั๊มหยุดอยู่ ลมที่ถูกอัดไว้ในถังจะดันน้ำออกไป แรงดันจึงค่อยๆ ลดลง",
+     "cue": "tap"
+    },
+    {
+     "text": "แรงดันตกถึงค่าตัดเข้า *ปั๊มเดินอีกครั้ง*",
+     "say": "พอแรงดันตกลงถึงค่าตัดเข้า สวิตช์ก็ต่อไฟ ปั๊มก็เริ่มเดินอีกครั้ง",
+     "cue": "cutin"
+    },
+    {
+     "text": "วนแบบนี้ ปั๊ม *สตาร์ตน้อยลง*",
+     "say": "วนแบบนี้ไปเรื่อยๆ ถังแรงดันทำให้ปั๊มไม่ต้องสตาร์ตทุกครั้งที่เปิดก๊อก ช่วยลดจำนวนครั้งที่ปั๊มเปิดปิด และถนอมอายุปั๊มได้",
+     "cue": "cycle"
+    },
+    {
+     "text": "ถังมีวาล์วเติมลม *แบบเดียวกับยางรถ*",
+     "say": "เรื่องที่หลายคนไม่รู้ ถังแรงดันมีวาล์วเติมลมแบบเดียวกับยางรถยนต์ เพราะลมในถังต้องเติมไว้ล่วงหน้า",
+     "cue": "fact"
+    },
+    {
+     "text": "เช็กลม: *ปิดไฟ ระบายน้ำให้หมด* ก่อนวัด",
+     "say": "ถ้าจะเช็กลมในถัง ให้ปิดไฟปั๊ม ระบายน้ำจากถังจนหมด แล้วค่อยวัดที่วาล์ว ลมล่วงหน้ามักตั้งต่ำกว่าค่าตัดเข้าราวสองปอนด์ ตามคู่มือหลายแห่ง แต่ให้ยึดคู่มือถังของคุณเป็นหลัก",
+     "cue": "tip"
+    },
+    {
+     "text": "ชอบแบบนี้ กดติดตาม *ยังไงนะ*",
+     "say": "ชอบแบบนี้ กดติดตามช่องยังไงนะ ไว้ได้เลย เดี๋ยวพาแกะของใช้ในบ้านดูข้างในอีกหลายอย่าง",
+     "cue": "end"
+    }
+   ]
+  }
+ ],
+ "composition": "CardShow",
+ "theme": "psychic",
+ "badge": "",
+ "series": "",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055
+}
