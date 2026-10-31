@@ -5,10 +5,10 @@
  "tts": {
   "voice_id": "bTEswxYhpv7UDkQg5VRu",
   "model_id": "eleven_v4",
-  "stability": 0.35,
-  "speed": 1.05,
+  "stability": 0.5,
+  "speed": 1.04,
   "mode": "per_part",
-  "prefix": "[mellow, soft and smooth, friendly, lightly upbeat, unhurried]"
+  "prefix": "[upbeat, confident, clear sports presenter, lively but not shouting]"
  },
  "audio_rate": 1.0,
  "caption_style": "reel",
