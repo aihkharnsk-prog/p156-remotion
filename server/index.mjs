@@ -1272,7 +1272,8 @@ app.post("/render-files", auth, async (req, res) => {
 // บีบอัดคลิปยาวให้เล็กพอส่งเข้า Make: POST /compress {job, mb?:85} -> /videos/<job>-yt.mp4 (ทำเบื้องหลัง ดูผลใน log)
 app.post("/compress", auth, async (req, res) => {
   const job = String(req.body?.job || "");
-  const mb = Math.max(20, Math.min(200, Number(req.body?.mb) || 85));
+  const mb = Math.max(20, Math.min(400, Number(req.body?.mb) || 85));
+  const hd = Number(req.body?.h) === 1080;
   if (!/^[0-9a-f-]{36}$/.test(job)) return res.status(400).json({ error: "bad job id" });
   const src = path.join(OUT_DIR, `${job}.mp4`);
   const dest = path.join(OUT_DIR, `${job}-yt.mp4`);
@@ -1282,7 +1283,7 @@ app.post("/compress", auth, async (req, res) => {
     const { stdout } = await execFileP("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", src], { timeout: 30000 });
     const dur = Number(String(stdout).trim());
     const vk = Math.max(150, Math.floor((mb * 8192) / dur - 64));
-    await execFileP("ffmpeg", ["-y", "-v", "error", "-i", src, "-vf", "scale=1280:720", "-c:v", "libx264", "-preset", "veryfast", "-tune", "stillimage", "-b:v", `${vk}k`, "-maxrate", `${Math.floor(vk * 1.6)}k`, "-bufsize", `${vk * 2}k`, "-c:a", "aac", "-b:a", "64k", "-movflags", "+faststart", dest], { timeout: 3000000, maxBuffer: 1 << 24 });
+    await execFileP("ffmpeg", ["-y", "-v", "error", "-i", src, "-vf", hd ? "scale=1920:1080" : "scale=1280:720", "-c:v", "libx264", "-preset", "veryfast", "-tune", "stillimage", "-b:v", `${vk}k`, "-maxrate", `${Math.floor(vk * 1.6)}k`, "-bufsize", `${vk * 2}k`, "-c:a", "aac", "-b:a", "64k", "-movflags", "+faststart", dest], { timeout: 3000000, maxBuffer: 1 << 24 });
     const st = await fs.stat(dest);
     console.log(`[compress] done ${job}-yt.mp4 ${(st.size / 1048576).toFixed(1)} MB (video ${vk}k, ${dur.toFixed(0)}s)`);
   } catch (e) {
