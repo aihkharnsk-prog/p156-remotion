@@ -1,0 +1,102 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "ทำไมกระติกน้ำสุญญากาศ เก็บร้อนเก็บเย็นได้นาน? #shorts #กระติกน้ำสุญญากาศ",
+  "description": "กระติกน้ำสุญญากาศเก็บร้อนเก็บเย็นได้นานเพราะผนังสองชั้นที่มีช่องสุญญากาศคั่น กั้นการนำความร้อนและการพาความร้อน ส่วนผิวเงาวาวช่วยสะท้อนรังสีความร้อน แต่บริเวณคอและฝายังเป็นจุดที่ความร้อนหนีได้ เจมส์ ดิวอร์ คิดขวดแบบนี้ขึ้นในปี 1892 เพื่อเก็บก๊าซเหลวในห้องทดลอง\nภาพเคลื่อนไหววาดเองทั้งหมด\n\nแหล่งข้อมูล:\n- https://en.wikipedia.org/wiki/Vacuum_flask\n- https://www.scienceabc.com/innovation/thermos-flask-keep-hot-things-hot-cold-things-cold.html\n- https://rigb.org/node/3131\n- https://kids.britannica.com/students/article/thermos-bottle/338300\n- https://hackaday.com/2021/10/21/the-incredible-tech-of-the-vacuum-seal-flask\n- https://www.agnirva.com/learn/what-is-the-principle-of-a-thermos-flask%3F\n- https://www.lurch.de/en/Guide/Double-wall-insulation/\n- https://thermos.com/blogs/news/how-to-keep-food-hot-in-a-thermos%C2%AE-food-jar-including-the-preheat-trick-that-makes-all-the-difference\n- https://www.foodrepublic.com/1439383/hot-water-hack-thermos/\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #กระติกน้ำสุญญากาศ #ความรู้รอบตัว #ของใช้ในบ้าน #ทำงานยังไง"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, confident, clear presenter, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "slides": [
+  {
+   "beat": "v_flask",
+   "duration": 90,
+   "no_caption": true,
+   "transition": "none",
+   "parts": [
+    {
+     "text": "*ร้อนนาน* ได้ไงนะ?",
+     "say": "ทำไมกระติกน้ำสุญญากาศ เก็บน้ำร้อนไว้ได้นาน แถมเก็บน้ำเย็นได้ด้วย ทั้งที่ไม่มีเครื่องทำความร้อนอยู่ข้างในเลย?",
+     "cue": "all"
+    },
+    {
+     "text": "ขวดธรรมดา *ร้อนหนี*",
+     "say": "ความร้อนเดินทางจากที่ร้อนไปหาที่เย็นเสมอ ขวดธรรมดาผนังชั้นเดียว ความร้อนจึงหนีออกไปได้ง่าย น้ำเลยเย็นเร็ว",
+     "cue": "plain"
+    },
+    {
+     "text": "*นำ* ความร้อนผ่านผนัง",
+     "say": "ความร้อนเดินทางได้สามแบบ แบบแรกคือการนำ ส่งต่อผ่านตัววัตถุ เหมือนช้อนโลหะที่ร้อนขึ้นในน้ำร้อน",
+     "cue": "plain"
+    },
+    {
+     "text": "ลมอุ่น *พาความร้อน*",
+     "say": "แบบที่สองคือการพา อากาศที่ร้อนจะลอยขึ้น พาความร้อนไปด้วย",
+     "cue": "plain"
+    },
+    {
+     "text": "ผนัง *สองชั้น* มีช่อง",
+     "say": "กระติกแก้ด้วยผนังสองชั้น มีช่องว่างคั่นตรงกลาง",
+     "cue": "walls"
+    },
+    {
+     "text": "*สุญญากาศ* กั้นการนำ",
+     "say": "ช่องนั้นถูกดูดอากาศออกจนเกือบหมด เรียกว่าสุญญากาศ ไม่มีอากาศ ความร้อนก็ส่งต่อข้ามไปไม่ได้",
+     "cue": "vacuum"
+    },
+    {
+     "text": "ไม่มีอากาศ *ไม่มีลม*",
+     "say": "และเมื่อไม่มีอากาศให้ลอยวน ก็ไม่มีลมพาความร้อนออกไปด้วย",
+     "cue": "vacuum"
+    },
+    {
+     "text": "ผิว *เงา* สะท้อนรังสี",
+     "say": "แบบที่สามคือการแผ่รังสีอินฟราเรด ซึ่งผ่านสุญญากาศได้ ผนังจึงมีผิวเงาวาว คอยสะท้อนรังสีกลับเข้าไป",
+     "cue": "shine"
+    },
+    {
+     "text": "คอกับฝา *จุดอ่อน*",
+     "say": "แต่ยังมีจุดอ่อน คือคอและปากขวด เพราะตรงนั้นไม่มีสุญญากาศ ความร้อนส่วนใหญ่ที่ยังหนีได้ จึงหนีทางนี้",
+     "cue": "lid"
+    },
+    {
+     "text": "ฝา *ปิดสนิท*",
+     "say": "ฝาจึงต้องปิดให้สนิท กันลมพาความร้อนออกทางปากขวด",
+     "cue": "lid"
+    },
+    {
+     "text": "เก็บ *เย็น* ได้ด้วย",
+     "say": "หลักการเดียวกันใช้กับของเย็นได้ด้วย เพราะกระติกแค่ชะลอการถ่ายเทความร้อน ความร้อนข้างนอกเข้ายาก ของเย็นก็เย็นได้นาน",
+     "cue": "cold"
+    },
+    {
+     "text": "ดิวอร์ *ปี 1892*",
+     "say": "เรื่องน่ารู้ ปีหนึ่งพันแปดร้อยเก้าสิบสอง เจมส์ ดิวอร์ ชาวสกอต คิดขวดแบบนี้ไว้เก็บก๊าซเหลวในห้องทดลอง และไม่เคยจดสิทธิบัตร",
+     "cue": "fact"
+    },
+    {
+     "text": "*อุ่น* ก่อนใส่น้ำร้อน",
+     "say": "เคล็ดลับ เทน้ำร้อนใส่กระติกทิ้งไว้สักพักแล้วเทออกก่อน ผนังด้านในจะไม่ดูดความร้อนของเครื่องดื่มไปตอนแรก ของเย็นก็ใช้น้ำเย็นแช่ก่อน",
+     "cue": "tip"
+    },
+    {
+     "text": "ติดตาม *ยังไงนะ*",
+     "say": "ชอบเรื่องของใช้ในบ้านแบบนี้ กดติดตามช่องยังไงนะ ไว้ได้เลย เดี๋ยวจะพาดูข้างในของอีกหลายอย่าง",
+     "cue": "all"
+    }
+   ]
+  }
+ ],
+ "composition": "CardShow",
+ "theme": "psychic",
+ "badge": "",
+ "series": "",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055
+}
