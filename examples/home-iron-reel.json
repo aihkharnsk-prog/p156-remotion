@@ -1,0 +1,102 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "เตารีดไอน้ำทำงานยังไง ถึงร้อนพอดีแล้วตัดไฟเองได้? #shorts #เตารีด",
+  "description": "เตารีดไอน้ำร้อนถึงระดับที่ตั้งแล้วหยุดร้อนเองได้ เพราะแผ่นโลหะสองชั้นในตัวคุมอุณหภูมิโก่งงอแล้วตัดไฟ ส่วนไอน้ำมาจากน้ำที่หยดผ่านวาล์วลงบนแผ่นฐานที่ร้อนจนกลายเป็นไอ: ขดลวด → แผ่นฐานร้อน → แผ่นโลหะสองชั้นตัดต่อไฟ → ถังน้ำ → วาล์วหยดน้ำ → ไอน้ำพ่นออกรู\nภาพเคลื่อนไหววาดเองทั้งหมด\n\nแหล่งข้อมูล:\n- https://www.scienceabc.com/innovation/iron-automatic-temperature-regulation-control-thermostat-heating-element-bimetallic-strip\n- https://www.etechnophiles.com/?p=1958\n- https://wiki.dronebotworkshop.com/wiki/how-does-an-electric-iron-work.html\n- https://patents.justia.com/patent/3983644\n- https://patents.google.com/patent/US6115949\n- https://www.storeboard.com/blogs/electronics/steam-irons-how-they-work/927494\n- https://russellhobbs-dev.syncrony.com/media/usermanuals/12659-RH-Steam-iron.pdf\n- https://www.documents.philips.com/assets/20210424/98d6acc1e29a49a3a08cad14001fb204.pdf\n- https://en.wikipedia.org/wiki/Clothes_iron\n- https://nationalmaglab.org/magnet-academy/history-of-electricity-magnetism/museum/smoothing-iron-1882/\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #เตารีด #ความรู้รอบตัว #ของใช้ในบ้าน #ทำงานยังไง"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, confident, clear presenter, lively but not shouting]"
+ },
+ "audio_rate": 1,
+ "slides": [
+  {
+   "beat": "v_iron",
+   "duration": 90,
+   "no_caption": true,
+   "transition": "none",
+   "parts": [
+    {
+     "text": "เตารีด *ร้อนพอดี* ได้ไง?",
+     "say": "เตารีดเสียบปลั๊กทิ้งไว้ ทำไมร้อนแค่ระดับที่ตั้ง แล้วหยุดร้อนเองได้ และไอน้ำมาจากไหน?",
+     "cue": "all"
+    },
+    {
+     "text": "ข้างใน มี *สามส่วน*",
+     "say": "ข้างในมีสามส่วน คือขดลวดความร้อน ตัวคุมอุณหภูมิ และถังน้ำพร้อมวาล์วหยดน้ำ",
+     "cue": "parts"
+    },
+    {
+     "text": "ไฟไหล *ขดลวด* ร้อน",
+     "say": "ไฟฟ้าไหลเข้าขดลวดความร้อน ซึ่งมักเป็นนิกเกิลโครเมียม ต้านกระแสไฟสูง กระแสไฟจึงกลายเป็นความร้อน ให้แผ่นฐานร้อนขึ้น",
+     "cue": "heat"
+    },
+    {
+     "text": "แผ่นโลหะ *สองชั้น*",
+     "say": "ถ้าร้อนไม่หยุดก็ร้อนเกิน เลยมีแผ่นโลหะสองชนิดประกบกัน ขยายตัวไม่เท่ากัน ตอนเย็นแตะหน้าสัมผัส ไฟไหลได้ พอร้อนถึงที่ตั้ง แผ่นก็โก่ง หน้าสัมผัสแยก ไฟก็ถูกตัด",
+     "cue": "bimetal"
+    },
+    {
+     "text": "เย็นลง *ไฟกลับมา*",
+     "say": "ไม่มีไฟ ขดลวดก็หยุดร้อน แผ่นฐานเย็นลง แผ่นโลหะค่อยๆ ตรงกลับ หน้าสัมผัสแตะกันอีก ไฟก็ไหลใหม่ วนไปเรื่อยๆ อุณหภูมิเลยคงที่",
+     "cue": "cool"
+    },
+    {
+     "text": "ปุ่มขยับ *หน้าสัมผัส*",
+     "say": "แล้วปุ่มปรับอุณหภูมิทำอะไร? มันไม่ได้ปรับขดลวด แต่ขยับหน้าสัมผัส ว่าแผ่นโลหะต้องโก่งแค่ไหนถึงแยกออก ตั้งสูงก็ต้องร้อนกว่าจะตัดไฟ",
+     "cue": "dial"
+    },
+    {
+     "text": "ถังน้ำ *เก็บน้ำ*",
+     "say": "ส่วนไอน้ำ น้ำในถังด้านบนจะไหลลงมาทางช่องเล็กๆ ทีละนิด",
+     "cue": "tank"
+    },
+    {
+     "text": "วาล์ว *หยดน้ำ*",
+     "say": "ทางออกของถังมีวาล์วหยดน้ำ คุมว่าให้หยดเร็วหรือช้า ลงบนห้องไอน้ำร้อนๆ ในแผ่นฐาน",
+     "cue": "valve"
+    },
+    {
+     "text": "น้ำ *กลายเป็นไอ*",
+     "say": "น้ำที่ตกบนแผ่นฐานร้อนจัด กลายเป็นไอแทบทันที ไหลผ่านช่องเล็กๆ แล้วพ่นออกทางรูใต้เตารีด",
+     "cue": "steam"
+    },
+    {
+     "text": "ไอน้ำ *คลายเส้นใย*",
+     "say": "ความร้อนกับไอน้ำทำให้เส้นใยผ้าคลายตัว แผ่นฐานกดผ่านไป รอยยับก็เรียบ",
+     "cue": "fabric"
+    },
+    {
+     "text": "ปี *1882* ยังไม่มีตัวคุม",
+     "say": "เกร็ดน่ารู้ เตารีดไฟฟ้าได้สิทธิบัตรครั้งแรกปีหนึ่งพันแปดร้อยแปดสิบสอง แต่เตารีดที่คุมอุณหภูมิเองได้ เริ่มมีราวทศวรรษหนึ่งพันเก้าร้อยยี่สิบ",
+     "cue": "fact"
+    },
+    {
+     "text": "หมุนแล้ว *รอไฟดับ*",
+     "say": "เคล็ดลับ หมุนปุ่มแล้วต้องรอให้แผ่นฐานร้อนถึงระดับนั้นก่อน ถ้ามีไฟสัญญาณ รอไฟดับค่อยรีด",
+     "cue": "tip"
+    },
+    {
+     "text": "ตั้งตาม *ป้ายผ้า*",
+     "say": "และตั้งตามป้ายบนผ้า ตั้งต่ำเกินไป เตารีดไอน้ำหลายรุ่นจะมีน้ำหยดลงผ้าแทนไอ เพราะแผ่นฐานไม่ร้อนพอ",
+     "cue": "label"
+    },
+    {
+     "text": "ติดตาม *ยังไงนะ* ดูข้างในอีก",
+     "say": "ชอบเรื่องของใช้ในบ้านแบบนี้ กดติดตามช่องยังไงนะ ไว้ได้เลย เดี๋ยวจะพาดูข้างในของอีกหลายอย่าง",
+     "cue": "all"
+    }
+   ]
+  }
+ ],
+ "composition": "CardShow",
+ "theme": "psychic",
+ "badge": "",
+ "series": "",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055
+}
