@@ -64,9 +64,8 @@ export type Beat =
   | "v_mic"
   | "v_chopper"
   | "v_solar"
+  | "v_tapfilter"
   | "v_iron";
-  | "v_iron"
-  | "v_tapfilter";
 
 export type Transition = "wipe" | "zoom" | "flash" | "slide" | "shutter" | "none";
 
