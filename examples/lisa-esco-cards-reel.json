@@ -1,0 +1,209 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "การ์ดลิซ่าของจริงวางขายแล้ว มีลายเซ็นจริง และมีใบเดียวในโลก #shorts",
+  "description": "ESCO x LISA Trading Cards ฉลองอีพี PRESS PLAY: 50 หัวข้อการ์ด ฟอยล์พาราเรล 20 สี เลขรันตั้งแต่ /800 ลงไปถึง 1/1 มีการ์ดลายเซ็นลิซ่าสุ่มในซอง เรนโบว์ฟอยล์โบนัส /150 ซองละ 9 ใบ + ฟอยล์ 1 ใบ ซื้อ 6 ซองขึ้นไปได้ใบโบนัส #51 (ขณะที่ของยังมี)\n\nพรีเซลที่ Complex เริ่ม 19 ต.ค. 2026 วางขายทั่วไป 23 ต.ค. ที่ Target, Hot Topic, Miniso, BoxLunch, CardVault by Tom Brady, GameStop และบางร้านในอังกฤษ/เอเชีย (ยังไม่ระบุราคา)\n\n👇 ถ้าสุ่มเจอการ์ดลายเซ็นลิซ่า คุณจะเก็บหรือขาย?\n\nภาพ: ESCO / Complex • ข้อมูล: Complex (19 ต.ค. 2026)\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #ลิซ่า #lisa #blackpink #การ์ดลิซ่า #esco",
+  "thumb": {
+   "image_url": "https://cdn.shopify.com/s/files/1/0638/2659/1966/files/04_ESCO_035_PressPlay_Auto_LISA_Flame_F_ECOM_1.png?v=1793123981",
+   "hook": "การ์ดลิซ่า\nมีลายเซ็นจริง",
+   "sub": "วางขายแล้ว",
+   "badge": ""
+  },
+  "engage": "👇 สุ่มเจอการ์ดลายเซ็นลิซ่า คุณจะเก็บหรือขาย?",
+  "campaign": "celeb-01-lisa-esco",
+  "site_path": "/"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, confident, clear sports presenter, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "slides": [
+  {
+   "beat": "full",
+   "duration": 5,
+   "image_url": "https://cdn.shopify.com/s/files/1/0638/2659/1966/files/02_LISA_pack.png?v=1792190944",
+   "title": "การ์ดลิซ่า\n*ของจริง วางขายแล้ว*",
+   "subtitle": "ESCO x LISA • วางขาย 23 ต.ค. 2026",
+   "price_label": "หายากสุด",
+   "price": "1/1",
+   "fit": "contain",
+   "text": "การ์ดลิซ่า *ของจริง วางขายแล้ว*",
+   "parts": [
+    {
+     "text": "การ์ด *ลิซ่า* ของจริง วางขายแล้ว",
+     "say": "การ์ดลิซ่า ของจริง วางขายแล้ว!"
+    },
+    {
+     "text": "ใบที่หายากสุด มี *ใบเดียว* ในโลก",
+     "say": "และใบที่หายากที่สุด มีแค่ใบเดียวในโลก!"
+    }
+   ]
+  },
+  {
+   "beat": "reveal",
+   "duration": 4,
+   "image_url": "https://cdn.shopify.com/s/files/1/0638/2659/1966/files/04_ESCO_035_PressPlay_Auto_LISA_Flame_F_ECOM_1.png?v=1793123981",
+   "title": "การ์ดลายเซ็นลิซ่า",
+   "subtitle": "",
+   "text": "การ์ดลายเซ็นลิซ่า",
+   "parts": [
+    {
+     "text": "สุ่มเจอ การ์ด *ลายเซ็นจริง* ของลิซ่า",
+     "say": "ในซองมีโอกาสสุ่มเจอ การ์ดที่ลิซ่าเซ็นชื่อด้วยมือ!"
+    }
+   ]
+  },
+  {
+   "beat": "timeline",
+   "duration": 6,
+   "chapter": "ชุดนี้มีอะไร",
+   "title": "ชุด *ESCO x LISA*",
+   "text": "ฉลองอีพี *PRESS PLAY*",
+   "image_url": "https://cdn.shopify.com/s/files/1/0638/2659/1966/files/05_ESCO_036_PressPlay_LISA_Hero_F_ECOM.png?v=1792190943",
+   "points": [
+    {
+     "year": "50",
+     "label": "หัวข้อการ์ด\nในชุด"
+    },
+    {
+     "year": "20",
+     "label": "สีฟอยล์\nพาราเรล"
+    },
+    {
+     "year": "800→1",
+     "label": "เลขรัน\nต่ำสุด 1/1"
+    }
+   ],
+   "parts": [
+    {
+     "text": "ชุดนี้มีการ์ด *50 หัวข้อ* จากอีพี *PRESS PLAY* และธีม *Alter Ego*",
+     "say": "ชุดนี้มีการ์ดห้าสิบหัวข้อ จากอีพีเพรสเพลย์ และธีมอัลเตอร์อีโก้."
+    },
+    {
+     "text": "ฟอยล์ *20 สี* เลขรันตั้งแต่ *800* ลงไปถึง *1/1*",
+     "say": "มีฟอยล์ยี่สิบสี พิมพ์จำนวนจำกัด ตั้งแต่แปดร้อยใบ ลงไปถึงใบเดียว!"
+    }
+   ]
+  },
+  {
+   "beat": "quiz",
+   "duration": 4,
+   "chapter": "ทายสิ",
+   "title": "หนึ่งซอง\nมีการ์ด*กี่ใบ*?",
+   "choices": [
+    "5 ใบ",
+    "10 ใบ",
+    "20 ใบ"
+   ],
+   "answer": 1,
+   "text": "หนึ่งซอง มีการ์ด *กี่ใบ*?",
+   "parts": [
+    {
+     "text": "หนึ่งซอง มีการ์ด *กี่ใบ*?",
+     "say": "ทายสิ หนึ่งซอง มีการ์ดกี่ใบ?"
+    },
+    {
+     "text": "คำตอบคือ *10 ใบ*",
+     "say": "คำตอบคือ สิบใบ เป็นการ์ดธรรมดาเก้าใบ กับการ์ดฟอยล์หนึ่งใบ."
+    }
+   ]
+  },
+  {
+   "beat": "bignum",
+   "duration": 4,
+   "chapter": "หายาก",
+   "title": "เรนโบว์ฟอยล์โบนัส พิมพ์แค่",
+   "value": 150,
+   "subtitle": "ใบ • สุ่มเจอในซอง",
+   "image_url": "https://cdn.shopify.com/s/files/1/0638/2659/1966/files/03_ESCO_037_PressPlay_LISA_Hero_F_Rainbow_ECOM.png?v=1792190944",
+   "text": "*Rainbow Foil* สุ่มเจอในซอง",
+   "parts": [
+    {
+     "text": "เรนโบว์ฟอยล์โบนัส พิมพ์แค่ *150 ใบ*",
+     "say": "มีการ์ดเรนโบว์ฟอยล์โบนัส สุ่มเจอในซอง พิมพ์แค่ร้อยห้าสิบใบ."
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 5,
+   "image_url": "https://cdn.shopify.com/s/files/1/0638/2659/1966/files/05_ESCO_036_PressPlay_LISA_Hero_F_ECOM.png?v=1792190943",
+   "title": "ซื้อ *6 ซองขึ้นไป*\nได้ใบโบนัส *#51*",
+   "subtitle": "มาในเคสใส ESCO • ตราบที่ของยังมี",
+   "price_label": "ได้ฟรี",
+   "price": "#51",
+   "fit": "contain",
+   "text": "ซื้อ *6 ซอง* ได้ใบโบนัส *#51*",
+   "parts": [
+    {
+     "text": "ซื้อ *6 ซองขึ้นไป* ได้ใบโบนัส *#51*",
+     "say": "ซื้อหกซองขึ้นไป ได้การ์ดโบนัสใบที่ห้าสิบเอ็ด ในเคสใสของเอสโก้ ตราบที่ของยังมี."
+    }
+   ]
+  },
+  {
+   "beat": "timeline",
+   "duration": 6,
+   "chapter": "วางขาย",
+   "title": "วางขาย*วันไหน*",
+   "text": "พรีเซล *19 ต.ค.* วางขาย *23 ต.ค.*",
+   "image_url": "https://cdn.shopify.com/s/files/1/0638/2659/1966/files/02_LISA_pack.png?v=1792190944",
+   "points": [
+    {
+     "year": "19 ต.ค.",
+     "label": "พรีเซล\nที่ Complex"
+    },
+    {
+     "year": "23 ต.ค.",
+     "label": "วางขาย\nTarget ฯลฯ"
+    },
+    {
+     "year": "เอเชีย",
+     "label": "บางร้าน\nตามที่ระบุ"
+    }
+   ],
+   "parts": [
+    {
+     "text": "พรีเซลที่ *Complex* 19 ต.ค. วางขาย *23 ต.ค.*",
+     "say": "เปิดพรีเซลที่ คอมเพล็กซ์ เมื่อสิบเก้าตุลา และวางขายทั่วไปยี่สิบสามตุลา."
+    },
+    {
+     "text": "ทั้งร้านใหญ่ในสหรัฐ และ *บางร้านในเอเชีย*",
+     "say": "ที่ร้านใหญ่ในสหรัฐ รวมถึงบางร้านในอังกฤษ และเอเชีย."
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 4,
+   "image_url": "https://cdn.shopify.com/s/files/1/0638/2659/1966/files/04_ESCO_035_PressPlay_Auto_LISA_Flame_F_ECOM_1.png?v=1793123981",
+   "text": "การ์ดลายเซ็นลิซ่า\n*อยากได้ไหม?*",
+   "parts": [
+    {
+     "text": "ถ้าสุ่มเจอ *ลายเซ็น* คุณจะ *เก็บ* หรือ *ขาย*?",
+     "say": "ถ้าสุ่มเจอลายเซ็นลิซ่า คุณจะเก็บ หรือขาย?"
+    }
+   ]
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "image_mode": "still",
+   "text": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด",
+   "duration": 3,
+   "no_caption": true,
+   "beat": "still",
+   "parts": []
+  }
+ ],
+ "composition": "CardShow",
+ "theme": "electric",
+ "badge": "การ์ดดัง #1",
+ "series": "การ์ดดัง",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055
+}
