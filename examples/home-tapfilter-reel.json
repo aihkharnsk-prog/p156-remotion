@@ -1,0 +1,107 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "ที่กรองน้ำหัวก๊อก กรองอะไรได้บ้าง? แกะดูข้างใน #shorts #ที่กรองน้ำ",
+  "description": "ที่กรองน้ำติดหัวก๊อกมักมีหลายชั้น ชั้นใยหรือเซรามิกดักตะกอนตามขนาดรู ผงถ่านกัมมันต์ดูดซับสารที่ให้กลิ่นและรส ลดคลอรีน บางรุ่นมีชั้นเคดีเอฟ แต่ไม่ได้ดักทุกอย่าง ตลับอิ่มตัวและอุดตันได้ ถ้าใช้เกินกำหนดจุลินทรีย์เติบโตในตลับได้ จึงควรเปลี่ยนตามคู่มือของรุ่นที่ใช้: ชั้นดักตะกอน → ผงถ่าน → เคดีเอฟ → ปลายหัว\nภาพเคลื่อนไหววาดเองทั้งหมด\n\nแหล่งข้อมูล:\n- https://dwqr.scot/media/o4nfyeaj/pws-technical-manual-section-7-point-of-use-point-of-entry-treatment-78-adsorption-filters-gac-activated-alumina.pdf\n- https://www.watertreatmentguide.com/activated_carbon_filtration.htm\n- https://www.watertechonline.com/wastewater/article/15547536/professor-pou-poe-activated-carbon\n- https://www.culligan.com/blog/what-is-sediment-filtration-and-how-does-it-work\n- https://www.canada.ca/en/health-canada/services/publications/healthy-living/guidance-use-heterotrophic-plate-counts-canadian-drinking-water-supplies.html\n- https://www.nsf.org/ca/en/knowledge-library/nsf-ansi-42-53-and-401-filtration-systems-standards\n- https://images.homedepot-static.com/catalog/pdfImages/a2/a2e72a2a-0029-4968-b92d-6d5126ccac48.pdf\n- https://www.brita.com/support/faq/faucet-systems/\n- https://graham.umich.edu/media/files/POU-filters-Flint-EPA.pdf\n- https://kymerainternational.com/kdf-fluid-treatment/\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #ที่กรองน้ำ #ความรู้รอบตัว #ของใช้ในบ้าน #ทำงานยังไง"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, confident, clear presenter, lively but not shouting]"
+ },
+ "audio_rate": 1,
+ "slides": [
+  {
+   "beat": "v_tapfilter",
+   "duration": 90,
+   "no_caption": true,
+   "transition": "none",
+   "parts": [
+    {
+     "text": "กรอง *น้ำก๊อก* ยังไงนะ?",
+     "say": "ที่กรองน้ำติดหัวก๊อก ตัวเล็กนิดเดียว ทำไมกลิ่นกับรสของน้ำเปลี่ยนไปได้ ข้างในมันทำอะไร?",
+     "cue": "all"
+    },
+    {
+     "text": "น้ำผ่าน *หลายชั้น*",
+     "say": "ข้างในเรียงเป็นชั้นๆ น้ำไหลลงจากด้านบน ผ่านชั้นดักตะกอน ผงถ่าน และบางรุ่นมีเคดีเอฟ",
+     "cue": "parts"
+    },
+    {
+     "text": "ชั้นแรก *ดักตะกอน*",
+     "say": "ชั้นแรกเป็นใยสังเคราะห์หรือเซรามิก ทำงานเหมือนตะแกรง ผงสนิม ทราย ที่ใหญ่กว่ารู จะติดค้างตรงนี้",
+     "cue": "mech"
+    },
+    {
+     "text": "รูวัดเป็น *ไมครอน*",
+     "say": "รูวัดเป็นไมครอน หนึ่งไมครอนคือหนึ่งในพันมิลลิเมตร ยิ่งรูเล็กยิ่งดักได้ละเอียด แต่ตันเร็วขึ้น",
+     "cue": "pore"
+    },
+    {
+     "text": "ถ่าน *ดูดซับ* กลิ่นรส",
+     "say": "ชั้นถัดมาคือผงถ่านกัมมันต์ ใช้การดูดซับ สารกลิ่นรสบางชนิดและคลอรีน จะถูกลดที่ผิวเม็ดถ่าน",
+     "cue": "carbon"
+    },
+    {
+     "text": "ผิวข้างใน *มหาศาล*",
+     "say": "เม็ดถ่านเต็มไปด้วยรูพรุนละเอียด ถ่านหนึ่งกรัมมีพื้นที่ผิวรวมได้หลายร้อยถึงราวสองพันตารางเมตร",
+     "cue": "area"
+    },
+    {
+     "text": "ไหล *ช้า* กรองดีกว่า",
+     "say": "แต่การเกาะต้องใช้เวลา น้ำไหลช้า สารก็ติดมากขึ้น เปิดก๊อกแรงมาก น้ำผ่านเร็ว บางส่วนก็หลุดรอดไป",
+     "cue": "contact"
+    },
+    {
+     "text": "บางรุ่นมี *เคดีเอฟ*",
+     "say": "เคดีเอฟคือเม็ดโลหะผสมทองแดงกับสังกะสี ผู้ผลิตบอกว่า เปลี่ยนคลอรีนเป็นคลอไรด์ได้",
+     "cue": "kdf"
+    },
+    {
+     "text": "ไม่ได้ดัก *ทุกอย่าง*",
+     "say": "แต่ไม่ได้ดักทุกอย่าง สารละลายในน้ำหลายชนิดและเชื้อจุลินทรีย์ อาจผ่านไปได้ ดูฉลากว่ารุ่นนั้นรับรองอะไร",
+     "cue": "notall"
+    },
+    {
+     "text": "รูเต็ม *ก็หมดแรง*",
+     "say": "รูพรุนมีจำกัด ใช้ไปก็เต็ม พอเต็ม ถ่านก็ดูดซับเพิ่มไม่ได้ สารต่างๆ จึงเริ่มผ่านไปได้",
+     "cue": "sat"
+    },
+    {
+     "text": "ใช้เกิน *เชื้อโต* ได้",
+     "say": "ผงถ่านลดคลอรีนด้วย ถ้าใช้เกินกำหนดหรือน้ำค้างนาน จุลินทรีย์ก็เติบโตในตลับได้ บางคู่มือจึงให้ปล่อยน้ำทิ้ง หลังไม่ได้ใช้เกินแปดชั่วโมง",
+     "cue": "bact"
+    },
+    {
+     "text": "ตัน *น้ำไหลเบา*",
+     "say": "น้ำไหลเบาลง เพราะตะกอนค่อยๆ อุดรู ถ้าช้าลงมาก ผู้ผลิตบางรายว่าใกล้หมดอายุ",
+     "cue": "clog"
+    },
+    {
+     "text": "เปลี่ยนราว *สามเดือน*",
+     "say": "ช่วงเปลี่ยนต่างกันตามรุ่น คู่มือรุ่นหนึ่งบอกร้อยแกลลอน หรือราวสามเดือน น้ำมีตะกอนมากก็เร็วกว่านั้น",
+     "cue": "interval"
+    },
+    {
+     "text": "จด *วันที่ติดตั้ง* ไว้",
+     "say": "ลองเร่งเวลาดู ราวเก้าสิบวันก็ครบกำหนดตามคู่มือรุ่นหนึ่ง แต่ไม่มีเสียงเตือนเลย คู่มือบางฉบับจึงให้จดวันติดตั้งไว้ ส่วนอันที่ก๊อกบ้านเรา อยู่ตรงไหนของเส้นนี้",
+     "cue": "age"
+    },
+    {
+     "text": "ติดตาม *ยังไงนะ* ไว้เลย",
+     "say": "ชอบเรื่องของใช้ในบ้านแบบนี้ กดติดตามช่องยังไงนะ ไว้ได้เลย เดี๋ยวจะพาดูข้างในของอีกหลายอย่าง",
+     "cue": "end"
+    }
+   ]
+  }
+ ],
+ "composition": "CardShow",
+ "theme": "psychic",
+ "badge": "",
+ "series": "",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055
+}

@@ -20,8 +20,9 @@ import { SCENE_FLASK } from "./vecHome_flask";
 import { SCENE_CHOPPER } from "./vecHome_chopper";
 import { SCENE_MIC } from "./vecHome_mic";
 import { SCENE_IRON } from "./vecHome_iron";
+import { SCENE_TAPFILTER } from "./vecHome_tapfilter";
 import { SCENE_SOLAR } from "./vecHome_solar";
-const SCENES: Record<string, any> = { ...S1, ...SCENES2, ...SCENES3, ...{ smoke: SCENE_SMOKE, hairdryer: SCENE_HAIRDRYER, induction: SCENE_INDUCTION, toaster: SCENE_TOASTER, airfryer: SCENE_AIRFRYER, fan: SCENE_FAN, vacuum: SCENE_VACUUM, led: SCENE_LED, breaker: SCENE_BREAKER, pump: SCENE_PUMP, flask: SCENE_FLASK, iron: SCENE_IRON, mic: SCENE_MIC, chopper: SCENE_CHOPPER, solar: SCENE_SOLAR } };
+const SCENES: Record<string, any> = { ...S1, ...SCENES2, ...SCENES3, ...{ smoke: SCENE_SMOKE, hairdryer: SCENE_HAIRDRYER, induction: SCENE_INDUCTION, toaster: SCENE_TOASTER, airfryer: SCENE_AIRFRYER, fan: SCENE_FAN, vacuum: SCENE_VACUUM, led: SCENE_LED, breaker: SCENE_BREAKER, pump: SCENE_PUMP, flask: SCENE_FLASK, iron: SCENE_IRON, mic: SCENE_MIC, chopper: SCENE_CHOPPER, solar: SCENE_SOLAR, tapfilter: SCENE_TAPFILTER } };
 
 // บีต "pixel": ฉากพิกเซลตู้เย็นตัดครึ่งที่วาดด้วยโค้ด + ซับทีละคำกลางจอ
 // ภาพเดียวต่อเนื่องทั้งสไลด์ กล้องซูมไปตาม cue ของแต่ละท่อน (parts[k].cue)
