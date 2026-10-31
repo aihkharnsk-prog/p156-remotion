@@ -1,0 +1,188 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "การ์ดลิซ่าซองละกี่บาท? ซื้อยังไงคุ้มสุด #shorts",
+  "description": "ซองการ์ด ESCO x LISA ที่ Target (สหรัฐ): Hanger Pack $9.99 (≈336 บาท) ซองละ 10 ใบ รวมฟอยล์ 1 ใบ • Blaster Box $29.99 (≈1,008 บาท) 4 ซอง 40 ใบ ฟอยล์ 4 ใบ เฉลี่ยซองละ ~$7.50 • แฮงเกอร์ 6 ซอง $59.94 เทียบบลาสเตอร์ 2 กล่อง $59.98 (8 ซอง)\n\nราคาจากโพสต์ของ Peak Hobby (รายการสินค้า Target) ราคาจริงในไทย/ร้านอื่นอาจต่างกัน ยังไม่รวมภาษีและค่าส่ง\n\n👇 ซองละ 336 บาท คุณจะซื้อกี่ซอง?\n\nอัตราแลกเปลี่ยนประมาณ 33.6 บาท/ดอลลาร์ • ภาพ: ESCO / Complex • ข้อมูล: Complex (19 ต.ค. 2026), Peak Hobby\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #ลิซ่า #lisa #blackpink #การ์ดลิซ่า #esco",
+  "thumb": {
+   "image_url": "https://cdn.shopify.com/s/files/1/0638/2659/1966/files/01_LISAHanger.png?v=1792190944",
+   "hook": "ซองการ์ดลิซ่า\nราคา 336 บาท",
+   "sub": "ซื้อยังไงคุ้มสุด",
+   "badge": ""
+  },
+  "engage": "👇 ซองละ 336 บาท คุณจะซื้อกี่ซอง?",
+  "campaign": "celeb-02-lisa-price",
+  "site_path": "/"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, confident, clear sports presenter, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "slides": [
+  {
+   "beat": "full",
+   "duration": 5,
+   "image_url": "https://cdn.shopify.com/s/files/1/0638/2659/1966/files/01_LISAHanger.png?v=1792190944",
+   "title": "ซองการ์ดลิซ่า\n*ราคาเท่าไร?*",
+   "subtitle": "ราคาที่ Target ในสหรัฐ",
+   "price_label": "ซองละ",
+   "price": "$9.99",
+   "fit": "contain",
+   "text": "ซองการ์ดลิซ่า *ราคาเท่าไร?*",
+   "parts": [
+    {
+     "text": "ซองการ์ด *ลิซ่า* ราคาเท่าไร?",
+     "say": "ซองการ์ดลิซ่า ราคาเท่าไหร่?"
+    },
+    {
+     "text": "ที่ *Target* ซองละ *$9.99*",
+     "say": "ที่ร้านทาร์เก็ตในสหรัฐ ซองละเก้าจุดเก้าเก้าดอลลาร์!"
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 5,
+   "image_url": "https://cdn.shopify.com/s/files/1/0638/2659/1966/files/02_LISA_pack.png?v=1792190944",
+   "title": "เป็นเงินไทย\nราว *336 บาท*",
+   "subtitle": "ต่อ 1 ซอง (10 ใบ)",
+   "price_label": "≈",
+   "price": "฿336",
+   "fit": "contain",
+   "text": "เป็นเงินไทย ราว *336 บาท* ต่อซอง",
+   "parts": [
+    {
+     "text": "เป็นเงินไทย ราว *336 บาท* ต่อซอง",
+     "say": "เป็นเงินไทย ก็ราวสามร้อยสามสิบหกบาทต่อซอง."
+    },
+    {
+     "text": "ซองละ *10 ใบ* รวมฟอยล์ 1 ใบ",
+     "say": "หนึ่งซองมีการ์ดสิบใบ รวมการ์ดฟอยล์หนึ่งใบ."
+    }
+   ]
+  },
+  {
+   "beat": "timeline",
+   "duration": 6,
+   "chapter": "ตัวเลือก",
+   "title": "ซื้อ*แบบไหน*คุ้มกว่า",
+   "text": "เทียบ *ซองเดี่ยว* กับ *บลาสเตอร์*",
+   "image_url": "https://cdn.shopify.com/s/files/1/0638/2659/1966/files/05_ESCO_036_PressPlay_LISA_Hero_F_ECOM.png?v=1792190943",
+   "points": [
+    {
+     "year": "$9.99",
+     "label": "แฮงเกอร์\n1 ซอง"
+    },
+    {
+     "year": "$29.99",
+     "label": "บลาสเตอร์\n4 ซอง"
+    },
+    {
+     "year": "~$7.50",
+     "label": "ต่อซอง\n(บลาสเตอร์)"
+    }
+   ],
+   "parts": [
+    {
+     "text": "แฮงเกอร์ *1 ซอง $9.99* บลาสเตอร์ *4 ซอง $29.99*",
+     "say": "มีแบบแฮงเกอร์ หนึ่งซอง เก้าจุดเก้าเก้าดอลลาร์ กับกล่องบลาสเตอร์ สี่ซอง ยี่สิบเก้าจุดเก้าเก้าดอลลาร์."
+    },
+    {
+     "text": "ซื้อบลาสเตอร์ เฉลี่ย *ซองละ $7.50*",
+     "say": "ซื้อบลาสเตอร์ เฉลี่ยตกซองละ เจ็ดดอลลาร์ครึ่ง ถูกกว่าแฮงเกอร์."
+    }
+   ]
+  },
+  {
+   "beat": "quiz",
+   "duration": 4,
+   "chapter": "ทายสิ",
+   "title": "บลาสเตอร์ 1 กล่อง\nมีการ์ด*ฟอยล์กี่ใบ*?",
+   "choices": [
+    "1 ใบ",
+    "4 ใบ",
+    "10 ใบ"
+   ],
+   "answer": 1,
+   "text": "บลาสเตอร์ 1 กล่อง มี *ฟอยล์กี่ใบ*?",
+   "parts": [
+    {
+     "text": "บลาสเตอร์ 1 กล่อง มี *ฟอยล์กี่ใบ*?",
+     "say": "ทายสิ กล่องบลาสเตอร์หนึ่งกล่อง มีการ์ดฟอยล์กี่ใบ?"
+    },
+    {
+     "text": "คำตอบคือ *4 ใบ*",
+     "say": "คำตอบคือ สี่ใบ ซองละหนึ่งใบ."
+    }
+   ]
+  },
+  {
+   "beat": "bignum",
+   "duration": 4,
+   "chapter": "บลาสเตอร์",
+   "title": "1 กล่อง ราว",
+   "value": 1008,
+   "subtitle": "บาท • 4 ซอง 40 ใบ",
+   "image_url": "https://cdn.shopify.com/s/files/1/0638/2659/1966/files/02_LISA_pack.png?v=1792190944",
+   "text": "*$29.99* ต่อกล่อง",
+   "parts": [
+    {
+     "text": "บลาสเตอร์ 1 กล่อง ราว *1,008 บาท* ได้ *40 ใบ*",
+     "say": "บลาสเตอร์หนึ่งกล่อง ราวหนึ่งพันแปดบาท ได้การ์ดสี่สิบใบ."
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 5,
+   "image_url": "https://cdn.shopify.com/s/files/1/0638/2659/1966/files/05_ESCO_036_PressPlay_LISA_Hero_F_ECOM.png?v=1792190943",
+   "title": "บลาสเตอร์ *2 กล่อง*\nได้ *8 ซอง*",
+   "subtitle": "$59.98 • แฮงเกอร์ 6 ซอง $59.94",
+   "price_label": "ราคาเท่ากัน",
+   "price": "8 ซอง",
+   "fit": "contain",
+   "text": "ราคาเท่ากัน แต่ได้ *8 ซอง*",
+   "parts": [
+    {
+     "text": "แฮงเกอร์ *6 ซอง* $59.94 บลาสเตอร์ *2 กล่อง* $59.98",
+     "say": "ลองเทียบ แฮงเกอร์หกซอง ห้าสิบเก้าจุดเก้าสี่ดอลลาร์ กับบลาสเตอร์สองกล่อง ห้าสิบเก้าจุดเก้าแปดดอลลาร์."
+    },
+    {
+     "text": "ราคาเกือบเท่ากัน แต่ได้ *8 ซอง*",
+     "say": "ราคาเกือบเท่ากัน แต่ได้ถึงแปดซอง!"
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 4,
+   "image_url": "https://cdn.shopify.com/s/files/1/0638/2659/1966/files/04_ESCO_035_PressPlay_Auto_LISA_Flame_F_ECOM_1.png?v=1793123981",
+   "text": "ซองละ *336 บาท*\nคุณจะซื้อกี่ซอง?",
+   "parts": [
+    {
+     "text": "ถ้าซองละ *336 บาท* คุณจะซื้อ *กี่ซอง*?",
+     "say": "ถ้าซองละสามร้อยสามสิบหกบาท คุณจะซื้อกี่ซอง?"
+    }
+   ]
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "image_mode": "still",
+   "text": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด",
+   "duration": 3,
+   "no_caption": true,
+   "beat": "still",
+   "parts": []
+  }
+ ],
+ "composition": "CardShow",
+ "theme": "electric",
+ "badge": "การ์ดดัง #2",
+ "series": "การ์ดดัง",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055
+}
