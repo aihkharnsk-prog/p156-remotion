@@ -1,0 +1,107 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "ไมค์ไร้สายหนีบเสื้อ ส่งเสียงเข้ามือถือได้ยังไง? #shorts #ไมค์ไร้สาย",
+  "description": "ไมค์ไร้สายหนีบเสื้อเปลี่ยนเสียงเป็นสัญญาณได้เพราะแผ่นไดอะแฟรมบางๆ สั่นตามคลื่นอากาศ ทำให้ไฟฟ้าเปลี่ยน แล้วถูกแปลงเป็นตัวเลข ตัดเสียงรบกวน และส่งด้วยคลื่นวิทยุ 2.4 GHz ไปยังตัวรับที่เสียบมือถือ ตัวส่งใช้แบตเตอรี่ลิเธียมไอออนและมีเคสชาร์จ แบตเสื่อมตามรอบชาร์จ ส่วนฟองน้ำและหน้าสัมผัสก็สึกตามการใช้งาน\nภาพเคลื่อนไหววาดเองทั้งหมด\n\nแหล่งข้อมูล:\n- https://en.wikipedia.org/wiki/Electret_microphone\n- https://www.eenewseurope.com/en/mems-microphone-technology-adapting-to-changing-use-cases/\n- https://en.wikipedia.org/wiki/2.4_GHz_radio_use\n- https://www.networkworld.com/article/869579/network-security-stop-the-interference.html\n- https://evezone.evetech.co.za/deep-dives/2-4ghz-wireless-vs-bluetooth-which-mode-should-you-use-for-gaming-audio\n- https://www.eetasia.com/?p=53148\n- https://evezone.evetech.co.za/quick-bytes/understanding-ai-noise-canceling-modern-wireless-microphones\n- https://bgr.com/2113412/foam-microphone-covers-important-audio-purpose\n- https://batteryuniversity.com/article/how-to-prolong-lithium-based-batteries\n- https://arxiv.org/pdf/1210.3672\n- https://www.thomannmusic.com/onlineexpert_page_microphone_accessories_maintenance_and_care.html\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #ไมค์ไร้สาย #ความรู้รอบตัว #ของใช้ในบ้าน #ทำงานยังไง"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, confident, clear presenter, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "slides": [
+  {
+   "beat": "v_mic",
+   "duration": 90,
+   "no_caption": true,
+   "transition": "none",
+   "parts": [
+    {
+     "text": "*ไร้สาย* ส่งเสียงได้ไง?",
+     "say": "ไมค์หนีบปกเสื้อที่ไม่มีสายต่อ ทำไมเสียงพูดไปโผล่ในมือถือได้ ทั้งที่อยู่ห่างกันหลายเมตร?",
+     "cue": "all"
+    },
+    {
+     "text": "เสียงคือ *อากาศสั่น*",
+     "say": "เสียงพูดคืออากาศที่ถูกอัดแล้วคลายสลับกัน เป็นคลื่นแผ่จากปากไปชนตัวไมค์",
+     "cue": "sound"
+    },
+    {
+     "text": "แผ่นบาง *สั่นตาม*",
+     "say": "ที่รูเล็กๆ ของไมค์ มีแผ่นฟิล์มบางจิ๋วเรียกว่าไดอะแฟรม คลื่นอากาศมาชน แผ่นก็สั่นตาม",
+     "cue": "diaphragm"
+    },
+    {
+     "text": "ระยะห่าง *เป็นไฟฟ้า*",
+     "say": "หลังแผ่นบางมีแผ่นนิ่งคู่กัน พอแผ่นสั่น ระยะห่างเปลี่ยน ไฟฟ้าก็เปลี่ยนตาม ได้สัญญาณขึ้นลงเหมือนคลื่นเสียง แล้วขยายต่อ",
+     "cue": "signal"
+    },
+    {
+     "text": "แปลงเป็น *ตัวเลข*",
+     "say": "ไมค์ดิจิทัลวัดค่าสัญญาณซ้ำๆ วินาทีละหลายหมื่นครั้ง เก็บเป็นตัวเลข เสียงก็กลายเป็นข้อมูล",
+     "cue": "adc"
+    },
+    {
+     "text": "ตัด *เสียงรบกวน*",
+     "say": "ชิปในตัวส่งแยกเสียงพูดออกจากเสียงพัดลมหรือเสียงรอบข้าง แล้วลดส่วนอื่นลง ตั้งแรงไปเสียงอาจแห้งเหมือนหุ่นยนต์",
+     "cue": "dsp"
+    },
+    {
+     "text": "ฟองน้ำ *กันลม*",
+     "say": "ลมแรงดันแผ่นบางจนเสียงแตกพร่า ฟองน้ำกันลมช่วยกระจายลมให้อ่อนลง แต่ช่วยได้แค่ลมเบาๆ",
+     "cue": "wind"
+    },
+    {
+     "text": "ส่งเป็น *คลื่นวิทยุ*",
+     "say": "ตัวเลขเสียงถูกส่งด้วยคลื่นวิทยุย่านสองจุดสี่กิกะเฮิรตซ์ ไปยังตัวรับที่เสียบมือถือ ในที่โล่งไกลหลายสิบเมตร",
+     "cue": "radio"
+    },
+    {
+     "text": "จับคู่ *ต่อกันเอง*",
+     "say": "ตัวส่งกับตัวรับจับคู่กันไว้ หลายรุ่นเปิดเครื่องก็ต่อกันเอง ดีเลย์ตามสเปกไม่กี่มิลลิวินาที น้อยกว่าบลูทูธทั่วไป",
+     "cue": "pair"
+    },
+    {
+     "text": "ช่องแน่น *กระโดดหลบ*",
+     "say": "แต่ย่านนี้ไวไฟ บลูทูธ ไมโครเวฟรุ่นเก่าก็ใช้ร่วม ตัวส่งจึงกระโดดไปช่องที่ว่าง เสียงสะดุดอาจเพราะคลื่นแน่น",
+     "cue": "hop"
+    },
+    {
+     "text": "แบตจิ๋ว *ในตัวส่ง*",
+     "say": "ตัวส่งมีแบตเตอรี่ลิเธียมไอออนก้อนจิ๋ว ใช้ต่อเนื่องราวห้าถึงสิบชั่วโมงต่อรอบ ตามสเปกหลายรุ่น",
+     "cue": "batt"
+    },
+    {
+     "text": "เคส *ชาร์จต่อ*",
+     "say": "เคสชาร์จมีแบตใหญ่กว่าของตัวเอง เติมไฟให้ตัวส่งกับตัวรับได้อีกหลายรอบ",
+     "cue": "case"
+    },
+    {
+     "text": "ใช้นาน *ก็สึก*",
+     "say": "แบตลิเธียมเก็บประจุได้น้อยลงตามรอบชาร์จและความร้อน เหงื่อ ฝุ่น และการเสียบถอดบ่อยๆ ก็ทำให้ฟองน้ำกับหน้าสัมผัสเสื่อม",
+     "cue": "wear"
+    },
+    {
+     "text": "วันแรก *กับตอนนี้*",
+     "say": "ลองนึกถึงวันแรกที่ใช้ ถ่ายได้นานแค่ไหนต่อการชาร์จหนึ่งครั้ง วันนี้ถ่ายจนจบงานโดยไม่ต้องดูแบตไหม ขยับตัวแล้วเสียงยังนิ่งหรือเปล่า?",
+     "cue": "nudge"
+    },
+    {
+     "text": "ติดตาม *ยังไงนะ* ไว้เลย",
+     "say": "ชอบเรื่องของใช้ในบ้านแบบนี้ กดติดตามช่องยังไงนะ ไว้ได้เลย เดี๋ยวจะพาดูข้างในของอีกหลายอย่าง",
+     "cue": "end"
+    }
+   ]
+  }
+ ],
+ "composition": "CardShow",
+ "theme": "psychic",
+ "badge": "",
+ "series": "",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055
+}
