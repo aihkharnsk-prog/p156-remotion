@@ -1,0 +1,112 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "สมาร์ทวอทช์รู้ชีพจรได้ไง? #shorts #สมาร์ทวอทช์",
+  "description": "สมาร์ทวอทช์วัดชีพจรด้วยหลอดแอลอีดีสีเขียวด้านหลัง แสงเขียวถูกฮีโมโกลบินในเลือดดูดได้ดี เมื่อหัวใจบีบ เลือดใต้ผิวมากขึ้น แสงสะท้อนกลับที่โฟโตไดโอดวัดได้จึงขึ้นลงเป็นจังหวะ แล้วชิปกรองสัญญาณและนับยอดเป็นบีพีเอ็ม ขยับแรง สายหลวม รอยสัก หรือมือเย็นทำให้ค่าคลาดเคลื่อนได้ ส่วนนับก้าวใช้เซนเซอร์วัดความเร่ง แบตลิเธียมไอออนก้อนเล็กเสื่อมตามรอบชาร์จ และบลูทูธพลังงานต่ำส่งข้อมูลไปมือถือ: แสงเขียว → เลือด → โฟโตไดโอด → คลื่น → BPM\nภาพเคลื่อนไหววาดเองทั้งหมด\n\nแหล่งข้อมูล:\n- https://www.analog.com/cn/resources/technical-articles/guidelines-to-enhancing-the-heartrate-monitoring-performance-of-biosensing-wearables.html\n- https://www.fierceelectronics.com/components/opto-mechanical-integration-heart-rate-monitors-wearable-wrist-devices\n- https://www.allpcb.com/allelectrohub/peak-and-onset-detection-for-heart-rate-monitoring\n- https://dermatologytimes.com/view/tattoos-may-stop-apple-watch\n- https://outdoors.nordling.de/area/winter-sports-performance\n- https://www.jdsupra.com/legalnews/don-t-fear-the-regulator-fda-clarifies-6892021/\n- https://www.analog.com/en/resources/app-notes/an-2554.html\n- https://digitalcommons.wku.edu/ijesab/vol16/iss1/327\n- https://ingenia.org.uk/articles/lithium-ion-batteries/\n- https://www.apple.com/om/batteries/service/\n- https://www.iphoneincanada.ca/news/apple-watch-battery-is-designed-to-last-1000-complete-charge-cycles/\n- https://www.electronics-notes.com/articles/connectivity/bluetooth/bluetooth-low-energy-le-frequency-channels.php\n- https://ringconn.com/blogs/guides/bluetooth-smartwatch\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #สมาร์ทวอทช์ #ความรู้รอบตัว #ของใช้ในบ้าน #ทำงานยังไง"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.5,
+  "speed": 1.04,
+  "prefix": "[upbeat, confident, clear presenter, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "slides": [
+  {
+   "beat": "v_watch",
+   "duration": 90,
+   "no_caption": true,
+   "transition": "none",
+   "parts": [
+    {
+     "text": "นาฬิกาจับ *ชีพจร* ได้ไง",
+     "say": "นาฬิกาอัจฉริยะแค่แนบข้อมือ ทำไมรู้ว่าหัวใจเต้นกี่ครั้ง นับก้าวได้ แล้วคุยกับมือถือได้ด้วย?",
+     "cue": "all"
+    },
+    {
+     "text": "ไฟเขียว *ส่องผิว*",
+     "say": "ด้านหลังนาฬิกามีหลอดแอลอีดีสีเขียว ส่องแสงเข้าไปใต้ผิวหนัง ข้างๆ มีเซนเซอร์รับแสงที่เรียกว่าโฟโตไดโอด",
+     "cue": "led"
+    },
+    {
+     "text": "เลือดดูด *แสงเขียว*",
+     "say": "เม็ดเลือดแดงมีฮีโมโกลบิน ซึ่งดูดแสงสีเขียวได้ดี ส่วนแสงที่ไม่ถูกดูด จะกระเจิงสะท้อนกลับขึ้นมา เซนเซอร์วัดแสงที่เหลือนี้",
+     "cue": "abs"
+    },
+    {
+     "text": "หัวใจบีบ *แสงลด*",
+     "say": "ทุกครั้งที่หัวใจบีบ เลือดในหลอดเลือดใต้ผิวจะมากขึ้นเป็นจังหวะ ดูดแสงเขียวได้มากขึ้น แสงสะท้อนกลับจึงน้อยลง พอเลือดลดลง ก็สว่างขึ้นอีก",
+     "cue": "beat"
+    },
+    {
+     "text": "นับยอดคลื่น เป็น *BPM*",
+     "say": "แสงที่ขึ้นลงเป็นจังหวะ กลายเป็นคลื่นสัญญาณ ชิปกรองสัญญาณรบกวนออก แล้วนับยอดคลื่นต่อนาที ได้เป็นจำนวนครั้งต่อนาที หรือบีพีเอ็ม",
+     "cue": "sig"
+    },
+    {
+     "text": "ขยับแรง *สัญญาณรก*",
+     "say": "แต่ถ้าแขนขยับแรง หรือสายหลวม นาฬิกาจะเลื่อน แสงรอบข้างรั่วเข้าเซนเซอร์ สัญญาณก็รกจนนับยอดผิด",
+     "cue": "move"
+    },
+    {
+     "text": "รอยสัก *มือเย็น*",
+     "say": "หมึกรอยสักทึบและดูดแสงไว้ ส่วนอากาศเย็นทำให้เลือดไหลไปปลายมือน้อยลง สัญญาณจึงอ่อน ค่าที่ได้เลยคลาดเคลื่อนได้",
+     "cue": "skin"
+    },
+    {
+     "text": "เป็นค่า *ประมาณ*",
+     "say": "ดังนั้นตัวเลขชีพจรจากนาฬิกาทั่วไป ใช้ดูแนวโน้มได้ แต่ไม่ได้มีไว้วินิจฉัยโรค ถ้ากังวลเรื่องหัวใจ ให้ปรึกษาแพทย์",
+     "cue": "med"
+    },
+    {
+     "text": "แกว่งแขน *นับก้าว*",
+     "say": "ส่วนนับก้าว ใช้เซนเซอร์วัดความเร่งในนาฬิกา เวลาเดินแขนแกว่งเป็นจังหวะ ความเร่งจึงขึ้นลงเป็นคลื่น ชิปนับยอดคลื่นแต่ละลูกเป็นหนึ่งก้าว",
+     "cue": "step"
+    },
+    {
+     "text": "แขนนิ่ง *ก้าวหาย*",
+     "say": "แต่ถ้าแขนไม่แกว่ง เช่นเข็นรถเข็นเด็กหรือรถซื้อของ ข้อมือแทบไม่ขยับ นาฬิกาจึงมักนับก้าวขาดไป งานวิจัยพบว่าหลายเครื่องนับน้อยกว่าจริง",
+     "cue": "lim"
+    },
+    {
+     "text": "แบต *ลิเธียม* ก้อนเล็ก",
+     "say": "ที่ทำให้ทุกอย่างทำงานคือแบตเตอรี่ลิเธียมไอออนก้อนเล็กๆ ตอนใช้งาน ไอออนลิเธียมวิ่งจากขั้วลบไปขั้วบวก ปล่อยกระแสไฟออกมาเลี้ยงชิปกับหน้าจอ",
+     "cue": "batt"
+    },
+    {
+     "text": "ชาร์จ *ไอออนวิ่งกลับ*",
+     "say": "พอเสียบชาร์จ พลังงานจากภายนอกดันไอออนวิ่งกลับไปสะสมที่ขั้วลบ แบตก็เต็มอีกครั้ง",
+     "cue": "chg"
+    },
+    {
+     "text": "ชาร์จซ้ำ *ความจุลด*",
+     "say": "แต่แบตลิเธียมไอออนมีอายุ ยิ่งชาร์จซ้ำหลายรอบ ความจุก็ลดลงทีละน้อย ผู้ผลิตรายหนึ่งออกแบบให้เหลือราวแปดสิบเปอร์เซ็นต์ หลังหนึ่งพันรอบเต็ม",
+     "cue": "age"
+    },
+    {
+     "text": "บลูทูธ *ส่งต่อมือถือ*",
+     "say": "สุดท้าย นาฬิกาคุยกับมือถือผ่านบลูทูธพลังงานต่ำ ข้อมูลกระโดดสลับช่องความถี่ในย่านสองจุดสี่กิกะเฮิรตซ์ ส่งชีพจรกับก้าวไปมือถือ รับแจ้งเตือนกลับมา ถ้าห่างเกินระยะ ก็ซิงก์ต่อเมื่อเชื่อมใหม่",
+     "cue": "ble"
+    },
+    {
+     "text": "ช่วงห่าง *เสียบสาย*",
+     "say": "ลองนับดู ช่วงห่างระหว่างครั้งที่เสียบสายชาร์จ ตอนยังใหม่ห่างกี่วัน แล้วเดี๋ยวนี้ห่างกี่วัน",
+     "cue": "chk"
+    },
+    {
+     "text": "ติดตาม *ยังไงนะ* ไว้เลย",
+     "say": "ชอบเรื่องของใช้ในบ้านแบบนี้ กดติดตามช่องยังไงนะ ไว้ได้เลย เดี๋ยวจะพาดูข้างในของอีกหลายอย่าง",
+     "cue": "end"
+    }
+   ]
+  }
+ ],
+ "composition": "CardShow",
+ "theme": "psychic",
+ "badge": "",
+ "series": "",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055
+}
