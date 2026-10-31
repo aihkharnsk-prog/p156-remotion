@@ -61,6 +61,7 @@ export type Beat =
   | "v_breaker"
   | "v_pump"
   | "v_flask"
+  | "v_solar"
   | "v_iron";
 
 export type Transition = "wipe" | "zoom" | "flash" | "slide" | "shutter" | "none";
@@ -838,7 +839,7 @@ const BeatView: React.FC<{ s: ShowSlide; idx: number; pal: Pal }> = ({ s, idx, p
     beat === "full" ? <FullBeat {...p} /> :
     beat === "rank" ? <RankBeat {...p} /> :
     beat === "pixel" ? <PixelFridge frame={f} dur={d} parts={s.parts || []} starts={starts} /> :
-    beat === "v_toilet" || beat === "v_ac" || beat === "v_wash" || beat === "v_micro" || beat === "v_rice" || beat === "v_kettle" || beat === "v_shower" || beat === "v_smoke" || beat === "v_hairdryer" || beat === "v_induction" || beat === "v_toaster" || beat === "v_airfryer" || beat === "v_fan" || beat === "v_vacuum" || beat === "v_led" || beat === "v_breaker" || beat === "v_pump" || beat === "v_flask" || beat === "v_iron" ? <PixelFridge scene={beat.slice(2)} frame={f} dur={d} parts={s.parts || []} starts={starts} /> :
+    beat === "v_toilet" || beat === "v_ac" || beat === "v_wash" || beat === "v_micro" || beat === "v_rice" || beat === "v_kettle" || beat === "v_shower" || beat === "v_smoke" || beat === "v_hairdryer" || beat === "v_induction" || beat === "v_toaster" || beat === "v_airfryer" || beat === "v_fan" || beat === "v_vacuum" || beat === "v_led" || beat === "v_breaker" || beat === "v_pump" || beat === "v_flask" || beat === "v_iron" || beat === "v_solar" ? <PixelFridge scene={beat.slice(2)} frame={f} dur={d} parts={s.parts || []} starts={starts} /> :
     beat === "vec" ? <PixelFridge vec frame={f} dur={d} parts={s.parts || []} starts={starts} /> :
     <CardBeat {...p} />;
   return (
