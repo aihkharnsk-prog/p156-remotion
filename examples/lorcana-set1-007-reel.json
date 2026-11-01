@@ -1,0 +1,274 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "audio_rate": 1.0,
+ "composition": "CardShow",
+ "theme": "electric",
+ "badge": "#7",
+ "series": "ลอคาน่าชุดแรก",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055,
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.35,
+  "speed": 1.05,
+  "prefix": "[mellow, soft and smooth, friendly, lightly upbeat, unhurried]"
+ },
+ "slides": [
+  {
+   "beat": "hook",
+   "duration": 5,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_7b875417a470447eb4d998d9b634580b.avif?1709690747",
+   "parts": [
+    {
+     "text": "ไก่ราคา 1 ตัวนี้ เพิ่มพลังโจมตีให้เพื่อนได้!",
+     "say": "ไก่ราคาหนึ่งตัวนี้ ช่วยเพิ่มพลังโจมตี ให้เพื่อนได้ด้วยนะ!"
+    }
+   ],
+   "title": "เฮเฮ\n*ราคา 1* ช่วยเพื่อนได้"
+  },
+  {
+   "beat": "reveal",
+   "duration": 9,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_7b875417a470447eb4d998d9b634580b.avif?1709690747",
+   "parts": [
+    {
+     "text": "ใบที่ 7 เฮเฮ ของว่างบนเรือ",
+     "say": "ใบที่เจ็ด เฮเฮ โบ๊ท สแน็ก. ก็คือเฮเฮ ของกินบนเรือ."
+    },
+    {
+     "text": "หมึกอำพัน · ระดับ Common",
+     "say": "เป็นหมึกอำพัน ระดับคอมมอน ซึ่งเป็นระดับที่เจอได้บ่อยที่สุดในชุด."
+    }
+   ],
+   "title": "HeiHei\nBoat Snack",
+   "chapter": "เฮเฮ"
+  },
+  {
+   "beat": "stats",
+   "duration": 7,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_7b875417a470447eb4d998d9b634580b.avif?1709690747",
+   "parts": [
+    {
+     "text": "ราคา 1 · โจมตี 1 · ป้องกัน 2",
+     "say": "ราคาแค่หนึ่ง. พลังโจมตีหนึ่ง. พลังป้องกันสอง."
+    },
+    {
+     "text": "คะแนนลอร์ 1",
+     "say": "แต่ได้คะแนนลอร์ หนึ่งแต้มเต็มๆ. คุ้มเกินราคา."
+    }
+   ],
+   "title": "ค่าบนการ์ด",
+   "chapter": "บนการ์ด",
+   "stats": [
+    {
+     "label": "ราคา",
+     "value": 1,
+     "max": 9
+    },
+    {
+     "label": "พลังโจมตี",
+     "value": 1,
+     "max": 9
+    },
+    {
+     "label": "พลังป้องกัน",
+     "value": 2,
+     "max": 9
+    }
+   ]
+  },
+  {
+   "beat": "quiz",
+   "duration": 8,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_7b875417a470447eb4d998d9b634580b.avif?1709690747",
+   "parts": [
+    {
+     "text": "Support ทำอะไร?",
+     "say": "ใบนี้มีความสามารถเดียว ชื่อ ซัพพอร์ต. ทายสิ ทำอะไร?"
+    },
+    {
+     "text": "เอาพลังโจมตีไปบวกให้ตัวอื่น",
+     "say": "ตอนไปเควสต์ เอาพลังโจมตีของเฮเฮ ไปบวกให้ตัวละครอื่นหนึ่งตัว."
+    }
+   ],
+   "title": "Support\nทำอะไร?",
+   "chapter": "ทายสิ",
+   "choices": [
+    "เอาพลังโจมตีไปบวกให้ตัวอื่น",
+    "ห้ามถูกท้าสู้",
+    "จั่วการ์ด 1 ใบ"
+   ],
+   "answer": 0
+  },
+  {
+   "beat": "zoom",
+   "duration": 12,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_7b875417a470447eb4d998d9b634580b.avif?1709690747",
+   "parts": [
+    {
+     "text": "Support เฉพาะเทิร์นนั้น",
+     "say": "ลองดูข้อความจริงบนก๊าด. ทุกครั้งที่เฮเฮไปเควสต์ จะเอาพลังโจมตีของมัน ไปบวกให้ตัวละครอื่นที่เลือก ในเทิร์นนั้น."
+    },
+    {
+     "text": "เฮเฮมีพลังหนึ่ง ก็บวกให้หนึ่ง",
+     "say": "เฮเฮมีพลังโจมตีหนึ่ง ก็เลยบวกให้เพื่อนหนึ่งแต้ม."
+    }
+   ],
+   "title": "Support\nซัพพอร์ต",
+   "focus_x": 50,
+   "focus_y": 72,
+   "focus_zoom": 1.6,
+   "chapter": "ความสามารถ"
+  },
+  {
+   "beat": "bignum",
+   "duration": 8,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_7b875417a470447eb4d998d9b634580b.avif?1709690747",
+   "parts": [
+    {
+     "text": "เพื่อนพลัง 3 → 4",
+     "say": "ลองคิดเลขดู. ถ้าเพื่อนมีพลังโจมตีสาม เฮเฮไปเควสต์ แล้วบวกให้หนึ่ง เพื่อนก็กลายเป็นสี่ ในเทิร์นนั้น."
+    }
+   ],
+   "title": "พลังโจมตีของเพื่อน",
+   "value": 4,
+   "from": 3,
+   "subtitle": "เฮเฮบวกให้ +1 ในเทิร์นนั้น",
+   "chapter": "ลองคิดเลข",
+   "text": "เพื่อนพลังโจมตี 3 + เฮเฮ 1"
+  },
+  {
+   "beat": "name",
+   "duration": 7,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_7b875417a470447eb4d998d9b634580b.avif?1709690747",
+   "parts": [
+    {
+     "text": "เฮเฮ มาจากหนังปี 2016",
+     "say": "เฮเฮมาจากหนังดิสนีย์ โมอาน่า ปีสองพันสิบหก."
+    },
+    {
+     "text": "ไก่ที่แอบขึ้นเรือ",
+     "say": "มันคือไก่ที่แอบขึ้นเรือของโมอาน่า ไปผจญภัยด้วยกัน."
+    }
+   ],
+   "title": "Moana",
+   "chapter": "ที่มา",
+   "chips": [
+    {
+     "big": "2016",
+     "small": "ปีที่หนังออกฉาย"
+    },
+    {
+     "big": "Heihei",
+     "small": "ไก่ตัวป่วน"
+    }
+   ]
+  },
+  {
+   "beat": "name",
+   "duration": 8,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_7b875417a470447eb4d998d9b634580b.avif?1709690747",
+   "parts": [
+    {
+     "text": "Boat Snack มาจากคำของเมาอิ",
+     "say": "ส่วนชื่อ โบ๊ท สแน็ก มาจากตอนที่เมาอิเรียกมันว่า ของกินบนเรือ."
+    },
+    {
+     "text": "ชื่อเวอร์ชันนี้ ล้อมุกในหนัง",
+     "say": "ชื่อเวอร์ชันของก๊าดใบนี้ ก็เลยล้อมุกจากในหนังเลย."
+    }
+   ],
+   "title": "Boat Snack",
+   "chapter": "ที่มาของชื่อ",
+   "chips": [
+    {
+     "big": "Maui",
+     "small": "คนเรียกเฮเฮแบบนี้"
+    },
+    {
+     "big": "Boat Snack",
+     "small": "ของกินบนเรือ"
+    }
+   ]
+  },
+  {
+   "beat": "art",
+   "duration": 6,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_7b875417a470447eb4d998d9b634580b.avif?1709690747",
+   "parts": [
+    {
+     "text": "ผู้วาด เจนนา เกรย์",
+     "say": "ภาพนี้วาดโดย เจนนา เกรย์. เฮเฮยืนเขย่งอยู่บนหัวเรือ ท่ามกลางท้องฟ้าสีส้มอบอุ่น."
+    }
+   ],
+   "title": "ผู้วาด\nJenna Gray",
+   "subtitle": "HeiHei • Boat Snack",
+   "chapter": "ผู้วาด"
+  },
+  {
+   "beat": "card",
+   "duration": 8,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_7b875417a470447eb4d998d9b634580b.avif?1709690747",
+   "parts": [
+    {
+     "text": "“จุดแข็งอยู่ใต้ผิวน้ำ”",
+     "say": "ข้อความเล่าเรื่องใต้ก๊าด เป็นคำพูดของโมอาน่า. บางครั้ง จุดแข็งของเราก็ซ่อนอยู่ใต้ผิวน้ำ. ลึกลงไปมากๆ ในบางกรณี."
+    }
+   ],
+   "text": "“Sometimes, our strengths lie beneath the surface. *Far beneath*, in some cases....” —Moana"
+  },
+  {
+   "beat": "card",
+   "duration": 4,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_7b875417a470447eb4d998d9b634580b.avif?1709690747",
+   "parts": [
+    {
+     "text": "ไก่ตัวนี้ คุณจะใส่ในเด็คไหม?",
+     "say": "แล้วเฮเฮตัวนี้ คุณจะใส่ไว้ในเด็คไหม? คอมเมนต์ไว้เลย."
+    }
+   ],
+   "text": "เฮเฮ\n*ใส่ในเด็คไหม?*"
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "duration": 4,
+   "beat": "still",
+   "parts": [
+    {
+     "text": "ชอบแบบนี้ กดติดตามไว้เลย.",
+     "say": "ชอบเรื่องการ์ดแบบนี้ กดติดตามไว้เลยนะ. ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ],
+   "image_mode": "still",
+   "no_caption": true,
+   "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้"
+  }
+ ],
+ "meta": {
+  "title": "เฮเฮ ไก่ราคา 1 เพิ่มพลังโจมตีให้เพื่อน | Lorcana #7 #shorts",
+  "description": "HeiHei, Boat Snack 7/204 ชุด The First Chapter ของ Disney Lorcana (Common) หมึกอำพัน ราคา 1 พลังโจมตี 1 พลังป้องกัน 2 ลอร์ 1 ความสามารถ Support ตอนไปเควสต์ เอาพลังโจมตีไปบวกให้ตัวละครอื่นหนึ่งตัวในเทิร์นนั้น วาดโดย Jenna Gray ตัวละครจากหนัง Moana (2016) วางขาย 18 ส.ค. 2023\n\n👇 เฮเฮตัวนี้ คุณจะใส่ไว้ในเด็คไหม? คอมเมนต์ไว้เลย\n\nภาพ: ภาพการ์ดทางการจาก Lorcast\nข้อมูล: Lorcast, Disney Lorcana, D23\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #lorcana #ลอคาน่า #ดิสนีย์ลอคาน่า #disneylorcana #การ์ดดิสนีย์",
+  "tags": [
+   "lorcana",
+   "ลอคาน่า",
+   "disney lorcana",
+   "heihei",
+   "moana",
+   "โมอาน่า",
+   "the first chapter",
+   "การ์ดดิสนีย์",
+   "shorts"
+  ],
+  "thumb": {
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_7b875417a470447eb4d998d9b634580b.avif?1709690747",
+   "hook": "เฮเฮ ไก่ราคา 1\nเพิ่มพลังให้เพื่อน",
+   "badge": "#7",
+   "sub": "ลอคาน่า ชุดแรก"
+  },
+  "engage": "👇 เฮเฮตัวนี้ คุณจะใส่ไว้ในเด็คไหม? คอมเมนต์ไว้เลย",
+  "publish_at": "2026-11-02T05:00:00Z",
+  "campaign": "lorcana-set1-007",
+  "site_path": "/"
+ }
+}
