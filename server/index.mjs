@@ -2150,6 +2150,24 @@ app.post("/zernio-delete", auth, async (req, res) => {
   res.json(out);
 });
 
+// เลื่อนเวลาโพสต์ที่ตั้งไว้ใน Zernio: POST /zernio-reschedule {items:[{id, at}]} (at = ISO UTC)
+app.post("/zernio-reschedule", auth, async (req, res) => {
+  const out = [];
+  for (const it of Array.isArray(req.body?.items) ? req.body.items : []) {
+    const id = String(it.id || "");
+    try {
+      if (!/^[0-9a-f]{24}$/.test(id) || !it.at || Number.isNaN(Date.parse(it.at))) throw new Error("bad id/at");
+      await zernio(`/posts/${id}`, { method: "PUT", body: JSON.stringify({ scheduledFor: new Date(it.at).toISOString() }) });
+      const after = await zernio(`/posts/${id}`).catch(() => null);
+      out.push({ id, ok: true, at: after?.post?.scheduledFor, status: after?.post?.status });
+    } catch (e) {
+      out.push({ id, error: String(e?.message || e) });
+    }
+  }
+  console.log(`[zernio-reschedule] ${JSON.stringify(out)}`);
+  res.json(out);
+});
+
 // โพสต์คลิปที่ render แล้วขึ้นเพจ Facebook: POST /facebook-post {items:[{video_url, file, at, duration}]}
 app.post("/facebook-post", auth, async (req, res) => {
   const out = [];
