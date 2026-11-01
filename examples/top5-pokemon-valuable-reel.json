@@ -1,0 +1,205 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "5 การ์ดโปเกมอนเก่า ที่ไม่ใช่พิคาชู ขายเกิน 8 แสนดอลลาร์ #shorts",
+  "description": "นับถอยหลัง 5 การ์ดโปเกมอนยุคเก่า (ปี 2001–2008) ที่ไม่ใช่พิคาชูและไม่ใช่ลิซาร์ดอน แต่ขายได้เกิน 800,000 ดอลลาร์ ในช่วง ส.ค.–ต.ค. 2026 (ราคาขายจริง ตามรายงานยอดขายรายสัปดาห์จาก Card Ladder / Sports Illustrated Collectibles)\n5) Mew Southern Islands #1 (2001) PSA 10 — $840,000 Fanatics Weekly 4 ต.ค. 2026\n4) Garchomp LV.X Majestic Dawn #97 (2008) PSA 10 — $900,000 Fanatics Weekly 20 ก.ย. 2026\n3) Cresselia Great Encounters #2 (2008) PSA 10 — $960,000 Fanatics Weekly 4 ต.ค. 2026\n2) Mudkip Gold Star EX Team Rocket Returns #107 (2004) PSA 10 — $1,020,000 Fanatics Weekly 20 ก.ย. 2026\n1) Rayquaza Gold Star EX Deoxys #107 (2005) CGC 10 Pristine — $1,020,000 Fanatics Premier สัปดาห์ 24–30 ส.ค. 2026 (ราคาเท่ากับอันดับ 2)\n\n👇 ในห้าใบนี้ ถ้าเลือกเก็บได้ใบเดียว คุณเลือกใบไหน?\n\nหมายเหตุ: ราคาเปลี่ยนตามตลาดและแหล่งข้อมูล รายงานไม่ระบุว่ารวมค่าธรรมเนียมผู้ซื้อหรือไม่ ลิสต์นี้ไม่รวมการ์ดอื่นที่ขายสูงกว่าในช่วงเดียวกัน เช่น พิคาชูและลิซาร์ดอน ตามชื่อคลิป ยอดบาทประมาณที่ 33.6 บาท/ดอลลาร์ (ธนาคาร 20 ต.ค. 2026)\nข้อมูล: Sports Illustrated Collectibles (Top 5 TCG sales of the week, ต.ค. 2026 / ก.ย. 2026 / ส.ค. 2026), Card Ladder, CGC Cards, Fanatics Collect\nภาพการ์ด: Scrydex (ภาพการ์ดประเภทเดียวกัน ไม่ใช่ใบที่ขายจริง)\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #การ์ดแพง #pokemon #โปเกมอน #การ์ดโปเกมอน #pokemoncards #GoldStar",
+  "thumb": {
+   "image_url": "https://images.scrydex.com/pokemon/ex8-107/large",
+   "hook": "ไม่ใช่พิคาชู\nขายเกินล้าน?",
+   "sub": "5 การ์ดแพง",
+   "badge": "TOP 5"
+  },
+  "engage": "👇 ในห้าใบนี้ ถ้าเลือกเก็บได้ใบเดียว คุณเลือกใบไหน?",
+  "campaign": "top5-pkm-valuable",
+  "site_path": "/",
+  "publish_at": "2026-11-02T05:00:00Z"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.35,
+  "speed": 1.05,
+  "prefix": "[soft, smooth, warm Thai storyteller, upbeat but never loud, never sad]"
+ },
+ "audio_rate": 1.0,
+ "composition": "CardShow",
+ "theme": "electric",
+ "badge": "การ์ดแพง TOP 5",
+ "series": "การ์ดแพงเท่าอะไร",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055,
+ "slides": [
+  {
+   "beat": "full",
+   "duration": 10,
+   "text": "ไม่ใช่ *พิคาชู* ไม่ใช่ *ลิซาร์ดอน*",
+   "title": "ไม่ใช่พิคาชู\n*ไม่ใช่ลิซาร์ดอน*",
+   "subtitle": "5 ใบ ขายเกิน 8 แสนดอลลาร์",
+   "image_url": "https://images.scrydex.com/pokemon/ex8-107/large",
+   "price": "$1.02M",
+   "price_label": "สูงสุดในห้าใบ",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "ไม่ใช่ *พิคาชู* ไม่ใช่ *ลิซาร์ดอน*",
+     "say": "ไม่ใช่พิคาชู ไม่ใช่ลิซาร์ดอน แต่ห้าใบนี้ ขายเกินแปดแสนดอลลาร์."
+    },
+    {
+     "text": "นับถอยหลัง *5 ใบ* ที่เพิ่งขายไป",
+     "say": "ห้าก๊าดยุคเก่า ที่เพิ่งขายไปในไม่กี่เดือนนี้. เริ่มจากอันดับห้า."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 11,
+   "rank": "5",
+   "title": "Mew\n*Southern Islands*",
+   "image_url": "https://images.scrydex.com/pokemon/si1-1/large",
+   "price": "$840K",
+   "price_label": "ขายจริง",
+   "subtitle": "≈ ฿28 ล้าน",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "อันดับ 5 *มิว* เซาเทิร์นไอส์แลนด์",
+     "say": "อันดับห้า มิว จากชุดพิเศษ เซาเทิร์นไอส์แลนด์ ปีสองพันศูนย์หนึ่ง เกรดพี เอส เอ สิบ."
+    },
+    {
+     "text": "ขาย *840,000 ดอลลาร์* ต้น ต.ค.",
+     "say": "ขายไปแปดแสนสี่หมื่นดอลลาร์ ที่แฟนาติกส์ ต้นเดือนตุลาคมปีนี้."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 11,
+   "rank": "4",
+   "title": "Garchomp LV.X\n*Majestic Dawn*",
+   "image_url": "https://images.scrydex.com/pokemon/dp5-97/large",
+   "price": "$900K",
+   "price_label": "ขายจริง",
+   "subtitle": "≈ ฿30 ล้าน",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "อันดับ 4 *การ์ชอมป์* LV.X",
+     "say": "อันดับสี่ การ์ชอมป์ เลเวล เอ็กซ์ จากชุด มาเจสติก ดอว์น ปีสองพันศูนย์แปด เกรดพี เอส เอ สิบ."
+    },
+    {
+     "text": "ขาย *900,000 ดอลลาร์* เดือน ก.ย.",
+     "say": "ขายไปเก้าแสนดอลลาร์ ที่แฟนาติกส์ วันที่ยี่สิบ กันยายน."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 13,
+   "rank": "3",
+   "title": "Cresselia\n*Great Encounters*",
+   "image_url": "https://images.scrydex.com/pokemon/dp4-2/large",
+   "price": "$960K",
+   "price_label": "ขายจริง",
+   "subtitle": "≈ ฿32 ล้าน",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "อันดับ 3 *เครสเซเลีย* เกรท เอนเคาน์เตอร์ส",
+     "say": "อันดับสาม เครสเซเลีย จากชุด เกรท เอนเคาน์เตอร์ส ปีสองพันศูนย์แปด เกรดพี เอส เอ สิบ."
+    },
+    {
+     "text": "ขาย *960,000 ดอลลาร์* ต้น ต.ค.",
+     "say": "ขายไปเก้าแสนหกหมื่นดอลลาร์ ต้นเดือนตุลาคม. ศิลปินคนเดียวกับการ์ชอมป์ คือ เรียว อุเอดะ."
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 7,
+   "text": "สองใบสุดท้าย *ทะลุล้านดอลลาร์*",
+   "title": "สองใบสุดท้าย\n*ทะลุล้านดอลลาร์*",
+   "subtitle": "การ์ดโกลด์สตาร์",
+   "image_url": "https://images.scrydex.com/pokemon/ex7-107/large",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "สองใบสุดท้าย *ทะลุล้านดอลลาร์*",
+     "say": "แต่สองใบสุดท้าย ราคาทะลุล้านดอลลาร์ ทั้งคู่. เป็นก๊าดโกลด์สตาร์ ที่ขึ้นชื่อว่าเปิดเจอยาก."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 15,
+   "rank": "2",
+   "title": "Mudkip Gold Star\n*EX Team Rocket Returns*",
+   "image_url": "https://images.scrydex.com/pokemon/ex7-107/large",
+   "price": "$1.02M",
+   "price_label": "ขายจริง",
+   "subtitle": "≈ ฿34 ล้าน",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "อันดับ 2 *มัดคิป โกลด์สตาร์*",
+     "say": "อันดับสอง มัดคิป โกลด์สตาร์ จากชุด อีเอ็กซ์ ทีมร็อกเก็ต รีเทิร์นส์ ปีสองพันศูนย์สี่ เกรดพี เอส เอ สิบ."
+    },
+    {
+     "text": "ขาย *1.02 ล้านดอลลาร์* เดือน ก.ย.",
+     "say": "ขายไปหนึ่งล้านสองหมื่นดอลลาร์ วันที่ยี่สิบ กันยายน. ก๊าดโกลด์สตาร์ ใส่ในเด็คได้แค่ใบเดียว."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 13,
+   "rank": "1",
+   "title": "Rayquaza Gold Star\n*EX Deoxys*",
+   "image_url": "https://images.scrydex.com/pokemon/ex8-107/large",
+   "price": "$1.02M",
+   "price_label": "ขายจริง",
+   "subtitle": "≈ ฿34 ล้าน",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "อันดับ 1 *เรย์ควอซา โกลด์สตาร์*",
+     "say": "อันดับหนึ่ง เรย์ควอซา โกลด์สตาร์ จากชุด อีเอ็กซ์ ดีออกซิส ปีสองพันศูนย์ห้า เกรดซี จี ซี พริสทีน สิบ."
+    },
+    {
+     "text": "ขาย *1.02 ล้านดอลลาร์* เท่ามัดคิป",
+     "say": "ขายไปหนึ่งล้านสองหมื่นดอลลาร์ ราคาเท่ามัดคิปเป๊ะ เมื่อปลายเดือนสิงหาคม."
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 5,
+   "text": "ใน 5 ใบนี้\n*คุณเลือกเก็บใบไหน?*",
+   "image_url": "https://images.scrydex.com/pokemon/ex8-107/large",
+   "parts": [
+    {
+     "text": "ใน 5 ใบนี้ *คุณเลือกเก็บใบไหน?*",
+     "say": "ในห้าใบนี้ ถ้าเลือกเก็บได้ใบเดียว คุณเลือกใบไหน? คอมเมนต์ไว้เลย."
+    }
+   ]
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "image_mode": "still",
+   "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+   "duration": 7,
+   "parts": [
+    {
+     "text": "ชอบเรื่องเล่าแบบนี้ *กดติดตาม* ไว้เลย",
+     "say": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้เลย."
+    },
+    {
+     "text": "*ซื้อ ขาย สะสม แข่งเกมส์การ์ด* ที่ www.cardzcenter.com",
+     "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ],
+   "no_caption": true,
+   "beat": "still"
+  }
+ ]
+}

@@ -1,0 +1,205 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "5 การ์ดโปเกมอนฮอตสุดตอนนี้ ติดท็อป 10 ยอดขายทุกเกม #shorts",
+  "description": "นับถอยหลัง 5 การ์ดโปเกมอนที่ฮอตที่สุดตอนนี้ ในแง่ยอดขายรวมเป็นเงิน (GMV) บน TCGplayer Marketplace ไตรมาส 3 ปี 2026 (1 ก.ค.–30 ก.ย. 2026) ทั้ง 5 ใบติดท็อป 10 การ์ดใบเดี่ยวที่ทำยอดขายสูงสุดของทุกเกม\n5) Charizard ex 199/165 (Scarlet & Violet—151) ราคาตลาด $321.26 — อันดับ 8 ของทุกเกม\n4) Mega Charizard X ex 125/094 (Phantasmal Flames) ราคาตลาด $661.14 — อันดับ 7\n3) Pikachu ex 276/217 (Ascended Heroes) ราคาตลาด $821.26 — อันดับ 6\n2) Mega Greninja ex 116/086 (Chaos Rising) ราคาตลาด $129.97 — อันดับ 5\n1) Mega Darkrai ex 116/084 (Pitch Black) ราคาตลาด $147.98 — อันดับ 2 (รองแค่ Black Chaos ของ Yu-Gi-Oh!)\nทั้ง 5 ใบเป็นระดับ Special Illustration Rare ชุดที่ขายรวมสูงสุดของไตรมาสคือ 30th Celebration (โปเกมอน)\n\n👇 ในห้าใบนี้ คุณตามหาใบไหนอยู่?\n\nหมายเหตุ: อันดับตามยอดขายรวมเป็นเงิน ไม่ใช่จำนวนใบ ราคาตลาด ณ วันที่ 9 ต.ค. 2026 ตามบทความ และเปลี่ยนตลอดเวลา ยอดบาทประมาณที่ 33.6 บาท/ดอลลาร์ (ธนาคาร 20 ต.ค. 2026)\nข้อมูล: TCGplayer Seller Blog \"Best-Selling Trading Card Games, Q3 2026\" โดย Peter Day (14 ต.ค. 2026), Scrydex (ข้อมูลการ์ด)\nภาพการ์ด: Scrydex\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #โปเกมอน #การ์ดโปเกมอน #pokemon #pokemoncards #การ์ดฮอต #pokemontcg",
+  "thumb": {
+   "image_url": "https://images.scrydex.com/pokemon/me5-116/large",
+   "hook": "5 การ์ดโปเกมอน\nฮอตสุดตอนนี้",
+   "sub": "ท็อป 10 ยอดขายทุกเกม",
+   "badge": "TOP 5"
+  },
+  "engage": "👇 ในห้าใบนี้ คุณตามหาใบไหนอยู่?",
+  "campaign": "top5-pkm-hot",
+  "site_path": "/",
+  "publish_at": "2026-11-02T05:00:00Z"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.35,
+  "speed": 1.05,
+  "prefix": "[soft, smooth, warm Thai storyteller, upbeat but never loud, never sad]"
+ },
+ "audio_rate": 1.0,
+ "composition": "CardShow",
+ "theme": "psychic",
+ "badge": "การ์ดฮอต TOP 5",
+ "series": "การ์ดโปเกมอนฮอต",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055,
+ "slides": [
+  {
+   "beat": "full",
+   "duration": 13,
+   "text": "ห้าการ์ดโปเกมอน *ฮอตสุด* ตอนนี้",
+   "title": "5 การ์ดโปเกมอน\n*ฮอตสุดตอนนี้*",
+   "subtitle": "ติดท็อป 10 การ์ดทำเงินสูงสุด",
+   "image_url": "https://images.scrydex.com/pokemon/me5-116/large",
+   "price": "$148",
+   "price_label": "ใบอันดับ 1",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "ห้าการ์ดโปเกมอน *ฮอตสุด* ตอนนี้",
+     "say": "ห้าก๊าดโปเกมอนที่ฮอตที่สุดตอนนี้ ติดท็อปเท็นของทุกเกม."
+    },
+    {
+     "text": "ข้อมูลจาก *TCGplayer* ไตรมาส 3",
+     "say": "เป็นก๊าดใบเดี่ยวที่ทำเงินสูงสุด ตามข้อมูลของ ที ซี จี เพลเยอร์ เดือนกรกฎาคมถึงกันยายนปีนี้. เริ่มจากอันดับห้า."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 14,
+   "rank": "5",
+   "title": "Charizard ex\n*Scarlet & Violet 151*",
+   "image_url": "https://images.scrydex.com/pokemon/sv3pt5-199/large",
+   "price": "$321",
+   "price_label": "ราคาตลาด 9 ต.ค.",
+   "subtitle": "≈ ฿10,800",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "อันดับ 5 *ลิซาร์ดอน อีเอ็กซ์* ชุด 151",
+     "say": "อันดับห้า ลิซาร์ดอน อีเอ็กซ์ จากชุด โปเกมอน หนึ่งร้อยห้าสิบเอ็ด ที่ออกตั้งแต่ปีสองพันยี่สิบสาม."
+    },
+    {
+     "text": "ผ่านมา *3 ปี* ก็ยังขายดี",
+     "say": "ผ่านมาสามปีแล้ว ก็ยังขายดี ติดอันดับแปดของทุกเกม. ราคาตลาดสามร้อยยี่สิบเอ็ดดอลลาร์."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 9,
+   "rank": "4",
+   "title": "Mega Charizard X ex\n*Phantasmal Flames*",
+   "image_url": "https://images.scrydex.com/pokemon/me2-125/large",
+   "price": "$661",
+   "price_label": "ราคาตลาด 9 ต.ค.",
+   "subtitle": "≈ ฿22,200",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "อันดับ 4 *เมก้า ลิซาร์ดอน X* อีเอ็กซ์",
+     "say": "อันดับสี่ เมก้า ลิซาร์ดอน เอ็กซ์ อีเอ็กซ์ จากชุด แฟนทัสมัล เฟลมส์."
+    },
+    {
+     "text": "ราคาตลาด *661 ดอลลาร์*",
+     "say": "ราคาตลาดหกร้อยหกสิบเอ็ดดอลลาร์ ติดอันดับเจ็ดของทุกเกม."
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 7,
+   "text": "ทั้ง 5 ใบ *ภาพเต็มใบ*",
+   "title": "ทั้ง 5 ใบ\n*ภาพวาดเต็มใบ*",
+   "subtitle": "Special Illustration Rare",
+   "image_url": "https://images.scrydex.com/pokemon/me2pt5-276/large",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "ทั้ง 5 ใบ *ภาพเต็มใบ*",
+     "say": "ทั้งห้าใบนี้ เป็นระดับสเปเชียล อิลลัสเตรชัน แรร์ ภาพวาดเต็มใบ มีดาวทองที่มุมขวาล่าง."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 12,
+   "rank": "3",
+   "title": "Pikachu ex\n*Ascended Heroes*",
+   "image_url": "https://images.scrydex.com/pokemon/me2pt5-276/large",
+   "price": "$821",
+   "price_label": "ราคาตลาด 9 ต.ค.",
+   "subtitle": "≈ ฿27,600",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "อันดับ 3 *พิคาชู อีเอ็กซ์* แอสเซนเดด ฮีโร่ส์",
+     "say": "อันดับสาม พิคาชู อีเอ็กซ์ จากชุด แอสเซนเดด ฮีโร่ส์ ภาพพิคาชูยืนกลางป่า ที่แสงส่องลงมา."
+    },
+    {
+     "text": "ราคาตลาด *821 ดอลลาร์*",
+     "say": "ราคาตลาดแปดร้อยยี่สิบเอ็ดดอลลาร์ แพงที่สุดในห้าใบนี้ และติดอันดับหกของทุกเกม."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 11,
+   "rank": "2",
+   "title": "Mega Greninja ex\n*Chaos Rising*",
+   "image_url": "https://images.scrydex.com/pokemon/me4-116/large",
+   "price": "$130",
+   "price_label": "ราคาตลาด 9 ต.ค.",
+   "subtitle": "≈ ฿4,400",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "อันดับ 2 *เมก้า เกรนินจา* อีเอ็กซ์",
+     "say": "อันดับสอง เมก้า เกรนินจา อีเอ็กซ์ จากชุด เคออส ไรซิ่ง."
+    },
+    {
+     "text": "ราคาตลาด *129 ดอลลาร์* แต่คนซื้อเยอะ",
+     "say": "ราคาตลาดแค่ร้อยยี่สิบเก้าดอลลาร์ แต่คนซื้อกันเยอะ จนยอดขายรวมติดอันดับห้าของทุกเกม."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 11,
+   "rank": "1",
+   "title": "Mega Darkrai ex\n*Pitch Black*",
+   "image_url": "https://images.scrydex.com/pokemon/me5-116/large",
+   "price": "$148",
+   "price_label": "ราคาตลาด 9 ต.ค.",
+   "subtitle": "≈ ฿5,000",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "อันดับ 1 *เมก้า ดาร์กไร* อีเอ็กซ์",
+     "say": "อันดับหนึ่ง เมก้า ดาร์กไร อีเอ็กซ์ จากชุด พิตช์ แบล็ก ชุดที่เพิ่งออกในไตรมาสนี้."
+    },
+    {
+     "text": "ยอดขายรวม *อันดับ 2* ของทุกเกม",
+     "say": "ยอดขายรวมสูงเป็นอันดับสองของทุกเกม เป็นรองแค่ก๊าดยูกิใบเดียว."
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 4,
+   "text": "ใน 5 ใบนี้\n*คุณตามหาใบไหน?*",
+   "image_url": "https://images.scrydex.com/pokemon/me5-116/large",
+   "parts": [
+    {
+     "text": "ใน 5 ใบนี้ *คุณตามหาใบไหน?*",
+     "say": "ในห้าใบนี้ คุณตามหาใบไหนอยู่? คอมเมนต์บอกได้เลย."
+    }
+   ]
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "image_mode": "still",
+   "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+   "duration": 7,
+   "parts": [
+    {
+     "text": "ชอบเรื่องเล่าแบบนี้ *กดติดตาม* ไว้เลย",
+     "say": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้เลย."
+    },
+    {
+     "text": "*ซื้อ ขาย สะสม แข่งเกมส์การ์ด* ที่ www.cardzcenter.com",
+     "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ],
+   "no_caption": true,
+   "beat": "still"
+  }
+ ]
+}
