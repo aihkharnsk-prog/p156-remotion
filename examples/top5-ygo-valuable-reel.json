@@ -1,0 +1,190 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "audio_rate": 1.0,
+ "composition": "CardShow",
+ "theme": "psychic",
+ "badge": "TOP 5",
+ "series": "ยูกิโอ๊ะ การ์ดแพง",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055,
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.35,
+  "speed": 1.05,
+  "prefix": "[calm, soft, natural storyteller]"
+ },
+ "slides": [
+  {
+   "beat": "full",
+   "duration": 7,
+   "image_url": "https://www.wargamer.com/wp-content/sites/wargamer/2023/04/yugioh-trading-card-game-most-expensive-yugioh-cards-tyler-the-great-warrior-1200x675.jpg",
+   "fit": "cover",
+   "title": "5 การ์ดยูกิโอ๊ะ\n*แพงที่สุดในโลก*",
+   "price_label": "ใบแรก",
+   "price": "฿10.4M",
+   "text": "5 การ์ดยูกิโอ๊ะ แพงที่สุด",
+   "parts": [
+    {
+     "text": "5 การ์ดยูกิโอ๊ะ *แพงที่สุดในโลก*",
+     "say": "ห้าการ์ดยูกิโอ๊ะ ที่ขายแพงที่สุดในโลก. ใบแรก ราวสิบล้านบาท!"
+    },
+    {
+     "text": "เริ่มที่ *อันดับ 5*",
+     "say": "เริ่มที่อันดับห้า."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 15,
+   "image_url": "https://www.wargamer.com/wp-content/sites/wargamer/2021/12/most-expensive-yugioh-cards-crush-card-virus-1200x675.jpg",
+   "rank": "#5",
+   "price_label": "ขายได้",
+   "price": "$49,999",
+   "subtitle": "มิ.ย. 2020 • eBay • PSA 10",
+   "title": "Crush Card Virus\n*Shonen Jump 2007*",
+   "fit": "contain",
+   "pos": "50% 50%",
+   "parts": [
+    {
+     "text": "อันดับ 5 *Crush Card Virus* การ์ดรางวัลปี 2007",
+     "say": "อันดับห้า ครัช การ์ด ไวรัส การ์ดรางวัลแข่งโชเน็นจัมป์ ปีสองศูนย์ศูนย์เจ็ด เดิมผลิตแค่สี่สิบใบ."
+    },
+    {
+     "text": "ขายที่ eBay *49,999 ดอลลาร์*",
+     "say": "ใบเกรด พี เอส เอ สิบ ขายที่อีเบย์ เดือนมิถุนายน สองศูนย์สองศูนย์ สี่หมื่นเก้าพันเก้าร้อยเก้าสิบเก้าดอลลาร์."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 11,
+   "image_url": "https://www.wargamer.com/wp-content/sites/wargamer/2021/12/most-expensive-yugioh-cards-blue-eyes-white-dragon-1200x675.jpg",
+   "rank": "#4",
+   "price_label": "ประมูลปิด",
+   "price": "$85,000",
+   "subtitle": "ต.ค. 2020 • PSA 10",
+   "title": "Blue-Eyes White Dragon\n*LOB 1st Edition*",
+   "fit": "contain",
+   "pos": "50% 50%",
+   "parts": [
+    {
+     "text": "อันดับ 4 *Blue-Eyes White Dragon* ชุดแรก",
+     "say": "อันดับสี่ บลู อายส์ ไวท์ ดราก้อน ชุดแรกสุด ฉบับเฟิร์สต์ เอดิชัน."
+    },
+    {
+     "text": "ประมูลปิด *85,000 ดอลลาร์*",
+     "say": "ใบเกรด พี เอส เอ สิบ ประมูลปิดที่แปดหมื่นห้าพันดอลลาร์ เดือนตุลาคม สองศูนย์สองศูนย์."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 13,
+   "image_url": "https://www.wargamer.com/wp-content/sites/wargamer/2025/09/most-expensive-yugioh-cards-masahiro-the-dark-clown-1200x675.jpg",
+   "rank": "#3",
+   "price_label": "ขายได้",
+   "price": "$173,923",
+   "subtitle": "ก.ย. 2025 • eBay",
+   "title": "Masahiro the Dark Clown\n*รางวัลที่ 1 ปี 2001*",
+   "fit": "contain",
+   "pos": "50% 50%",
+   "parts": [
+    {
+     "text": "อันดับ 3 *Masahiro the Dark Clown*",
+     "say": "อันดับสาม มาซาฮิโระ เดอะ ดาร์ก คลาวน์ การ์ดรางวัลที่หนึ่ง ของรายการแข่งในญี่ปุ่น ปีสองพันหนึ่ง."
+    },
+    {
+     "text": "ขายที่ eBay *ราว 1.7 แสนดอลลาร์*",
+     "say": "ขายที่อีเบย์ เดือนกันยายน สองศูนย์สองห้า เกือบหนึ่งแสนเจ็ดหมื่นสี่พันดอลลาร์."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 13,
+   "image_url": "https://www.wargamer.com/wp-content/sites/wargamer/2024/08/most-expensive-yugioh-cards-gemini-elf-t3-04-1200x675.jpg",
+   "rank": "#2",
+   "price_label": "ขายส่วนตัว",
+   "price": "¥40 ล้าน",
+   "subtitle": "8 พ.ค. 2024 • ≈ $254,791",
+   "title": "Gemini Elf อาร์ตพิเศษ\n*รางวัลที่ 4 ปี 2001*",
+   "fit": "contain",
+   "pos": "50% 50%",
+   "parts": [
+    {
+     "text": "อันดับ 2 *Gemini Elf* อาร์ตพิเศษ",
+     "say": "อันดับสอง เจมินี เอลฟ์ ภาพอาร์ตพิเศษ รางวัลที่สี่ของรายการแชมเปี้ยนชิพเอเชีย ปีสองพันหนึ่ง."
+    },
+    {
+     "text": "ขาย *40 ล้านเยน* ≈ 254,791 ดอลลาร์",
+     "say": "ขายส่วนตัว สี่สิบล้านเยน ราวสองแสนห้าหมื่นสี่พันดอลลาร์ เมื่อแปด พฤษภาคม สองศูนย์สองสี่."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 13,
+   "image_url": "https://www.wargamer.com/wp-content/sites/wargamer/2023/04/yugioh-trading-card-game-most-expensive-yugioh-cards-tyler-the-great-warrior-1200x675.jpg",
+   "rank": "#1",
+   "price_label": "ขายได้",
+   "price": "$311,211",
+   "subtitle": "เม.ย. 2023 • eBay • ≈ ฿10.4M",
+   "title": "Tyler the Great Warrior\n*ใบเดียวในโลก*",
+   "fit": "contain",
+   "pos": "50% 50%",
+   "parts": [
+    {
+     "text": "อันดับ 1 *Tyler the Great Warrior*",
+     "say": "อันดับหนึ่ง ไทเลอร์ เดอะ เกรท วอร์ริเออร์ การ์ดที่เด็กวัยสิบสี่ ออกแบบเอง พิมพ์ไว้ใบเดียวในโลก."
+    },
+    {
+     "text": "ขายที่ eBay *311,211 ดอลลาร์*",
+     "say": "ขายที่อีเบย์ เดือนเมษายน สองศูนย์สองสาม สามแสนหนึ่งหมื่นหนึ่งพันดอลลาร์ ราวสิบล้านบาท."
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 4,
+   "image_url": "https://www.wargamer.com/wp-content/sites/wargamer/2023/04/yugioh-trading-card-game-most-expensive-yugioh-cards-tyler-the-great-warrior-1200x675.jpg",
+   "text": "ใน 5 ใบนี้\n*คุณอยากได้ใบไหน?*",
+   "parts": [
+    {
+     "text": "ใน 5 ใบนี้ *คุณอยากได้ใบไหน?*",
+     "say": "ในห้าใบนี้ ถ้าเลือกได้ใบเดียว คุณอยากได้ใบไหน?"
+    }
+   ]
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "duration": 4,
+   "beat": "still",
+   "parts": [
+    {
+     "text": "ชอบแบบนี้ กดติดตามไว้เลย.",
+     "say": "ชอบเรื่องการ์ดแบบนี้ กดติดตามไว้เลยนะ. ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ],
+   "image_mode": "still",
+   "no_caption": true,
+   "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้"
+  }
+ ],
+ "meta": {
+  "title": "5 การ์ดยูกิโอ๊ะแพงที่สุดในโลก อันดับ 1 ราว 10 ล้านบาท | Yu-Gi-Oh! #shorts",
+  "description": "นับถอยหลัง 5 การ์ดยูกิโอ๊ะที่ขายแพงที่สุดในโลก (ราคาขายสำเร็จที่มีบันทึก)\n5) Crush Card Virus (Shonen Jump Championship 2007 prize) PSA 10 ขาย 49,999 ดอลลาร์ ที่ eBay มิ.ย. 2020\n4) Blue-Eyes White Dragon LOB 1st Edition PSA 10 ประมูลปิด 85,000 ดอลลาร์ (PSA auction) ต.ค. 2020\n3) Masahiro the Dark Clown (รางวัลที่ 1 รายการ Second National Tournament ญี่ปุ่น 2001) ขายที่ eBay ราว 173,923 ดอลลาร์ ก.ย. 2025\n2) Gemini Elf อาร์ตพิเศษ T3-04 (รางวัลที่ 4 Asian Championships 2001) ขายส่วนตัว 40 ล้านเยน ≈ 254,791 ดอลลาร์ (Vintage Card Japan ประกาศ 8 พ.ค. 2024)\n1) Tyler the Great Warrior ขาย 311,211 ดอลลาร์ ที่ eBay เม.ย. 2023 (BGS 7)\n\n👇 ใน 5 ใบนี้ ถ้าเลือกได้ใบเดียว คุณอยากได้ใบไหน?\n\nอัตราแลกเปลี่ยนประมาณ 33.6 บาท/ดอลลาร์ (ธนาคาร 20 ต.ค. 2026) • ราคาเป็นราคาขายตามที่สื่อรายงาน ไม่รวมใบที่ไม่เคยเปิดเผยราคา ราคาและอันดับอาจเปลี่ยนเมื่อมีการขายใหม่\nภาพ: ภาพการ์ดใบที่ขายจริง/ใบเกรดจริงจาก Wargamer\nข้อมูล: Wargamer (The most expensive Yugioh cards in 2026), PSA Auction Prices, Vintage Card Japan, YGOrganization\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #yugioh #ยูกิโอ๊ะ #การ์ดแพง #การ์ดยูกิ #การ์ดสะสม",
+  "thumb": {
+   "image_url": "https://www.wargamer.com/wp-content/sites/wargamer/2023/04/yugioh-trading-card-game-most-expensive-yugioh-cards-tyler-the-great-warrior-1200x675.jpg",
+   "hook": "5 การ์ดยูกิโอ๊ะ\nแพงที่สุดในโลก",
+   "sub": "ใบแรกราว 10 ล้านบาท",
+   "badge": "TOP 5"
+  },
+  "engage": "👇 ใน 5 ใบนี้ ถ้าเลือกได้ใบเดียว คุณอยากได้ใบไหน?",
+  "publish_at": "2026-11-02T05:00:00Z",
+  "campaign": "top5-ygo-valuable",
+  "site_path": "/"
+ }
+}

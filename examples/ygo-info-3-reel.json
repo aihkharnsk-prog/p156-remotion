@@ -1,0 +1,275 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "audio_rate": 1.0,
+ "composition": "CardShow",
+ "theme": "fire",
+ "badge": "LOB-124",
+ "series": "ยูกิโอ๊ะ การ์ดตำนาน",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055,
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.35,
+  "speed": 1.05,
+  "prefix": "[calm, soft, natural storyteller]"
+ },
+ "slides": [
+  {
+   "beat": "hook",
+   "duration": 7,
+   "image_url": "https://images.ygoprodeck.com/images/cards/33396948.jpg",
+   "title": "ครบ 5 ชิ้นในมือ\n*ชนะทันที*",
+   "parts": [
+    {
+     "text": "ครบ *5 ชิ้น* ในมือ *ชนะทันที*",
+     "say": "การ์ดใบนี้ ถ้ามีครบห้าชิ้นในมือ คุณชนะทันที!"
+    },
+    {
+     "text": "ไม่ต้องโจมตี *สักครั้ง*",
+     "say": "ไม่ต้องสู้ ไม่ต้องโจมตีเลยสักครั้ง."
+    }
+   ]
+  },
+  {
+   "beat": "reveal",
+   "duration": 6,
+   "image_url": "https://images.ygoprodeck.com/images/cards/33396948.jpg",
+   "title": "Exodia the\nForbidden One",
+   "chapter": "ยูกิโอ๊ะ",
+   "parts": [
+    {
+     "text": "นี่คือ *Exodia the Forbidden One*",
+     "say": "นี่คือ เอ็กโซเดีย เดอะ ฟอร์บิดเดน วัน. ชื่อญี่ปุ่นแปลว่า เอ็กโซเดียผู้ถูกผนึก."
+    }
+   ]
+  },
+  {
+   "beat": "stats",
+   "duration": 8,
+   "image_url": "https://images.ygoprodeck.com/images/cards/33396948.jpg",
+   "title": "ค่าบนการ์ด",
+   "chapter": "บนการ์ด",
+   "stats": [
+    {
+     "label": "ระดับ",
+     "value": 3,
+     "max": 12
+    },
+    {
+     "label": "พลังโจมตี",
+     "value": 1000,
+     "max": 5000
+    },
+    {
+     "label": "พลังป้องกัน",
+     "value": 1000,
+     "max": 5000
+    }
+   ],
+   "parts": [
+    {
+     "text": "ระดับ 3 · โจมตี 1000 · ป้องกัน 1000",
+     "say": "ระดับสาม ธาตุมืด สายผู้ร่ายเวทย์. พลังโจมตีหนึ่งพัน. พลังป้องกันหนึ่งพัน. ค่าพลังต่ำ แต่ชนะได้ทั้งเกม."
+    }
+   ]
+  },
+  {
+   "beat": "zoom",
+   "duration": 8,
+   "image_url": "https://images.ygoprodeck.com/images/cards/33396948.jpg",
+   "title": "เงื่อนไข\nชนะทันที",
+   "focus_x": 50,
+   "focus_y": 84,
+   "focus_zoom": 1.8,
+   "chapter": "ข้อความบนการ์ด",
+   "parts": [
+    {
+     "text": "ถ้ามี *ขา 2 แขน 2* ครบในมือ ชนะ",
+     "say": "ข้อความบนการ์ด ถ้ามีขาขวา ขาซ้าย แขนขวา และแขนซ้าย ของผู้ถูกผนึก พร้อมใบนี้ในมือ คุณชนะดวลทันที."
+    }
+   ]
+  },
+  {
+   "beat": "quiz",
+   "duration": 7,
+   "image_url": "https://images.ygoprodeck.com/images/cards/33396948.jpg",
+   "title": "ต้องมีกี่ใบ\nในมือถึงชนะ?",
+   "chapter": "ทายสิ",
+   "choices": [
+    "3 ใบ",
+    "5 ใบ",
+    "7 ใบ"
+   ],
+   "answer": 1,
+   "text": "ต้องมีกี่ใบในมือ ถึงชนะทันที?",
+   "parts": [
+    {
+     "text": "ต้องมีกี่ใบในมือ ถึงชนะทันที?",
+     "say": "ทายสิ ต้องมีการ์ดกี่ใบในมือ ถึงชนะทันที?"
+    },
+    {
+     "text": "คำตอบคือ *5 ใบ*",
+     "say": "คำตอบคือห้าใบ ตัวนี้ บวกแขนสองข้าง ขาสองข้าง."
+    }
+   ]
+  },
+  {
+   "beat": "timeline",
+   "duration": 11,
+   "image_url": "https://images.ygoprodeck.com/images/cards/33396948.jpg",
+   "chapter": "เส้นทาง",
+   "title": "จากญี่ปุ่น\n*สู่ทั้งโลก*",
+   "text": "สถานะ *Limited* ใส่ได้ 1 ใบ",
+   "points": [
+    {
+     "year": "1999",
+     "label": "ออกที่ญี่ปุ่น\n(OCG)"
+    },
+    {
+     "year": "2002",
+     "label": "ชุด LOB\n8 มี.ค."
+    },
+    {
+     "year": "2026",
+     "label": "Limited\nใส่ได้ 1 ใบ"
+    }
+   ],
+   "parts": [
+    {
+     "text": "ที่ญี่ปุ่นออกปี 1999 ฉบับอังกฤษออกในชุด LOB วันที่ 8 มีนาคม 2002",
+     "say": "ที่ญี่ปุ่นออกมาตั้งแต่ปีหนึ่งเก้าเก้าเก้า. ฉบับอังกฤษออกในชุด เลเจนด์ ออฟ บลู อายส์ วันที่แปด มีนาคม สองพันสอง. ตอนนี้ใส่ได้แค่ใบเดียวต่อเด็ค."
+    }
+   ]
+  },
+  {
+   "beat": "name",
+   "duration": 7,
+   "image_url": "https://images.ygoprodeck.com/images/cards/33396948.jpg",
+   "title": "LOB-124",
+   "chapter": "เลขการ์ด",
+   "chips": [
+    {
+     "big": "124",
+     "small": "เลขการ์ดในชุด"
+    },
+    {
+     "big": "Ultra Rare",
+     "small": "ความหายาก"
+    },
+    {
+     "big": "1st Edition",
+     "small": "พิมพ์ครั้งแรก"
+    }
+   ],
+   "parts": [
+    {
+     "text": "เลข 124 ความหายากอัลตร้าแรร์ ฉบับพิมพ์ครั้งแรก",
+     "say": "เลขหนึ่งสองสี่. ความหายากอัลตร้าแรร์ และเป็นฉบับพิมพ์ครั้งแรก เฟิร์สต์ เอดิชัน."
+    }
+   ]
+  },
+  {
+   "beat": "art",
+   "duration": 6,
+   "image_url": "https://images.ygoprodeck.com/images/cards/33396948.jpg",
+   "title": "©1996\nKazuki Takahashi",
+   "subtitle": "ผู้สร้างยูกิโอ๊ะ",
+   "chapter": "เครดิต",
+   "parts": [
+    {
+     "text": "ลิขสิทธิ์ปี 1996 ของ คาซึกิ ทากาฮาชิ",
+     "say": "บนการ์ดเขียนลิขสิทธิ์ ปีหนึ่งเก้าเก้าหก ของ คาซึกิ ทากาฮาชิ ผู้สร้างยูกิโอ๊ะ."
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 5,
+   "image_url": "https://images.ygoprodeck.com/images/cards/33396948.jpg",
+   "title": "ใช้ตั้งแต่\n*ตอนแรกของอนิเมะ*",
+   "subtitle": "Exodia the Forbidden One",
+   "text": "ยูกิใช้ *ตั้งแต่ตอนแรก*",
+   "parts": [
+    {
+     "text": "ยูกิใช้ใบนี้ *ตั้งแต่ตอนแรก*",
+     "say": "ในอนิเมะ ยูกิใช้เอ็กโซเดีย ตั้งแต่ตอนแรก."
+    }
+   ]
+  },
+  {
+   "beat": "bignum",
+   "duration": 8,
+   "image_url": "https://images.ygoprodeck.com/images/cards/33396948.jpg",
+   "chapter": "ราคาตลาด",
+   "title": "PSA 10 ราคาตลาด",
+   "value": 12906,
+   "subtitle": "ดอลลาร์ • 1st Edition",
+   "text": "ราคาตลาด *ราว 4.3 แสนบาท*",
+   "parts": [
+    {
+     "text": "ฉบับ 1st Edition เกรด PSA 10 ราคาตลาด ราว 12,900 ดอลลาร์",
+     "say": "ฉบับเฟิร์สต์ เอดิชัน เกรด พี เอส เอ สิบ ราคาตลาดราวหนึ่งหมื่นสองพันเก้าร้อยดอลลาร์ ประมาณสี่แสนสามหมื่นบาท."
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 6,
+   "image_url": "https://images.ygoprodeck.com/images/cards/33396948.jpg",
+   "title": "ไม่ส่งเกรด\n*ราว 2.2 หมื่นบาท*",
+   "subtitle": "1st Edition LOB-124",
+   "price_label": "ไม่เกรด",
+   "price": "$650",
+   "fit": "cover",
+   "text": "ไม่ส่งเกรด *ราว 2.2 หมื่นบาท*",
+   "parts": [
+    {
+     "text": "ใบที่ไม่ส่งเกรด ราว 650 ดอลลาร์",
+     "say": "ส่วนใบที่ไม่ได้ส่งเกรด ราวหกร้อยห้าสิบดอลลาร์ ประมาณสองหมื่นสองพันบาท."
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 6,
+   "image_url": "https://images.ygoprodeck.com/images/cards/33396948.jpg",
+   "text": "เคยดึงครบ\n*5 ชิ้นไหม?*",
+   "parts": [
+    {
+     "text": "คุณเคยดึงครบ 5 ชิ้นไหม?",
+     "say": "แล้วคุณล่ะ เคยดึงเอ็กโซเดียครบห้าชิ้นไหม? คอมเมนต์เล่าให้ฟังหน่อย."
+    }
+   ]
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "duration": 4,
+   "beat": "still",
+   "parts": [
+    {
+     "text": "ชอบแบบนี้ กดติดตามไว้เลย.",
+     "say": "ชอบเรื่องการ์ดแบบนี้ กดติดตามไว้เลยนะ. ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ],
+   "image_mode": "still",
+   "no_caption": true,
+   "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้"
+  }
+ ],
+ "meta": {
+  "title": "ครบ 5 ชิ้นในมือ ชนะทันที | Exodia the Forbidden One Yu-Gi-Oh! #shorts",
+  "description": "Exodia the Forbidden One LOB-124 (Legend of Blue Eyes White Dragon, 1st Edition, Ultra Rare) มอนสเตอร์เอฟเฟกต์ ธาตุมืด สายผู้ร่ายเวทย์ ระดับ 3 ATK 1000 / DEF 1000 ถ้ามี Right Leg, Left Leg, Right Arm และ Left Arm of the Forbidden One พร้อมใบนี้ในมือ ชนะดวลทันที ชื่อญี่ปุ่นแปลว่า \"The Sealed Exodia\" ออก OCG ญี่ปุ่นปี 1999 และ TCG อเมริกาเหนือ 8 มี.ค. 2002 สถานะแบนลิสต์: Limited (ใส่ได้ 1 ใบ) ทั้ง TCG และ OCG บนการ์ดมีลิขสิทธิ์ ©1996 Kazuki Takahashi\nราคาตลาด 1st Edition LOB-124 (PriceCharting, 1 พ.ย. 2026): ไม่ส่งเกรดราว 650 ดอลลาร์ (≈22,000 บาท) • PSA 10 ราว 12,906 ดอลลาร์ (≈4.3 แสนบาท) ซื้อขายน้อย ราคาเปลี่ยนตามตลาด\n\n👇 คุณเคยดึง Exodia ครบ 5 ชิ้นไหม?\n\nอัตราแลกเปลี่ยนประมาณ 33.6 บาท/ดอลลาร์ (ธนาคาร 20 ต.ค. 2026)\nภาพ: ภาพการ์ดจาก YGOPRODeck (ภาพประกอบ ไม่ใช่ใบที่ซื้อขาย)\nข้อมูล: YGOPRODeck, Yugipedia, PriceCharting\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #yugioh #ยูกิโอ๊ะ #exodia #การ์ดยูกิ #การ์ดสะสม",
+  "thumb": {
+   "image_url": "https://images.ygoprodeck.com/images/cards/33396948.jpg",
+   "hook": "ครบ 5 ชิ้นในมือ\nชนะทันที",
+   "badge": "LOB-124",
+   "sub": "Exodia the Forbidden One"
+  },
+  "engage": "👇 คุณเคยดึง Exodia ครบ 5 ชิ้นไหม?",
+  "publish_at": "2026-11-02T05:00:00Z",
+  "campaign": "ygo-info-3-exodia",
+  "site_path": "/"
+ }
+}

@@ -1,0 +1,279 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "audio_rate": 1.0,
+ "composition": "CardShow",
+ "theme": "psychic",
+ "badge": "LOB-005",
+ "series": "ยูกิโอ๊ะ การ์ดตำนาน",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055,
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.35,
+  "speed": 1.05,
+  "prefix": "[calm, soft, natural storyteller]"
+ },
+ "slides": [
+  {
+   "beat": "hook",
+   "duration": 9,
+   "image_url": "https://images.ygoprodeck.com/images/cards/46986414.jpg",
+   "title": "การ์ดอายุ 27 ปี\n*ยังอยู่ในเด็คท็อป*",
+   "parts": [
+    {
+     "text": "*Dark Magician* อายุ 27 ปี ยังอยู่ในเด็คท็อป",
+     "say": "ดาร์ก แมจิเชียน การ์ดอายุยี่สิบเจ็ดปี ยังอยู่ในเด็คท็อปปีนี้!"
+    },
+    {
+     "text": "*44 เด็ค* จาก 300 เด็ค",
+     "say": "สี่สิบสี่เด็ค จากสามร้อยเด็คท็อป ตั้งแต่กันยายนถึงตุลาคม."
+    }
+   ]
+  },
+  {
+   "beat": "reveal",
+   "duration": 5,
+   "image_url": "https://images.ygoprodeck.com/images/cards/46986414.jpg",
+   "title": "Dark\nMagician",
+   "chapter": "ยูกิโอ๊ะ",
+   "parts": [
+    {
+     "text": "นี่คือ *Dark Magician* จอมเวทย์สีม่วง",
+     "say": "นี่คือ ดาร์ก แมจิเชียน จอมเวทย์สีม่วง ไพ่เด็ดของยูกิ."
+    }
+   ]
+  },
+  {
+   "beat": "stats",
+   "duration": 7,
+   "image_url": "https://images.ygoprodeck.com/images/cards/46986414.jpg",
+   "title": "ค่าบนการ์ด",
+   "chapter": "บนการ์ด",
+   "stats": [
+    {
+     "label": "ระดับ",
+     "value": 7,
+     "max": 12
+    },
+    {
+     "label": "พลังโจมตี",
+     "value": 2500,
+     "max": 5000
+    },
+    {
+     "label": "พลังป้องกัน",
+     "value": 2100,
+     "max": 5000
+    }
+   ],
+   "parts": [
+    {
+     "text": "ระดับ 7 · โจมตี 2500 · ป้องกัน 2100",
+     "say": "ระดับเจ็ด ธาตุมืด สายผู้ร่ายเวทย์. พลังโจมตีสองพันห้าร้อย. พลังป้องกันสองพันหนึ่งร้อย."
+    }
+   ]
+  },
+  {
+   "beat": "zoom",
+   "duration": 7,
+   "image_url": "https://images.ygoprodeck.com/images/cards/46986414.jpg",
+   "title": "ไม่มีเอฟเฟกต์\nมีแต่คำบรรยาย",
+   "focus_x": 50,
+   "focus_y": 84,
+   "focus_zoom": 1.8,
+   "chapter": "ข้อความบนการ์ด",
+   "parts": [
+    {
+     "text": "ข้อความบนการ์ดมี *บรรทัดเดียว*",
+     "say": "ข้อความบนการ์ดมีบรรทัดเดียว. จอมเวทย์ขั้นสุดยอด ทั้งด้านการโจมตีและการป้องกัน."
+    }
+   ]
+  },
+  {
+   "beat": "quiz",
+   "duration": 6,
+   "image_url": "https://images.ygoprodeck.com/images/cards/46986414.jpg",
+   "title": "ในอนิเมะภาคแรก\nใบนี้ชื่อว่า?",
+   "chapter": "ทายสิ",
+   "choices": [
+    "Dark Mage",
+    "Dark Wizard",
+    "Black Magician"
+   ],
+   "answer": 1,
+   "text": "ในอนิเมะภาคแรก ใบนี้ชื่อว่าอะไร?",
+   "parts": [
+    {
+     "text": "ในอนิเมะภาคแรก ใบนี้ชื่อว่าอะไร?",
+     "say": "ทายสิ ในอนิเมะภาคแรก การ์ดใบนี้ชื่อว่าอะไร?"
+    },
+    {
+     "text": "คำตอบคือ *Dark Wizard*",
+     "say": "คำตอบคือ ดาร์ก วิซาร์ด."
+    }
+   ]
+  },
+  {
+   "beat": "timeline",
+   "duration": 10,
+   "image_url": "https://images.ygoprodeck.com/images/cards/46986414.jpg",
+   "chapter": "เส้นทาง",
+   "title": "จากญี่ปุ่น\n*สู่ทั้งโลก*",
+   "text": "ชุด *Legend of Blue Eyes White Dragon*",
+   "points": [
+    {
+     "year": "1999",
+     "label": "ออกที่ญี่ปุ่น\n(OCG)"
+    },
+    {
+     "year": "2002",
+     "label": "ชุด LOB\n8 มี.ค."
+    },
+    {
+     "year": "2026",
+     "label": "ยังไม่ติด\nแบนลิสต์"
+    }
+   ],
+   "parts": [
+    {
+     "text": "ที่ญี่ปุ่นออกมาตั้งแต่ปี 1999 ฉบับอังกฤษออกในชุด LOB วันที่ 8 มีนาคม 2002",
+     "say": "ที่ญี่ปุ่นออกมาตั้งแต่ปีหนึ่งเก้าเก้าเก้า. ฉบับอังกฤษออกในชุด เลเจนด์ ออฟ บลู อายส์ วันที่แปด มีนาคม สองพันสอง. ตอนนี้ยังไม่ติดแบนลิสต์."
+    }
+   ]
+  },
+  {
+   "beat": "name",
+   "duration": 7,
+   "image_url": "https://images.ygoprodeck.com/images/cards/46986414.jpg",
+   "title": "LOB-005",
+   "chapter": "เลขการ์ด",
+   "chips": [
+    {
+     "big": "005",
+     "small": "เลขการ์ดในชุด"
+    },
+    {
+     "big": "Ultra Rare",
+     "small": "ความหายาก"
+    },
+    {
+     "big": "1st Edition",
+     "small": "พิมพ์ครั้งแรก"
+    }
+   ],
+   "parts": [
+    {
+     "text": "เลข 005 ความหายากอัลตร้าแรร์ ฉบับพิมพ์ครั้งแรก",
+     "say": "เลขศูนย์ศูนย์ห้า. ความหายากอัลตร้าแรร์ และเป็นฉบับพิมพ์ครั้งแรก เฟิร์สต์ เอดิชัน."
+    }
+   ]
+  },
+  {
+   "beat": "art",
+   "duration": 6,
+   "image_url": "https://images.ygoprodeck.com/images/cards/46986414.jpg",
+   "title": "©1996\nKazuki Takahashi",
+   "subtitle": "ผู้สร้างยูกิโอ๊ะ",
+   "chapter": "เครดิต",
+   "parts": [
+    {
+     "text": "ลิขสิทธิ์ปี 1996 ของ คาซึกิ ทากาฮาชิ",
+     "say": "บนการ์ดเขียนลิขสิทธิ์ ปีหนึ่งเก้าเก้าหก ของ คาซึกิ ทากาฮาชิ ผู้สร้างยูกิโอ๊ะ."
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 6,
+   "image_url": "https://images.ygoprodeck.com/images/cards/46986414.jpg",
+   "title": "มังงะกับอนิเมะ\n*สีไม่เหมือนกัน*",
+   "subtitle": "Dark Magician",
+   "text": "สีผิว *ไม่เหมือนกัน*",
+   "parts": [
+    {
+     "text": "ในมังงะ ตัวละครผิว *สีฟ้า* ผมขาว",
+     "say": "น่าสนใจตรงที่ ในมังงะ จอมเวทย์ผิวสีฟ้า ผมขาว."
+    },
+    {
+     "text": "ในอนิเมะ ผิว *สีชมพู* ผมม่วง",
+     "say": "แต่ในอนิเมะ ผิวสีชมพู ผมสีม่วง."
+    }
+   ]
+  },
+  {
+   "beat": "bignum",
+   "duration": 8,
+   "image_url": "https://images.ygoprodeck.com/images/cards/46986414.jpg",
+   "chapter": "ราคาตลาด",
+   "title": "PSA 10 ราคาตลาด",
+   "value": 39255,
+   "subtitle": "ดอลลาร์ • 1st Edition",
+   "text": "ราคาตลาด *ราว 1.3 ล้านบาท*",
+   "parts": [
+    {
+     "text": "ฉบับ 1st Edition เกรด PSA 10 ราคาตลาด ราว 39,000 ดอลลาร์",
+     "say": "ฉบับเฟิร์สต์ เอดิชัน เกรด พี เอส เอ สิบ ราคาตลาดราวสามหมื่นเก้าพันดอลลาร์ ประมาณหนึ่งล้านสามแสนบาท."
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 7,
+   "image_url": "https://images.ygoprodeck.com/images/cards/46986414.jpg",
+   "title": "ไม่ส่งเกรด\n*ราว 1.3 หมื่นบาท*",
+   "subtitle": "1st Edition LOB-005",
+   "price_label": "ไม่เกรด",
+   "price": "$393",
+   "fit": "cover",
+   "text": "ไม่ส่งเกรด *ราว 1.3 หมื่นบาท*",
+   "parts": [
+    {
+     "text": "ใบที่ไม่ส่งเกรด ราว 393 ดอลลาร์",
+     "say": "ส่วนใบที่ไม่ได้ส่งเกรด ราวสามร้อยเก้าสิบสามดอลลาร์ ประมาณหนึ่งหมื่นสามพันบาท."
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 6,
+   "image_url": "https://images.ygoprodeck.com/images/cards/46986414.jpg",
+   "text": "ยังใส่ใบนี้\n*ในเด็คไหม?*",
+   "parts": [
+    {
+     "text": "คุณใช้ Dark Magician ในเด็คไหม?",
+     "say": "แล้วคุณล่ะ ยังใส่ดาร์ก แมจิเชียน ไว้ในเด็คไหม? คอมเมนต์บอกกันหน่อย."
+    }
+   ]
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "duration": 4,
+   "beat": "still",
+   "parts": [
+    {
+     "text": "ชอบแบบนี้ กดติดตามไว้เลย.",
+     "say": "ชอบเรื่องการ์ดแบบนี้ กดติดตามไว้เลยนะ. ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ],
+   "image_mode": "still",
+   "no_caption": true,
+   "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้"
+  }
+ ],
+ "meta": {
+  "title": "การ์ดอายุ 27 ปี ยังอยู่ในเด็คท็อป | Dark Magician Yu-Gi-Oh! #shorts",
+  "description": "Dark Magician LOB-005 (Legend of Blue Eyes White Dragon, 1st Edition, Ultra Rare) มอนสเตอร์ธรรมดา ธาตุมืด สายผู้ร่ายเวทย์ ระดับ 7 ATK 2500 / DEF 2100 ข้อความบนการ์ด \"จอมเวทย์ขั้นสุดยอด ทั้งด้านการโจมตีและการป้องกัน\" ออก OCG ญี่ปุ่นปี 1999 และ TCG อเมริกาเหนือ 8 มี.ค. 2002 สถานะแบนลิสต์ TCG: ไม่ติดแบน ไพ่เด็ดของยูกิ ในอนิเมะภาคแรกใช้ชื่อ Dark Wizard บนการ์ดมีลิขสิทธิ์ ©1996 Kazuki Takahashi\nเด็คท็อป: นับจากเด็คท็อป 300 เด็ค (TCG ที่ YGOPRODeck ในหมวด Tournament Meta Decks จากรายการ 13 ก.ย.–31 ต.ค. 2026) พบ Dark Magician ใน 44 เด็ค (ราว 15%)\nราคาตลาด 1st Edition LOB-005 (PriceCharting, 1 พ.ย. 2026): ไม่ส่งเกรดราว 393 ดอลลาร์ (≈13,000 บาท) • PSA 10 ราว 39,255 ดอลลาร์ (≈1.3 ล้านบาท) ซื้อขายน้อย ราคาเปลี่ยนตามตลาด\n\n👇 คุณยังใส่ Dark Magician ไว้ในเด็คไหม?\n\nอัตราแลกเปลี่ยนประมาณ 33.6 บาท/ดอลลาร์ (ธนาคาร 20 ต.ค. 2026)\nภาพ: ภาพการ์ดจาก YGOPRODeck (ภาพประกอบ ไม่ใช่ใบที่ซื้อขาย)\nข้อมูล: YGOPRODeck, Yugipedia (Card Trivia), PriceCharting\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #yugioh #ยูกิโอ๊ะ #darkmagician #การ์ดยูกิ #การ์ดสะสม",
+  "thumb": {
+   "image_url": "https://images.ygoprodeck.com/images/cards/46986414.jpg",
+   "hook": "การ์ดอายุ 27 ปี\nยังอยู่ในเด็คท็อป",
+   "badge": "LOB-005",
+   "sub": "Dark Magician"
+  },
+  "engage": "👇 คุณยังใส่ Dark Magician ไว้ในเด็คไหม?",
+  "publish_at": "2026-11-02T05:00:00Z",
+  "campaign": "ygo-info-2-dm",
+  "site_path": "/"
+ }
+}
