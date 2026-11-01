@@ -2116,6 +2116,25 @@ app.get("/zernio-scheduled", auth, async (req, res) => {
   res.json(out);
 });
 
+// ดูโพสต์ตามสถานะ/วัน (อ่านอย่างเดียว): GET /zernio-posts?status=published|scheduled|failed&day=2026-11-01&tag=x
+app.get("/zernio-posts", auth, async (req, res) => {
+  const st = ["published", "scheduled", "failed", "partial"].includes(String(req.query.status)) ? String(req.query.status) : "published";
+  const day = String(req.query.day || "").slice(0, 10);
+  const tag = String(req.query.tag || "x").replace(/[^\w-]/g, "");
+  let out;
+  try {
+    const r = await zernio(`/posts?status=${st}&limit=100`);
+    const list = Array.isArray(r) ? r : r.posts || r.data || [];
+    out = list
+      .map((p) => ({ id: p._id, at: p.scheduledFor || p.publishedAt, status: p.status, text: String(p.content || "").slice(0, 40), platforms: (p.platforms || []).map((x) => ({ p: x.platform, s: x.status, url: x.platformPostUrl || x.url, err: x.error ? String(x.error).slice(0, 160) : undefined })) }))
+      .filter((p) => !day || String(p.at || "").startsWith(day));
+  } catch (e) {
+    out = { error: String(e?.message || e) };
+  }
+  console.log(`[zernio-posts] ${tag} ${JSON.stringify(out).slice(0, 12000)}`);
+  res.json({ ok: true });
+});
+
 // ยกเลิกโพสต์ที่ตั้งเวลาไว้ใน Zernio: POST /zernio-delete {ids:[...]}
 app.post("/zernio-delete", auth, async (req, res) => {
   const out = [];
