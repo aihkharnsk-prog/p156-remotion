@@ -1,0 +1,308 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "meta": {
+  "title": "เซนิกาเมะ หดกระดองแล้วไม่เสียพลังชีวิต การ์ดใบที่ 23 #shorts",
+  "description": "การ์ดใบที่ 23 ของชุดโปเกมอนญี่ปุ่น (拡張パック) เซนิกาเมะ (Squirtle) ธาตุน้ำ Basic HP 40 Lv.8 ท่า Bubble แรง 10 โยนเหรียญออกหัวทำให้คู่ต่อสู้ Paralyzed และท่า Withdraw โยนเหรียญออกหัวป้องกันดาเมจทั้งหมดในตาถัดไป จุดอ่อนธาตุสายฟ้า ×2 ถอยหนี 1 ภาพบนการ์ดวาดโดย Mitsuhiro Arita No.007 ระดับ Common เปรียบเทียบข้อความโปเกเด็กซ์ฉบับญี่ปุ่นกับอังกฤษ\n\n👇 ถ้าเลือกตัวแรกในเกม คุณเลือกเซนิกาเมะไหม? คอมเมนต์ไว้เลย\n\nภาพการ์ด: Scrydex, Pokémon TCG API • ภาพโปเกมอน: PokeAPI sprites • ข้อมูล: ข้อความบนการ์ดญี่ปุ่นและอังกฤษ, Scrydex, Pokémon TCG API\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n#shorts #โปเกมอน #การ์ดโปเกมอน #pokemoncards #pokemon #เรื่องเล่าการ์ด",
+  "thumb": {
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-23/large",
+   "hook": "หดกระดอง\nไม่เสียพลังชีวิต",
+   "badge": "#23",
+   "sub": "เบื้องหลังการ์ด"
+  },
+  "publish_at": "2026-11-02T05:00:00Z"
+ },
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.35,
+  "speed": 1.05,
+  "prefix": "[soft, smooth, warm Thai storyteller, natural pacing, never sad]"
+ },
+ "audio_rate": 1.0,
+ "slides": [
+  {
+   "beat": "hook",
+   "duration": 5,
+   "text": "หดกระดอง *ไม่เสียพลังชีวิต* เลย",
+   "title": "หดกระดอง\n*ไม่เสียพลังชีวิต*",
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-23/large",
+   "parts": [
+    {
+     "text": "หดกระดอง *ไม่เสียพลังชีวิต* เลย",
+     "say": "เซนิกาเมะใบนี้ หดเข้ากระดองแล้ว ถ้าโชคดี ก็ไม่เสียพลังชีวิตเลย."
+    }
+   ]
+  },
+  {
+   "beat": "reveal",
+   "duration": 6,
+   "text": "ใบที่ 23 คือ *เซนิกาเมะ*",
+   "title": "เซนิกาเมะ",
+   "subtitle": "No.007 • ธาตุน้ำ • ร่างที่ 1",
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-23/large",
+   "parts": [
+    {
+     "text": "ใบที่ 23 คือ *เซนิกาเมะ*",
+     "say": "ใบที่ยี่สิบสาม คือ เซนิกาเมะ."
+    },
+    {
+     "text": "หนึ่งในสาม *ตัวเลือกแรก* ของเกม",
+     "say": "หนึ่งในสามตัวเลือกแรก ของเกมโปเกมอนภาคแรก."
+    }
+   ]
+  },
+  {
+   "beat": "stats",
+   "duration": 5,
+   "text": "พลังชีวิต *สี่สิบ*",
+   "title": "ค่าพลังบนการ์ด",
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-23/large",
+   "chapter": "บนการ์ด",
+   "stats": [
+    {
+     "label": "พลังชีวิต (HP)",
+     "value": 40,
+     "max": 120
+    },
+    {
+     "label": "ท่าบับเบิล",
+     "value": 10,
+     "max": 100
+    }
+   ],
+   "parts": [
+    {
+     "text": "พลังชีวิต *สี่สิบ*",
+     "say": "บนก๊าด เซนิกาเมะมีพลังชีวิตสี่สิบ."
+    },
+    {
+     "text": "ท่า *บับเบิล* แรงสิบ",
+     "say": "ท่าบับเบิล แรงสิบ."
+    }
+   ]
+  },
+  {
+   "beat": "zoom",
+   "duration": 8,
+   "text": "ท่า *บับเบิล* ใช้พลังงานน้ำใบเดียว",
+   "title": "ท่าบับเบิล",
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-23/large",
+   "chapter": "ส่องการ์ด",
+   "focus_x": 50,
+   "focus_y": 69,
+   "focus_zoom": 1.7,
+   "parts": [
+    {
+     "text": "ท่า *บับเบิล* ใช้พลังงานน้ำใบเดียว",
+     "say": "ท่าบับเบิล ใช้พลังงานน้ำใบเดียว."
+    },
+    {
+     "text": "โยนเหรียญ ออกหัว *ขยับไม่ได้*",
+     "say": "โยนเหรียญ ถ้าออกหัว คู่ต่อสู้จะขยับไม่ได้ ที่เรียกว่าพาราไลซ์."
+    }
+   ]
+  },
+  {
+   "beat": "quiz",
+   "duration": 12,
+   "text": "หดกระดอง ได้ผลเมื่อ *โยนเหรียญออกอะไร*?",
+   "title": "หดกระดอง\nได้ผลเมื่อไหร่?",
+   "chapter": "ทายสิ",
+   "choices": [
+    "ออกหัว",
+    "ออกก้อย",
+    "ได้ผลทุกครั้ง"
+   ],
+   "answer": 0,
+   "parts": [
+    {
+     "text": "หดกระดอง ได้ผลเมื่อ *โยนเหรียญออกอะไร*?",
+     "say": "ทายสิ ท่าหดเข้ากระดอง ต้องโยนเหรียญออกอะไร ถึงจะได้ผล?"
+    },
+    {
+     "text": "ออก *หัว* ดาเมจเหลือศูนย์",
+     "say": "คำตอบคือ ออกหัว. ดาเมจที่ได้รับในตาถัดไปของคู่ต่อสู้ จะเหลือศูนย์ทั้งหมด. ถ้าออกก้อย ก็ไม่ได้อะไร."
+    }
+   ]
+  },
+  {
+   "beat": "bignum",
+   "duration": 5,
+   "text": "ตัวสูงครึ่งเมตร *หนักแค่ 9 กิโล*",
+   "title": "น้ำหนักตัว",
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-23/large",
+   "value": 9,
+   "chapter": "โปเกเด็กซ์",
+   "subtitle": "กิโลกรัม • ตามข้อความบนการ์ด",
+   "parts": [
+    {
+     "text": "ตัวสูงครึ่งเมตร *หนักแค่ 9 กิโล*",
+     "say": "บนก๊าดเขียนว่า เซนิกาเมะ สูงครึ่งเมตร หนักแค่เก้ากิโลกรัม."
+    }
+   ]
+  },
+  {
+   "beat": "versions",
+   "duration": 14,
+   "text": "ข้อความ *ไม่เหมือนกัน*",
+   "images": [
+    "https://images.scrydex.com/pokemon/base1_ja-23/large",
+    "https://images.pokemontcg.io/base1/63_hires.png"
+   ],
+   "labels": [
+    "ญี่ปุ่น",
+    "อังกฤษ"
+   ],
+   "parts": [
+    {
+     "text": "ข้อความ *ไม่เหมือนกัน*",
+     "say": "ภาพบนก๊าดเหมือนกัน แต่ข้อความโปเกเด็กซ์ ไม่เหมือนกัน."
+    },
+    {
+     "text": "อังกฤษ: *กระดอง* โตและแข็งหลังเกิด",
+     "say": "ฉบับอังกฤษ เล่าว่าหลังเกิด หลังของมันจะพองและแข็ง กลายเป็นกระดอง."
+    },
+    {
+     "text": "ญี่ปุ่น: หดคอแล้ว *พ่นน้ำ*",
+     "say": "ส่วนฉบับญี่ปุ่น บอกว่า ตอนหดคอเข้ากระดอง มันจะพ่นน้ำออกมาอย่างแรง."
+    }
+   ]
+  },
+  {
+   "beat": "zoom",
+   "duration": 6,
+   "text": "จุดอ่อนคือ *ธาตุสายฟ้า* ดาเมจ ×2",
+   "title": "จุดอ่อนของเซนิกาเมะ",
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-23/large",
+   "chapter": "ส่องการ์ด",
+   "focus_x": 32,
+   "focus_y": 87,
+   "focus_zoom": 2.0,
+   "parts": [
+    {
+     "text": "จุดอ่อนคือ *ธาตุสายฟ้า* ดาเมจ ×2",
+     "say": "จุดอ่อนของเซนิกาเมะ คือธาตุสายฟ้า โดนเข้าไป ดาเมจเพิ่มเป็นสองเท่า."
+    }
+   ]
+  },
+  {
+   "beat": "art",
+   "duration": 7,
+   "text": "ภาพบนการ์ด วาดโดย *มิตสึฮิโระ อาริตะ*",
+   "title": "Squirtle",
+   "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+   "chapter": "ผู้วาด",
+   "subtitle": "เซนิกาเมะ • Mitsuhiro Arita",
+   "parts": [
+    {
+     "text": "ภาพบนการ์ด วาดโดย *มิตสึฮิโระ อาริตะ*",
+     "say": "ภาพบนก๊าดใบนี้ วาดโดย มิตสึฮิโระ อาริตะ."
+    },
+    {
+     "text": "คนเดียวกับที่วาด *ลิซาร์ดอน* ใบที่ 21",
+     "say": "คนเดียวกับที่วาดลิสาดอนในใบที่ยี่สิบเอ็ด."
+    }
+   ]
+  },
+  {
+   "beat": "name",
+   "duration": 7,
+   "text": "ชื่ออังกฤษ *สควอร์เทิล*",
+   "chapter": "ที่มาของชื่อ",
+   "chips": [
+    {
+     "big": "Squirt",
+     "small": "พ่นน้ำ"
+    },
+    {
+     "big": "Turtle",
+     "small": "เต่า"
+    }
+   ],
+   "title": "*Squirtle*",
+   "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+   "transition": "shutter",
+   "parts": [
+    {
+     "text": "ชื่ออังกฤษ *สควอร์เทิล*",
+     "say": "ชื่ออังกฤษ สควอร์เทิล มาจากคำว่า สควิร์ต ที่แปลว่าพ่นน้ำ บวกกับ เทอร์เทิล ที่แปลว่าเต่า."
+    }
+   ]
+  },
+  {
+   "beat": "evolve",
+   "duration": 6,
+   "text": "จาก *เซนิกาเมะ* สู่ *คาเมล*",
+   "images": [
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png",
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png"
+   ],
+   "parts": [
+    {
+     "text": "จาก *เซนิกาเมะ* สู่ *คาเมล*",
+     "say": "จากเซนิกาเมะ สู่คาเมล"
+    },
+    {
+     "text": "และร่างสุดท้าย *คาเมกซ์*",
+     "say": "และร่างสุดท้าย คาเมกซ์."
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 6,
+   "text": "ใบนี้ระดับ *ธรรมดา* มีวงกลมดำมุมขวาล่าง",
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-23/large",
+   "parts": [
+    {
+     "text": "ใบนี้ระดับ *ธรรมดา* มีวงกลมดำมุมขวาล่าง",
+     "say": "ใบนี้เป็นระดับธรรมดา มีวงกลมสีดำที่มุมขวาล่าง."
+    },
+    {
+     "text": "ล็อตแรกสุด *ไม่มีสัญลักษณ์* นี้",
+     "say": "ส่วนล็อตแรกสุด ไม่มีสัญลักษณ์นี้."
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 8,
+   "text": "ถ้าเลือกตัวแรกในเกม *คุณเลือกเซนิกาเมะ* ไหม?",
+   "image_url": "https://images.scrydex.com/pokemon/base1_ja-23/large",
+   "parts": [
+    {
+     "text": "ถ้าเลือกตัวแรกในเกม *คุณเลือกเซนิกาเมะ* ไหม?",
+     "say": "ถ้าให้เลือกตัวแรกในเกม คุณเลือกเซนิกาเมะไหม? คอมเมนต์ไว้เลย."
+    },
+    {
+     "text": "ใบถัดไป *ลูกอ๊อด* ที่มีก้นหอยบนท้อง",
+     "say": "ใบถัดไป คือลูกอ๊อด ที่มีก้นหอยบนท้อง."
+    }
+   ]
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "image_mode": "still",
+   "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้",
+   "duration": 7,
+   "parts": [
+    {
+     "text": "ชอบเรื่องเล่าแบบนี้ *กดติดตาม* ไว้เลย",
+     "say": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้เลย."
+    },
+    {
+     "text": "*ซื้อ ขาย สะสม แข่งเกมส์การ์ด* ที่ www.cardzcenter.com",
+     "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ],
+   "no_caption": true,
+   "beat": "still"
+  }
+ ],
+ "composition": "CardShow",
+ "theme": "water",
+ "badge": "#23",
+ "series": "การ์ดชุดแรก 1996"
+}
