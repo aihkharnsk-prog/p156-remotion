@@ -1,0 +1,302 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "audio_rate": 1.0,
+ "composition": "CardShow",
+ "theme": "electric",
+ "badge": "#5",
+ "series": "ลอคาน่าชุดแรก",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055,
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.35,
+  "speed": 1.05,
+  "prefix": "[mellow, soft and smooth, friendly, lightly upbeat, unhurried]"
+ },
+ "slides": [
+  {
+   "beat": "hook",
+   "duration": 5,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_ab901cb3afed4b95b0bbca4350b0d4d7.avif?1709690747",
+   "parts": [
+    {
+     "text": "ฮาเดสใบนี้ ยิ่งมีวายร้ายในสนามเยอะ ยิ่งได้แต้มลอร์เยอะ!",
+     "say": "ฮาเดสใบนี้ ยิ่งมีวายร้ายในสนามเยอะ ก็ยิ่งได้แต้มลอร์เยอะ!"
+    }
+   ],
+   "title": "ฮาเดส\n*วายร้าย* ยิ่งเยอะ ยิ่งแรง"
+  },
+  {
+   "beat": "reveal",
+   "duration": 9,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_ab901cb3afed4b95b0bbca4350b0d4d7.avif?1709690747",
+   "parts": [
+    {
+     "text": "ใบที่ 5 ฮาเดส ราชาแห่งโอลิมปัส",
+     "say": "ใบที่ห้า ของลอ-คา-น่า ชุดแรก. ฮาเดส คิง ออฟ โอลิมปัส. ก็คือฮาเดส ราชาแห่งโอลิมปัส."
+    },
+    {
+     "text": "หมึกอำพัน · ระดับ Rare",
+     "say": "เป็นหมึกอำพัน ระดับแรร์ หรือหายากกว่าก๊าดทั่วไป."
+    }
+   ],
+   "title": "Hades\nKing of Olympus",
+   "chapter": "ฮาเดส"
+  },
+  {
+   "beat": "stats",
+   "duration": 7,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_ab901cb3afed4b95b0bbca4350b0d4d7.avif?1709690747",
+   "parts": [
+    {
+     "text": "ราคา 8 · โจมตี 6 · ป้องกัน 7",
+     "say": "ราคาแปด. พลังโจมตีหก. พลังป้องกันเจ็ด."
+    },
+    {
+     "text": "คะแนนลอร์ตั้งต้น 1",
+     "say": "คะแนนลอร์ตั้งต้นมีแค่หนึ่ง. แต่เดี๋ยวมันจะเพิ่ม."
+    }
+   ],
+   "title": "ค่าบนการ์ด",
+   "chapter": "บนการ์ด",
+   "stats": [
+    {
+     "label": "ราคา",
+     "value": 8,
+     "max": 9
+    },
+    {
+     "label": "พลังโจมตี",
+     "value": 6,
+     "max": 9
+    },
+    {
+     "label": "พลังป้องกัน",
+     "value": 7,
+     "max": 9
+    }
+   ]
+  },
+  {
+   "beat": "zoom",
+   "duration": 9,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_ab901cb3afed4b95b0bbca4350b0d4d7.avif?1709690747",
+   "parts": [
+    {
+     "text": "Shift 6 ลงทับฮาเดสได้",
+     "say": "ความสามารถแรก ชิฟต์ หก. จ่ายหกหมึก แล้วลงทับฮาเดสที่อยู่ในสนามอยู่แล้วได้."
+    },
+    {
+     "text": "ราคาแปด แต่จ่ายแค่หก",
+     "say": "ใบนี้ราคาแปด แต่ถ้ามีฮาเดสอยู่ในสนาม ก็จ่ายแค่หกพอ."
+    }
+   ],
+   "title": "Shift 6\nลงทับฮาเดส",
+   "focus_x": 50,
+   "focus_y": 74,
+   "focus_zoom": 1.6,
+   "chapter": "ความสามารถที่ 1"
+  },
+  {
+   "beat": "quiz",
+   "duration": 9,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_ab901cb3afed4b95b0bbca4350b0d4d7.avif?1709690747",
+   "parts": [
+    {
+     "text": "Sinister Plot ทำอะไร?",
+     "say": "ความสามารถที่สอง ชื่อ ซินิสเตอร์ พล็อต. ทายสิ ทำอะไร?"
+    },
+    {
+     "text": "+1 ลอร์ ต่อวายร้ายตัวอื่น",
+     "say": "ได้ลอร์เพิ่มหนึ่งแต้ม ต่อวายร้ายอีกหนึ่งตัว ที่เรามีอยู่ในสนาม."
+    }
+   ],
+   "title": "Sinister Plot\nทำอะไร?",
+   "chapter": "ทายสิ",
+   "choices": [
+    "+1 ลอร์ ต่อวายร้ายตัวอื่น",
+    "ห้ามถูกท้าสู้",
+    "จั่วการ์ด 2 ใบ"
+   ],
+   "answer": 0
+  },
+  {
+   "beat": "bignum",
+   "duration": 9,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_ab901cb3afed4b95b0bbca4350b0d4d7.avif?1709690747",
+   "parts": [
+    {
+     "text": "ลองนับดู ถ้ามีวายร้ายอีก 3 ตัว",
+     "say": "ลองนับดู. ถ้ามีวายร้ายตัวอื่นอยู่ในสนามอีกสามตัว ฮาเดสจะได้ลอร์ ตั้งต้นหนึ่ง บวกสาม รวมเป็นสี่แต้ม ตอนไปเควสต์ครั้งเดียว."
+    }
+   ],
+   "title": "ฮาเดสได้ลอร์",
+   "value": 4,
+   "from": 1,
+   "subtitle": "เมื่อมีวายร้ายตัวอื่นอีก 3 ตัว",
+   "chapter": "ลองคิดเลข",
+   "text": "ลอร์ 1 + วายร้ายอีก 3 ตัว"
+  },
+  {
+   "beat": "name",
+   "duration": 8,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_ab901cb3afed4b95b0bbca4350b0d4d7.avif?1709690747",
+   "parts": [
+    {
+     "text": "ประเภทบนการ์ด 4 คำ",
+     "say": "บนแถบประเภท เขียนไว้สี่คำ. ฟลัดบอร์น. วิลเลน. คิง. และไดตี้. คือเป็นวายร้าย เป็นราชา และเป็นเทพ ในตัวเดียว."
+    }
+   ],
+   "title": "Floodborn · Villain",
+   "chapter": "ประเภท",
+   "chips": [
+    {
+     "big": "Floodborn",
+     "small": "ลงทับด้วย Shift"
+    },
+    {
+     "big": "Villain",
+     "small": "วายร้าย"
+    },
+    {
+     "big": "King",
+     "small": "ราชา"
+    },
+    {
+     "big": "Deity",
+     "small": "เทพ"
+    }
+   ]
+  },
+  {
+   "beat": "name",
+   "duration": 8,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_ab901cb3afed4b95b0bbca4350b0d4d7.avif?1709690747",
+   "parts": [
+    {
+     "text": "ฮาเดส มาจากหนังปี 1997",
+     "say": "ฮาเดสมาจากหนังดิสนีย์ เฮอร์คิวลิส ปีหนึ่งเก้าเก้าเจ็ด."
+    },
+    {
+     "text": "เทพแห่งยมโลก คิดยึดโอลิมปัส",
+     "say": "ในเรื่อง เขาเป็นเทพแห่งยมโลก ที่วางแผนจะยึดเขาโอลิมปัส."
+    }
+   ],
+   "title": "Hercules",
+   "chapter": "ที่มา",
+   "chips": [
+    {
+     "big": "1997",
+     "small": "ปีที่หนังออกฉาย"
+    },
+    {
+     "big": "Hades",
+     "small": "เทพแห่งยมโลก"
+    }
+   ]
+  },
+  {
+   "beat": "art",
+   "duration": 6,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_ab901cb3afed4b95b0bbca4350b0d4d7.avif?1709690747",
+   "parts": [
+    {
+     "text": "ผู้วาด อเล็กซ์ อัคคอร์ซี",
+     "say": "ภาพนี้วาดโดย อเล็กซ์ อัคคอร์ซี. เขาวาดฮาเดสนั่งบนบัลลังก์ มีเปลวไฟลุกอยู่ในมือ."
+    }
+   ],
+   "title": "ผู้วาด\nAlex Accorsi",
+   "subtitle": "Hades • King of Olympus",
+   "chapter": "ผู้วาด"
+  },
+  {
+   "beat": "card",
+   "duration": 8,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_ab901cb3afed4b95b0bbca4350b0d4d7.avif?1709690747",
+   "parts": [
+    {
+     "text": "“ต้องทำนามบัตรใหม่แล้ว”",
+     "say": "ลองอ่านข้อความเล่าเรื่องใต้ก๊าด. ฮาเดสพูดว่า ฉันคงต้องทำนามบัตรใหม่แล้วล่ะ. ก็เป็นราชาแล้วนี่นา!"
+    }
+   ],
+   "text": "“Oh hey, I'm gonna need *new business cards.*”"
+  },
+  {
+   "beat": "versions",
+   "duration": 11,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_ab901cb3afed4b95b0bbca4350b0d4d7.avif?1709690747",
+   "parts": [
+    {
+     "text": "ใบถัดไป ก็เป็นฮาเดสอีกใบ",
+     "say": "ถัดมา ใบที่หก ก็เป็นฮาเดสอีกใบ. ใบนั้นราคาแค่สี่ แต่ดึงตัวละครจากกองทิ้ง กลับขึ้นมือได้."
+    },
+    {
+     "text": "ใบที่ 5 ลงทับใบที่ 6 ได้",
+     "say": "เพราะชื่อเดียวกัน ใบที่ห้า ก็ลงทับใบที่หกได้ด้วยชิฟต์."
+    }
+   ],
+   "text": "ฮาเดสสองใบ ในชุดเดียวกัน",
+   "images": [
+    "https://cards.lorcast.io/card/digital/large/crd_ab901cb3afed4b95b0bbca4350b0d4d7.avif?1709690747",
+    "https://cards.lorcast.io/card/digital/large/crd_4c9f441611314185a25b1fca893f6643.avif?1709690747"
+   ],
+   "labels": [
+    "#5 ราชาแห่งโอลิมปัส",
+    "#6 เจ้าแห่งยมโลก"
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 4,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_ab901cb3afed4b95b0bbca4350b0d4d7.avif?1709690747",
+   "parts": [
+    {
+     "text": "เด็ควายร้ายของคุณ มีกี่ตัว?",
+     "say": "แล้วเด็ควายร้ายของคุณ มีกี่ตัว? พิมพ์ตัวเลขไว้เลย."
+    }
+   ],
+   "text": "เด็ควายร้ายของคุณ\n*มีกี่ตัว?*"
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "duration": 4,
+   "beat": "still",
+   "parts": [
+    {
+     "text": "ชอบแบบนี้ กดติดตามไว้เลย.",
+     "say": "ชอบเรื่องการ์ดแบบนี้ กดติดตามไว้เลยนะ. ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ],
+   "image_mode": "still",
+   "no_caption": true,
+   "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้"
+  }
+ ],
+ "meta": {
+  "title": "ฮาเดส ราชาโอลิมปัส ยิ่งมีวายร้ายยิ่งแรง | Lorcana #5 #shorts",
+  "description": "Hades, King of Olympus 5/204 ชุด The First Chapter ของ Disney Lorcana (Rare) หมึกอำพัน ราคา 8 พลังโจมตี 6 พลังป้องกัน 7 ลอร์ 1 แบบ Floodborn (Villain, King, Deity) ความสามารถ Shift 6 และ Sinister Plot ได้ลอร์เพิ่ม +1 ต่อวายร้ายตัวอื่นที่เรามีในสนาม วาดโดย Alex Accorsi ตัวละครจากหนัง Hercules (1997) วางขาย 18 ส.ค. 2023\n\n👇 เด็ควายร้ายของคุณ มีกี่ตัว? พิมพ์ตัวเลขไว้เลย\n\nภาพ: ภาพการ์ดทางการจาก Lorcast\nข้อมูล: Lorcast, Disney Lorcana, D23\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #lorcana #ลอคาน่า #ดิสนีย์ลอคาน่า #disneylorcana #การ์ดดิสนีย์",
+  "tags": [
+   "lorcana",
+   "ลอคาน่า",
+   "disney lorcana",
+   "hades",
+   "ฮาเดส",
+   "hercules",
+   "the first chapter",
+   "การ์ดดิสนีย์",
+   "shorts"
+  ],
+  "thumb": {
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_ab901cb3afed4b95b0bbca4350b0d4d7.avif?1709690747",
+   "hook": "ฮาเดส ราชาโอลิมปัส\nวายร้ายยิ่งเยอะ ยิ่งแรง",
+   "badge": "#5",
+   "sub": "ลอคาน่า ชุดแรก"
+  },
+  "engage": "👇 เด็ควายร้ายของคุณ มีกี่ตัว? พิมพ์ตัวเลขไว้เลย",
+  "publish_at": "2026-11-02T05:00:00Z",
+  "campaign": "lorcana-set1-005",
+  "site_path": "/"
+ }
+}

@@ -1,0 +1,265 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "audio_rate": 1.0,
+ "composition": "CardShow",
+ "theme": "electric",
+ "badge": "#6",
+ "series": "ลอคาน่าชุดแรก",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055,
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.35,
+  "speed": 1.05,
+  "prefix": "[mellow, soft and smooth, friendly, lightly upbeat, unhurried]"
+ },
+ "slides": [
+  {
+   "beat": "hook",
+   "duration": 4,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_4c9f441611314185a25b1fca893f6643.avif?1709690747",
+   "parts": [
+    {
+     "text": "ฮาเดสใบนี้ ดึงตัวละครจากกองทิ้ง กลับขึ้นมือได้!",
+     "say": "ฮาเดสใบนี้ ดึงตัวละครจากกองทิ้ง กลับขึ้นมือได้!"
+    }
+   ],
+   "title": "ฮาเดส\n*ดึงกลับ* จากกองทิ้ง"
+  },
+  {
+   "beat": "reveal",
+   "duration": 9,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_4c9f441611314185a25b1fca893f6643.avif?1709690747",
+   "parts": [
+    {
+     "text": "ใบที่ 6 ฮาเดส เจ้าแห่งยมโลก",
+     "say": "ใบที่หก ฮาเดส ลอร์ด ออฟ ดิ อันเดอร์เวิลด์. ก็คือฮาเดส เจ้าแห่งยมโลก."
+    },
+    {
+     "text": "หมึกอำพัน · ระดับ Rare",
+     "say": "หมึกอำพัน ระดับแรร์ เหมือนฮาเดสใบก่อนหน้า. แต่ใบนี้ราคาแค่สี่."
+    }
+   ],
+   "title": "Hades\nLord of the Underworld",
+   "chapter": "ฮาเดส"
+  },
+  {
+   "beat": "stats",
+   "duration": 7,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_4c9f441611314185a25b1fca893f6643.avif?1709690747",
+   "parts": [
+    {
+     "text": "ราคา 4 · โจมตี 3 · ป้องกัน 2",
+     "say": "ราคาสี่. พลังโจมตีสาม. พลังป้องกันสอง."
+    },
+    {
+     "text": "คะแนนลอร์ 1",
+     "say": "ได้คะแนนลอร์หนึ่งแต้ม. ตัวไม่ใหญ่ แต่ความสามารถน่าสนใจ."
+    }
+   ],
+   "title": "ค่าบนการ์ด",
+   "chapter": "บนการ์ด",
+   "stats": [
+    {
+     "label": "ราคา",
+     "value": 4,
+     "max": 9
+    },
+    {
+     "label": "พลังโจมตี",
+     "value": 3,
+     "max": 9
+    },
+    {
+     "label": "พลังป้องกัน",
+     "value": 2,
+     "max": 9
+    }
+   ]
+  },
+  {
+   "beat": "quiz",
+   "duration": 8,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_4c9f441611314185a25b1fca893f6643.avif?1709690747",
+   "parts": [
+    {
+     "text": "Well of Souls ทำอะไร?",
+     "say": "ความสามารถของใบนี้ ชื่อ เวลล์ ออฟ โซลส์. ทายสิ ทำอะไร?"
+    },
+    {
+     "text": "เอาตัวละครจากกองทิ้งกลับมือ",
+     "say": "ตอนลงสนาม เอาก๊าดตัวละครหนึ่งใบ จากกองทิ้ง กลับขึ้นมือ."
+    }
+   ],
+   "title": "Well of Souls\nทำอะไร?",
+   "chapter": "ทายสิ",
+   "choices": [
+    "เอาตัวละครจากกองทิ้งกลับมือ",
+    "ทำดาเมจ 2",
+    "ดูการ์ดบนสุด 3 ใบ"
+   ],
+   "answer": 0
+  },
+  {
+   "beat": "zoom",
+   "duration": 10,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_4c9f441611314185a25b1fca893f6643.avif?1709690747",
+   "parts": [
+    {
+     "text": "Well of Souls ตอนลงสนาม",
+     "say": "ลองดูข้อความจริงบนก๊าด. ตอนที่เล่นตัวละครนี้ ให้เอาตัวละครหนึ่งใบ จากกองทิ้ง กลับขึ้นมือ."
+    },
+    {
+     "text": "ตัวที่ถูกกำจัดไป กลับมาใช้ได้อีก",
+     "say": "ตัวไหนที่เคยถูกกำจัดไปแล้ว ก็ได้กลับมาใช้อีกรอบ."
+    }
+   ],
+   "title": "Well of Souls\nเวลล์ ออฟ โซลส์",
+   "focus_x": 50,
+   "focus_y": 72,
+   "focus_zoom": 1.6,
+   "chapter": "ความสามารถ"
+  },
+  {
+   "beat": "timeline",
+   "duration": 14,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_4c9f441611314185a25b1fca893f6643.avif?1709690747",
+   "parts": [
+    {
+     "text": "ฮาเดสใบนี้ ลงสนามก่อน",
+     "say": "คราวนี้ลองจับคู่กัน. ลงฮาเดสใบนี้ราคาสี่ก่อน."
+    },
+    {
+     "text": "แล้วเอาใบที่ 5 ลงทับ",
+     "say": "จากนั้นเอา ฮาเดส ราชาแห่งโอลิมปัส ใบที่ห้า มาลงทับด้วยชิฟต์ หก. เพราะชื่อเดียวกันคือฮาเดส."
+    },
+    {
+     "text": "รวมจ่าย 10 หมึก",
+     "say": "รวมแล้วจ่ายสิบหมึก แต่ได้ตัวใหญ่พลังหก กับพลังป้องกันเจ็ด."
+    }
+   ],
+   "title": "จับคู่ฮาเดส\n*ใบที่ 6 + ใบที่ 5*",
+   "chapter": "คอมโบ",
+   "points": [
+    {
+     "year": "4",
+     "label": "ฮาเดส\nเจ้าแห่งยมโลก\nลงสนาม"
+    },
+    {
+     "year": "+6",
+     "label": "Shift\nฮาเดส\nราชาโอลิมปัส"
+    },
+    {
+     "year": "10",
+     "label": "รวมจ่าย\n10 หมึก"
+    }
+   ]
+  },
+  {
+   "beat": "name",
+   "duration": 8,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_4c9f441611314185a25b1fca893f6643.avif?1709690747",
+   "parts": [
+    {
+     "text": "ฮาเดส มาจากหนังปี 1997",
+     "say": "ฮาเดสมาจากหนังดิสนีย์ เฮอร์คิวลิส ปีหนึ่งเก้าเก้าเจ็ด."
+    },
+    {
+     "text": "เทพผู้ดูแลยมโลก",
+     "say": "เป็นเทพผู้ดูแลยมโลก ที่เบื่อกับงานนี้เต็มทีแล้ว."
+    }
+   ],
+   "title": "Hercules",
+   "chapter": "ที่มา",
+   "chips": [
+    {
+     "big": "1997",
+     "small": "ปีที่หนังออกฉาย"
+    },
+    {
+     "big": "Hades",
+     "small": "เจ้าแห่งยมโลก"
+    }
+   ]
+  },
+  {
+   "beat": "art",
+   "duration": 8,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_4c9f441611314185a25b1fca893f6643.avif?1709690747",
+   "parts": [
+    {
+     "text": "ผู้วาด แรนดี้ บิชอป",
+     "say": "ภาพนี้วาดโดย แรนดี้ บิชอป. ในภาพ มีมือมากมายยื่นขึ้นมาจากแม่น้ำ และมีโครงกระดูกถือไม้พายอยู่ข้างๆ."
+    }
+   ],
+   "title": "ผู้วาด\nRandy Bishop",
+   "subtitle": "Hades • Lord of the Underworld",
+   "chapter": "ผู้วาด"
+  },
+  {
+   "beat": "card",
+   "duration": 9,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_4c9f441611314185a25b1fca893f6643.avif?1709690747",
+   "parts": [
+    {
+     "text": "“ผลผลิตเพิ่ม ต้นทุนลด แม่น้ำเต็ม”",
+     "say": "ข้อความเล่าเรื่องใต้ก๊าด ฮาเดสพูดเหมือนซีอีโอเลย. ผลผลิตเพิ่มขึ้น ต้นทุนลดลง แม่น้ำก็เต็ม. ถึงเวลาคุยเรื่องขยายกิจการแล้ว!"
+    }
+   ],
+   "text": "“Production is up, costs are down, the rivers are full. *Time to talk expansion.*”"
+  },
+  {
+   "beat": "card",
+   "duration": 9,
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_4c9f441611314185a25b1fca893f6643.avif?1709690747",
+   "parts": [
+    {
+     "text": "ฮาเดสสองใบแล้ว ใบถัดไปคือ?",
+     "say": "สองใบแรกของฮาเดสในชุดนี้ ใบที่ห้า ราชาแห่งโอลิมปัส. ใบที่หก เจ้าแห่งยมโลก. คุณชอบฮาเดสใบไหนมากกว่า? คอมเมนต์ไว้เลย."
+    }
+   ],
+   "text": "ฮาเดสใบไหน\n*ชอบมากกว่า?*"
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "duration": 4,
+   "beat": "still",
+   "parts": [
+    {
+     "text": "ชอบแบบนี้ กดติดตามไว้เลย.",
+     "say": "ชอบเรื่องการ์ดแบบนี้ กดติดตามไว้เลยนะ. ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ],
+   "image_mode": "still",
+   "no_caption": true,
+   "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้"
+  }
+ ],
+ "meta": {
+  "title": "ฮาเดส เจ้าแห่งยมโลก ดึงตัวละครจากกองทิ้งกลับมือ | Lorcana #6 #shorts",
+  "description": "Hades, Lord of the Underworld 6/204 ชุด The First Chapter ของ Disney Lorcana (Rare) หมึกอำพัน ราคา 4 พลังโจมตี 3 พลังป้องกัน 2 ลอร์ 1 ความสามารถ Well of Souls ตอนลงสนาม เอาการ์ดตัวละครจากกองทิ้งกลับขึ้นมือ วาดโดย Randy Bishop ตัวละครจากหนัง Hercules (1997) ใช้คู่กับ Hades, King of Olympus (Shift 6) ได้เพราะชื่อเดียวกัน\n\n👇 ฮาเดสใบที่ 5 หรือใบที่ 6 คุณชอบใบไหนมากกว่า? คอมเมนต์ไว้เลย\n\nภาพ: ภาพการ์ดทางการจาก Lorcast\nข้อมูล: Lorcast, Disney Lorcana, D23\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #lorcana #ลอคาน่า #ดิสนีย์ลอคาน่า #disneylorcana #การ์ดดิสนีย์",
+  "tags": [
+   "lorcana",
+   "ลอคาน่า",
+   "disney lorcana",
+   "hades",
+   "ฮาเดส",
+   "hercules",
+   "the first chapter",
+   "การ์ดดิสนีย์",
+   "shorts"
+  ],
+  "thumb": {
+   "image_url": "https://cards.lorcast.io/card/digital/large/crd_4c9f441611314185a25b1fca893f6643.avif?1709690747",
+   "hook": "ฮาเดส เจ้าแห่งยมโลก\nดึงตัวละครกลับมือ",
+   "badge": "#6",
+   "sub": "ลอคาน่า ชุดแรก"
+  },
+  "engage": "👇 ฮาเดสใบที่ 5 หรือใบที่ 6 คุณชอบใบไหนมากกว่า? คอมเมนต์ไว้เลย",
+  "publish_at": "2026-11-02T05:00:00Z",
+  "campaign": "lorcana-set1-006",
+  "site_path": "/"
+ }
+}
