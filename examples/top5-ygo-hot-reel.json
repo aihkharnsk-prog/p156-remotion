@@ -1,0 +1,184 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "audio_rate": 1.0,
+ "composition": "CardShow",
+ "theme": "electric",
+ "badge": "TOP 5",
+ "series": "ยูกิโอ๊ะ เมตา 2026",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055,
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.35,
+  "speed": 1.05,
+  "prefix": "[calm, soft, natural storyteller]"
+ },
+ "slides": [
+  {
+   "beat": "full",
+   "duration": 13,
+   "image_url": "https://images.ygoprodeck.com/images/cards/59438930.jpg",
+   "title": "5 การ์ดที่\n*เด็คท็อปต้องใส่*",
+   "price_label": "ใบที่ 1",
+   "price": "86%",
+   "fit": "cover",
+   "text": "5 การ์ดที่เด็คท็อปต้องใส่",
+   "parts": [
+    {
+     "text": "5 การ์ดที่ *เด็คท็อปต้องใส่*",
+     "say": "ห้าการ์ดยูกิ ที่เด็คท็อปแทบทุกเด็คต้องใส่. ใบแรกโผล่ถึงแปดสิบหกเปอร์เซ็นต์!"
+    },
+    {
+     "text": "นับจาก *108 เด็ค* หลังแบนลิสต์ใหม่",
+     "say": "นับจากหนึ่งร้อยแปดเด็คท็อป หลังประกาศแบนลิสต์ใหม่ ตุลาคมสองศูนย์สองหก."
+    },
+    {
+     "text": "เริ่มที่ *อันดับ 5*",
+     "say": "เริ่มที่อันดับห้า."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 11,
+   "image_url": "https://images.ygoprodeck.com/images/cards/29301450.jpg",
+   "rank": "#5",
+   "price_label": "อยู่ในเด็คท็อป",
+   "price": "57%",
+   "subtitle": "62 จาก 108 เด็ค",
+   "title": "S:P Little Knight\n*ลิงก์ 2 • ตัวหยุดคู่ต่อสู้*",
+   "parts": [
+    {
+     "text": "อันดับ 5 *S:P Little Knight* 57%",
+     "say": "อันดับห้า เอสพี ลิตเติ้ล ไนท์ อยู่ในห้าสิบเจ็ดเปอร์เซ็นต์ของเด็ค."
+    },
+    {
+     "text": "คู่ต่อสู้กดเอฟเฟกต์ *เก็บมอนสเตอร์ 2 ตัว*",
+     "say": "ตอนคู่ต่อสู้กดเอฟเฟกต์ เลือกมอนสเตอร์สองตัวบนสนาม เอาออกจากเกมชั่วคราวได้."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 13,
+   "image_url": "https://images.ygoprodeck.com/images/cards/94145021.jpg",
+   "rank": "#4",
+   "price_label": "อยู่ในเด็คท็อป",
+   "price": "76%",
+   "subtitle": "82 จาก 108 เด็ค",
+   "title": "Droll & Lock Bird\n*ตัดการดึงการ์ด*",
+   "parts": [
+    {
+     "text": "อันดับ 4 *Droll & Lock Bird* 76%",
+     "say": "อันดับสี่ ดรอล แอนด์ ล็อก เบิร์ด เจ็ดสิบหกเปอร์เซ็นต์."
+    },
+    {
+     "text": "ใครหยิบการ์ดจากเด็ค *ห้ามหยิบต่อ*",
+     "say": "พอคู่ต่อสู้หยิบการ์ดจากเด็คขึ้นมือ นอกช่วงจั่ว ทิ้งใบนี้ แล้วทั้งสองฝ่ายหยิบการ์ดจากเด็คขึ้นมือไม่ได้ทั้งเทิร์น."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 12,
+   "image_url": "https://images.ygoprodeck.com/images/cards/14558128.jpg",
+   "rank": "#3",
+   "price_label": "อยู่ในเด็คท็อป",
+   "price": "81%",
+   "subtitle": "88 จาก 108 เด็ค",
+   "title": "Ash Blossom &\nJoyous Spring\n*ตัดการค้นเด็ค*",
+   "parts": [
+    {
+     "text": "อันดับ 3 *Ash Blossom* 81%",
+     "say": "อันดับสาม แอช บลอสซัม แอนด์ จอยัส สปริง แปดสิบเอ็ดเปอร์เซ็นต์."
+    },
+    {
+     "text": "ทิ้งจากมือ *ตัดเอฟเฟกต์ค้นเด็ค*",
+     "say": "ทิ้งใบนี้จากมือ เพื่อตัดเอฟเฟกต์ที่ค้นการ์ดจากเด็ค เรียกมอนสเตอร์จากเด็ค หรือส่งการ์ดจากเด็คลงสุสาน."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 13,
+   "image_url": "https://images.ygoprodeck.com/images/cards/42141493.jpg",
+   "rank": "#2",
+   "price_label": "อยู่ในเด็คท็อป",
+   "price": "84%",
+   "subtitle": "91 จาก 108 เด็ค",
+   "title": "Mulcharmy Fuwalos\n*คู่ต่อสู้เรียก เราจั่ว*",
+   "parts": [
+    {
+     "text": "อันดับ 2 *Mulcharmy Fuwalos* 84%",
+     "say": "อันดับสอง มัลชาร์มี ฟูวาลอส แปดสิบสี่เปอร์เซ็นต์."
+    },
+    {
+     "text": "ไม่มีการ์ดบนสนาม *ทิ้งแล้วจั่ว*",
+     "say": "ตอนเราไม่มีการ์ดบนสนาม ทิ้งใบนี้ แล้วทุกครั้งที่คู่ต่อสู้เรียกมอนสเตอร์จากเด็คหรือเอ็กซ์ตร้าเด็ค เราได้จั่วหนึ่งใบ."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 10,
+   "image_url": "https://images.ygoprodeck.com/images/cards/59438930.jpg",
+   "rank": "#1",
+   "price_label": "อยู่ในเด็คท็อป",
+   "price": "86%",
+   "subtitle": "93 จาก 108 เด็ค",
+   "title": "Ghost Ogre &\nSnow Rabbit\n*ทำลายเอฟเฟกต์*",
+   "parts": [
+    {
+     "text": "อันดับ 1 *Ghost Ogre & Snow Rabbit* 86%",
+     "say": "อันดับหนึ่ง โกสต์ โอเกอร์ แอนด์ สโนว์ แรบบิต แปดสิบหกเปอร์เซ็นต์."
+    },
+    {
+     "text": "มอนสเตอร์กดเอฟเฟกต์ *ทำลายทิ้ง*",
+     "say": "ตอนมอนสเตอร์บนสนามกดเอฟเฟกต์ ทิ้งใบนี้ เพื่อทำลายการ์ดใบนั้นทิ้งได้."
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 4,
+   "image_url": "https://images.ygoprodeck.com/images/cards/59438930.jpg",
+   "text": "ใน 5 ใบนี้\n*ใบไหนอยู่ในเด็คคุณ?*",
+   "parts": [
+    {
+     "text": "ในห้าใบนี้ *ใบไหนอยู่ในเด็คคุณ?*",
+     "say": "ในห้าใบนี้ ใบไหนอยู่ในเด็คของคุณบ้าง?"
+    }
+   ]
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "duration": 4,
+   "beat": "still",
+   "parts": [
+    {
+     "text": "ชอบแบบนี้ กดติดตามไว้เลย.",
+     "say": "ชอบเรื่องการ์ดแบบนี้ กดติดตามไว้เลยนะ. ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ],
+   "image_mode": "still",
+   "no_caption": true,
+   "text": "ชอบเรื่องเล่าแบบนี้ กดติดตามไว้"
+  }
+ ],
+ "meta": {
+  "title": "5 การ์ดยูกิที่เด็คท็อปต้องใส่ อันดับ 1 อยู่ใน 86% | Yu-Gi-Oh! TCG 2026 #shorts",
+  "description": "5 การ์ดยูกิ TCG ที่เด็คท็อปใส่มากที่สุด ณ ปลาย ต.ค. 2026 (นับจากเด็คท็อป 108 เด็ค จาก 20 รายการ วันที่ 19–31 ต.ค. 2026 หลังแบนลิสต์ TCG ใหม่ที่มีผล 19 ต.ค. 2026 นับเฉพาะเด็คหลัก+เอ็กซ์ตร้าเด็ค)\n5) S:P Little Knight 62 เด็ค (57%)\n4) Droll & Lock Bird 82 เด็ค (76%)\n3) Ash Blossom & Joyous Spring 88 เด็ค (81%)\n2) Mulcharmy Fuwalos 91 เด็ค (84%)\n1) Ghost Ogre & Snow Rabbit 93 เด็ค (86%)\n\n👇 ในห้าใบนี้ ใบไหนอยู่ในเด็คของคุณบ้าง?\n\nข้อมูลเป็นภาพรวมช่วงปลาย ต.ค. 2026 และเปลี่ยนไปตามแบนลิสต์/เมตาใหม่ ผลการนับคำนวณเองจากข้อมูลเด็คท็อป ไม่ใช่สถิติทางการ\nภาพ: ภาพการ์ดจาก YGOPRODeck (ภาพประกอบ)\nข้อมูล: YGOPRODeck (Tournament Meta Decks, รายการ WCQ Regional/Open 19–31 ต.ค. 2026), รายชื่อ Forbidden & Limited TCG 19 ต.ค. 2026 (yugioh-card.com), YGOPRODeck card database\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #yugioh #ยูกิโอ๊ะ #yugiohtcg #เมตายูกิ #การ์ดยูกิ",
+  "thumb": {
+   "image_url": "https://images.ygoprodeck.com/images/cards/59438930.jpg",
+   "hook": "5 การ์ดที่\nเด็คท็อปต้องใส่",
+   "sub": "ใบแรกอยู่ใน 86%",
+   "badge": "TOP 5"
+  },
+  "engage": "👇 ในห้าใบนี้ ใบไหนอยู่ในเด็คของคุณบ้าง?",
+  "publish_at": "2026-11-02T05:00:00Z",
+  "campaign": "top5-ygo-hot",
+  "site_path": "/"
+ }
+}
