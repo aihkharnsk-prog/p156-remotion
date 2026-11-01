@@ -62,6 +62,26 @@ export type Beat =
   | "v_pump"
   | "v_flask"
   | "v_watch"
+  | "v_tissue"
+  | "v_toiletfoam"
+  | "v_bowlcleaner"
+  | "v_oxybleach"
+  | "v_dehumid"
+  | "v_butanecan"
+  | "v_spinmop"
+  | "v_washercleaner"
+  | "v_arclighter"
+  | "v_softener"
+  | "v_steelpan"
+  | "v_retrogame"
+  | "v_gamepad"
+  | "v_glassfilm"
+  | "v_anceartbuds"
+  | "v_powerbank"
+  | "v_massagegun"
+  | "v_humidifier"
+  | "v_bagsealer"
+  | "v_cupwarmer"
   | "v_mic"
   | "v_chopper"
   | "v_solar"
@@ -843,7 +863,7 @@ const BeatView: React.FC<{ s: ShowSlide; idx: number; pal: Pal }> = ({ s, idx, p
     beat === "full" ? <FullBeat {...p} /> :
     beat === "rank" ? <RankBeat {...p} /> :
     beat === "pixel" ? <PixelFridge frame={f} dur={d} parts={s.parts || []} starts={starts} /> :
-    beat === "v_toilet" || beat === "v_ac" || beat === "v_wash" || beat === "v_micro" || beat === "v_rice" || beat === "v_kettle" || beat === "v_shower" || beat === "v_smoke" || beat === "v_hairdryer" || beat === "v_induction" || beat === "v_toaster" || beat === "v_airfryer" || beat === "v_fan" || beat === "v_vacuum" || beat === "v_led" || beat === "v_breaker" || beat === "v_pump" || beat === "v_flask" || beat === "v_watch" || beat === "v_iron" || beat === "v_mic" || beat === "v_chopper" || beat === "v_solar" || beat === "v_tapfilter" ? <PixelFridge scene={beat.slice(2)} frame={f} dur={d} parts={s.parts || []} starts={starts} /> :
+    beat === "v_toilet" || beat === "v_ac" || beat === "v_wash" || beat === "v_micro" || beat === "v_rice" || beat === "v_kettle" || beat === "v_shower" || beat === "v_smoke" || beat === "v_hairdryer" || beat === "v_induction" || beat === "v_toaster" || beat === "v_airfryer" || beat === "v_fan" || beat === "v_vacuum" || beat === "v_led" || beat === "v_breaker" || beat === "v_pump" || beat === "v_flask" || beat === "v_watch" || beat === "v_iron" || beat === "v_mic" || beat === "v_chopper" || beat === "v_solar" || beat === "v_tapfilter" || beat === "v_tissue" || beat === "v_toiletfoam" || beat === "v_bowlcleaner" || beat === "v_oxybleach" || beat === "v_dehumid" || beat === "v_butanecan" || beat === "v_spinmop" || beat === "v_washercleaner" || beat === "v_arclighter" || beat === "v_softener" || beat === "v_steelpan" || beat === "v_retrogame" || beat === "v_gamepad" || beat === "v_glassfilm" || beat === "v_anceartbuds" || beat === "v_powerbank" || beat === "v_massagegun" || beat === "v_humidifier" || beat === "v_bagsealer" || beat === "v_cupwarmer" ? <PixelFridge scene={beat.slice(2)} frame={f} dur={d} parts={s.parts || []} starts={starts} /> :
     beat === "vec" ? <PixelFridge vec frame={f} dur={d} parts={s.parts || []} starts={starts} /> :
     <CardBeat {...p} />;
   return (

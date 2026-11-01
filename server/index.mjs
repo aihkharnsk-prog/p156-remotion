@@ -1095,7 +1095,7 @@ app.post("/render", auth, (req, res) => {
     for (const [i, s] of slides.entries()) {
       const duration = Number(s.duration);
       const SCENES = ["sprout", "coin", "evolve", "versions", "sprite"];
-      const BEATS = ["hook", "reveal", "card", "name", "stats", "bignum", "quiz", "zoom", "timeline", "art", "still", "coin", "evolve", "versions", "sprite", "full", "rank", "pixel", "vec", "v_toilet", "v_ac", "v_wash", "v_micro", "v_rice", "v_kettle", "v_shower", "v_smoke", "v_hairdryer", "v_induction", "v_toaster", "v_airfryer", "v_fan", "v_vacuum", "v_led", "v_breaker", "v_pump", "v_flask", "v_iron", "v_mic", "v_chopper", "v_solar", "v_tapfilter", "v_watch"];
+      const BEATS = ["hook", "reveal", "card", "name", "stats", "bignum", "quiz", "zoom", "timeline", "art", "still", "coin", "evolve", "versions", "sprite", "full", "rank", "pixel", "vec", "v_toilet", "v_ac", "v_wash", "v_micro", "v_rice", "v_kettle", "v_shower", "v_smoke", "v_hairdryer", "v_induction", "v_toaster", "v_airfryer", "v_fan", "v_vacuum", "v_led", "v_breaker", "v_pump", "v_flask", "v_iron", "v_mic", "v_chopper", "v_solar", "v_tapfilter", "v_watch", "v_tissue", "v_toiletfoam", "v_bowlcleaner", "v_oxybleach", "v_dehumid", "v_butanecan", "v_spinmop", "v_washercleaner", "v_arclighter", "v_softener", "v_steelpan", "v_retrogame", "v_gamepad", "v_glassfilm", "v_anceartbuds", "v_powerbank", "v_massagegun", "v_humidifier", "v_bagsealer", "v_cupwarmer"];
       if ((!s.image_url && !s.video_url && !SCENES.includes(s.scene) && !BEATS.includes(s.beat)) || !(duration > 0)) {
         return res.status(400).json({
           error: `slide ${i}: need image_url or video_url, and duration (seconds) > 0`,

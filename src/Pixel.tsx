@@ -23,7 +23,27 @@ import { SCENE_IRON } from "./vecHome_iron";
 import { SCENE_TAPFILTER } from "./vecHome_tapfilter";
 import { SCENE_SOLAR } from "./vecHome_solar";
 import { SCENE_WATCH } from "./vecHome_watch";
-const SCENES: Record<string, any> = { ...S1, ...SCENES2, ...SCENES3, ...{ smoke: SCENE_SMOKE, hairdryer: SCENE_HAIRDRYER, induction: SCENE_INDUCTION, toaster: SCENE_TOASTER, airfryer: SCENE_AIRFRYER, fan: SCENE_FAN, vacuum: SCENE_VACUUM, led: SCENE_LED, breaker: SCENE_BREAKER, pump: SCENE_PUMP, flask: SCENE_FLASK, iron: SCENE_IRON, mic: SCENE_MIC, chopper: SCENE_CHOPPER, solar: SCENE_SOLAR, tapfilter: SCENE_TAPFILTER, watch: SCENE_WATCH } };
+import { SCENE_TISSUE } from "./vecHome_tissue";
+import { SCENE_TOILETFOAM } from "./vecHome_toiletfoam";
+import { SCENE_BOWLCLEANER } from "./vecHome_bowlcleaner";
+import { SCENE_OXYBLEACH } from "./vecHome_oxybleach";
+import { SCENE_DEHUMID } from "./vecHome_dehumid";
+import { SCENE_BUTANECAN } from "./vecHome_butanecan";
+import { SCENE_SPINMOP } from "./vecHome_spinmop";
+import { SCENE_WASHERCLEANER } from "./vecHome_washercleaner";
+import { SCENE_ARCLIGHTER } from "./vecHome_arclighter";
+import { SCENE_SOFTENER } from "./vecHome_softener";
+import { SCENE_STEELPAN } from "./vecHome_steelpan";
+import { SCENE_RETROGAME } from "./vecHome_retrogame";
+import { SCENE_GAMEPAD } from "./vecHome_gamepad";
+import { SCENE_GLASSFILM } from "./vecHome_glassfilm";
+import { SCENE_ANCEARTBUDS } from "./vecHome_anceartbuds";
+import { SCENE_POWERBANK } from "./vecHome_powerbank";
+import { SCENE_MASSAGEGUN } from "./vecHome_massagegun";
+import { SCENE_HUMIDIFIER } from "./vecHome_humidifier";
+import { SCENE_BAGSEALER } from "./vecHome_bagsealer";
+import { SCENE_CUPWARMER } from "./vecHome_cupwarmer";
+const SCENES: Record<string, any> = { ...S1, ...SCENES2, ...SCENES3, ...{ smoke: SCENE_SMOKE, hairdryer: SCENE_HAIRDRYER, induction: SCENE_INDUCTION, toaster: SCENE_TOASTER, airfryer: SCENE_AIRFRYER, fan: SCENE_FAN, vacuum: SCENE_VACUUM, led: SCENE_LED, breaker: SCENE_BREAKER, pump: SCENE_PUMP, flask: SCENE_FLASK, iron: SCENE_IRON, mic: SCENE_MIC, chopper: SCENE_CHOPPER, solar: SCENE_SOLAR, tapfilter: SCENE_TAPFILTER, watch: SCENE_WATCH, tissue: SCENE_TISSUE, toiletfoam: SCENE_TOILETFOAM, bowlcleaner: SCENE_BOWLCLEANER, oxybleach: SCENE_OXYBLEACH, dehumid: SCENE_DEHUMID, butanecan: SCENE_BUTANECAN, spinmop: SCENE_SPINMOP, washercleaner: SCENE_WASHERCLEANER, arclighter: SCENE_ARCLIGHTER, softener: SCENE_SOFTENER, steelpan: SCENE_STEELPAN, retrogame: SCENE_RETROGAME, gamepad: SCENE_GAMEPAD, glassfilm: SCENE_GLASSFILM, anceartbuds: SCENE_ANCEARTBUDS, powerbank: SCENE_POWERBANK, massagegun: SCENE_MASSAGEGUN, humidifier: SCENE_HUMIDIFIER, bagsealer: SCENE_BAGSEALER, cupwarmer: SCENE_CUPWARMER } };
 
 // บีต "pixel": ฉากพิกเซลตู้เย็นตัดครึ่งที่วาดด้วยโค้ด + ซับทีละคำกลางจอ
 // ภาพเดียวต่อเนื่องทั้งสไลด์ กล้องซูมไปตาม cue ของแต่ละท่อน (parts[k].cue)
