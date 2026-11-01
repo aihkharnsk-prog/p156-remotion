@@ -1,0 +1,264 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "composition": "MangaShow",
+ "accent_color": "#e2231a",
+ "badge": "OP17-015",
+ "series": "ONE PIECE CARD GAME",
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.35,
+  "speed": 1.05,
+  "prefix": "[soft, smooth, friendly Thai storyteller, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Celtic%20Impulse.mp3",
+ "bgm_volume": 0.14,
+ "slides": [
+  {
+   "layout": "splash",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-015.png",
+   "title": "ถูกล้มแล้ว\n*กลับมาได้อีก*",
+   "parts": [
+    {
+     "text": "ถูกล้มแล้ว *กลับมาได้อีก*",
+     "say": "ตัวละครถูกล้มไปแล้ว แต่ยังกลับมาลงสนามได้อีกรอบ. การ์ดมาร์โคใบนี้ ทำได้.",
+     "panel": {
+      "x": 50,
+      "y": 24,
+      "zoom": 1.95
+     }
+    },
+    {
+     "text": "มาร์โค *ฟีนิกซ์*",
+     "say": "เขาคือมาร์โค ฟีนิกซ์. หัวหน้าหน่วยที่หนึ่ง ของกลุ่มหนวดขาว.",
+     "panel": {
+      "x": 50,
+      "y": 24,
+      "zoom": 1.95
+     }
+    }
+   ],
+   "duration": 10
+  },
+  {
+   "layout": "wanted",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-015.png",
+   "name": "MARCO",
+   "subtitle": "หน่วยที่ 1",
+   "sticker": "รู้จักฟีนิกซ์? กดหัวใจเลย",
+   "parts": [
+    {
+     "text": "ผล *โทริโทริ*",
+     "say": "เขากินผลโทริโทริ โมเดลฟีนิกซ์. ผลปีศาจสัตว์ในตำนาน ที่เปลี่ยนร่างเป็นนกเพลิงสีฟ้า.",
+     "panel": {
+      "x": 50,
+      "y": 26,
+      "zoom": 1.9
+     }
+    },
+    {
+     "text": "ไฟสีฟ้า *รักษาตัวเอง*",
+     "say": "เปลวไฟสีฟ้านั้น รักษาบาดแผลของเขา ให้หายได้ในพริบตา. แทบทุกบาดแผลเลย.",
+     "panel": {
+      "x": 50,
+      "y": 26,
+      "zoom": 1.9
+     }
+    },
+    {
+     "text": "ค่าหัว *1,374 ล้านเบรี*",
+     "say": "ค่าหัวของเขา หนึ่งพันสามร้อยเจ็ดสิบสี่ล้านเบรี.",
+     "panel": {
+      "x": 50,
+      "y": 26,
+      "zoom": 1.9
+     }
+    }
+   ],
+   "duration": 15
+  },
+  {
+   "layout": "effect",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-015.png",
+   "title": "ล้มแทนตัวอื่น\nแล้วกลับมาเอง",
+   "parts": [
+    {
+     "text": "ราคา *5* พลัง 6000",
+     "say": "ใบนี้ สีแดง ราคาห้า. พลังหกพัน. เคาน์เตอร์หนึ่งพัน.",
+     "panel": {
+      "x": 45,
+      "y": 8,
+      "zoom": 1.25
+     }
+    },
+    {
+     "text": "ล้ม *มาร์โค* แทนได้",
+     "say": "ถ้าตัวละครของเรา กำลังจะถูกเอฟเฟกต์ของคู่ต่อสู้ เอาออกจากสนาม. จะล้มมาร์โคแทนก็ได้.",
+     "panel": {
+      "x": 50,
+      "y": 68,
+      "zoom": 2.0
+     }
+    },
+    {
+     "text": "ทิ้ง *หนวดขาว 1 ใบ* ย้อนกลับ",
+     "say": "และตอนมาร์โคถูกล้ม ทิ้งการ์ดหนวดขาวหนึ่งใบจากมือ. มาร์โคจะกลับมาลงสนาม จากกองทิ้ง.",
+     "panel": {
+      "x": 50,
+      "y": 78,
+      "zoom": 2.0
+     }
+    }
+   ],
+   "duration": 16
+  },
+  {
+   "layout": "panels",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-015.png",
+   "images": [
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP16-014.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP03-013.png"
+   ],
+   "parts": [
+    {
+     "text": "ใบเก่า ราคา *6*",
+     "say": "มาร์โค เคยมีใบที่คล้ายกัน ในชุดโอพีสิบหก. ราคาหก. แต่ต้องทิ้งตัวละครพลังแปดพัน จากมือ ถึงจะกลับมาได้.",
+     "panel": {
+      "img": 1,
+      "x": 50,
+      "y": 28,
+      "zoom": 1.4
+     }
+    },
+    {
+     "text": "ใบใหม่ *ง่ายกว่า*",
+     "say": "ใบใหม่ ราคาถูกกว่า และง่ายกว่า. ทิ้งการ์ดหนวดขาวใบไหนก็ได้ ก็กลับมาแล้ว.",
+     "panel": {
+      "img": 0,
+      "x": 50,
+      "y": 72,
+      "zoom": 1.9
+     }
+    },
+    {
+     "text": "ใบโอพีสาม ล้ม *3000*",
+     "say": "ส่วนใบในชุดโอพีสาม ราคาห้า. ลงสนามแล้ว ล้มตัวละครพลังสามพัน หรือต่ำกว่า ได้หนึ่งตัว.",
+     "panel": {
+      "img": 2,
+      "x": 50,
+      "y": 28,
+      "zoom": 1.4
+     }
+    }
+   ],
+   "duration": 19
+  },
+  {
+   "layout": "panels",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-015.png",
+   "images": [
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-018.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP08-002.png"
+   ],
+   "parts": [
+    {
+     "text": "ที่ *มารีนฟอร์ด*",
+     "say": "ที่มารีนฟอร์ด มาร์โคยืนอยู่ข้างหนวดขาว แทบตลอดสงคราม.",
+     "panel": {
+      "img": 1,
+      "x": 50,
+      "y": 28,
+      "zoom": 1.4
+     }
+    },
+    {
+     "text": "หลังหนวดขาว *จากไป*",
+     "say": "พอหนวดขาวจากไป เขารับหน้าที่ดูแลกลุ่มต่อ. จนกลุ่มแตกกระจาย.",
+     "panel": {
+      "img": 2,
+      "x": 50,
+      "y": 28,
+      "zoom": 1.4
+     }
+    },
+    {
+     "text": "สุดท้าย เป็น *หมอ*",
+     "say": "แล้วเขาก็กลับไปเป็นหมอ ที่หมู่บ้านของหนวดขาว บนเกาะสฟิงซ์.",
+     "panel": {
+      "img": 0,
+      "x": 50,
+      "y": 30,
+      "zoom": 1.4
+     }
+    }
+   ],
+   "duration": 13
+  },
+  {
+   "layout": "poll",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-015.png",
+   "no_caption": true,
+   "title": "ใบเก่า *ราคา 6*\nหรือใบใหม่ *ราคา 5*",
+   "labels": [
+    "ใบเก่า ราคา 6",
+    "ใบใหม่ ราคา 5"
+   ],
+   "parts": [
+    {
+     "text": "",
+     "say": "มาร์โคสองใบนี้ ใบไหนน่าใช้กว่ากัน?"
+    },
+    {
+     "text": "",
+     "say": "ใบเก่าพลังแปดพัน. ใบใหม่ ทิ้งแค่การ์ดหนวดขาว."
+    },
+    {
+     "text": "",
+     "say": "คอมเมนต์ไว้เลย. แล้วกดติดตาม การ์ดเซ็นเตอร์ไว้ด้วยนะ."
+    }
+   ],
+   "duration": 10
+  },
+  {
+   "layout": "still",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "",
+     "say": "ชอบเรื่องการ์ดแบบนี้ กดติดตามไว้เลย."
+    },
+    {
+     "text": "",
+     "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "มาร์โค ฟีนิกซ์ ถูกล้มแล้วกลับมาได้ OP17-015 | One Piece Card #shorts",
+  "description": "การ์ดวันพีซ OP-17 ใบที่ 015 มาร์โค ฟีนิกซ์ หัวหน้าหน่วยที่ 1 ของกลุ่มหนวดขาว การ์ดสีแดง ระดับ UC ราคา 5 พลัง 6000 เคาน์เตอร์ +1000 ถ้าตัวละครของเราจะถูกเอฟเฟกต์คู่ต่อสู้เอาออกจากสนาม ล้มใบนี้แทนได้ และตอนถูกล้ม ทิ้งการ์ดประเภทกลุ่มหนวดขาว 1 ใบจากมือ เพื่อนำใบนี้กลับมาลงสนามจากกองทิ้ง เทียบกับมาร์โค OP16-014 และ OP03-013\n\nภาพวาดการ์ด: BISAI · ข้อมูลการ์ด/ภาพ: เว็บไซต์ทางการ ONE PIECE CARD GAME (en.onepiece-cardgame.com), Limitless TCG · ข้อมูลตัวละคร: One Piece Wiki\n\n👇 มาร์โค ใบเก่า (ราคา 6) หรือใบใหม่ (ราคา 5) ใบไหนน่าใช้กว่า? พิมพ์ 1 = ใบเก่า / 2 = ใบใหม่\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Celtic Impulse\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17 #มาร์โค #Marco",
+  "tags": [
+   "วันพีซ",
+   "การ์ดวันพีซ",
+   "One Piece Card Game",
+   "OP17",
+   "OP17-015",
+   "Marco",
+   "มาร์โค",
+   "หนวดขาว"
+  ],
+  "thumb": {
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-015.png",
+   "hook": "ถูกล้มแล้ว\nกลับมาได้",
+   "badge": "OP17-015",
+   "sub": "ONE PIECE CARD GAME"
+  },
+  "engage": "👇 มาร์โค ใบเก่า (ราคา 6) หรือใบใหม่ (ราคา 5) ใบไหนน่าใช้กว่า? พิมพ์ 1 = ใบเก่า / 2 = ใบใหม่\nชอบเรื่องการ์ดแบบนี้ กด ❤️ ไว้ด้วยนะ",
+  "campaign": "op17-015-marco",
+  "site_path": "/",
+  "publish_at": "2026-11-02T05:00:00Z"
+ }
+}

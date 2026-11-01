@@ -1,0 +1,205 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.35,
+  "speed": 1.05,
+  "prefix": "[soft, smooth, friendly Thai storyteller, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "composition": "CardShow",
+ "theme": "electric",
+ "badge": "TOP 5",
+ "series": "การ์ดวันพีซฮอตสุด",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055,
+ "slides": [
+  {
+   "beat": "hook",
+   "duration": 8,
+   "title": "5 การ์ดฮอตสุด\n*ตอนนี้*",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-039.png",
+   "parts": [
+    {
+     "text": "5 การ์ด *ฮอตสุด* ตอนนี้",
+     "say": "ห้าการ์ดวันพีซ ที่ฮอตที่สุดตอนนี้. และมีหนึ่งใบ เพิ่งถูกแบน!"
+    },
+    {
+     "text": "ใครคือ *ลีดเดอร์* ที่ชนะมากสุด?",
+     "say": "ลีดเดอร์ใบไหน ชนะมากที่สุด? นับถอยหลัง!"
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 10,
+   "rank": "5",
+   "title": "Monkey D. Luffy OP17-079\n*ลีดเดอร์ดำ*",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-079.png",
+   "price": "14/149",
+   "price_label": "คนเล่นออนไลน์ #3",
+   "subtitle": "ช่วง 12-15 ต.ค.",
+   "parts": [
+    {
+     "text": "อันดับ 5 *ลูฟี่* ลีดเดอร์ดำ",
+     "say": "อันดับห้า ลูฟี่ ลีดเดอร์สีดำ จากชุดโอพีสิบเจ็ด. ตัวละครราคาสิบสองขึ้นไปของเรา ได้บล็อกเกอร์ทั้งหมด."
+    },
+    {
+     "text": "เล่นมากเป็น *อันดับ 3* ออนไลน์",
+     "say": "คนเล่นออนไลน์มากเป็นอันดับสาม. ผลแพ้ชนะสูสี เกือบครึ่งต่อครึ่ง."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 10,
+   "rank": "4",
+   "title": "Shanks OP17-020\n*ลีดเดอร์เขียว*",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-020.png",
+   "price": "3 ครั้ง",
+   "price_label": "ชนะอีเวนต์",
+   "subtitle": "สหรัฐ + กรีซ",
+   "parts": [
+    {
+     "text": "อันดับ 4 *แชงคูส* ลีดเดอร์เขียว",
+     "say": "อันดับสี่ แชงคูส ลีดเดอร์สีเขียว. ทำให้ตัวละครที่นอนอยู่ของคู่ต่อสู้ ไม่ตื่นในเทิร์นถัดไป."
+    },
+    {
+     "text": "ชนะ *3 อีเวนต์* เซอร์ไพรส์",
+     "say": "เป็นเซอร์ไพรส์ของสัปดาห์แรกหลังแบน. ชนะสามอีเวนต์ ที่สหรัฐและกรีซ."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 10,
+   "rank": "3",
+   "title": "Dracule Mihawk OP14-020\n*ถูกแบน*",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP14-020.png",
+   "price": "แบน",
+   "price_label": "ตั้งแต่ 12 ต.ค.",
+   "subtitle": "ทุกลายการ์ด",
+   "parts": [
+    {
+     "text": "อันดับ 3 *มิฮอว์ค* ถูกแบน",
+     "say": "อันดับสาม มิฮอว์ค ที่เพิ่งโดนแบน. ผู้ผลิตบอกว่า แรงเกินกว่าที่คาดไว้ และบีบให้ลีดเดอร์อื่นเล่นยาก."
+    },
+    {
+     "text": "ห้ามใช้ *ตั้งแต่ 12 ต.ค.*",
+     "say": "ห้ามใช้ตั้งแต่วันที่สิบสอง ตุลาคม ทุกลายการ์ด. จะแจกมิฮอว์คใบใหม่ ในงานอีเวนต์ภายหลัง."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 10,
+   "rank": "2",
+   "title": "Luffy & Ace ST30-001\n*ลีดเดอร์แดง-เขียว*",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/ST30-001.png",
+   "price": "59%",
+   "price_label": "ชนะออนไลน์",
+   "subtitle": "70 ชนะ 49 แพ้",
+   "parts": [
+    {
+     "text": "อันดับ 2 *ลูฟี่ กับ เอส*",
+     "say": "อันดับสอง ลูฟี่ กับ เอส. ตัวละครลูฟี่และเอสของเรา พลังเพิ่มสามพัน ในเทิร์นคู่ต่อสู้."
+    },
+    {
+     "text": "ชนะ *59%* ออนไลน์ ถูกสุด",
+     "say": "ชนะออนไลน์ราวหกสิบเปอร์เซ็นต์ ดีสุดในเด็คยอดนิยม. และมาจากสตาร์เตอร์เด็ค ซื้อเล่นได้ถูกที่สุด."
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 4,
+   "title": "แล้ว\n*อันดับ 1?*",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-039.png",
+   "parts": [
+    {
+     "text": "อันดับ 1 *ชนะบ่อยสุด*",
+     "say": "แล้วอันดับหนึ่ง คือใบที่ชนะบ่อยที่สุดตอนนี้!"
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 11,
+   "rank": "1",
+   "title": "Rocks D. Xebec OP17-039\n*ลีดเดอร์น้ำเงิน*",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-039.png",
+   "price": "9/23",
+   "price_label": "ชนะอีเวนต์ร้าน",
+   "subtitle": "สัปดาห์แรกหลังแบน",
+   "parts": [
+    {
+     "text": "อันดับ 1 *ร็อคส์ ดี ซีเบค*",
+     "say": "อันดับหนึ่ง ร็อคส์ ดี ซีเบค ลีดเดอร์สีน้ำเงิน. ตอนโจมตี ทิ้งการ์ดหนึ่งใบ เปิดการ์ดบนกอง ถ้าเป็นกลุ่มร็อคส์ จั่วสองใบ."
+    },
+    {
+     "text": "ชนะ *9 จาก 23* อีเวนต์",
+     "say": "สัปดาห์แรกหลังแบนมิฮอว์ค ชนะเก้าจากยี่สิบสามอีเวนต์ในร้าน. และคนเล่นออนไลน์มากที่สุด."
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 5,
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-039.png",
+   "parts": [
+    {
+     "text": "คุณ *เล่นใบไหน?*",
+     "say": "ในห้าใบนี้ คุณเล่นใบไหน?"
+    },
+    {
+     "text": "พิมพ์ 1 = ร็อคส์ / 2 = ลูฟี่ กับ เอส",
+     "say": "พิมพ์หนึ่ง ร็อคส์ ดี ซีเบค. พิมพ์สอง ลูฟี่ กับ เอส!"
+    }
+   ]
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "image_mode": "still",
+   "text": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด",
+   "duration": 4,
+   "no_caption": true,
+   "beat": "still",
+   "parts": [
+    {
+     "text": "ชอบเรื่องการ์ดแบบนี้ กดติดตามไว้",
+     "say": "ชอบเรื่องการ์ดแบบนี้ กดติดตามไว้เลย."
+    },
+    {
+     "text": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด",
+     "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "5 การ์ดวันพีซฮอตสุดตอนนี้ ใบหนึ่งเพิ่งถูกแบน! | One Piece Card #shorts",
+  "description": "นับถอยหลัง 5 การ์ดลีดเดอร์ที่ฮอตที่สุดในเกมการ์ดวันพีซตอนนี้ (ตุลาคม 2026 หลังการแบนมิฮอว์ค)\n5) Monkey D. Luffy OP17-079 (ดำ) คนเล่นออนไลน์มากเป็นอันดับ 3 (14 จาก 149 คน)\n4) Shanks OP17-020 (เขียว) ชนะอีเวนต์ในร้าน 3 ครั้ง (สหรัฐ/กรีซ)\n3) Dracule Mihawk OP14-020 (เขียว) ถูกแบนทุกลายการ์ด ตั้งแต่ 12 ต.ค. 2026\n2) Luffy & Ace ST30-001 (แดง/เขียว) ชนะออนไลน์ราว 59% (70 ชนะ 49 แพ้)\n1) Rocks D. Xebec OP17-039 (น้ำเงิน) ชนะ 9 จาก 23 อีเวนต์ในร้าน และเป็นลีดเดอร์ที่คนเล่นออนไลน์มากที่สุด\n\n👇 ในห้าใบนี้ คุณเล่นใบไหน? พิมพ์ 1 = ร็อคส์ ดี ซีเบค / 2 = ลูฟี่ กับ เอส\n\nข้อมูลเมตาเกม: Shonen TCG \"OP-17 Meta Tier List (October 2026): After the Mihawk Ban\" (อัปเดต 21 ต.ค. 2026) จากรายชื่อเด็คอีเวนต์ร้านภาษาอังกฤษ 13-18 ต.ค. 2026 (One Piece Top Decks) และอีเวนต์ออนไลน์ OP17.5 12-15 ต.ค. 2026 บน Limitless Play (149 คน) · การแบน: ประกาศทางการ ONE PIECE CARD GAME 24 ก.ย. 2026 (en.onepiece-cardgame.com/news/restriction-261001.html) · ข้อความการ์ด/ภาพ: เว็บไซต์ทางการ ONE PIECE CARD GAME ตัวเลขมาจากกลุ่มตัวอย่างสั้นๆ และเมตาเกมเปลี่ยนได้ตามชุดใหม่ (EB-05 ออก 30 ต.ค., OP-18 ออก 20 พ.ย. 2026)\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17 #เมตา #การ์ดสะสม",
+  "tags": [
+   "วันพีซ",
+   "การ์ดวันพีซ",
+   "One Piece Card Game",
+   "OP17",
+   "เมตา",
+   "ลีดเดอร์",
+   "Mihawk ban",
+   "Rocks D. Xebec"
+  ],
+  "thumb": {
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-039.png",
+   "hook": "5 การ์ดฮอตสุด\nมีใบโดนแบน!",
+   "sub": "ลีดเดอร์ยอดฮิตตอนนี้",
+   "badge": "TOP 5"
+  },
+  "engage": "👇 ในห้าใบนี้ คุณเล่นใบไหน? พิมพ์ 1 = ร็อคส์ ดี ซีเบค / 2 = ลูฟี่ กับ เอส",
+  "campaign": "top5-onepiece-hot",
+  "site_path": "/",
+  "publish_at": "2026-11-02T05:00:00Z"
+ }
+}

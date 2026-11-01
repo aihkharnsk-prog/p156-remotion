@@ -1,0 +1,210 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.35,
+  "speed": 1.05,
+  "prefix": "[soft, smooth, friendly Thai storyteller, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "composition": "CardShow",
+ "theme": "fire",
+ "badge": "TOP 5",
+ "series": "การ์ดมังงะแพงสุด",
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Go%20Cart%20-%20Drop%20Mix.mp3",
+ "bgm_volume": 0.055,
+ "slides": [
+  {
+   "beat": "hook",
+   "duration": 8,
+   "title": "การ์ดจากซอง\n*ใบละ 3.5 ล้าน*",
+   "image_url": "https://images2.minutemediacdn.com/image/upload/v1777460866/images/voltaxMediaLibrary/mmsport/si_collects/01kqcerv1t6z9nxz8hpd.jpg",
+   "parts": [
+    {
+     "text": "การ์ดจาก*ซอง* ใบเดียว *3.5 ล้านบาท*",
+     "say": "การ์ดวันพีซ ที่สุ่มได้จากซองบูสเตอร์ ใบเดียว ขายไปสามล้านห้าแสนบาท!"
+    },
+    {
+     "text": "ห้าการ์ด *มังงะ* แพงสุด",
+     "say": "ห้าการ์ดมังงะ ที่ขายแพงที่สุด ช่วงต้นปีนี้. ไม่ใช่การ์ดรางวัลแข่งขัน. นับถอยหลัง!"
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 9,
+   "rank": "5",
+   "title": "Trafalgar Law OP10-119\n*Manga · BGS 10*",
+   "image_url": "https://images2.minutemediacdn.com/image/upload/v1777465280/images/voltaxMediaLibrary/mmsport/si_collects/01kqcjzh8a3ack2tk2yz.jpg",
+   "price": "$21,700",
+   "price_label": "ขายจริง",
+   "subtitle": "≈ ฿729,000",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "อันดับ 5 *ลอว์* ฉบับมังงะ",
+     "say": "อันดับห้า ลอว์ จากชุดโอพีสิบ ฉบับมังงะ เกรดบีจีเอส สิบ แบล็กเลเบล."
+    },
+    {
+     "text": "ขาย *28 เม.ย.* $21,700",
+     "say": "ขายไปวันที่ยี่สิบแปด เมษายน ที่สองหมื่นหนึ่งพันเจ็ดร้อยดอลลาร์ ราวเจ็ดแสนสามหมื่นบาท."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 9,
+   "rank": "4",
+   "title": "Gol D. Roger OP09-118\n*Gold Manga · PSA 10*",
+   "image_url": "https://images2.minutemediacdn.com/image/upload/v1777464987/images/voltaxMediaLibrary/mmsport/si_collects/01kqcjpkx6ccjxhngw34.jpg",
+   "price": "$28,182",
+   "price_label": "ขายจริง",
+   "subtitle": "≈ ฿947,000",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "อันดับ 4 *โกล ดี โรเจอร์*",
+     "say": "อันดับสี่ โกล ดี โรเจอร์ ฉบับโกลด์มังงะ จากชุดโอพีเก้า เกรดพี เอส เอ สิบ."
+    },
+    {
+     "text": "ขาย *29 ม.ค.* $28,182",
+     "say": "ขายไปวันที่ยี่สิบเก้า มกราคม ที่สองหมื่นแปดพันหนึ่งร้อยแปดสิบสองดอลลาร์ ราวเก้าแสนห้าหมื่นบาท."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 9,
+   "rank": "3",
+   "title": "Sabo OP13-120\n*Red Manga · BGS 10*",
+   "image_url": "https://images2.minutemediacdn.com/image/upload/v1777464806/images/voltaxMediaLibrary/mmsport/si_collects/01kqcjh2frz65bwr5fyk.webp",
+   "price": "$33,570",
+   "price_label": "ขายจริง",
+   "subtitle": "≈ ฿1.13 ล้าน",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "อันดับ 3 *ซาโบ* มังงะสีแดง",
+     "say": "อันดับสาม ซาโบ ฉบับมังงะสีแดง จากชุดโอพีสิบสาม เกรดบีจีเอส สิบ แบล็กเลเบล."
+    },
+    {
+     "text": "ขาย *9 มี.ค.* $33,570",
+     "say": "ขายไปวันที่เก้า มีนาคม ที่สามหมื่นสามพันห้าร้อยเจ็ดสิบดอลลาร์ ราวหนึ่งล้านหนึ่งแสนบาท."
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 9,
+   "rank": "2",
+   "title": "Luffy Gear 5 OP05-119\n*Manga · BGS 10*",
+   "image_url": "https://images2.minutemediacdn.com/image/upload/v1777463712/images/voltaxMediaLibrary/mmsport/si_collects/01kqchfp060ne9fjc8z6.webp",
+   "price": "$68,355",
+   "price_label": "ขายจริง",
+   "subtitle": "≈ ฿2.3 ล้าน",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "อันดับ 2 *ลูฟี่* เกียร์ห้า",
+     "say": "อันดับสอง ลูฟี่ ร่างเกียร์ห้า ฉบับมังงะ จากชุดโอพีห้า เกรดบีจีเอส สิบ แบล็กเลเบล."
+    },
+    {
+     "text": "ขาย *20 เม.ย.* $68,355",
+     "say": "ขายไปวันที่ยี่สิบ เมษายน ที่หกหมื่นแปดพันสามร้อยห้าสิบห้าดอลลาร์ ราวสองล้านสามแสนบาท."
+    }
+   ]
+  },
+  {
+   "beat": "full",
+   "duration": 4,
+   "title": "แล้ว\n*อันดับ 1?*",
+   "image_url": "https://images2.minutemediacdn.com/image/upload/v1777460866/images/voltaxMediaLibrary/mmsport/si_collects/01kqcerv1t6z9nxz8hpd.jpg",
+   "parts": [
+    {
+     "text": "อันดับ 1 *แพงกว่าที่สอง*",
+     "say": "แล้วอันดับหนึ่ง แพงกว่าอันดับสอง ไปอีกครึ่งหนึ่ง!"
+    }
+   ]
+  },
+  {
+   "beat": "rank",
+   "duration": 11,
+   "rank": "1",
+   "title": "Monkey D. Luffy OP13-118\n*Red Manga · BGS 10*",
+   "image_url": "https://images2.minutemediacdn.com/image/upload/v1777460866/images/voltaxMediaLibrary/mmsport/si_collects/01kqcerv1t6z9nxz8hpd.jpg",
+   "price": "$104,430",
+   "price_label": "ขายจริง",
+   "subtitle": "≈ ฿3.5 ล้าน",
+   "fit": "contain",
+   "parts": [
+    {
+     "text": "อันดับ 1 *ลูฟี่* มังงะสีแดง",
+     "say": "อันดับหนึ่ง ลูฟี่ ฉบับมังงะสีแดง จากชุดโอพีสิบสาม เกรดบีจีเอส สิบ."
+    },
+    {
+     "text": "ขาย *2 ก.พ.* $104,430",
+     "say": "ขายไปวันที่สอง กุมภาพันธ์ ที่หนึ่งแสนสี่พันสี่ร้อยสามสิบดอลลาร์ ราวสามล้านห้าแสนบาท. สูงสุดของการ์ดมังงะ ในปีนี้."
+    }
+   ]
+  },
+  {
+   "beat": "card",
+   "duration": 5,
+   "image_url": "https://images2.minutemediacdn.com/image/upload/v1777460866/images/voltaxMediaLibrary/mmsport/si_collects/01kqcerv1t6z9nxz8hpd.jpg",
+   "parts": [
+    {
+     "text": "ถ้าเลือกได้ *คุณเอาใบไหน?*",
+     "say": "ถ้าเลือกได้ คุณเอาใบไหน?"
+    },
+    {
+     "text": "พิมพ์ 1 = ลูฟี่ แดง / 2 = เกียร์ห้า",
+     "say": "พิมพ์หนึ่ง ลูฟี่มังงะสีแดง. พิมพ์สอง ลูฟี่เกียร์ห้า!"
+    }
+   ]
+  },
+  {
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "image_mode": "still",
+   "text": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด",
+   "duration": 4,
+   "no_caption": true,
+   "beat": "still",
+   "parts": [
+    {
+     "text": "ชอบเรื่องการ์ดแบบนี้ กดติดตามไว้",
+     "say": "ชอบเรื่องการ์ดแบบนี้ กดติดตามไว้เลย."
+    },
+    {
+     "text": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด",
+     "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "5 การ์ดวันพีซจากซอง ขายแพงสุดปีนี้ ใบละ 3.5 ล้านบาท | One Piece Card #shorts",
+  "description": "นับถอยหลัง 5 การ์ดมังงะวันพีซ (การ์ดจากซองบูสเตอร์ ไม่ใช่การ์ดรางวัลแข่งขัน) ที่ขายสำเร็จแพงที่สุดในช่วงต้นปี 2026 ตามรายงานของ SI Collectibles (เผยแพร่ 5 พ.ค. 2026 ข้อมูลจาก Card Ladder)\n5) Trafalgar Law OP10-119 Manga BGS 10 Black Label ขาย 28 เม.ย. 2026 ที่ $21,700\n4) Gol D. Roger OP09-118 Gold Manga Alternate Art PSA 10 ขาย 29 ม.ค. 2026 ที่ $28,182\n3) Sabo OP13-120 Red Manga BGS 10 Black Label ขาย 9 มี.ค. 2026 ที่ $33,570\n2) Monkey D. Luffy OP05-119 Manga (เกียร์ห้า) BGS 10 Black Label ขาย 20 เม.ย. 2026 ที่ $68,355\n1) Monkey D. Luffy OP13-118 Red Manga BGS 10 ขาย 2 ก.พ. 2026 ที่ $104,430 (สูงสุดของการ์ดมังงะทุกใบ)\n\n👇 ถ้าเลือกได้ คุณเอาใบไหน? พิมพ์ 1 = ลูฟี่มังงะสีแดง / 2 = ลูฟี่เกียร์ห้า\n\nอัตราแลกเปลี่ยนประมาณ 33.6 บาท/ดอลลาร์ (ธนาคาร 20 ต.ค. 2026) ราคาและอันดับเป็นรายงานการขายถึงต้นพฤษภาคม 2026 และเปลี่ยนแปลงได้ ภาพการ์ดคือสลาบเกรดเดียวกันจากบทความของ SI Collectibles (ภาพ: Card Ladder / Probstein / PSA) อาจไม่ใช่ใบที่ขายพอดี\nข้อมูล: SI Collectibles \"The Top One Piece Manga Sales in 2026\" (Craig Cormier, 5 พ.ค. 2026), Card Ladder, Pullmarket (ยืนยัน $104,400 ลูฟี่ OP13-118 2 ก.พ. 2026)\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Go Cart - Drop Mix\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #ลูฟี่ #การ์ดแพง #การ์ดสะสม",
+  "tags": [
+   "วันพีซ",
+   "การ์ดวันพีซ",
+   "การ์ดแพง",
+   "Manga Rare",
+   "Luffy OP13-118",
+   "Gear 5 OP05-119",
+   "BGS 10",
+   "One Piece Card Game"
+  ],
+  "thumb": {
+   "image_url": "https://images2.minutemediacdn.com/image/upload/v1777460866/images/voltaxMediaLibrary/mmsport/si_collects/01kqcerv1t6z9nxz8hpd.jpg",
+   "hook": "การ์ดจากซอง\nใบละ 3.5 ล้าน",
+   "sub": "5 มังงะแพงสุด",
+   "badge": "TOP 5"
+  },
+  "engage": "👇 ถ้าเลือกได้ คุณเอาใบไหน? พิมพ์ 1 = ลูฟี่มังงะสีแดง / 2 = ลูฟี่เกียร์ห้า",
+  "campaign": "top5-onepiece-manga-sales",
+  "site_path": "/",
+  "publish_at": "2026-11-02T05:00:00Z"
+ }
+}
