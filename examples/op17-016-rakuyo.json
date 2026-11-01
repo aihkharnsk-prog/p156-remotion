@@ -1,0 +1,264 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "composition": "MangaShow",
+ "accent_color": "#e2231a",
+ "badge": "OP17-016",
+ "series": "ONE PIECE CARD GAME",
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.35,
+  "speed": 1.05,
+  "prefix": "[soft, smooth, friendly Thai storyteller, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Celtic%20Impulse.mp3",
+ "bgm_volume": 0.14,
+ "slides": [
+  {
+   "layout": "splash",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-016.png",
+   "title": "ราคา 3\n*ล้มได้ 2 ตัว*",
+   "parts": [
+    {
+     "text": "ราคา *3* ล้ม *2 ตัว*",
+     "say": "ราคาแค่สาม แต่ลงสนามแล้ว ล้มตัวละครคู่ต่อสู้ ได้ถึงสองตัว.",
+     "panel": {
+      "x": 50,
+      "y": 24,
+      "zoom": 1.95
+     }
+    },
+    {
+     "text": "ราคุโย *หน่วย 7*",
+     "say": "เขาคือราคุโย. หัวหน้าหน่วยที่เจ็ด ของกลุ่มหนวดขาว.",
+     "panel": {
+      "x": 50,
+      "y": 24,
+      "zoom": 1.95
+     }
+    }
+   ],
+   "duration": 8
+  },
+  {
+   "layout": "wanted",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-016.png",
+   "name": "RAKUYO",
+   "subtitle": "หน่วยที่ 7",
+   "sticker": "เพิ่งรู้? กดหัวใจเลย",
+   "parts": [
+    {
+     "text": "ลูกตุ้ม *มีหน้า*",
+     "say": "อาวุธของเขา คือลูกตุ้มหนามติดโซ่ ปลายโซ่มีหน้าคล้ายสุนัข. โซ่ขยับได้ เหมือนงู.",
+     "panel": {
+      "x": 50,
+      "y": 26,
+      "zoom": 1.9
+     }
+    },
+    {
+     "text": "ชื่อเพิ่งรู้ใน *SBS 58*",
+     "say": "ชื่อของเขา เพิ่งเปิดเผย ใน เอสบีเอส เล่มห้าสิบแปด.",
+     "panel": {
+      "x": 50,
+      "y": 26,
+      "zoom": 1.9
+     }
+    },
+    {
+     "text": "เกิด *8 กันยายน*",
+     "say": "วันเกิดของเขา คือวันที่แปด กันยายน.",
+     "panel": {
+      "x": 50,
+      "y": 26,
+      "zoom": 1.9
+     }
+    }
+   ],
+   "duration": 12
+  },
+  {
+   "layout": "effect",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-016.png",
+   "title": "ลงสนาม\nล้มได้ 2 ตัว",
+   "parts": [
+    {
+     "text": "ราคา *3* พลัง 2000",
+     "say": "ใบนี้ สีแดง ราคาสาม. พลังสองพัน. เคาน์เตอร์สองพัน.",
+     "panel": {
+      "x": 45,
+      "y": 8,
+      "zoom": 1.25
+     }
+    },
+    {
+     "text": "ลงสนาม ล้ม *2 ตัว*",
+     "say": "ตอนลงสนาม เลือกล้มตัวละครคู่ต่อสู้ ได้สูงสุดสองตัว.",
+     "panel": {
+      "x": 50,
+      "y": 70,
+      "zoom": 2.0
+     }
+    },
+    {
+     "text": "พลังฐาน *2000 หรือต่ำกว่า*",
+     "say": "แต่ต้องเป็นตัวที่ พลังเดิมสองพันหรือต่ำกว่า. ไม่นับพลังที่ถูกบวกเพิ่ม.",
+     "panel": {
+      "x": 50,
+      "y": 70,
+      "zoom": 2.0
+     }
+    }
+   ],
+   "duration": 13
+  },
+  {
+   "layout": "panels",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-016.png",
+   "images": [
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-019.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP13-055.png"
+   ],
+   "parts": [
+    {
+     "text": "ใบโอพีสอง *พลัง 4000*",
+     "say": "ราคุโย เคยมีการ์ดมาก่อน. ในโอพีสอง พลังสี่พัน. ถ้ามีดอนติดหนึ่งใบ หนวดขาวทุกตัวของเรา พลังเพิ่มหนึ่งพัน ในเทิร์นเรา.",
+     "panel": {
+      "img": 1,
+      "x": 50,
+      "y": 28,
+      "zoom": 1.4
+     }
+    },
+    {
+     "text": "ใบโอพีสิบสาม *สีน้ำเงิน*",
+     "say": "ในโอพีสิบสาม เป็นใบสีน้ำเงิน. ตอนโจมตี ถ้ามือเหลือสี่ใบหรือน้อยกว่า หนวดขาวทุกตัว พลังเพิ่มหนึ่งพัน.",
+     "panel": {
+      "img": 2,
+      "x": 50,
+      "y": 28,
+      "zoom": 1.4
+     }
+    },
+    {
+     "text": "ใบใหม่ *ตัวกวาด*",
+     "say": "แต่ใบใหม่ ไม่ได้เสริมพลังเพื่อนในทีม. เป็นตัวกวาดสนาม ที่ล้มได้สองตัวรวด.",
+     "panel": {
+      "img": 0,
+      "x": 50,
+      "y": 70,
+      "zoom": 1.9
+     }
+    }
+   ],
+   "duration": 21
+  },
+  {
+   "layout": "panels",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-016.png",
+   "images": [
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-019.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP13-055.png"
+   ],
+   "parts": [
+    {
+     "text": "ที่ *มารีนฟอร์ด*",
+     "say": "ที่มารีนฟอร์ด ราคุโยบุกไปช่วยเอส. เขาสู้กับคิซารุ ตัวต่อตัวเลย. ให้ลูกตุ้มหนาม กัดเข้าไปที่ตัวคิซารุ.",
+     "panel": {
+      "img": 1,
+      "x": 50,
+      "y": 28,
+      "zoom": 1.4
+     }
+    },
+    {
+     "text": "ร้องไห้ ตอน *หนวดขาว* ตัดสินใจ",
+     "say": "ตอนหนวดขาวประกาศ ว่าจะอยู่สู้เอง เขาร้องไห้ ตะโกนเรียกกัปตัน ขอให้ไปด้วยกัน.",
+     "panel": {
+      "img": 2,
+      "x": 50,
+      "y": 28,
+      "zoom": 1.4
+     }
+    },
+    {
+     "text": "ปกป้อง *ลูฟี่*",
+     "say": "สุดท้าย เขาเข้าขวางอาคาอินุ ร่วมกับพี่น้องหนวดขาวคนอื่น เพื่อปกป้องลูฟี่.",
+     "panel": {
+      "img": 0,
+      "x": 50,
+      "y": 28,
+      "zoom": 1.4
+     }
+    }
+   ],
+   "duration": 19
+  },
+  {
+   "layout": "poll",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-016.png",
+   "no_caption": true,
+   "title": "ราคา *3* ล้มได้ *2 ตัว*\nคุ้มไหม?",
+   "labels": [
+    "คุ้ม",
+    "ไม่คุ้ม"
+   ],
+   "parts": [
+    {
+     "text": "",
+     "say": "ราคาสาม ล้มได้สองตัว. คุณว่าคุ้มไหม?"
+    },
+    {
+     "text": "",
+     "say": "คุ้ม พิมพ์หนึ่ง. ไม่คุ้ม พิมพ์สอง."
+    },
+    {
+     "text": "",
+     "say": "คอมเมนต์ไว้เลย. แล้วกดติดตาม การ์ดเซ็นเตอร์ไว้ด้วยนะ."
+    }
+   ],
+   "duration": 9
+  },
+  {
+   "layout": "still",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "",
+     "say": "ชอบเรื่องการ์ดแบบนี้ กดติดตามไว้เลย."
+    },
+    {
+     "text": "",
+     "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "ราคุโย หัวหน้าหน่วย 7 ลงแล้วล้ม 2 ตัว OP17-016 | One Piece Card #shorts",
+  "description": "การ์ดวันพีซ OP-17 ใบที่ 016 ราคุโย หัวหน้าหน่วยที่ 7 ของกลุ่มหนวดขาว การ์ดสีแดง ระดับ UC ราคา 3 พลัง 2000 เคาน์เตอร์ +2000 ตอนลงสนาม ล้มตัวละครคู่ต่อสู้ที่พลังเดิม 2000 หรือต่ำกว่า สูงสุด 2 ตัว เทียบกับราคุโยใบเก่า OP02-019 และ OP13-055\n\nภาพวาดการ์ด: Nekobayashi · ข้อมูลการ์ด/ภาพ: เว็บไซต์ทางการ ONE PIECE CARD GAME (en.onepiece-cardgame.com), Limitless TCG · ข้อมูลตัวละคร: One Piece Wiki\n\n👇 ราคา 3 ล้มได้ 2 ตัว คุ้มไหม? พิมพ์ 1 = คุ้ม / 2 = ไม่คุ้ม\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Celtic Impulse\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17 #ราคุโย #Rakuyo",
+  "tags": [
+   "วันพีซ",
+   "การ์ดวันพีซ",
+   "One Piece Card Game",
+   "OP17",
+   "OP17-016",
+   "Rakuyo",
+   "ราคุโย",
+   "หนวดขาว"
+  ],
+  "thumb": {
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-016.png",
+   "hook": "ราคา 3\nล้มได้ 2 ตัว",
+   "badge": "OP17-016",
+   "sub": "ONE PIECE CARD GAME"
+  },
+  "engage": "👇 ราคา 3 ล้มได้ 2 ตัว คุ้มไหม? พิมพ์ 1 = คุ้ม / 2 = ไม่คุ้ม\nชอบเรื่องการ์ดแบบนี้ กด ❤️ ไว้ด้วยนะ",
+  "campaign": "op17-016-rakuyo",
+  "site_path": "/",
+  "publish_at": "2026-11-02T05:00:00Z"
+ }
+}

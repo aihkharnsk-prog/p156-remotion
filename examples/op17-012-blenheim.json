@@ -1,0 +1,264 @@
+{
+ "width": 1080,
+ "height": 1920,
+ "composition": "MangaShow",
+ "accent_color": "#e2231a",
+ "badge": "OP17-012",
+ "series": "ONE PIECE CARD GAME",
+ "tts": {
+  "voice_id": "bTEswxYhpv7UDkQg5VRu",
+  "model_id": "eleven_v4",
+  "stability": 0.35,
+  "speed": 1.05,
+  "prefix": "[soft, smooth, friendly Thai storyteller, lively but not shouting]"
+ },
+ "audio_rate": 1.0,
+ "bgm_url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Celtic%20Impulse.mp3",
+ "bgm_volume": 0.14,
+ "slides": [
+  {
+   "layout": "splash",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-012.png",
+   "title": "ถูกล้มแล้ว\n*ได้ตัวใหม่ฟรี*",
+   "parts": [
+    {
+     "text": "ถูกล้ม ได้ตัวใหม่ *ฟรี*",
+     "say": "บล็อกเกอร์ราคาสอง. พอถูกล้ม ปล่อยลูกน้องหนวดขาว ลงสนามฟรีอีกหนึ่งตัว.",
+     "panel": {
+      "x": 50,
+      "y": 24,
+      "zoom": 1.95
+     }
+    },
+    {
+     "text": "เบลนไฮม์ *หน่วย 9*",
+     "say": "เขาคือเบลนไฮม์. หัวหน้าหน่วยที่เก้า ของกลุ่มหนวดขาว.",
+     "panel": {
+      "x": 50,
+      "y": 24,
+      "zoom": 1.95
+     }
+    }
+   ],
+   "duration": 9
+  },
+  {
+   "layout": "wanted",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-012.png",
+   "name": "BLENHEIM",
+   "subtitle": "หน่วยที่ 9",
+   "sticker": "เพิ่งรู้? กดหัวใจเลย",
+   "parts": [
+    {
+     "text": "ตัวใหญ่ *ดาบยักษ์*",
+     "say": "ตัวใหญ่ล่ำสัน ไม่เล็กกว่าหนวดขาวเท่าไร. พกดาบเล่มยักษ์ไว้ติดตัว.",
+     "panel": {
+      "x": 50,
+      "y": 26,
+      "zoom": 1.9
+     }
+    },
+    {
+     "text": "ชื่อเพิ่งรู้ใน *SBS 58*",
+     "say": "ชื่อของเขา เพิ่งเปิดเผย ใน เอสบีเอส เล่มห้าสิบแปด เหมือนฟอสซ่า.",
+     "panel": {
+      "x": 50,
+      "y": 26,
+      "zoom": 1.9
+     }
+    },
+    {
+     "text": "เก็บอารมณ์ *ไว้ข้างใน*",
+     "say": "เขาเป็นคนนิ่งๆ เก็บอารมณ์ไว้ข้างใน. แต่ตอนเอสถูกปล่อยตัว เขาชูแขนดีใจสุดตัว.",
+     "panel": {
+      "x": 50,
+      "y": 26,
+      "zoom": 1.9
+     }
+    }
+   ],
+   "duration": 15
+  },
+  {
+   "layout": "effect",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-012.png",
+   "title": "บล็อกเกอร์\nถูกล้มได้ตัวใหม่",
+   "parts": [
+    {
+     "text": "ราคา *2* พลัง 1000",
+     "say": "ใบนี้ สีแดง ราคาสอง. พลังพันเดียว. เคาน์เตอร์หนึ่งพัน.",
+     "panel": {
+      "x": 45,
+      "y": 8,
+      "zoom": 1.25
+     }
+    },
+    {
+     "text": "เป็น *บล็อกเกอร์*",
+     "say": "เป็นบล็อกเกอร์ พักการ์ดใบนี้ เพื่อรับการโจมตีแทนตัวอื่นได้.",
+     "panel": {
+      "x": 50,
+      "y": 68,
+      "zoom": 2.0
+     }
+    },
+    {
+     "text": "ถูกล้ม ลง *ราคา 1* ฟรี",
+     "say": "และตอนถูกล้ม เลือกการ์ดหนวดขาว ราคาหนึ่งจากมือ ลงสนามได้หนึ่งใบ โดยไม่ต้องจ่ายดอน.",
+     "panel": {
+      "x": 50,
+      "y": 78,
+      "zoom": 2.0
+     }
+    }
+   ],
+   "duration": 14
+  },
+  {
+   "layout": "panels",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-012.png",
+   "images": [
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-010.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-014.png"
+   ],
+   "parts": [
+    {
+     "text": "ตัวราคา *1* ในชุด",
+     "say": "ในชุดเดียวกัน มีหนวดขาวราคาหนึ่ง ให้เลือกลง. อย่างฟอสซ่า พลังสามพัน.",
+     "panel": {
+      "img": 1,
+      "x": 50,
+      "y": 28,
+      "zoom": 1.4
+     }
+    },
+    {
+     "text": "อีกใบ *ล้มได้ทันที*",
+     "say": "อีกใบ ราคาหนึ่งเหมือนกัน. ลงสนามแล้ว ล้มตัวละครพลังเดิมสองพัน หรือต่ำกว่า ได้ทันที.",
+     "panel": {
+      "img": 2,
+      "x": 50,
+      "y": 70,
+      "zoom": 1.9
+     }
+    },
+    {
+     "text": "เบลนไฮม์ล้ม *ได้ฟรี*",
+     "say": "ถ้าเบลนไฮม์ถูกล้ม ก็ลงสองใบนี้ได้ฟรี. ตอบโต้กลับทันที.",
+     "panel": {
+      "img": 0,
+      "x": 50,
+      "y": 28,
+      "zoom": 1.4
+     }
+    }
+   ],
+   "duration": 15
+  },
+  {
+   "layout": "panels",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-012.png",
+   "images": [
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP02-012.png",
+    "https://en.onepiece-cardgame.com/images/cardlist/card/OP13-049.png"
+   ],
+   "parts": [
+    {
+     "text": "ใบโอพีสอง *พลัง 3000*",
+     "say": "เบลนไฮม์ เคยมีการ์ดมาก่อน. ในโอพีสอง ราคาสอง พลังสามพัน เป็นบล็อกเกอร์ล้วนๆ.",
+     "panel": {
+      "img": 1,
+      "x": 50,
+      "y": 28,
+      "zoom": 1.4
+     }
+    },
+    {
+     "text": "ใบโอพีสิบสาม *พลัง 7000*",
+     "say": "ในโอพีสิบสาม เป็นใบสีน้ำเงิน ราคาหก พลังเจ็ดพัน. ไม่มีเอฟเฟกต์.",
+     "panel": {
+      "img": 2,
+      "x": 50,
+      "y": 28,
+      "zoom": 1.4
+     }
+    },
+    {
+     "text": "ที่ *มารีนฟอร์ด*",
+     "say": "ที่มารีนฟอร์ด เขาแบกโจซ ที่ถูกแช่แข็งจนหมดสติ ออกจากสนามรบ.",
+     "panel": {
+      "img": 0,
+      "x": 50,
+      "y": 28,
+      "zoom": 1.4
+     }
+    }
+   ],
+   "duration": 15
+  },
+  {
+   "layout": "poll",
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-012.png",
+   "no_caption": true,
+   "title": "บล็อกเกอร์ราคา *2*\nคุ้มไหม?",
+   "labels": [
+    "คุ้ม",
+    "ไม่คุ้ม"
+   ],
+   "parts": [
+    {
+     "text": "",
+     "say": "บล็อกเกอร์ราคาสอง ที่ถูกล้มแล้วได้ตัวใหม่. คุณว่าคุ้มไหม?"
+    },
+    {
+     "text": "",
+     "say": "คุ้ม พิมพ์หนึ่ง. ไม่คุ้ม พิมพ์สอง."
+    },
+    {
+     "text": "",
+     "say": "คอมเมนต์ไว้เลย. แล้วกดติดตาม การ์ดเซ็นเตอร์ไว้ด้วยนะ."
+    }
+   ],
+   "duration": 11
+  },
+  {
+   "layout": "still",
+   "image_url": "https://renderer-production-8b7f.up.railway.app/brand/outro.png",
+   "duration": 4,
+   "parts": [
+    {
+     "text": "",
+     "say": "ชอบเรื่องการ์ดแบบนี้ กดติดตามไว้เลย."
+    },
+    {
+     "text": "",
+     "say": "ซื้อ ขาย สะสม แข่งเกมส์การ์ด ได้ที่ การ์ดเซ็นเตอร์ ดอทคอม."
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "เบลนไฮม์ หัวหน้าหน่วย 9 บล็อกเกอร์ถูกล้มได้ตัวใหม่ฟรี OP17-012 | One Piece Card #shorts",
+  "description": "การ์ดวันพีซ OP-17 ใบที่ 012 เบลนไฮม์ หัวหน้าหน่วยที่ 9 ของกลุ่มหนวดขาว การ์ดสีแดง ระดับ C ราคา 2 พลัง 1000 เคาน์เตอร์ +1000 เป็นบล็อกเกอร์ และตอนถูกล้ม เลือกการ์ดประเภทกลุ่มหนวดขาวที่ราคา 1 จากมือ ลงสนามได้ 1 ใบ เช่น ฟอสซ่า OP17-010 และใบ OP17-014 เทียบกับเบลนไฮม์ใบเก่า OP02-012 และ OP13-049\n\nภาพวาดการ์ด: Nekobayashi · ข้อมูลการ์ด/ภาพ: เว็บไซต์ทางการ ONE PIECE CARD GAME (en.onepiece-cardgame.com), Limitless TCG · ข้อมูลตัวละคร: One Piece Wiki\n\n👇 บล็อกเกอร์ราคา 2 ที่ถูกล้มแล้วได้ตัวใหม่ คุ้มไหม? พิมพ์ 1 = คุ้ม / 2 = ไม่คุ้ม\n\n🛒 ซื้อ • ขาย • สะสม • แข่งเกมส์การ์ด ครบจบในเว็บเดียว 👉 https://www.cardzcenter.com\n\n🎵 Music: \"Celtic Impulse\" Kevin MacLeod (incompetech.com) · Licensed under Creative Commons: By Attribution 4.0 · creativecommons.org/licenses/by/4.0/\n\n#shorts #วันพีซ #การ์ดวันพีซ #onepiece #onepiececardgame #OP17 #เบลนไฮม์ #Blenheim",
+  "tags": [
+   "วันพีซ",
+   "การ์ดวันพีซ",
+   "One Piece Card Game",
+   "OP17",
+   "OP17-012",
+   "Blenheim",
+   "เบลนไฮม์",
+   "หนวดขาว"
+  ],
+  "thumb": {
+   "image_url": "https://en.onepiece-cardgame.com/images/cardlist/card/OP17-012.png",
+   "hook": "ถูกล้มแล้ว\nได้ตัวใหม่ฟรี",
+   "badge": "OP17-012",
+   "sub": "ONE PIECE CARD GAME"
+  },
+  "engage": "👇 บล็อกเกอร์ราคา 2 ที่ถูกล้มแล้วได้ตัวใหม่ คุ้มไหม? พิมพ์ 1 = คุ้ม / 2 = ไม่คุ้ม\nชอบเรื่องการ์ดแบบนี้ กด ❤️ ไว้ด้วยนะ",
+  "campaign": "op17-012-blenheim",
+  "site_path": "/",
+  "publish_at": "2026-11-02T05:00:00Z"
+ }
+}
